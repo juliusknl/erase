@@ -1,0 +1,287 @@
+{
+  "schema_version": 1,
+  "brokers": [
+    {
+      "id": "adpublisher-consumer",
+      "name": "adpublisher — marketing records",
+      "match_domains": [
+        "adpublisher.com"
+      ],
+      "identity": {
+        "legal_name": "adpublisher AG",
+        "brands": [
+          "adpublisher"
+        ],
+        "parent": null,
+        "official_domains": [
+          "adpublisher.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "EEA",
+          "DE",
+          "LI"
+        ],
+        "category": "consumer_marketing",
+        "data_categories": [
+          "Postal contact data",
+          "Sweepstakes identifiers",
+          "Marketing enrichment"
+        ],
+        "note": "Its Article 14 notice covers third-party/public-source addresses; a separate current notice covers sweepstakes and marketing."
+      },
+      "removal": {
+        "method": "email",
+        "destination": "datenschutz@adpublisher.com",
+        "alternatives": [
+          "https://www.adpublisher.com/",
+          "https://www.adpublisher.com/datenschutz.php"
+        ],
+        "steps": [
+          "Request erasure of controller-held marketing records and object to further direct marketing through the privacy inbox.",
+          "Provide name and address for postal matching only with explicit permission; matching emails may help with sweepstakes records.",
+          "Review follow-up requirements. Do not confuse the list of sweepstakes registration fields with mandatory deletion-request fields."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "full_name",
+          "email",
+          "postal_address"
+        ],
+        "certainty": "not_fully_specified",
+        "verification": "Name/address are a proposed match for the documented postal dataset, not a published exhaustive request checklist."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "adpublisher-controlled address and marketing records.",
+        "excludes": "Independent advertisers' copies and lawful retention; one response does not cover every sponsor."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "The initial email recipe requires postal-disclosure permission; further matching remains personal."
+      },
+      "evidence": [
+        {
+          "url": "https://www.adpublisher.com/",
+          "checked_on": "2026-09-30",
+          "published": "Not specified",
+          "excerpt": "Es werden ausschliesslich Adressdaten verarbeitet.",
+          "supports": [
+            "identity",
+            "Article14_postal_scope",
+            "rights_inbox"
+          ]
+        },
+        {
+          "url": "https://www.adpublisher.com/datenschutz.php",
+          "checked_on": "2026-09-30",
+          "published": "2026-04-30",
+          "excerpt": "Hierzu genügt eine E-Mail an",
+          "supports": [
+            "email_objection",
+            "sweepstakes_scope",
+            "rights"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Matching sufficiency, verification and actual fulfilment.",
+        "Which independent sponsors hold separate copies."
+      ]
+    },
+    {
+      "id": "add-conti",
+      "name": "Add Conti",
+      "match_domains": [
+        "addconti.ch"
+      ],
+      "identity": {
+        "legal_name": "Add Conti GmbH",
+        "brands": [
+          "Add Conti"
+        ],
+        "parent": null,
+        "official_domains": [
+          "addconti.ch"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "DE",
+          "CH"
+        ],
+        "category": "consumer_marketing",
+        "data_categories": [
+          "Sweepstakes contact records",
+          "Telephone-marketing consent records",
+          "Sponsor disclosures"
+        ],
+        "note": "Swiss regulator reported complaints involving German residents and filed a 2025 non-cooperation complaint; this is not a final finding of unlawful collection."
+      },
+      "removal": {
+        "method": "email",
+        "destination": "datenschutz@addconti.ch",
+        "alternatives": [
+          "info@addconti.ch",
+          "https://addconti.ch/page2.html"
+        ],
+        "steps": [
+          "Request deletion and object to direct marketing through the published privacy inbox. Withdraw any marketing consent only conditionally; do not assert that you entered a sweepstakes.",
+          "Use existing matching emails initially. Review requests for more identifiers personally; never register for a prize to submit privacy rights.",
+          "Retain evidence and review non-response for possible complaint. Do not assume silence, delivery or a sponsor opt-out proves deletion."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "full_name",
+          "email",
+          "other_emails"
+        ],
+        "certainty": "not_fully_specified",
+        "verification": "The policy provides no fixed rights-request checklist. Sweepstakes registration fields are not automatically reused as deletion requirements."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Add Conti-controlled matching records and future marketing use.",
+        "excludes": "Independent sponsor copies, legal retention and unverified outcomes."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "A limited initial email is possible for German residents; reported non-response and additional matching need personal review."
+      },
+      "evidence": [
+        {
+          "url": "https://addconti.ch/",
+          "checked_on": "2026-09-30",
+          "published": "Not specified",
+          "excerpt": "datenschutz@addconti.ch",
+          "supports": [
+            "current_published_contact",
+            "identity"
+          ]
+        },
+        {
+          "url": "https://addconti.ch/page2.html",
+          "checked_on": "2026-09-30",
+          "published": "2023-04-06",
+          "excerpt": "Recht auf Berichtigung oder Löschung",
+          "supports": [
+            "rights",
+            "sweepstakes_data",
+            "marketing_objection"
+          ]
+        },
+        {
+          "url": "https://www.edoeb.admin.ch/en/fdpic-complaint-against-add-conti-gmbh",
+          "checked_on": "2026-09-30",
+          "published": "2025-08-21",
+          "excerpt": "the company was not responding to requests for information and deletion",
+          "supports": [
+            "German_relevance",
+            "reported_nonresponse"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Current responsiveness, matching requirements and fulfilment.",
+        "The website's company-number transcription differs from the registry discovery; no number is asserted here."
+      ]
+    },
+    {
+      "id": "dataxtrade-advertising",
+      "name": "dataXtrade",
+      "match_domains": [
+        "dataxtrade.com"
+      ],
+      "identity": {
+        "legal_name": "dataXtrade GmbH",
+        "brands": [
+          "dataXtrade",
+          "dXt"
+        ],
+        "parent": null,
+        "official_domains": [
+          "dataxtrade.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "EEA",
+          "DE"
+        ],
+        "category": "advertising",
+        "data_categories": [
+          "Cookie IDs",
+          "Mobile advertising identifiers",
+          "Ad interactions and audience segments"
+        ],
+        "note": "Device-based audience profiling; ordinary names and email addresses are not documented matching keys."
+      },
+      "removal": {
+        "method": "manual",
+        "destination": "privacy@dataxtrade.com",
+        "alternatives": [
+          "https://www.dataxtrade.com/de/privacy.html"
+        ],
+        "steps": [
+          "Ask the privacy inbox for deletion of the relevant device/cookie profile and the appropriate matching procedure.",
+          "Review device identifiers personally; name/email alone should not be represented as a complete search.",
+          "For future browser collection, the policy links a cookie opt-out. Its target is HTTP and has not been tested; prefer asking for a current secure route. Device settings are a separate suppression action."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "device_or_cookie_identifier"
+        ],
+        "certainty": "not_fully_specified",
+        "verification": "The notice documents cookie/MAID processing but does not specify a complete request-verification procedure."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Matching dXt-controlled advertising profiles.",
+        "excludes": "Other devices, independent partners and future collection after a changed identifier; cookie suppression is not historical erasure."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Device matching and the dated opt-out instructions need review; do not auto-send a name/email-only deletion claim."
+      },
+      "evidence": [
+        {
+          "url": "https://www.dataxtrade.com/de/privacy.html",
+          "checked_on": "2026-09-30",
+          "published": "Not specified",
+          "excerpt": "E-Mail: privacy@dataxtrade.com",
+          "supports": [
+            "rights_contact",
+            "device_scope",
+            "cookie_optout_limit"
+          ]
+        },
+        {
+          "url": "https://www.dataxtrade.com/de/site-info.html",
+          "checked_on": "2026-09-30",
+          "published": "Not specified",
+          "excerpt": "dataXtrade GmbH",
+          "supports": [
+            "identity"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Secure functioning cookie-opt-out target and current device-setting instructions.",
+        "Post-request verification and actual holdings."
+      ]
+    }
+  ]
+}

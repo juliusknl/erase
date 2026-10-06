@@ -1,0 +1,95 @@
+schema_version: 1
+brokers:
+  - id: adkernel-platform
+    name: AdKernel
+    match_domains: [adkernel.com]
+    identity:
+      legal_name: Adkernel LLC
+      brands: [AdKernel]
+      parent: null
+      official_domains: [adkernel.com]
+    relevance:
+      regions: [EEA, international]
+      category: advertising
+      data_categories: [Browser advertising identifiers, Browsing and bid-request signals, Inferred interests]
+      note: Platform advertising data is distinct from direct customer accounts; pseudonymous browser records need matching context.
+    removal:
+      method: email
+      destination: contact@adkernel.com
+      alternatives: [https://adkernel.com/privacy-policy/]
+      steps:
+        - Request erasure of matching platform data through the published EEA rights contact; ask how to identify the relevant browser record securely.
+        - Treat the policy's browser opt-out separately. It changes advertising preferences, not historical deletion, and must be repeated in other browsers.
+    required_information:
+      fields: [relevant_browser_identifier]
+      certainty: not_fully_specified
+      verification: Policy names ADKUID but gives no complete request or ownership-verification checklist. The field describes matching context, not a verified mandatory email requirement.
+    coverage:
+      effect: deletion_request
+      includes: A request concerning identifiable AdKernel platform records.
+      excludes: Independent publisher and advertiser databases; cookie opt-out does not establish erasure or stop all collection.
+    automation: {mode: manual, reason: Browser-record matching is unresolved; the generic name-and-email sender cannot establish coverage.}
+    evidence:
+      - url: https://adkernel.com/privacy-policy/
+        checked_on: '2026-09-30'
+        excerpt: YOUR RIGHTS IN THE EEA
+        supports: [European_rights, designated_email, cookie_matching, optout_limits]
+      - url: https://vendor-list.consensu.org/v3/vendor-list.json
+        checked_on: '2026-09-30'
+        excerpt: Adkernel LLC
+        supports: [vendor_14_registered_name, official_policy_link]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Complete matching and ownership-verification procedure., Actual erasure and retained exceptions.]
+  - id: advanced-store-ad4mat
+    name: advanced store / ad4mat
+    match_domains: [advanced-store.com, ad4mat.com]
+    identity:
+      legal_name: advanced store GmbH
+      brands: [advanced store, ad4mat, advanced suite]
+      parent: null
+      official_domains: [advanced-store.com, ad4mat.com]
+    relevance:
+      regions: [EEA, international]
+      category: advertising
+      data_categories: [Pseudonymous browser IDs, Partner-site browsing and product interests]
+      note: Browser advertising choices are actionable; affiliate processing on behalf of a publisher has separate controller scope.
+    removal:
+      method: form
+      destination: https://www.advanced-store.com/opt-out
+      alternatives: [privacy@advanced-store.com, https://www.ad4mat.com/privacy]
+      steps:
+        - Open the official opt-out page in the browser you use and choose OPT OUT; check its resulting status before checking this action off.
+        - Repeat for other relevant browsers. This stops interest-based ads from advanced store, not every advertising company or all retained data.
+        - For historical erasure, contact the privacy inbox and ask for secure browser-record matching; for affiliate data processed for a publisher, request deletion from that controller too.
+    required_information:
+      fields: [relevant_browser_context]
+      certainty: not_fully_specified
+      verification: The public page documents a browser opt-out control but warns that some browsers are unsupported. Its operation and the separate erasure-verification requirements were not tested.
+    coverage:
+      effect: suppression
+      includes: Interest-based advertising preference for advanced store in the selected browser.
+      excludes: Historical erasure, other browsers, independent ad partners and blanket deletion of publisher-controlled affiliate records.
+    automation: {mode: manual, reason: This preference must be applied in the user's browser; a server-side visit or generic email cannot set it there.}
+    evidence:
+      - url: https://www.advanced-store.com/opt-out
+        checked_on: '2026-09-30'
+        excerpt: not all browsers support this opt-out function
+        supports: [browser_choice, limits, no_historical_erasure_claim]
+      - url: https://www.advanced-store.com/cookies
+        checked_on: '2026-09-30'
+        excerpt: assigns an ID to each visitor
+        supports: [identifier_context, partner_site_scope]
+      - url: https://www.ad4mat.com/privacy
+        checked_on: '2026-09-30'
+        excerpt: 'E-Mail: privacy@advanced-store.com'
+        supports: [controller, privacy_contact, erasure_rights]
+      - url: https://www.ad4mat.com/terms
+        checked_on: '2026-09-30'
+        excerpt: For the affiliate marketing business, advanced store acts as a data processor.
+        supports: [affiliate_controller_boundary]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Interactive browser compatibility and persistence., Historical erasure matching and verification.]

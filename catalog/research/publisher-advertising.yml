@@ -1,0 +1,100 @@
+schema_version: 1
+brokers:
+  - id: mediavine-reader-advertising
+    name: Mediavine reader advertising
+    match_domains: [mediavine.com]
+    identity:
+      legal_name: Mediavine, Inc.
+      brands: [Mediavine, Grow]
+      parent: null
+      official_domains: [mediavine.com]
+    relevance:
+      regions: [EU, EEA, United Kingdom, United States]
+      category: advertising
+      data_categories: [Email identifiers, Browser identifiers, Reading activity, Advertising interests]
+      note: Reader advertising, not publisher business-account closure.
+    removal:
+      method: form
+      destination: https://privacy.mediavine.com/
+      alternatives: [https://www.mediavine.com/legal-and-privacy-center/, legal@mediavine.com]
+      steps:
+        - Open the Privacy Request Center if you used Grow or a Grow-managed newsletter; choose the relationship that actually applies to you.
+        - Choose deletion only if you want the associated account/data removed; complete the form's matching and email confirmation steps.
+        - For ads on publisher sites, use Update Privacy Settings on that site instead. This form is not a universal browser-data deletion request.
+        - For other privacy rights or a form that does not fit your situation, contact legal@mediavine.com; the old privacy mailbox returned an unmonitored-inbox response.
+    required_information:
+      fields: [full_name, email, relationship, requested_right]
+      certainty: not_fully_specified
+      verification: Portal fields depend on the selected relationship. Check the confirmation email; do not submit identity documents through the app.
+    coverage:
+      effect: deletion_request
+      includes: Applicable deletion of directly provided Grow or other selected relationship data.
+      excludes: Blanket removal of publisher-site advertising identifiers, independent partners and unrelated accounts.
+    automation:
+      mode: manual
+      reason: The former mailbox redirects to the privacy portal. Relationship selection and browser-specific choices need the person.
+    evidence:
+      - url: https://vault.pactsafe.io/s/9cf003f8-52ba-4f99-af33-f4edb31f1d1a/privacy.html
+        checked_on: '2026-10-01'
+        published: 'Advertising/Grow notice 2025-01-30; GDPR notice 2025-10-02'
+        excerpt: privacy@mediavine.com
+        supports: [identity, reader_advertising, email_rights, Grow_closure_consequence]
+      - url: https://www.mediavine.com/legal-and-privacy-center/
+        checked_on: '2026-10-04'
+        excerpt: Privacy Request Center
+        supports: [official_portal_link, relationship_scope, legal_fallback, publisher_site_choices]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Matching and fulfilment untested., Parent and comparable scale unreviewed.]
+  - id: ezoic-publisher-context
+    name: Ezoic publisher-context privacy
+    match_domains: [ezoic.com]
+    identity:
+      legal_name: Ezoic Inc.
+      brands: [Ezoic]
+      parent: null
+      official_domains: [ezoic.com]
+    relevance:
+      regions: [EEA, United Kingdom, Switzerland, United States]
+      category: advertising
+      data_categories: [Device identifiers, Advertising interactions, Website activity]
+      note: Publisher-directed processing and independent advertising partners require separate routing.
+    removal:
+      method: manual
+      destination: https://www.ezoic.com/ad-partners
+      alternatives: [privacy@ezoic.com, https://www.ezoic.com/privacy-policy]
+      steps:
+        - Identify the publisher site you used and contact that publisher for its Ezoic-directed records.
+        - Use that site's privacy controls in your actual browser; partner-owned records require the partner's own route.
+        - For Ezoic's own records or routing questions, contact privacy@ezoic.com with context. Do not send publisher credentials or request account closure by default.
+    required_information:
+      fields: [publisher_site_or_direct_relationship, relevant_browser_identifier_if_needed]
+      certainty: not_fully_specified
+      verification: Matching and verification depend on the publisher or controller; no universal email-only checklist.
+    coverage:
+      effect: needs_review
+      includes: Context-specific Ezoic/publisher rights and browser preference routing.
+      excludes: Blanket partner-network deletion or proof that changing a consent banner deletes past records.
+    automation:
+      mode: manual
+      reason: Needs site/controller context before sending or changing browser preferences.
+    evidence:
+      - url: https://www.ezoic.com/privacy-policy
+        checked_on: '2026-10-01'
+        published: '2025-02-10'
+        excerpt: privacy@ezoic.com
+        supports: [identity, direct_rights_mailbox, publisher_direction]
+      - url: https://www.ezoic.com/ad-partners
+        checked_on: '2026-10-01'
+        published: '2026-03-17'
+        excerpt: please contact the client, customer or publisher
+        supports: [publisher_routing, distinct_advertising_partners]
+      - url: https://docs.ezoic.com/docs/privacy/gpp/
+        checked_on: '2026-10-01'
+        excerpt: Privacy Preferences
+        supports: [publisher_site_specific_US_preferences_not_global_deletion]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Publisher configuration and additional verification untested., Own-controller versus publisher scope depends on the actual interaction.]

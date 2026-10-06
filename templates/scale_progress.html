@@ -1,0 +1,13 @@
+{% if scale_items %}
+<section class="scale-progress" aria-label="Broker showcase">
+  <div class="scale-grid">
+    {% for item in scale_items %}<article class="scale-item {{ 'is-done' if item.done else '' }}">
+      <a class="broker-link" href="{{ '/cases/' ~ item.case_id if item.case_id else '/brokers?q=' ~ (item.name | urlencode) }}">{{ item.name }}</a>
+      <span class="scale-size">{{ item.size }}</span><span class="scale-unit">{{ item.unit }} · company-reported</span>
+      <span class="status status-{{ item.state }}">{{ 'Done' if item.done else item.state | state_label }}</span>
+      {% if item.outcome %}<span class="scale-outcome">{{ item.outcome }}</span>{% endif %}
+      <a class="scale-source" href="{{ item.source }}" target="_blank" rel="noreferrer noopener">Size source ↗</a>
+    </article>{% endfor %}
+  </div>
+</section>
+{% endif %}

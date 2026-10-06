@@ -1,0 +1,14 @@
+schema_version: 1
+associations:
+  - guide_id: nextroll-services
+    records: [live:nextroll-inc, community:nextroll, community:adroll]
+    rationale: Current service notice names NextRoll Inc. and European controller NextRoll Limited, and describes AdRoll products and RollWorks website branding. Both community records identify NextRoll Limited; association preserves unresolved portal fields, not assumed group-wide completion.
+  - guide_id: pubmatic-platform
+    records: [live:pubmatic-inc, community:pubmatic]
+    rationale: September 2026 rights notice explicitly includes PubMatic Inc., GmbH and the named subsidiaries. Platform policy distinguishes controller Inc. from representative GmbH. The linked-form blocker remains and no separately governed product is silently covered.
+  - guide_id: quantcast-services
+    records: [community:quantcast]
+    rationale: Current August 2026 service policy explicitly identifies Quantcast International Limited as non-US controller, matching the community legal entity. Browser-specific identifiers and separate US controller are preserved.
+  - guide_id: rocketreach-professional
+    records: [live:rocketreach-llc, community:rocketreach]
+    rationale: Exact RocketReach brand/domain and professional-profile workflow match, but imported LLC legal suffix and post-verification matching remain unresolved in the guide. Association is research tracking, not a legal-identity validation or sending permission.

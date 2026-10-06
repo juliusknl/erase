@@ -1,0 +1,49 @@
+schema_version: 1
+brokers:
+  - id: simplifi-advertising
+    name: Simpli.fi advertising
+    match_domains: [simpli.fi]
+    identity:
+      legal_name: Simplifi Holdings, LLC
+      brands: [Simpli.fi]
+      parent: null
+      official_domains: [simpli.fi, optout.simpli.fi]
+    relevance:
+      regions: [EEA, United Kingdom, Switzerland, United States]
+      category: advertising
+      data_categories: [Device identifiers, Location, Browsing activity, Advertising interactions, Inferred interests]
+      note: Cross-device advertising and geofencing; website/client business contacts use a separate request context.
+    removal:
+      method: form
+      destination: https://simpli.fi/request-your-information
+      alternatives: [privacy@simpli.fi, https://simpli.fi/services-privacy-policy]
+      steps:
+        - Choose consumer/ad-interaction data, yourself as requester, your actual country and deletion. Do not choose employee or business-representative status unless applicable.
+        - Supply a reply email and at least one relevant IP address, mobile advertising ID or cookie ID. Email is only for communication in this consumer flow, not an adequate matching identifier.
+        - Personally review the acknowledgement and later verification. Agent consent uploads concern representatives, not an automatic requirement for self-requests. Conditional country/state fields remain untested.
+        - For advertising suppression instead, follow the policy's opt-out link in each relevant browser/device. Cookies reset after clearing them; analytics can continue. Do not count suppression as historical deletion.
+    required_information:
+      fields: [requester_relationship, residence, requested_right, reply_email, matching_ip_or_mobile_or_cookie_id]
+      certainty: not_fully_specified
+      verification: Public form inspected without submitting; at least one device/browser identifier is required. Later verification and conditional fields untested.
+    coverage:
+      effect: deletion_request
+      includes: Advertising records matched to the identifiers supplied, subject to retention exceptions.
+      excludes: Other devices, independent advertisers and historical data merely from setting an opt-out preference.
+    automation:
+      mode: manual
+      reason: Device matching cannot be replaced with generic name/email outreach; identifiers and personal declarations need review.
+    evidence:
+      - url: https://simpli.fi/request-your-information
+        checked_on: '2026-10-01'
+        excerpt: Please provide at least one of the below
+        supports: [consumer_form, identifier_matching, communication_email_only, requester_roles, acknowledgement]
+      - url: https://simpli.fi/services-privacy-policy
+        checked_on: '2026-10-01'
+        published: June 2026
+        excerpt: Simplifi Holdings, LLC
+        supports: [current_controller, advertising_scope, European_rights, alternative_email, suppression_limits]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Runtime submission and subsequent verification untested., Historical Simplifi Europe IVS/Inc legal continuity unresolved., Current parent ownership and database scale unreviewed.]

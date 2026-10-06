@@ -1,0 +1,40 @@
+schema_version: 1
+assessments:
+  - record: community:sovendus-se
+    disposition: unresolved
+    checked_on: '2026-09-29'
+    rationale: The legacy Swedish entry names Sovendus AB. Its policy URL now redirects to a Swedish-language legal page naming Sovendus GmbH as controller. Current German-controller instructions exist, but a redirect does not establish disposition of historical AB records.
+    evidence:
+      - url: https://online.sovendus.com/se/integritetspolicy/
+        checked_on: '2026-09-29'
+        excerpt: Sovendus GmbH
+        supports: [identity, unresolved]
+      - url: https://web.sovendus.com/sv/legal
+        checked_on: '2026-09-29'
+        excerpt: HRB 707873
+        supports: [identity, removal, unresolved]
+    unresolved:
+      - Resolve historical Sovendus AB controller/succession before treating it as a duplicate or completed via Sovendus GmbH.
+      - The German guide covers current GmbH processing, not proven erasure of all former Swedish-company data.
+  - record: community:1plusx
+    disposition: unresolved
+    checked_on: '2026-09-29'
+    rationale: Official parent sources establish the Swiss 1plusX platform's acquisition and continuing product role, but do not establish that the current Triple Lift Inc. controller policy covers every legacy 1plusX record. The old standalone policy was unavailable through both public fetch and page reader.
+    evidence:
+      - url: https://triplelift.com/press/triplelift-acquired-1plusx/
+        checked_on: '2026-09-29'
+        published: '2022-03-21'
+        excerpt: 1plusX is a Swiss technology company
+        supports: [identity, relevance]
+      - url: https://triplelift.com/press/triplelift-announces-new-audience-targeting-solution-powered-by-first-party-data/
+        checked_on: '2026-09-29'
+        excerpt: 1plusX is the platform that powers TripleLift Audiences
+        supports: [relevance]
+      - url: https://triplelift.com/platform-privacy-policy/
+        checked_on: '2026-09-29'
+        published: '2026-04-23'
+        excerpt: Triple Lift, Inc.
+        supports: [identity, unresolved]
+    unresolved:
+      - Resolve current Swiss legal identity and legacy DMP controller/processor scope before merging with TripleLift.
+      - Verify a current 1plusX-specific rights route and minimum identifiers; acquisition alone is insufficient.

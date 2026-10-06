@@ -1,0 +1,23 @@
+schema_version: 1
+associations:
+  - guide_id: bisz-hu
+    records: [discovery:hu-bisz]
+    rationale: The official operator history and request instructions name the same Hungarian BISZ company and KHR register.
+  - guide_id: creditinfo-lt
+    records: [discovery:lt-creditinfo]
+    rationale: The Lithuanian consumer portal explicitly identifies UAB Creditinfo Lietuva; other national group controllers are not included.
+  - guide_id: creditinfo-ee
+    records: [discovery:ee-creditinfo]
+    rationale: The Estonian policy and default-complaint procedure identify the same AS CREDITINFO EESTI controller; other countries are not included.
+  - guide_id: sbcb-sk
+    records: [discovery:sk-sbcb]
+    rationale: SBCB's company information and bank-register policy match the legal entity and register. NBCB is assessed separately.
+  - guide_id: nbcb-sk
+    records: [discovery:sk-nbcb]
+    rationale: NBCB's own policy confirms entity number42053404 and NRKI control. Shared CRIF processing does not merge this controller with SBCB.
+  - guide_id: crefo-lv
+    records: [discovery:lv-crefo]
+    rationale: The regulator, own privacy policy and signed-request form all identify AS CREFO Birojs number40103947718.
+  - guide_id: kib-lv
+    records: [discovery:lv-kib]
+    rationale: Regulator and rendered public portal policy identify AS Kredītinformācijas Birojs number40103673493; no other national Creditinfo entity is merged.

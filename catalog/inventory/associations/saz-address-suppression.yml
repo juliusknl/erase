@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: saz-swiss-addresses
+    records: [community:saz]
+    rationale: The current SAZ privacy form explicitly names SAZ Services AG in St. Gallen as controller for brokered marketing addresses, matching the community entity and Swiss inbox; it distinguishes the unrelated German GmbH route.

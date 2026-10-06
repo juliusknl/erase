@@ -1,0 +1,52 @@
+schema_version: 1
+brokers:
+  - id: amazinghiring
+    name: AmazingHiring
+    match_domains: [amazinghiring.com]
+    identity:
+      legal_name: AmazingHiring, Inc.
+      brands: [AmazingHiring]
+      parent: null
+      official_domains: [amazinghiring.com]
+    relevance:
+      regions: [EEA, Global]
+      category: recruitment
+      data_categories: [Professional profiles, Contact details, Public social accounts, Education and employment]
+      note: Candidate sourcing combines public sources and licensed data for recruiters.
+    removal:
+      method: form
+      destination: https://amazinghiring.com/gdpr-form
+      alternatives: [dpo@amazinghiring.com]
+      steps:
+        - Choose erasure in the data-subject request form; provide first name, last name and your matching work email.
+        - Alternatively request removal of your public candidate profile from search at dpo@amazinghiring.com, as its help article instructs.
+        - Complete any verification and retain the response. Further supporting information is optional in the visible form.
+    required_information:
+      fields: [full_name, work_email, requested_right]
+      certainty: not_fully_specified
+      verification: Form labels require first/last name and work email. The email alternative publishes no separate checklist; the recipe supplies these matching details initially. Dynamic validation and follow-up remain untested.
+    coverage:
+      effect: deletion_request
+      includes: Matching AmazingHiring candidate/search profile; request evidence may be retained.
+      excludes: Original public profiles and recruiters' independently held copies are separate; email guidance promises search removal, not universal downstream erasure.
+    automation:
+      mode: manual
+      reason: Initial name/work-email request is implemented; any additional verification or profile matching remains personal.
+    evidence:
+      - url: https://amazinghiring.com/privacy-policy
+        checked_on: '2026-09-30'
+        published: '2021-09-26'
+        excerpt: AmazingHiring, Inc.
+        supports: [identity, data_categories, EEA_scope, erasure_form, retained_request_evidence]
+      - url: https://amazinghiring.com/gdpr-form
+        checked_on: '2026-09-30'
+        excerpt: Work email
+        supports: [form_route, matching_fields, optional_supporting_information]
+      - url: https://help.amazinghiring.com/article/4824
+        checked_on: '2026-09-30'
+        excerpt: disappear from the search results on AmazingHiring
+        supports: [email_alternative, search_removal_scope]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [No submission or follow-up tested., Parent ownership unreviewed., Older privacy policy remains published on current official site.]

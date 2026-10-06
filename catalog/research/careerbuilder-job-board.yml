@@ -1,0 +1,53 @@
+schema_version: 1
+brokers:
+  - id: careerbuilder-job-board
+    name: CareerBuilder job-board records
+    match_domains: [careerbuilder.com]
+    identity:
+      legal_name: MCB Puerto Rico LLC and subsidiaries/divisions (current linked provider notice)
+      brands: [CareerBuilder]
+      parent: BOLD group (job-board assets acquired in 2025)
+      official_domains: [careerbuilder.com, monster.com, bold.com]
+    relevance:
+      regions: [United States, EEA, United Kingdom, Switzerland]
+      category: recruitment
+      data_categories: [Resumes, Contact information, Employment, Education, Recruiter interactions, Professional profiles]
+      note: Relevant to job-board or resume records, not a universal third-party broker match. European rights are referenced by the linked US notice; separate national products require their own review.
+    removal:
+      method: form
+      destination: https://www.careerbuilder.com/privacy/
+      alternatives: [https://www.monster.com/inside/privacy-notice, riskandcompliance@careerbuilder.com]
+      steps:
+        - Decide whether to delete your job-board data or only restrict sharing; deletion can affect an account or resume you still use.
+        - Submit the CareerBuilder-hosted form with name, matching email, actual relationship and request type. Address is optional in the publicly inspected client-side validation.
+        - Verify the email confirmation yourself; the published form says unverified requests are not processed. A submission message alone is not completion.
+        - Ask employers holding downloaded resumes or their own hosted databases separately. Do not assume the request erases all Monster, BOLD or former owner records.
+    required_information:
+      fields: [full_name, email, relationship, request_type]
+      certainty: not_fully_specified
+      verification: Static HTML and client-side validation inspected, not executed. Email verification is stated as necessary; server validation and subsequent matching untested.
+    coverage:
+      effect: deletion_request
+      includes: Matched CareerBuilder job-board records within the current provider's control, subject to the chosen request and verified identity.
+      excludes: Independent employer copies, all BOLD products, every national Monster service and seller-retained records outside the transferred job-board business.
+    automation:
+      mode: manual
+      reason: Account consequences, actual relationship and email verification require personal review. Published email is for policy questions; no generic automatic erasure recipe is inferred.
+    evidence:
+      - url: https://www.careerbuilder.com/privacy/
+        checked_on: '2026-10-01'
+        excerpt: Email verification required
+        supports: [official_form, client_fields, verification_required]
+      - url: https://www.monster.com/inside/privacy-notice
+        checked_on: '2026-10-01'
+        published: '2025-07-31'
+        excerpt: MCB Puerto Rico LLC
+        supports: [linked_current_provider, recruiter_boundaries, European_rights, account_consequences]
+      - url: https://www.bold.com/about/
+        checked_on: '2026-10-01'
+        excerpt: BOLD acquires CareerBuilder & Monster.com
+        supports: [brand_ownership_change]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Server field requirements and fulfilment untested., National service and seller-retained data not assumed covered., No comparable personal-record scale claim.]

@@ -1,0 +1,8 @@
+schema_version: 1
+associations:
+  - guide_id: magnite-advertising
+    records: [live:magnite-inc, community:telaria, community:rubiconproject]
+    rationale: Current advertising policy names Magnite Inc and affiliates; the official platform-renaming notice connects Telaria and Rubicon products to Magnite CTV/DV+. This routes those advertising-product candidates without claiming The Rubicon Project Ltd is the same legal entity as Inc or erasing independently retained historical records.
+  - guide_id: comscore-tagging
+    records: [live:comscore-inc, community:scorecardresearch]
+    rationale: The current official privacy hub names Comscore Inc and Comscore BV by residence and expressly links ScorecardResearch tagging to its separate device-specific DSR form. The guide preserves panel, applicant and client-controlled exceptions.

@@ -1,0 +1,32 @@
+{% extends "settings_base.html" %}
+{% block title %}Profile · erase{% endblock %}
+{% block settings_title %}Profile{% endblock %}
+{% block settings_content %}
+<p class="settings-muted">Your details stay local. Only approved information is included in a request.</p>
+{% if demo_mode %}<p class="notice">Example details: <strong>Alex Example</strong>, request email <strong>requests@example.test</strong>, other email <strong>alex@example.test</strong>. Select Germany to try the automatic email flow. Use Alex Example as your typed signature.</p>{% endif %}
+<section class="card profile-country" id="country">{% include 'action_country.html' %}</section>
+{% if not email_supported %}<div class="card"><h2>Manual actions are available for {{ action_countries.get(action_country, action_country) }}.</h2><p>Automatic email setup currently supports EU/EEA residents only. We won’t sign you up as a European resident or change an existing approved plan.</p><a class="button" href="/quick-wins">See suggested actions</a></div>{% else %}
+<form class="card profile-form" method="post" action="/onboarding"><input type="hidden" name="csrf" value="{{ csrf }}">
+  <fieldset class="profile-fields"><legend>Basics</legend><div class="form-grid">
+  <label>Full legal name<input name="full_name" value="{{ profile.get('full_name', '') }}" required autocomplete="name"></label>
+  <label>Dedicated request email<input type="email" name="email" value="{{ profile.get('email', '') }}" required autocomplete="email"></label>
+  <label>Other emails, one per line<textarea name="other_emails">{{ profile.get('other_emails', []) | join('\n') }}</textarea><small>Addresses you actually use, so brokers can find your records. Your new request mailbox alone usually will not match.</small></label>
+  </div></fieldset>
+  <fieldset class="profile-fields"><legend>Work <span>Optional</span></legend><div class="form-grid">
+  <label>Work email<input type="email" name="work_email" value="{{ profile.get('work_email', '') }}" autocomplete="email"><small>Only included in a broker-specific message you approve.</small></label>
+  <label>Current or most recent employer<input name="employer" value="{{ profile.get('employer', '') }}" autocomplete="organization"><small>Used with your work email where a broker requires both. Never inferred from your email.</small></label>
+  </div></fieldset>
+  <fieldset class="profile-fields"><legend>Additional matching details <span>Optional</span></legend><div class="form-grid">
+  <label class="wide">Current postal address<textarea name="postal_address">{{ profile.get('postal_address', '') }}</textarea><small>For postal-marketing lists. Only shared automatically if you allow it in Automatic emails.</small></label>
+  <label>Phone (optional)<input name="phone" value="{{ profile.get('phone', '') }}" autocomplete="tel"></label>
+  <label>Date of birth (optional)<input type="date" name="birth_date" value="{{ profile.get('birth_date', '') }}"></label>
+  <label>Aliases, one per line<textarea name="aliases">{{ profile.get('aliases', []) | join('\n') }}</textarea></label>
+  <label class="wide">Previous addresses, one per line<textarea name="previous_addresses">{{ profile.get('previous_addresses', []) | join('\n') }}</textarea></label>
+  </div></fieldset>
+  <fieldset class="profile-fields"><legend>Updates and permission</legend><div class="form-grid">
+  <label>Email alerts (optional)<input type="email" name="alert_email" value="{{ alert_email }}"><small>Leave blank for in-app updates only. Adding an address enables action notices.</small></label>
+  <label>Typed signature<input name="signature" required autocomplete="off"><small>I instruct this local software to send first-person deletion and opt-out requests using the profile above.</small></label>
+  <div class="wide notice">Residency is fixed to EU/EEA. Requests explicitly state that they do not claim California residency. Government ID and regulator complaints always require separate approval.</div>
+  </div></fieldset>
+  <div class="wide"><button type="submit">Encrypt and sign mandate</button></div>
+</form>{% endif %}{% endblock %}

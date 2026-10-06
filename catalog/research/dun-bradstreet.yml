@@ -1,0 +1,199 @@
+schema_version: 1
+brokers:
+  - id: dun-bradstreet-regional
+    name: Dun & Bradstreet — global hub and regional routes
+    match_domains: [dnb.com]
+    identity:
+      legal_name: Dun & Bradstreet, Inc.; Dun & Bradstreet Deutschland GmbH; Dun & Bradstreet Austria GmbH; Dun & Bradstreet Norway AS (regional controllers)
+      brands: [Dun & Bradstreet, D&B]
+      parent: null
+      official_domains: [dnb.com]
+    relevance:
+      regions: [US, EEA, UK, DE, AT, 'NO']
+      category: credit_reference
+      data_categories: [Business contacts, Business ownership, Sole proprietor information, Credit and risk data]
+      note: The global hub distinguishes professional contacts, sole proprietors and consumers. German records are business-linked; other countries require their own scope review.
+    removal:
+      method: form
+      destination: https://submit-irm.trustarc.eu/services/validation/ba81b98f-997d-4216-b4cc-d64cf261b082
+      alternatives: [https://www.dnb.com/en-us/why-dnb/data-transparency/contacts.html]
+      steps:
+        - Select the appropriate country and product; the global rights hub links this request form.
+        - Choose access, correction, eligible deletion or the applicable opt-out. Deletion is conditional, not guaranteed.
+        - If the form cannot load, use the official country contact directory for routing assistance.
+    required_information:
+      fields: [country, relevant_product_or_record]
+      certainty: not_fully_specified
+      verification: Global form rendered blank during public inspection; its current fields and verification are unresolved. German access requirements are documented below.
+    coverage:
+      effect: access_then_review
+      includes: Rights requests for matched D&B-controlled records, subject to product, country and retention rules.
+      excludes: Automatic deletion from every group company, independent network partner or source register; marketing opt-out is distinct from credit-record deletion.
+    automation:
+      mode: manual
+      reason: Regional routing and credit-record eligibility need review; global form controls remain unverified.
+    evidence:
+      - url: https://www.dnb.com/en-us/why-dnb/data-transparency/personal-data.html
+        checked_on: '2026-09-29'
+        excerpt: You may exercise your data subject rights in connection with our data processing
+        supports: [relevance, removal, coverage]
+      - url: https://www.dnb.com/en-us/why-dnb/data-transparency/contacts.html
+        checked_on: '2026-09-29'
+        excerpt: D&B Business Information Solutions Unlimited Company based in Ireland
+        supports: [identity, removal]
+    scale:
+      claim: More than 600 million companies worldwide
+      unit: companies, not people
+      scope: Vendor's undated global business-data claim; not a count of personal profiles, exposure or deletion coverage.
+      source:
+        url: https://www.dnb.com/de-de/
+        checked_on: '2026-09-29'
+        excerpt: Wir liefern Daten zu über 600 Millionen Unternehmen weltweit
+        supports: [scale]
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Global form fields and later verification., Other regional entities and product-specific routes., Parent holding entity not reviewed., Actual outcomes and downstream effects untested.]
+    regional_routes:
+      - regions: ['NO']
+        legal_entity: Dun & Bradstreet Norway AS — address brokering and directory services
+        removal:
+          method: email
+          destination: ksp.no@dnb.com
+          alternatives: [dpo.no@dnb.com, https://soliditet.no/privatpersoner/auth]
+          steps:
+            - Request removal/objection specifically for address-brokering and directory-service data; distinguish it from credit reporting.
+            - Use customer service or DPO email if you do not want the portal. Review matching and identity requests before disclosure.
+            - Keep confirmation; identifying information remains on a suppression list to prevent re-import from public updates.
+        required_information:
+          fields: []
+          certainty: not_fully_specified
+          verification: No fixed marketing-removal matching checklist; do not assume all collected identifiers or access-request documents must be sent.
+        coverage:
+          effect: suppression
+          includes: Removal from Norwegian address-brokering/directory use with retained suppression identifiers.
+          excludes: Credit records, original public registers, customer-held copies and other D&B controllers.
+        automation:
+          mode: manual
+          reason: Distinct database purpose and unresolved matching requirements.
+        evidence:
+          - url: https://www.dnb.com/no/hvorfor-dnb/data-transparens/dette-kan-du-gjore.html
+            checked_on: '2026-09-29'
+            excerpt: må vi lagre navn og adresse
+            supports: [identity, removal, required_information, coverage, automation]
+        unknowns: [Minimum identifiers and later verification., No suppression outcome tested.]
+      - regions: ['NO']
+        legal_entity: Dun & Bradstreet Norway AS — personal credit records
+        removal:
+          method: manual
+          destination: https://soliditet.no/privatpersoner/auth
+          alternatives: [ksp.no@dnb.com, dpo.no@dnb.com]
+          steps:
+            - Log in personally with BankID; select Egenopplysning to inspect records, Betalingserfaring for payment remarks and Min Innboks for inquiry letters.
+            - Without BankID, the privacy notice permits a signed ID copy for access. It recommends hiding the identity number and encrypted email; review the secure delivery channel personally.
+            - For a disputed entry, explain the dispute and relevant evidence to ksp.no@dnb.com. For a settled collection case, ask the reporting collector to send closure confirmation.
+            - Optional credit blocking is separately chosen in Min Side, not erasure. Do not activate it automatically; it affects credit checks and can be lifted when needed.
+        required_information:
+          fields: [bankid_or_signed_identity_document_copy, dispute_evidence_if_applicable]
+          certainty: not_fully_specified
+          verification: Public instructions establish alternative identification routes; authenticated fields and case-specific evidence remain untested.
+        coverage:
+          effect: access_then_review
+          includes: Norwegian credit access, correction/dispute review and separately chosen credit blocking.
+          excludes: Notice rejects blanket credit erasure; historical archives may persist until ten years from registration. Marketing records require the separate route.
+        automation:
+          mode: manual
+          reason: Sensitive financial evidence, BankID and credit consequences require personal review.
+        evidence:
+          - url: https://www.dnb.com/no/hvorfor-dnb/data-transparens/personvern-privat.html
+            checked_on: '2026-09-29'
+            published: October 2022, currently published notice
+            excerpt: en signert kopi av din legitimasjon
+            supports: [identity, removal, required_information, coverage, automation]
+          - url: https://www.dnb.com/no/om-oss/kontakt/faq-for-privatpersoner.html
+            checked_on: '2026-09-29'
+            excerpt: Egenopplysning
+            supports: [removal, required_information, coverage]
+        unknowns: [Authenticated portal not inspected., Case-specific verification and retention exceptions., No access request, block or deletion outcome tested.]
+      - regions: [AT]
+        legal_entity: Dun & Bradstreet Austria GmbH
+        removal:
+          method: form
+          destination: https://www.dnb.com/de-at/warum-dnb/datenschutz/ihre-rechte-als-betroffener/selbstauskunft-widerspruch/selbstauskunft-privatperson.html
+          alternatives: [eigenauskunft.at@dnb.com]
+          steps:
+            - Austrian residents can request their personal report through this form, email or the listed Vienna postal address.
+            - Form requires name, birth date, address, country, phone, email and photo-ID copy. Former names/addresses help matching but are optional.
+            - Review identity evidence personally; ID-card copies require both sides. Do not automatically upload documents.
+            - Review the returned report before requesting correction or eligible erasure; this access request does not delete records.
+        required_information:
+          fields: [full_name, date_of_birth, postal_address, country, phone, email, identity_document_copy]
+          certainty: documented
+          verification: Photo ID required, unlike the German form's optional upload. Published email/post checklist names identity, birth date and address; web form additionally requires phone/email. Upload limit 2 MB; registration-certificate upload is not marked required.
+        coverage:
+          effect: access_then_review
+          includes: Austrian personal credit-data access.
+          excludes: Other regional entities and automatic deletion of accurate credit records.
+        automation: {mode: manual, reason: Country eligibility and identity-document disclosure require personal review.}
+        evidence:
+          - url: https://www.dnb.com/de-at/warum-dnb/datenschutz/ihre-rechte-als-betroffener/selbstauskunft-widerspruch/selbstauskunft-privatperson.html
+            checked_on: '2026-09-29'
+            excerpt: Identitätsnachweis
+            supports: [identity, relevance, removal, required_information, coverage]
+        unknowns: [Later verification and request outcome untested., The vendor's stated free-access frequency is not adopted as an app-wide legal restriction.]
+      - regions: [DE]
+        legal_entity: Dun & Bradstreet Deutschland GmbH
+        removal:
+          method: form
+          destination: https://www.dnb.com/de-de/warum-dnb/datenschutz/ihre-rechte-als-betroffener/selbstauskunft-widerspruch/selbstauskunft-privatperson.html
+          alternatives: [eudpo@dnb.com]
+          steps:
+            - Use the personal-access form only for German residents with business-linked records.
+            - Enter the required name, business phone, email and business-address fields. Birth date and maiden name are optional.
+            - ID upload is voluntary; do not upload by default. Review the returned record before requesting correction or eligible deletion.
+        required_information:
+          fields: [full_name, business_phone, email, business_street_address, postal_code, city, country]
+          certainty: documented
+          verification: Optional ID upload permits redaction; subsequent verification and outcomes were not tested.
+        coverage:
+          effect: access_then_review
+          includes: German business-linked personal records.
+          excludes: Pure consumer data and residents outside Germany; access does not delete records.
+        automation:
+          mode: manual
+          reason: Business identifiers, country eligibility and potentially sensitive verification.
+        evidence:
+          - url: https://www.dnb.com/de-de/warum-dnb/datenschutz/ihre-rechte-als-betroffener/selbstauskunft-widerspruch/selbstauskunft-privatperson.html
+            checked_on: '2026-09-29'
+            excerpt: auf freiwilliger Basis eine Kopie Ihres Personalausweises hochzuladen
+            supports: [identity, removal, required_information, coverage, verification]
+          - url: https://www.dnb.com/en-us/why-dnb/data-transparency/contacts.html
+            checked_on: '2026-09-29'
+            excerpt: eudpo@dnb.com
+            supports: [removal]
+        unknowns: [Any follow-up verification., Record-specific deletion eligibility.]
+      - regions: [DE]
+        legal_entity: Dun & Bradstreet Deutschland GmbH — marketing objection
+        removal:
+          method: form
+          destination: https://www.dnb.com/de-de/warum-dnb/datenschutz/ihre-rechte-als-betroffener/selbstauskunft-widerspruch/werbewiderspruch-fuer-privatpersonen-und-unternehmen/werbewiderspruch-unternehmen/daten-nicht-mehr-zu-marketingzwecken-nutzen.html
+          alternatives: [eudpo@dnb.com]
+          steps:
+            - Choose objection to marketing use of database records, not only D&B's own newsletter.
+            - Review the email field and selector before submitting; keep any confirmation.
+        required_information:
+          fields: [email]
+          certainty: not_fully_specified
+          verification: Email is marked required; selector options and later confirmation remain unverified.
+        coverage:
+          effect: suppression
+          includes: Marketing distribution covered by the selected objection.
+          excludes: Credit/risk records, source-register erasure and proof of third-party deletion.
+        automation:
+          mode: manual
+          reason: Distinct purpose and incomplete live selector inspection.
+        evidence:
+          - url: https://www.dnb.com/de-de/warum-dnb/datenschutz/ihre-rechte-als-betroffener/selbstauskunft-widerspruch/werbewiderspruch-fuer-privatpersonen-und-unternehmen/werbewiderspruch-unternehmen/daten-nicht-mehr-zu-marketingzwecken-nutzen.html
+            checked_on: '2026-09-29'
+            excerpt: Im Falle eines Widerspruchs werden wir die Vermarktung Ihrer Daten zu Werbezwecken generell einstellen
+            supports: [removal, coverage, required_information]
+        unknowns: [Selector options and conditional fields., Exact suppression retention and propagation.]

@@ -1,0 +1,113 @@
+schema_version: 1
+brokers:
+  - id: foundry-professional-marketing
+    name: Foundry professional marketing
+    match_domains: [foundryco.com]
+    identity:
+      legal_name: FoundryCo, Inc. (formerly IDG Communications, Inc.)
+      brands: [Foundry, IDG Communications]
+      parent: null
+      official_domains: [foundryco.com]
+    relevance:
+      regions: [EEA, United Kingdom, United States]
+      category: professional
+      data_categories: [Business contact details, Professional profiles, Content interactions, Marketing interests]
+      note: B2B marketing and lead records, not cancellation of media subscriptions.
+    removal:
+      method: email
+      destination: dataprotection@foundryco.com
+      alternatives: [https://foundryco.com/privacy-policy/]
+      steps:
+        - Request erasure of matched professional marketing records and object to further disclosure.
+        - Identify matching emails and any known Foundry service; review further matching personally.
+        - Ask which controller and dataset are covered. Independent sponsors and group companies are not assumed deleted together.
+    required_information:
+      fields: [full_name, email, requested_right]
+      certainty: not_fully_specified
+      verification: No fixed request checklist in the current notice; further matching may be needed.
+    coverage:
+      effect: deletion_request
+      includes: Matched Foundry-controlled professional marketing records, with retention exceptions.
+      excludes: Independent sponsor records, guaranteed all-group erasure and subscription cancellation.
+    automation:
+      mode: manual
+      reason: Initial email is accepted; additional identifiers and fulfilment remain untested.
+    evidence:
+      - url: https://foundryco.com/privacy-policy/
+        checked_on: '2026-10-01'
+        published: September 2025
+        excerpt: dataprotection@foundryco.com
+        supports: [current_controller, B2B_processing, European_rights, recipient, retention]
+      - url: https://foundryco.com/about-us/licensing/
+        checked_on: '2026-10-01'
+        excerpt: IDG Communications, Inc. dba Foundry (n/k/a FoundryCo, Inc.)
+        supports: [exact_entity_name_continuity]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Matching and fulfilment untested., Parent and comparable scale unreviewed.]
+  - id: meltwater-product-context
+    name: Meltwater media and creator records
+    match_domains: [meltwater.com]
+    identity:
+      legal_name: Meltwater the Netherlands B.V. and product-specific regional controllers
+      brands: [Meltwater, Radarly, Klear]
+      parent: null
+      official_domains: [meltwater.com, journalists.meltwater.com, klear.com]
+    relevance:
+      regions: [EEA, United Kingdom, United States, Global]
+      category: professional
+      data_categories: [Media contact details, Public posts, News references, Creator profiles, Inferred interests]
+      note: Media contacts, monitored content and influencer records use distinct notices and controllers.
+    removal:
+      method: manual
+      destination: https://www.meltwater.com/en/privacy
+      alternatives: [privacy@meltwater.com, journalists@meltwater.com, https://klear.com/opt-out/]
+      steps:
+        - Identify whether the record is a journalist contact, monitored article/post, Radarly result or Klear influencer profile; supply relevant matching emails or profile/content URLs.
+        - For journalist records, contact journalists@meltwater.com. The notice excludes German creators added after 12 April 2018; ask for the applicable notice rather than assuming that exclusion means no data.
+        - For monitored media and Klear rights, use privacy@meltwater.com. Klear also publishes its own opt-out page; fields and verification remain untested.
+        - Radarly's notice names Meltwater France SAS and a postal DPO route via Meltwater BV. Ask the group DPO to route questions; do not assert that one request covers every product.
+        - Do not create a profile or close an unrelated customer account. Sales Intelligence points to Owler's separate notice.
+    required_information:
+      fields: [product_or_record_context, matching_email_or_profile_or_content_url, requested_right]
+      certainty: not_fully_specified
+      verification: Matching and identity checks depend on the product; no universal email-only checklist.
+    coverage:
+      effect: deletion_request
+      includes: Product-specific matched records under the relevant controller's notice.
+      excludes: Original publications, customer copies and blanket group deletion. Media content may be recollected; journalist suppression retains identifying details.
+    automation:
+      mode: manual
+      reason: Requires product and record context; generic name-and-email outreach cannot identify all monitored content.
+    evidence:
+      - url: https://www.meltwater.com/en/privacy
+        checked_on: '2026-10-01'
+        published: '2025-03-26'
+        excerpt: privacy@meltwater.com
+        supports: [distinct_product_notices, European_contact, Owler_boundary]
+      - url: https://journalists.meltwater.com/privacy-notice
+        checked_on: '2026-10-01'
+        excerpt: journalists@meltwater.com
+        supports: [journalist_rights, German_exclusion, regional_controllers, suppression_retention]
+      - url: https://www.meltwater.com/en/privacy/monitored-content
+        checked_on: '2026-10-01'
+        published: March 2022
+        excerpt: we may receive new versions of your personal data
+        supports: [monitored_content_scope, rights_route, recollection_boundary]
+      - url: https://www.meltwater.com/en/privacy/consumerinsights-monitoredcontent
+        checked_on: '2026-10-01'
+        excerpt: Meltwater France SAS
+        supports: [Radarly_controller, public_content_inferences, postal_rights_route]
+      - url: https://www.meltwater.com/en/privacy/creators-influencers
+        checked_on: '2026-10-01'
+        excerpt: Klear.com Ltd
+        supports: [influencer_controller, optout_route, verification]
+      - url: https://www.meltwater.com/en/privacy-groupcompanies
+        checked_on: '2026-10-01'
+        excerpt: Meltwater News US Inc.
+        supports: [exact_US_affiliate_identity]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Product-specific verification and fulfilment untested., Klear form fields not inspected., Comparable scale unreviewed.]

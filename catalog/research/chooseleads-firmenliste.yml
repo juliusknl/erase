@@ -1,0 +1,90 @@
+schema_version: 1
+brokers:
+  - id: chooseleads-uk
+    name: Choose Leads
+    match_domains: [chooseleads.co.uk]
+    identity:
+      legal_name: Choose Leads Limited (company 08241795)
+      brands: [Choose Leads]
+      parent: null
+      official_domains: [chooseleads.co.uk]
+    relevance:
+      regions: [UK]
+      category: consumer_marketing
+      data_categories: [Consumer contact details, Survey and marketing leads]
+      note: Intermediary supplying marketing lists; its policy describes processor and source-controller roles.
+    removal:
+      method: email
+      destination: compliance@chooseleads.co.uk
+      alternatives: [https://www.chooseleads.co.uk/img/2025/03/privacy_policy.pdf]
+      steps:
+        - Give the number receiving marketing calls and enough information to identify the incident; request its internal Do Not Call suppression and source tracing.
+        - Ask for the originating controller's details and follow up there. Choose Leads says it will request source removal, not that every other source is covered.
+        - If requesting complete erasure instead, review the stated trade-off that removing the suppression record can allow later reintroduction.
+    required_information:
+      fields: [full_name, contacted_phone_number]
+      certainty: documented
+      verification: The policy asks for the contacted number and gives name/number as sufficient initial matching examples; later verification is untested.
+    coverage:
+      effect: suppression
+      includes: Internal calling suppression and assistance requesting source removal.
+      excludes: Every supplier or independent marketer; erasure of suppression information can permit reintroduction.
+    automation: {mode: manual, reason: Telephone disclosure is outside the current email campaign's supported fields and requires personal review.}
+    evidence:
+      - url: https://www.chooseleads.co.uk/img/2025/03/privacy_policy.pdf
+        checked_on: '2026-09-30'
+        published: '2025-03-24'
+        excerpt: Choose Leads will also add you to our internal ‘Do Not Call’ list (DNC).
+        supports: [identity, current_contact, matching, source_tracing, suppression_tradeoff]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Individual source response and verification.]
+  - id: firmenliste-dach
+    name: FirmenListe.net
+    match_domains: [firmenliste.net]
+    identity:
+      legal_name: Adresskontor GmbH (Düsseldorf HRB 89996)
+      brands: [FirmenListe.net]
+      parent: null
+      official_domains: [firmenliste.net, adresskontor.de]
+    relevance:
+      regions: [DE, AT, CH]
+      category: professional
+      data_categories: [Public business details, Named legal representatives, Business contact channels]
+      note: Personal business records, not every resident; removing a personal marketing record does not erase a company or public register.
+    removal:
+      method: email
+      destination: support@firmenliste.net
+      alternatives: [email@iitr.de, https://www.firmenliste.net/kontakt.php]
+      steps:
+        - Identify your personal business record and company; request erasure where applicable and object to use for direct marketing.
+        - Ask which records and recipients are covered. Review any further matching request before disclosure.
+        - Use the listed data-protection officer for escalation, identifying Adresskontor GmbH explicitly because it is an external DPO service.
+    required_information:
+      fields: [full_name, email, employer]
+      certainty: not_fully_specified
+      verification: Name and company are a minimal initial matching proposal for the documented public-business data. No exhaustive rights-request checklist is published.
+    coverage:
+      effect: deletion_request
+      includes: Matched personal marketing records controlled by Adresskontor for FirmenListe.net.
+      excludes: Company-only information, original public registers, legally retained records and independent customer copies.
+    automation: {mode: manual, reason: A separate reviewed initial-email recipe can supply name and employer; any further verification requires personal review.}
+    evidence:
+      - url: https://www.firmenliste.net/datenschutz.php
+        checked_on: '2026-09-30'
+        published: '2026-08-01'
+        excerpt: Angaben über gesetzliche Vertreter
+        supports: [Article14_business_record_scope, erasure_and_objection, email_rights, DPO]
+      - url: https://www.firmenliste.net/impressum.php
+        checked_on: '2026-09-30'
+        excerpt: Adresskontor GmbH
+        supports: [current_registered_entity, published_email, geography]
+      - url: https://www.firmenliste.net/kontakt.php
+        checked_on: '2026-09-30'
+        excerpt: Kontaktdaten
+        supports: [published_support_mailbox, form_is_sales_oriented]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Actual matching and fulfilment., No assumption that all public business information is erasable.]

@@ -1,0 +1,16 @@
+<form method="post" action="/recommendations/country" class="filter-form">
+  <input type="hidden" name="csrf" value="{{ csrf }}">
+  <input type="hidden" name="return_to" value="{{ request.url.path }}">
+  <div class="profile-country-heading"><label for="action-country">Where do you live?</label>
+    <div class="info-tip">
+      <details class="info-tip-toggle"><summary aria-label="Why we ask for your country" aria-describedby="country-explanation">i</summary></details>
+      <div class="info-tip-content" id="country-explanation" role="tooltip">Your country helps us choose relevant brokers and the right privacy-request rules.</div>
+    </div>
+  </div>
+  <select id="action-country" name="country" required>
+    <option value="">Choose your country</option>
+    {% for code, label in action_countries.items() %}<option value="{{ code }}" {% if action_country == code %}selected{% endif %}>{{ label }}</option>{% endfor %}
+  </select>
+  <button class="secondary">Save country</button>
+</form>
+<p class="footnote">Changing country won’t update an approved email plan. <a href="/campaign">Review automatic emails</a> after a move.</p>

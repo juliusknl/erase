@@ -1,0 +1,32 @@
+.reply-assistance-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.reply-assistance-row h2 { margin: 0; }
+.reply-assistance-row p { margin: 5px 0 0; font-size: 14px; color: var(--muted); }
+.reply-assistance-dialog { position: fixed; inset: 0; margin: auto; width: min(560px, calc(100% - 32px)); max-height: calc(100dvh - 40px); box-sizing: border-box; overflow: auto; padding: 28px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); color: var(--ink); z-index: 1000; box-shadow: 0 12px 60px #0003; }
+.reply-assistance-dialog::backdrop { background: #10182080; }
+.assistance-dialog-heading { display: flex; gap: 16px; align-items: flex-start; justify-content: space-between; }
+.assistance-dialog-heading h2 { font: 600 23px/1.2 ui-sans-serif, system-ui, sans-serif; letter-spacing: -.025em; margin: 0 0 18px; }
+.assistance-dialog-heading > a { flex-shrink: 0; font-size: 26px; line-height: 1; text-decoration: none; padding: 0 4px; }
+.reply-assistance-dialog p { font-size: 14px; line-height: 1.55; margin: 0 0 16px; }
+.reply-assistance-dialog a { color: var(--accent); }
+.reply-assistance-dialog .assistance-cost { padding: 14px; border-radius: var(--radius); background: var(--surface-strong); }
+.assistance-cost strong { display: block; margin-bottom: 4px; }
+.reply-assistance-dialog .assistance-privacy, .reply-assistance-dialog .assistance-key-help { color: var(--muted); font-size: 12px; }
+.reply-assistance-dialog label { display: block; margin: 14px 0 6px; font-size: 13px; font-weight: 600; }
+.reply-assistance-dialog input[type=password] { box-sizing: border-box; width: 100%; padding: 10px 12px; margin: 0 0 6px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--surface); color: var(--ink); }
+.assistance-account-link { display: inline-block; font-size: 14px; }
+.reply-assistance-dialog button { font: 600 14px/1.4 ui-sans-serif, system-ui, sans-serif; }
+.assistance-footer { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 16px; font-size: 13px; }
+.assistance-footer form { margin: 0; }
+.assistance-footer .text-button { padding: 0; min-height: 32px; background: none; border: 0; color: var(--accent); }
+.assistance-footer > a:last-child { margin-left: auto; }
+.assistance-notice { padding: 10px 12px; border: 1px solid var(--line-strong); border-radius: var(--radius); }
+.assistance-notice.is-error { color: var(--red); }
+.assistance-providers { display: flex; gap: 4px; padding: 4px; margin-bottom: 18px; border: 1px solid var(--line); border-radius: 999px; }
+.assistance-providers button { flex: 1; border-radius: 999px; border: 0; background: transparent; color: var(--muted); }
+.assistance-providers button[aria-selected=true] { background: var(--accent); color: var(--button-text, var(--surface)); }
+.reply-assistance-dialog [hidden] { display: none !important; }
+.reply-assistance-dialog select { width: 100%; box-sizing: border-box; margin-bottom: 16px; }
+.assistance-signout { margin-top: 12px; }
+.reply-assistance-dialog .chatgpt-signin { display: inline-flex; align-items: center; gap: 10px; background: #000; color: #fff; border: 1px solid #000; padding: 12px 16px; border-radius: 8px; }
+.chatgpt-signin img { flex-shrink: 0; }
+@media (max-width: 480px) { .reply-assistance-dialog { padding: 20px; } .assistance-dialog-heading h2 { font-size: 21px; } }

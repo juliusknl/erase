@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "associations": [
+    {
+      "guide_id": "liveramp-fr",
+      "records": [
+        "community:liveramp-fr"
+      ],
+      "rationale": "The regional service policy explicitly names LiveRamp France SAS and the global rights page publishes the France resident inbox. This is a regional workflow for the same controller, not a distinct broker or new consent."
+    },
+    {
+      "guide_id": "liveramp-it",
+      "records": [
+        "community:liveramp-it"
+      ],
+      "rationale": "The regional service policy explicitly names LiveRamp France SAS and the global rights page publishes the Italy resident inbox. This is a regional workflow for the same controller, not a distinct broker or new consent."
+    },
+    {
+      "guide_id": "liveramp-es",
+      "records": [
+        "community:liveramp-es"
+      ],
+      "rationale": "The regional service policy explicitly names LiveRamp France SAS and the global rights page publishes the Spain resident inbox. This is a regional workflow for the same controller, not a distinct broker or new consent."
+    }
+  ]
+}

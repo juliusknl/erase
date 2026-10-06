@@ -1,0 +1,8 @@
+schema_version: 1
+associations:
+  - guide_id: foundry-professional-marketing
+    records: [live:idg-communications-inc]
+    rationale: Official Foundry licensing statement explicitly identifies IDG Communications Inc as now known as FoundryCo Inc. Current September 2025 privacy notice provides the current rights contact; older IDG mailboxes are not reused.
+  - guide_id: meltwater-product-context
+    records: [live:meltwater-news-us-inc]
+    rationale: Official affiliate list and journalist notice identify Meltwater News US Inc; the guide preserves product-specific and regional controllers instead of assuming this US entity controls all European records.

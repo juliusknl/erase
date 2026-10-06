@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: signalhire-professional
+    records: ["live:signalhire"]
+    rationale: Current September 2026 policy identifies the legal operator of the SignalHire brand and official domain in the discovery record; the guide is limited to professional profiles.

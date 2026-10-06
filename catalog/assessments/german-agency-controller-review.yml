@@ -1,0 +1,40 @@
+schema_version: 1
+assessments:
+  - record: community:1plus-agency
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: Current official portfolio describes client web/app development, creative work and campaign services; the privacy notice concerns its own visitors, enquiries and customers. This record is excluded from the default independent-broker campaign, not declared free of personal data or exempt from rights requests by actual customers.
+    evidence:
+      - url: https://www.1plus-agency.com/
+        checked_on: '2026-10-01'
+        excerpt: Webdesign & Entwicklung
+        supports: [client_agency_business_scope]
+      - url: https://www.1plus-agency.com/datenschutzerklarung/
+        checked_on: '2026-10-01'
+        excerpt: bei der Nutzung unserer Website
+        supports: [first_party_policy_scope]
+    unresolved: []
+  - record: community:7sections
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: Published official notice covers customers, contracts and website enquiries, including name/email for enquiries and banking details for contracts. These are not documented broker-profile removal requirements. Direct current HTTP access returned a browser checkpoint; no independent consumer-marketing dataset and matching workflow were established from the readable notice.
+    evidence:
+      - url: https://www.7sections.de/datenschutz/
+        checked_on: '2026-10-01'
+        excerpt: Erfüllung des Vertrags
+        supports: [customer_contract_scope, not_generic_identifier_checklist]
+    unresolved: [Establish whether a separate consumer marketing database exists and identify its controller, rights route and matching identifiers.]
+  - record: community:complead
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: Current complead pages identify Skyline Performance GmbH, whereas the inventory names complead GmbH. The agency supplies email-campaign services, but its current notice covers customers/newsletters and website enquiries; neither legal succession nor the controller of externally sourced audience data is established.
+    evidence:
+      - url: https://www.complead.de/datenschutz.php
+        checked_on: '2026-10-01'
+        excerpt: Skyline Performance GmbH
+        supports: [current_controller_name, customer_notice_scope]
+      - url: https://www.complead.de/
+        checked_on: '2026-10-01'
+        excerpt: E-Mail-Kampagnen
+        supports: [campaign_services, current_brand]
+    unresolved: [Resolve current versus historical legal identity and independently controlled audience-data rights route before contacting the old inbox.]

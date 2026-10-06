@@ -1,0 +1,13 @@
+schema_version: 1
+assessments:
+  - record: community:simpli-fi
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: Current Simpli.fi advertising instructions are recorded in simplifi-advertising for Simplifi Holdings LLC. This older community record names Simplifi Europe IVS and Simplifi Holdings Inc. Shared branding establishes a useful current route, but not legal succession or retention coverage for every historical entity; do not silently merge them into confirmed coverage.
+    evidence:
+      - url: https://simpli.fi/services-privacy-policy
+        checked_on: '2026-10-01'
+        published: June 2026
+        excerpt: Simplifi Holdings, LLC
+        supports: [current_controller, historical_identity_gap]
+    unresolved: [Establish current status and data succession of the named historical Danish IVS and US Inc entities.]

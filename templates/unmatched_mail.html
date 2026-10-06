@@ -1,0 +1,7 @@
+<section aria-label="Unmatched mail"><h2>Unmatched mail</h2><p>These messages aren’t linked to a broker yet. Linking a message does not verify its sender.</p>
+{% for item in messages %}<article class="card" id="message-{{ item.record.id }}"><h3>{{ item.mail.get('subject') or 'Incoming message' }}</h3><p>{{ item.mail.get('from', '') }}</p>
+{% if item.mail.get('body') %}{% with email_text=item.mail.body %}{% include 'email_body.html' %}{% endwith %}{% else %}<p>Message content is unavailable. We’ll retry retrieval; read the original before linking it.</p>{% endif %}
+<p><a href="{{ item.gmail_url }}" target="_blank" rel="noopener noreferrer">Open message in Gmail ↗</a></p>
+<form method="post" action="/inbox/{{ item.record.id }}/review"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="outcome" value="link"><label>Which broker?<select name="case_id" required><option value="">Choose a broker</option>{% for case in cases %}<option value="{{ case.id }}">{{ case.broker.name }}</option>{% endfor %}</select></label><button>Link message</button></form>
+<form method="post" action="/inbox/{{ item.record.id }}/review"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="outcome" value="dismiss"><button class="text-button">Unrelated mail — dismiss</button></form>
+</article>{% else %}<article class="card"><p>No unmatched messages.</p></article>{% endfor %}</section>

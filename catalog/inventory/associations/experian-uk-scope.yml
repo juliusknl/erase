@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: experian-uk-marketing
+    records: ["community:experian-gb"]
+    rationale: The live form and CRAIN identify Experian Limited. The guide's primary campaign action is marketing suppression, expressly not credit deletion; it also links the separate free statutory-report route and documents the limits of credit-record erasure. This association does not turn the discovery record's credit-agency label into claimed marketing coverage of every dataset.

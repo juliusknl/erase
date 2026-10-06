@@ -1,0 +1,146 @@
+schema_version: 1
+brokers:
+  - id: retention-rb2b-network
+    name: Retention.com and RB2B
+    match_domains: [retention.com, rb2b.com]
+    identity:
+      legal_name: GetEmails, LLC
+      brands: [Retention.com, RB2B, R! B2B]
+      parent: null
+      official_domains: [retention.com, rb2b.com]
+    relevance:
+      regions: [US-focused, Other visitors with matched identifiers]
+      category: consumer_marketing
+      data_categories: [Email identifiers, Professional contacts, Browsing activity, Identity links]
+      note: Both current public brand notices name GetEmails and point to the same database opt-out; this is not two independent companies.
+    removal:
+      method: form
+      destination: https://app.retention.com/optout/
+      alternatives: [https://retention.com/your-privacy-choices, https://app.retention.com/ccpa_details/, support@retention.com, support@rb2b.com]
+      steps:
+        - Use the shared database opt-out linked by Retention.com and RB2B for matching identifiers you control.
+        - Complete the portal's matching and verification steps; do not assert California residence merely to use its separate CCPA form.
+        - If the portal cannot be reached, use the relevant brand's published support contact or the privacy telephone listed in its notice.
+        - Keep the confirmation. Suppression data remains to prevent reintroduction; independent customers and other providers must handle their own copies separately.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Both brands officially link this portal, but public HTTP returned 403; exact fields and verification are uninspected.
+    coverage:
+      effect: suppression
+      includes: Matched records suppressed from the shared contributor/marketing database under the two published brand instructions.
+      excludes: Independent customer copies, unrelated providers, complete erasure of suppression records or every browser's cookies.
+    automation:
+      mode: manual
+      reason: Shared form is preferred; matching fields and non-US fulfilment need verification, so no generic automatic email is promoted.
+    evidence:
+      - url: https://retention.com/your-privacy-choices
+        checked_on: '2026-10-01'
+        excerpt: Retention.com Database Opt-Out
+        supports: [current_portal_referral]
+      - url: https://retention.com/privacy-policy
+        checked_on: '2026-10-01'
+        published: October 2023; embedded addendum May 2022
+        excerpt: GetEmails, LLC dba Retention.com
+        supports: [identity, suppression, support_alternative, California_addendum_limits]
+      - url: https://www.rb2b.com/privacy-policy
+        checked_on: '2026-10-01'
+        published: '2024-02-21'
+        excerpt: GetEmails, LLC d/b/a R! B2B
+        supports: [shared_controller, shared_portal, independent_customer_limits]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Form fields and fulfilment untested after 403., Current geography and non-US matching need clarification., Old notice dates retained despite current publication., Parent and comparable scale unreviewed.]
+
+  - id: enformion-data-products
+    name: Enformion, Tracers and Endato
+    match_domains: [enformion.com, tracers.com, endato.com]
+    identity:
+      legal_name: Enformion, LLC
+      brands: [Enformion, Tracers, Endato]
+      parent: null
+      official_domains: [enformion.com, tracers.com, endato.com]
+    relevance:
+      regions: [US, Other applicants require scope confirmation]
+      category: identity_risk
+      data_categories: [Contact and household details, Public records, Identity and fraud information, Regulated data]
+      note: Data products include regulated and public information with different rights from ordinary marketing data; the portal expressly names all three brands.
+    removal:
+      method: form
+      destination: https://www.enformion.com/opt-out/
+      alternatives: [https://www.enformion.com/privacy-policy/, https://www.enformion.com/contact-us/]
+      steps:
+        - Open the privacy portal and choose the requested right; for deletion of a public data record choose Member of the public, not Enformion Customer.
+        - Enter first name, last name and a matching email; middle name is optional. Review the subject/agent declaration and complete CAPTCHA yourself.
+        - Follow the emailed link within 24 hours and finish the subsequent matching form. The first email step alone is not a submitted deletion request.
+        - Retain confirmation and examine exclusions. Regulated/public-source records may remain or reappear; opt-out is not deletion of the original source.
+        - The access/correction forms ask for more identifiers and US-formatted address fields; do not substitute them for deletion or invent a US address.
+    required_information:
+      fields: [first_name, last_name, matching_email, subject_or_authorized_agent_declaration]
+      certainty: not_fully_specified
+      verification: Initial deletion/opt-out fields are public; email-link form is untested. Policy describes matching two or three data points for verified rights, while opt-out does not require that verification.
+    coverage:
+      effect: deletion_request
+      includes: Verified eligible data-product records covered by the Enformion, Tracers and Endato portal; any courtesy public-record suppression has separate limits.
+      excludes: Original public sources, exempt regulated records, guaranteed permanent suppression after new records arrive or every independent customer's copy.
+    automation:
+      mode: manual
+      reason: Identity-risk products, CAPTCHA, a personal declaration and a second-stage email form require review.
+    evidence:
+      - url: https://www.enformion.com/opt-out/
+        checked_on: '2026-10-01'
+        excerpt: including Tracers.com and Endato.com
+        supports: [shared_brand_portal, request_type_fields, email_link, declaration]
+      - url: https://www.enformion.com/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2025-01-01'
+        excerpt: Enformion, LLC
+        supports: [identity, product_scope, regulated_exclusions, matching, recurrence]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Second-stage form fields uninspected., Non-US acceptance not established by the state-rights notice., Actual retention and recurrence untested., Parent and comparable scale unreviewed.]
+
+  - id: cbinsights-professional
+    name: CB Insights professional data
+    match_domains: [cbinsights.com]
+    identity:
+      legal_name: CB Information Services, Inc.
+      brands: [CB Insights, CBI]
+      parent: null
+      official_domains: [cbinsights.com]
+    relevance:
+      regions: [EU, EEA, UK, US, International]
+      category: professional
+      data_categories: [Professional names, Job titles, Company affiliations, Business contacts]
+      note: The current notice explicitly covers professional data obtained from external sources, not only subscribers and website visitors.
+    removal:
+      method: email
+      destination: privacy@cbinsights.com
+      alternatives: [https://www.cbinsights.com/privacy-policy/]
+      steps:
+        - Request erasure of matched personal professional data at the published privacy inbox, identifying your professional email and employer.
+        - Distinguish personal-data removal from deleting a company profile or only unsubscribing from newsletters.
+        - Review further identity checks and retained-data explanations; no customer account is required merely to make a verifiable request.
+    required_information:
+      fields: [full_name, email]
+      certainty: not_fully_specified
+      verification: The notice gives name, address and email as examples rather than one mandatory checklist. Work email and employer are an initial matching proposal; no postal data is automatically disclosed.
+    coverage:
+      effect: deletion_request
+      includes: Matched personal business-contact data controlled by CBI, subject to applicable rights and retention exceptions.
+      excludes: Whole-company or investment data without personal information, independent customer records and source websites.
+    automation:
+      mode: email_minimal
+      reason: Published European rights email accepts an initial professional matching request; any further verification is reviewed.
+    evidence:
+      - url: https://www.cbinsights.com/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2026-07-31'
+        excerpt: To exercise your rights, please contact us at
+        supports: [identity, external_professional_data, European_rights, email_route, matching_examples]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Email fulfilment and subsequent matching untested., Parent and comparable personal-record scale unreviewed.]

@@ -1,0 +1,66 @@
+{% extends 'settings_base.html' %}
+{% block title %}Automatic emails · erase{% endblock %}
+{% block settings_title %}Automatic emails{% endblock %}
+{% block settings_class %}campaign-page{% endblock %}
+{% block settings_content %}
+{% if request.query_params.get('gmail_connection') == 'wrong_account' %}<p class="notice danger" role="alert">That is a different Gmail account. Connect the request address shown below, or change it in Profile first. Your previous connection was kept.</p>{% elif request.query_params.get('gmail_connection') == 'failed' %}<p class="notice danger" role="alert">Gmail wasn’t connected. Your previous connection and saved requests were kept. Try connecting again and allow the requested permissions.</p>{% endif %}
+{% if error %}<p class="notice danger" role="alert">{% if error == 'approval' %}Confirm the authorization checkbox to start.{% elif error == 'resume' %}Review your permissions below to start again. Nothing has resumed.{% else %}Your profile or preview changed, or the daily limit was invalid. Refresh this page and try again.{% endif %}</p>{% endif %}
+{% if request.query_params.get('saved') %}<p class="notice" role="status">Permissions saved. {{ 'Outgoing emails remain paused.' if paused else 'Current status: ' ~ status.title ~ '.' }}</p>{% endif %}
+{% if not automation.live %}<p class="notice">Sending is disabled in this installation. Set <code>ERASURE_LIVE_SUBMISSIONS=true</code> in the local configuration and restart the app when ready. Saving permissions alone will not send emails.</p>{% endif %}
+{% if tab == 'messages' %}
+<section class="card email-previews">
+  <div class="section-head"><div><h2>Exact email previews</h2><p>Opening this page sends nothing. Each broker’s request history stays on its broker page.</p></div><a href="/campaign">Back to permissions</a></div>
+  <nav class="request-tabs" aria-label="Preview information"><a href="/campaign?tab=messages&amp;allow_postal=false" {% if not allow_postal %}aria-current="page"{% endif %}>Without postal address</a><a href="/campaign?tab=messages&amp;allow_postal=true" {% if allow_postal %}aria-current="page"{% endif %}>With postal address where required</a></nav>
+  {% if selected_preview %}<article class="email-preview" id="email-preview"><h3>{{ selected_preview.guide.name }}</h3>
+    {% if selected_preview.plan %}<p>To: {{ selected_preview.plan.destination }}<br>Subject: {{ selected_preview.plan.subject }}</p><pre class="email-body">{{ selected_preview.plan.body }}</pre>
+    <p class="footnote">Information included: {{ selected_preview.plan.disclosed_fields | join(', ') | replace('_', ' ') }}.</p>
+    {% else %}<p>{{ selected_preview.reason }}</p>{% endif %}
+    <p>{{ selected_preview.route.why }}</p><p>{{ selected_preview.route.follow_up }}</p>
+    <p><a href="/brokers/{{ selected_preview.broker.id }}">Open request history</a> · <a href="{{ selected_preview.route.evidence[0].url }}" target="_blank" rel="noopener noreferrer">Official instructions ↗</a></p>
+  </article>{% endif %}
+  <div class="table-wrap"><table data-sortable><thead><tr><th data-sort="text">Broker</th><th data-sort="text">Availability</th><th>Preview</th></tr></thead><tbody>
+  {% for row in route_rows %}<tr><td><a href="/brokers/{{ row.broker.id }}">{{ row.guide.name }}</a></td><td>{{ 'Email available' if row.plan else row.reason }}</td><td><a href="/campaign?tab=messages&amp;allow_postal={{ 'true' if allow_postal else 'false' }}&amp;broker={{ row.broker.id }}#email-preview">{{ 'View email' if row.plan else 'View reason' }}</a></td></tr>
+  {% else %}<tr><td colspan="3">No reviewed email requests available for these settings.</td></tr>{% endfor %}</tbody></table></div>
+</section>
+{% else %}
+{% include 'background_settings.html' %}
+<section class="card mailbox-settings" aria-labelledby="mailbox-heading">
+  <div class="settings-section-heading"><h2 id="mailbox-heading">Mailbox</h2><a href="/gmail/connect">{{ 'Change connection' if automation.gmail_ready else 'Reconnect Gmail' }}</a></div>
+  <div class="mailbox-connection"><span class="connection-indicator {{ 'is-connected' if automation.gmail_ready else 'is-disconnected' }}" aria-hidden="true"></span><span>{{ 'Gmail connected' if automation.gmail_ready else 'Gmail needs connection' }}</span></div>
+  {% if profile.email %}<p class="mailbox-address">{{ profile.email }} <span class="settings-muted">· request address</span></p>{% endif %}
+  <p class="settings-muted">Last successful check: {{ status.last_sync | relative_time if status.last_sync else 'Not yet' }}.</p>
+</section>
+<section class="card reply-assistance-row" id="reply-assistance"><div><h2>Reply assistance</h2><p>{{ reply_assistance.label }} · {{ 'Review connection' if reply_assistance.error else ('ChatGPT sorts routine broker replies.' if reply_assistance.provider == 'chatgpt' else 'Let Jev sort routine broker replies for you.') }}</p></div><a class="button secondary" href="/campaign?reply_assistance=1" data-assistance-open>{{ 'Manage reply assistance' if reply_assistance.has_key or reply_assistance.enabled else 'Set up reply assistance' }}</a></section>
+{% include 'reply_assistance.html' %}
+<section class="card permission-settings" aria-labelledby="sharing-heading">
+  <div class="settings-section-heading"><h2 id="sharing-heading">Information shared</h2><a href="/onboarding">Edit Profile</a></div>
+  <p class="settings-muted">Only what each reviewed request needs.</p>
+  <dl class="sharing-summary">
+    <div><dt>Name</dt><dd>{{ profile.full_name or 'Add your name in Profile' }}</dd></div>
+    <div><dt>Email addresses</dt><dd>{% for address in ([profile.email] + profile.get('other_emails', [])) | select %}<span class="shared-email">{{ address }}</span>{% else %}Add your email in Profile{% endfor %}</dd></div>
+    <div><dt>Country</dt><dd>{{ 'EU/EEA' if selected_country == 'EEA' else country_options[selected_country] }} · <a href="/onboarding#country">{{ 'Select country' if selected_country == 'EEA' else 'Change in Profile' }}</a></dd></div>
+    {% if profile.work_email or profile.employer %}<div><dt>Work details, where required</dt><dd>{{ [profile.work_email, profile.employer] | select | join(' · ') }}</dd></div>{% endif %}
+  </dl>
+  {% if email_supported and preview %}<form method="post" action="/campaign/automatic" class="campaign-consent">{% else %}<div class="campaign-consent">{% endif %}
+    <input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="preview_hash" value="{{ preview_hash }}"><input type="hidden" name="postal_preview_hash" value="{{ postal_preview_hash }}"><input type="hidden" name="country" value="{{ selected_country }}"><input type="hidden" name="include_new" value="true">
+    <div class="postal-permission"><label class="consent-check"><input type="checkbox" name="allow_postal" value="true" {% if allow_postal %}checked{% endif %}> Allow my saved postal address only when required.</label>
+    <p class="settings-muted">Phone, date of birth, ID documents and attachments are never sent automatically.</p></div>
+    <section class="automatic-scope" aria-labelledby="automatic-scope-heading"><div class="settings-section-heading"><h2 id="automatic-scope-heading">What runs automatically</h2></div>
+    <p>Requests, reply checks and supported follow-ups for people-search, work-contact and marketing databases. Newly validated brokers join automatically.</p>
+    <p class="settings-muted">Forms and extra information appear in <a href="/cases?view=attention">Needs you</a>. Credit, insurance and fraud records aren’t included.</p>
+    <a href="/campaign?tab=messages">See covered brokers and exact emails →</a>
+    <div class="sending-limit"><div><label for="daily-limit">Daily sending limit</label><p class="settings-muted" id="daily-limit-help">Unsent work continues tomorrow. Reply checks don’t count.</p></div><div class="limit-input"><input id="daily-limit" aria-label="Maximum automatic emails per day" aria-describedby="daily-limit-help" type="number" name="daily_limit" min="1" max="50" value="{{ automation.daily_limit }}" required><span>per day</span></div></div>
+    </section>
+    {% if not email_supported %}<p class="notice">Automatic emails are not yet supported for {{ country_options[selected_country] }}. <a href="/quick-wins">Use the relevant manual actions</a>. We will not send an EU/EEA request on your behalf.</p>
+    {% elif not preview %}<p><a class="button" href="/onboarding">Complete and sign your Profile</a></p>
+    {% else %}
+    <div class="permission-save"><label class="consent-check"><input type="checkbox" name="authorize" value="true" required> I authorize ongoing automatic requests, including newly validated brokers, using the information allowed above.</label>
+    <button>{{ 'Save permissions' if automation.enabled else 'Start automatic emails' }}</button></div>
+    {% if paused and automation.enabled %}<p class="footnote">Saving permissions keeps outgoing emails paused. Resume from Home when you’re ready.</p>{% endif %}
+    {% endif %}
+  {% if email_supported and preview %}</form>{% else %}</div>{% endif %}
+</section>
+<p class="footnote">Keep the local app running. Pause or resume sending from <a href="/dashboard">Home</a>; history and reply tracking are kept. Sent emails cannot be recalled.</p>
+{% if status.state == 'blocked' and automation.live %}<p class="notice" role="status">{{ status.instruction }}</p>{% endif %}
+{% endif %}
+{% endblock %}

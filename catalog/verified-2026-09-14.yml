@@ -1,0 +1,18 @@
+verified_at: '2026-09-14T00:00:00+00:00'
+brokers:
+  - name: Wiza, Inc.
+    domain: wiza.com
+    contact: optout@wiza.com
+    policy_url: https://wiza.co/privacy
+  - name: LeadGenius
+    domain: leadgenius.com
+    contact: privacy@leadgenius.com
+    policy_url: https://www.leadgenius.com/legal/privacy
+  - name: GetProspect
+    domain: getprospect.com
+    contact: support@getprospect.com
+    policy_url: https://getprospect.com/privacy
+  - name: LeadFuze
+    domain: leadfuze.com
+    contact: support@leadfuze.com
+    policy_url: https://www.leadfuze.com/privacy/

@@ -1,0 +1,109 @@
+schema_version: 1
+assessments:
+  - record: community:gameforge
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: Excluded from default independent-broker outreach, not declared data-free. The gaming notice names Gameforge 4D GmbH as controller and Gameforge AG as parent handling accounting, legal and group privacy functions. Requests concern game, forum, support or payment relationships; deletion may affect an active account. Identify the service and account first. The notice gives support.gameforge.com or info@gameforge.com for erasure and datenschutz@gameforge.com for the DPO. A group relationship is not blanket erasure coverage.
+    evidence:
+      - url: https://agbserver.gameforge.com/files/pdf/fr_FR/main_privacy_policy_fr.pdf
+        checked_on: '2026-10-01'
+        published: '2025-03-12'
+        excerpt: our parent company (Gameforge AG)
+        supports: [parent_identity, game_service_controller, relationship_specific_rights]
+    unresolved: []
+  - record: community:check24
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: Excluded from default independent-broker outreach, not declared data-free. CHECK24 Vergleichsportal GmbH operates the umbrella website; individual comparison services have separate responsible companies. The imported contact notice is for CHECK24 GmbH's account and loyalty services, not proof that all listed affiliates are one controller. Identify the comparison, contract or account before using kundenmanagement_datenschutz@check24.de for that account notice. Group forwarding is not completed erasure and account deletion is not merely marketing objection.
+    evidence:
+      - url: https://www.check24.de/unternehmen/impressum/
+        checked_on: '2026-10-01'
+        excerpt: Von der CHECK24 Vergleichsportal GmbH wird lediglich die Seite check24.de bereitgestellt.
+        supports: [umbrella_site_identity, separate_comparison_controllers]
+      - url: https://www.check24.de/popup/datenschutz-check24-gmbh/
+        checked_on: '2026-10-01'
+        excerpt: kundenmanagement_datenschutz@check24.de
+        supports: [separate_account_controller_contact, account_scope]
+    unresolved: []
+  - record: community:idealo
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: Excluded from default independent-broker outreach, not declared data-free. idealo internet GmbH operates shopping and travel comparisons, accounts, wishlists and price alerts with advertising and personalized processing. Its notice gives privacy@idealo.de for rights and account settings for account deletion. Withdrawing consent needed for account features can require closing the account. Identify the service and desired advertising or account action before requesting it; newsletter unsubscribe is not universal erasure.
+    evidence:
+      - url: https://www.idealo.de/legal/datenschutz
+        checked_on: '2026-10-01'
+        excerpt: privacy@idealo.de
+        supports: [service_identity, account_feature_scope, rights_contact]
+    unresolved: []
+  - record: community:mobile-de
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: Excluded from default independent-broker outreach, not declared data-free or exclusively first-party. mobile.de GmbH's vehicle marketplace notice covers listings, messages, accounts and finance enquiries, plus third-party data and advertising profiles. Use datenschutz@team.mobile.de with the relevant account, transaction or visitor context for a targeted request. Do not close listings or affect finance-related records through a blanket broker template; the notice does not establish erasure at all separately controlled advertising or finance partners.
+    evidence:
+      - url: https://www.mobile.de/service/privacyPolicy
+        checked_on: '2026-10-01'
+        published: '2026-09-09'
+        excerpt: datenschutz@team.mobile.de
+        supports: [marketplace_controller, financial_and_advertising_context, rights_contact]
+    unresolved: []
+  - record: community:verivox
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: Excluded from default independent-broker outreach, not declared data-free. The comparison notice jointly names Verivox GmbH, Verivox Versicherungsvergleich GmbH and Verivox Finanzvergleich GmbH and describes contract referrals, insurance and credit-related processing. Account deletion is offered in Mein Konto; datenschutz@verivox.de is the rights contact. Identify the comparison, account and contract before a targeted request. Marketing objection, account closure and deletion of legally retained contract records are different actions.
+    evidence:
+      - url: https://www.verivox.de/company/datenschutz/
+        checked_on: '2026-10-01'
+        excerpt: Verivox Versicherungsvergleich GmbH
+        supports: [joint_controllers, comparison_relationship, contract_retention, rights_and_account_routes]
+    unresolved: []
+  - record: community:trustpilot
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: Excluded from default independent-broker outreach, not declared data-free. Trustpilot A/S publishes user reviews and profiles and describes public-data sharing, including AI-related use. Users can manage records in their account or contact the Privacy Team through the linked Help Center. Its AI-training opt-out instructions involve deleting the account and associated reviews; that destructive choice is not authorized by generic broker outreach. Business-controlled invitation data and retained records are separate. Do not promote the imported email without current corroboration.
+    evidence:
+      - url: https://uk.legal.trustpilot.com/end-user-privacy-terms
+        checked_on: '2026-10-01'
+        excerpt: If you delete your Trustpilot account, we retain certain information
+        supports: [review_platform_controller, public_data_sharing, account_closure_boundary, privacy_team_route]
+    unresolved: []
+  - record: community:mydealz
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: Excluded from default independent-broker outreach, not declared data-free. The current community and deals notice jointly names Atolls Germany GmbH and Atolls GmbH. The current rights mailbox is privacy.de.cmt@atolls.com, not the imported privacy@mydealz.de. Posts, account activity and advertising need relationship-specific handling; deletion removes the account and some banned-user records can be retained. No automatic account closure or assumed erasure across the entire Atolls group.
+    evidence:
+      - url: https://www.mydealz.de/seite/datenschutz
+        checked_on: '2026-10-01'
+        excerpt: privacy.de.cmt@atolls.com
+        supports: [current_joint_controllers, updated_contact, community_account_scope]
+    unresolved: []
+  - record: community:spiegel-de
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: Excluded from default independent-broker outreach, not declared data-free. DER SPIEGEL GmbH & Co. KG's publisher notice describes reader accounts, subscriptions, visitor advertising and named group joint controllers. datenschutz@spiegelgruppe.de handles targeted rights and the privacy center handles advertising choices. Identify the subscription, account or browser context first; do not turn an advertising objection into account or subscription closure, or assume every independent advertising recipient is erased.
+    evidence:
+      - url: https://www.spiegel.de/datenschutz-spiegel
+        checked_on: '2026-10-01'
+        excerpt: Datenschutzrechtlich verantwortlich ist die DER SPIEGEL GmbH & Co. KG.
+        supports: [publisher_identity, group_processing_scope, privacy_contact]
+    unresolved: []
+  - record: community:taz-de
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: Excluded from default independent-broker outreach, not declared data-free. The published taz group notice describes news readership, advertising, subscriptions and delivery/billing by TAZ Verlags- und Vertriebs GmbH. datenschutz@taz.de handles privacy and consent requests. Identify the subscription, account or visitor context before targeted action; do not conflate advertising consent withdrawal with cancellation or erasure of legally retained billing records. Advertising partners require their own scope checks.
+    evidence:
+      - url: https://taz.de/!166598/
+        checked_on: '2026-10-01'
+        published: '2023-03-01'
+        excerpt: TAZ Verlags- und Vertriebs GmbH
+        supports: [publisher_identity, subscription_relationship, privacy_contact]
+    unresolved: []
+  - record: community:sport1
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: Excluded from default independent-broker outreach, not declared data-free. SPORT1 GmbH's notice concerns its sports publishing service, visitor advertising, accounts and newsletters. datenschutz@sport1.de is the privacy contact; browser consent and separately controlled paid contentpass access have distinct scope. Target the relevant site, account or advertising identifier instead of sending a blanket account-deletion request or assuming independent advertising processors and partners are all erased.
+    evidence:
+      - url: https://www.sport1.de/unternehmen/datenschutz
+        checked_on: '2026-10-01'
+        excerpt: datenschutz@sport1.de
+        supports: [publisher_identity, visitor_advertising, contextual_privacy_route]
+    unresolved: []

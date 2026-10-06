@@ -1,0 +1,4 @@
+<!doctype html>
+<html lang="en" data-theme="{{ current_appearance(request) }}">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Let’s get you back · erase</title><link rel="stylesheet" href="/static/style.css?v={{ css_version }}"><link rel="stylesheet" href="/static/themes.css?v={{ css_version }}"></head>
+<body class="login-body"><main class="login-card"><p class="eyebrow">erase</p><h1>Let’s get you back.</h1><p role="alert">{{ message }}</p><a class="button" href="{{ '/login' if code == 401 else '/dashboard' }}">{{ 'Unlock dashboard' if code == 401 else 'Back to dashboard' }}</a></main></body></html>

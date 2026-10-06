@@ -1,0 +1,60 @@
+schema_version: 1
+assessments:
+  - record: community:adressdruck
+    disposition: out_of_scope
+    checked_on: '2026-09-30'
+    rationale: The current offering is a lettershop for customer mailings and rented lists sourced from an address provider, plus household-level postal products. Its privacy notice concerns its own website and business relationships; no independently maintained consumer list is established. Exclude from the default independent-broker campaign, not from case-specific rights requests if a received mailing identifies it as controller. For such mail, identify the advertiser and originating list provider rather than claim universal deletion through the printer.
+    evidence:
+      - url: https://www.adressdruck.de/neukunden/
+        checked_on: '2026-09-30'
+        excerpt: Adressen zur Neukundenakquise bei einem Adressanbieter anmieten
+        supports: [intermediary_role, address_source, scope]
+      - url: https://www.adressdruck.de/datenschutz/
+        checked_on: '2026-09-30'
+        published: September 2024
+        excerpt: adressdruck.de GmbH
+        supports: [current_controller, business_and_website_scope]
+    unresolved: []
+  - record: community:base-plus
+    disposition: unresolved
+    checked_on: '2026-09-30'
+    rationale: The current data policy published on Base Plus names IDAIA and dpo@idaia.group; that scoped process is now documented in the IDAIA guide. The separate legal notice still names Base Plus SAS and its own company number. No legal merger or blanket subsidiary coverage is inferred from group branding. Resolve which historical Base Plus or Europrogres datasets fall under the current IDAIA process before associating the old corporate record.
+    evidence:
+      - url: https://www.base-plus.fr/politique-de-donnees-personnelles.html
+        checked_on: '2026-09-30'
+        published: '2026-09-10'
+        excerpt: Politique de Protection des Données à caractère personnel – IDAIA
+        supports: [current_product_notice, current_rights_route]
+      - url: https://www.base-plus.fr/mentions-legales.html
+        checked_on: '2026-09-30'
+        excerpt: BASE PLUS – SAS
+        supports: [separate_publisher_identity]
+    unresolved: [Resolve legacy Base Plus and Europrogres dataset/controller transition without assuming a legal merger.]
+  - record: community:arena-direkt
+    disposition: unresolved
+    checked_on: '2026-09-30'
+    rationale: Current official business page confirms lead generation and maintained email-distribution lists. Its corporate privacy page publishes datenschutz@arena-direkt.de but describes voluntarily supplied contact-enquiry data rather than the consumer lead database; affiliated consumer sites have their own notices. The inbox is genuine, but a product-specific matching checklist and source-list/controller scope are not established.
+    evidence:
+      - url: https://arena-direkt.de/
+        checked_on: '2026-09-30'
+        excerpt: die Pflege aktueller Adressverteiler
+        supports: [relevance, business_identity]
+      - url: https://arena-direkt.de/datenschutz/
+        checked_on: '2026-09-30'
+        excerpt: datenschutz@arena-direkt.de
+        supports: [official_contact, website_contact_enquiry_scope]
+    unresolved: [Inspect consumer lead-source notices and document matching and verification for the relevant database.]
+  - record: community:arnold-demmerer
+    disposition: unresolved
+    checked_on: '2026-09-30'
+    rationale: Current official site confirms Arnold Demmerer and Partner GmbH listbroking. Its consumer instructions distinguish the advertiser from the address owner and permit contact when ADP is identified as controller, but still cite pre-GDPR law. The Datenschutzanfrage link leads to a general contact page. The imported identity-document requirement is not corroborated by these official instructions; do not automatically request or send ID, or treat an intermediary request as deletion from every source list.
+    evidence:
+      - url: https://www.zielgruppenmarketing.de/datenschutzerklaerung.html
+        checked_on: '2026-09-30'
+        excerpt: Arnold, Demmerer & Partner GmbH
+        supports: [legal_identity, website_scope]
+      - url: https://www.zielgruppenmarketing.de/portfolio/datenschutz/verbraucher.html
+        checked_on: '2026-09-30'
+        excerpt: Wenn wir als verantwortliche Stelle genannt sind
+        supports: [conditional_controller_route, source_list_distinction]
+    unresolved: [Establish current product-specific recipient and matching requirements; do not import unverified identity-document requirements.]

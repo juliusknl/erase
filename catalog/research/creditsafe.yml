@@ -1,0 +1,173 @@
+schema_version: 1
+brokers:
+  - id: creditsafe-regional
+    name: Creditsafe — country-specific routes
+    match_domains: [creditsafe.com]
+    identity:
+      legal_name: Creditsafe Deutschland GmbH; Creditsafe Business Solutions Limited; Creditsafe Norway AS (separate controllers)
+      brands: [Creditsafe]
+      parent: null
+      official_domains: [creditsafe.com]
+    relevance:
+      regions: [DE, UK, 'NO']
+      category: credit_reference
+      data_categories: [Business records, Directors and owners, Business contact details, Credit and risk information]
+      note: Reviewed routes cover Germany, UK and Norway. Marketing suppression, credit blocking and credit-record rights are different workflows.
+    removal:
+      method: manual
+      destination: https://www.creditsafe.com/
+      alternatives: []
+      steps:
+        - Select the country and controller below; do not send one request assuming every group company is covered.
+        - Request access to the relevant business-linked personal records, then choose correction, restriction or eligible deletion.
+        - Request marketing suppression separately if applicable.
+    required_information:
+      fields: [country, regional_controller]
+      certainty: not_fully_specified
+      verification: Requirements differ by country and purpose; never automatically attach identity documents.
+    coverage:
+      effect: access_then_review
+      includes: The selected regional controller and identified product records.
+      excludes: Guaranteed deletion of lawful credit or public-register records; unreviewed country entities and partner databases.
+    automation:
+      mode: manual
+      reason: Country selection, sensitive verification and record-specific eligibility require review.
+    evidence:
+      - url: https://www.creditsafe.com/gb/en/legal/transparency-notice-product.html
+        checked_on: '2026-09-29'
+        excerpt: Creditsafe Business Solutions Limited
+        supports: [identity, relevance, coverage]
+      - url: https://www.creditsafe.com/de/de/rechtliches/datenschutzhinweise/datenschutzhinweise-fuer-auskunfteidaten.html
+        checked_on: '2026-09-29'
+        excerpt: Creditsafe Deutschland GmbH
+        supports: [identity, relevance, coverage]
+      - url: https://www.creditsafe.com/no/no/product/informasjon-til-den-registrerende/eksterne-markedstjenester.html
+        checked_on: '2026-09-29'
+        excerpt: Creditsafe Norway AS
+        supports: [identity, relevance, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Other country entities and routes remain unreviewed., Parent holding entity not reviewed., No comparable unique-person database size established., Actual request outcomes untested.]
+    regional_routes:
+      - regions: ['NO']
+        legal_entity: Creditsafe Norway AS (914328888)
+        removal:
+          method: email
+          destination: info@creditsafe.no
+          alternatives: [personvernombud@creditsafe.no]
+          steps:
+            - Specify objection to use of your business-linked personal information in external marketing/prospecting services. No particular form is required.
+            - Separately request access, correction or eligible erasure if desired; review any matching/verification request personally.
+            - Keep the outcome scoped to the purpose and controller. Marketing objection is not deletion of lawful credit information.
+        required_information:
+          fields: []
+          certainty: not_fully_specified
+          verification: External-marketing notice publishes no fixed identifier or ID-copy checklist; do not import credit-freeze document requirements.
+        coverage:
+          effect: suppression
+          includes: Objection to Norwegian external-marketing/prospecting use; conditional erasure is a separate right.
+          excludes: Lawful credit retention; notice describes archiving after five years unless continued business need, with archives retained for stated purposes.
+        automation:
+          mode: manual
+          reason: Scope and matching information need review before submission.
+        evidence:
+          - url: https://www.creditsafe.com/no/no/product/informasjon-til-den-registrerende/eksterne-markedstjenester.html
+            checked_on: '2026-09-29'
+            excerpt: En innsigelse krever ikke et bestemt skjema
+            supports: [identity, removal, required_information, coverage, automation]
+        unknowns: [Minimum matching fields and conditional verification., Individual erasure eligibility and archive duration., No request tested.]
+      - regions: ['NO']
+        legal_entity: Creditsafe Norway AS
+        removal:
+          method: manual
+          destination: https://www.creditsafe.com/no/no/kontakt/ofte-stilte-sporsmal/min-side.html
+          alternatives: [info@creditsafe.no]
+          steps:
+            - Only if you choose a credit block, use the linked BankID login personally. It remains until you lift it and can prevent new loans or subscriptions.
+            - Without BankID, the official instructions request valid ID copy plus name, birth date, address and phone. Postal alternative is Creditsafe Norge, Box 320, 401 25 Göteborg, Sweden; keep the identity number hidden from envelope windows.
+            - The page also offers email submission; review privacy risks and ask for a secure channel rather than automatically attaching identity documents.
+            - Save confirmation as credit blocking only, not database erasure or a block at every agency.
+        required_information:
+          fields: [bankid_or_identity_document_copy, full_name_without_bankid, date_of_birth_without_bankid, postal_address_without_bankid, phone_without_bankid]
+          certainty: documented
+          verification: BankID and manual ID-copy routes are alternatives, not cumulative requirements. No identity document uploaded or emailed in research.
+        coverage:
+          effect: suppression
+          includes: Norwegian Creditsafe credit block, reversible by the user.
+          excludes: No erasure or coverage at other bureaus; credit availability can be affected.
+        automation:
+          mode: manual
+          reason: Explicit financial-impact choice and sensitive identity verification.
+        evidence:
+          - url: https://www.creditsafe.com/no/no/kontakt/ofte-stilte-sporsmal/min-side.html
+            checked_on: '2026-09-29'
+            excerpt: Husk å oppgi fullt navn, fødselsdato, adresse og telefonnummer.
+            supports: [identity, removal, required_information, coverage, automation]
+        unknowns: [Authenticated portal not inspected; public login redirects to BankID provider., No credit block or deletion outcome tested.]
+      - regions: [DE]
+        legal_entity: Creditsafe Deutschland GmbH
+        removal:
+          method: email
+          destination: selbstauskunft@creditsafede.com
+          alternatives: [https://www.creditsafe.com/de/de/glossar/selbstauskunft-kostenlos.html]
+          steps:
+            - Specify access, correction, eligible deletion or marketing objection and the business-linked records concerned.
+            - Supply sufficient matching details; the access form marks name and business name/address required, despite optional wording in surrounding text.
+            - Do not attach an ID copy to ordinary email; ask for a secure channel if verification is needed.
+        required_information:
+          fields: [full_name, company_name, company_address, postal_address]
+          certainty: not_fully_specified
+          verification: Form and optional-field prose conflict. Email, phone and birth date are described as optional; access copies go to a verified known postal address.
+        coverage:
+          effect: access_then_review
+          includes: Business-related personal data and a distinct right to oppose direct marketing.
+          excludes: Unconditional credit-record erasure; accurate public-register data may be retained. Partner-supplied personal reports are not necessarily this controller's own records.
+        automation:
+          mode: manual
+          reason: Matching ambiguity, postal delivery and sensitive verification prevent minimal-email automation.
+        evidence:
+          - url: https://www.creditsafe.com/de/de/rechtliches/datenschutzhinweise/datenschutz-produktdaten.html
+            checked_on: '2026-09-29'
+            excerpt: Für die Geltendmachung Ihrer Betroffenenrechte können Sie sich schriftlich an selbstauskunft@creditsafede.com
+            supports: [removal, coverage]
+          - url: https://www.creditsafe.com/de/de/glossar/selbstauskunft-kostenlos.html
+            checked_on: '2026-09-29'
+            excerpt: Daher senden wir Datenkopien postalisch an die uns bekannte Adresse.
+            supports: [required_information, verification]
+          - url: https://www.creditsafe.com/de/de/rechtliches/datenschutzhinweise/datenschutzhinweise-fuer-auskunfteidaten.html
+            checked_on: '2026-09-29'
+            excerpt: Bitte sehen Sie davon ab, Ihrer Anfrage sensible Daten wie z. B. eine Ausweiskopie beizufügen.
+            supports: [verification, automation]
+        unknowns: [Live validation of conflicting optional and required fields., Any additional verification for a specific record.]
+      - regions: [UK]
+        legal_entity: Creditsafe Business Solutions Limited
+        removal:
+          method: form
+          destination: https://www.creditsafe.com/gb/en/legal/gdpr-data-subject-access-request.html
+          alternatives: [help@creditsafeuk.com, optout@creditsafe.com]
+          steps:
+            - Open a ticket with type GDPR Request and choose access, correction or erasure as applicable.
+            - Review the identification and address-proof requirements; submit sensitive evidence only through a verified secure channel.
+            - For the permission-based email database only, email optout@creditsafe.com from each address to be suppressed.
+        required_information:
+          fields: [requester_or_company_name, email, customer_reference_if_applicable, proof_of_identity, proof_of_address]
+          certainty: documented
+          verification: These are published access-request requirements, not a universal prerequisite for email-marketing opt-out.
+        coverage:
+          effect: access_then_review
+          includes: Selected UK-controller records; permission-based email suppression is a separate choice.
+          excludes: Automatic erasure of public-register records or deletion from every Creditsafe country entity.
+        automation:
+          mode: manual
+          reason: Record-specific grounds, secure verification and distinct marketing purpose.
+        evidence:
+          - url: https://www.creditsafe.com/gb/en/legal/gdpr-data-subject-access-request.html
+            checked_on: '2026-09-29'
+            excerpt: Please choose ‘type’ as "GDPR Request"
+            supports: [removal, required_information, coverage]
+          - url: https://www.creditsafe.com/gb/en/legal/transparency-notice-product.html
+            checked_on: '2026-09-29'
+            excerpt: "E-Mail: help@creditsafeuk.com"
+            supports: [identity, removal]
+        unknowns: [Conditional ticket fields and secure upload flow not exercised., Individual erasure eligibility.]

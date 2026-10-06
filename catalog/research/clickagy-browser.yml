@@ -1,0 +1,54 @@
+schema_version: 1
+brokers:
+  - id: clickagy-browser
+    name: Clickagy browser data
+    match_domains: [clickagy.com]
+    identity:
+      legal_name: Clickagy, LLC
+      brands: [Clickagy]
+      parent: null
+      official_domains: [clickagy.com]
+    relevance:
+      regions: [EEA, UK, Switzerland, United States, Worldwide request eligibility]
+      category: advertising
+      data_categories: [Browser identifiers, Device links, Behavioral data, Buyer intent, Audience segments]
+      note: Matching depends on the relevant browser or device; a generic email is not equivalent.
+    removal:
+      method: form
+      destination: https://www.clickagy.com/privacy-center/delete/
+      alternatives: [https://www.clickagy.com/privacy-center/, privacy@clickagy.com]
+      steps:
+        - If you want an access report, request it before deletion; deleting the tracking cookie prevents subsequent linking.
+        - Open the deletion page in the browser you actually use, with JavaScript enabled.
+        - Answer the California-residence question truthfully and select Submit. The page accepts deletion requests regardless of location.
+        - Repeat for every relevant browser or device and keep confirmation. This deletes the browser/device linkage, not necessarily independent client records.
+        - Cookie clearing may require another opt-out. GPC is a separate continuing opt-out preference, not proof of historical erasure.
+    required_information:
+      fields: [relevant_browser, california_residence_answer]
+      certainty: documented
+      verification: Public form has residence yes/no and browser-context matching; no name or email field. JavaScript submission and any subsequent checks untested.
+    coverage:
+      effect: deletion_request
+      includes: Link between the submitting browser/device and Clickagy behavioral data.
+      excludes: Other browsers/devices, independent customers and guaranteed deletion of every historical record.
+    automation:
+      mode: manual
+      reason: Must run in the person's relevant browser; the app cannot impersonate that cookie context.
+    evidence:
+      - url: https://www.clickagy.com/privacy/
+        checked_on: '2026-10-01'
+        published: 'Effective 2025-06-27; modified 2025-06-18'
+        excerpt: Clickagy, LLC
+        supports: [identity, advertising_scope, European_rights, controller_processor_boundary]
+      - url: https://www.clickagy.com/privacy-center/delete/
+        checked_on: '2026-10-01'
+        excerpt: regardless of their location
+        supports: [worldwide_request_eligibility, residence_question, browser_matching]
+      - url: https://www.clickagy.com/privacy-center/
+        checked_on: '2026-10-01'
+        excerpt: must be made before requests to delete
+        supports: [access_before_deletion, device_scope, preference_signal]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Live submission and fulfilment untested., Parent ownership not independently reviewed., No comparable scale claim.]

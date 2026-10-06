@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: b2b-datenbank-de
+    records: [community:b2b-datenbank-de]
+    rationale: Current official privacy page and linked database-specific notice identify Pascal Spaqi as operator of the exact B2B-Datenbank.de brand and domain; the route concerns listed professionals, not just customers.

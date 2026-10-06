@@ -1,0 +1,8 @@
+schema_version: 1
+associations:
+  - guide_id: aventura-post-marketing
+    records: [community:aventura]
+    rationale: Official notice and imprint establish Aventura Post GmbH and current named rights inbox. Its care-of Talk2 relationship is recorded without merging distinct legal entities or assuming all partner data is erased.
+  - guide_id: mygimi-marketing
+    records: [community:mygimi]
+    rationale: Current official notice names MyGimi GmbH, its Frankfurt register number and rights inbox. Care-of Toleadoo handling and older community Talk2 references do not establish group-wide removal.

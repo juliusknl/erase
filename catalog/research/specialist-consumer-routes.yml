@@ -1,0 +1,160 @@
+schema_version: 1
+brokers:
+  - id: iqvia-digital-advertising
+    name: IQVIA Digital advertising
+    match_domains: [iqviadigital.com]
+    identity:
+      legal_name: IQVIA Digital, Inc.
+      brands: [IQVIA Digital, AIM XR]
+      parent: IQVIA Inc.
+      official_domains: [iqviadigital.com, iqvia.com]
+    relevance:
+      regions: [EEA, United Kingdom, Switzerland, United States]
+      category: advertising
+      data_categories: [Healthcare professional contacts, Professional identifiers, Reading activity, Advertising audiences]
+      note: Digital advertising scope, not automatic withdrawal from research or healthcare services.
+    removal:
+      method: form
+      destination: https://www.iqvia.com/about-us/privacy/ccpa/do-not-sell
+      alternatives: [privacyofficer@iqvia.com]
+      steps:
+        - Choose deletion or advertising objection and your real relationship; None is available if no known relationship exists.
+        - Enter name, matching email, actual country and postal address/city/ZIP. Phone is optional in the public form but requested in the published email alternative.
+        - Identify IQVIA Digital advertising scope. Do not assert that you are a patient or healthcare provider unless true, or request withdrawal from a study or care service by default.
+        - Complete email verification and review further matching personally. The shared portal does not prove deletion across every IQVIA product.
+    required_information:
+      fields: [full_name, matching_email, residence, postal_address, relationship, requested_right]
+      certainty: not_fully_specified
+      verification: Public configuration enables email verification; state is conditional. Runtime and further identity checks untested.
+    coverage:
+      effect: deletion_request
+      includes: Matched IQVIA Digital advertising records under the applicable rights request.
+      excludes: Independent source/provider records, research withdrawal, deidentified data and guaranteed group-wide deletion.
+    automation:
+      mode: manual
+      reason: Postal disclosure, relationship context and sensitive scope require personal review; no minimal-email recipe.
+    evidence:
+      - url: https://www.iqvia.com/about-us/privacy/privacy-policy
+        checked_on: '2026-10-01'
+        published: '2026-04-16'
+        excerpt: IQVIA Digital (a subsidiary of IQVIA Inc.
+        supports: [identity, product_specific_notices, retention_and_controller_boundaries]
+      - url: https://www.iqvia.com/about-us/privacy/dpf-policy
+        checked_on: '2026-10-01'
+        published: '2026-02-11'
+        excerpt: IQVIA Digital, Inc.
+        supports: [exact_subsidiary_identity]
+      - url: https://www.iqviadigital.com/solutions/hcp-audiences
+        checked_on: '2026-10-01'
+        excerpt: rights of access, objection, and deletion
+        supports: [HCP_advertising_scope, link_to_group_rights_portal]
+      - url: https://privacyportal.onetrust.com/webform/07e8dc4d-6686-403e-9b11-39fe7347d2f4/2f999bd2-c826-498c-a504-894eaf543b6f
+        checked_on: '2026-10-01'
+        excerpt: RELATIONSHIP WITH IQVIA
+        supports: [public_form_configuration, matching_fields, email_alternative_checklist, email_verification]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Runtime form and fulfilment untested., No automatic matching of nonidentifiable research records., Comparable scale unreviewed.]
+  - id: i360-consumer-political
+    name: i360 consumer and voter data
+    match_domains: [i-360.com]
+    identity:
+      legal_name: i360, LLC
+      brands: [i360]
+      parent: null
+      official_domains: [i-360.com]
+    relevance:
+      regions: [United States — portal requires one of its listed states]
+      category: consumer_marketing
+      data_categories: [Consumer contacts, Voter information, Audience attributes, Modelled interests]
+      note: Do not infer European eligibility or personal exposure from a US database.
+    removal:
+      method: form
+      destination: https://privacyportal.onetrust.com/webform/94afa614-d9cb-419b-99f1-20c87afaca7f/7527122f-48fe-46ad-bd59-6d69a33ac4db
+      alternatives: [https://www.i-360.com/privacy-policy/]
+      steps:
+        - Select Consumer, deletion and your actual supported US state. Non-US residence is not available in the public configuration; never invent a US state.
+        - Provide name, email, address, city, ZIP and phone as requested for deletion. Review verification personally.
+        - The date-of-birth and signed declaration branch is for specific-data access or portability, not the ordinary deletion branch.
+        - Browser advertising preferences are separate. A portal submission does not erase public voter registers or independent recipient copies.
+    required_information:
+      fields: [full_name, email, supported_us_state, postal_address, phone, requested_right]
+      certainty: not_fully_specified
+      verification: Public configuration enables email and other identity-verification options; actual verification sequence untested.
+    coverage:
+      effect: deletion_request
+      includes: Matched i360 records under the supported consumer-rights request.
+      excludes: Original public records, independent recipients and unestablished European applicability.
+    automation:
+      mode: manual
+      reason: Residence gate and private matching/verification require personal review.
+    evidence:
+      - url: https://www.i-360.com/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2026-06-30'
+        excerpt: i360, LLC
+        supports: [entity, rights, official_portal]
+      - url: https://www.i-360.com/political-products-old/i360-voter-consumer-data/
+        checked_on: '2026-10-01'
+        excerpt: Voter & Consumer Data
+        supports: [product_scope_not_individual_exposure]
+      - url: https://privacyportal.onetrust.com/webform/94afa614-d9cb-419b-99f1-20c87afaca7f/7527122f-48fe-46ad-bd59-6d69a33ac4db
+        checked_on: '2026-10-01'
+        excerpt: U.S. State
+        supports: [required_state, conditional_matching_fields, access_declaration_not_deletion, verification]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Non-US route unestablished., Runtime verification and fulfilment untested., Parent and comparable scale unreviewed.]
+  - id: lightbox-property-professional
+    name: LightBox property and professional data
+    match_domains: [lightboxre.com]
+    identity:
+      legal_name: LightBox Parent, L.P.
+      brands: [LightBox]
+      parent: null
+      official_domains: [lightboxre.com]
+    relevance:
+      regions: [United States — California product-data rights reviewed]
+      category: professional
+      data_categories: [Professional contact details, Property ownership, Commercial property attributes, Inferences]
+      note: Product records have a separate notice from website visitors and Canadian DMTI services.
+    removal:
+      method: form
+      destination: https://my.datasubject.com/16BXQXSvkBnuN4W2w/51306
+      alternatives: [privacyinfo@lightboxre.com, https://www.lightboxre.com/lightbox-individual-data-rights-request/]
+      steps:
+        - Use the product-policy deletion form if the stated California rights apply; identify the relevant personal professional/property record.
+        - Review matching and verification in the form; public retrieval returned its JavaScript shell, not field instructions.
+        - For non-California applicability, ask the privacy contact first. Do not claim US residence or treat an email-marketing unsubscribe as product-data deletion.
+    required_information:
+      fields: [relevant_product_record, applicable_residence]
+      certainty: not_fully_specified
+      verification: Identity verification required; complete form fields uninspected.
+    coverage:
+      effect: deletion_request
+      includes: Matched product personal data under the reviewed California route, subject to retention exceptions.
+      excludes: Original property registers, other controllers and unestablished European deletion scope.
+    automation:
+      mode: manual
+      reason: Regional applicability and uninspected matching/verification prevent generic email automation.
+    evidence:
+      - url: https://www.lightboxre.com/productsprivacypolicy
+        checked_on: '2026-10-01'
+        published: '2026-03-24'
+        excerpt: LightBox Parent, L.P.
+        supports: [product_controller, professional_property_scope, California_rights, form_route]
+      - url: https://www.lightboxre.com/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2026-05-20'
+        excerpt: Products Privacy Policy
+        supports: [separate_product_notice]
+      - url: https://my.datasubject.com/16BXQXSvkBnuN4W2w/51306
+        checked_on: '2026-10-01'
+        excerpt: You need to enable JavaScript to use this form.
+        supports: [HTTP_200_shell_not_fields_or_submission_verified]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Form fields and verification uninspected., European product-data applicability unresolved., Comparable scale and actual outcomes unverified.]

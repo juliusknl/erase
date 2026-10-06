@@ -1,0 +1,8 @@
+schema_version: 1
+associations:
+  - guide_id: beenverified-personal
+    records: ["live:beenverified", "live:beenverified-inc-and-its-subsidiaries-and-affiliates", "live:beenverified-llc-and-its-subsidiaries-and-affiliates"]
+    rationale: Current BeenVerified policy names the LLC operator and Lifetime Value parent. These inventory entries refer to that same branded product and official domain; only the current product route is covered, not every affiliate or an unsupported conclusion about all historic Inc.-entity data.
+  - guide_id: peopleconnect-suppression
+    records: ["live:intelius-llc", "live:truthfinder-llc", "live:instant-checkmate-llc", "live:instant-checkmate-llc-2"]
+    rationale: The official shared tool expressly names these products and US Search. It covers name-search report suppression only; other domains bundled into inventory rows, separate accounts and every affiliated entity are not implicitly covered.

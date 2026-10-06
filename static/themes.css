@@ -1,0 +1,193 @@
+/* One presentation layer for the app, login and setup. No remote fonts/assets.
+   Layout and workflow templates remain shared across all four appearances. */
+:root, [data-palette] {
+  --heading: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --serif: Baskerville, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --blue: var(--accent);
+  --blue-dark: var(--accent);
+  --blue-soft: var(--surface-strong);
+  --faint: var(--muted);
+  --nav-muted: var(--nav-ink);
+  --nav-active: var(--active-ink);
+  --shadow: none;
+  --texture: transparent;
+  --chart-sent: var(--accent);
+  --chart-completed: var(--green);
+  --green: #176b4b;
+  --green-soft: #e4f3eb;
+  --amber: #805000;
+  --amber-soft: #fff2d4;
+  --red: #a6293d;
+  --red-soft: #fde9ed;
+  --processing: #6546a6;
+  --processing-soft: #efe9fb;
+}
+:root { background-color: var(--bg); color: var(--ink); }
+:root, [data-palette="porcelain"] {
+  color-scheme: light;
+  --bg: #f7f9fc; --surface: #ffffff; --surface-strong: #edf3ff;
+  --ink: #192636; --muted: #5f6e82; --line: #dfe5ee; --line-strong: #b3bdcc;
+  --accent: #2352bf; --on-accent: #ffffff;
+  --nav: #e9edf5; --nav-ink: #506079; --active: #ffffff; --active-ink: #2352bf;
+  --radius: 18px;
+}
+:root[data-theme="conservatory"], [data-palette="conservatory"] {
+  color-scheme: dark;
+  --bg: #123c31; --surface: #163e33; --surface-strong: #21483b;
+  --ink: #eee9cd; --muted: #bcc7ad; --line: #496858; --line-strong: #698475;
+  --accent: #e0d5a7; --on-accent: #17392d;
+  --nav: #12392f; --nav-ink: #d2d8be; --active: #dcd7b0; --active-ink: #17392d;
+  --radius: 3px; --heading: var(--serif); --texture: #ffffff06;
+  --green: #a0e0ba; --green-soft: #204e3e;
+  --amber: #f4d089; --amber-soft: #493c25;
+  --red: #ffb9b9; --red-soft: #542e39;
+  --processing: #d9c7fa; --processing-soft: #3f3b53;
+}
+:root[data-theme="atelier"], [data-palette="atelier"] {
+  color-scheme: light;
+  --bg: #f5eee2; --surface: #fcf7ef; --surface-strong: #ebe0d7;
+  --ink: #493a3f; --muted: #766466; --line: #d7c5b8; --line-strong: #b9a398;
+  --accent: #654457; --on-accent: #fff6e8;
+  --nav: #efe4d8; --nav-ink: #6f535e; --active: #654457; --active-ink: #fff6e8;
+  --radius: 4px; --heading: var(--serif); --texture: #00000006;
+}
+:root[data-theme="midnight"], [data-palette="midnight"] {
+  color-scheme: dark;
+  --bg: #141720; --surface: #1d222f; --surface-strong: #272d3e;
+  --ink: #ecedf5; --muted: #adb4c8; --line: #353c50; --line-strong: #64708b;
+  --accent: #c5b5fd; --on-accent: #242032;
+  --nav: #252b3b; --nav-ink: #bac2d7; --active: #c5b5fd; --active-ink: #242032;
+  --radius: 14px;
+  --green: #9cddbd; --green-soft: #203e37;
+  --amber: #f4d089; --amber-soft: #493c25;
+  --red: #ffb9c6; --red-soft: #482c39;
+  --processing: #d9c7fa; --processing-soft: #363047;
+}
+html, body, .login-body { color: var(--ink); background-color: var(--bg); }
+body { background-image: radial-gradient(var(--texture) .7px, transparent .7px); background-size: 5px 5px; }
+a { color: var(--accent); }
+h1, .section-head h2, .metric-card strong, .scale-size, .campaign-copy h2 { font-family: var(--heading); }
+.scale-size { color: var(--ink); }
+/* Page titles share the Requests typeface; section headings stay independent. */
+.app-shell main h1 { font-family: var(--heading); font-size: clamp(26px, 3.5vw, 44px); font-weight: 400; line-height: 1.2; letter-spacing: -.045em; margin: 0; min-width: 0; max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.workspace-head > div, .page-head > div, .detail-head > div { min-width: 0; max-width: 100%; }
+.app-shell main h1 + p { margin-top: 12px; }
+.card, .setup-panel, .login-card, .pause-confirmation { border-radius: var(--radius); background: var(--surface); color: var(--ink); }
+.login-card { border: 1px solid var(--line); box-shadow: var(--shadow); }
+.scale-item { border-radius: var(--radius); }
+:root[data-theme="atelier"] .workspace-head { border-bottom: 0; }
+:root[data-theme="atelier"] .card:not(.table-card) { border-top: 2px solid var(--accent); }
+/* The single-outline pill and its filled current-page indicator are universal. */
+.navigation-pill, .mobile-nav { background: var(--nav); border: 1px solid var(--line); box-shadow: none; }
+.navigation-pill .primary-nav a, .mobile-nav a { color: var(--nav-ink); }
+.navigation-pill .primary-nav a:hover, .mobile-nav a:hover { color: var(--ink); background: var(--surface-strong); }
+.navigation-pill .primary-nav a.active, .mobile-nav a.active { background: var(--active); color: var(--active-ink); box-shadow: none; }
+.brand-mark, .setup-brand > span { background: var(--active); color: var(--active-ink); }
+.mobile-header { background: transparent; }
+.mobile-header .brand, .setup-brand { color: var(--ink); }
+.navigation-pill a:focus-visible { outline-color: var(--accent); }
+button, .button { background: var(--accent); color: var(--on-accent); border-color: transparent; }
+button:hover, .button:hover { background: var(--accent); color: var(--on-accent); filter: brightness(.94); }
+.secondary, .automation-controls button, .automation-controls .button { background: var(--surface); color: var(--ink); border-color: var(--line-strong); }
+.secondary:hover, .automation-controls button:hover, .automation-controls .button:hover { background: var(--surface-strong); color: var(--ink); border-color: var(--accent); }
+.text-button, .action-options .text-button { background: transparent; color: var(--accent); }
+.text-button:hover { background: transparent; color: var(--ink); }
+.table-sort, button.table-sort, .table-sort:hover, button.table-sort:hover { background: transparent; color: inherit; filter: none; }
+:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+input:focus:not(:focus-visible), textarea:focus:not(:focus-visible), select:focus:not(:focus-visible) { outline: none; }
+input, textarea, select, .setup-panel input:not([type=checkbox]):not([type=radio]), .setup-panel select {
+  background: var(--surface); color: var(--ink); border-color: var(--line-strong);
+}
+input::placeholder, textarea::placeholder { color: var(--muted); opacity: 1; }
+input:hover, textarea:hover, select:hover { border-color: var(--accent); }
+input[type=checkbox], input[type=radio], .campaign-page input[type=checkbox], .check-label input { accent-color: var(--accent); }
+.setup-panel input[aria-invalid=true], .setup-panel select[aria-invalid=true] { border-color: var(--red); }
+th { background: var(--surface-strong); }
+tbody tr:hover, .library-table tbody tr:hover, .recent-request:hover, .metric-card:hover, .gmail-connection:hover { background: var(--surface-strong); }
+pre, code, .request-preview, .copy-value, .upload-form { background: var(--surface-strong); color: var(--ink); }
+.email-body { background: var(--surface); color: var(--ink); }
+.info-box { color: var(--ink); background: var(--surface-strong); }
+.status, .pill { background: var(--surface-strong); color: var(--muted); }
+.status-submitted, .status-queued, .tag, .library-route-form { background: var(--surface-strong); color: var(--accent); }
+.status-processing { background: var(--processing-soft); color: var(--processing); }
+.status-needs_action, .status-prepared, .status-escalation_ready, .library-route-stale { background: var(--amber-soft); color: var(--amber); }
+.status-removed, .status-not_found, .status-done, .library-route-email { background: var(--green-soft); color: var(--green); }
+.status-rejected, .status-delivery_failed { background: var(--red-soft); color: var(--red); }
+.notice, .attention-card { background: var(--amber-soft); color: var(--amber); border-color: var(--amber); }
+.notice.danger { background: var(--red-soft); color: var(--red); border-color: var(--red); }
+.quiet-card { background: var(--green-soft); color: var(--green); border-color: var(--green); }
+.quiet-card > span:last-child, .attention-card > span:not(.eyebrow):not(.attention-icon):not(.arrow-link) { color: inherit; }
+.attention-icon, .quiet-icon { background: var(--surface); }
+.mode.live { border-color: var(--green); }
+.mode.dry { border-color: var(--amber); }
+.mode.paused { border-color: var(--red); }
+.scale-item.is-done, .quick-win.is-done { background: var(--green-soft); }
+.scale-note summary, .recent-request-arrow, .conversation-meta strong, .info-tip summary { color: var(--accent); }
+.request-tabs a[aria-current=page] { color: var(--accent); border-color: var(--accent); }
+.request-tabs a:focus-visible, .info-tip summary:focus-visible, .gmail-connection:focus-visible, .recent-request:focus-visible { outline-color: var(--accent); }
+.request-filters a:hover { background: var(--surface-strong); }
+.request-filters a[aria-current=page] { background: var(--accent); color: var(--on-accent); }
+.campaign-card { background: var(--surface-strong); color: var(--ink); }
+.campaign-card::after { display: none; }
+.campaign-copy p, .campaign-facts dt { color: var(--muted); }
+.campaign-facts dd, .signal { color: var(--ink); }
+.campaign-card.automation-strip { background: var(--surface-strong); border-color: var(--line); }
+.automation-strip .automation-controls button, .automation-strip .automation-controls .button { color: var(--ink); border-color: var(--line-strong); }
+.automation-strip .automation-controls button:hover, .automation-strip .automation-controls .button:hover { background: var(--surface); }
+.automation-strip #automation-instruction { border-color: var(--line); }
+.automation-strip .signal-ring, .connection-indicator.is-connected, .gmail-connection[data-connected=true] .gmail-connection-dot { background: var(--green); }
+.automation-strip[data-state=blocked] .signal-ring, .connection-indicator, .gmail-connection-dot { background: var(--amber); }
+.automation-strip[data-state=stopped] .signal-ring, .automation-strip[data-state=paused] .signal-ring { background: var(--muted); }
+/* Setup uses the same tokens, retaining its simpler, linear layout. */
+.setup-panel .intro-strong { color: var(--ink); }
+.intro, .field-help, .privacy-note, .setup-footnote, .local-note, .setup-progress,
+.check-label small, .setup-review dt, .setup-promise p { color: var(--muted); }
+.setup-panel, .google-helper, .setup-review, .setup-review > div { border-color: var(--line); }
+.setup-note, .demo-note { background: var(--surface-strong); color: var(--ink); }
+.kicker, .connected { color: var(--accent); }
+.field-error { color: var(--red); }
+.setup-progress li { border-color: var(--line); }
+.setup-progress li.current { border-color: var(--accent); color: var(--accent); }
+.setup-progress li.complete { border-color: var(--green); }
+.setup-body button:disabled { background: var(--surface-strong); color: var(--muted); border-color: var(--line); }
+.progress-chart-heading { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; margin-bottom: 12px; }
+.progress-chart-heading h2 { margin: 0; }
+.progress-legend { display: flex; gap: 20px; font-size: 12px; color: var(--muted); }
+.progress-legend > span { display: inline-flex; align-items: center; gap: 7px; }
+.progress-legend i { width: 22px; border-top: 2.5px solid var(--chart-completed); }
+.progress-legend .legend-sent { border-top-style: dashed; border-color: var(--chart-sent); }
+.sent-line { fill: none; stroke: var(--chart-sent); stroke-width: 2.5; stroke-linejoin: round; stroke-dasharray: 6 5; }
+.completion-line { stroke: var(--chart-completed); }
+/* Shared visual chooser: native radios + ordinary form, with optional live preview. */
+.appearance-choices { border: 0; margin: 24px 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.appearance-choices .appearance-option { display: flex; flex-direction: column; gap: 0; margin: 0; padding: 16px; min-width: 0; border: 1px solid var(--line-strong); border-radius: 12px; background: var(--bg); color: var(--ink); cursor: pointer; overflow-wrap: anywhere; }
+.appearance-option:has(input:checked) { outline: 2px solid var(--accent); outline-offset: 3px; }
+.appearance-option:has(input:focus-visible) { outline: 3px solid var(--accent); outline-offset: 3px; }
+.appearance-choice-name { display: flex; align-items: center; gap: 9px; font-size: 15px; }
+.appearance-choices input[type=radio] { appearance: auto; display: inline-block; width: 18px; height: 18px; min-height: 18px; margin: 0; padding: 0; flex: none; accent-color: var(--accent); }
+.appearance-choices input[type=radio]:focus { outline: none; }
+.appearance-miniature { display: block; padding: 0 0 18px; pointer-events: none; }
+.appearance-mini-nav { display: flex; gap: 8px; align-items: center; width: 70%; padding: 5px; border: 1px solid var(--line); border-radius: 99px; background: var(--nav); }
+.appearance-mini-nav > span { height: 6px; width: 22%; border-radius: 99px; background: var(--nav-ink); }
+.appearance-mini-nav > span:first-child { height: 13px; width: 32%; background: var(--active); }
+.appearance-mini-heading { display: block; font: 22px/1.2 var(--heading); margin: 17px 0 12px; letter-spacing: -.04em; }
+.appearance-mini-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.appearance-mini-cards > span { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 10px; color: var(--muted); font-size: 10px; font-weight: 400; }
+.appearance-mini-cards b { font: 24px/1.2 var(--heading); color: var(--ink); }
+.appearance-saved { color: var(--green); font-size: 14px; }
+.setup-panel .appearance-mini-heading { font-size: 20px; margin: 12px 0 8px; }
+.setup-panel .appearance-miniature { padding-bottom: 12px; }
+.setup-panel .appearance-mini-cards > span { padding: 7px; }
+.setup-panel .appearance-choices .appearance-option { padding: 12px; }
+@media (max-width: 480px) {
+  .appearance-choices { gap: 14px; }
+  .appearance-choices .appearance-option { padding: 11px; }
+  .appearance-mini-heading { font-size: 18px; }
+  .appearance-mini-cards > span { padding: 7px; }
+  .appearance-choice-name { font-size: 13px; gap: 6px; }
+  .setup-progress li span { font-size: 11px; }
+}
+@media (max-width: 360px) {
+  .setup-panel .appearance-choices { grid-template-columns: 1fr; }
+  .setup-panel .appearance-mini-heading, .setup-panel .appearance-mini-cards { display: none; }
+}

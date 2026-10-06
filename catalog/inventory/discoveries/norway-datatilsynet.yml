@@ -1,0 +1,18 @@
+schema_version: 1
+regions: ['NO']
+rationale: Regulator discovery list explicitly warns it may be incomplete or outdated. It separates consumer-and-business from business-only agencies. Credit blocking is not erasure; current controllers and product-specific rights require individual review.
+evidence:
+  - url: https://www.datatilsynet.no/personvern-pa-ulike-omrader/kredittvurdering/virksomheter-som-kredittvurderer/
+    checked_on: '2026-09-29'
+    excerpt: Oversikt over virksomheter som kredittvurderer
+    supports: [discovery]
+candidates:
+  - {slug: no-bislab, name: Bislab AS}
+  - {slug: no-dnb, name: Dun & Bradstreet Norge AS}
+  - {slug: no-creditsafe, name: Creditsafe Norge}
+  - {slug: no-experian, name: Experian Norway}
+  - {slug: no-tietoevry, name: Tietoevry Norway AS Data Services}
+  - {slug: no-enin, name: Enin AS}
+  - {slug: no-kredittreform, name: Kredittreform AS}
+  - {slug: no-kredittopplysningen, name: Kredittopplysningen AS / KO International}
+  - {slug: no-proff, name: Proff AS}

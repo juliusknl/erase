@@ -1,0 +1,146 @@
+schema_version: 1
+brokers:
+  - id: freewheel-platform
+    name: FreeWheel
+    match_domains: [freewheel.com, freewheel.tv]
+    identity:
+      legal_name: FreeWheel Media, Inc.
+      brands: [FreeWheel]
+      parent: null
+      official_domains: [freewheel.com, freewheel.tv]
+    relevance:
+      regions: [EEA, UK, international]
+      category: advertising
+      data_categories: [FreeWheel IDs, Device and cookie identifiers, Advertising interactions]
+      note: Acts as controller for some platform uses and processor for others.
+    removal:
+      method: email
+      destination: legalnotices@freewheel.tv
+      alternatives: [dpo@freewheel.com]
+      steps:
+        - Identify your request and relevant platform/device context; request erasure where FreeWheel controls the data.
+        - Ask how to match your device securely. A name or email alone usually cannot identify platform records.
+        - Direct publisher-controlled requests to the publisher; FreeWheel's own website and other separately noticed affiliates have different scope.
+    required_information:
+      fields: [full_name, query_details, relevant_device_or_cookie_context]
+      certainty: not_fully_specified
+      verification: Notice requests name and query details but warns these usually cannot match device/cookie records. Additional verification may be needed.
+    coverage:
+      effect: deletion_request
+      includes: Matching FreeWheel-controlled records, subject to applicable exceptions.
+      excludes: Publisher-controlled data and affiliates with separate policies; advertising preference is not erasure.
+    automation: {mode: manual, reason: The sender lacks device matching and cannot determine the relevant controller.}
+    evidence:
+      - url: https://www.freewheel.com/privacy-policy
+        checked_on: '2026-09-30'
+        published: '2025-07-15'
+        excerpt: Platform Data doesn’t include the corresponding user’s name or email address
+        supports: [identity, EEA_UK_contact, matching_limit, controller_boundary]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Exact device-ownership verification and actual fulfilment.]
+  - id: innovid-flashtalking
+    name: Innovid / Flashtalking
+    match_domains: [innovid.com, flashtalking.com]
+    identity:
+      legal_name: Innovid, LLC and relevant Flashtalking entities, including Simplicity Marketing Limited
+      brands: [Innovid, InnovidXP, Flashtalking, AudienceHub, AudienceHQ]
+      parent: Mediaocean
+      official_domains: [innovid.com, flashtalking.com]
+    relevance:
+      regions: [EEA, UK, CH, international]
+      category: advertising
+      data_categories: [Device and advertising IDs, Ad interactions, Audience segments]
+      note: The current shared policy covers these products; customer-controlled end-user data requires the relevant customer's deletion process.
+    removal:
+      method: form
+      destination: https://www.innovid.com/privacy-policy#opt-out-of-targeted-advertising
+      alternatives: [https://www.innovid.com/your-privacy-rights]
+      steps:
+        - In the relevant browser, use the policy's Click Here To Opt Out control for Innovid and Flashtalking ad serving; check its result before marking this action complete.
+        - Repeat in other browsers/devices. Cookie blocking can prevent this preference and clearing cookies can remove it.
+        - Use the privacy-request form separately for AudienceHub/AudienceHQ opt-out or direct customer rights; request deletion of customer-controlled end-user data from that customer.
+    required_information:
+      fields: [relevant_browser_or_device_context]
+      certainty: not_fully_specified
+      verification: Browser control not exercised. The separate rights form may require identity/jurisdiction evidence; its full conditional checklist is untested.
+    coverage:
+      effect: suppression
+      includes: Innovid/Flashtalking ad-serving preferences for the selected browser or device.
+      excludes: Historical erasure, every Mediaocean dataset and customer-controlled databases; AudienceHub/HQ uses the separate form.
+    automation: {mode: manual, reason: Browser-scoped preferences and product/controller selection cannot be completed by the server's generic email workflow.}
+    evidence:
+      - url: https://www.innovid.com/privacy-policy
+        checked_on: '2026-09-30'
+        published: '2026-08-18'
+        excerpt: Click Here To Opt Out.
+        supports: [current_identity, product_scope, browser_choice, controller_boundary]
+      - url: https://www.innovid.com/your-privacy-rights
+        checked_on: '2026-09-30'
+        excerpt: targeted advertising facilitated through AudienceHub/AudienceHQ
+        supports: [separate_product_form, verification]
+      - url: https://support.flashtalking.com/hc/en-us
+        checked_on: '2026-09-30'
+        excerpt: FLASHTALKING IS A TRADEMARK OF SIMPLICITY MARKETING LTD.
+        supports: [Simplicity_brand_identity, current_Innovid_help_center]
+      - url: https://www.sec.gov/Archives/edgar/data/1835378/000183537822000007/a232consentofkostforergabb.htm
+        checked_on: '2026-09-30'
+        excerpt: Innovid LLC (formerly known as Innovid Inc.)
+        supports: [legacy_entity_identity]
+      - url: https://www.mediaocean.com/master-terms
+        checked_on: '2026-09-30'
+        excerpt: Simplicity Marketing Limited
+        supports: [current_group_contracting_entity]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Browser-control outcome and persistence., Scope of an individual customer's deletion response.]
+  - id: doubleverify-solutions
+    name: DoubleVerify
+    match_domains: [doubleverify.com]
+    identity:
+      legal_name: DoubleVerify Inc.
+      brands: [DoubleVerify]
+      parent: null
+      official_domains: [doubleverify.com]
+    relevance:
+      regions: [EEA, UK, CH, international]
+      category: advertising
+      data_categories: [Device and advertising signals, Fraud detection and measurement records]
+      note: Solutions data has a separate notice/contact from website and sales-marketing data.
+    removal:
+      method: form
+      destination: https://doubleverify.com/opt-out
+      alternatives: [privacy@doubleverify.com]
+      steps:
+        - Open the Data Subject Rights page and use its embedded request form to ask for deletion of relevant Solutions data.
+        - Provide a response email and requested matching information; complete any verification. If the embedded form fails, contact privacy@doubleverify.com.
+        - For customer-controlled processing, request deletion from the relevant customer too; an opt-out selection alone does not establish erasure.
+    required_information:
+      fields: [email, relevant_record_matching_information]
+      certainty: not_fully_specified
+      verification: Solutions notice requires response email and sufficient matching information. The current page embeds TrustArc; its dynamic fields and submission are untested.
+    coverage:
+      effect: deletion_request
+      includes: Matching DoubleVerify-controlled Solutions records, subject to applicable exceptions.
+      excludes: Independent customer data and blanket deletion of every acquired product's historic records.
+    automation: {mode: manual, reason: Dynamic matching and controller selection are not implemented in the generic sender.}
+    evidence:
+      - url: https://doubleverify.com/privacy-notice?tab=solutions-privacy-notice
+        checked_on: '2026-09-30'
+        published: '2025-10-09'
+        excerpt: You will need to provide an email address
+        supports: [Solutions_contact, erasure, matching, controller_boundary]
+      - url: https://doubleverify.com/opt-out
+        checked_on: '2026-09-30'
+        excerpt: Data Subject Rights
+        supports: [current_TrustArc_embed]
+      - url: https://submit-irm.trustarc.com/services/validation/fd63ed0c-4842-4557-ad1f-48c16e74a862
+        checked_on: '2026-09-30'
+        excerpt: Powered by
+        supports: [embedded_dynamic_form_shell_only]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Complete conditional form checklist and actual fulfilment., Acquired product records require response-specific scope confirmation.]

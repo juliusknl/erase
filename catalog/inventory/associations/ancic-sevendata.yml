@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: sevendata-it
+    records: [discovery:ancic-sevendata]
+    rationale: ANCIC's current company selector includes SEVENDATA SPA. The provider's own YoUnique notice identifies SevenData S.p.A. and the same VAT number; reviewed instructions distinguish a presence check from deletion.

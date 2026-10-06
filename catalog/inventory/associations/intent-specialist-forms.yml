@@ -1,0 +1,14 @@
+schema_version: 1
+associations:
+  - guide_id: blackpearl-intent-data
+    records: [live:black-pearl-group-limited]
+    rationale: June 2026 policy names Black Pearl Group Limited and explicitly includes Pearl Diver products and intent data, with a linked deletion form inspected publicly without submission.
+  - guide_id: modigie-professional-validation
+    records: [live:modigie-inc]
+    rationale: Current official notice names Modigie Inc and links its rights form, which requires mobile matching; processor claims and account-deletion warnings remain explicit boundaries.
+  - guide_id: redidata-marketing-lists
+    records: [live:redi-data-inc]
+    rationale: Official about page names Redi-Data Inc and consumer/professional products; official notice and form establish a manual rights route without assuming European CRM deletion covers licensed lists.
+  - guide_id: complete-mailing-lists
+    records: [live:complete-mailing-lists-llc]
+    rationale: September 2025 official notice names Complete Mailing Lists LLC and two domains; reviewed state request instructions do not assert European applicability or coverage of similarly named Medical Lists.

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Design studio · erase</title><link rel="stylesheet" href="/static/design-preview.css?v={{ css_version }}"><script src="/static/design-preview.js?v={{ css_version }}" defer></script></head>
+<body>
+<header class="studio-head"><div><a href="/dashboard">← Back to the app</a><h1>Find the right feeling.</h1><p>Four directions. Same simple app. Preview only—your real requests and theme stay untouched. <a href="/appearance">Apply a look in Appearance →</a></p></div><span class="studio-label">Temporary design studio</span></header>
+<section class="design-options" aria-label="Choose a design">
+  <button type="button" data-design="conservatory" aria-pressed="true"><span class="swatches conservatory" aria-hidden="true"><i></i><i></i><i></i></span><strong>01 · Conservatory</strong><span>Deep green + parchment. Classic serifs, quiet elegance.</span></button>
+  <button type="button" data-design="porcelain" aria-pressed="false"><span class="swatches porcelain" aria-hidden="true"><i></i><i></i><i></i></span><strong>02 · Porcelain</strong><span>White + blue. Crisp, light, precise.</span></button>
+  <button type="button" data-design="atelier" aria-pressed="false"><span class="swatches atelier" aria-hidden="true"><i></i><i></i><i></i></span><strong>03 · Atelier</strong><span>Ivory + plum. Bookish, tactile, softly refined.</span></button>
+  <button type="button" data-design="midnight" aria-pressed="false"><span class="swatches midnight" aria-hidden="true"><i></i><i></i><i></i></span><strong>04 · Midnight</strong><span>Ink + lilac. Dark, focused, soft contrast.</span></button>
+</section>
+<div class="studio-selection"><p id="design-selection" role="status">Previewing Conservatory</p><button id="choose-design" type="button">Choose this direction</button><span id="design-saved" role="status">Your choice is saved only in this browser.</span></div>
+<noscript><p>Enable JavaScript to switch designs. The Conservatory preview is shown below.</p></noscript>
+<section class="design-sample" data-theme="conservatory" aria-label="Sample dashboard">
+  <div class="sample-nav"><div class="sample-pill"><span class="sample-logo">e</span><span class="selected">Home</span><span>Requests</span><span>Settings</span></div><span class="sample-local">Local. Personal. Yours.</span></div>
+  <div class="sample-heading"><h2>Dashboard</h2><span class="sample-connected">● Gmail connected</span></div>
+  <div class="sample-running"><strong><span class="sample-dot">●</span> Running</strong><span class="sample-control">Pause</span><span class="sample-attention">3 requests need you →</span></div>
+  <div class="sample-metrics"><div><span>Requests sent</span><strong>80</strong><small>Handled by the app</small></div><div><span>Requests completed</span><strong>24</strong><small>Includes completed steps and no-match replies</small></div></div>
+  <div class="sample-showcase">{% for domain, item in broker_scale.items() %}<div><strong>{{ item.name }}</strong><span class="sample-scale">{{ item.size }}</span><small>{{ item.unit }} · company-reported</small><span>Done</span><small>{{ 'Broker reported no match' if domain == 'apollo.io' else 'Broker reported deletion' }}</small><a href="{{ item.source }}" target="_blank" rel="noopener noreferrer">Size source ↗</a></div>{% endfor %}</div>
+  <div class="sample-columns"><article class="sample-panel"><header><div><p>Quick wins</p><h3>A little less out there.</h3></div><span>View all →</span></header>
+    {% for name, description, instruction in [('Enlyft', 'Collects professional contact details for sales teams.', 'Work email + email confirmation'), ('Bookyourdata', 'Sells business contact lists for sales outreach.', 'Removal form + email confirmation'), ('RelPro', 'Shares contact details and employment history.', 'Name, email, job title and company')] %}
+    <div class="sample-win"><div><strong>{{ name }}</strong><p>{{ description }}</p><small>{{ instruction }}</small></div><div class="sample-buttons"><span>Open ↗</span><span>Done</span></div><span class="sample-later">Details · Later · Not interested</span></div>{% endfor %}
+  </article><article class="sample-panel"><header><div><p>Requests</p><h3>Recently updated</h3></div><span>View all →</span></header>
+    {% for name, status, time in [('Circana', 'Complete their form', '12 min ago'), ('Datonics', 'Review prepared reply', '1 hour ago'), ('LeadIQ', 'Broker reported deletion', '2 hours ago'), ('Apollo.io', 'No matching record', 'Yesterday'), ('Lusha', 'Broker reported deletion', 'Yesterday')] %}
+    <div class="sample-recent"><div><strong>{{ name }}</strong><small>{{ status }}</small></div><small>{{ time }} →</small></div>{% endfor %}
+  </article></div>
+  <div class="sample-trend"><strong>Completed over time</strong><svg viewBox="0 0 800 80" role="img" aria-label="Illustrative progress, not your actual results"><path class="sample-baseline" d="M 0 75 H 800"/><path class="sample-line" d="M 0 73 H 90 V 67 H 180 V 60 H 250 V 53 H 340 V 48 H 400 V 40 H 490 V 30 H 570 V 26 H 650 V 15 H 720 V 7 H 800"/></svg><div><small>Week 1</small><small>Today</small></div></div>
+  <p class="sample-caption">Illustrative data · preview controls do not send emails or change requests.</p>
+</section>
+</body></html>

@@ -1,0 +1,8 @@
+schema_version: 1
+associations:
+  - guide_id: costar-professional-property
+    records: [live:costar-group]
+    rationale: CoStar's current global notice identifies the named Realty Information entity and affiliates and supplies product-specific contacts. This group inventory row maps only to the documented CoStar product workflow, not blanket erasure across every brand.
+  - guide_id: blackbaud-target-analytics
+    records: [live:blackbaud-inc]
+    rationale: Blackbaud's current North American notice explicitly distinguishes its Target Analytics donor-prospect controller role from customer-controlled constituent services and links the inspected public rights form.

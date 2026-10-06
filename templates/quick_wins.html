@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Quick wins · erase{% endblock %}
+{% block content %}
+<header class="workspace-head"><div class="quick-wins-heading"><h1>Quick wins</h1>{% include 'quick_wins_info.html' %}</div><a href="/dashboard">Back to home</a></header>
+<nav class="request-tabs" aria-label="Action views"><a href="/quick-wins" {% if view == 'recommended' %}aria-current="page"{% endif %}>Recommended</a><a href="/quick-wins?view=all" {% if view == 'all' %}aria-current="page"{% endif %}>Browse all</a><a href="/quick-wins?view=done" {% if view == 'done' %}aria-current="page"{% endif %}>Completed ({{ done_count }})</a><a href="/quick-wins?view=saved" {% if view == 'saved' %}aria-current="page"{% endif %}>Later &amp; skipped</a></nav>
+<p class="footnote">{% if action_country %}Recommendations for {{ action_countries.get(action_country, action_country) }} · <a href="/onboarding#country">Change in Profile</a>{% else %}<a href="/onboarding#country">Add your country in Profile</a> for relevant suggestions.{% endif %}</p>
+{% if view == 'all' %}<p class="footnote">The full library includes specialist and other-country routes, not a personal to-do list. Check each action’s scope.</p>{% endif %}
+<section class="quick-win-list">
+{% for item in items %}<article class="card quick-win {{ 'is-done' if item.done else '' }}" id="{{ item.id }}">
+<div><h2>{{ item.name }}</h2>{% if item.about %}<p>{{ item.about }}</p>{% endif %}<p class="quick-win-instruction">{{ item.description }}</p>
+{% if item.already_running or item.email_approved %}<p class="footnote">An existing request or approved email plan already covers this broker. A second request is usually unnecessary.</p>{% elif item.email_possible %}<p><a href="/campaign">Email available — include it in your automatic plan</a></p>{% endif %}
+{% if view == 'all' and not item.region_ok %}<p class="footnote">Not recommended for your selected country; check eligibility in the instructions.</p>{% endif %}
+{% if item.preference %}<p class="footnote">{{ 'Saved for later (7 days)' if item.preference == 'later' else 'Not interested' }} — not marked done.</p>{% endif %}
+{% include 'action_options.html' %}
+{% if item.steps %}<details><summary>Steps and what you’ll need</summary>
+<p>Scope: {{ item.regions | join(', ') }}.</p>
+<p>{{ item.scope }}</p>
+<p>{{ item.outcome }}.</p>
+<ol>{% for step in item.steps %}<li>{{ step }}</li>{% endfor %}</ol>
+{% if item.fields %}<p>Matching information: {{ item.fields | join(', ') | replace('_', ' ') }}.</p>{% endif %}
+<p>{{ item.verification }}</p>
+{% if item.url.startswith('mailto:') %}<p class="footnote">Open email creates a draft in your mail app. Replace the bracketed placeholders and send it yourself before selecting Done. Use your connected request mailbox to let erase track the reply.</p>{% elif not item.requirements_complete %}<p class="footnote">The policy route is reviewed, but the complete live form has not been tested. Check any additional fields before sharing information.</p>{% endif %}
+{% if not item.fresh %}<p class="notice">These instructions need rechecking. Read the current official source before proceeding.</p>{% endif %}
+</details>{% endif %}
+{% for case_id in item.case_ids %}<a href="/cases/{{ case_id }}">Request history</a> · {% endfor %}
+<details><summary>Evidence and coverage</summary><p>{{ item.scope }}</p>{% for domain in item.domains %}{% if broker_scale.get(domain) %}{% with scale=broker_scale[domain] %}{% include 'scale_note.html' %}{% endwith %}{% endif %}{% endfor %}<a href="{{ item.source }}" target="_blank" rel="noreferrer noopener">Source · checked {{ item.checked_at }}</a></details>
+<span class="status">{{ 'Done' if item.done else 'Optional step' }}</span></div>
+{% with action_return='/quick-wins?view=all' if view == 'all' else '/quick-wins' %}{% include 'quick_win_buttons.html' %}{% endwith %}
+</article>{% else %}<div class="card"><h2>{{ 'You’re caught up for now.' if view == 'recommended' and action_country else 'Nothing to show here yet.' }}</h2><p>{% if view == 'recommended' %}No more actions in this selection. You can stop here or choose another few; this does not mean every broker is covered.{% else %}Completed, postponed and skipped steps stay separate from deletion confirmations.{% endif %}</p></div>{% endfor %}</section>
+{% if view == 'recommended' and action_country %}<form class="more-actions" method="post" action="/recommendations/more"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="secondary">{{ 'Do more' if not items else 'Refresh suggestions' }}</button></form>{% endif %}
+<p class="footnote">Done records your completed step and stops follow-ups, not confirmed deletion. Replies are still monitored. Undo only clears the checklist; it does not reopen a completed request. Later and Not interested hide suggestions without stopping existing requests.</p>
+{% endblock %}

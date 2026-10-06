@@ -1,0 +1,44 @@
+schema_version: 1
+associations:
+  - guide_id: dun-bradstreet-regional
+    records: [discovery:no-dnb]
+    rationale: The Norwegian product notice explicitly names Dun & Bradstreet Norway AS, formerly Bisnode Norge, matching the regulator's Norwegian entry. Separate credit and address-brokering routes are retained; this is unrelated to DNB Bank ASA.
+  - guide_id: infotorg-no
+    records: [discovery:no-tietoevry]
+    rationale: Regulator's Tietoevry Norway Data Services link resolves to the reviewed Infotorg credit-freeze service; official service documentation names the same entity. Only blocking is reviewed, not deletion across every Tieto service.
+  - guide_id: kredittreform-no
+    records: [discovery:no-kredittreform]
+    rationale: Named Norwegian business-credit company matches its own homepage and the regulator roster. Association records the assessment but leaves the missing product privacy workflow unresolved.
+  - guide_id: kredittopplysningen-no
+    records: [discovery:no-kredittopplysningen]
+    rationale: Exact regulator name and listed KO International alias are retained in the guide, without treating the website customer policy as deletion instructions for commercial-report subjects.
+  - guide_id: enin-no
+    records: [discovery:no-enin]
+    rationale: Enin AS is the named Norwegian controller in both the regulator roster and current Enin AI privacy notice; customer-controlled data and public source records are not treated as deleted.
+  - guide_id: proff-no
+    records: [discovery:no-proff]
+    rationale: Proff AS is explicitly the controller of proff.no and forvalt.no business-person records. Other Enento group entities and similarly named businesses are not included.
+  - guide_id: experian-no
+    records: [discovery:no-experian]
+    rationale: The Norwegian roster candidate corresponds to Experian AS in the country-specific policy. Its separate Gjeldsregister controller is explicitly distinguished in the guide, without claiming global Experian deletion.
+  - guide_id: uc-se
+    records: [discovery:imy-uc]
+    rationale: The Swedish permit holder UC AB matches the exact controller identified by the reviewed UC register-extract instructions.
+  - guide_id: syna-se
+    records: [discovery:imy-syna]
+    rationale: The Swedish permit holder Syna AB corresponds to AB Syna on its own privacy notice; no other group or country is included.
+  - guide_id: valitive-credit-se
+    records: [discovery:imy-valitive]
+    rationale: Valitive Credit AB is named both in the regulator roster and the reviewed signed-access form. The separate historical Alektum alias remains unmerged pending current identity evidence.
+  - guide_id: safenode-se
+    records: [discovery:imy-safenode]
+    rationale: Safenode AB is the same named Swedish company in the official roster and homepage. Its unresolved rights workflow remains explicitly blocked by the guide.
+  - guide_id: experian-dk-rki
+    records: [discovery:dk-experian]
+    rationale: Experian A/S is the controller identified on its Danish DinInfo portal and the approved-agency list. The guide covers RKI only, not other Experian country entities.
+  - guide_id: risika-dk
+    records: [discovery:dk-risika]
+    rationale: Risika A/S matches the Danish policy controller and regulator entry. Swedish permit scope is not inferred from this Danish review.
+  - guide_id: bislab-no
+    records: [discovery:no-bislab]
+    rationale: Bislab AS matches the Norwegian controller and organization number in the reviewed policy; Finnish and Swedish Bislab entities remain separate.

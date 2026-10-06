@@ -1,0 +1,9 @@
+{% if email_only_action %}
+<section class="card"><h2>Handle this in email</h2><p>Identity proof and authorization requests aren’t supported in the app yet.</p><a class="button" href="{{ email_only_action.gmail_url }}" target="_blank" rel="noopener noreferrer">Open message in Gmail ↗</a></section>
+{% else %}
+<section {% if not embedded_composer %}class="card"{% endif %} id="reply-composer"><h2>{{ 'Suggested message' if embedded_composer and reply_draft else ('Review prepared reply' if reply_draft else 'Write a follow-up email') }}</h2>
+{% if reply_error %}<p class="notice danger" role="alert">{{ reply_error }} Your text is kept below.</p>{% endif %}
+{% if reply_draft %}<p>Drafted locally from the broker’s request. Review and edit before sending.</p><p>Saved details included: {{ reply_draft.disclosed | join(', ') or 'none' }}.</p>{% if reply_draft.missing %}<p role="status">Needs your input: {{ reply_draft.missing | join(', ') }}. Replace all [ADD …] placeholders before sending.</p>{% endif %}{% endif %}
+<form method="post" action="/cases/{{ case.id }}/reply"><input type="hidden" name="csrf" value="{{ csrf }}"><label>Recipient<input type="email" name="destination" value="{{ submitted_reply.destination if submitted_reply else (broker_guidance.get('fallback_email') or (case.broker.contact if '@' in case.broker.contact else '')) }}" required></label><label for="reply-body">Message</label><textarea id="reply-body" name="body" rows="7" maxlength="20000" required>{{ submitted_reply.body if submitted_reply else (reply_draft.body if reply_draft else '') }}</textarea><p class="footnote">Your case reference is included automatically. Only this message is sent; no attachments or extra profile fields are added.</p><button {% if not live %}disabled{% endif %}>Send follow-up</button></form>
+</section>
+{% endif %}

@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: zeotap-data
+    records: [discovery:zeotap-data]
+    rationale: The product policy explicitly names Zeotap Data GmbH and directs its rights requests to Roqad; kept distinct from zeotap GmbH.

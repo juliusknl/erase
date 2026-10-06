@@ -1,0 +1,8 @@
+schema_version: 1
+associations:
+  - guide_id: cuebiq-location
+    records: ["live:cuebiq-group-llc", "community:cuebiq"]
+    rationale: Current official notice identifies Cuebiq Group LLC as the Cuebiq domain's operator. The community brand discovery used the older Inc. name; the workflow covers the current service, not proven succession of all historic datasets.
+  - guide_id: dstillery-advertising
+    records: ["live:dstillery-inc", "community:dstillery"]
+    rationale: Both discovery records identify Dstillery Inc. and its official domain; the current notice supplies European rights and the designated request portal.

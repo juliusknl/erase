@@ -1,0 +1,47 @@
+schema_version: 1
+brokers:
+  - id: infonline-measurement
+    name: INFOnline measurement
+    match_domains: [infonline.de]
+    identity:
+      legal_name: INFOnline GmbH
+      brands: [INFOnline, IOM]
+      parent: null
+      official_domains: [infonline.de, ioam.de]
+    relevance:
+      regions: [Germany, EEA]
+      category: advertising
+      data_categories: [Pseudonymous client identifiers, IP addresses, Cross-site usage statistics]
+      note: Audience measurement; anonymous IOMb and pseudonymous IOMp are distinct.
+    removal:
+      method: manual
+      destination: datenschutz@infonline.de
+      alternatives: [https://www.infonline.de/datenschutz/]
+      steps:
+        - Identify the measured site/browser and request instructions for matching and exercising rights over pseudonymous records.
+        - Review needed identifiers personally; name/email alone do not identify a measurement client. Withdraw consent through the site's settings where applicable.
+        - Do not treat anonymous totals as named profiles. The historical optout.ioam.de endpoint failed to connect during review; it is not a verified quick win.
+    required_information:
+      fields: [measured_site_and_browser_context, matching_client_identifier_if_needed]
+      certainty: not_fully_specified
+      verification: Notice requires identity checking without a fixed checklist. Client-ID ownership and retrieval untested.
+    coverage:
+      effect: access_then_review
+      includes: Matched pseudonymous measurement records, subject to verification.
+      excludes: Anonymous census totals, all publisher records and proof of past-data erasure from consent withdrawal.
+    automation:
+      mode: manual
+      reason: Device matching and publisher scope require personal context.
+    evidence:
+      - url: https://www.infonline.de/datenschutz/
+        checked_on: '2026-10-01'
+        excerpt: datenschutz@infonline.de
+        supports: [identity, IOMb_IOMp_distinction, device_matching, rights_recipient]
+      - url: https://optout.ioam.de
+        checked_on: '2026-10-01'
+        excerpt: 'Research observation: connection failed; no opt-out control verified.'
+        supports: [historical_endpoint_unavailable]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Public notice retrieved through web tool; direct HTTP request returned 403., Publisher-specific instructions and identifier verification untested.]

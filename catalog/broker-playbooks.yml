@@ -1,0 +1,47 @@
+# Reviewed public routes and lessons from real replies, 2026-09-28.
+# No recipient/route is inferred automatically from untrusted email.
+brokers:
+  seamless.ai:
+    route: form
+    note: Use the Privacy Request Center first. Email fallback is conditional on being unable to complete the form; include name, country/state, city, target emails and phone only with consent.
+  kaspr.io:
+    route: form
+    note: Privacy Center and verification email required. If matching fails, business email, phone or LinkedIn URL may help. Do not treat a dedicated-mailbox no-match as a full search.
+  leadiq.com:
+    route: form
+    note: Use the public removal form, not personal Typeform links copied from someone else’s email.
+  hubspot.com:
+    route: form
+    note: Commercial-dataset removal uses HubSpot privacy preferences. General privacy requests use preferences.hubspot.com/privacy; help.hubspot.com is customer support, not removal.
+  peopledatalabs.com:
+    route: form
+    note: Use the Privacy Center for deletion; the do-not-sell page is a separate suppression route.
+  apollo.io:
+    route: form
+    note: Use the removal form and professional identifiers. Additional business email, LinkedIn URL or phone can resolve a no-match response.
+  rocketreach.co:
+    route: form
+    note: Use the removal tool. If no match, supply your RocketReach profile URL or LinkedIn URL for review.
+  hunter.io:
+    route: form
+    note: Claim professional company-domain emails. Consumer mailboxes are not sufficient identifiers for this service.
+  stackadapt.com:
+    route: form
+    note: Submit deletion through the Privacy Center. Advertising opt-out and deletion have separate confirmations.
+  apollointeractive.com:
+    route: manual
+    fallback_email: legal@apollointeractive.com
+    note: The data-rights form requires a US-state residency declaration and may request ID. If inapplicable, contact legal@apollointeractive.com without claiming US residency. This is not Apollo.io.
+  azira.com:
+    route: form
+    note: Requires a Mobile Advertising ID (MAID/IDFA). Do not send repeated generic name-and-email requests. Form or privacy@azira.com can accept the identifier after user review.
+  onaudience.com:
+    route: manual
+    note: Names and email addresses do not identify its advertising records. Ask privacy@onaudience.com which browser/device identifier is needed before disclosing more data.
+  acxiom.com:
+    route: manual
+    fallback_email: datenschutz@acxiom.com
+    note: Germany-specific contact. Postal address may be needed to locate household records; require explicit approval. The internal suppression list requires a separate affirmative request. Robinsonliste is not deletion. Other Acxiom entities use a separate regional portal.
+  snov.io:
+    route: email
+    note: Search scope is the supplied email addresses; include existing profile aliases, not only the dedicated request mailbox.

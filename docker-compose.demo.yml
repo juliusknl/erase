@@ -1,0 +1,17 @@
+services:
+  demo:
+    build: .
+    image: personal-erasure-demo:local
+    command: ["python", "-m", "erasure.demo", "--data-dir", "/demo-data", "--host", "0.0.0.0", "--port", "8789"]
+    ports:
+      - "127.0.0.1:8789:8789"
+    volumes:
+      - demo-data:/demo-data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8789/health')"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+volumes:
+  demo-data:

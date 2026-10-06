@@ -1,0 +1,4725 @@
+{
+  "schema_version": 1,
+  "captured_on": "2026-09-28",
+  "scope": "Public broker catalog only; no personal requests, contacts, or correspondence",
+  "brokers": [
+    {
+      "slug": "01advertising-inc",
+      "name": "01Advertising Inc.",
+      "domain": "01advertising.com",
+      "policy_url": "https://www.01advertising.com/legal/dsar/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "33-mile-radius-llc",
+      "name": "33 Mile Radius LLC",
+      "domain": "33mileradius.com",
+      "policy_url": "www.33mileradius.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "33across-inc",
+      "name": "33Across, Inc.",
+      "domain": "33across.com",
+      "policy_url": "www.33across.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "360-media-direct",
+      "name": "360 Media Direct",
+      "domain": "360mediadirect.com",
+      "policy_url": "https://360-media-direct.privacy.saymine.io/360_Media_Direct",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "4eyes-ai-inc",
+      "name": "4Eyes.ai, Inc.",
+      "domain": "4-eyes.ai",
+      "policy_url": "https://dsrp.pii.ai/p/7886d230-6f28-42d6-ba95-7d141f0a6520/submit.html",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "5x5-us-llc",
+      "name": "5X5 US, LLC",
+      "domain": "5x5coop.com",
+      "policy_url": "https://5x5data.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "5x5-us-llc-2",
+      "name": "5x5 US, LLC",
+      "domain": "5x5data.com",
+      "policy_url": "https://privacy.5x5data.com/5x5/opt-out; https://5x5data.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "6sense-insights-inc",
+      "name": "6sense Insights, Inc.",
+      "domain": "6sense.com",
+      "policy_url": "https://6sense.com/privacy-policy/; https://6sense.com/privacy-center/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "a-direct-marketing-inc",
+      "name": "A Direct Marketing Inc",
+      "domain": "bookyourdata.com",
+      "policy_url": "https://www.bookyourdata.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "above-data-inc",
+      "name": "Above Data, Inc.",
+      "domain": "abovedata.io",
+      "policy_url": "https://www.abovedata.io/opt-out/; https://www.abovedata.io/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "accudata-integrated-marketing-llc",
+      "name": "Accudata Integrated Marketing, LLC",
+      "domain": "acculeads.com; https:",
+      "policy_url": "https://deepsync.com/accudata/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "accurate-append-inc",
+      "name": "Accurate Append Inc.",
+      "domain": "accurateappend.com",
+      "policy_url": "https://accurateappend.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "ach-address-clearing-house",
+      "name": "ACH, Address Clearing House",
+      "domain": "achcoop.com",
+      "policy_url": "https://www.achcoop.com/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "acronymix-llc",
+      "name": "Acronymix LLC",
+      "domain": "acronymix.com",
+      "policy_url": "Acronymix.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "activimpact-llc",
+      "name": "ActivImpact, LLC",
+      "domain": "activimpact.ai",
+      "policy_url": "https://activimpact.ai/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "acxiom-llc",
+      "name": "Acxiom LLC",
+      "domain": "acxiom.com",
+      "policy_url": "https://www.acxiom.de/Datenschutz/",
+      "source": "https://www.acxiom.de/Datenschutz/"
+    },
+    {
+      "slug": "adapt-io",
+      "name": "Adapt.io",
+      "domain": "adapt.io",
+      "policy_url": "https://www.adapt.io/privacy.htm",
+      "source": "https://www.adapt.io/privacy.htm"
+    },
+    {
+      "slug": "addapptation-inc",
+      "name": "Addapptation, Inc.",
+      "domain": "propensity.com",
+      "policy_url": "https://www.propensity.com/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "adept-id-inc",
+      "name": "Adept ID, Inc.",
+      "domain": "adept-id.com",
+      "policy_url": "https://www.adept-id.com/opt-out-preferences/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "adprime-media-llc",
+      "name": "Adprime Media LLC",
+      "domain": "adprime.com",
+      "policy_url": "https://www.adprime.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "adsquare-gmbh",
+      "name": "adsquare GmbH",
+      "domain": "adsquare.com",
+      "policy_url": "https://adsquare.com/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "adstra-llc",
+      "name": "Adstra LLC",
+      "domain": "adstradata.com",
+      "policy_url": "https://www.adstradata.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "adswizz-inc",
+      "name": "AdsWizz, Inc.",
+      "domain": "adswizz.com",
+      "policy_url": "www.adswizz.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "adttribution-inc",
+      "name": "Adttribution Inc",
+      "domain": "adttribution.com",
+      "policy_url": "https://adttribution.com/privacy-policy.php",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "advisortarget-llc",
+      "name": "AdvisorTarget, LLC",
+      "domain": "finsum.com",
+      "policy_url": "https://www.finsum.com/what-we-do/your-privacy-choices",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "affinity-answers-corporation",
+      "name": "Affinity Answers Corporation",
+      "domain": "affinityanswers.com",
+      "policy_url": "https://www.affinityanswers.com/your-privacy-choices/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "affinity-solutions",
+      "name": "Affinity Solutions",
+      "domain": "affinity.solutions",
+      "policy_url": "https://affinitysolutions-privacy.my.onetrust.com/webform/a564cfa1-53bf-4c10-bf95-cd907432d7e8/7e4e6bf3-6562-454e-8c73-6a7bd1f4b336",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "aggknowledge-inc",
+      "name": "AggKnowledge Inc.",
+      "domain": "aggknowledge.ai",
+      "policy_url": "https://www.aggknowledge.ai/privacypolicy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "agile-education-marketing-llc",
+      "name": "Agile Education Marketing, LLC",
+      "domain": "agile-ed.com",
+      "policy_url": "https://agile-ed.com/california-privacy-rights/; https://agile-ed.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "agr-marketing-solutions-llc",
+      "name": "AGR Marketing Solutions LLC",
+      "domain": "agrmarketingsolutions.com",
+      "policy_url": "www.agrmarketingsolutions.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "aidentified-inc",
+      "name": "Aidentified, Inc.",
+      "domain": "aidentified.com",
+      "policy_url": "https://www.aidentified.com/privacy--policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "airlines-reporting-corporation",
+      "name": "Airlines Reporting Corporation",
+      "domain": "arccorp.com",
+      "policy_url": "https://www2.arccorp.com/site-privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "alikeaudience-inc",
+      "name": "AlikeAudience, Inc.",
+      "domain": "alikeaudience.com",
+      "policy_url": "https://www.alikeaudience.com/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "all-good-media-llc",
+      "name": "All Good Media, LLC",
+      "domain": "attribits.com",
+      "policy_url": "https://www.attribits.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "allant-group-llc",
+      "name": "Allant Group, LLC",
+      "domain": "allantgroup.com",
+      "policy_url": "https://allantgroup.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "alliant-cooperative-data-solutions-llc",
+      "name": "Alliant Cooperative Data Solutions, LLC",
+      "domain": "alliantinsight.com",
+      "policy_url": "https://alliantinsight.com/alliant-privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "alphonso-inc",
+      "name": "Alphonso Inc.",
+      "domain": "alphonso.tv",
+      "policy_url": "https://alphonso.tv/privacy/consumer",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "altair-data-resources-inc",
+      "name": "Altair Data Resources, Inc.",
+      "domain": "altairdata.com",
+      "policy_url": "https://www.altairdata.com/consumer-info",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "altrata-inc",
+      "name": "Altrata, Inc.",
+      "domain": "altrata.com",
+      "policy_url": "https://altrata.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "american-city-business-journals-inc",
+      "name": "American City Business Journals. Inc.",
+      "domain": "acbj.com",
+      "policy_url": "https://www.acbj.com/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "analyticsiq-inc",
+      "name": "AnalyticsIQ, Inc.",
+      "domain": "analytics-iq.com",
+      "policy_url": "https://analytics-iq.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "anchor-computer-inc",
+      "name": "Anchor Computer Inc.",
+      "domain": "anchorcomputer.com",
+      "policy_url": "http://www.anchorcomputer.com/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "andrews-wharton-inc",
+      "name": "Andrews Wharton, Inc.",
+      "domain": "andrewswharton.com",
+      "policy_url": "https://www.andrewswharton.com/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "aniline-inc",
+      "name": "Aniline, Inc.",
+      "domain": "aniline.ai; www.salesassistiq.ai",
+      "policy_url": "https://salesassistiq.ai/about",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "anne-lewis-strategies-llc",
+      "name": "Anne Lewis Strategies, LLC",
+      "domain": "missionwired.com",
+      "policy_url": "https://info.missionwired.com/coop-optout",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "anteriad-llc",
+      "name": "Anteriad, LLC",
+      "domain": "anteriad.com",
+      "policy_url": "https://anteriad.com/; https://anteriad.com/privacy-portal",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "apollo-interactive-llc",
+      "name": "Apollo Interactive, LLC",
+      "domain": "apollointeractive.com",
+      "policy_url": "https://www.apollointeractive.com/privacy-policy.php",
+      "source": "catalog/curated.yml"
+    },
+    {
+      "slug": "applovin-corporation",
+      "name": "AppLovin Corporation",
+      "domain": "applovin.com",
+      "policy_url": "https://legal.applovin.com/privacy/; https://legal.applovin.com/multistate-privacy-notice/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "appscience",
+      "name": "AppScience",
+      "domain": "appscience.ai",
+      "policy_url": "https://www.appscience.ai/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "aristotle-international-inc",
+      "name": "Aristotle International, Inc.",
+      "domain": "aristotle.com",
+      "policy_url": "https://www.aristotle.com/privacy/addendum-for-california-residents/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "asset-international-inc",
+      "name": "Asset International, Inc.",
+      "domain": "issmarketintelligence.com",
+      "policy_url": "https://www.issgovernance.com/privacy-legal/ccpa/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "astoria-company-marketing-llc",
+      "name": "Astoria Company Marketing LLC",
+      "domain": "astoriacompany.com",
+      "policy_url": "https://astoriacompany.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "atdata-llc",
+      "name": "AtData, LLC",
+      "domain": "atdata.com",
+      "policy_url": "https://www.atdata.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "audience-acuity-llc",
+      "name": "Audience Acuity LLC",
+      "domain": "audienceacuity.com",
+      "policy_url": "https://audienceacuity.com/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "audience-mix-llc",
+      "name": "Audience Mix LLC",
+      "domain": "audiencemix.net",
+      "policy_url": "https://www.audiencemix.net/do-no-sell-or-share-my-personal-informat",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "audiencepoint-inc",
+      "name": "AudiencePoint Inc.",
+      "domain": "audiencepoint.com",
+      "policy_url": "https://www.audiencepoint.com/cpra",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "austin-consolidated-holdings-inc",
+      "name": "Austin Consolidated Holdings, Inc.",
+      "domain": "equifax.com",
+      "policy_url": "https://www.equifax.com/personal/my-privacy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "autoweb-inc",
+      "name": "AutoWeb, Inc.",
+      "domain": "autoweb.com",
+      "policy_url": "www.autoweb.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "awl-holdings-llc",
+      "name": "AWL Holdings, LLC",
+      "domain": "allwebleads.com; insurancequotes.com; usinsuranceonline.com; affordable-home-insurance.org; discount-car-insurance-rates.com; general-liability-insurance-rates.com; affordable-health-insurance-plans.org; affordable-life-insurance-rates.org",
+      "policy_url": "https://privacyportal-eu.onetrust.com/webform/031dc37f-2093-4055-9d04-22f83329fe9f/a4fb8ed6-8389-4a17-a3be-ca808c6b300e",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "azerion-us-inc",
+      "name": "Azerion US Inc.",
+      "domain": "azerion.com",
+      "policy_url": "https://www.hybridtheory.com/privacy-notice/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "azira-llc",
+      "name": "Azira LLC",
+      "domain": "azira.com",
+      "policy_url": "https://azira.com/privacy-policy",
+      "source": "https://azira.com/privacy-policy"
+    },
+    {
+      "slug": "b-i-science-2009-ltd",
+      "name": "B.I Science (2009) Ltd",
+      "domain": "biscience.com",
+      "policy_url": "https://www.biscience.com/ccpa/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "babel-street-inc",
+      "name": "Babel Street, Inc.",
+      "domain": "babelstreet.com",
+      "policy_url": "https://www.babelstreet.com/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "bachmanity-inc",
+      "name": "Bachmanity Inc.",
+      "domain": "aviato.co",
+      "policy_url": "https://www.aviato.co/legal/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "baron-app-inc",
+      "name": "Baron App, Inc.",
+      "domain": "candl.app; cameo.com",
+      "policy_url": "https://legal.cameo.com/privacypolicy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "bb-direct-inc",
+      "name": "BB Direct Inc",
+      "domain": "bbdirect.com",
+      "policy_url": "https://www.bbdirect.com/about/privacy-compliance.html",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "bdex-llc",
+      "name": "BDEX, LLC",
+      "domain": "bdex.com",
+      "policy_url": "https://www.bdex.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "bdo-gci-llc-f-k-a-bdo-usa-p-c-global-corporate-intelligence-group",
+      "name": "BDO GCI, LLC (f.k.a. BDO USA, P.C., Global Corporate Intelligence group)",
+      "domain": "bdo.com",
+      "policy_url": "www.bdo.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "becausal-inc",
+      "name": "BECAUSAL, INC.",
+      "domain": "becausal.com",
+      "policy_url": "https://www.becausal.com/personal-information",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "beenverified",
+      "name": "BeenVerified",
+      "domain": "beenverified.com",
+      "policy_url": "https://www.beenverified.com/privacy",
+      "source": "catalog/curated.yml"
+    },
+    {
+      "slug": "beenverified-inc-and-its-subsidiaries-and-affiliates",
+      "name": "BeenVerified, Inc. and its subsidiaries and affiliates",
+      "domain": "beenverified.com;https:",
+      "policy_url": "https://www.beenverified.com/svc/optout/search/comprehensive_optouts",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "beenverified-llc-and-its-subsidiaries-and-affiliates",
+      "name": "BeenVerified, LLC and its subsidiaries and affiliates",
+      "domain": "beenverified.com; https:",
+      "policy_url": "https://www.beenverified.com/svc/optout/search/comprehensive_optouts",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "beeswax",
+      "name": "Beeswax",
+      "domain": "beeswax.com",
+      "policy_url": "www.beeswax.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "belardi-ostroy",
+      "name": "Belardi Ostroy",
+      "domain": "belardiwong.com",
+      "policy_url": "https://belardiwong.com/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "best-pick-reports-llc",
+      "name": "Best Pick Reports, LLC",
+      "domain": "bestpickreports.com",
+      "policy_url": "www.bestpickreports.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "bh-marketing-group-llc",
+      "name": "BH MARKETING GROUP LLC",
+      "domain": "usmarketinggrp.com",
+      "policy_url": "https://usmarketinggrp.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "bigdbm",
+      "name": "BIGDBM",
+      "domain": "bigdbm.com; https:",
+      "policy_url": "https://optout.bigdbm.com/; https://bigdbm.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "biointelli-corporation",
+      "name": "Biointelli corporation",
+      "domain": "biointelli.com",
+      "policy_url": "www.biointelli.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "biscred",
+      "name": "Biscred",
+      "domain": "biscred.com",
+      "policy_url": "https://www.biscred.com/do-not-sell-my-information; https://www.biscred.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "black-pearl-group-limited",
+      "name": "Black Pearl Group Limited",
+      "domain": "blackpearl.com",
+      "policy_url": "https://www.blackpearl.com/your-privacy-choices",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "blackbaud-inc",
+      "name": "Blackbaud, Inc",
+      "domain": "blackbaud.com",
+      "policy_url": "https://www.blackbaud.com/; https://www.blackbaud.com/company/data-subject-rights-request",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "blis-global-ltd",
+      "name": "Blis Global Ltd",
+      "domain": "blis.com",
+      "policy_url": "https://www.blis.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "blue-action-inc",
+      "name": "Blue Action Inc.",
+      "domain": "blueaction.io",
+      "policy_url": "https://blueaction.io/do-not-sell/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "blue-hill-marketing-solutions-inc",
+      "name": "Blue Hill Marketing Solutions, Inc",
+      "domain": "liftbasedata.com; www.liftengine.com; www.launchpadltv.com",
+      "policy_url": "https://www.liftbasedata.com/request-to-know/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "blueprint-audiences",
+      "name": "Blueprint Audiences",
+      "domain": "blueprintaudiences.com",
+      "policy_url": "https://blueprintaudiences.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "bombora-inc",
+      "name": "Bombora, Inc",
+      "domain": "bombora.com",
+      "policy_url": "https://bombora.com/privacy-policy/",
+      "source": "https://bombora.com/privacy-policy/"
+    },
+    {
+      "slug": "bridg-a-division-of-cardlytics-inc",
+      "name": "Bridg, a division of Cardlytics, Inc.",
+      "domain": "bridg.com",
+      "policy_url": "https://www.bridg.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "brightcheck-inc",
+      "name": "BrightCheck Inc.",
+      "domain": "brightcheck.com",
+      "policy_url": "https://www.brightcheck.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "brooks-integrated-marketing-llc",
+      "name": "Brooks Integrated Marketing, LLC",
+      "domain": "brooksim.com",
+      "policy_url": "https://www.brooksim.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "buildertrend-solutions-inc",
+      "name": "Buildertrend Solutions, Inc.",
+      "domain": "buildertrend.com; https:",
+      "policy_url": "https://buildertrend.com/privacy-notice/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "buxton-company-llc",
+      "name": "Buxton Company, LLC",
+      "domain": "buxtonco.com",
+      "policy_url": "https://www.buxtonco.com/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "buyerlink-inc",
+      "name": "Buyerlink Inc.",
+      "domain": "buyerlink.co",
+      "policy_url": "www.buyerlink.co",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "buyersroad-inc",
+      "name": "BuyersRoad, Inc",
+      "domain": "experience.com",
+      "policy_url": "https://www.experience.com/privacy-notice",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "bv-insights-llc",
+      "name": "BV Insights LLC",
+      "domain": "big-village.com",
+      "policy_url": "https://big-village.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "cadent-llc",
+      "name": "Cadent, LLC",
+      "domain": "cadent.tv",
+      "policy_url": "www.cadent.tv",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "captify-technologies",
+      "name": "Captify Technologies",
+      "domain": "captifytechnologies.com",
+      "policy_url": "https://www.captifytechnologies.com/data-subject-rights-request/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "captiv8-inc",
+      "name": "Captiv8 Inc.",
+      "domain": "captiv8.io",
+      "policy_url": "https://captiv8.io/policy/; https://captiv8.io/policy/opt-out/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "car-market-solutions-llc",
+      "name": "Car Market Solutions LLC",
+      "domain": "carmarketsolutions.com",
+      "policy_url": "https://www.carmarketsolutions.com/privacy-notice/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "careerbuilder-llc",
+      "name": "CareerBuilder, LLC",
+      "domain": "careerbuilder.com",
+      "policy_url": "https://www.careerbuilder.com/privacy_policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "carry-technologies-inc",
+      "name": "Carry Technologies Inc.",
+      "domain": "hightouch.com",
+      "policy_url": "preferences.hightouch.com; https://hightouch.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "catalina-marketing-corporation",
+      "name": "Catalina Marketing Corporation",
+      "domain": "catalina.com",
+      "policy_url": "www.catalina.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "catalist-llc",
+      "name": "Catalist LLC",
+      "domain": "catalist.us",
+      "policy_url": "catalist.us/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "cb-information-services-inc",
+      "name": "CB Information Services, Inc.",
+      "domain": "cbinsights.com",
+      "policy_url": "www.cbinsights.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "cdk-global-llc",
+      "name": "CDK Global, LLC",
+      "domain": "cdkglobal.com",
+      "policy_url": "cdkglobal.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "cengage-learning-inc",
+      "name": "Cengage Learning, Inc.",
+      "domain": "cengage.com",
+      "policy_url": "https://www.cengagegroup.com/privacy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "censia-in",
+      "name": "Censia, In.",
+      "domain": "censia.com",
+      "policy_url": "www.censia.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "checkpeople-llc",
+      "name": "CheckPeople, LLC",
+      "domain": "checkpeople.com",
+      "policy_url": "https://checkpeople.com/privacy-rights",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "choreograph-llp",
+      "name": "Choreograph LLP",
+      "domain": "choreograph.com",
+      "policy_url": "https://www.choreograph.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "circana-llc",
+      "name": "Circana, LLC",
+      "domain": "circana.com",
+      "policy_url": "https://www.circana.com/the-circana-group-global-privacy-policy-and-notice",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "cision-us-inc",
+      "name": "Cision US, Inc",
+      "domain": "cision.com",
+      "policy_url": "https://portals.dporganizer.com/fa778b0e-817f-4c96-b13d-e2b614470033",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "citydata-inc",
+      "name": "CITYDATA Inc.",
+      "domain": "citydata.ai",
+      "policy_url": "https://www.citydata.ai/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "civil-data-research-llc",
+      "name": "Civil Data Research, LLC",
+      "domain": "searchpublicrecords.com",
+      "policy_url": "https://www.searchpublicrecords.com/help-center/privacy; https://www.searchpublicrecords.com/help-center/privacy-requests",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "civis-analytics-inc",
+      "name": "Civis Analytics, Inc.",
+      "domain": "civisanalytics.com",
+      "policy_url": "https://www.civisanalytics.com/legal-pages/supplemental-privacy-notice",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "claritas-llc",
+      "name": "Claritas LLC.",
+      "domain": "claritas.com",
+      "policy_url": "www.claritas.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "clay-labs-inc",
+      "name": "Clay Labs, Inc",
+      "domain": "clay.com",
+      "policy_url": "https://privacy.clay.com/policies",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "clearcompany-llc",
+      "name": "ClearCompany, LLC",
+      "domain": "clearcompany.com",
+      "policy_url": "https://www.clearcompany.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "clearview-ai-inc",
+      "name": "Clearview AI, Inc.",
+      "domain": "clearview.ai",
+      "policy_url": "https://www.clearview.ai/privacy-and-requests",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "clickagy-llc",
+      "name": "Clickagy LLC",
+      "domain": "clickagy.com",
+      "policy_url": "https://www.clickagy.com/privacy-center/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "coast-technology-llc",
+      "name": "Coast Technology, LLC",
+      "domain": "coasttechnology.com",
+      "policy_url": "https://coasttechnology.com/; https://coasttechnology.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "cognism-inc",
+      "name": "Cognism, Inc.",
+      "domain": "cognism.com",
+      "policy_url": "https://www.cognism.com/en/privacy-policy",
+      "source": "https://www.cognism.com/en/privacy-policy"
+    },
+    {
+      "slug": "collective-data-solutions",
+      "name": "Collective Data Solutions",
+      "domain": "collectivedata.io",
+      "policy_url": "collectivedata.io",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "collectors-datastore-llc",
+      "name": "Collectors Datastore LLC",
+      "domain": "thecollectorsdatastore.com",
+      "policy_url": "https://www.fanalyticsiq.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "command-precision-inc",
+      "name": "Command Precision, Inc.",
+      "domain": "persistent.id",
+      "policy_url": "https://persistent.id/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "commerce-signals-inc",
+      "name": "Commerce Signals, Inc.",
+      "domain": "commercesignals.com",
+      "policy_url": "www.commercesignals.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "commercial-real-estate-exchange-inc",
+      "name": "Commercial Real Estate Exchange, Inc.",
+      "domain": "crexi.com",
+      "policy_url": "https://www.crexi.com/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "compact-information-systems-llc",
+      "name": "Compact Information Systems, LLC",
+      "domain": "deepsync.com",
+      "policy_url": "https://privacy.deepsync.com; https://deepsync.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "complete-mailing-lists-llc",
+      "name": "Complete Mailing Lists LLC",
+      "domain": "completemailinglists.com",
+      "policy_url": "https://completemailinglists.com/do-not-sell-my-information",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "complete-medical-lists-inc",
+      "name": "Complete Medical Lists, Inc.",
+      "domain": "completemedicallists.com",
+      "policy_url": "https://www.completemedicallists.com/privacy.php; https://www.completemedicallists.com/ccpa.php",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "comscore-inc",
+      "name": "Comscore, Inc.",
+      "domain": "comscore.com",
+      "policy_url": "https://www.comscore.com/About/Privacy-Policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "connatix-native-exchange-inc",
+      "name": "Connatix Native Exchange Inc.",
+      "domain": "jwx.com",
+      "policy_url": "www.jwx.com; www.connatix.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "connected-investors-llc",
+      "name": "Connected Investors, LLC",
+      "domain": "connectedinvestors.com",
+      "policy_url": "https://connectedinvestors.com/privacy-policy; https://firstam.service-now.com/x_farf2_dp_request_ci_opt_out.do?sysparm_id=6d6e7e8edb3e3158665f182813961985",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "connection-holdings",
+      "name": "Connection Holdings",
+      "domain": "connectionholdings.com",
+      "policy_url": "Connectionholdings.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "connext-digital-llc",
+      "name": "Connext Digital, LLC",
+      "domain": "connextdigital.com",
+      "policy_url": "https://www.connextdigital.com/ccpa/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "consumer-canvas-llc",
+      "name": "Consumer Canvas, LLC",
+      "domain": "consumercanvas.net",
+      "policy_url": "https://www.consumercanvas.net/privacy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "consumerbase-llc",
+      "name": "Consumerbase, LLC",
+      "domain": "exactdata.com",
+      "policy_url": "https://www.exactdata.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "contactout",
+      "name": "ContactOut",
+      "domain": "contactout.com",
+      "policy_url": "https://contactout.com/privacy_data_subjects",
+      "source": "https://contactout.com/privacy_data_subjects"
+    },
+    {
+      "slug": "converge-direct-llc",
+      "name": "Converge Direct, LLC",
+      "domain": "convergemarketing.com",
+      "policy_url": "https://www.convergemarketing.com/privacy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "convex-labs-inc",
+      "name": "Convex Labs, Inc.",
+      "domain": "convex.com",
+      "policy_url": "https://www.convex.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "costar-group",
+      "name": "CoStar Group",
+      "domain": "costar.com",
+      "policy_url": "https://www.costar.com/about/privacy-notice",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "cox-automotive-inc",
+      "name": "Cox Automotive, Inc.",
+      "domain": "coxautoinc.com; www.autotrader.com; www.fordblueadvantage.com; www.kbb.com",
+      "policy_url": "https://www.coxautoinc.com/privacy-statement/; https://www.coxautoinc.com/consumerprivacyrights/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "crawlbee-corp",
+      "name": "CrawlBee Corp",
+      "domain": "crawlbee.com",
+      "policy_url": "https://www.crawlbee.com/optout",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "crimson-hexagon",
+      "name": "Crimson Hexagon",
+      "domain": "brandwatch.com",
+      "policy_url": "https://portals.dporganizer.com/fa778b0e-817f-4c96-b13d-e2b614470033",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "crisil-irevna-us-llc",
+      "name": "CRISIL Irevna US LLC",
+      "domain": "greenwich.com",
+      "policy_url": "https://www.crisil.com/content/crisilcom/en/home/crisil-privacy-notice.html",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "criteo-corp",
+      "name": "Criteo Corp.",
+      "domain": "criteo.com",
+      "policy_url": "https://www.criteo.com/privacy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "cross-pixel-media-inc",
+      "name": "Cross Pixel Media, Inc.",
+      "domain": "crosspixel.net",
+      "policy_url": "https://privacy.crsspxl.com/; https://crosspixel.net/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "crunchbase-inc",
+      "name": "Crunchbase, Inc.",
+      "domain": "crunchbase.com",
+      "policy_url": "https://about.crunchbase.com/terms-of-service/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "ctam-leadshare-corp",
+      "name": "CTAM LeadShare Corp.",
+      "domain": "smartmove.us",
+      "policy_url": "https://www.smartmove.us/company/privacy; https://www.smartmove.us/company/california-privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "cuebiq-group-llc",
+      "name": "Cuebiq Group, LLC",
+      "domain": "cuebiq.com",
+      "policy_url": "https://cuebiq.com/privacy-request/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "cybba-inc",
+      "name": "Cybba Inc",
+      "domain": "cybba.com",
+      "policy_url": "https://cybba.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "data-axle-inc",
+      "name": "Data Axle Inc.",
+      "domain": "data-axle.com",
+      "policy_url": "https://www.data-axle.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "data-decisions-group-llc",
+      "name": "Data Decisions Group, LLC",
+      "domain": "datadecisionsgroup.com",
+      "policy_url": "https://datadecisionsgroup.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "data-partners-inc",
+      "name": "Data Partners Inc.",
+      "domain": "datapartners.com",
+      "policy_url": "https://datapartners.com/donotsellmyinformation/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "datadelivers-llc",
+      "name": "DataDelivers LLC",
+      "domain": "datadelivers.com",
+      "policy_url": "datadelivers.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "datadesk-inc",
+      "name": "Datadesk Inc.",
+      "domain": "datadesk.io",
+      "policy_url": "https://datadesk.io/help/do-not-sell-my-personal-info",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "datafy-llc",
+      "name": "Datafy LLC",
+      "domain": "datafy.com",
+      "policy_url": "https://www.datafy.com/opt-out",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "dataline-inc",
+      "name": "Dataline, Inc.",
+      "domain": "datalinedata.com",
+      "policy_url": "https://datalinedata.com/privacy-portal/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "dataman-group-inc",
+      "name": "Dataman Group Inc",
+      "domain": "datamangroup.com",
+      "policy_url": "https://www.datamangroup.com/privacy/; https://www.datamangroup.com/california-consumer-privacy-act-ccpa/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "datamentors-llc",
+      "name": "Datamentors, LLC",
+      "domain": "porchgroupmedia.com",
+      "policy_url": "www.porchgroupmedia.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "datanyze-llc",
+      "name": "Datanyze LLC",
+      "domain": "datanyze.com",
+      "policy_url": "https://www.datanyze.com/privacy-center",
+      "source": "catalog/curated.yml"
+    },
+    {
+      "slug": "dataskip",
+      "name": "Dataskip",
+      "domain": "dataskip.io",
+      "policy_url": "https://dataskip.io/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "datasys-group-inc",
+      "name": "Datasys Group, Inc.",
+      "domain": "datasys.com",
+      "policy_url": "https://datasys.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "date-detective-inc",
+      "name": "Date Detective Inc",
+      "domain": "date-detective.app; https:",
+      "policy_url": "https://www.date-detective.app/agreements/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "datonics-llc",
+      "name": "DATONICS LLC",
+      "domain": "datonics.com",
+      "policy_url": "https://datonics.com/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "dealerdirect-llc",
+      "name": "DealerDirect LLC",
+      "domain": "forddirect.com",
+      "policy_url": "www.forddirectprivacy.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "dealersocket-llc",
+      "name": "DealerSocket, LLC",
+      "domain": "dealersocket.com",
+      "policy_url": "https://dealersocket.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "dealerx-partners-llc",
+      "name": "DealerX Partners LLC",
+      "domain": "dealerx.com",
+      "policy_url": "https://dealerx.com/privacy-policy/",
+      "source": "https://dealerx.com/privacy-policy/"
+    },
+    {
+      "slug": "dealfront-finland-oy",
+      "name": "Dealfront Finland Oy",
+      "domain": "leadfeeder.com",
+      "policy_url": "https://www.leadfeeder.com/privacy/privacy-notice/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "dealmachine-operations-inc",
+      "name": "DealMachine Operations Inc.",
+      "domain": "dealmachine.com",
+      "policy_url": "https://privacyrequest.dealmachine.com/remove; https://dealmachine.com/privacy-policy; https://help.dealmachine.com/en/articles/15298055-data-privacy-requests",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "decide-technologies-inc",
+      "name": "Decide Technologies, Inc.",
+      "domain": "decide.co",
+      "policy_url": "https://decide.co/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "decisionlinks",
+      "name": "DecisionLinks",
+      "domain": "decisionlinks.com",
+      "policy_url": "https://www.decisionlinks.com/legal-pages/your-privacy-choices; https://www.decisionlinks.com/legal-pages/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "deep-root-analytics-llc",
+      "name": "Deep Root Analytics, LLC",
+      "domain": "deeprootanalytics.com",
+      "policy_url": "deeprootanalytics.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "definitive-healthcare-llc",
+      "name": "Definitive Healthcare LLC",
+      "domain": "definitivehc.com",
+      "policy_url": "https://www.definitivehc.com/privacy-center",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "delivr-ai-inc",
+      "name": "Delivr.ai Inc",
+      "domain": "delivr.ai",
+      "policy_url": "https://dsrp.pii.ai/p/7886d230-6f28-42d6-ba95-7d141f0a6520/submit.html",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "deloitte-consulting-llp",
+      "name": "Deloitte Consulting LLP",
+      "domain": "deloitte.com",
+      "policy_url": "https://datasubject.deloitte.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "demand-science-us-llc",
+      "name": "Demand Science US, LLC",
+      "domain": "demandscience.com",
+      "policy_url": "https://demandscience.com/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "demandbase-inc",
+      "name": "Demandbase, Inc.",
+      "domain": "demandbase.com",
+      "policy_url": "https://www.demandbase.com/privacy-center.html?ketch_preferences_tab=rightsTab",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "demyst-data-ltd",
+      "name": "Demyst Data, Ltd",
+      "domain": "demyst.com",
+      "policy_url": "https://www.demyst.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "diablo-media",
+      "name": "Diablo Media",
+      "domain": "diablomedia.com",
+      "policy_url": "https://www.diablomedia.com/privacy-request/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "dice-career-solutions-inc",
+      "name": "Dice Career Solutions, Inc.",
+      "domain": "dice.com",
+      "policy_url": "https://www.dice.com/about/ccpa; https://www.dice.com/about/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "digital-media-solutions-llc",
+      "name": "Digital Media Solutions, LLC",
+      "domain": "digitalmediasolutions.com",
+      "policy_url": "dmsunsub.io",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "digital-safety-products-llc",
+      "name": "Digital Safety Products, LLC.",
+      "domain": "spyfly.com",
+      "policy_url": "https://www.spyfly.com/help-center/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "digital-safety-products-llc-2",
+      "name": "Digital Safety Products, LLC",
+      "domain": "spyfly.com; publicrecordreports.com",
+      "policy_url": "https://www.spyfly.com/help-center/privacy; https://www.spyfly.com/help-center/privacy-requests; https://www.publicrecordreports.com/help-center/privacy; https://www.publicrecordreports.com/help-center/privacy-requests",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "digital-viking-media-inc",
+      "name": "Digital Viking Media Inc",
+      "domain": "digitalvikingmedia.com",
+      "policy_url": "https://www.digitalvikingmedia.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "direct-marketing-solutions-inc",
+      "name": "Direct Marketing Solutions, Inc.",
+      "domain": "teamdms.com",
+      "policy_url": "https://www.teamdms.com/opt-out",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "disco-technology-inc",
+      "name": "Disco Technology Inc.",
+      "domain": "disconetwork.com",
+      "policy_url": "disconetwork.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "disqus-inc",
+      "name": "Disqus, Inc.",
+      "domain": "disqus.com",
+      "policy_url": "www.Disqus.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "donorbase-inc",
+      "name": "DonorBase, Inc.",
+      "domain": "donorbase.com",
+      "policy_url": "https://donorbase.com; https://www.dataaxlenonprofit.com/donorbase",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "donorbureau-llc",
+      "name": "DonorBureau LLC",
+      "domain": "donorbureau.com",
+      "policy_url": "https://donorbureau.com/california-privacy-rights-for-california-residents-only/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "dr-decision-resources-llc",
+      "name": "DR Decision Resources, LLC",
+      "domain": "clarivate.com",
+      "policy_url": "https://privacyportal.onetrust.com/webform/7636e208-dda4-4218-8026-e1bc155873fc/draft/8651c266-68d4-43a8-b7ca-7bd8398843d6; https://privacyportal.onetrust.com/webform/7636e208-dda4-4218-8026-e1bc155873fc/draft/c3eedb35-4568-4772-87fb-4d8ae17ac233",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "draup-inc",
+      "name": "Draup, Inc.",
+      "domain": "draup.com",
+      "policy_url": "https://www.draup.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "dresden-direct-inc",
+      "name": "Dresden Direct, Inc.",
+      "domain": "dresdendirect.com",
+      "policy_url": "http://dresdendirect.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "dspolitical-llc",
+      "name": "DSPolitical, LLC",
+      "domain": "dspolitical.com",
+      "policy_url": "https://www.dspolitical.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "dstillery-inc",
+      "name": "Dstillery, Inc",
+      "domain": "dstillery.com",
+      "policy_url": "dstillery.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "dt-client-services-llc",
+      "name": "DT Client Services, LLC",
+      "domain": "thedatatrust.com",
+      "policy_url": "https://thedatatrust.com/do-not-sell-my-personal-information/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "dtn-llc",
+      "name": "DTN, LLC",
+      "domain": "dtn.com",
+      "policy_url": "www.dtn.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "dun-bradstreet-inc",
+      "name": "Dun & Bradstreet, Inc.",
+      "domain": "dnb.com",
+      "policy_url": "https://www.dnb.com/en-us/why-dnb/data-transparency/contacts.html",
+      "source": "catalog/curated.yml"
+    },
+    {
+      "slug": "e-republic-llc",
+      "name": "e.Republic, LLC",
+      "domain": "erepublic.com; govtech.com; governing.com; marketing.governmentnavigator.com; insider.govtech.com",
+      "policy_url": "https://erepublic.my.salesforce-sites.com/PrivacyRequest/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "eab-global-inc",
+      "name": "EAB Global, Inc.",
+      "domain": "eab.com",
+      "policy_url": "https://eab.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "economic-modeling-llc",
+      "name": "Economic Modeling, LLC",
+      "domain": "lightcast.io",
+      "policy_url": "https://www.lightcast.io/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "econtext-ai-llc",
+      "name": "eContext.ai LLC",
+      "domain": "complementics.com",
+      "policy_url": "https://www.complementics.com/optout-donotsell",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "edvisors-network-inc",
+      "name": "Edvisors Network, Inc.",
+      "domain": "edvisors.com",
+      "policy_url": "https://www.edvisors.com/your-privacy-choices/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "effyis-inc",
+      "name": "Effyis, Inc.",
+      "domain": "socialgist.ai",
+      "policy_url": "https://www.socialgist.ai/privacy-and-terms",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "ekata-inc",
+      "name": "Ekata, Inc.",
+      "domain": "ekata.com",
+      "policy_url": "https://www.ekata.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "el-toro-com-llc",
+      "name": "EL TORO.COM, LLC",
+      "domain": "eltoro.com",
+      "policy_url": "https://eltoro.com/your-privacy-choices/; https://eltoro.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "electronic-voice-services-inc",
+      "name": "Electronic Voice Services, Inc.",
+      "domain": "telephonelists.biz",
+      "policy_url": "https://www.telephonelists.biz/privacy-notice-for-residents-of-california; https://www.telephonelists.biz/privacy-policy-of-telephonelists-biz; https://www.evs7.com/docs/CPNI-PRIVACY-NOTICE-and-POLICY.pdf",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "elevar-llc",
+      "name": "Elevar, LLC",
+      "domain": "getelevar.com",
+      "policy_url": "getelevar.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "elocal-usa-llc",
+      "name": "eLocal USA, LLC",
+      "domain": "elocal.com",
+      "policy_url": "www.elocal.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "endgame-labs-inc",
+      "name": "Endgame Labs, Inc",
+      "domain": "endgame.io",
+      "policy_url": "https://docs.endgame.io/trust/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "enformion-llc",
+      "name": "Enformion LLC",
+      "domain": "enformion.com",
+      "policy_url": "https://www.enformion.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "enformion-llc-2",
+      "name": "Enformion, LLC",
+      "domain": "enformion.com; tracers.com; go.enformion.com",
+      "policy_url": "https://www.enformion.com/privacy-policy/; https://go.enformion.com/privacy-policy/; https://www.tracers.com/privacy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "enigma-technologies-inc",
+      "name": "Enigma Technologies, Inc.",
+      "domain": "enigma.com",
+      "policy_url": "https://enigma.com/company/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "enlyft-inc",
+      "name": "Enlyft Inc.",
+      "domain": "enlyft.com",
+      "policy_url": "https://enlyft.com/tech/check-email; https://enlyft.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "eprodirect-llc",
+      "name": "EproDirect LLC",
+      "domain": "eprodirect.com",
+      "policy_url": "https://www.eprodirect.com/do-not-sell-my-personal-information/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "epsilon-data-management-llc",
+      "name": "Epsilon Data Management, LLC",
+      "domain": "epsilon.com",
+      "policy_url": "https://legal.epsilon.com/dsr/",
+      "source": "catalog/curated.yml"
+    },
+    {
+      "slug": "equifax-workforce-solutions-llc",
+      "name": "Equifax Workforce Solutions LLC",
+      "domain": "theworknumber.com",
+      "policy_url": "https://www.equifax.com/personal/my-privacy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "equimine-inc",
+      "name": "EquiMine Inc.",
+      "domain": "batchleads.io",
+      "policy_url": "www.batchleads.io",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "esite-analytics-inc",
+      "name": "eSite Analytics, Inc.",
+      "domain": "esiteanalytics.com",
+      "policy_url": "https://www.kalibrate.com/data-subject-access-request-form/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "everview-holdco-inc",
+      "name": "EverView HoldCo, Inc",
+      "domain": "evertrue.com",
+      "policy_url": "https://www.evertrue.com/privacy-policy/; https://www.donorsearch.net/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "evorra-ltd",
+      "name": "Evorra Ltd",
+      "domain": "evorra.com",
+      "policy_url": "https://evorra.com/privacy-data-policies/product-privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "exa-labs-inc",
+      "name": "Exa Labs Inc.",
+      "domain": "exa.ai",
+      "policy_url": "exa.ai",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "exact-match-marketing-inc",
+      "name": "Exact Match Marketing Inc",
+      "domain": "exactmatchmarketing.com; app.exactmatchmarketing.com; exactmatch.io",
+      "policy_url": "https://exactmatchmarketing.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "exact-opco-llc",
+      "name": "Exact Opco, LLC",
+      "domain": "exactcustomer.com",
+      "policy_url": "www.exactcustomer.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "exlservice-com-llc",
+      "name": "ExlService.com LLC",
+      "domain": "exlservice.com",
+      "policy_url": "www.exlservice.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "experian-marketing-solutions-llc",
+      "name": "Experian Marketing Solutions, LLC",
+      "domain": "experian.com",
+      "policy_url": "https://www.experian.com/privacy/us-consumer-data-privacy-policy",
+      "source": "catalog/curated.yml"
+    },
+    {
+      "slug": "explorium-inc",
+      "name": "Explorium Inc.",
+      "domain": "explorium.ai",
+      "policy_url": "https://www.explorium.ai/do-not-sell-my-personal-info/; https://www.explorium.ai/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "eyeota-pte-ltd",
+      "name": "Eyeota Pte Ltd",
+      "domain": "eyeota.com",
+      "policy_url": "https://www.eyeota.com/eyeota-marketplace-privacy-policy",
+      "source": "https://www.eyeota.com/eyeota-marketplace-privacy-policy"
+    },
+    {
+      "slug": "family-tree-now-llc",
+      "name": "Family Tree Now, LLC",
+      "domain": "familytreenow.com",
+      "policy_url": "https://www.familytreenow.com/privacy; https://www.familytreenow.com/notice-at-collection",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "famous-birthdays-llc",
+      "name": "Famous Birthdays LLC",
+      "domain": "famousbirthdays.com",
+      "policy_url": "https://www.famousbirthdays.com/privacy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "faraday-inc",
+      "name": "Faraday, Inc.",
+      "domain": "faraday.ai",
+      "policy_url": "https://faraday.ai/privacy-options",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "fastpeoplesearch",
+      "name": "FastPeopleSearch",
+      "domain": "fastpeoplesearch.com",
+      "policy_url": "https://www.fastpeoplesearch.com/privacy",
+      "source": "catalog/curated.yml"
+    },
+    {
+      "slug": "fetch-rewards-llc",
+      "name": "Fetch Rewards, LLC",
+      "domain": "fetch.com",
+      "policy_url": "https://fetch.com/privacy-policy.; https://preferences.fetch.com/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "fi-navigator-corporation",
+      "name": "FI Navigator Corporation",
+      "domain": "fi-navigator.com",
+      "policy_url": "https://www.fi-navigator.com/remove/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "fideo-intelligence-inc",
+      "name": "Fideo Intelligence, Inc.",
+      "domain": "fideo.ai",
+      "policy_url": "https://app.fideo.ai/your-privacy-choices",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "fifty-technology-limited",
+      "name": "Fifty Technology Limited",
+      "domain": "fifty.io",
+      "policy_url": "https://fifty.io/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "findem-inc",
+      "name": "Findem, Inc.",
+      "domain": "findem.ai",
+      "policy_url": "https://www.findem.ai/privacy-policy-platform; https://www.findem.ai/do-not-sell-or-share-my-personal-information",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "finthrive-healthcare-inc",
+      "name": "FinThrive Healthcare, Inc.",
+      "domain": "finthrive.com",
+      "policy_url": "https://finthrive.com/privacy-policy-overview",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "first-direct-inc",
+      "name": "First Direct, Inc.",
+      "domain": "firstdirectmarketing.com; nationallistcounts.com",
+      "policy_url": "https://compliance.firstdirectmarketing.com/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "first-orion-corp",
+      "name": "FIRST ORION CORP",
+      "domain": "firstorion.com",
+      "policy_url": "www.firstorion.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "flashintel",
+      "name": "FlashIntel",
+      "domain": "flashintel.ai",
+      "policy_url": "https://www.flashintel.ai/privacy-statement-us/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "focus-usa-inc",
+      "name": "Focus USA, Inc",
+      "domain": "focus-usa.com",
+      "policy_url": "https://www.focus-usa.com/your-privacy-choices/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "fog-data-science-llc",
+      "name": "Fog Data science LLC",
+      "domain": "fogdatascience.com",
+      "policy_url": "https://www.fogdatascience.com/opt-out; https://www.fogdatascience.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "foo-monk-llc",
+      "name": "Foo Monk LLC",
+      "domain": "instantly.ai",
+      "policy_url": "https://app.instantly.ai/privacy/info; https://instantly.ai/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "forager-ai-llc",
+      "name": "Forager.ai, LLC",
+      "domain": "forager.ai",
+      "policy_url": "https://app.forager.ai/privacy; https://www.forager.ai/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "forewarn-llc",
+      "name": "FOREWARN, LLC",
+      "domain": "forewarn.com",
+      "policy_url": "https://www.forewarn.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "four-corner-media-corp",
+      "name": "Four Corner Media Corp",
+      "domain": "fourcornerhome.com; https:",
+      "policy_url": "https://fourcornerhome.com/data-privacy-form/; https://fourcornerhome.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "fourleaf-llc",
+      "name": "FourLeaf LLC",
+      "domain": "fourleafdata.com",
+      "policy_url": "https://www.fourleafdata.com/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "foursquare-labs-inc",
+      "name": "Foursquare Labs, Inc.",
+      "domain": "foursquare.com",
+      "policy_url": "https://foursquare.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "fourthwall-media-inc",
+      "name": "FourthWall Media, Inc.",
+      "domain": "fourthwall.tv",
+      "policy_url": "https://www.fourthwall.tv/privacy-fourthwall; https://www.fourthwall.tv/donotsellorshare-fourthwall",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "fraiser-llc",
+      "name": "Fraiser LLC",
+      "domain": "fraiser.org",
+      "policy_url": "fraiser.org",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "free-data-services-llc",
+      "name": "Free Data Services, LLC",
+      "domain": "truepeoplesearch.com",
+      "policy_url": "https://www.truepeoplesearch.com/privacy",
+      "source": "catalog/curated.yml"
+    },
+    {
+      "slug": "freepeoplesearch-com-llc",
+      "name": "FreePeopleSearch.com, LLC",
+      "domain": "freepeoplesearch.com",
+      "policy_url": "https://freepeoplesearch.com/privacy-rights/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "freewheel-media-inc",
+      "name": "FreeWheel Media Inc",
+      "domain": "freewheel.com",
+      "policy_url": "www.freewheel.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "fushia-media-llc",
+      "name": "Fushia Media, LLC.",
+      "domain": "fushiamedia.com",
+      "policy_url": "https://www.fushiamedia.com/request-delete",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "general-motors-llc",
+      "name": "General Motors LLC",
+      "domain": "gm.com",
+      "policy_url": "https://www.gm.com/consumer-privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "getemails-llc",
+      "name": "GetEmails LLC",
+      "domain": "retention.com",
+      "policy_url": "https://www.retention.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "getemails-llc-2",
+      "name": "GETEMAILS LLC",
+      "domain": "retention.com; www.rb2b.com",
+      "policy_url": "www.retention.com; www.rb2b.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "getprospect-com",
+      "name": "GetProspect",
+      "domain": "getprospect.com",
+      "policy_url": "https://getprospect.com/privacy",
+      "source": "https://getprospect.com/privacy"
+    },
+    {
+      "slug": "getvector-inc",
+      "name": "GetVector, Inc.",
+      "domain": "vector.co",
+      "policy_url": "https://www.vector.co/opt-out",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "giant-partners-inc",
+      "name": "Giant Partners, Inc.",
+      "domain": "giantpartners.com; www.listgiant.com",
+      "policy_url": "www.giantpartners.com; www.listgiant.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "gigabite-inc",
+      "name": "Gigabite Inc",
+      "domain": "boam.ai",
+      "policy_url": "https://boam.ai/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "global-source-data-solutions-inc",
+      "name": "Global Source Data Solutions Inc",
+      "domain": "gsdsi.com",
+      "policy_url": "https://gsdsi.com/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "globicom-inc",
+      "name": "Globicom Inc",
+      "domain": "recordsfinder.com; https:",
+      "policy_url": "https://recordsfinder.com/optout/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "grassroots-analytics",
+      "name": "Grassroots Analytics",
+      "domain": "grassrootsanalytics.com",
+      "policy_url": "https://www.grassrootsanalytics.com/california-consumer-privacy-act-ccpa",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "grayhair-software-llc",
+      "name": "GrayHair Software LLC",
+      "domain": "grayhairsoftware.com",
+      "policy_url": "https://grayhairsoftware.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "graze-social-pbc",
+      "name": "Graze Social PBC",
+      "domain": "graze.social",
+      "policy_url": "https://www.graze.social/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "great-lakes-list-inc",
+      "name": "Great Lakes List, Inc.",
+      "domain": "greatlakeslists.com",
+      "policy_url": "https://greatlakeslists.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "grin-technologies-inc",
+      "name": "GRIN Technologies Inc.",
+      "domain": "grin.co",
+      "policy_url": "https://www.grin.co/privacy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "growbots-inc",
+      "name": "Growbots Inc.",
+      "domain": "growbots.com",
+      "policy_url": "growbots.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "growing-libraries-llc",
+      "name": "Growing Libraries, LLC",
+      "domain": "growinglibraries.com",
+      "policy_url": "www.growinglibraries.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "growthcode-llc",
+      "name": "GrowthCode, LLC",
+      "domain": "growthcode.io",
+      "policy_url": "https://growthcode.io/do-not-sell-or-share-my-personal-information",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "guide-acxiom-de",
+      "name": "Acxiom Germany",
+      "domain": "acxiom.de",
+      "policy_url": "https://www.acxiom.de/datenschutz/datenschutzinformationen-fuer-verbraucher-und-firmendatenbank/",
+      "source": "https://www.acxiom.de/datenschutz/datenschutzinformationen-fuer-verbraucher-und-firmendatenbank/"
+    },
+    {
+      "slug": "guide-az-direct-de",
+      "name": "AZ Direct Germany",
+      "domain": "az-direct.com",
+      "policy_url": "https://www.az-direct.com/site/faq",
+      "source": "https://www.az-direct.com/site/faq"
+    },
+    {
+      "slug": "guide-crif-de",
+      "name": "CRIF Germany",
+      "domain": "crif.de",
+      "policy_url": "https://www.crif.de/fuer-privatpersonen/selbstauskunft-fuer-privatpersonen/",
+      "source": "https://www.crif.de/fuer-privatpersonen/selbstauskunft-fuer-privatpersonen/"
+    },
+    {
+      "slug": "guide-deutsche-post-direkt",
+      "name": "Deutsche Post Direkt",
+      "domain": "postdirekt.de",
+      "policy_url": "https://www.deutschepost.de/dam/jcr:d2c20ba5-1b40-45c3-ab68-5ab2373b4119/dp-ddp-informationen-zur-dv-fuer-av-und-adressabgleich.pdf",
+      "source": "https://www.deutschepost.de/dam/jcr:d2c20ba5-1b40-45c3-ab68-5ab2373b4119/dp-ddp-informationen-zur-dv-fuer-av-und-adressabgleich.pdf"
+    },
+    {
+      "slug": "guide-experian-infoscore-de",
+      "name": "Experian / infoscore Germany",
+      "domain": "experian.de",
+      "policy_url": "https://www.experian.de/selbstauskunft",
+      "source": "https://www.experian.de/selbstauskunft"
+    },
+    {
+      "slug": "guide-experian-uk-marketing",
+      "name": "Experian UK Marketing Services",
+      "domain": "experian.co.uk",
+      "policy_url": "https://www.experian.co.uk/privacy/consumer-information-portal/opt-out-options/",
+      "source": "https://www.experian.co.uk/privacy/consumer-information-portal/opt-out-options/"
+    },
+    {
+      "slug": "guide-kompass",
+      "name": "Kompass",
+      "domain": "kompass.com",
+      "policy_url": "https://se.kompass.com/l/general-data-use-policy",
+      "source": "https://se.kompass.com/l/general-data-use-policy"
+    },
+    {
+      "slug": "guide-liveramp-uk",
+      "name": "LiveRamp UK",
+      "domain": "liveramp.uk",
+      "policy_url": "https://liveramp.com/uk/privacy",
+      "source": "https://liveramp.com/uk/privacy"
+    },
+    {
+      "slug": "guide-schober-capaneo",
+      "name": "Capaneo / Schober",
+      "domain": "capaneo.de",
+      "policy_url": "https://capaneo.de/datenschutz/",
+      "source": "https://capaneo.de/datenschutz/"
+    },
+    {
+      "slug": "guide-zeotap",
+      "name": "Zeotap — entity review needed",
+      "domain": "zeotap.com",
+      "policy_url": "https://zeotap.com/privacy-policy/",
+      "source": "https://zeotap.com/privacy-policy/"
+    },
+    {
+      "slug": "guidestar-direct-corp",
+      "name": "Guidestar Direct, Corp.",
+      "domain": "carneydirect.com",
+      "policy_url": "https://www.carneydirect.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "h1-insights-inc",
+      "name": "H1 Insights, Inc.",
+      "domain": "h1.co",
+      "policy_url": "www.h1.co",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "health-union-llc",
+      "name": "Health Union, LLC",
+      "domain": "health-union.com",
+      "policy_url": "https://privacyportal.onetrust.com/webform/c402d2db-7536-4212-a23d-ed4a33c1b3b2/e3aec736-7c0a-4313-a3e7-132ff601397a; https://health-union.com/privacy-choices/; https://health-union.com/privacy-notice/; https://health-union.com/consumer-health-notice/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "healthcare-inc",
+      "name": "HealthCare, Inc.",
+      "domain": "healthcare.com",
+      "policy_url": "https://www.healthcare.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "healthcare-inc-2",
+      "name": "Healthcare Inc",
+      "domain": "healthcare.com; https:",
+      "policy_url": "https://www.healthcare.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "healthlink-dimensions-llc",
+      "name": "HealthLink Dimensions, LLC",
+      "domain": "healthlinkdimensions.com",
+      "policy_url": "https://healthlinkdimensions.com/consumerprivacyrights",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "healthwise-data",
+      "name": "HealthWise Data",
+      "domain": "healthwisedata.com",
+      "policy_url": "https://www.healthwisedata.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "heartbeat-ai-inc",
+      "name": "Heartbeat.AI Inc",
+      "domain": "heartbeat.ai",
+      "policy_url": "https://heartbeat.ai/policy; https://heartbeat.ai/policy-ccpa; https://heartbeat.ai/optout",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "helix-campaigns-llc",
+      "name": "Helix Campaigns LLC",
+      "domain": "helixcampaigns.com",
+      "policy_url": "https://www.helixcampaigns.com/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "hireteammate-inc",
+      "name": "HireTeamMate, Inc.",
+      "domain": "hireez.com",
+      "policy_url": "https://app.hireez.com/ownyourdata",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "hivestack-inc",
+      "name": "Hivestack Inc.",
+      "domain": "hivestack.com",
+      "policy_url": "https://perion.com/legal/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "hivestack-technologies-inc",
+      "name": "Hivestack Technologies Inc.",
+      "domain": "perion.com",
+      "policy_url": "www.perion.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "home-contractors-review-llc",
+      "name": "Home Contractors Review, LLC",
+      "domain": "fivestarrated.com",
+      "policy_url": "https://www.fivestarrated.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "hubspot-inc",
+      "name": "HubSpot, Inc.",
+      "domain": "hubspot.com",
+      "policy_url": "https://legal.hubspot.com/privacy-policy",
+      "source": "https://legal.hubspot.com/privacy-policy"
+    },
+    {
+      "slug": "huge-legal-technology-company-inc",
+      "name": "Huge Legal Technology Company, Inc",
+      "domain": "trustandwill.com",
+      "policy_url": "https://trustandwill.com/security/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "hunt-club-inc",
+      "name": "Hunt Club Inc",
+      "domain": "app.exploreatlas.io",
+      "policy_url": "https://www.huntclub.com/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "hunter-web-services-inc",
+      "name": "Hunter Web Services, Inc.",
+      "domain": "hunter.io",
+      "policy_url": "https://hunter.io/privacy-policy",
+      "source": "https://hunter.io/privacy-policy"
+    },
+    {
+      "slug": "i360-llc",
+      "name": "i360, LLC",
+      "domain": "i-360.com",
+      "policy_url": "https://www.i-360.com/ccpa",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "id5-technology-ltd",
+      "name": "ID5 Technology Ltd",
+      "domain": "id5.io",
+      "policy_url": "https://id5.io",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "idg-communications-inc",
+      "name": "IDG Communications Inc.",
+      "domain": "foundryco.com",
+      "policy_url": "https://www.foundryco.com/idg-privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "idmap-inc",
+      "name": "IDMAP Inc",
+      "domain": "idmap.ai",
+      "policy_url": "https://idmap.ai/privacy-policy.html",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "ileads-com-llc",
+      "name": "iLeads.com, LLC",
+      "domain": "ileads.com",
+      "policy_url": "https://ileads.com/submitrequest/; https://ileads.com/company/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "illumin-inc",
+      "name": "illumin Inc.",
+      "domain": "illumin.com",
+      "policy_url": "https://illumin.com/legalcenter/; https://illumin.com/opt-out.html",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "inbound-insight-llc",
+      "name": "Inbound Insight, LLC",
+      "domain": "inboundinsight.com",
+      "policy_url": "https://inboundinsight.com/ccpa; https://inboundinsight.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "index-exchange-inc",
+      "name": "Index Exchange Inc.",
+      "domain": "indexexchange.com",
+      "policy_url": "https://www.indexexchange.com/privacy/exchange-platform-privacy-policy/; https://www.indexexchange.com/privacy/rights-exercising-rights/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "indiemark-llc",
+      "name": "Indiemark LLC",
+      "domain": "emailindustries.com",
+      "policy_url": "https://www.blackbox.email/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "infinite-knot-inc",
+      "name": "Infinite Knot Inc.",
+      "domain": "contacts411.com",
+      "policy_url": "https://www.contacts411.com/data-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "infinite-media-concepts-inc",
+      "name": "Infinite Media Concepts Inc",
+      "domain": "mailinglists.com",
+      "policy_url": "https://mailinglists.com/about/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "infomatics-llc",
+      "name": "Infomatics LLC",
+      "domain": "privatereports.com; mugshotlook.com; publicsearcher.com",
+      "policy_url": "privatereports.com; mugshotlook.com; publicsearcher.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "infopay-inc",
+      "name": "InfoPay, Inc",
+      "domain": "infopay.com; infotracer.com; propertychecker.com; goodcar.com; statecourts.org; courtcasefinder.com; thepublicindex.org; entitycheck.com; sentinex.org; idstrong.com; courtrecords.us; staterecords.org; recordsfinder.com",
+      "policy_url": "https://www.infopay.com/privacy; https://propertychecker.com/optout; https://recordsfinder.com/optout/; https://sentinex.com/optout; https://www.statecourts.org/optout/; https://staterecords.org/optout; https://thepublicindex.org/optout; https://courtcasefinder.com/optout; https://courtrecords.us/optout/; https://entitycheck.com/optout; https://goodcar.com/optout; https://members.idstrong.com/opt-out/; https://infotracer.com/optout/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "informa-usa-inc",
+      "name": "Informa USA Inc.",
+      "domain": "informa.com",
+      "policy_url": "https://privacy.informa.com/policies/en/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "information-com-llc",
+      "name": "Information.com, LLC",
+      "domain": "information.com",
+      "policy_url": "https://information.com/privacy-rights/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "information-data-resources-llc",
+      "name": "Information Data Resources, LLC",
+      "domain": "publicinfoservices.com",
+      "policy_url": "https://www.publicinfoservices.com/help-center/privacy; https://www.publicinfoservices.com/help-center/privacy-requests",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "inmar-oiq-llc",
+      "name": "Inmar-OIQ, LLC",
+      "domain": "inmar.com",
+      "policy_url": "https://www.inmar.com/about/privacy-policy/owneriq",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "inmarket-media-llc",
+      "name": "InMarket Media, LLC",
+      "domain": "inmarket.com",
+      "policy_url": "preferences.inmarket.com; inmarket.com/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "innovation-brands-corp",
+      "name": "Innovation Brands Corp",
+      "domain": "proxima.ai",
+      "policy_url": "www.proxima.ai",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "innovative-database-solutions-inc",
+      "name": "Innovative Database Solutions, Inc.",
+      "domain": "idatabasesolutions.com",
+      "policy_url": "https://idatabasesolutions.com/personal-information-request-all-other-states/; https://idatabasesolutions.com/privacy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "insightbridge-llc",
+      "name": "Insightbridge LLC",
+      "domain": "mylife.com",
+      "policy_url": "https://www.mylife.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "instant-checkmate-llc",
+      "name": "Instant Checkmate, LLC",
+      "domain": "instantcheckmate.com",
+      "policy_url": "https://www.instantcheckmate.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "instant-checkmate-llc-2",
+      "name": "Instant Checkmate LLC",
+      "domain": "instantcheckmate.com; www.cellphonedirectory.com; www.cheaterslie.com; www.freepeople-search.com",
+      "policy_url": "www.instantcheckmate.com/privacy-center",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "institutional-shareholder-services-inc",
+      "name": "Institutional Shareholder Services Inc.",
+      "domain": "issgovernance.com",
+      "policy_url": "https://www.issgovernance.com/privacy-legal/ccpa/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "intalytics-inc",
+      "name": "Intalytics, Inc.",
+      "domain": "intalytics.com",
+      "policy_url": "https://kalibrate.com/data-subject-access-request-form/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "integrated-direct-marketing-llc",
+      "name": "Integrated Direct Marketing, LLC",
+      "domain": "idm.us.com",
+      "policy_url": "https://www.idm.us.com/do-not-sell-my-personal-information/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "intelius-llc",
+      "name": "Intelius, LLC",
+      "domain": "intelius.com; www.ussearch.com; www.pro.ussearch.com; www.arrestrecordsearch.com; www.criminalrecords.com; www.peoplefinder.com; www.peoplefind.com; www.telephonenumberlookups.com; www.reversephonelookup.com; www.brbpub.com; www.callercomplaints.com; www.courtreference.com; www.easybackgroundchecks.com; www.freebackgroundchecksusa.com; www.onlinesearches.com; www.snoopstation.com; www.zabasearch.com; www.addresses.com; www.publicrecords.com; www.publicrecords.onlinesearches.com; www.peoplelookup.com; www.publicrecords360.com",
+      "policy_url": "www.intelius.com/privacy-center",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "intent-iq-llc",
+      "name": "Intent IQ LLC",
+      "domain": "intentiq.com",
+      "policy_url": "https://www.intentiq.com/opt-out/",
+      "source": "https://www.intentiq.com/opt-out/"
+    },
+    {
+      "slug": "intentsify-llc",
+      "name": "Intentsify, LLC",
+      "domain": "intentsify.io",
+      "policy_url": "https://intentsify.io/privacy-policy/consumer-data-privacy-policy/; https://app.intentsify.io/opt-out",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "interactive-data-llc",
+      "name": "Interactive Data, LLC",
+      "domain": "ididata.com",
+      "policy_url": "https://www.ididata.com/idis-privacy-statement/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "intermedia-ventures-llc",
+      "name": "Intermedia Ventures, LLC",
+      "domain": "staterecords.org; courtrecords.us; californiacourtrecords.us",
+      "policy_url": "https://staterecords.org/optout; https://courtrecords.us/optout/; https://californiacourtrecords.us/optout/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "iqvia-digital-inc",
+      "name": "IQVIA Digital Inc.",
+      "domain": "iqviadigital.com; https:",
+      "policy_url": "https://privacyportal.onetrust.com/webform/07e8dc4d-6686-403e-9b11-39fe7347d2f4/2f999bd2-c826-498c-a504-894eaf543b6f",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "irys-inc",
+      "name": "Irys, Inc",
+      "domain": "irys.us",
+      "policy_url": "https://irys.us/do-not-sell-ccpa",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "ispot-tv-inc",
+      "name": "iSpot.tv, Inc.",
+      "domain": "ispot.tv",
+      "policy_url": "https://www.ispot.tv/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "iwave",
+      "name": "iWave",
+      "domain": "kindsight.io",
+      "policy_url": "https://kindsight.io/privacy-policy/#iwave; https://go.kindsight.io/privacy-opt-out",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "j-d-power",
+      "name": "J.D. Power",
+      "domain": "jdpower.com",
+      "policy_url": "https://www.jdpower.com/privacy/california",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "j2-global-canada-inc",
+      "name": "J2 Global Canada, Inc.",
+      "domain": "ziffdavis.com",
+      "policy_url": "https://www.ziffdavis.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "j2-global-canada-inc-2",
+      "name": "J2 Global Canada Inc.",
+      "domain": "campaigner.com; https:",
+      "policy_url": "https://www.campaigner.com/legal/privacy-policy; https://www.smtp.com/policies/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "j2-martech-corp",
+      "name": "J2 Martech Corp",
+      "domain": "fullcontact.com",
+      "policy_url": "https://platform.fullcontact.com/your-privacy-choices; https://www.fullcontact.com/privacy/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "jdm-list-services-llc",
+      "name": "JDM LIST SERVICES, LLC",
+      "domain": "jdmlistservices.com",
+      "policy_url": "https://jdmlistservices.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "jigyasa-analytics-llc",
+      "name": "Jigyasa Analytics LLC",
+      "domain": "jigyasaanalytics.com",
+      "policy_url": "https://www.jigyasaanalytics.com/contact-us",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "jmr-media-consulting-inc",
+      "name": "JMR Media Consulting, Inc.",
+      "domain": "jmr-media.com",
+      "policy_url": "https://jmr-media.com/privacy-notice",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "juicebox-app-inc",
+      "name": "Juicebox App, Inc.",
+      "domain": "juicebox.ai",
+      "policy_url": "https://juicebox.ai/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "jun-group-productions-llc",
+      "name": "Jun Group Productions, LLC",
+      "domain": "jungroup.com",
+      "policy_url": "jungroup.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "kargo-global-llc",
+      "name": "Kargo Global LLC",
+      "domain": "kargo.com",
+      "policy_url": "https://kargo.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "kaspr",
+      "name": "Kaspr",
+      "domain": "kaspr.io",
+      "policy_url": "https://www.kaspr.io/privacy-policy",
+      "source": "https://www.kaspr.io/privacy-policy"
+    },
+    {
+      "slug": "kb-synergy-inc",
+      "name": "KB Synergy Inc",
+      "domain": "kbsynergy.com",
+      "policy_url": "https://hiy.ywv.mybluehost.me/website_8088244e/privacy-policy-ccpa-do-not-sell-my-information/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "key-marketing-advantage-llc",
+      "name": "Key Marketing Advantage, LLC",
+      "domain": "keymarketingadvantage.com",
+      "policy_url": "https://keymarketingadvantage.com/do_not_use_my_personal_information; https://keymarketingadvantage.com/privacy_policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "keyword-connects-llc",
+      "name": "Keyword Connects LLC",
+      "domain": "keywordconnects.com",
+      "policy_url": "https://keywordconnects.com/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "kind-skiptracing-inc",
+      "name": "Kind Skiptracing, Inc.",
+      "domain": "kindskiptracing.com",
+      "policy_url": "https://kindskiptracing.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "kloudend-inc",
+      "name": "Kloudend, Inc.",
+      "domain": "ipapi.co",
+      "policy_url": "https://ipapi.co/donotsell/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "knower-tech-usa-llc",
+      "name": "Knower Tech USA, LLC",
+      "domain": "knowertech.com",
+      "policy_url": "https://www.rbarrel.com/opt-out",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "knowledge-works-inc",
+      "name": "Knowledge Works, Inc.",
+      "domain": "sbinsights.paynetonline.com",
+      "policy_url": "https://www.equifax.com/personal/my-privacy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "koddi-inc",
+      "name": "Koddi Inc.",
+      "domain": "koddi.com",
+      "policy_url": "https://koddi.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "komodo-health-inc",
+      "name": "Komodo Health, Inc.",
+      "domain": "komodohealth.com",
+      "policy_url": "https://www.komodohealth.com/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "kontext-data",
+      "name": "Kontext Data",
+      "domain": "kontextdata.com",
+      "policy_url": "www.kontextdata.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "l-s-mobile-apps-holdings-ltd",
+      "name": "L.S Mobile Apps Holdings Ltd",
+      "domain": "lsmapps.com",
+      "policy_url": "https://www.lsmapps.com/ccpa",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "labels-lists-inc",
+      "name": "Labels & Lists, Inc",
+      "domain": "l2-data.com",
+      "policy_url": "https://www.l2-data.com/wp-content/uploads/2025/08/L2-Privacy-Notice-19Aug25v3.pdf",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "lead-enhance-llc",
+      "name": "LEAD ENHANCE LLC",
+      "domain": "lead-enhance.com",
+      "policy_url": "https://bathroom-remodel-today.com/privacy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "lead-intelligence-inc",
+      "name": "Lead Intelligence, Inc.",
+      "domain": "verisk.com",
+      "policy_url": "https://urldefense.com/v3/__https://marketing.verisk.com/privacy-center/__;!!Em4Sr2I!NyGTB8tP4SclzQ6I6EcsO-OvvZ7Avwx_vdjNmT47Dk6Ya9xUpuFj50pXKSiqqP0VBBzBMjMfqAvJ4rgtdVtN_tBEtw$",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "lead-intelligence-inc-2",
+      "name": "Lead Intelligence Inc.",
+      "domain": "infutor.com",
+      "policy_url": "https://infutor.com/privacy-center/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "lead-me-media-llc",
+      "name": "Lead Me Media, LLC",
+      "domain": "leadmemedia.com",
+      "policy_url": "leadmemedia.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "lead411-corporation",
+      "name": "Lead411 Corporation",
+      "domain": "lead411.com",
+      "policy_url": "https://www.lead411.com/privacy-policy/",
+      "source": "https://www.lead411.com/privacy-policy/"
+    },
+    {
+      "slug": "leadcrunch",
+      "name": "LeadCrunch",
+      "domain": "getrev.ai",
+      "policy_url": "getrev.ai; getrev.ai/privacy-policy; getrev.ai/privacy-request",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "leadfuze-com",
+      "name": "LeadFuze",
+      "domain": "leadfuze.com",
+      "policy_url": "https://www.leadfuze.com/privacy/",
+      "source": "https://www.leadfuze.com/privacy/"
+    },
+    {
+      "slug": "leadgenius-com",
+      "name": "LeadGenius",
+      "domain": "leadgenius.com",
+      "policy_url": "https://www.leadgenius.com/legal/privacy",
+      "source": "https://www.leadgenius.com/legal/privacy"
+    },
+    {
+      "slug": "leadiq-inc",
+      "name": "LeadIQ, Inc",
+      "domain": "leadiq.com",
+      "policy_url": "https://privacy.leadiq.com/legal/privacy-policy",
+      "source": "https://privacy.leadiq.com/legal/privacy-policy"
+    },
+    {
+      "slug": "leadpost-llc",
+      "name": "LeadPost LLC",
+      "domain": "leadpost.com",
+      "policy_url": "https://leadpost.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "leadsmarket-com-llc",
+      "name": "LeadsMarket.com LLC",
+      "domain": "leadsmarket.com",
+      "policy_url": "https://www.leadsmarket.com/ccpa-notice",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "leadspace-inc",
+      "name": "Leadspace Inc",
+      "domain": "leadspace.com",
+      "policy_url": "https://www.leadspace.com/do-not-sell-form",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "learnmore-llc",
+      "name": "LearnMore, LLC",
+      "domain": "learnmore.com",
+      "policy_url": "https://learnmore.com/privacy-rights/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "leidos-digital-solutions-inc",
+      "name": "Leidos Digital Solutions, Inc.",
+      "domain": "leidosiq.com",
+      "policy_url": "www.leidosiq.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "lexisnexis",
+      "name": "LexisNexis",
+      "domain": "lexisnexis.com",
+      "policy_url": "https://www.lexisnexis.com/global/privacy/en/privacy-center-us.page",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "lexisnexis-risk-solutions-fl-inc",
+      "name": "LexisNexis Risk Solutions FL Inc.",
+      "domain": "risk.lexisnexis.com",
+      "policy_url": "https://risk.lexisnexis.com/privacy-policy",
+      "source": "catalog/curated.yml"
+    },
+    {
+      "slug": "lightbox-parent-l-p",
+      "name": "LightBox Parent, L.P.",
+      "domain": "lightboxre.com",
+      "policy_url": "https://www.lightboxre.com/lightbox-individual-data-rights-request/; https://www.lightboxre.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "lightcast-llc",
+      "name": "Lightcast, LLC",
+      "domain": "lightcast.io; rhetorik.com",
+      "policy_url": "https://privacyportal.onetrust.com/webform/0f61f895-d08d-410f-b96d-ecfd34fd42e3/8d4dfe0d-998d-4c1d-ab6d-4357670fa8e9",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "lionshare-marketing-inc",
+      "name": "Lionshare Marketing, Inc",
+      "domain": "lionsharemarketing.com",
+      "policy_url": "www.lionsharemarketing.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "listkit-llc",
+      "name": "ListKit LLC",
+      "domain": "listkit.io",
+      "policy_url": "https://www.listkit.io/privacy; https://www.listkit.io/privacy-statement",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "listsonline-com-inc",
+      "name": "ListsOnline.com, Inc.",
+      "domain": "everleads.com",
+      "policy_url": "https://www.everleads.com/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "live-data-technologies-inc",
+      "name": "Live Data Technologies, Inc.",
+      "domain": "livedatatechnologies.com",
+      "policy_url": "https://www.livedatatechnologies.com/opt-out",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "liveintent",
+      "name": "LiveIntent",
+      "domain": "liveintent.com",
+      "policy_url": "https://www.liveintent.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "liveramp-inc",
+      "name": "LiveRamp, Inc.",
+      "domain": "liveramp.com",
+      "policy_url": "https://liveramp.com/privacy/",
+      "source": "catalog/curated.yml"
+    },
+    {
+      "slug": "lizdev-inc",
+      "name": "LIZDEV INC.",
+      "domain": "lizdev.com",
+      "policy_url": "https://lizdev.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "lob-com-inc",
+      "name": "Lob.com, Inc.",
+      "domain": "lob.com",
+      "policy_url": "https://www.lob.com/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "locatesmarter-llc",
+      "name": "LocateSmarter LLC",
+      "domain": "locatesmarter.com",
+      "policy_url": "https://www.locatesmarter.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "lookify-llc",
+      "name": "Lookify, LLC",
+      "domain": "lookify.io",
+      "policy_url": "https://lookify.io/ccpa-privacy-statement; https://lookify.io/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "loopme-limited",
+      "name": "LoopMe Limited",
+      "domain": "loopme.com",
+      "policy_url": "loopme.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "lotame-solutions-inc",
+      "name": "Lotame Solutions, Inc.",
+      "domain": "lotame.com",
+      "policy_url": "https://www.lotame.com/privacy/privacy-manager/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "lusha-systems-inc",
+      "name": "Lusha Systems, Inc.",
+      "domain": "lusha.com",
+      "policy_url": "https://docs.lusha.com/user-guide/privacy-and-compliance/what-are-my-rights-as-a-data-subject",
+      "source": "https://docs.lusha.com/user-guide/privacy-and-compliance/what-are-my-rights-as-a-data-subject"
+    },
+    {
+      "slug": "m-r-strategic-services",
+      "name": "M&R Strategic Services",
+      "domain": "mrss.com",
+      "policy_url": "https://www.mrss.com; https://www.mrss.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "m1-data-analytics-llc",
+      "name": "M1 Data & Analytics, LLC",
+      "domain": "m1-data.com",
+      "policy_url": "https://m1-data.com/unsubscribe/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "madhive-inc",
+      "name": "MadHive, Inc.",
+      "domain": "madhive.com",
+      "policy_url": "https://www.madhive.com/legal/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "magnite-inc",
+      "name": "Magnite Inc",
+      "domain": "magnite.com",
+      "policy_url": "https://www.magnite.com/legal/user-choice-portal/; https://www.magnite.com/legal/advertising-platform-privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "malvern-media-inc",
+      "name": "Malvern Media Inc.",
+      "domain": "malvernmedia.com",
+      "policy_url": "https://www.malvernmedia.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "market-force-corporation",
+      "name": "Market Force Corporation",
+      "domain": "marketforcecorp.com",
+      "policy_url": "https://www.marketforcecorp.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "marketing-architects-inc",
+      "name": "Marketing Architects, Inc.",
+      "domain": "marketingarchitects.com",
+      "policy_url": "https://www.marketingarchitects.com/privacy-policy-ProductAndService",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "marketops-llc",
+      "name": "MarketOps LLC",
+      "domain": "marketops.com",
+      "policy_url": "https://marketops.com/privacy-options/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "marriott-international-inc",
+      "name": "Marriott International, Inc.",
+      "domain": "marriott.com",
+      "policy_url": "https://www.marriott.com/about/privacy.mi",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "matchbook-data-llc",
+      "name": "Matchbook Data, LLC",
+      "domain": "matchbookdata.com",
+      "policy_url": "https://www.matchbookdata.com/privacy-policy/; https://www.matchbookdata.com/your-privacy-choices/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "maxmind-inc",
+      "name": "MaxMind, Inc.",
+      "domain": "maxmind.com",
+      "policy_url": "https://www.maxmind.com/en/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "media-net-advertising-fz-llc",
+      "name": "Media.net Advertising FZ, LLC",
+      "domain": "media.net",
+      "policy_url": "https://www.media.net/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "mediawallah-inc",
+      "name": "MediaWallah Inc",
+      "domain": "mediawallah.com",
+      "policy_url": "www.mediawallah.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "medpro-systems",
+      "name": "MedPro Systems",
+      "domain": "medprosystems.com",
+      "policy_url": "https://www.medprosystems.com/privacy-policy/; https://www.medprosystems.com/data-privacy-and-security-rationale-statement/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "melissa-data-corpoation",
+      "name": "Melissa Data Corpoation",
+      "domain": "melissa.com",
+      "policy_url": "https://www.melissa.com/privacy; https://www.melissa.com/california-privacy-notice",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "meltwater-news-us-inc",
+      "name": "Meltwater News US Inc.",
+      "domain": "meltwater.com",
+      "policy_url": "meltwater.com/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "merkle-inc",
+      "name": "Merkle Inc.",
+      "domain": "merkle.com",
+      "policy_url": "https://www.merkle.com/en/privacy-policy.html",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "message-digital-llc",
+      "name": "Message Digital LLC",
+      "domain": "messagedigital.com",
+      "policy_url": "https://messagedigital.com/my-data",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "mh-sub-i-llc",
+      "name": "MH Sub I, LLC",
+      "domain": "internetbrands.com",
+      "policy_url": "www.internetbrands.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "milestone-marketing-solutions",
+      "name": "Milestone Marketing Solutions",
+      "domain": "milestonemarketingsolutions.com",
+      "policy_url": "https://www.milestonemarketingsolutions.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "minerva-bi-inc",
+      "name": "Minerva BI Inc",
+      "domain": "minerva.io",
+      "policy_url": "https://preferences.minerva.io/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "mississippi-tornado-alley-llc",
+      "name": "Mississippi Tornado Alley LLC",
+      "domain": "fastpeoplesearch.com; https:",
+      "policy_url": "https://www.fastpeoplesearch.com/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "mississippi-tornado-alley-llc-2",
+      "name": "Mississippi Tornado Alley, LLC",
+      "domain": "advancedbackgroundchecks.com; cyberbackgroundchecks.com; fastbackgroundcheck.com; fastpeoplesearch.com; peoplesearchnow.com; phonebooks.com; searchpeoplefree.com; smartbackgroundchecks.com; usa-people-search.com; usphonebook.com",
+      "policy_url": "https://www.advancedbackgroundchecks.com/privacy; https://www.cyberbackgroundchecks.com/privacy; https://www.fastbackgroundcheck.com/privacy; https://www.fastpeoplesearch.com/privacy; https://www.peoplesearchnow.com/privacy; https://www.phonebooks.com/privacy; https://www.searchpeoplefree.com/privacy; https://www.smartbackgroundchecks.com/privacy; https://www.usa-people-search.com/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "mobile-technology-corporation",
+      "name": "Mobile Technology Corporation",
+      "domain": "onspotdata.com",
+      "policy_url": "https://www.onspotdata.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "mobilefuse-llc",
+      "name": "MobileFuse LLC",
+      "domain": "mobilefuse.com",
+      "policy_url": "https://mobilefuse.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "mobilewalla-inc",
+      "name": "Mobilewalla, Inc.",
+      "domain": "mobilewalla.com",
+      "policy_url": "https://www.mobilewalla.com/global-opt-out-request",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "modfx-labs-pvt-ltd",
+      "name": "ModFx Labs Pvt Ltd",
+      "domain": "modfxlabs.com",
+      "policy_url": "https://modfxlabs.com/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "modigie-inc",
+      "name": "Modigie, Inc.",
+      "domain": "modigie.com",
+      "policy_url": "https://modigie.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "mogean-inc",
+      "name": "Mogean, Inc.",
+      "domain": "mogean.com",
+      "policy_url": "https://www.mogean.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "monevo-inc",
+      "name": "Monevo, Inc.",
+      "domain": "monevo.com",
+      "policy_url": "https://app.monevo.us/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "monocl-ab",
+      "name": "Monocl AB",
+      "domain": "",
+      "policy_url": "account.monocl.com; https://www.definitivehc.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "moody-s-corporation",
+      "name": "Moody's Corporation",
+      "domain": "moodys.com",
+      "policy_url": "https://www.moodys.com/web/en/us/legal/privacy-policy.html",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "multimedia-lists-inc",
+      "name": "MULTIMEDIA LISTS, INC.",
+      "domain": "multimedialists.com",
+      "policy_url": "www.multimedialists.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "mv-digital-group-llc",
+      "name": "MV Digital Group, LLC",
+      "domain": "cinqdi.com",
+      "policy_url": "https://www.cinqdi.com/privacy-policy/#section-rights",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "nachal-inc",
+      "name": "Nachal Inc.",
+      "domain": "getliminal.com",
+      "policy_url": "https://getliminal.com/privacypolicy; https://getliminal.com/ccpaprivacynotice",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "narvar-inc",
+      "name": "Narvar, Inc.",
+      "domain": "narvar.com",
+      "policy_url": "https://narvar.com/legal/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "narvar-inc-2",
+      "name": "Narvar, Inc",
+      "domain": "corp.narvar.com",
+      "policy_url": "https://corp.narvar.com/legal/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "national-data-analytics-llc",
+      "name": "National Data Analytics, LLC",
+      "domain": "publicdatacheck.com",
+      "policy_url": "publicdatacheck.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "national-opinion-institute-llc",
+      "name": "National Opinion Institute, LLC",
+      "domain": "nationalopinioninstitute.com",
+      "policy_url": "https://nationalopinioninstitute.com/ca-privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "nativo-inc",
+      "name": "Nativo, Inc.",
+      "domain": "nativo.com",
+      "policy_url": "https://www.nativo.com/interest-based-ads#your-rights",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "nc-vnetures-llc",
+      "name": "NC Vnetures, LLC",
+      "domain": "ncsolutions.com",
+      "policy_url": "https://www.ncsolutions.com/services-privacy-statement/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "neptune-ops-llc",
+      "name": "Neptune Ops LLC",
+      "domain": "neptuneops.com",
+      "policy_url": "https://neptuneaii.com/legal/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "netwise-data-llc",
+      "name": "NetWise Data, LLC",
+      "domain": "netwisedata.com",
+      "policy_url": "https://www.netwisedata.com; https://www.dnb.com/en-us/why-dnb/data-transparency.html; https://submit-irm.trustarc.eu/services/validation/ba81b98f-997d-4216-b4cc-d64cf261b082",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "networx-systems-inc",
+      "name": "Networx Systems Inc.",
+      "domain": "networx.com",
+      "policy_url": "https://www.networx.com/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "new-gold-ventures-llc",
+      "name": "New Gold Ventures LLC",
+      "domain": "thinkdatagroup.com",
+      "policy_url": "thinkdatagroup.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "new-mexico-data-insights",
+      "name": "New Mexico Data Insights",
+      "domain": "newmexicodatainsights.com",
+      "policy_url": "newmexicodatainsights.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "next-wave-marketing-strategies-inc",
+      "name": "Next Wave Marketing Strategies, Inc",
+      "domain": "agedleadstore.com",
+      "policy_url": "https://www.agedleadstore.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "next-wave-marketing-strategies-inc-2",
+      "name": "NEXT WAVE MARKETING STRATEGIES, INC",
+      "domain": "agedleadstore.com; nextwavemarketingstrategies.com",
+      "policy_url": "agedleadstore.com; nextwavemarketingstrategies.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "nextroll-inc",
+      "name": "NextRoll, Inc",
+      "domain": "nextroll.com",
+      "policy_url": "www.nextroll.com/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "nexxen-inc",
+      "name": "Nexxen Inc.",
+      "domain": "nexxen.com",
+      "policy_url": "nexxen.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "nfocus-consulting-inc",
+      "name": "NFocus Consulting, Inc.",
+      "domain": "n-focus.com",
+      "policy_url": "https://www.n-focus.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "nordic-data-resources-as",
+      "name": "Nordic Data Resources AS",
+      "domain": "nordicdataresources.com",
+      "policy_url": "https://www.nordicdataresources.com/netprivacypolicy; https://optout.nordicdataresources.net/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "north-american-media-llc",
+      "name": "North American Media LLC",
+      "domain": "namericanmedia.com",
+      "policy_url": "https://www.iubenda.com/privacy-policy/13411547",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "numlookup-llc",
+      "name": "NumLookup LLC.",
+      "domain": "numlookup.com",
+      "policy_url": "https://www.numlookup.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "nuwber-inc",
+      "name": "Nuwber Inc",
+      "domain": "nuwber.com",
+      "policy_url": "https://nuwber.com/policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "ocean-global-inc",
+      "name": "Ocean Global Inc",
+      "domain": "ocean.io",
+      "policy_url": "https://www.ocean.io/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "ogury-ltd",
+      "name": "Ogury Ltd",
+      "domain": "ogury.com",
+      "policy_url": "https://privacy.ogury.com/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "onaudience-ltd",
+      "name": "OnAudience LTD",
+      "domain": "onaudience.com",
+      "policy_url": "https://onaudience.com/internet-advertising-privacy-policy/",
+      "source": "https://onaudience.com/internet-advertising-privacy-policy/"
+    },
+    {
+      "slug": "onfocus-sas",
+      "name": "Onfocus SAS",
+      "domain": "adagio.io",
+      "policy_url": "https://adagio.io",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "online-advertising-network-sp-z-o-o",
+      "name": "Online Advertising Network sp. z o.o.",
+      "domain": "oan.pl; https:",
+      "policy_url": "https://oan.pl/do-not-sell-my-personal-info/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "online-media-group-inc",
+      "name": "ONLINE MEDIA GROUP INC.",
+      "domain": "omginc.xyz",
+      "policy_url": "https://omginc.xyz/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "online-media-group-inc-2",
+      "name": "Online Media Group Inc.",
+      "domain": "omginc.xyz; www.mixrank.com",
+      "policy_url": "www.omginc.xyz",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "onpoint-data-strategy",
+      "name": "OnPoint Data Strategy",
+      "domain": "onpointdatastrategy.com",
+      "policy_url": "https://www.onpointdatastrategy.com/opt-out/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "opensend-inc",
+      "name": "Opensend Inc",
+      "domain": "opensend.com",
+      "policy_url": "opensend.com/privacy-polic",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "openx-technologies-inc",
+      "name": "OpenX Technologies, Inc.",
+      "domain": "openx.com",
+      "policy_url": "https://www.openx.com/privacy-center/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "optable-technologies-us-inc",
+      "name": "Optable Technologies US Inc.",
+      "domain": "optable.co",
+      "policy_url": "https://terms.optable.co/privacy/privacy-policies/products-and-services",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "orgio-inc",
+      "name": "Orgio, Inc.",
+      "domain": "theorg.com",
+      "policy_url": "https://theorg.com/do-not-sell",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "outlogic-llc",
+      "name": "Outlogic, LLC",
+      "domain": "outlogic.io",
+      "policy_url": "https://outlogic.io/opt-out-form/; https://outlogic.io/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "outward-media-inc",
+      "name": "Outward Media, Inc.",
+      "domain": "outwardmedia.com",
+      "policy_url": "https://outwardmedia.com/privacypolicy",
+      "source": "https://outwardmedia.com/privacypolicy"
+    },
+    {
+      "slug": "owmn-ltd",
+      "name": "OWMN, LTD.",
+      "domain": "thebridgecorp.com",
+      "policy_url": "https://www.thebridgecorp.com/our-approach-to-data-privacy/; https://www.thebridgecorp.com/privacy-policy/; https://www.thebridgecorp.com/opt-out/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "ownco-llc",
+      "name": "Ownco, LLC",
+      "domain": "monitorbase.com",
+      "policy_url": "https://my.monitorbase.com/privacypolicy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "pacific-east-research-inc",
+      "name": "Pacific East Research Inc",
+      "domain": "pacificeast.com",
+      "policy_url": "www.pacificeast.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "paedae-inc",
+      "name": "PaeDae, Inc.",
+      "domain": "infillion.com",
+      "policy_url": "https://infillion.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "paramount-lists-inc",
+      "name": "Paramount Lists, Inc.",
+      "domain": "paramountdirectmarketing.com",
+      "policy_url": "https://www.paramountdirectmarketing.com/privacy-policy.php",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "path2response-llc",
+      "name": "Path2Response LLC",
+      "domain": "path2response.com",
+      "policy_url": "https://privacyportal-cdn.onetrust.com/dsarwebform/2de26f06-de6f-45a7-8e1d-7d1148a3f301/draft/7a5dc7d1-cc7e-43a8-9f24-702807deb65b.html",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "pen-link-ltd",
+      "name": "Pen-Link, Ltd.",
+      "domain": "penlink.com",
+      "policy_url": "https://www.penlink.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "people-data-labs-inc",
+      "name": "People Data Labs, Inc.",
+      "domain": "peopledatalabs.com",
+      "policy_url": "https://privacy.peopledatalabs.com/policies?name=privacy-policy",
+      "source": "catalog/curated.yml"
+    },
+    {
+      "slug": "peoplefinders-llc",
+      "name": "Peoplefinders LLC",
+      "domain": "peoplefinders.com",
+      "policy_url": "https://www.peoplefinders.com/about/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "peoplefinders-llc-2",
+      "name": "Peoplefinders, LLC",
+      "domain": "peoplefinders.com; findaneighborhood.com",
+      "policy_url": "https://www.peoplefinders.com/about/privacy; https://www.peoplefinders.com/notice-at-collection; https://www.findaneighborhood.com/privacy-policy; https://www.findaneighborhood.com/notice-at-collection",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "peoplefindersdaas",
+      "name": "PeoplefindersDaaS",
+      "domain": "peoplefindersdaas.com",
+      "policy_url": "www.peoplefindersdaas.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "peoplewhiz",
+      "name": "PeopleWhiz",
+      "domain": "peoplewhiz.com",
+      "policy_url": "https://www.peoplewhiz.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "pipl-inc",
+      "name": "Pipl, Inc.",
+      "domain": "pipl.com",
+      "policy_url": "https://pipl.com/privacy-center",
+      "source": "https://pipl.com/privacy-center"
+    },
+    {
+      "slug": "pitchbook-data-inc",
+      "name": "PitchBook Data, Inc",
+      "domain": "pitchbook.com",
+      "policy_url": "https://pitchbook.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "place-exchange-inc",
+      "name": "Place Exchange, Inc.",
+      "domain": "placeexchange.com",
+      "policy_url": "https://www.placeexchange.com/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "pludo-inc",
+      "name": "Pludo Inc.",
+      "domain": "cashmereai.com",
+      "policy_url": "cashmereai.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "plug-industries",
+      "name": "Plug Industries",
+      "domain": "plug-industries.com",
+      "policy_url": "www.plug-industries.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "plunge-llc",
+      "name": "Plunge, LLC",
+      "domain": "plungedigital.com",
+      "policy_url": "www.plungedigital.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "pmg-worldwide-llc",
+      "name": "PMG Worldwide, LLC",
+      "domain": "pmg.com",
+      "policy_url": "https://www.pmg.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "podible-inc",
+      "name": "Podible Inc",
+      "domain": "podscribe.com",
+      "policy_url": "https://podscribe.com/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "pop-acta-media-llc",
+      "name": "Pop Acta Media, LLC",
+      "domain": "popacta.com",
+      "policy_url": "https://popacta.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "possiblenow-inc",
+      "name": "PossibleNOW, Inc.",
+      "domain": "possiblenow.com",
+      "policy_url": "https://www.possiblenow.com/privacy-statement-california; https://www.possiblenow.com/privacy-statement",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "postie-inc",
+      "name": "Postie, Inc",
+      "domain": "postie.com",
+      "policy_url": "https://postie.com/your-privacy-choices/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "postpilot-inc",
+      "name": "PostPilot, Inc.",
+      "domain": "postpilot.com",
+      "policy_url": "https://www.postpilot.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "precisely-software-incorporated",
+      "name": "Precisely Software Incorporated",
+      "domain": "precisely.com; www.cloud.precisely.com; www.cloudnative.precisely.com; www.data.precisely.com; www.developer.precisely.com; www.geotax.com; www.mapinfomarketplace.precisely.com; www.portal.spectrum.precisely.com",
+      "policy_url": "https://www.precisely.com/legal/california-notice-at-collection-and-privacy-notice",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "predactiv",
+      "name": "Predactiv",
+      "domain": "predactiv.com",
+      "policy_url": "www.predactiv.cm; www.sharethis.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "predictive-pop-inc",
+      "name": "Predictive Pop, Inc.",
+      "domain": "audigent.com",
+      "policy_url": "https://audigent.com/privacy-center",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "preqin-limited",
+      "name": "Preqin Limited",
+      "domain": "preqin.com",
+      "policy_url": "www.preqin.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "private-records-llc",
+      "name": "Private Records LLC",
+      "domain": "privaterecords.net; peoplesearch123.com; backgroundcheckers.net; personsearchers.com",
+      "policy_url": "https://www.privaterecords.net; peoplesearch123.com; backgroundcheckers.net; personsearchers.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "privco-media-llc",
+      "name": "PrivCo Media LLC",
+      "domain": "privco.com",
+      "policy_url": "https://www.privco.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "prodpro-inc",
+      "name": "ProdPro Inc",
+      "domain": "prodpro.com",
+      "policy_url": "https://app.prodpro.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "project-affinity-inc",
+      "name": "Project Affinity, Inc",
+      "domain": "affinity.co",
+      "policy_url": "https://www.affinity.co/legal/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "property-reach-l-p",
+      "name": "Property Reach, L.P.",
+      "domain": "propertyreach.com; leadsherpa.com",
+      "policy_url": "https://www.propertyreach.com/privacy; https://www.propertyreach.com/notice-at-collection",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "property-reach-lp",
+      "name": "Property Reach LP",
+      "domain": "propertyreach.com",
+      "policy_url": "https://www.propertyreach.com/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "propertyradar-inc",
+      "name": "PropertyRadar, Inc.",
+      "domain": "propertyradar.com",
+      "policy_url": "https://www.propertyradar.com/privacy-policy; https://privacyportal.onetrust.com/webform/c3eb779a-028a-4045-aefc-ac78be730689/6f6c2bef-b565-4753-adc6-95585d7a9486",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "prospectbase-uk-limited",
+      "name": "ProspectBase UK Limited",
+      "domain": "prospectbase.com",
+      "policy_url": "https://www.prospectbase.com; https://www.prospectbase.com/ccpa",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "publicnsa-llc",
+      "name": "PublicNSA LLC",
+      "domain": "bigdbm.com",
+      "policy_url": "https://bigdbm.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "publicrecordcom-llc",
+      "name": "PublicRecordCom, LLC",
+      "domain": "publicrecord.com",
+      "policy_url": "https://publicrecord.com/privacy-rights/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "pubmatic-inc",
+      "name": "PubMatic. Inc.",
+      "domain": "pubmatic.com",
+      "policy_url": "https://pubmatic.com/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "pulsepoint-inc",
+      "name": "PulsePoint, Inc.",
+      "domain": "pulsepoint.com",
+      "policy_url": "https://www.pulsepoint.com/legal/platform-privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "purecars-technologies-llc",
+      "name": "PureCars Technologies, LLC",
+      "domain": "purecars.com",
+      "policy_url": "https://www.purecars.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "pwc-product-sales-llc",
+      "name": "PwC Product Sales LLC",
+      "domain": "pwc.com",
+      "policy_url": "https://www.pwc.com/us/en/site/california-privacy.html",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "quad-graphics-inc",
+      "name": "Quad/Graphics, Inc.",
+      "domain": "quad.com",
+      "policy_url": "https://www.quad.com/legal/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "quadrant-global-pte-ltd",
+      "name": "Quadrant Global Pte. Ltd.",
+      "domain": "quadrant.io",
+      "policy_url": "https://www.quadrant.io/manage-my-data; https://www.quadrant.io/do-not-sell; https://www.quadrant.io/limit-data-privacy-request",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "qualfon",
+      "name": "Qualfon",
+      "domain": "qualfon.com",
+      "policy_url": "https://www.qualfon.com/privacy-policy/consumer-privacy-choices/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "quorum-data-inc",
+      "name": "Quorum Data, Inc",
+      "domain": "quorum.inc; app.quorum.live",
+      "policy_url": "quorum.inc/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "qurium-solutions-inc",
+      "name": "Qurium Solutions, Inc.",
+      "domain": "supplier.io",
+      "policy_url": "https://supplier.io/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "r-l-polk-co",
+      "name": "R.L. Polk & Co.",
+      "domain": "mobilityglobal.com; www.spglobal.com",
+      "policy_url": "www.mobiityglobal.com; https://www.spglobal.com/en",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "radaris",
+      "name": "Radaris",
+      "domain": "radaris.com",
+      "policy_url": "https://radaris.com/page/privacy",
+      "source": "catalog/curated.yml"
+    },
+    {
+      "slug": "rampedup-llc",
+      "name": "RampedUp, LLC.",
+      "domain": "rampedup.io",
+      "policy_url": "https://basic.rampedup.io/app/donotsell",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "randall-reilly-llc",
+      "name": "Randall-Reilly, LLC",
+      "domain": "fusable.com",
+      "policy_url": "https://fusable.com/legal/website-terms-and-privacy-notice/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "rategain-adara-inc",
+      "name": "RateGain Adara, Inc.",
+      "domain": "adara.com",
+      "policy_url": "https://www.adara.com/privacy-promise/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "ray-cdp-inc",
+      "name": "Ray CDP, Inc.",
+      "domain": "rayinsights.com; www.raycdp.com",
+      "policy_url": "www.rayinsights.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "real-intent-inc",
+      "name": "Real Intent Inc.",
+      "domain": "realintent.co",
+      "policy_url": "https://www.realintent.co/privacy-policy; https://www.realintent.co/do-not-sell",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "realeflow-llc",
+      "name": "Realeflow LLC",
+      "domain": "realeflow.com; www.leadflow.com",
+      "policy_url": "www.realeflow.com; www.leadflow.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "reallygreatrate-inc",
+      "name": "ReallyGreatRate Inc",
+      "domain": "rgrmarketing.com",
+      "policy_url": "https://www.rgrmarketing.com/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "realsource-inc",
+      "name": "RealSource, Inc",
+      "domain": "realsourcedata.com",
+      "policy_url": "https://www.realsourcedata.com/privacy-policy; https://www.realsourcedata.com/do-not-sell-my-personal-information",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "recruitbot-inc",
+      "name": "RecruitBot, Inc.",
+      "domain": "recruitbot.com",
+      "policy_url": "https://recruitbot.com/ccpa/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "redi-data-inc",
+      "name": "Redi-Data Inc.",
+      "domain": "redidata.com",
+      "policy_url": "https://www.redidata.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "redmob-llc",
+      "name": "Redmob LLC",
+      "domain": "redmob.io",
+      "policy_url": "https://redmob.io/privacy-policy",
+      "source": "https://redmob.io/privacy-policy"
+    },
+    {
+      "slug": "reklaim-ltd",
+      "name": "Reklaim Ltd.",
+      "domain": "reklaimyours.com",
+      "policy_url": "https://www.reklaimyours.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "relpro-inc",
+      "name": "RelPro, Inc.",
+      "domain": "relpro.com",
+      "policy_url": "https://relpro.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "remodeling-com-llc",
+      "name": "Remodeling.com, LLC",
+      "domain": "remodeling.com",
+      "policy_url": "https://remodeling.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "resonate",
+      "name": "Resonate",
+      "domain": "resonate.com",
+      "policy_url": "https://www.resonate.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "response-america-inc",
+      "name": "Response America, Inc.",
+      "domain": "responseamerica.net",
+      "policy_url": "https://responseamerica.net/privacy_dec.html",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "revcontent",
+      "name": "RevContent",
+      "domain": "revcontent.com",
+      "policy_url": "https://www.revcontent.com/policy/privacy-policy#your-privacy-rights-and-choices; https://www.revcontent.com/legal/optout/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "reveal-mobile-inc",
+      "name": "Reveal Mobile, Inc.",
+      "domain": "revealmobile.com",
+      "policy_url": "https://revealmobile.com/privacy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "revelio-labs-inc",
+      "name": "Revelio Labs, Inc.",
+      "domain": "reveliolabs.com",
+      "policy_url": "https://www.reveliolabs.com/privacy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "revenue-roll-inc",
+      "name": "Revenue Roll Inc.",
+      "domain": "meettie.com",
+      "policy_url": "meettie.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "revenuebase-inc",
+      "name": "RevenueBase, Inc",
+      "domain": "revenuebase.ai",
+      "policy_url": "https://revenuebase.ai/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "revoptimal-llc",
+      "name": "RevOptimal, LLC",
+      "domain": "revoptimal.com",
+      "policy_url": "https://revoptimal.com/privacy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "rhetorik-limited",
+      "name": "Rhetorik Limited",
+      "domain": "rhetorik.com",
+      "policy_url": "https://www.rhetorik.com/do-not-sell-my-info/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "rich-media-llc",
+      "name": "Rich Media LLC",
+      "domain": "richmediallc.com",
+      "policy_url": "https://richmediallc.com/privacy-policy/; https://richmediallc.com/do-not-sell-my-personal-information/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "rickenbacher-data-l-p",
+      "name": "Rickenbacher Data L.P.",
+      "domain": "datamasters.org",
+      "policy_url": "https://www.datamasters.org/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "ripple-effect-strategies",
+      "name": "Ripple Effect Strategies",
+      "domain": "ripple-fx.com; ripple-roi.com",
+      "policy_url": "https://www.ripple-roi.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "rocketreach-llc",
+      "name": "RocketReach LLC",
+      "domain": "rocketreach.co",
+      "policy_url": "https://rocketreach.co/privacy",
+      "source": "https://rocketreach.co/privacy"
+    },
+    {
+      "slug": "rooftop-digital-llc",
+      "name": "Rooftop Digital, LLC",
+      "domain": "rooftopdigital.com",
+      "policy_url": "https://www.rooftopdigital.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "roq-ad-inc",
+      "name": "Roq.ad Inc.",
+      "domain": "roq.ad",
+      "policy_url": "https://www.roq.ad/white-papers/#optout",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "ror-partners-llc",
+      "name": "ROR Partners, LLC",
+      "domain": "rorpartners.com",
+      "policy_url": "https://rorpartners.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "round-sky-inc",
+      "name": "Round Sky, Inc.",
+      "domain": "roundsky.com",
+      "policy_url": "https://www.roundsky.com/supplemental-privacy-notice/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "rushmore-labs-llc",
+      "name": "Rushmore Labs, LLC",
+      "domain": "rushmorelabs.com; https:",
+      "policy_url": "https://rushmorelabs.com/california-privacy-notice; https://www.censaianalytics.com/ccpa",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "s-p-global-inc",
+      "name": "S&P Global Inc",
+      "domain": "spglobal.com",
+      "policy_url": "https://www.spglobal.com/en",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "sabio-inc",
+      "name": "Sabio, Inc.",
+      "domain": "sabio.inc",
+      "policy_url": "https://www.sabioctv.com/privacypolicy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "sabio-inc-2",
+      "name": "Sabio Inc",
+      "domain": "sabioctv.com",
+      "policy_url": "https://www.sabioctv.com/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "salesintel-research-inc",
+      "name": "SalesIntel Research, Inc.",
+      "domain": "salesintel.io",
+      "policy_url": "https://salesintel.io/privacy-policy/",
+      "source": "https://salesintel.io/privacy-policy/"
+    },
+    {
+      "slug": "salesql",
+      "name": "SalesQL",
+      "domain": "salesql.com",
+      "policy_url": "https://salesql.com/privacy-center",
+      "source": "https://salesql.com/privacy-center"
+    },
+    {
+      "slug": "salutary-data-llc",
+      "name": "Salutary Data LLC.",
+      "domain": "salutarydata.com",
+      "policy_url": "https://salutarydata.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "samba-tv-inc",
+      "name": "Samba TV, Inc.",
+      "domain": "samba.tv",
+      "policy_url": "https://www.samba.tv/users/privacy-policy?lang=en; https://www.samba.tv/users/your-privacy-handbook",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "sbfe-llc",
+      "name": "SBFE, LLC",
+      "domain": "sbfe.org",
+      "policy_url": "https://www.sbfe.org/connect/ccpa",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "scalable-commerce-llc",
+      "name": "Scalable Commerce, LLC",
+      "domain": "kidslivesafe.com",
+      "policy_url": "https://www.kidslivesafe.com/help-center/privacy-requests",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "scalable-commerce-llc-2",
+      "name": "Scalable Commerce LLC",
+      "domain": "kidslivesafe.com; quickpublicrecords.com",
+      "policy_url": "https://www.kidslivesafe.com/help-center/privacy; https://www.kidslivesafe.com/help-center/privacy-requests; https://www.quickpublicrecords.com/help-center/privacy; https://www.quickpublicrecords.com/help-center/privacy-requests",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "scanbuy-inc",
+      "name": "Scanbuy, Inc.",
+      "domain": "scanbuy.com",
+      "policy_url": "https://www.scanbuy.com/rights/data",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "scileads-ltd",
+      "name": "SciLeads Ltd",
+      "domain": "scileads.com",
+      "policy_url": "https://scileads.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "seamless-contacts-inc",
+      "name": "Seamless.AI",
+      "domain": "seamless.ai",
+      "policy_url": "https://seamless.ai/policies/privacy-policy",
+      "source": "https://seamless.ai/policies/privacy-policy"
+    },
+    {
+      "slug": "semantiq-inc",
+      "name": "SEMANTIQ INC",
+      "domain": "semantiqhealth.com",
+      "policy_url": "https://semantiqhealth.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "semasio-gmbh",
+      "name": "Semasio GmbH",
+      "domain": "semasio.com",
+      "policy_url": "https://www.semasio.com/legal/semasio-privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "semcasting-inc",
+      "name": "Semcasting, Inc.",
+      "domain": "semcasting.com",
+      "policy_url": "https://privacychoice.com/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "share-local-media-inc",
+      "name": "Share Local Media, Inc",
+      "domain": "sharelocalmedia.com",
+      "policy_url": "https://www.sharelocalmedia.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "sharethrough-inc",
+      "name": "Sharethrough Inc.",
+      "domain": "sharethrough.com",
+      "policy_url": "https://www.sharethrough.com/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "sheerid-inc",
+      "name": "SheerID, Inc.",
+      "domain": "sheerid.com",
+      "policy_url": "https://www.sheerid.com/global-privacy-policy/; https://www.sheerid.com/cookie-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "signalhire",
+      "name": "SignalHire",
+      "domain": "signalhire.com",
+      "policy_url": "https://www.signalhire.com/privacy-faq",
+      "source": "https://www.signalhire.com/privacy-faq"
+    },
+    {
+      "slug": "similarweb-ltd",
+      "name": "Similarweb Ltd.",
+      "domain": "similarweb.com",
+      "policy_url": "https://similarweb.com/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "simio-cloud-llc",
+      "name": "Simio Cloud, LLC",
+      "domain": "simiocloud.com",
+      "policy_url": "https://simiocloud.com/simiocloud-products-services-privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "site-impact-inc",
+      "name": "Site Impact, Inc",
+      "domain": "siteimpact.com",
+      "policy_url": "https://www.siteimpact.com/privacypolicy.php",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "skydeo-inc",
+      "name": "Skydeo Inc.",
+      "domain": "skydeo.com",
+      "policy_url": "skydeo.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "slashdot-media-llc",
+      "name": "Slashdot Media, LLC",
+      "domain": "slashdotmedia.com; www.sourceforge.net; www.slashdot.org; www.voipreview.org; www.linuxjournal.com; www.myrateplan.com; wirefly.com",
+      "policy_url": "https://slashdotmedia.com/privacy-statement/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "smarte-inc",
+      "name": "SMARTe Inc.",
+      "domain": "smarte.pro",
+      "policy_url": "www.smarte.pro",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "snovio-inc",
+      "name": "Snovio Inc",
+      "domain": "snov.io",
+      "policy_url": "https://snov.io/privacy-policy",
+      "source": "https://snov.io/privacy-policy"
+    },
+    {
+      "slug": "social-catfish-llc",
+      "name": "Social Catfish, LLC",
+      "domain": "socialcatfish.com",
+      "policy_url": "https://socialcatfish.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "sojern-inc",
+      "name": "Sojern, Inc",
+      "domain": "sojern.com",
+      "policy_url": "https://www.sojern.com/privacy/privacy-policy; https://www.sojern.com/privacy/privacy-policy#opting-out",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "solar-connect-llc",
+      "name": "Solar Connect, LLC",
+      "domain": "bluefireleads.com; homeupgradepros.us; americanroofers.org; homeupgradepros.net; homeupgradeprofessionals.us; xpertroofers.com; homeupgradepros.org; homeupgradepros.io; homeupgradeprofessionals.net; kwikac.com; homeupgradeprofessionals.com; kwiksiding.com; kwik-kitchen.com; upgradepros.services; betterhousenow.com; kwikroofs.com",
+      "policy_url": "https://www.bluefireleads.com/privacy-policy.php",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "source-path-digital",
+      "name": "Source Path Digital",
+      "domain": "sourcepathdigital.com",
+      "policy_url": "sourcepathdigital.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "sovrn-inc",
+      "name": "Sovrn, Inc.",
+      "domain": "sovrn.com",
+      "policy_url": "https://www.sovrn.com/privacy-policy/policy-center/; https://privacy.sovrn.com/opt-out",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "specialists-marketing-services-inc",
+      "name": "Specialists Marketing Services, Inc.",
+      "domain": "sms-inc.com",
+      "policy_url": "https://sms-inc.com/privacy-notice/; https://sms-inc.com/do-not-sell-or-share-my-personal-information/; https://sms-inc.com/limit-my-sensitive-personal-information-ca/; https://sms-inc.com/personal-information-correct/; https://sms-inc.com/personal-information-shared/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "speedeon-data-llc",
+      "name": "Speedeon Data LLC",
+      "domain": "speedeondata.com",
+      "policy_url": "www.speedeondata.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "spokeo",
+      "name": "Spokeo",
+      "domain": "spokeo.com",
+      "policy_url": "https://www.spokeo.com/privacy-policy",
+      "source": "catalog/curated.yml"
+    },
+    {
+      "slug": "spokeo-inc",
+      "name": "Spokeo, Inc.",
+      "domain": "spokeo.com; www.freepeopledirectory.com; www.thatsthem.com; www.peoplewin.com; www.anywho.com; www.family.me",
+      "policy_url": "https://www.spokeo.com/privacy-policy; https://www.spokeo.com/privacy/control/all-categories",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "sports-innovation-lab-inc",
+      "name": "Sports Innovation Lab, inc.",
+      "domain": "sportsilab.com",
+      "policy_url": "https://www.sportsilab.com/privacy-choices",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "sprout-social-inc",
+      "name": "Sprout Social, Inc.",
+      "domain": "sproutsocial.com",
+      "policy_url": "https://sproutsocial.com/legal/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "spy-labs-adco-llc",
+      "name": "Spy Labs AdCo, LLC",
+      "domain": "spydialer.com",
+      "policy_url": "https://spydialer.com/privacy.aspx",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "spycloud-inc",
+      "name": "SpyCloud, Inc.",
+      "domain": "spycloud.com",
+      "policy_url": "https://spycloud.com/legal/privacy-policy/; https://spycloud.com/legal/dsar/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "stackadapt-inc",
+      "name": "StackAdapt Inc.",
+      "domain": "stackadapt.com",
+      "policy_url": "https://www.stackadapt.com/legal-document-centre/platform-and-services-privacy-policy",
+      "source": "https://www.stackadapt.com/legal-document-centre/platform-and-services-privacy-policy"
+    },
+    {
+      "slug": "start-io-inc",
+      "name": "Start.io Inc.",
+      "domain": "start.io",
+      "policy_url": "https://www.start.io/policy/privacy-policy-site/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "statara-solutions-llc",
+      "name": "Statara Solutions LLC",
+      "domain": "statara.com",
+      "policy_url": "https://statara.com/privacy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "statsocial-inc",
+      "name": "StatSocial, Inc",
+      "domain": "statsocial.com",
+      "policy_url": "https://www.statsocial.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "steppingblocks-inc",
+      "name": "Steppingblocks, Inc.",
+      "domain": "steppingblocks.com",
+      "policy_url": "https://www.steppingblocks.com/privacy-ccpa",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "sterling-data-company-llc",
+      "name": "Sterling Data Company LLC",
+      "domain": "sterling.ai",
+      "policy_url": "sterling.ai",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "stirista-llc",
+      "name": "Stirista, LLC",
+      "domain": "stirista.com; www.lbdigitaldata.com; www.mediasourcesolutions.com; ameribase.com; www.lighthouselist.com; www.andrewswharton.com; www.listconnection.net; www.magnetik.com",
+      "policy_url": "https://www.stirista.com/privacy-policy/; https://unsubscribe.stirista.com/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "strategic-data-intelligence-llc",
+      "name": "Strategic Data Intelligence, LLC",
+      "domain": "strategicdataintelligence.com",
+      "policy_url": "www.strategicdataintelligence.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "subdirect-llc",
+      "name": "Subdirect LLC",
+      "domain": "www360mediadirect.com",
+      "policy_url": "https://360-media-direct.privacy.saymine.io/360_Media_Direct",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "subgraph-inc",
+      "name": "Subgraph, Inc",
+      "domain": "subgraph.tech",
+      "policy_url": "https://subgraph.tech/privacy-rights",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "summit-resources-llc",
+      "name": "Summit Resources, LLC",
+      "domain": "clientcommand.com",
+      "policy_url": "https://clientcommand.com/client-command-privacy-notice/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "swarm-holdings-inc",
+      "name": "Swarm Holdings, Inc.",
+      "domain": "theswarm.com",
+      "policy_url": "https://www.theswarm.com/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "swoop-com-inc",
+      "name": "Swoop.com, Inc.",
+      "domain": "swoop.com",
+      "policy_url": "https://swoop.com/your-privacy-choices/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "swordfish-ai-inc",
+      "name": "Swordfish AI Inc.",
+      "domain": "swordfish.ai",
+      "policy_url": "https://swordfish.ai/policy; https://swordfish.ai/policy-ccpa",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "t-mobile-usa-inc",
+      "name": "T-Mobile USA, Inc.",
+      "domain": "t-mobile.com",
+      "policy_url": "https://www.t-mobile.com/advertising-solutions",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "taboola-inc",
+      "name": "Taboola, Inc.",
+      "domain": "taboola.com",
+      "policy_url": "https://www.taboola.com/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "tagis-inc",
+      "name": "Tagis, Inc.",
+      "domain": "amplemarket.com",
+      "policy_url": "https://portal.usepylon.com/amplemarket/forms/privacy-request-form; https://www.amplemarket.com/legal/data-broker-privacy-notice",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "tapad-inc",
+      "name": "Tapad, Inc.",
+      "domain": "tapad.com",
+      "policy_url": "https://tapad.com/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "targetsmart-communications-llc",
+      "name": "TargetSmart Communications LLC",
+      "domain": "targetsmart.com",
+      "policy_url": "https://privacy.targetsmart.com/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "task-genie-inc",
+      "name": "Task Genie, Inc.",
+      "domain": "datalane.com",
+      "policy_url": "www.datalane.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "tauxbe-data-inc",
+      "name": "Tauxbe Data Inc.",
+      "domain": "tauxbe.com; www.natcrim.com",
+      "policy_url": "https://www.tauxbe.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "teads-holding-co",
+      "name": "Teads Holding Co.",
+      "domain": "outbrain.com",
+      "policy_url": "https://www.outbrain.com/privacy/user-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "teads-inc",
+      "name": "Teads Inc.",
+      "domain": "teads.com",
+      "policy_url": "https://privacy-policy.teads.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "techtarget-inc",
+      "name": "TechTarget, Inc.",
+      "domain": "techtarget.com",
+      "policy_url": "https://www.techtarget.com/ccpa-privacy-notice/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "techtarget-inc-2",
+      "name": "TechTarget, Inc",
+      "domain": "",
+      "policy_url": "https://techtarget.zendesk.com/hc/en-us/requests/new?ticket_form_id=360004852434",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "telesign-corporation",
+      "name": "Telesign Corporation",
+      "domain": "telesign.com",
+      "policy_url": "www.telesign.com/privacy-requests",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "terminus-software-inc",
+      "name": "Terminus Software, Inc.",
+      "domain": "terminus.com",
+      "policy_url": "https://www.terminus.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "the-alesco-group-llc",
+      "name": "The Alesco Group LLC",
+      "domain": "alescodata.com",
+      "policy_url": "www.alescodata.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "the-data-group",
+      "name": "The Data Group",
+      "domain": "thedatagroup.com",
+      "policy_url": "https://thedatagroup.com/california-consumer-privacy-act/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "the-linea-1-mkt-sl",
+      "name": "THE LINEA 1 MKT SL",
+      "domain": "tl1mkt.com",
+      "policy_url": "Www.tl1mkt.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "the-nielsen-company",
+      "name": "The Nielsen Company",
+      "domain": "nielsen.com",
+      "policy_url": "www.nielsen.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "the-people-searchers-llc",
+      "name": "The People Searchers LLC",
+      "domain": "peoplesearcher.com; http:",
+      "policy_url": "http://peopesearcher.cm; http://www.secretinfo.org",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "the-segerdahl-llc",
+      "name": "The Segerdahl LLC",
+      "domain": "sg360.com",
+      "policy_url": "https://sg360.com/do-not-sell-my-info/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "throtle-inc",
+      "name": "Throtle, Inc",
+      "domain": "throtle.io",
+      "policy_url": "https://www.throtle.io/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "traackr-inc",
+      "name": "Traackr, Inc.",
+      "domain": "traackr.com",
+      "policy_url": "https://www.traackr.com/legal/privacy-policy; https://www.traackr.com/legal/influencer-privacy-notice",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "trans-union-llc",
+      "name": "Trans Union LLC",
+      "domain": "transunion.com",
+      "policy_url": "www.transunion.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "trestle-solutions-inc",
+      "name": "Trestle Solutions, Inc.",
+      "domain": "trestleiq.com",
+      "policy_url": "https://trestleiq.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "triplelift-inc",
+      "name": "TripleLift, Inc.",
+      "domain": "triplelift.com",
+      "policy_url": "https://triplelift.com/user-rights-policy-and-opt-out/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "true-blue-analytics-llc",
+      "name": "True Blue Analytics LLC",
+      "domain": "trueblueanalytics.org",
+      "policy_url": "https://trueblueanalytics.org/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "true-opulence-corporation",
+      "name": "True Opulence Corporation",
+      "domain": "trueopulence.com",
+      "policy_url": "https://www.trueopulence.com/en/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "truedata-solutions-inc",
+      "name": "TrueData Solutions, Inc.",
+      "domain": "truedata.co",
+      "policy_url": "https://www.truedata.co/wp-content/uploads/2026/01/TD-Privacy-Policy-effective-16-Jan-2026.pdf",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "truth-now-llc",
+      "name": "Truth Now LLC",
+      "domain": "checksecrets.com; peoplesearchusa.org; inmatesearcher.com; sealedrecords.net",
+      "policy_url": "checksecrets.com; peoplesearchUSA.org; inmatesearcher.com; sealedrecords.net",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "truthed-inc",
+      "name": "Truthed, Inc",
+      "domain": "truthed.com",
+      "policy_url": "https://www.truthed.com/optout",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "truthfinder-llc",
+      "name": "TruthFinder, LLC",
+      "domain": "truthfinder.com; www.courthousedirectory.us; www.getfullreport.com; www.unitedstatesbackgroundchecks.com; www.courtlocations.com; www.locaterecord.net; www.recordlocator.net; www.backgroundchecks.us",
+      "policy_url": "https://www.truthfinder.com/privacy-center/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "tunnl-llc",
+      "name": "Tunnl, LLC",
+      "domain": "tunnldata.com",
+      "policy_url": "tunnldata.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "unacast-inc",
+      "name": "Unacast, Inc.",
+      "domain": "unacast.com",
+      "policy_url": "https://www.unacast.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "unearth-campaigns-llc",
+      "name": "Unearth Campaigns, LLC",
+      "domain": "unearthcampaigns.com",
+      "policy_url": "https://www.unearthcampaigns.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "unearth-campaigns-llc-2",
+      "name": "Unearth Campaigns LLC",
+      "domain": "unearthcampaigns.com; www.atlasinfluence.com",
+      "policy_url": "https://www.unearthcampaigns.com/privacy-policy/#ca",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "unmask-llc",
+      "name": "Unmask, LLC",
+      "domain": "unmask.com",
+      "policy_url": "https://unmask.com/privacy-rights/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "upcell-llc",
+      "name": "Upcell, LLC",
+      "domain": "upcell.io",
+      "policy_url": "https://www.upcell.io/data-claim",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "uplead-llc",
+      "name": "Uplead LLC",
+      "domain": "uplead.com",
+      "policy_url": "https://www.uplead.com/privacy/",
+      "source": "https://www.uplead.com/privacy/"
+    },
+    {
+      "slug": "ups-capital-corporation",
+      "name": "UPS Capital Corporation",
+      "domain": "upscapital.com; insureshield.com",
+      "policy_url": "upscapital.com; insureshield.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "urban-science-applications-inc",
+      "name": "Urban Science Applications, Inc.",
+      "domain": "urbanscience.com",
+      "policy_url": "https://www.urbanscience.com/privacy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "us-data-corporation",
+      "name": "US Data Corporation",
+      "domain": "usdatacorporation.com",
+      "policy_url": "https://www.usdatacorporation.com/do-not-sell-my-info/?utm_source=google_ads&utm_medium=ppc&utm_term=us&gclid=undefined; https://www.usdatacorporation.com/opt-out?utm_source=google_ads&utm_medium=ppc&utm_term=us&gclid=undefined",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "usadata-inc",
+      "name": "USADATA, Inc.",
+      "domain": "usadata.com",
+      "policy_url": "https://www.usadata.com/ccpa",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "uspeoplesearch-com-llc",
+      "name": "USPEOPLESEARCH.COM, LLC",
+      "domain": "uspeoplesearch.com",
+      "policy_url": "https://uspeoplesearch.com/privacy-rights/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "valassis-communications-inc",
+      "name": "Valassis Communications, Inc.",
+      "domain": "rrd.com",
+      "policy_url": "https://www.rrd.com/privacy-policy/valassis",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "veeva-systems-inc",
+      "name": "Veeva Systems Inc.",
+      "domain": "veeva.com",
+      "policy_url": "veeva.com/privacy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "vendelux",
+      "name": "Vendelux",
+      "domain": "vendelux.com",
+      "policy_url": "https://vendelux.com/privacy-center/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "venntel-inc",
+      "name": "Venntel, Inc.",
+      "domain": "venntel.com",
+      "policy_url": "https://www.venntel.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "venpath-inc",
+      "name": "Venpath, Inc.",
+      "domain": "venpath.net",
+      "policy_url": "https://www.venpath.net/legal/privacy-notice",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "ventiveiq-llc",
+      "name": "VentiveIQ LLC",
+      "domain": "ventiveiq.com",
+      "policy_url": "https://ventiveiq.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "veraset",
+      "name": "Veraset",
+      "domain": "veraset.com",
+      "policy_url": "https://www.veraset.com/legal/do-not-sell-request#consumer-opt-out-do-not-sell-request",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "versar-data-solutions-inc",
+      "name": "Versar Data Solutions Inc",
+      "domain": "versium.com; www.datafinder.com",
+      "policy_url": "https://versium.com/california-privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "versium-analytics-inc",
+      "name": "Versium Analytics Inc.",
+      "domain": "versium.com",
+      "policy_url": "https://www.versium.com/ccpa-privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry2025.csv"
+    },
+    {
+      "slug": "vertical-int-inc",
+      "name": "Vertical Int, Inc.",
+      "domain": "enrichlayer.com",
+      "policy_url": "https://enrichlayer.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "vi-technologies-inc",
+      "name": "Vi Technologies, Inc.",
+      "domain": "vi.co",
+      "policy_url": "www.vi.co",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "viant-us-llc",
+      "name": "Viant US LLC",
+      "domain": "viantinc.com",
+      "policy_url": "www.viantinc.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "videoamp-inc",
+      "name": "VideoAmp, Inc.",
+      "domain": "videoamp.com",
+      "policy_url": "www.videoamp.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "virtual-marketing-llc",
+      "name": "Virtual Marketing LLC",
+      "domain": "fusion92.com",
+      "policy_url": "https://www.fusion92.com/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "visitiq-io",
+      "name": "VisitIQ.io",
+      "domain": "visitiq.io",
+      "policy_url": "https://visitiq.io/opt-out/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "vistar-media-inc",
+      "name": "Vistar Media, Inc.",
+      "domain": "vistarmedia.com",
+      "policy_url": "https://www.vistarmedia.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "visual-visitor-l-l-c",
+      "name": "Visual Visitor L.L.C.",
+      "domain": "visualvisitor.com",
+      "policy_url": "https://www.visualvisitor.com/legal-agreements/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "vizio-services-llc",
+      "name": "VIZIO Services, LLC",
+      "domain": "",
+      "policy_url": "https://privacyportal-cdn.onetrust.com/dsarwebform/41aebd10-58ee-4c98-9dd5-aa66c9be664a/0099df9c-c0aa-4bf7-bd5f-7f4ff46768f6.html; https://cpa-ui.walmart.com/dc/privacy/en-US/affirmation?brandCode=WMT&languageCode=en-US&market=US",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "voxtur-data-services",
+      "name": "Voxtur Data Services",
+      "domain": "benutech.com",
+      "policy_url": "www.benutech.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "vrtcal-markets-inc",
+      "name": "VRTCAL Markets Inc",
+      "domain": "vrtcal.com",
+      "policy_url": "https://www.vrtcal.com/docs/PrivacyPolicy-Advertising.pdf; https://www.vrtcal.com/docs/PrivacyPolicy-Corporate.pdf",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "warmly-inc",
+      "name": "Warmly, Inc",
+      "domain": "warmly.ai",
+      "policy_url": "https://www.warmly.ai/p/privacy-policy",
+      "source": "https://www.warmly.ai/p/privacy-policy"
+    },
+    {
+      "slug": "we-inform-llc",
+      "name": "We Inform LLC",
+      "domain": "weinform.org; www.truthrecord.org",
+      "policy_url": "www.weinform.org; www.truthrecord.org",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "wealthfeed-inc",
+      "name": "WealthFeed, Inc.",
+      "domain": "wealthfeed.com",
+      "policy_url": "www.wealthfeed.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "webbula-llc",
+      "name": "Webbula, LLC",
+      "domain": "webbula.com",
+      "policy_url": "https://webbula.com/privacy-center/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "west-publishing-corporation",
+      "name": "West Publishing Corporation",
+      "domain": "thomsonreuters.com",
+      "policy_url": "https://www.thomsonreuters.com/en/privacy-statement",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "whitepages-inc",
+      "name": "Whitepages, Inc",
+      "domain": "whitepages.com",
+      "policy_url": "https://www.whitepages.com/data-policy",
+      "source": "catalog/curated.yml"
+    },
+    {
+      "slug": "wiland-inc",
+      "name": "Wiland, Inc.",
+      "domain": "wiland.com",
+      "policy_url": "https://wiland.com/privacy-choices/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "windfall-data-inc",
+      "name": "Windfall Data, Inc.",
+      "domain": "windfall.com",
+      "policy_url": "https://www.windfall.com/your-privacy-choices",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "winr-data-b-v",
+      "name": "WINR Data B.V.",
+      "domain": "winrdata.com",
+      "policy_url": "https://www.winrdata.com/privacy-policy-us/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "wiza-inc",
+      "name": "Wiza, Inc.",
+      "domain": "wiza.com",
+      "policy_url": "https://wiza.co/privacy",
+      "source": "https://wiza.co/privacy"
+    },
+    {
+      "slug": "wunderkind-corporation",
+      "name": "Wunderkind Corporation",
+      "domain": "wunderkind.co",
+      "policy_url": "https://www.wunderkind.co/privacy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "wurl-llc",
+      "name": "WURL, LLC",
+      "domain": "wurl.com",
+      "policy_url": "https://www.wurl.com/; https://www.wurl.com/wurl-advertising-and-media-services-privacy-notice/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "xad-inc",
+      "name": "xAd, Inc.",
+      "domain": "groundtruth.com",
+      "policy_url": "https://www.groundtruth.com/privacy-policy/",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "xcelerated-data-llc",
+      "name": "Xcelerated Data LLC",
+      "domain": "xcelerated.com",
+      "policy_url": "xcelerated.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "yieldmo-inc",
+      "name": "Yieldmo, Inc.",
+      "domain": "yieldmo.com",
+      "policy_url": "https://yieldmo.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "yobi-ventures-inc",
+      "name": "Yobi Ventures, Inc.",
+      "domain": "yobi.ai",
+      "policy_url": "https://www.yobi.ai/opt-out",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "zenleads-inc",
+      "name": "Apollo.io (ZenLeads Inc.)",
+      "domain": "apollo.io",
+      "policy_url": "https://www.apollo.io/privacy-policy",
+      "source": "https://www.apollo.io/privacy-policy"
+    },
+    {
+      "slug": "zerotoone-ai-inc",
+      "name": "ZeroToOne.AI Inc.",
+      "domain": "zerotoone.ai",
+      "policy_url": "https://www.zerotoone.ai/privacy-policy",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "zeta-global-corp",
+      "name": "Zeta Global Corp.",
+      "domain": "zetaglobal.com",
+      "policy_url": "www.zetaglobal.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "zipstorm-inc",
+      "name": "ZipStorm, Inc.",
+      "domain": "seekout.com",
+      "policy_url": "https://www.seekout.com/privacy/choices",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    },
+    {
+      "slug": "zoominfo-technologies-llc",
+      "name": "ZoomInfo Technologies, LLC",
+      "domain": "zoominfo.com",
+      "policy_url": "https://www.zoominfo.com/trust-center/your-privacy",
+      "source": "catalog/curated.yml"
+    },
+    {
+      "slug": "zs-associates-inc",
+      "name": "ZS Associates, Inc.",
+      "domain": "zs.com",
+      "policy_url": "www.zs.com",
+      "source": "https://cppa.ca.gov/data_broker_registry/registry.csv"
+    }
+  ]
+}

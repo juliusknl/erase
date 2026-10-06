@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "brokers": [
+    {
+      "id": "acxiom-llc-international",
+      "name": "Acxiom LLC — US and international marketing data",
+      "match_domains": [
+        "acxiom.com"
+      ],
+      "identity": {
+        "legal_name": "Acxiom LLC",
+        "brands": [
+          "Acxiom"
+        ],
+        "parent": null,
+        "official_domains": [
+          "acxiom.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "US",
+          "EEA",
+          "UK",
+          "international"
+        ],
+        "category": "consumer_marketing",
+        "data_categories": [
+          "Contact and household identities",
+          "Lifestyle and demographic segments",
+          "Matching keys"
+        ],
+        "note": "Acxiom LLC publishes separate US and international rights portals. Its GDPR notice also covers licensed European data; regional Acxiom companies remain separate."
+      },
+      "removal": {
+        "method": "form",
+        "destination": "https://www.acxiom.com/privacy/us/consumer-instructions/",
+        "alternatives": [
+          "https://omnicom-privacy.my.onetrust.com/webform/c0a325be-6f68-46be-a0de-e4a750890f7d/237d294b-49ff-4d3c-a728-f4839c8d081b",
+          "https://omnicom-privacy.my.onetrust.com/webform/c0a325be-6f68-46be-a0de-e4a750890f7d/257a5cb1-b4b6-4ff1-bb7a-687c056fac91",
+          "https://www.acxiom.com/privacy/international/",
+          "https://www.acxiom.com/privacy/fr/",
+          "https://www.acxiom.com/privacy/it/",
+          "https://www.acxiom.de/datenschutzanfragen/",
+          "AskPrivacy@acxiom.com"
+        ],
+        "steps": [
+          "Choose your country route on the official instructions page: US Privacy Rights Portal for US residents, International Requests for others. Request deletion, not access alone.",
+          "For regional opt-out, follow the official country instructions: Germany has a separate route; France and Italy distinguish marketing opt-out from authenticated access. Austria/Switzerland use Datenschutz@acxiom.com.",
+          "International opt-out instructions request name, residence, address, email and phone. Review actual portal fields and any verification yourself; no sensitive identifiers are sent by this app.",
+          "Finish confirmation steps and retain the result. AskPrivacy@acxiom.com handles GDPR rights/questions; a Robinson-list registration is not evidence of Acxiom deletion."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "full_name",
+          "country",
+          "postal_address",
+          "email",
+          "phone"
+        ],
+        "certainty": "not_fully_specified",
+        "verification": "Published international opt-out checklist only; deletion's dynamic portal and conditional identity checks have not been tested. Do not provide date of birth or identity evidence unless the relevant official flow requires it."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Matched controller-held Acxiom LLC marketing records through the appropriate US or international route; necessary suppression may remain.",
+        "excludes": "Not blanket group deletion, independent customer copies, or processor-held client data. Regional controllers may need separate requests. US opt-out and deletion are distinct choices."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Country routing and conditional matching require personal review. The app does not automatically disclose phone, address or identity evidence or turn access/opt-out into deletion."
+      },
+      "evidence": [
+        {
+          "url": "https://www.acxiom.com/privacy/international-privacy-notice/",
+          "checked_on": "2026-09-30",
+          "published": "2025-06-30",
+          "excerpt": "Access and Deletion:",
+          "supports": [
+            "identity",
+            "international_products",
+            "rights_portal",
+            "retention"
+          ]
+        },
+        {
+          "url": "https://www.acxiom.com/privacy/gdpr/",
+          "checked_on": "2026-09-30",
+          "published": "2025-06-01",
+          "excerpt": "personal data about EU citizens it licenses from others",
+          "supports": [
+            "European_data_scope",
+            "controller_processor",
+            "email_alternative"
+          ]
+        },
+        {
+          "url": "https://www.acxiom.com/privacy/us/consumer-instructions/",
+          "checked_on": "2026-10-04",
+          "published": "Not specified",
+          "excerpt": "International Requests (i.e., requests from outside the U.S.)",
+          "supports": [
+            "US_and_international_portal_links",
+            "country_routing",
+            "optout_identifiers",
+            "verification"
+          ]
+        },
+        {
+          "url": "https://www.acxiom.com/privacy/fr/",
+          "checked_on": "2026-09-30",
+          "published": "Not specified",
+          "excerpt": "demande d’accès à vos données",
+          "supports": [
+            "separate_access_and_optout"
+          ]
+        },
+        {
+          "url": "https://www.acxiom.com/privacy/it/",
+          "checked_on": "2026-09-30",
+          "published": "Not specified",
+          "excerpt": "Portale delle preferenze dei consumatori",
+          "supports": [
+            "separate_access_and_optout"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Dynamic form requirements and post-verification screens.",
+        "Personal matching, acceptance and actual completion."
+      ]
+    },
+    {
+      "id": "circana-marketing",
+      "name": "Circana — marketing and audience data",
+      "match_domains": [
+        "circana.com"
+      ],
+      "identity": {
+        "legal_name": "Circana, LLC; the relevant affiliated controller depends on the service",
+        "brands": [
+          "Circana"
+        ],
+        "parent": null,
+        "official_domains": [
+          "circana.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "US",
+          "EEA",
+          "UK"
+        ],
+        "category": "consumer_marketing",
+        "data_categories": [
+          "Purchase-derived audience segments",
+          "Household profiles",
+          "Contact and device identifiers"
+        ],
+        "note": "Audience products use loyalty and receipt-panel purchase data; applicability depends on participation and the dataset, not merely website use."
+      },
+      "removal": {
+        "method": "email",
+        "destination": "privacy@circana.com",
+        "alternatives": [
+          "https://www.circana.com/the-circana-group-global-privacy-policy-and-notice"
+        ],
+        "steps": [
+          "Request erasure and marketing objection for identifiable audience records controlled by Circana through its published privacy inbox.",
+          "Supply a matching email as an initial proposal; ask which controller and dataset were checked. Review further matching requests personally.",
+          "Client-controlled data and separately governed panel/account records require their own scope review; do not equate cookie opt-out or unsubscribe with deletion."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "full_name",
+          "email",
+          "other_emails"
+        ],
+        "certainty": "not_fully_specified",
+        "verification": "The notice permits EEA/UK rights requests by email but supplies no fixed initial checklist. Matching may require further service-specific information."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Identifiable marketing/audience records under the relevant Circana controller's notice.",
+        "excludes": "Not genuinely deidentified aggregates, client-controlled records or independently governed panel/account data."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "The explicit initial email recipe uses limited matching information; further controller identification and verification remain personally reviewed."
+      },
+      "evidence": [
+        {
+          "url": "https://www.circana.com/the-circana-group-global-privacy-policy-and-notice",
+          "checked_on": "2026-09-30",
+          "published": "Not specified",
+          "excerpt": "privacy@circana.com",
+          "supports": [
+            "identity",
+            "EEA_UK_rights",
+            "email_route",
+            "controller_scope"
+          ]
+        },
+        {
+          "url": "https://www.circana.com/solutions/complete-audiences",
+          "checked_on": "2026-09-30",
+          "published": "Not specified",
+          "excerpt": "loyalty card databases and receipt capture panels",
+          "supports": [
+            "audience_product_relevance"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Sufficiency of name/email matching and actual controller for each dataset.",
+        "Subsequent verification and personal exposure."
+      ]
+    }
+  ]
+}

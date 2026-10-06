@@ -1,0 +1,29 @@
+schema_version: 1
+associations:
+  - guide_id: belardiwong-regional-request
+    records: [live:belardi-ostroy]
+    rationale: The company's own 2017 announcement expressly changes Belardi/Ostroy to Belardi Wong; the current notice names Belardi Wong ALC LLC and delegates the regional form. No separate database or blanket affiliate coverage is inferred.
+  - guide_id: crosspixel-browser-preferences
+    records: [live:cross-pixel-media-inc]
+    rationale: Current Cross Pixel Media Inc policy confirms the registry company, parent, device-based data and separate browser preference versus historical rights routes.
+  - guide_id: dataline-consumer-marketing
+    records: [live:dataline-inc]
+    rationale: Current official Dataline notice and replacement form establish the exact company and suppression semantics; the obsolete privacy-portal URL returns 404.
+  - guide_id: dataman-consumer-marketing
+    records: [live:dataman-group-inc]
+    rationale: Current Dataman Group Inc notice links the inspected postal-matching request form and email alternative, with state-rights limitations preserved.
+  - guide_id: agr-consumer-marketing
+    records: [live:agr-marketing-solutions-llc]
+    rationale: Current policy names the exact LLC and identifies consumer-aggregator processing, embedded opt-out fields and email rights contact.
+  - guide_id: datasys-consumer-records
+    records: [live:datasys-group-inc]
+    rationale: Current April 2026 policy names Datasys Group Inc and delegates the staged privacy portal, explicitly distinguishing suppression from deletion.
+  - guide_id: datafy-device-location
+    records: [live:datafy-llc]
+    rationale: Current Datafy LLC notice and public form establish the exact controller and MAID matching conflict, which remains visible instead of being treated as email-only coverage.
+  - guide_id: civis-analytics-consumer
+    records: [live:civis-analytics-inc]
+    rationale: Exact current Civis Analytics Inc policies delegate the inspected Google form; unsupported email and non-US eligibility are explicitly limited.
+  - guide_id: cybba-marketing-services
+    records: [live:cybba-inc]
+    rationale: Current Cybba Inc notice distinguishes service and website data and links separate rights and opt-out forms; inspected rights configuration supplies the field list.

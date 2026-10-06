@@ -1,0 +1,29 @@
+schema_version: 1
+assessments:
+  - record: community:marchex
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: Excluded from default independent-broker email outreach, not declared data-free. Marchex Inc's current notice describes call recordings, transcripts, caller IDs and linked online activity processed for clients; access/correction/deletion should go to the client controller. Direct-site records and eligible US requests have privacy@marchex.com and the published access form, but do not establish a universal European consumer database removal. Identify the actual business called before a targeted request.
+    evidence:
+      - url: https://www.marchex.com/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2026-09-10'
+        excerpt: should direct their query to the Client, the data controller
+        supports: [identity, recorded_call_processing, client_routing, separate_direct_rights]
+    unresolved: []
+  - record: community:narrativ
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: This discovery record already names Howl Technologies Inc despite its legacy Narrativ slug. The current Howl notice describes creator/merchant platform users and excludes merchant-controlled processing, directing those requests to the merchant. Excluded from default independent-broker outreach, not from user-selected privacy action. Direct-user advertising and lookalike processing exist, and European users can contact privacy@howl.link; account closure and merchant records require relationship-specific review, not a blanket request to an unrelated similarly named Narrativ company.
+    evidence:
+      - url: https://www.howl.link/privacy
+        checked_on: '2026-10-01'
+        published: '2025-02-25'
+        excerpt: please direct your concerns to that Merchant
+        supports: [exact_current_entity, merchant_controller_boundary, direct_user_rights]
+      - url: https://help.howl.link/hc/en-us/articles/34339781026587-Howl-link-Privacy-Policy
+        checked_on: '2026-10-01'
+        published: '2025-02-25'
+        excerpt: Howl Technologies, Inc.
+        supports: [official_help_notice_corroboration]
+    unresolved: []

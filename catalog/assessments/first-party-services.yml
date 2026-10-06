@@ -1,0 +1,33 @@
+schema_version: 1
+assessments:
+  - record: community:duckduckgo
+    disposition: out_of_scope
+    checked_on: '2026-09-29'
+    rationale: Search/browser provider, not an evidenced third-party personal-profile broker in this review. Its policy disclaims identifiable search histories and personal-data sales. Optional email/subscription/support records are first-party service data; automatically deleting those is outside the broker campaign. This is not a claim that the company holds no personal data.
+    evidence:
+      - url: https://duckduckgo.com/privacy
+        checked_on: '2026-09-29'
+        published: '06-03-26 (source label)'
+        excerpt: We have never sold any personal information.
+        supports: [identity, relevance, scope]
+    unresolved: []
+  - record: community:apollo-optik
+    disposition: out_of_scope
+    checked_on: '2026-09-29'
+    rationale: Apollo-Optik Holding GmbH & Co. KG is an optical retailer handling customer, purchase and appointment records, not Apollo.io/ZenLeads. Its policy states it does not sell, rent or lease personal data to third parties. Retail account/health-related record deletion is outside a general broker campaign; marketing preferences can be managed separately by a customer.
+    evidence:
+      - url: https://www.apollo.de/ueber-uns/legal/datenschutz
+        checked_on: '2026-09-29'
+        excerpt: verkaufen, vermieten oder verleasen wir Ihre personenbezogenen Daten nicht an Dritte
+        supports: [identity, relevance, scope]
+    unresolved: []
+  - record: community:epicgames
+    disposition: out_of_scope
+    checked_on: '2026-09-29'
+    rationale: Gaming/store account provider; the reviewed policy concerns players, purchases and Epic services and disclaims sale/sharing of collected personal information. Account erasure could remove a service the person wants to keep. Exclude from the unsolicited broker-removal campaign, without asserting absence of data or treating separately operated advertising companies as covered.
+    evidence:
+      - url: https://legal.epicgames.com/epicgames/privacy-policy
+        checked_on: '2026-09-29'
+        excerpt: Epic also does not sell or share the personal information it collects.
+        supports: [relevance, scope]
+    unresolved: []

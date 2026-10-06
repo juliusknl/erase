@@ -1,0 +1,55 @@
+{% set assistance_return = assistance_return | default('campaign') %}
+{% set assistance_close = '/setup?step=4' if assistance_return == 'setup' else '/campaign#reply-assistance' %}
+<link rel="stylesheet" href="/static/reply-assistance.css?v={{ css_version }}">
+<dialog id="reply-assistance-dialog" class="reply-assistance-dialog" aria-labelledby="reply-assistance-title" {% if request.query_params.get('reply_assistance') == '1' %}open{% endif %}>
+  <div class="assistance-dialog-heading"><h2 id="reply-assistance-title" tabindex="-1">Let erase handle more replies</h2><a href="{{ assistance_close }}" data-assistance-close aria-label="Close reply assistance">×</a></div>
+  {% set assistance_provider = request.query_params.get('assistance_provider', reply_assistance.provider) %}
+  <div class="assistance-providers" role="tablist" aria-label="Reply assistance provider">
+    <button type="button" id="assistance-jev-tab" role="tab" aria-controls="assistance-jev" aria-selected="{{ 'true' if assistance_provider != 'chatgpt' else 'false' }}" data-assistance-provider="jev">Jev</button>
+    <button type="button" id="assistance-chatgpt-tab" role="tab" aria-controls="assistance-chatgpt" aria-selected="{{ 'true' if assistance_provider == 'chatgpt' else 'false' }}" data-assistance-provider="chatgpt">ChatGPT</button>
+  </div>
+  {% if reply_assistance.enabled %}<p class="assistance-privacy">Currently using {{ 'ChatGPT' if reply_assistance.provider == 'chatgpt' else 'Jev' }}. Selecting a tab does not switch providers.</p>{% endif %}
+  {% if request.query_params.get('chatgpt_first') == '1' and reply_assistance.provider == 'chatgpt' and reply_assistance.enabled %}<p class="assistance-notice" role="status"><strong>You’re using your ChatGPT plan.</strong> Reply checks use your approved ChatGPT allowance. <a href="https://chatgpt.com/settings/usage" target="_blank" rel="noopener noreferrer">Manage usage ↗</a></p>{% endif %}
+  {% if assistance_error %}<p class="assistance-notice is-error" role="alert">{{ assistance_error }} Your previous connection settings haven’t changed.</p>{% endif %}
+  {% if request.query_params.get('assistance_saved') in ['connect', 'disable', 'disconnect'] %}<p class="assistance-notice" role="status">{% if request.query_params.get('assistance_saved') == 'connect' %}{{ 'Demo connection ready. No external service was contacted.' if demo_mode else 'Connected. Reply assistance is on.' }}{% elif request.query_params.get('assistance_saved') == 'disable' %}Reply assistance is off. Automatic emails are unchanged.{% else %}Disconnected. The app’s saved key was removed; any separately configured environment key is ignored.{% endif %}</p>{% endif %}
+  {% if reply_assistance.error %}<p class="assistance-notice is-error" role="status">{{ reply_assistance.error }} The app is using its built-in reply rules meanwhile.</p>{% endif %}
+  {% if request.query_params.get('chatgpt_disconnected') %}<p class="assistance-notice" role="status">ChatGPT credentials removed from this app.{% if request.query_params.get('chatgpt_disconnected') == 'unconfirmed' %} Remote revocation could not be confirmed. Disconnect erase in <a href="https://chatgpt.com/settings/usage" target="_blank" rel="noopener noreferrer">ChatGPT Settings</a> too.{% endif %}</p>{% endif %}
+  <section id="assistance-jev" role="tabpanel" aria-labelledby="assistance-jev-tab" {% if assistance_provider == 'chatgpt' %}hidden{% endif %}>
+  <p>Jev is AI built for classification, rather than chat. It is roughly 200× faster and 400× cheaper than general-purpose models in <a href="https://typesafe.ai/blog/introducing-system-one-models-and-jev" target="_blank" rel="noopener noreferrer">TypeSafe’s benchmarks</a>.</p>
+  <p>erase uses it to categorize broker replies and update your requests, so routine acknowledgements don’t need your attention. You still handle forms and identity checks.</p>
+  <p class="assistance-cost"><strong>A little credit goes a long way.</strong> $5 covers about 100,000 reply checks at current prices, more than enough for typical use of this app. <a href="https://docs.typesafe.ai/models" target="_blank" rel="noopener noreferrer">Pricing ↗</a></p>
+  <p class="assistance-privacy">TypeSafe processes reply text but does not use it to train AI, according to its <a href="https://typesafe.ai/legal/privacy-policy" target="_blank" rel="noopener noreferrer">privacy policy</a>. Jev is optional and can significantly speed up handling replies.</p>
+  {% if demo_mode %}
+    <p class="assistance-privacy">Try a simulated connection here. Don’t enter a real API key in the demo.</p>
+  {% else %}
+    <a class="assistance-account-link" href="https://console.typesafe.ai/keys" target="_blank" rel="noopener noreferrer">{{ 'Open your TypeSafe account ↗' if reply_assistance.has_key else 'Create a TypeSafe account and copy your API key ↗' }}</a>
+  {% endif %}
+  <form method="post" action="/reply-assistance/connect" data-assistance-connect>
+    <input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="return_to" value="{{ assistance_return }}">
+    {% if not demo_mode %}<label for="assistance-api-key">{{ 'Replace API key (optional)' if reply_assistance.has_key else 'TypeSafe API key' }}</label><input id="assistance-api-key" name="api_key" type="password" autocomplete="new-password" spellcheck="false" autocapitalize="off" maxlength="512" {% if not reply_assistance.has_key %}required{% endif %} aria-describedby="assistance-key-help"><p id="assistance-key-help" class="assistance-key-help">{% if reply_assistance.has_key %}Leave blank to use your saved key. {% endif %}Stored encrypted on this computer. The connection test uses a sample message, not your emails.</p>{% endif %}
+    <button>{{ 'Try demo connection' if demo_mode else ('Test connection' if reply_assistance.enabled and reply_assistance.provider == 'jev' else 'Connect and enable') }}</button>
+  </form>
+  </section>
+  <section id="assistance-chatgpt" role="tabpanel" aria-labelledby="assistance-chatgpt-tab" {% if assistance_provider != 'chatgpt' %}hidden{% endif %}>
+    <p>Already have ChatGPT? Connect an eligible Plus or Pro account to sort broker replies automatically, without an API key.</p>
+    <p>This uses your ChatGPT allowance, shared with other apps. It is optional. If access runs out, automatic emails continue using the app’s built-in reply rules. erase never switches to a paid alternative.</p>
+    <p class="assistance-privacy">Reply text goes to OpenAI. The app removes known personal details where possible and requests no stored response, but the text is not guaranteed anonymous. OpenAI’s privacy and retention terms apply. <a href="https://chatgpt.com/settings/usage" target="_blank" rel="noopener noreferrer">Manage usage and access ↗</a></p>
+    {% if demo_mode %}<p class="assistance-privacy">This is a simulated connection. No ChatGPT account is accessed.</p>{% endif %}
+    {% if reply_assistance.can_retry_chatgpt %}<form method="post" action="/chatgpt/retry"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="return_to" value="{{ assistance_return }}"><button>Retry connection test</button><p class="assistance-key-help">Your sign-in is verified. Retry the sample check without signing in again.</p></form>{% endif %}
+    <form method="post" action="/chatgpt/connect" data-chatgpt-connect>
+      <input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="return_to" value="{{ assistance_return }}">
+      {% if reply_assistance.accounts %}<label for="chatgpt-account">ChatGPT account</label><select name="account" id="chatgpt-account">{% for account in reply_assistance.accounts %}<option value="{{ account.id }}" {% if account.id == reply_assistance.account %}selected{% endif %}>{{ account.email or 'ChatGPT' }} · {{ account.label }}{{ ' (active)' if account.id == reply_assistance.account and reply_assistance.enabled else '' }}</option>{% endfor %}<option value="">Use a different account or workspace</option></select>{% endif %}
+      <button class="chatgpt-signin"><img src="/static/chatgpt-logo-white.svg" width="21" height="21" alt="">{{ 'Try ChatGPT demo' if demo_mode else 'Continue with ChatGPT' }}</button>
+      <p class="assistance-key-help">{{ 'No external service will be contacted.' if demo_mode else 'The connection is tested with sample replies before it is enabled.' }}</p>
+      <p data-chatgpt-status role="status" hidden></p>
+      <noscript>Enable JavaScript to start the secure connection.</noscript>
+    </form>
+    {% for account in reply_assistance.accounts %}{% if account.connected %}<form method="post" action="/chatgpt/disconnect" class="assistance-signout"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="return_to" value="{{ assistance_return }}"><input type="hidden" name="account" value="{{ account.id }}"><button class="text-button">Disconnect {{ account.label }}</button></form>{% endif %}{% endfor %}
+  </section>
+  <div class="assistance-footer">
+    {% if reply_assistance.enabled %}<form method="post" action="/reply-assistance/disable"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="return_to" value="{{ assistance_return }}"><button class="text-button">Turn off</button></form>{% endif %}
+    {% if reply_assistance.has_key and reply_assistance.provider == 'jev' %}<form method="post" action="/reply-assistance/disconnect"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="return_to" value="{{ assistance_return }}"><button class="text-button">Disconnect</button></form>{% endif %}
+    <a href="{{ assistance_close }}" data-assistance-close>{{ 'Got it' if request.query_params.get('chatgpt_first') == '1' else ('Done' if reply_assistance.enabled else 'Not now') }}</a>
+  </div>
+</dialog>
+<script src="/static/reply-assistance.js?v={{ css_version }}" defer></script>

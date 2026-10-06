@@ -1,0 +1,14 @@
+schema_version: 1
+associations:
+  - guide_id: media-net-platform
+    records: [community:media-net, live:media-net-advertising-fz-llc]
+    rationale: The June 2026 official platform notice names Media.Net Advertising FZ-LLC and links its regional rights form; both inventory records describe this controller.
+  - guide_id: datonics-advertising
+    records: [live:datonics-llc]
+    rationale: Datonics LLC is named in its May 2026 technology notice and offers identifier-specific rights, including the European email route and separate device/browser choices.
+  - guide_id: cadent-household-platform
+    records: [live:cadent-llc]
+    rationale: Current services notice names Cadent LLC and the cadent.tv privacy portal is linked by cadent.com; the documented household rights remain US-resident scoped.
+  - guide_id: mobilefuse-platform
+    records: [live:mobilefuse-llc]
+    rationale: The August 2026 policy served by the official privacy center explicitly identifies MobileFuse LLC and documents the distinct controller/processor and geographic boundaries.

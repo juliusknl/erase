@@ -1,0 +1,97 @@
+schema_version: 1
+brokers:
+  - id: biscred-professional
+    name: Biscred real-estate professionals
+    match_domains: [biscred.com]
+    identity:
+      legal_name: Bisnow, LLC
+      brands: [Biscred]
+      parent: null
+      official_domains: [biscred.com]
+    relevance:
+      regions: [EEA, United Kingdom, Switzerland, United States]
+      category: professional
+      data_categories: [Business contacts, Employment details, Professional profiles, Inferences]
+      note: Commercial real-estate professionals, not property-register erasure or a newsletter unsubscribe.
+    removal:
+      method: email
+      destination: privacy@biscred.com
+      alternatives: [https://www.biscred.com/privacy-request]
+      steps:
+        - Ask to delete your matched Biscred profile and stop sharing it with customers; include the email identifiers used professionally.
+        - Alternatively use the form with name, email, requested right and your actual California-residence answer. Complete its emailed verification.
+        - Review further verification personally. This does not cancel a Bisnow subscription or erase independent customer copies.
+    required_information:
+      fields: [full_name, email, requested_right]
+      certainty: not_fully_specified
+      verification: Form publishes name/email and email verification; policy permits additional matching. Dropdown choices and runtime submission untested.
+    coverage:
+      effect: deletion_request
+      includes: Matched Biscred business profiles controlled by Bisnow LLC.
+      excludes: Independent recipients, original sources, unrelated subscriptions and records retained under stated exceptions.
+    automation:
+      mode: manual
+      reason: Initial email is supported; further verification remains personally reviewed.
+    evidence:
+      - url: https://www.biscred.com/privacy-policy
+        checked_on: '2026-10-01'
+        published: '2024-02-20'
+        excerpt: privacy@biscred.com
+        supports: [Bisnow_controller, professional_profiles, European_rights_email, retention_limits]
+      - url: https://www.biscred.com/privacy-request
+        checked_on: '2026-10-01'
+        excerpt: We need your name and email address
+        supports: [form_matching, emailed_verification, residence_question]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Matching and fulfilment untested., Parent and comparable scale unreviewed.]
+  - id: prospectbase-uk-professional
+    name: ProspectBase UK professional marketing
+    match_domains: [prospectbase.com]
+    identity:
+      legal_name: ProspectBase UK Limited (15492457)
+      brands: [ProspectBase, Knowledge Cloud]
+      parent: null
+      official_domains: [prospectbase.com]
+    relevance:
+      regions: [United Kingdom, EEA — UK-controller records]
+      category: professional
+      data_categories: [Business contacts, Employer details, Professional profiles, Intent signals]
+      note: UK-controller scope only; Ireland has a separate entity notice despite the shared mailbox.
+    removal:
+      method: email
+      destination: privacy@prospectbase.com
+      alternatives: [https://www.prospectbase.com/legal/privacy-policy-uk, https://www.prospectbase.com/legal/privacy-policy-ireland]
+      steps:
+        - Request deletion and marketing suppression of your matched professional records controlled by ProspectBase UK Limited.
+        - Include your corporate work email for matching; a personal inbox alone does not identify a professional record. Ask which entity handled the records if uncertain.
+        - Keep only necessary suppression information; do not close a customer account or assume Ireland and independent clients are covered.
+    required_information:
+      fields: [full_name, email, work_email, requested_right]
+      certainty: not_fully_specified
+      verification: A corporate work email is needed to search professional records. Review any additional matching or verification personally.
+    coverage:
+      effect: deletion_request
+      includes: Matched UK-controller professional lead records, with necessary suppression retained.
+      excludes: Guaranteed Ireland-entity deletion, independent client records and business-account closure.
+    automation:
+      mode: manual
+      reason: Initial scoped email is accepted; entity confirmation and later checks require review.
+    evidence:
+      - url: https://www.prospectbase.com/legal/privacy-policy-uk
+        checked_on: '2026-10-01'
+        excerpt: privacy@prospectbase.com
+        supports: [controller_company_number, professional_rights_email, suppression_retention]
+      - url: https://find-and-update.company-information.service.gov.uk/company/15492457
+        checked_on: '2026-10-01'
+        excerpt: PROSPECTBASE UK LIMITED
+        supports: [exact_registered_name_for_policy_company_number]
+      - url: https://www.prospectbase.com/legal/privacy-policy-ireland
+        checked_on: '2026-10-01'
+        excerpt: ProspectBase Ireland Ltd
+        supports: [separate_Irish_entity_not_automatic_shared_coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Matching and fulfilment untested., Parent unreviewed., Site-wide contact count is not entity-specific or personal exposure.]

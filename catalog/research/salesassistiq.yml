@@ -1,0 +1,41 @@
+schema_version: 1
+brokers:
+  - id: salesassistiq
+    name: SalesAssistIQ / Aniline
+    match_domains: [salesassistiq.ai, aniline.ai]
+    identity:
+      legal_name: Aniline Inc.
+      brands: [SalesAssistIQ, Aniline]
+      parent: null
+      official_domains: [salesassistiq.ai, aniline.ai]
+    relevance:
+      regions: [International professional profiles; general choices section is not residence-limited]
+      category: professional
+      data_categories: [Career details, Company email, Professional profiles]
+      note: Published general database rights are separate from California-specific rights.
+    removal:
+      method: email
+      destination: legal@salesassistiq.ai
+      alternatives: [https://salesassistiq.ai/privacy]
+      steps: [Request database-profile deletion, Include company email and company name, Review further verification personally]
+    required_information:
+      fields: [work_email, employer]
+      certainty: documented
+      verification: Additional identity checks may follow; no automatic ID transmission.
+    coverage:
+      effect: deletion_request
+      includes: Matched professional data and directory records.
+      excludes: Confirmed deletion from independent customer CRMs; account cancellation.
+    automation:
+      mode: manual
+      reason: Reviewed email recipe requires explicitly supplied professional identifiers.
+    evidence:
+      - url: https://salesassistiq.ai/privacy-policy/
+        checked_on: '2026-09-30'
+        published: '2026-08-10'
+        excerpt: your company email address and company name
+        supports: [identity, relevance, general_email_deletion, matching, scope]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Actual matching and downstream deletion untested., Policy describes both database rights and unstored CRM exports; clarify outcome scope., Parent unreviewed.]

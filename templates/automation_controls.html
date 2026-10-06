@@ -1,0 +1,9 @@
+<div class="button-row automation-controls">
+  <a data-control="connect" class="button secondary" href="/gmail/connect" {% if automation.control != 'connect' %}hidden{% endif %}>Reconnect Gmail</a>
+  <a data-control="plan" class="button secondary" href="/campaign" {% if automation.control != 'plan' %}hidden{% endif %}>{{ 'Start automatic emails' if automation.state == 'stopped' else 'Open settings' }}</a>
+  <a data-control="review" class="button secondary" href="/campaign" {% if automation.control != 'review' %}hidden{% endif %}>Review permissions</a>
+  <form data-control="pause" method="post" action="/campaign/pause" {% if automation.control != 'pause' %}hidden{% endif %}><input type="hidden" name="csrf" value="{{ csrf }}"><button class="secondary">Pause</button></form>
+  <form data-control="resume" method="post" action="/campaign/resume" {% if automation.control != 'resume' %}hidden{% endif %}><input type="hidden" name="csrf" value="{{ csrf }}"><button class="secondary">Resume</button></form>
+  <form data-control="check" method="post" action="/campaign/check" {% if automation.control != 'check' %}hidden{% endif %}><input type="hidden" name="csrf" value="{{ csrf }}"><button class="secondary">Retry checks</button></form>
+</div>
+<dialog id="pause-confirmation" class="pause-confirmation" aria-labelledby="pause-title" aria-describedby="pause-explanation">{% include 'pause_confirmation_content.html' %}</dialog>

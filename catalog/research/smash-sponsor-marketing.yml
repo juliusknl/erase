@@ -1,0 +1,43 @@
+schema_version: 1
+brokers:
+  - id: smash-sponsor-marketing
+    name: Smash sponsor marketing
+    match_domains: [agentur-smash.de]
+    identity:
+      legal_name: Smash Online GmbH
+      brands: [Smash]
+      parent: null
+      official_domains: [agentur-smash.de]
+    relevance:
+      regions: [Germany, EEA]
+      category: consumer_marketing
+      data_categories: [Email, Postal contacts, Telephone, Marketing consent]
+      note: Notice explicitly covers sponsor disclosure.
+    removal:
+      method: email
+      destination: mail@agentur-smash.de
+      alternatives: [info@agentur-smash.de]
+      steps:
+        - Request erasure and marketing withdrawal using matching emails.
+        - Newsletter and sponsor unsubscribe enquiries can also use the alternative inbox.
+        - Review further matching personally; do not claim competition participation.
+    required_information:
+      fields: [full_name, email, other_emails]
+      certainty: not_fully_specified
+      verification: Additional checks untested.
+    coverage:
+      effect: deletion_request
+      includes: Matched Smash marketing records.
+      excludes: Confirmed erasure by independent sponsors.
+    automation:
+      mode: manual
+      reason: Initial email recipe available; later matching needs review.
+    evidence:
+      - url: https://agentur-smash.de/datenschutz/
+        checked_on: '2026-10-01'
+        excerpt: mail@agentur-smash.de
+        supports: [identity, rights_email, sponsor_disclosure, unsubscribe_alternative]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Notice contains conflicting postal addresses and dated transfer references., Delivery untested., No comparable scale claim.]

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" data-theme="{{ current_appearance(request) }}">
+<head>
+  {% if csrf %}<meta name="csrf-token" content="{{ csrf }}">{% endif %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="{{ appearance_themes[current_appearance(request)].scheme }}">
+  <title>{% block title %}erase{% endblock %}</title>
+  <link rel="stylesheet" href="/static/style.css?v={{ css_version }}">
+  <link rel="stylesheet" href="/static/editorial.css?v={{ css_version }}">
+  <link rel="stylesheet" href="/static/app-layout.css?v={{ css_version }}">
+  <link rel="stylesheet" href="/static/themes.css?v={{ css_version }}">
+</head>
+<body>
+  {% set path = request.url.path %}
+  {% set in_requests = path.startswith('/cases') or path.startswith('/actions') or path.startswith('/brokers') or path in ['/batch', '/inbox'] %}
+  <div class="app-shell">
+    <header class="app-navigation">
+      <div class="navigation-pill">
+      <a class="brand" href="/dashboard" aria-label="erase overview">
+        <span class="brand-mark" aria-hidden="true">E</span>
+        <span class="sr-only">erase</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="/dashboard" {% if path in ['/dashboard', '/quick-wins'] %}class="active" aria-current="page"{% endif %}><span class="nav-icon" aria-hidden="true">⌂</span>Home</a>
+        <a href="/cases" {% if in_requests %}class="active" aria-current="page"{% endif %}><span class="nav-icon" aria-hidden="true">↗</span>Requests</a>
+        <a href="/onboarding" {% if path in ['/onboarding', '/campaign', '/appearance'] %}class="active" aria-current="page"{% endif %}><span class="nav-icon" aria-hidden="true">⚙</span>Settings</a>
+      </nav>
+      </div>
+        <form method="post" action="/logout">
+          <input type="hidden" name="csrf" value="{{ csrf }}">
+          <button class="text-button">Lock dashboard</button>
+        </form>
+    </header>
+    <div class="content-shell">
+      <header class="mobile-header">
+        <a class="brand" href="/dashboard"><span class="brand-mark" aria-hidden="true">E</span><span>erase</span></a>
+        <span class="mode {{ 'live' if live else 'dry' }}">{{ 'Demo' if demo_mode else ('Live' if live else 'Dry run') }}</span>
+        <form method="post" action="/logout"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="text-button">Lock</button></form>
+      </header>
+      <main>{% block content %}{% endblock %}</main>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="/dashboard" {% if path in ['/dashboard', '/quick-wins'] %}class="active" aria-current="page"{% endif %}><span aria-hidden="true">⌂</span>Home</a>
+      <a href="/cases" {% if in_requests %}class="active" aria-current="page"{% endif %}><span aria-hidden="true">↗</span>Requests</a>
+      <a href="/onboarding" {% if path in ['/onboarding', '/campaign', '/appearance'] %}class="active" aria-current="page"{% endif %}><span aria-hidden="true">⚙</span>Settings</a>
+    </nav>
+  </div>
+<script src="/static/table-sort.js?v={{ css_version }}" defer></script>
+</body>
+</html>

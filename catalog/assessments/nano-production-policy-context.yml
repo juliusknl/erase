@@ -1,0 +1,13 @@
+schema_version: 1
+assessments:
+  - record: community:nanointeractive
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: The current production notice identifies Nano Interactive at a London address and ePrivacy GmbH as DPO, but does not corroborate the discovery record's exact Nano Interactive GmbH controller or old privacy mailbox. It describes LIIFT without cookies or linked profiles, yet later describes a cookie for interest-based advertising. This is not evidence that no personal data is processed. Establish the applicable product and controller before using a generic deletion template; development-site search results do not override the production notice.
+    evidence:
+      - url: https://www.nanointeractive.com/resources/legal/privacy-policy/
+        checked_on: '2026-10-01'
+        published: July 16, 2025
+        excerpt: c.bauer@eprivacy.eu
+        supports: [current_DPO_contact, incomplete_controller_identity, inconsistent_cookie_scope]
+    unresolved: [Corroborate the exact product controller., Reconcile cookie and LIIFT scope and establish matching instructions., Verify whether the older discovery privacy mailbox remains valid.]

@@ -1,0 +1,28 @@
+schema_version: 1
+assessments:
+  - record: live:peoplefinders-llc
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: Direct official PeopleFinders privacy and opt-out pages return a security challenge. An accessible indexed notice for FindANeighborhood identifies Peoplefinders LLC, but does not by itself establish the main site's current removal workflow. No third-party opt-out guide is promoted as official evidence.
+    evidence:
+      - url: https://www.findaneighborhood.com/privacy-policy
+        checked_on: '2026-10-01'
+        published: '2025-01-01'
+        excerpt: Peoplefinders, LLC
+        supports: [same_entity_related_product, limited_notice_scope]
+      - url: https://www.peoplefinders.com/about/privacy
+        checked_on: '2026-10-01'
+        excerpt: Security Challenge
+        supports: [retrieval_limitation_not_verified_instructions]
+    unresolved: [Obtain current official main-site removal instructions and exact matching/verification requirements without bypassing the challenge., Establish non-US applicability and separate affiliated-product scope.]
+  - record: live:peoplefinders-llc-2
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: The newer registry record adds FindANeighborhood. Its official notice confirms Peoplefinders LLC, but the main-site privacy and opt-out pages are unavailable to public retrieval and no tested shared removal scope is established.
+    evidence:
+      - url: https://www.findaneighborhood.com/privacy-policy
+        checked_on: '2026-10-01'
+        published: '2025-01-01'
+        excerpt: websites that expressly link to this Notice
+        supports: [same_entity, notice_scope]
+    unresolved: [Resolve the PeopleFinders main-site route and determine whether its removal covers FindANeighborhood records., Do not mark the newer registry row as a completed duplicate of an unresolved workflow.]

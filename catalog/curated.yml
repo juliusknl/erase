@@ -1,0 +1,125 @@
+brokers:
+  - name: Whitepages
+    domain: whitepages.com
+    category: people_search
+    connector_type: browser
+    contact: https://www.whitepages.com/suppression-requests
+    policy_url: https://www.whitepages.com/data-policy
+    cadence_days: 60
+    confidence: 85
+  - name: Spokeo
+    domain: spokeo.com
+    category: people_search
+    connector_type: browser
+    contact: https://www.spokeo.com/optout
+    policy_url: https://www.spokeo.com/privacy-policy
+    cadence_days: 60
+    confidence: 85
+  - name: BeenVerified
+    domain: beenverified.com
+    category: people_search
+    connector_type: browser
+    contact: https://www.beenverified.com/app/optout/search
+    policy_url: https://www.beenverified.com/privacy
+    cadence_days: 60
+    confidence: 80
+  - name: TruePeopleSearch
+    domain: truepeoplesearch.com
+    category: people_search
+    connector_type: browser
+    contact: https://www.truepeoplesearch.com/removal
+    policy_url: https://www.truepeoplesearch.com/privacy
+    cadence_days: 60
+    confidence: 80
+  - name: FastPeopleSearch
+    domain: fastpeoplesearch.com
+    category: people_search
+    connector_type: browser
+    contact: https://www.fastpeoplesearch.com/removal
+    policy_url: https://www.fastpeoplesearch.com/privacy
+    cadence_days: 60
+    confidence: 80
+  - name: Radaris
+    domain: radaris.com
+    # 2026-10-01: former privacy/removal URLs now serve a domain-transfer notice.
+    # Preserve the catalog identity, but do not offer this as an actionable route.
+    active: false
+    category: people_search
+    connector_type: browser
+    contact: https://radaris.com/control/privacy
+    policy_url: https://radaris.com/page/privacy
+    cadence_days: 60
+    confidence: 0
+  # Acxiom is maintained in verified-email.yml using its German privacy route.
+  - name: Epsilon Data Management
+    domain: epsilon.com
+    category: marketing
+    connector_type: browser
+    contact: https://legal.epsilon.com/dsr
+    policy_url: https://legal.epsilon.com/dsr/
+    cadence_days: 90
+    confidence: 70
+  - name: LiveRamp
+    domain: liveramp.com
+    category: marketing
+    connector_type: browser
+    contact: https://liveramp.com/privacy/
+    policy_url: https://liveramp.com/privacy/
+    cadence_days: 90
+    confidence: 70
+  - name: LexisNexis Risk Solutions
+    domain: risk.lexisnexis.com
+    category: risk_mitigation
+    connector_type: browser
+    contact: https://consumer.risk.lexisnexis.com/request
+    policy_url: https://risk.lexisnexis.com/privacy-policy
+    cadence_days: 90
+    confidence: 65
+  - name: People Data Labs
+    domain: peopledatalabs.com
+    category: recruitment
+    connector_type: email
+    contact: privacy@peopledatalabs.com
+    policy_url: https://privacy.peopledatalabs.com/policies?name=privacy-policy
+    cadence_days: 90
+    confidence: 75
+  - name: ZoomInfo Technologies
+    domain: zoominfo.com
+    category: recruitment
+    connector_type: browser
+    contact: https://privacyrequest.zoominfo.com/remove/verify
+    policy_url: https://www.zoominfo.com/trust-center/your-privacy
+    cadence_days: 90
+    confidence: 75
+  - name: Datanyze
+    domain: datanyze.com
+    category: recruitment
+    connector_type: email
+    contact: privacy@datanyze.com
+    policy_url: https://www.datanyze.com/privacy-center
+    cadence_days: 90
+    confidence: 70
+  - name: Experian Marketing Solutions
+    domain: experian.com
+    category: marketing
+    connector_type: browser
+    contact: https://consumerprivacy.experian.com/
+    policy_url: https://www.experian.com/privacy/us-consumer-data-privacy-policy
+    cadence_days: 90
+    confidence: 70
+  - name: Dun & Bradstreet
+    domain: dnb.com
+    category: recruitment
+    connector_type: email
+    contact: eudpo@dnb.com
+    policy_url: https://www.dnb.com/en-us/why-dnb/data-transparency/contacts.html
+    cadence_days: 90
+    confidence: 65
+  - name: Apollo Interactive
+    domain: apollointeractive.com
+    category: marketing
+    connector_type: email
+    contact: requests@apollointeractive.com
+    policy_url: https://www.apollointeractive.com/privacy-policy.php
+    cadence_days: 90
+    confidence: 65

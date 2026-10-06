@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: infonline-measurement
+    records: [community:infonline-de]
+    rationale: The current notice identifies INFOnline GmbH and its measurement systems, matching the community entity. Anonymous totals and pseudonymous records are distinguished; no general name/email deletion workflow or functioning historical opt-out endpoint is assumed.

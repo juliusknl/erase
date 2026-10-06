@@ -1,0 +1,14 @@
+schema_version: 1
+associations:
+  - guide_id: inside-lead-consumer
+    records: [community:inside-lead]
+    rationale: Current official legal notice and sponsor withdrawal instructions identify the exact Inside Lead GmbH controller and original-participant matching requirements.
+  - guide_id: all-travel-sponsor-marketing
+    records: [community:all-travel-marketing]
+    rationale: Published policy names the exact All Travel Marketing GmbH entity and explicitly discusses sponsor marketing disclosure and rights; historical predecessor coverage is not assumed.
+  - guide_id: best-relations-sponsor-marketing
+    records: [community:best-relations-digital]
+    rationale: Official notice names Best Relations Digital GmbH and its privacy inbox, with a newer address and sponsor-data rights; same named company, not an inferred shared-domain affiliate.
+  - guide_id: blueleads-newsletter
+    records: [community:4wave]
+    rationale: Despite the legacy slug, the inventory itself names blueleads GmbH, matching the current official notice. Mapping is limited to current subscriber instructions, not proven 4Wave legal succession or an independent third-party broker dataset.

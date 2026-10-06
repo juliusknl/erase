@@ -1,0 +1,8 @@
+schema_version: 1
+associations:
+  - guide_id: mediawallah-identity
+    records: [live:mediawallah-inc]
+    rationale: Current official service privacy notice expressly identifies MediaWallah Inc and its identifier-specific choices. Website European rights are not generalized to service coverage.
+  - guide_id: bridg-shopper-data
+    records: [live:bridg-a-division-of-cardlytics-inc]
+    rationale: Historical row identifies the Bridg platform; the current official policy names DB Sub LLC and PAR, corroborated by the SEC asset-transaction filing. This maps the transferred product, not all Cardlytics data or seller-retained records.

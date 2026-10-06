@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Batch · erase{% endblock %}
+{% block content %}
+<section class="page-head">
+  <h1>Send requests</h1>
+  <p>Manual sending: open a draft, select the brokers, then queue up to {{ max_batch_size }} requests. For ongoing research and sending, use the <a href="/campaign">automatic campaign</a>.</p>
+  <p class="footnote">Only prepared email requests with contacts checked within 90 days appear here. Opening this page sends nothing. Form-only brokers are handled through <a href="/quick-wins">Quick wins</a> or <a href="/actions">Actions</a>.</p>
+</section>
+{% if not live %}
+<section class="notice"><strong>Dry run</strong><span>Drafts remain available for review, but this page cannot send them.</span></section>
+{% endif %}
+{% if batch_error %}<div class="notice danger" role="alert">{{ batch_error }}</div>{% endif %}
+{% include 'pipeline_status.html' %}
+<form method="post" action="/batch">
+  <input type="hidden" name="csrf" value="{{ csrf }}">
+  <section class="card table-card">
+    <div class="table-wrap"><table data-sortable>
+      <thead><tr><th>Select</th><th data-sort="text">Broker</th><th data-sort="text">Destination</th><th data-sort="number">Contact checked</th><th>Preview</th></tr></thead>
+      <tbody>
+      {% for case in cases %}
+        <tr>
+          <td><input type="checkbox" name="case_ids" value="{{ case.id }}"></td>
+          <td>{{ case.broker.name }}</td>
+          <td>{{ case.broker.contact }}</td>
+          <td data-sort-value="{{ case.broker.last_validated_at.timestamp() }}">{{ case.broker.last_validated_at.strftime('%Y-%m-%d') }}</td>
+          <td><a href="/cases/{{ case.id }}">Open draft</a></td>
+        </tr>
+      {% else %}
+        <tr><td colspan="5"><strong>No more verified email drafts are ready.</strong><p>Enable the automatic campaign to research official privacy contacts, prepare eligible requests, and send within your daily limit. No chat agent or repeated batch selection is needed. Unresolved routes appear as research exceptions.</p><a href="/campaign">Review the automatic campaign →</a> · <a href="/quick-wins">Try available Quick wins →</a></td></tr>
+      {% endfor %}
+      </tbody>
+    </table></div>
+    {% if cases and live %}<div class="batch-submit"><button type="submit">Queue selected (max {{ max_batch_size }})</button></div>{% endif %}
+  </section>
+</form>
+{% if cases %}<p class="footnote">Prefer ongoing automation? <a href="/campaign">Enable a campaign</a> to research, prepare and send eligible requests without selecting each batch.</p>{% endif %}
+{% endblock %}

@@ -1,0 +1,11 @@
+schema_version: 1
+regions: [SK]
+rationale: Official bank-register policy separately names the banking and non-banking controllers. Shared processing and information exchange do not establish a single deletion request.
+evidence:
+  - url: https://www.sbcb.sk/upload/source/2025/informacia-o-spracuvani-osobnych-udajov-v-spolocnom-registri-bankovych-informacii.pdf
+    checked_on: '2026-09-29'
+    excerpt: Non-Banking Credit Bureau, záujmové združenie právnických osôb
+    supports: [discovery]
+candidates:
+  - {slug: sk-sbcb, name: 'Slovak Banking Credit Bureau, s.r.o.'}
+  - {slug: sk-nbcb, name: 'Non-Banking Credit Bureau, záujmové združenie právnických osôb'}

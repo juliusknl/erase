@@ -1,0 +1,33 @@
+schema_version: 1
+assessments:
+  - record: live:roq-ad-inc
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: June 2026 notice expressly identifies Roq.ad GmbH for European and UK processing. Historical official California registration names Inc at the same brand and inbox, but does not establish present Inc coverage or legal equivalence; the GmbH guide cannot silently absorb it.
+    evidence:
+      - url: https://roq.ad/privacy-policy-roqad
+        checked_on: '2026-10-01'
+        published: '2026-06-29'
+        excerpt: Roq.ad GmbH
+        supports: [current_European_controller]
+      - url: https://www.oag.ca.gov/data-broker/registration/550468
+        checked_on: '2026-10-01'
+        published: '2022-02-01'
+        excerpt: Roq.ad Inc
+        supports: [historical_Inc_identity]
+    unresolved: [Establish current Inc processing scope and whether the same rights route covers its records.]
+  - record: live:winr-data-b-v
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: September 2026 Nexus US notice names Australian WINR Data Pty Ltd with a different legal form from the registered B.V.; the reviewed Alchemist product names another Australian company. A shared WINR domain does not resolve the Dutch entity or product-specific identity-versus-marketing scope.
+    evidence:
+      - url: https://www.winrdata.com/privacy-policy/nexus-us/
+        checked_on: '2026-10-01'
+        published: '2026-09'
+        excerpt: WINR Data Pty Ltd
+        supports: [Nexus_controller, US_scope, identity_verification_product]
+      - url: https://www.winrdata.com/privacy-policy/alchemist/
+        checked_on: '2026-10-01'
+        excerpt: WINR Alchemist Pty Ltd
+        supports: [separate_Alchemist_controller]
+    unresolved: [Establish B.V. current legal status and applicable product controller and request route.]

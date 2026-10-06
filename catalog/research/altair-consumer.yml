@@ -1,0 +1,53 @@
+schema_version: 1
+brokers:
+  - id: altair-consumer-marketing
+    name: Altair consumer marketing
+    match_domains: [altairdata.com]
+    identity:
+      legal_name: Altair Data Resources, Inc.
+      brands: [Altair Data Resources]
+      parent: null
+      official_domains: [altairdata.com]
+    relevance:
+      regions: [United States; other residence eligibility unconfirmed]
+      category: consumer_marketing
+      data_categories: [Consumer contacts, Household attributes, Financial marketing segments, Location, Inferred interests]
+      note: Consumer marketing and credit-derived targeting; clients' processor-held records require the client.
+    removal:
+      method: form
+      destination: https://datacloudhome.atlassian.net/servicedesk/customer/portal/12/group/35/create/158
+      alternatives: [https://altairdata.com/privacy-policy/]
+      steps:
+        - Use the Individual form yourself. It explicitly permits manual submissions only; do not automate it or attest that an agent-submitted request is personal.
+        - Provide reply email, full/first/last names, street, city, state and postal code. Select Deletion of My Consumer Information and applicable opt-outs; never invent a US address.
+        - Personally review both required declarations and CAPTCHA. Representatives and automated submissions have separate portal options; no enterprise API access is configured here.
+        - If your residence does not fit, ask for an appropriate route. The policy offers postal requests to 1749 Mallory Lane, Ste 201, Brentwood, TN 37027. Keep outcomes separate from source credit records and independent clients.
+    required_information:
+      fields: [reply_email, full_name, first_name, last_name, postal_address, city, state, postal_code, requested_right, personal_declarations]
+      certainty: not_fully_specified
+      verification: Public Jira and attached form configuration reviewed. Identity-copy language in the policy concerns access/household verification; do not automatically upload ID for deletion. Runtime login and later checks untested.
+    coverage:
+      effect: deletion_request
+      includes: Matched Altair-controlled consumer marketing information; selected suppression preferences remain distinct.
+      excludes: Credit-bureau source records, client-controlled imports, legal retention and unsupported foreign-address assumptions.
+    automation:
+      mode: manual
+      reason: The Individual form explicitly disallows scripted submission and requires truthful personal declarations; separate enterprise automation is not configured.
+    evidence:
+      - url: https://altairdata.com/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2026-08-04'
+        excerpt: Altair Data Resources
+        supports: [identity, service_scope, rights, postal_alternative, verification_scope]
+      - url: https://datacloudhome.atlassian.net/servicedesk/customer/portal/12/group/35/create/158
+        checked_on: '2026-10-01'
+        excerpt: individual, manual submissions only
+        supports: [public_form_configuration, fields, options, required_declarations, no_scripted_individual_requests]
+      - url: https://datacloudhome.atlassian.net/servicedesk/customer/portal/12
+        checked_on: '2026-10-01'
+        excerpt: Automation Request Form
+        supports: [separate_agent_and_automation_routes]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Non-US eligibility and foreign-address handling unconfirmed., Runtime submission and further verification untested., API terms/access and current parent ownership unreviewed.]

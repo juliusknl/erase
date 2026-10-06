@@ -1,0 +1,14 @@
+schema_version: 1
+associations:
+  - guide_id: hybrid-theory-platform
+    records: [community:affectv]
+    rationale: Inventory already names Hybrid Theory Global Ltd.; current platform notice names that exact controller and the shared Azerion DPO. No other group products are implied.
+  - guide_id: delta-projects-platform
+    records: [community:deltaprojects]
+    rationale: Official branded platform notice now names Azerion Technology B.V.; guide covers this current product only, not presumed legal succession or all records historically retained by Delta Projects AB.
+  - guide_id: emerse-advertising
+    records: [community:emerse]
+    rationale: Current official notice identifies the exact Swedish legal entity and registration number, separating browser advertising preferences from contact-form records.
+  - guide_id: adux-advertising
+    records: [community:adux]
+    rationale: Current official service and legal notices identify ADUX and its privacy contact; partner advertising controls remain separate.

@@ -1,0 +1,45 @@
+schema_version: 1
+assessments:
+  - record: live:bb-direct-inc
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: BB Direct's policy describes brokered-data opt-out, but both currently linked compliance paths return a bare Thank you message without form controls. A public GET is not a submitted request or completed opt-out. Establish a functioning form or official alternative and matching requirements before creating an executable workflow.
+    evidence:
+      - url: https://www.bbdirect.com/resources/privacy.html
+        checked_on: '2026-10-01'
+        excerpt: Opting Out of Data Usage
+        supports: [brokered_data_optout_instructions]
+      - url: https://www.bbdirect.com/resources/privacy/privacy-compliance.html
+        checked_on: '2026-10-01'
+        excerpt: Thank you.
+        supports: [public_GET_without_request_controls_not_submission_success]
+    unresolved: [Find working opt-out controls or a corroborated alternative., Confirm matching and regional scope.]
+  - record: live:connext-digital-llc
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: The registered CCPA URL and official homepage return HTTP 200 but both display that the site is unavailable. This does not establish dissolution, absence of data or a working contact. Do not guess a recipient or treat the HTTP status as route verification.
+    evidence:
+      - url: https://connextdigital.com/ccpa/
+        checked_on: '2026-10-01'
+        excerpt: This site is currently unavailable
+        supports: [policy_content_unavailable_despite_HTTP_200]
+      - url: https://connextdigital.com/
+        checked_on: '2026-10-01'
+        excerpt: This site is currently unavailable
+        supports: [homepage_same_unavailability]
+    unresolved: [Locate a current official controller/contact source., Confirm matching and rights route.]
+  - record: live:buxton-company-llc
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: Buxton's registered privacy URL redirects to Audiense's September 2026 notice, which names Audiense LLC, Elevar LLC and Audiense LTD but not Buxton Company LLC. A consumerprivacy@buxtonco.com address remains in agent instructions; that alone does not establish corporate succession or consumer matching. Verify the exact transition before associating all Buxton data with an Audiense workflow.
+    evidence:
+      - url: https://www.buxtonco.com/privacy
+        checked_on: '2026-10-01'
+        excerpt: Audiense Data Privacy Notice
+        supports: [official_redirect_to_Audiense_notice]
+      - url: https://www.audiense.com/legal/privacy/
+        checked_on: '2026-10-01'
+        published: September 1, 2026
+        excerpt: consumerprivacy@buxtonco.com
+        supports: [current_named_entities_differ, legacy_agent_contact_not_succession_proof]
+    unresolved: [Corroborate current controller and product transition., Confirm consumer route and identifier requirements without using agent-only instructions.]

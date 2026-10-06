@@ -1,0 +1,689 @@
+# Public, maintainer-reviewed knowledge; never contains a user's identity or results.
+# Region tags describe this guide's scope, not inferred residency or personal exposure.
+# null means not established. An initial email route is not a tested removal integration.
+schema_version: 1
+brokers:
+  - id: schober-capaneo
+    name: Capaneo / Schober
+    match_domains: [capaneo.de, schober.de]
+    identity:
+      legal_name: Capaneo GmbH
+      brands: [Capaneo, Schober Information Group Deutschland, udo]
+      parent: null
+      official_domains: [capaneo.de, schober.de]
+    relevance:
+      regions: [DE]
+      category: postal_marketing
+      data_categories: [Professional contacts, Digital identifiers, Device location, Household characteristics]
+      note: Former Schober Information Group Deutschland; current notice covers dialogue-marketing services.
+    removal:
+      method: email
+      destination: datenschutz@capaneo.de
+      alternatives: [https://capaneo.de/datenschutz/]
+      steps: [Identify the relevant marketing data or communication., Ask for erasure and objection to direct marketing., 'The observed matching reply requires a postal address. Only include it if you choose to share it; names and emails alone may not identify the household record.']
+    required_information:
+      fields: [postal_address]
+      certainty: not_fully_specified
+      verification: Postal matching was required in the observed reply. Additional identifiers may vary; never send an address without permission.
+    coverage:
+      effect: deletion_request
+      includes: Capaneo's dialogue-marketing processing described in the notice.
+      excludes: Robinsonliste participation is not proof of complete database deletion or coverage of every other company.
+    automation:
+      mode: manual
+      reason: Multiple matching mechanisms and a renamed entity; review identifiers and recipient before sending.
+    evidence:
+      - url: https://capaneo.de/datenschutz/
+        checked_on: '2026-09-28'
+        excerpt: Aus Schober Information Group wird Capaneo.
+        supports: [identity, relevance, removal, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Required matching identifiers., Parent ownership not reviewed.]
+
+  - id: az-direct-de
+    name: AZ Direct Germany
+    match_domains: [az-direct.com]
+    identity:
+      legal_name: AZ Direct GmbH
+      brands: [AZ Direct]
+      parent: null
+      official_domains: [az-direct.com]
+    relevance:
+      regions: [DE]
+      category: postal_marketing
+      data_categories: [Names, Postal addresses, Marketing records]
+      note: German postal-marketing records; a dedicated email alone cannot identify a household.
+    removal:
+      method: email
+      destination: datenschutz@az-direct.com
+      alternatives: [https://www.az-direct.com/site/faq]
+      steps: [Choose deletion or advertising suppression., Review the postal address before including it., Send the request and retain the response.]
+    required_information:
+      fields: [full_name, postal_address]
+      certainty: documented
+      verification: Replies normally arrive by post; email communication needs identity verification and agreement.
+    coverage:
+      effect: suppression
+      includes: AZ Direct's own advertising records or suppression list, depending on the request.
+      excludes: Complete deletion can allow later reacquisition; suppression retains a blocking record.
+    automation:
+      mode: manual
+      reason: Postal address disclosure and deletion-versus-suppression choice need approval.
+    evidence:
+      - url: https://www.az-direct.com/site/faq
+        checked_on: '2026-09-28'
+        excerpt: vollständigen Adressdaten
+        supports: [removal, required_information, coverage]
+      - url: https://www.az-direct.com/site/ib
+        checked_on: '2026-09-28'
+        excerpt: AZ Direct GmbH
+        supports: [identity, relevance]
+    scale:
+      claim: '70 million'
+      unit: people represented in AZ DIAS
+      scope: Company-reported German database scale; not independently measured or proof of a personal record.
+      source:
+        url: https://www.az-direct.com/site/multichannel-marketing-produkte/customer-insights/
+        checked_on: '2026-09-28'
+        excerpt: 70 Millionen Personen
+        supports: [scale]
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Parent ownership not reviewed., No end-to-end request tested for this guide.]
+
+  - id: acxiom-de
+    name: Acxiom Germany
+    match_domains: [acxiom.de]
+    identity:
+      legal_name: Acxiom Deutschland GmbH
+      brands: [Acxiom]
+      parent: null
+      official_domains: [acxiom.de]
+    relevance:
+      regions: [DE]
+      category: postal_marketing
+      data_categories: [Names, Addresses, Birth year, Household estimates]
+      note: German consumer and business databases; separate from US and UK request scopes.
+    removal:
+      method: form
+      destination: https://www.acxiom.de/datenschutzanfragen/
+      alternatives: [https://www.acxiom.de/datenschutz/]
+      steps:
+        - Open the German privacy-request form and request deletion and an objection to direct marketing.
+        - The form asks permission to load Adobe Marketo cookies. If you do not want that, use the E-Mail schreiben alternative on the same page.
+        - Supply only the matching details requested for your record; review address disclosure and any verification yourself.
+        - Keep the response. A separate Robinsonliste entry does not establish deletion from Acxiom's German database.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Live form fields and identity verification still need interactive testing.
+    coverage:
+      effect: deletion_request
+      includes: German consumer or business database processing identified in the request.
+      excludes: Robinsonliste registration is advertising suppression, not proof of deletion across Acxiom entities.
+    automation:
+      mode: manual
+      reason: Use the regional form; do not reuse a generic US contact or send an address automatically.
+    evidence:
+      - url: https://www.acxiom.de/datenschutz/datenschutzinformationen-fuer-verbraucher-und-firmendatenbank/
+        checked_on: '2026-10-04'
+        published: February 2026
+        excerpt: Acxiom Deutschland GmbH
+        supports: [identity, relevance, coverage]
+      - url: https://www.acxiom.de/datenschutzanfragen/
+        checked_on: '2026-10-04'
+        excerpt: Datenschutzanfragen
+        supports: [removal]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Required form fields., Do not equate the existing acxiom.com request with this regional entity., Parent ownership not reviewed.]
+
+  - id: deutsche-post-direkt
+    name: Deutsche Post Direkt
+    match_domains: [postdirekt.de]
+    identity:
+      legal_name: Deutsche Post Direkt GmbH
+      brands: [Deutsche Post Direkt]
+      parent: null
+      official_domains: [postdirekt.de, deutschepost.de]
+    relevance:
+      regions: [DE]
+      category: postal_marketing
+      data_categories: [Postal addresses, Address matching, Marketing selections]
+      note: Address rental and matching, not every Deutsche Post or DHL service.
+    removal:
+      method: email
+      destination: datenschutz@postdirekt.de
+      alternatives: [https://www.deutschepost.de/de/d/deutsche-post-direkt/deutsche-post-direkt-datenschutz.html]
+      steps:
+        - Specify Deutsche Post Direkt address rental or matching, not general postal or parcel services.
+        - Choose advertising suppression to retain a blocking record, or deletion after considering possible recollection.
+        - Identify the relevant postal record. The notice supplies no universal minimum field list or verification checklist.
+        - Keep the confirmation; mailings selected before suppression may still arrive.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: No universal minimum identifiers or verification checklist is published; postal-record matching requires clarification before automated disclosure.
+    coverage:
+      effect: suppression
+      includes: Marketing-address suppression at Deutsche Post Direkt; blocking data are retained until deletion is requested.
+      excludes: Full deletion removes the blocking record and permits recollection. Address-matching objections are a separate purpose; other postal services are not covered.
+    automation:
+      mode: manual
+      reason: User must choose suppression versus deletion and approve appropriate postal identifiers.
+    evidence:
+      - url: https://www.deutschepost.de/dam/jcr:d2c20ba5-1b40-45c3-ab68-5ab2373b4119/dp-ddp-informationen-zur-dv-fuer-av-und-adressabgleich.pdf
+        checked_on: '2026-09-29'
+        published: '2021-12-06; still linked by the official privacy page at review'
+        excerpt: Werbewiderspruch und Löschung schließen sich gegenseitig aus.
+        supports: [identity, relevance, removal, coverage]
+      - url: https://www.deutschepost.de/de/d/deutsche-post-direkt/deutsche-post-direkt-datenschutz.html
+        checked_on: '2026-09-29'
+        excerpt: Informationen zur Datenverarbeitung nach EU-Datenschutz-Grundverordnung (DSGVO) für die Bereiche Adressvermietung und Adressabgleich
+        supports: [removal, evidence_currently_linked]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Exact minimum identifiers and verification., Operational outcome untested; notice is dated 2021 but remains linked today., Parent ownership not reviewed.]
+
+  - id: cognism
+    name: Cognism
+    match_domains: [cognism.com]
+    identity:
+      legal_name: Cognism Limited and Cognism d.o.o. (joint controllers)
+      brands: [Cognism]
+      parent: null
+      official_domains: [cognism.com]
+    relevance:
+      regions: [EEA, UK]
+      category: professional
+      data_categories: [Business contacts, Professional profiles]
+      note: Relevant to professional identities, not evidence of a match for every resident.
+    removal:
+      method: email
+      destination: privacy@cognism.com
+      alternatives: [https://www.cognism.com/en/privacy-policy]
+      steps: [Request removal from the Cognism Platform., Include approved professional email aliases., Handle any identity-verification response.]
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: The policy allows additional identity checks; the form is also recommended by Cognism.
+    coverage:
+      effect: deletion_request
+      includes: The Cognism Platform and the named joint controllers.
+      excludes: Customers act as independent controllers; their retained copies are not automatically proven deleted.
+    automation:
+      mode: email_minimal
+      reason: Published email route supports an initial minimal request; additional verification pauses for review.
+    evidence:
+      - url: https://www.cognism.com/en/privacy-policy
+        checked_on: '2026-09-28'
+        published: '2026-09-03'
+        excerpt: contact us at privacy@cognism.com
+        supports: [identity, relevance, removal, required_information, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Exact identity checks depend on the request., Parent ownership not reviewed.]
+
+  - id: dealfront-leadfeeder
+    name: Dealfront / Leadfeeder
+    match_domains: [dealfront.com, leadfeeder.com]
+    identity:
+      legal_name: Dealfront Group GmbH; Dealfront Germany GmbH and Dealfront Finland Oy as named joint controllers
+      brands: [Dealfront, Leadfeeder]
+      parent: null
+      official_domains: [dealfront.com, leadfeeder.com]
+    relevance:
+      regions: [EEA, UK]
+      category: professional
+      data_categories: [Names, Job titles, Business emails, Business phone numbers, Public professional profiles]
+      note: Public-web business search index; globally operating with primary EU processing.
+    removal:
+      method: email
+      destination: privacy@leadfeeder.com
+      alternatives: [dpo@leadfeeder.com, https://www.leadfeeder.com/privacy/]
+      steps: [Identify the professional records to remove., Request erasure and objection where applicable., Keep any follow-up verification or scope clarification.]
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: The published notice does not specify a universal minimum identifier set.
+    coverage:
+      effect: deletion_request
+      includes: The search index described by Dealfront Group GmbH's notice.
+      excludes: Independent customers' records and source websites are separate.
+    automation:
+      mode: email_minimal
+      reason: Initial minimal email only, after the exact recipient is validated and approved; no alias-based rerouting.
+    evidence:
+      - url: https://marketing.dealfront.com/privacy-information-for-data-subjects-en.pdf
+        checked_on: '2026-09-30'
+        published: February 2026
+        excerpt: Dealfront Germany GmbH and Dealfront Finland Oy
+        supports: [identity, named_joint_controllers, relevance, removal, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Older sources use a different contact; existing recipients are not silently replaced., Exact verification fields., Parent ownership not reviewed.]
+
+  - id: kaspr
+    name: Kaspr
+    match_domains: [kaspr.io]
+    identity:
+      legal_name: KASPR SAS (Paris registration 843 898 396)
+      brands: [Kaspr]
+      parent: null
+      official_domains: [kaspr.io]
+    relevance:
+      regions: [France, EU, EEA, UK]
+      category: professional
+      data_categories: [Professional contacts, Business emails, Phone numbers]
+      note: French-controller B2B database populated from professional networks, directories and partners; a request-only mailbox is not a complete profile search.
+    removal:
+      method: form
+      destination: https://kaspr.privacy.saymine.io/kaspr
+      alternatives: [privacy@kaspr.io, https://www.kaspr.io/privacy-policy]
+      steps: [Follow the policy's opt-out form link., Specify broker-profile removal rather than only marketing unsubscribe., For erasure or objection the policy also publishes privacy@kaspr.io., Review any identity-confirmation follow-up before disclosing further data.]
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Exact dynamic form fields need an interactive check; policy permits further information to confirm identity.
+    coverage:
+      effect: deletion_request
+      includes: Matching Kaspr platform records.
+      excludes: No match for one email is not proof no other profile exists. Independent sources, customer copies and legally retained account records are not blanket deleted.
+    automation:
+      mode: manual
+      reason: Follow the Privacy Center workflow; no repeated generic email requests.
+    evidence:
+      - url: https://www.kaspr.io/privacy-policy
+        checked_on: '2026-09-29'
+        published: December 2025
+        excerpt: 'If you wish to exercise your rights, please write to us at: privacy@kaspr.io.'
+        supports: [identity, relevance, removal, required_information, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Exact form fields., Parent relationship not reviewed.]
+
+  - id: adsquare
+    name: Adsquare
+    match_domains: [adsquare.com]
+    identity:
+      legal_name: adsquare GmbH
+      brands: [Adsquare]
+      parent: null
+      official_domains: [adsquare.com]
+    relevance:
+      regions: [EEA, UK]
+      category: advertising
+      data_categories: [Mobile advertising IDs, Location, Audience segments]
+      note: Device-based advertising records need device identifiers rather than a name alone.
+    removal:
+      method: form
+      destination: https://adsquare.com/privacy
+      alternatives: [privacy@adsquare.com]
+      steps: [Choose a deletion or opt-out request in the Privacy Center., Supply the relevant mobile advertising ID and a reply email., Retain the result for that identifier.]
+    required_information:
+      fields: [mobile_advertising_id, email]
+      certainty: documented
+      verification: Identifier belongs to the user's device; never infer or collect it silently.
+    coverage:
+      effect: deletion_request
+      includes: Adsquare records associated with the submitted advertising ID.
+      excludes: Other devices, identifiers and partner databases are not proven covered.
+    automation:
+      mode: manual
+      reason: Requires an explicitly supplied mobile advertising ID; name/email-only requests are unsuitable.
+    evidence:
+      - url: https://adsquare.com/privacy
+        checked_on: '2026-09-28'
+        excerpt: we only require your Mobile Advertising ID and an email address
+        supports: [removal, required_information]
+      - url: https://adsquare.com/privacy/platform-privacy-policy
+        checked_on: '2026-09-28'
+        published: '2026-04-22'
+        excerpt: adsquare GmbH
+        supports: [identity, relevance, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Interactive form submission not tested., Parent ownership not reviewed.]
+
+  - id: criteo
+    name: Criteo
+    match_domains: [criteo.com]
+    identity:
+      legal_name: Criteo SA for non-US audiences; Criteo Corp. for US audiences, per the May 2026 advertising DPA
+      brands: [Criteo]
+      parent: null
+      official_domains: [criteo.com]
+    relevance:
+      regions: [EEA, UK]
+      category: advertising
+      data_categories: [Cookie IDs, Mobile advertising IDs, Hashed emails, Browsing and shopping activity]
+      note: Advertising-services notice, not the careers or corporate website account.
+    removal:
+      method: form
+      destination: https://www.criteo.com/privacy/your-rights/
+      alternatives: [dpo@criteo.com]
+      steps:
+        - Dismiss the cookie-choice overlay and open the contact link under Right to be forgotten; it opens a pop-up on this page.
+        - Choose Delete my information, not merely Opt-out of data use.
+        - Supply either email or phone, not both. Review verification before submission.
+        - The DPO email is explicitly an access and inquiry route; do not assume it replaces the deletion form.
+    required_information:
+      fields: [email_or_phone]
+      certainty: not_fully_specified
+      verification: Public pop-up inspected in an isolated browser without submission. It accepts one identifier at a time and includes reCAPTCHA; subsequent verification and all-device matching are untested.
+    coverage:
+      effect: deletion_request
+      includes: Requested advertising-data processing associated with verified identifiers.
+      excludes: Cookie opt-out is not equivalent to deletion of every identifier.
+    automation:
+      mode: manual
+      reason: Identifier verification and reCAPTCHA require a personal form handoff; no cross-device deletion or completed submission is assumed.
+    evidence:
+      - url: https://www.criteo.com/privacy/your-rights/
+        checked_on: '2026-09-29'
+        excerpt: Only one field can be used at a time.
+        supports: [removal, required_information, automation]
+      - url: https://www.criteo.com/privacy/
+        checked_on: '2026-09-29'
+        excerpt: mobile advertising identifiers
+        supports: [identity, relevance, coverage]
+      - url: https://www.criteo.com/legal/
+        checked_on: '2026-09-29'
+        excerpt: Criteo SA – Luxembourg
+        supports: [identity]
+      - url: https://www.criteo.com/wp-content/uploads/2026/05/Criteo-Data-Protection-Agreement-ENG.pdf
+        checked_on: '2026-10-01'
+        published: May 2026
+        excerpt: Criteo SA (RCS 484 786 249)
+        supports: [ads_controller_identity, US_audience_exception, independent_and_joint_controller_roles]
+      - url: https://www.criteo.com/terms-and-conditions/
+        checked_on: '2026-10-01'
+        excerpt: We updated our Terms and Conditions in May 2026.
+        supports: [current_DPA_link]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Post-submission verification., Coverage across device IDs not supplied through this form., Current group ownership not fully reviewed., Current country of incorporation differs across legal-page and May DPA registration details; neither changes the named SA controller or justifies a new recipient.]
+
+  - id: experian-uk-marketing
+    name: Experian UK Marketing Services
+    match_domains: [experian.co.uk]
+    identity:
+      legal_name: Experian Limited (company 00653331)
+      brands: [Experian Marketing Services]
+      parent: null
+      official_domains: [experian.co.uk, experianmarketingservices.digital]
+    relevance:
+      regions: [UK]
+      category: postal_marketing
+      data_categories: [Contact details, Marketing profiles, Digital marketing identifiers]
+      note: UK marketing workflow, separate from Experian credit-reference files.
+    removal:
+      method: form
+      destination: https://www.experianmarketingservices.digital/OptOut
+      alternatives: [customerservices@uk.experian.com, https://www.experian.co.uk/privacy/consumer-information-portal/opt-out-options/, https://www.experian.co.uk/consumer/statutory-report.html]
+      steps:
+        - Enter the relevant UK name/address details and choose All data processing for direct marketing, including any profiling for the broad marketing choice. Email identifiers are optional.
+        - Submit and retain confirmation. The form also uses your current IP address for digital marketing suppression; do not submit it from the app server on your behalf.
+        - Keep the minimal suppression record so newly supplied data is screened out. This does not close an Experian account or erase a credit report.
+        - For a separate credit-record concern, inspect the free statutory report and contact Experian about specific inaccuracies or applicable erasure; accurate credit records are not automatically removable.
+    required_information:
+      fields: [title, first_name, last_name, UK_postal_address, postcode, marketing_preference]
+      certainty: not_fully_specified
+      verification: Public form marks title/name/street/town/postcode required and email optional. Conditional address validation and later confirmation are untested; no identity document is automatically supplied.
+    coverage:
+      effect: suppression
+      includes: Selected Experian UK marketing processing and profiling; the broad option removes marketing data and insights while retaining minimal suppression details.
+      excludes: Credit-reference records, account communications and other companies' marketing are separate.
+    automation:
+      mode: manual
+      reason: UK address matching and the requester's own IP context require a personal form handoff; credit-record rights remain separate.
+    evidence:
+      - url: https://www.experian.co.uk/privacy/consumer-information-portal/opt-out-options/
+        checked_on: '2026-09-30'
+        excerpt: Continue to opt out form
+        supports: [official_form_link, marketing_scope]
+      - url: https://www.experianmarketingservices.digital/OptOut
+        checked_on: '2026-09-30'
+        excerpt: retaining your IP address on our suppression file
+        supports: [required_information, current_controller, coverage, browser_context]
+      - url: https://www.experian.co.uk/privacy/consumer-information-portal/data-rights/your-rights/
+        checked_on: '2026-09-30'
+        excerpt: minimum amount of personal data necessary on our suppression file
+        supports: [minimal_retention, email_alternative]
+      - url: https://www.experian.co.uk/consumer/statutory-report.html
+        checked_on: '2026-09-30'
+        excerpt: Statutory Credit Report
+        supports: [separate_credit_access_route]
+      - url: https://www.experian.co.uk/legal/crain/
+        checked_on: '2026-09-30'
+        excerpt: a consumer’s right to object does not automatically lead to a requirement for processing to stop
+        supports: [separate_credit_controller, credit_record_limits]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Conditional form validation and actual fulfilment., Credit-record remedies depend on the specific record and are outside the marketing quick win.]
+
+  - id: liveramp-uk
+    name: LiveRamp UK
+    match_domains: [liveramp.uk]
+    identity:
+      legal_name: LiveRamp UK Limited
+      brands: [LiveRamp]
+      parent: null
+      official_domains: [liveramp.uk, liveramp.com]
+    relevance:
+      regions: [UK]
+      category: advertising
+      data_categories: [Identity matching, Marketing data, Pseudonymous identifiers]
+      note: UK services; the policy links separate country notices for continental Europe.
+    removal:
+      method: form
+      destination: https://submit-irm.trustarc.eu/services/validation/fd815e29-bd78-48aa-9c9d-bb0a29835fc1
+      alternatives: [ukprivacy@liveramp.com, https://liveramp.com/uk/privacy/your-rights, https://liveramp.com/uk/privacy]
+      steps:
+        - Open LiveRamp's linked rights portal and choose the UK and Erasure Request for existing records.
+        - Review the separate Objection option if your priority is preventing future use. LiveRamp warns that erasure alone can remove the blocking record.
+        - Complete the matching and confirmation requested by the portal. The identity-document checklist for access requests is not automatically required for deletion.
+        - If the portal fails, contact ukprivacy@liveramp.com. Other countries' databases and other devices remain separate.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Matching requirements vary by service; not verified here.
+    coverage:
+      effect: deletion_request
+      includes: Personal data processed within the UK services notice.
+      excludes: Separate French, German, Italian, Dutch and Spanish notices need country-specific review.
+    automation:
+      mode: manual
+      reason: Region, identifier matching and deletion-versus-objection choice require personal review.
+    evidence:
+      - url: https://liveramp.com/uk/privacy
+        checked_on: '2026-10-04'
+        published: July 2026
+        excerpt: ukprivacy@liveramp.com
+        supports: [identity, relevance, removal, coverage]
+      - url: https://liveramp.com/uk/privacy/your-rights
+        checked_on: '2026-10-04'
+        excerpt: Erasure Request through our portal
+        supports: [official_portal_link, deletion_objection_tradeoff, access_only_verification]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Country-specific continental-European workflows., Required identifiers., Parent ownership not reviewed.]
+
+  - id: kompass
+    name: Kompass
+    match_domains: [kompass.com]
+    identity:
+      legal_name: KOMPASS INTERNATIONAL SASU
+      brands: [Kompass]
+      parent: null
+      official_domains: [kompass.com]
+    relevance:
+      regions: [EEA]
+      category: professional
+      data_categories: [Business listings, Professional contacts]
+      note: Professional directory; regional subsidiaries may process separate records.
+    removal:
+      method: email
+      destination: dpo@kompass.com
+      alternatives: [https://se.kompass.com/l/general-data-use-policy]
+      steps: [Identify the relevant business listing and personal record., Review the requested contact details before disclosure., Ask for erasure and objection to marketing.]
+    required_information:
+      fields: [full_name, email, postal_address, phone]
+      certainty: documented
+      verification: Policy requests contact details; some access or portability requests also require identity proof. Never attach ID automatically.
+    coverage:
+      effect: deletion_request
+      includes: Personal data within the applicable Kompass notice.
+      excludes: Do not promise removal of every company listing, public register or regional affiliate.
+    automation:
+      mode: manual
+      reason: Policy requests postal address and phone; these are outside minimal-email campaign consent.
+    evidence:
+      - url: https://se.kompass.com/l/general-data-use-policy
+        checked_on: '2026-09-28'
+        published: '2025-07-02'
+        excerpt: name, first name, email address, postal address, phone number
+        supports: [identity, relevance, removal, required_information]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Separate regional affiliate coverage., Whether a narrower identifier set is accepted., Parent ownership not reviewed.]
+
+  - id: crif-de
+    name: CRIF Germany
+    match_domains: [crif.de]
+    identity:
+      legal_name: CRIF GmbH
+      brands: [CRIF]
+      parent: null
+      official_domains: [crif.de]
+    relevance:
+      regions: [DE]
+      category: credit_reference
+      data_categories: [Credit-reference records, Identity and address information]
+      note: Specialist access/correction workflow, not a routine marketing-broker deletion.
+    removal:
+      method: form
+      destination: https://selbstauskunft.crif.de/
+      alternatives: [https://www.crif.de/fuer-privatpersonen/faqs-zu-meinen-daten-und-rechten/]
+      steps: [Request your personal-data report., Review the entries., Use the FAQ instructions to request correction or applicable deletion.]
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Complete the official form's current identity checks directly; no automatic document upload.
+    coverage:
+      effect: access_then_review
+      includes: CRIF GmbH personal-data report and subsequent review of disputed records.
+      excludes: Access is not deletion; lawful retention may prevent blanket erasure.
+    automation:
+      mode: blocked
+      reason: Credit-reference records require a separate access/correction workflow; never send the generic marketing deletion template.
+    evidence:
+      - url: https://www.crif.de/fuer-privatpersonen/selbstauskunft-fuer-privatpersonen/
+        checked_on: '2026-09-28'
+        excerpt: Selbstauskunft
+        supports: [identity, relevance, removal]
+      - url: https://www.crif.de/fuer-privatpersonen/faqs-zu-meinen-daten-und-rechten/
+        checked_on: '2026-09-28'
+        excerpt: Korrektur oder Löschung
+        supports: [coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Exact current form fields., Record-specific deletion eligibility., Parent ownership not reviewed.]
+
+  - id: experian-infoscore-de
+    name: Experian / infoscore Germany
+    match_domains: [experian.de]
+    identity:
+      legal_name: infoscore Consumer Data GmbH
+      brands: [Experian, infoscore]
+      parent: null
+      official_domains: [experian.de]
+    relevance:
+      regions: [DE]
+      category: credit_reference
+      data_categories: [Consumer credit information, Scores]
+      note: German consumer-credit records, not UK or US Experian marketing products.
+    removal:
+      method: form
+      destination: https://www.experian.de/selbstauskunft
+      alternatives: [icd-datenschutz@experian.com]
+      steps: [Request the free personal-data report., Identify inaccurate or outdated records., Contact the privacy team with the specific correction or deletion concern.]
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Current identity fields must be checked in the official flow; never send ID documents automatically.
+    coverage:
+      effect: access_then_review
+      includes: infoscore Consumer Data records and review of specific entries.
+      excludes: Not blanket credit-file erasure and not another Experian entity's records.
+    automation:
+      mode: blocked
+      reason: Separate access/correction workflow; the generic deletion campaign is inappropriate.
+    evidence:
+      - url: https://www.experian.de/selbstauskunft
+        checked_on: '2026-09-28'
+        excerpt: Selbstauskunft
+        supports: [removal, relevance]
+      - url: https://www.experian.de/selbstauskunft/selbstauskunft-faqs
+        checked_on: '2026-09-28'
+        excerpt: icd-datenschutz@experian.com
+        supports: [identity, removal, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Exact current form fields., Record-specific deletion eligibility., Parent ownership not reviewed.]
+
+  - id: zeotap
+    name: Zeotap GmbH — separate from Zeotap Data
+    match_domains: [zeotap.com]
+    identity:
+      legal_name: zeotap GmbH
+      brands: [Zeotap]
+      parent: null
+      official_domains: [zeotap.com]
+    relevance:
+      regions: [EEA, UK, US]
+      category: advertising
+      data_categories: [Cookie IDs, Advertising IDs, Audience data]
+      note: Software-client processing and data products have different roles. The policy directs Zeotap Data GmbH inquiries to its separate site; this guide does not merge them.
+    removal:
+      method: investigate
+      destination: https://zeotap.com/privacy-policy/
+      alternatives: [https://privacy.zeotap.com/, https://zeotapdata.net/privacy-policy/]
+      steps:
+        - For Zeotap Data audience records use its separate guide and Roqad contact.
+        - For zeotap GmbH records use the linked cookie-rights portal in the relevant browser; a missing-cookie error is not proof that no records exist.
+        - Use the applicable advertising or cookie identifier. Email-only matching can miss other records.
+    required_information:
+      fields: [advertising_id_or_cookie_id]
+      certainty: not_fully_specified
+      verification: In an isolated browser the public portal redirected to /optout/error because it could not identify a Cookie ID. The matched-cookie workflow and later verification remain unreviewed; no identifier was entered or request submitted.
+    coverage:
+      effect: needs_review
+      includes: Only zeotap GmbH processing associated with matched identifiers.
+      excludes: Zeotap Data GmbH; independent clients and partners; opt-out alone is not deletion.
+    automation:
+      mode: blocked
+      reason: Only the no-cookie error state was observable; matched-device controls and submission still need validation.
+    evidence:
+      - url: https://zeotap.com/privacy-policy/
+        checked_on: '2026-09-29'
+        excerpt: we need your Ad ID and/or Cookie ID in order to find all your data
+        supports: [identity, relevance, removal, required_information, coverage]
+    scale: null
+    review_status: needs_research
+    tested_outcome: not_tested
+    unknowns: [Matched-cookie portal controls and device verification., Software-client requests require the applicable controller., Parent ownership not reviewed.]

@@ -1,0 +1,237 @@
+schema_version: 1
+brokers:
+  - id: infotracer-records
+    name: InfoTracer public records
+    match_domains: [infotracer.com]
+    identity:
+      legal_name: InfoPay, Inc.
+      brands: [InfoTracer]
+      parent: null
+      official_domains: [infotracer.com, infopay.com]
+    relevance:
+      regions: [US records, International visitors — rights eligibility requires review]
+      category: people_search
+      data_categories: [Public records, Contact details, Property and vehicle records, Account and usage data]
+      note: Product rights differ from InfoPay's corporate-site notice and other brand databases.
+    removal:
+      method: form
+      destination: https://infotracer.com/optout/
+      alternatives: [privacy@infotracer.com]
+      steps:
+        - Follow the official page's HERE link to its brand-specific TrustArc rights form; select the relevant right and give your actual residence.
+        - Published rights focus on listed US states. Ask the privacy contact about non-US applicability rather than inventing a US address.
+        - Review matching and verification personally; the embedded form fields were unavailable in this research environment.
+        - Covered-person and expungement requests are distinct routes. Do not assert protected status or send court documents through a generic request.
+        - This does not erase other InfoPay brands, original public records or a customer subscription.
+    required_information:
+      fields: [requested_right, matching_information_as_requested]
+      certainty: not_fully_specified
+      verification: Official page permits additional matching questions; the TrustArc shell did not reveal its runtime fields. Special protected-person route separately requests name, residence, email and status.
+    coverage:
+      effect: deletion_request
+      includes: Matched InfoTracer records within the applicable rights route.
+      excludes: Other InfoPay brands, original public records, subscriptions, guaranteed non-US eligibility and records retained under exceptions.
+    automation:
+      mode: manual
+      reason: Regional eligibility, dynamic matching and personal verification require review.
+    evidence:
+      - url: https://infotracer.com/privacy/
+        checked_on: '2026-10-01'
+        published: '2026-08-19'
+        excerpt: provided by InfoPay, Inc.
+        supports: [product_controller, public_record_scope, regional_rights]
+      - url: https://infotracer.com/optout/
+        checked_on: '2026-10-01'
+        excerpt: Exercising Your Data Subject Rights
+        supports: [brand_specific_form, special_request_boundaries, additional_matching]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Dynamic form fields and submission untested., Non-US record matching and eligibility require clarification., Parent and product-specific scale unreviewed.]
+  - id: recordsfinder-records
+    name: RecordsFinder public records
+    match_domains: [recordsfinder.com]
+    identity:
+      legal_name: InfoPay, Inc. and Globicom (as named in the product notice)
+      brands: [RecordsFinder]
+      parent: null
+      official_domains: [recordsfinder.com]
+    relevance:
+      regions: [US records, International visitors — rights eligibility requires review]
+      category: people_search
+      data_categories: [Public records, Contact details, Property records, Account and usage data]
+      note: Both operators are named; this is not proof of a legal merger or all-InfoPay removal.
+    removal:
+      method: form
+      destination: https://recordsfinder.com/optout/
+      alternatives: [privacy@recordsfinder.com]
+      steps:
+        - Follow HERE on the official page to the RecordsFinder-specific TrustArc form, not the InfoTracer brand form.
+        - Select the requested right and your actual residence. Published rights focus on listed US states; clarify non-US applicability with the privacy contact.
+        - Personally review further matching questions and verification; runtime form fields remain uninspected.
+        - Protected-person and expungement instructions are separate and must not be claimed automatically.
+        - Verify the outcome for this product. Other InfoPay databases and original public records remain separate.
+    required_information:
+      fields: [requested_right, matching_information_as_requested]
+      certainty: not_fully_specified
+      verification: Further matching questions may be required; brand-specific TrustArc fields and runtime verification are untested.
+    coverage:
+      effect: deletion_request
+      includes: Matched RecordsFinder product records within the applicable rights route.
+      excludes: Other brands, original public records, account cancellation, automatic protected-person eligibility and guaranteed non-US acceptance.
+    automation:
+      mode: manual
+      reason: Region, product matching and further verification require review.
+    evidence:
+      - url: https://recordsfinder.com/privacy/
+        checked_on: '2026-10-01'
+        published: '2026-08-19'
+        excerpt: InfoPay, Inc. and Globicom
+        supports: [current_named_operators, product_scope]
+      - url: https://recordsfinder.com/optout/
+        checked_on: '2026-10-01'
+        excerpt: privacy@recordsfinder.com
+        supports: [rights_form_and_contact, regional_and_special_request_boundaries]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Runtime form fields and fulfilment untested., Current corporate ownership percentages and comparable scale unreviewed., Non-US eligibility needs clarification.]
+  - id: kids-live-safe-records
+    name: Kids Live Safe people reports
+    match_domains: [kidslivesafe.com]
+    identity:
+      legal_name: Scalable Commerce LLC
+      brands: [Kids Live Safe]
+      parent: null
+      official_domains: [kidslivesafe.com]
+    relevance:
+      regions: [US public-record matching, Non-US matching not established]
+      category: people_search
+      data_categories: [Public-record reports, Names and addresses, Age, Contact identifiers]
+      note: Free report suppression needs no membership; avoid subscription or account changes.
+    removal:
+      method: form
+      destination: https://www.kidslivesafe.com/help-center/privacy-requests
+      alternatives: []
+      steps:
+        - Choose the removal request, enter the name, city, state, ZIP, age and confirmation email matching your record, then complete human verification personally.
+        - Select only your matching record. Complete the emailed verification and retain the eventual processing confirmation.
+        - Recheck after processing; the provider says changed names or addresses can reappear and require another request.
+        - Membership is not required. Customer ID appears with conditional validation text; do not invent an ID or subscribe to remove a public report.
+        - The request applies to Kids Live Safe only; use Quick Public Records separately. If you cannot truthfully complete the US-style fields, seek clarification rather than guessing.
+    required_information:
+      fields: [first_name, last_name, city, state, postal_code, age, email, requested_right]
+      certainty: not_fully_specified
+      verification: Human check and emailed confirmation are documented. Customer ID conditional visibility and non-US field acceptance were not tested.
+    coverage:
+      effect: suppression
+      includes: Matching Kids Live Safe people-report search results.
+      excludes: Original public records, future changed records, Quick Public Records and subscription cancellation.
+    automation:
+      mode: manual
+      reason: Personal record selection, human verification and email confirmation require user participation.
+    evidence:
+      - url: https://www.kidslivesafe.com/help-center/privacy
+        checked_on: '2026-10-01'
+        published: '2026-01-29'
+        excerpt: owned and operated by Scalable Commerce LLC
+        supports: [legal_operator, separate_website_data_scope]
+      - url: https://www.kidslivesafe.com/help-center/privacy-requests
+        checked_on: '2026-10-01'
+        excerpt: you do not have to be a Kids Live Safe member
+        supports: [free_record_suppression, matching_fields, human_and_email_verification, recurrence]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Direct retrieval was location-blocked; public search retrieval exposed the official page., Conditional fields and live fulfilment untested., Parent and comparable size unreviewed.]
+  - id: quick-public-records
+    name: Quick Public Records reports
+    match_domains: [quickpublicrecords.com]
+    identity:
+      legal_name: Scalable Commerce LLC
+      brands: [Quick Public Records]
+      parent: null
+      official_domains: [quickpublicrecords.com]
+    relevance:
+      regions: [US public-record matching, Non-US matching not established]
+      category: people_search
+      data_categories: [Public-record reports, Names and addresses, Age, Contact identifiers]
+      note: A separate brand request, not an extra independent database automatically covered by Kids Live Safe.
+    removal:
+      method: form
+      destination: https://www.quickpublicrecords.com/help-center/privacy-requests
+      alternatives: []
+      steps:
+        - Choose removal and provide your matching name, city, state, ZIP, age and confirmation email; personally complete the human check and record selection.
+        - Complete emailed verification, retain processing confirmation, then recheck the matching report.
+        - No paid membership is needed. Customer ID has conditional validation text; do not invent an ID or create a subscription.
+        - Changed records may reappear. This does not cover Kids Live Safe, source public records or account cancellation.
+        - Non-US matching is untested; do not invent residence details to pass the form.
+    required_information:
+      fields: [first_name, last_name, city, state, postal_code, age, email, requested_right]
+      certainty: not_fully_specified
+      verification: Human check and emailed confirmation; conditional Customer ID requirements and non-US acceptance untested.
+    coverage:
+      effect: suppression
+      includes: Matching Quick Public Records people-report search results.
+      excludes: Kids Live Safe, original public records, future changed records and subscription cancellation.
+    automation:
+      mode: manual
+      reason: Personal matching, human verification and confirmation cannot be inferred from an email alone.
+    evidence:
+      - url: https://www.quickpublicrecords.com/help-center/privacy-requests
+        checked_on: '2026-10-01'
+        excerpt: Scalable Commerce LLC
+        supports: [operator, matching_fields, free_removal, human_and_email_verification, recurrence]
+      - url: https://www.quickpublicrecords.com/help-center/privacy
+        checked_on: '2026-10-01'
+        excerpt: Privacy Policy
+        supports: [separate_brand_policy]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Direct retrieval was blocked; official form text was available through public search retrieval., Conditional fields and fulfilment untested., Parent and comparable scale unreviewed.]
+  - id: radaris-domain-transfer
+    name: Radaris — former removal route unavailable
+    match_domains: [radaris.com]
+    identity:
+      legal_name: Former Radaris operator unresolved; current domain notice names Atlas Data Privacy Corporation
+      brands: [Radaris]
+      parent: null
+      official_domains: [radaris.com]
+    relevance:
+      regions: [Historical people-search service — current data custody unresolved]
+      category: people_search
+      data_categories: [Historical public profiles and contact records]
+      note: The current domain-transfer notice is not proof that the former database was deleted.
+    removal:
+      method: investigate
+      destination: https://radaris.com/
+      alternatives: []
+      steps:
+        - Do not submit personal information to the former removal URL; it now serves a domain-transfer notice.
+        - Establish current data custody and a valid rights route before enabling a request. Do not treat the new domain holder as the former database controller.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: No current removal form or database-controller matching requirements established.
+    coverage:
+      effect: needs_review
+      includes: Research into the former Radaris database and current route only.
+      excludes: No deletion, absence of exposure or new-controller responsibility established by domain transfer.
+    automation:
+      mode: blocked
+      reason: Former privacy and removal URLs now return a domain-transfer notice instead of a usable rights workflow.
+    evidence:
+      - url: https://radaris.com/page/privacy
+        checked_on: '2026-10-01'
+        excerpt: This Domain Has Been Transferred by Court Order
+        supports: [current_domain_notice_not_deletion_proof]
+      - url: https://radaris.com/control/privacy
+        checked_on: '2026-10-01'
+        excerpt: no longer under the control of its former operators
+        supports: [former_removal_url_no_longer_a_form]
+    scale: null
+    review_status: needs_research
+    tested_outcome: not_tested
+    unknowns: [Current custody of the former database and valid removal destination unresolved., Domain-holder notice is not independent proof of the underlying legal outcome or personal deletion.]

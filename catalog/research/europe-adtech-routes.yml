@@ -1,0 +1,135 @@
+schema_version: 1
+brokers:
+  - id: awin-consumers
+    name: Awin consumer tracking
+    match_domains: [awin.com]
+    identity:
+      legal_name: AWIN AG
+      brands: [Awin]
+      parent: null
+      official_domains: [awin.com]
+    relevance:
+      regions: [EEA, UK, Global]
+      category: advertising
+      data_categories: [Affiliate clicks, Transaction details, Cookie and device identifiers]
+      note: Affiliate attribution includes cross-device links; not primarily a named consumer directory.
+    removal:
+      method: email
+      destination: global-privacy@awin.com
+      alternatives: []
+      steps:
+        - Ask the DPO to identify the relevant consumer-tracking records and their matching requirements.
+        - Review any requested device/IP information personally, then request deletion or object to the relevant processing.
+        - Contact the relevant merchant or publisher separately for records it controls; retain each response.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Policy says additional data such as IP address or device ID may be needed; no complete universal checklist is published.
+    coverage:
+      effect: deletion_request
+      includes: Matched Awin consumer-tracking records, subject to applicable retention.
+      excludes: Merchant/publisher records and unrelated devices are separate; a name/email-only no-match cannot establish absence.
+    automation:
+      mode: manual
+      reason: Resolve pseudonymous matching first; no automatic device/IP collection or disclosure.
+    evidence:
+      - url: https://www.awin.com/gb/privacy
+        checked_on: '2026-09-30'
+        excerpt: for example your IP address, or device ID
+        supports: [legal_identity, consumer_scope, DPO_route, matching_limits]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Matching and verification untested., Parent ownership unreviewed.]
+
+  - id: audiencerate
+    name: Audiencerate
+    match_domains: [audiencerate.com]
+    identity:
+      legal_name: Audiencerate Ltd
+      brands: [Audiencerate]
+      parent: null
+      official_domains: [audiencerate.com]
+    relevance:
+      regions: [EEA, UK, US, Global]
+      category: advertising
+      data_categories: [Cookie and platform IDs, Browsing interests, Device links, Location]
+      note: Advertising-controller and customer-data-platform processor roles differ.
+    removal:
+      method: email
+      destination: privacy@audiencerate.com
+      alternatives: [dpo@audiencerate.com, https://www.audiencerate.com/privacy/]
+      steps:
+        - Ask the privacy team which identifiers are needed to locate your advertising records, then request deletion or withdrawal.
+        - Review additional identifiers personally. Name/email alone may not match pseudonymous profiles.
+        - The policy's browser opt-out disables its profiling cookies; it is separate from deletion.
+        - For customer-platform data, identify and contact the relevant customer controller.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: No complete deletion matching checklist is published; cookie/device controls and verification are untested.
+    coverage:
+      effect: deletion_request
+      includes: Matched advertising records controlled by Audiencerate.
+      excludes: Independent data sources and customer-controlled platform records; browser opt-out is not historical erasure.
+    automation:
+      mode: manual
+      reason: Controller scope and pseudonymous matching need personal review before sending identifiers.
+    evidence:
+      - url: https://www.audiencerate.com/privacy/
+        checked_on: '2026-09-30'
+        excerpt: privacy@audiencerate.com
+        supports: [identity, product_roles, data_categories, rights_route, opt_out_limit]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Live matching and fulfilment untested., Parent ownership unreviewed.]
+
+  - id: adjoe-products
+    name: adjoe advertising / Playtime
+    match_domains: [adjoe.io, adjoe.zone]
+    identity:
+      legal_name: adjoe GmbH
+      brands: [adjoe Ads Network, adjoe Ads Exchange, Playtime]
+      parent: null
+      official_domains: [adjoe.io, adjoe.zone]
+    relevance:
+      regions: [EEA, Global]
+      category: advertising
+      data_categories: [Device identifiers, App activity and purchases, Advertising profiles, Playtime rewards]
+      note: Ads products and Playtime rewards have separate published instructions.
+    removal:
+      method: manual
+      destination: https://legal.adjoe.zone/programmatic/adjoe-data-privacy-latest.html
+      alternatives: [privacy@adjoe.io, dataprivacy@adjoe.zone, https://adjoe.zone/legal/en/data_privacy.html]
+      steps:
+        - For Ads Network or Exchange, request deletion at privacy@adjoe.io and identify the relevant app; controller/processor roles depend on that app.
+        - For Playtime, contact dataprivacy@adjoe.zone about withdrawal and deletion. Withdrawal ends Playtime use; review this consequence first.
+        - Review device-matching or identity-verification requests personally. Do not substitute the website-marketing policy.
+        - Keep the response. Device advertising settings are a separate opt-out, not proof that historical records were erased.
+    required_information:
+      fields: [relevant_product_and_app]
+      certainty: not_fully_specified
+      verification: Products use device identifiers; no complete request checklist is published. Playtime may request identity proof and further details.
+    coverage:
+      effect: deletion_request
+      includes: Matched records in the identified adjoe product, subject to retention or blocking requirements.
+      excludes: Other apps, independent advertising partners and retained legal records are not blanket deletion coverage.
+    automation:
+      mode: manual
+      reason: Product selection, device matching and possible termination of Playtime require personal review.
+    evidence:
+      - url: https://legal.adjoe.zone/programmatic/adjoe-data-privacy-latest.html
+        checked_on: '2026-09-30'
+        published: July 2026
+        excerpt: via e-mail to privacy@adjoe.io
+        supports: [identity, ads_product_scope, direct_email_route, processor_distinction, matching_limit]
+      - url: https://adjoe.zone/legal/en/data_privacy.html
+        checked_on: '2026-09-30'
+        published: '2023-12-20'
+        excerpt: Further use by Playtime is no longer possible after the withdrawal of your consent.
+        supports: [Playtime_contact, withdrawal_consequence, deletion_or_blocking, verification]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Matching and submission untested., Playtime policy is older but still published., Parent ownership unreviewed.]

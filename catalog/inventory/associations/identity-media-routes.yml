@@ -1,0 +1,20 @@
+schema_version: 1
+associations:
+  - guide_id: cifas-fraud-records
+    records: ["community:cifas"]
+    rationale: Exact Cifas identity and official DSAR/dispute process. This is a specialist access-then-dispute route rather than ordinary marketing erasure or a completed quick win.
+  - guide_id: freewheel-platform
+    records: ["live:freewheel-media-inc"]
+    rationale: Exact FreeWheel Media Inc. controller named in the reviewed platform policy; retain the controller/processor and device-matching boundaries rather than assuming a name-and-email removal.
+  - guide_id: registry-growbots-inc
+    records: ["community:growbots", "live:growbots-inc"]
+    rationale: These Growbots Inc.-named product rows use the same official Growbots domain. The current guide expressly identifies Bushwick Growbots LLC as current operator and supplies its product removal route; historical entity continuity and unrelated acquired records are not implicitly claimed.
+  - guide_id: lexisnexis-risk-uk
+    records: ["live:lexisnexis-risk-solutions-fl-inc"]
+    rationale: The current Business Services notice expressly lists the FL Inc. controller and separate US/non-US routes. This maps only that product scope and preserves the US-specific portal; the unrelated LexisNexis legal-content inventory entry is not merged.
+  - guide_id: quantyoo-media
+    records: ["community:quantyoo"]
+    rationale: Current imprint and technology/privacy notices identify the exact Quantyoo operator and consent-linked media profiles, with separate partner and browser-only scope.
+  - guide_id: equifax-work-number
+    records: ["live:equifax-workforce-solutions-llc"]
+    rationale: Current Work Number terms identify Equifax Workforce Solutions LLC; the guide is an access-freeze choice for this employment product, not deletion across Equifax or independent employers.

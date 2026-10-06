@@ -1,0 +1,14 @@
+schema_version: 1
+associations:
+  - guide_id: miq-advertising-context
+    records: [community:wearemiq]
+    rationale: Current group notice confirms MiQ and its European DPO route; entity and identifier context remain explicit before disclosure.
+  - guide_id: knorex-advertising-context
+    records: [community:knorex]
+    rationale: Current Knorex services notice identifies platform data and customer-controller boundaries, not a universal name-only deletion mailbox.
+  - guide_id: iqm-advertising-identifiers
+    records: [community:iqm]
+    rationale: Current platform notice links the inspected OneTrust form with optional technical identifiers and conditional account-loss warning.
+  - guide_id: yoc-visx-browser
+    records: [community:yoc-ag]
+    rationale: Current YOC AG website and VIS.X ad-explanation page establish the entity and browser preference route without asserting historical deletion.

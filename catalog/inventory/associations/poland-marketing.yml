@@ -1,0 +1,8 @@
+schema_version: 1
+associations:
+  - guide_id: cloud-technologies-pl
+    records: [discovery:pl-cloud-technologies]
+    rationale: The advertising notice identifies Polish Cloud Technologies SA and its registration number; OnAudience Ltd and OAN remain separate controller records.
+  - guide_id: selectivv-pl
+    records: [discovery:pl-selectivv]
+    rationale: The Polish notice names Selectivv's legal identity and expressly covers external mobile advertising data and profiling, unlike its truncated English page.

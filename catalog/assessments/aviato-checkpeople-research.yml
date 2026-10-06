@@ -1,0 +1,26 @@
+schema_version: 1
+assessments:
+  - record: live:bachmanity-inc
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: Aviato's official notice identifies Bachmanity Inc but is scoped to website/app interactions and excludes offline or other collection. Its contact inbox is specified for Nevada sale opt-outs and policy questions, not an established European third-party professional-profile removal workflow.
+    evidence:
+      - url: https://www.aviato.co/legal/privacy
+        checked_on: '2026-10-01'
+        excerpt: Bachmanity, Inc.
+        supports: [identity, website_policy_scope, limited_email_purpose]
+    unresolved: [Find a product-data notice and matching/removal route for non-user professional profiles; confirm European eligibility and identifiers.]
+  - record: live:checkpeople-llc
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: Official privacy-policy and opt-out pages returned a security-verification barrier during public HTTP inspection; web retrieval also failed. Third-party how-to articles are not sufficient to validate current matching, residence and account-deletion consequences, so no automatic route is enabled.
+    evidence:
+      - url: https://www.checkpeople.com/company/privacy-policy
+        checked_on: '2026-10-01'
+        excerpt: Performing security verification
+        supports: [official_page_access_barrier]
+      - url: https://www.checkpeople.com/opt-out
+        checked_on: '2026-10-01'
+        excerpt: Performing security verification
+        supports: [form_access_barrier]
+    unresolved: [Read the current official policy and exact privacy request instructions when accessible; distinguish public-listing suppression from paid-account deletion.]

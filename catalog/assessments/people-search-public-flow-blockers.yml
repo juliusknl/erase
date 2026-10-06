@@ -1,0 +1,54 @@
+schema_version: 1
+assessments:
+  - record: live:family-tree-now-llc
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: The registered Family Tree Now entity identifies its own privacy route, but the public opt-out page returned HTTP 403 during this review. Do not substitute an old registry contact or a third-party removal article for current matching, verification and geographic requirements. This is an unverified workflow, not an exclusion or a deletion outcome.
+    evidence:
+      - url: https://www.familytreenow.com/optout
+        checked_on: '2026-10-01'
+        excerpt: 'Research observation: HTTP 403; no removal instructions retrieved.'
+        supports: [observed_http_403, instructions_not_retrieved]
+      - url: https://cppa.ca.gov/data_broker_registry/registry.csv
+        checked_on: '2026-10-01'
+        excerpt: Family Tree Now, LLC
+        supports: [registered_identity, discovery_only]
+    unresolved: [Obtain the current official opt-out steps and matching/verification requirements without bypassing access controls; do not infer non-US applicability.]
+  - record: live:fastpeoplesearch
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: FastPeopleSearch's catalogued removal page returned HTTP 403. Secondary descriptions disagree on the current path. Neither a guessed /optout route nor a speculative association to a similarly marketed legal entity is sufficient for a verified workflow.
+    evidence:
+      - url: https://www.fastpeoplesearch.com/removal
+        checked_on: '2026-10-01'
+        excerpt: 'Research observation: HTTP 403; no removal instructions retrieved.'
+        supports: [observed_http_403, instructions_not_retrieved]
+    unresolved: [Verify the current official controller and removal URL, geographic eligibility, profile matching and confirmation steps.]
+  - record: live:nuwber-inc
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: Nuwber Inc is identifiable in the official registry, but its public removal URL failed to connect in this review. Registered support contact and historical suppression counts do not establish the live form's required fields or successful removal. Preserve this as a research exception rather than inventing an email recipe.
+    evidence:
+      - url: https://nuwber.com/removal/link
+        checked_on: '2026-10-01'
+        excerpt: 'Research observation: connection failure; no page body retrieved.'
+        supports: [observed_connection_failure, instructions_not_retrieved]
+      - url: https://cppa.ca.gov/data_broker_registry/registry.csv
+        checked_on: '2026-10-01'
+        excerpt: Nuwber Inc
+        supports: [registered_identity, discovery_only]
+    unresolved: [Retrieve current official profile-removal instructions and distinguish email confirmation from deletion confirmation.]
+  - record: live:social-catfish-llc
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: Social Catfish LLC's opt-out page returned an HTTP 403 challenge. Registry contact changes are not proof that a general business mailbox accepts every data-subject request. No interactive form was submitted or challenge bypassed, and no user data was sent.
+    evidence:
+      - url: https://socialcatfish.com/opt-out/
+        checked_on: '2026-10-01'
+        excerpt: Just a moment
+        supports: [observed_http_403_challenge, instructions_not_retrieved]
+      - url: https://cppa.ca.gov/data_broker_registry/registry.csv
+        checked_on: '2026-10-01'
+        excerpt: Social Catfish, LLC
+        supports: [registered_identity, discovery_only]
+    unresolved: [Verify current profile matching, identity checks, accepted residence and actual completion semantics from official instructions.]

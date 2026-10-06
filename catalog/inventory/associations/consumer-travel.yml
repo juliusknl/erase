@@ -1,0 +1,11 @@
+schema_version: 1
+associations:
+  - guide_id: spy-dialer
+    records: [live:spy-labs-adco-llc]
+    rationale: Reviewed current consumer notice explicitly names Spy Labs Adco LLC on the registry domain; this exact operator match does not establish succession from historical Spy Dialer Inc.
+  - guide_id: ach-address-clearing-house
+    records: [live:ach-address-clearing-house]
+    rationale: Exact ACH official domain and policy name match the registry record; US-state scope and postal matching are documented without inferring European applicability.
+  - guide_id: airlines-reporting-corporation
+    records: [live:airlines-reporting-corporation]
+    rationale: Official ARC policy names Airlines Reporting Corporation and explicitly describes European passenger rights and payment-card last-four matching requirements.

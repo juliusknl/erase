@@ -1,0 +1,11 @@
+schema_version: 1
+associations:
+  - guide_id: maxmind-services
+    records: [live:maxmind-inc]
+    rationale: Exact current MaxMind Inc identity and public deletion form; controller/processor, per-email and optional-IP boundaries stay explicit.
+  - guide_id: fideo-identity
+    records: [live:fideo-intelligence-inc]
+    rationale: Exact Fideo Intelligence Inc identity; current published notice expressly covers proprietary Consumer graph records separately from customer-controlled data.
+  - guide_id: mastercard-ekata-identity
+    records: [live:ekata-inc]
+    rationale: Mastercard's Identity FAQ and agreements explicitly describe Ekata services, while the June 2026 notice now names regional Mastercard controllers and a new mailbox. This routes the product candidate without assuming the old Ekata corporation and current controller are the same entity or covering all payment records.

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "assessments": [
+    {
+      "record": "community:yourdata-de",
+      "disposition": "out_of_scope",
+      "checked_on": "2026-09-30",
+      "rationale": "Exclude from the default independent-database campaign: yourdata explicitly describes itself as a client-data processor/integrator and says it is not a company-data provider. This is not a claim that it holds no personal data; requests about a client's records belong with the relevant controller.",
+      "evidence": [
+        {
+          "url": "https://www.yourdata.de/unternehmen/",
+          "checked_on": "2026-09-30",
+          "published": "Not specified",
+          "excerpt": "Dienstleister für Auftragsdatenverarbeitung",
+          "supports": [
+            "processor_service_scope"
+          ]
+        },
+        {
+          "url": "https://www.yourdata.de/datenanreicherung/",
+          "checked_on": "2026-09-30",
+          "published": "Not specified",
+          "excerpt": "yourdata ist kein Anbieter von Firmendaten",
+          "supports": [
+            "not_independent_data_provider"
+          ]
+        },
+        {
+          "url": "https://www.yourdata.de/datenschutzerklaerung/",
+          "checked_on": "2026-09-30",
+          "published": "Not specified",
+          "excerpt": "yourdata GmbH",
+          "supports": [
+            "identity",
+            "own_site_rights"
+          ]
+        }
+      ],
+      "unresolved": []
+    }
+  ]
+}

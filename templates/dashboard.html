@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Home · erase{% endblock %}
+{% block content %}
+<header class="workspace-head dashboard-head"><div><h1>Dashboard</h1></div><div class="dashboard-header-actions"><a class="design-preview-link" href="/appearance">Appearance</a>{% if setup_pending %}<a class="button" href="/setup">Continue setup</a>{% endif %}<a id="gmail-connection" class="gmail-connection" data-connected="{{ 'true' if automation.mailbox == 'Connected' else 'false' }}" href="{{ '/campaign#mailbox-heading' if automation.mailbox == 'Connected' else '/gmail/connect' }}"><span class="gmail-connection-dot" aria-hidden="true"></span><span id="gmail-connection-label">{{ 'Gmail connected' if automation.mailbox == 'Connected' else 'Connect Gmail' }}</span></a></div></header>
+{% if failed_jobs %}<div class="notice danger"><strong>Some background work needs attention</strong><span>{{ failed_jobs }} job{{ '' if failed_jobs == 1 else 's' }} could not finish. <a href="/campaign">Check your plan</a>.</span></div>{% endif %}
+<section class="campaign-card automation-strip" data-state="{{ automation.state }}" aria-label="Campaign status">
+    <div class="automation-state"><span class="signal-ring" aria-hidden="true"></span><strong id="automation-title">{{ automation.title }}</strong></div>
+    {% include 'automation_controls.html' %}
+    <a id="attention-shortcut" class="attention-count" href="/cases?view=attention" data-needed="{{ 'true' if attention_items else 'false' }}">{{ (attention_items | length ~ (' request needs you' if attention_items | length == 1 else ' requests need you') ~ ' →') if attention_items else 'Nothing needs you' }}</a>
+    <p id="automation-instruction" {% if automation.state != 'blocked' %}hidden{% endif %}>{{ automation.instruction }}</p>
+    <div class="sending-activity" aria-label="Email activity">
+      <span id="sending-feed-label" class="sending-feed-label">{{ sending_activity.label }}</span>
+      <ol id="sending-feed" class="sending-feed" aria-labelledby="sending-feed-label">{% for entry in sending_activity.entries %}<li data-event-id="{{ entry.id }}"><time datetime="{{ entry.sent_at }}" title="{{ entry.sent_at }}">{{ entry.time }}</time><span><strong>{{ entry.broker }}</strong><span class="send-event-message">{{ entry.message }}</span></span></li>{% endfor %}</ol>
+      <span id="sending-empty" {% if sending_activity.entries %}hidden{% endif %}>Sent requests will appear here.</span>
+      <span id="sending-next" {% if not sending_activity.next_step %}hidden{% endif %}>{{ sending_activity.next_step }}</span>
+    </div>
+</section>
+<p id="status-refresh-error" class="notice danger" role="status" hidden>Live status is unavailable; displayed figures may be out of date. Check that the local app is running, then refresh this page.</p><script src="/static/dashboard-status.js?v={{ css_version }}" defer></script>
+{% include 'progress_chart.html' %}
+<section class="metrics progress-metrics" aria-label="Request progress">
+  <a class="metric-card" href="/cases?view=sent"><span class="metric-label">Requests sent</span><strong id="sent-request-count">{{ sent_requests }}</strong><small>Distinct requests sent by the app</small></a>
+  <a class="metric-card" href="/cases?state=done"><span class="metric-label">Requests completed</span><strong id="completed-request-count">{{ counts.get('removed', 0) + counts.get('done', 0) + counts.get('not_found', 0) }}</strong><small>Includes your completed steps and no record found</small></a>
+</section>
+{% include 'scale_progress.html' %}
+<section class="dashboard-columns">
+  <article class="card dashboard-quick-wins" id="quick-wins">
+    <div class="section-head"><div><div class="quick-wins-heading"><p class="eyebrow">Quick wins</p>{% include 'quick_wins_info.html' %}</div><h2>A few steps. Less exposure.</h2></div><a href="/quick-wins">View all</a></div>
+    {% if not action_country %}<p><a href="/onboarding#country">Add your country in Profile</a> for relevant suggestions.</p>{% endif %}
+    <div class="quick-win-list">
+      {% for item in quick_wins %}<div class="quick-win" id="suggestion-{{ item.id }}">
+        <div class="quick-win-copy"><strong>{{ item.name }}</strong>{% if item.about %}<p>{{ item.about }}</p>{% endif %}<p class="quick-win-instruction">{{ item.description }}</p></div>
+        {% with action_return='/dashboard' %}{% include 'quick_win_buttons.html' %}{% endwith %}
+        <div class="quick-win-extras"><details><summary>Details</summary>{% if item.steps %}<ol>{% for step in item.steps %}<li>{{ step }}</li>{% endfor %}</ol>{% endif %}{% if item.fields %}<p>Information needed: {{ item.fields | join(', ') | replace('_', ' ') }}.</p>{% endif %}<p>{{ item.verification }}</p><p>{{ item.scope }}</p><a href="{{ item.source }}" target="_blank" rel="noreferrer noopener">Source · checked {{ item.checked_at }}</a></details>{% with action_return='/dashboard' %}{% include 'action_options.html' %}{% endwith %}</div>
+      </div>{% endfor %}
+    </div>
+    {% if not quick_wins and action_country %}<p class="empty-inline">You’re caught up for now. Your approved email plan is separate; this is not a claim of complete coverage.</p><form method="post" action="/recommendations/more"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="secondary">Do more</button></form>{% endif %}
+  </article>
+  <article class="card dashboard-requests">
+    <div class="section-head"><div><p class="eyebrow">Requests</p><h2>Recently updated</h2></div><a href="/cases">View all</a></div>
+    {% if cases %}<ul class="recent-request-list" aria-label="Recently updated requests">{% for case in cases %}<li><a class="recent-request" href="/cases/{{ case.id }}"><span class="recent-request-copy"><strong>{{ case.broker.name }}</strong><span class="recent-request-status">{{ 'Route needs review' if case.state in ['needs_action', 'delivery_failed'] and case.id not in attention_case_ids else ('Done' if case.state == 'not_found' else case.state | state_label) }}</span></span><span class="recent-request-time">{{ request_updated[case.id] | relative_time }}</span><span class="recent-request-arrow" aria-hidden="true">↗</span></a></li>{% endfor %}</ul>{% else %}<p class="empty">No requests yet. Start with your email plan.</p>{% endif %}
+  </article>
+</section>
+{% endblock %}

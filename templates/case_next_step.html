@@ -1,0 +1,39 @@
+{% set item = selected_action %}{% set action = item.record %}
+{% set review_url = '/cases/' ~ case.id ~ '?tab=details&step=' ~ action.id ~ '#message-review' %}
+<section class="card broker-next-step" id="next-step"><span id="action-{{ action.id }}"></span><p class="eyebrow">Next step</p>
+{% if request.query_params.get('step_saved') %}<p role="status">Saved: this request needs another step. Nothing has been sent.</p>{% endif %}
+{% if item.email_only %}
+  <h2>Handle this in email</h2><p>The broker is asking for identity proof or authorization. The app doesn’t support this step yet. Check the sender and respond directly in your email.</p>
+  <p><a class="button" href="{{ item.gmail_url }}" target="_blank" rel="noopener noreferrer">Open message in Gmail ↗</a></p>
+{% elif item.matching_mailbox and action.kind != 'unverified_sender' %}
+  <h2>Send from the email they need to check</h2>
+  <p>The broker needs a request from the address associated with your records. Open your email, switch to that address and send the request there. Replying from your dedicated erase inbox will not complete this check.</p>
+  <p><a class="button" href="{{ item.gmail_url }}" target="_blank" rel="noopener noreferrer">Open message in Gmail ↗</a></p>
+  {% if action.kind == 'next_step' %}<form method="post" action="/actions/{{ action.id }}/resolve/approve"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="return_to" value="{{ action_return }}"><input type="hidden" name="outcome" value="external_email_sent"><button class="secondary">I sent it from that address</button></form><p class="footnote">Replies to another inbox must be checked there. This records your step, not deletion.</p>{% endif %}
+{% elif action.kind in ['form_required', 'browser_challenge', 'next_step', 'ambiguous_reply'] %}
+  <h2>{{ 'Complete the broker’s form' if item.action_url else 'Respond to the broker' }}</h2>
+  <p>{{ 'Submit the form, then record it here. We’ll keep track of the reply.' if item.action_url else 'Read their message, then review the reply below.' }}</p>
+  {% if item.form_steps %}<ol>{% for instruction in item.form_steps %}<li>{{ instruction }}</li>{% endfor %}</ol>{% endif %}
+  {% if item.action_url %}<div class="button-row"><a class="button" href="{{ item.action_url }}" target="_blank" rel="noopener noreferrer">Open broker form ↗</a><form method="post" action="/actions/{{ action.id }}/resolve/approve"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="return_to" value="{{ action_return }}"><input type="hidden" name="outcome" value="form_submitted"><button class="secondary">I submitted the form</button></form></div><p class="footnote">Submitting a form does not confirm deletion.</p>{% endif %}
+{% elif action.kind == 'information_requested' %}
+  <h2>Review prepared reply</h2><p>The broker needs more information. Check the draft below and fill in any missing details.</p>
+{% elif action.kind == 'confirmation_link' %}
+  <h2>Confirm your request</h2><p>Complete the confirmation step in their email, then record it here.</p>
+  {% if item.action_url %}<p><a class="button" href="{{ item.action_url }}" target="_blank" rel="noopener noreferrer">Open confirmation page ↗</a></p>{% endif %}
+  <form method="post" action="/actions/{{ action.id }}/resolve/approve"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="return_to" value="{{ action_return }}"><input type="hidden" name="outcome" value="email_confirmed"><button class="secondary">I confirmed my request</button></form>
+{% elif action.kind in ['unverified_sender', 'ambiguous_reply'] and not item.message_body %}
+  <h2>Check the original reply in Gmail</h2><p>We can’t show this message’s content. Don’t classify it or send more information without reading the original.</p><a class="button secondary" href="https://mail.google.com/" target="_blank" rel="noopener noreferrer">Open Gmail ↗</a>
+{% elif action.kind == 'unverified_sender' %}
+  <h2>Check the sender before continuing</h2><p>This message asks you to take a step, but we couldn’t verify its sender. Compare the original with the broker’s official contact in Details. Continuing lets the app interpret this message; it does not send a reply.</p>
+  <p><a href="{{ item.gmail_url }}" target="_blank" rel="noopener noreferrer">Open message in Gmail ↗</a></p>
+  <form method="post" action="/actions/{{ action.id }}/resolve/approve"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="return_to" value="{{ action_return }}"><label class="consent-check"><input type="checkbox" required> I checked this message is from the broker or its authorized support team.</label><button>Recognize sender and continue</button></form>
+  <form method="post" action="/actions/{{ action.id }}/resolve/reject"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="return_to" value="{{ action_return }}"><button class="text-button">Ignore this message</button></form>
+{% elif action.kind == 'complaint' %}
+  <h2>Review an escalation draft</h2><p>The app cannot resolve this request automatically. The draft is for you to review and submit; downloading it sends nothing.</p><a class="button secondary" href="/actions/{{ action.id }}/draft">Download draft</a>
+{% else %}
+  <h2>{{ action.summary }}</h2><a class="button secondary" href="{{ review_url }}">Review details →</a>
+{% endif %}
+<p><a href="/cases/{{ case.id }}?tab=conversation">Read conversation →</a></p>
+{% if item.message_body %}<section class="step-message"><h3>Broker’s message</h3>{% with email_text=item.message_body %}{% include 'email_body.html' %}{% endwith %}</section>{% endif %}
+{% if overview_composer and case.submitted_at %}{% with embedded_composer=true %}{% include 'case_reply_composer.html' %}{% endwith %}{% endif %}
+</section>

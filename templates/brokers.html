@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Broker library · erase{% endblock %}
+{% block content %}
+<a class="back-link" href="/cases">← Back to requests</a>
+<div class="broker-library">
+<header class="workspace-head"><h1>Broker library</h1></header>
+<form class="library-filters card" method="get" action="/brokers" aria-label="Filter brokers">
+  <input type="hidden" name="sort" value="{{ sort }}"><input type="hidden" name="direction" value="{{ direction }}">
+  <label class="library-search">Search<input type="search" name="q" value="{{ filters.q }}" placeholder="Broker or website" aria-label="Search brokers"></label>
+  <label>Database type<select name="category" aria-label="Database type"><option value="">All types</option>{% for key, label in categories.items() %}<option value="{{ key }}" {% if filters.category == key %}selected{% endif %}>{{ label }}</option>{% endfor %}</select></label>
+  <label>Documented region<select name="region" aria-label="Documented region"><option value="">All regions</option>{% for key, label in regions.items() %}<option value="{{ key }}" {% if filters.region == key %}selected{% endif %}>{{ label }}</option>{% endfor %}</select></label>
+  <div class="library-filter-buttons"><button>Apply filters</button><a href="/brokers">Reset</a></div>
+</form>
+<div class="library-results"><p role="status"><strong>{{ matched }}</strong> of {{ total }} brokers{% if matched %} · showing {{ first }}–{{ last }}{% endif %}</p></div>
+<section class="card library-table-card" id="broker-table" aria-label="Broker results">
+<table class="library-table"><thead><tr>{% for key, label in [('broker', 'Broker'), ('category', 'Database type')] %}<th scope="col" aria-sort="{{ ('ascending' if direction == 'asc' else 'descending') if sort == key else 'none' }}"><a class="table-sort" href="{{ library_url(sort=key, direction='desc' if sort == key and direction == 'asc' else 'asc', page=1) }}#broker-table" aria-label="Sort by {{ label }}, {{ 'descending' if sort == key and direction == 'asc' else 'ascending' }}">{{ label }} <span aria-hidden="true">{{ ('↑' if direction == 'asc' else '↓') if sort == key else '↕' }}</span></a></th>{% endfor %}<th scope="col"><span class="sr-only">Details</span></th></tr></thead><tbody>
+{% for row in rows %}<tr>
+  <td class="library-name"><a href="{{ broker_url(row.broker.id) }}">{{ row.broker.name }}</a><small title="{{ row.regions }}">{{ row.regions }}</small></td>
+  <td data-label="Database type">{{ row.category_label }}</td>
+  <td class="library-row-action"><a class="button secondary compact" aria-label="Details for {{ row.broker.name }}" href="{{ broker_url(row.broker.id) }}">Details →</a></td>
+</tr>{% else %}<tr><td colspan="3" class="library-empty"><h2>No matching brokers</h2><p>Try a broader search or <a href="/brokers">clear the filters</a>.</p></td></tr>{% endfor %}
+</tbody></table>
+</section>
+<nav class="library-pagination" aria-label="Broker pages">{% if page > 1 %}<a class="button secondary compact" href="{{ library_url(page=page-1) }}#broker-table">← Previous</a>{% endif %}<span>Page {{ page }} of {{ pages }}</span>{% if page < pages %}<a class="button secondary compact" href="{{ library_url(page=page+1) }}#broker-table">Next →</a>{% endif %}</nav>
+<p class="library-note">Regions reflect documented scope, not proof a broker holds your data. An unlisted region is not proof of no exposure.</p>
+<details class="library-import"><summary>Import a catalog</summary><form method="post" action="/catalog/import" enctype="multipart/form-data"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="file" name="registry" accept=".csv,text/csv" required aria-label="Official registry CSV"><button class="secondary">Import official CSV</button></form></details>
+</div>
+{% endblock %}

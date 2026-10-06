@@ -1,0 +1,15 @@
+schema_version: 1
+regions: [DE, UK]
+rationale: Country-specific Creditsafe product notices describe business-linked personal records supplied to customers. Review each controller separately; shared branding does not establish group-wide deletion coverage.
+evidence:
+  - url: https://www.creditsafe.com/gb/en/legal/transparency-notice-product.html
+    checked_on: '2026-09-29'
+    excerpt: Creditsafe Business Solutions Limited
+    supports: [discovery]
+  - url: https://www.creditsafe.com/de/de/rechtliches/datenschutzhinweise/datenschutzhinweise-fuer-auskunfteidaten.html
+    checked_on: '2026-09-29'
+    excerpt: Creditsafe Deutschland GmbH
+    supports: [discovery]
+candidates:
+  - {slug: creditsafe-de, name: Creditsafe Deutschland GmbH}
+  - {slug: creditsafe-uk, name: Creditsafe Business Solutions Limited}

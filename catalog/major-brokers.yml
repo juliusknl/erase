@@ -1,0 +1,193 @@
+# A fixed editorial 80/20 checklist, NOT a market-share or personal-exposure estimate.
+# Count families, not regional subsidiaries or ten sites behind one shared form.
+# Countries below are explicit release-check examples, not every supported country.
+# Keep gaps on the list. Removing a difficult broker must not make coverage look complete.
+schema_version: 1
+selection: Major consumer-marketing suppliers, identity/audience distributors, European postal-data suppliers and widely used public people-search families. Professional databases and regulated credit remedies are outside this checklist.
+families:
+  - id: acxiom
+    name: Acxiom
+    category: marketing
+    routes:
+      - {guide_id: acxiom-de, countries: [DE]}
+      - {guide_id: acxiom-llc-international, countries: [US, DE, GB]}
+    limit: Acxiom UK's aggregate-only product notice is not counted as an individual deletion integration. Separate regional controllers and customer copies remain separate.
+  - id: epsilon
+    name: Epsilon
+    category: marketing
+    routes:
+      - {guide_id: epsilon-europe-digital, countries: [DE, FR, GB]}
+      - {guide_id: epsilon-north-america, countries: [US, CA]}
+    limit: UK Abacus cooperative/processor records need separate instructions; one Epsilon action does not promise every product is erased.
+  - id: liveramp
+    name: LiveRamp
+    category: marketing
+    routes:
+      - {guide_id: liveramp-de, countries: [DE]}
+      - {guide_id: liveramp-fr, countries: [FR]}
+      - {guide_id: liveramp-it, countries: [IT]}
+      - {guide_id: liveramp-es, countries: [ES]}
+      - {guide_id: liveramp-uk, countries: [GB]}
+      - {guide_id: liveramp-global-controls, countries: [US]}
+    limit: Device preferences are narrower than deletion of a named-person database. The country routes are not interchangeable.
+  - id: experian-marketing
+    name: Experian Marketing
+    category: marketing
+    routes:
+      - {guide_id: experian-uk-marketing, countries: [GB]}
+      - {guide_id: experian-marketing-us, countries: [US]}
+    limit: Marketing only, not credit-report erasure.
+  - id: transunion-marketing
+    name: TransUnion / Neustar marketing
+    category: marketing
+    routes:
+      - {guide_id: neustar-european-privacy, countries: [DE, GB]}
+      - {guide_id: transunion-us, countries: [US]}
+    limit: Neustar and US non-exempt data routes; this does not cover every TransUnion UK product or credit records.
+  - id: data-axle
+    name: Data Axle
+    category: marketing
+    routes: [{guide_id: data-axle, countries: [DE, FR, GB, US]}]
+    limit: Initial email workflow currently supports EEA residence, not a US automatic campaign.
+  - id: circana
+    name: Circana
+    category: marketing
+    routes: [{guide_id: circana-marketing, countries: [DE, FR, GB, US]}]
+    limit: EEA initial email and matching follow-up, not every panel or client dataset.
+  - id: merkle
+    name: Merkle
+    category: marketing
+    routes: [{guide_id: merkle-us-data-products, countries: [US]}]
+    limit: US data products only.
+  - id: claritas
+    name: Claritas
+    category: marketing
+    routes: [{guide_id: claritas-us, countries: [US]}]
+    limit: Claritas explicitly routes non-US processing to ArtsAI separately.
+  - id: eyeota
+    name: Eyeota (Dun & Bradstreet)
+    category: marketing
+    routes: [{guide_id: eyeota, countries: [DE, GB]}]
+    limit: Eyeota advertising identifiers, not all Dun & Bradstreet records.
+  - id: nielsen-marketing
+    name: Nielsen Marketing Cloud
+    category: marketing
+    routes: [{guide_id: nielsen-marketing-cloud, countries: [DE, GB, US]}]
+    limit: Marketing Cloud only, not every Nielsen/NIQ product or research panel.
+  - id: az-direct
+    name: AZ Direct
+    category: marketing
+    routes:
+      - {guide_id: az-direct-de, countries: [DE]}
+      - {guide_id: az-direct-at, countries: [AT]}
+    limit: Postal matching requires separately authorized address disclosure.
+  - id: deutsche-post-direkt
+    name: Deutsche Post Direkt
+    category: marketing
+    routes: [{guide_id: deutsche-post-direkt, countries: [DE]}]
+    limit: Direct-marketing records, not unrelated postal services or Post Adress.
+  - id: capaneo-schober
+    name: Capaneo / Schober
+    category: marketing
+    routes: [{guide_id: schober-capaneo, countries: [DE]}]
+    limit: Saved address is included only with permission; not an all-German-mailing-lists removal.
+  - id: caci
+    name: CACI
+    category: marketing
+    routes: [{guide_id: caci-uk, countries: [GB]}]
+    limit: Guided personal email with postal matching, not an automatic UK campaign. Suppression keeps a blocking record.
+  - id: numberly
+    name: Numberly
+    category: marketing
+    routes: [{guide_id: numberly, countries: [FR]}]
+    limit: Guided personal email; any identity verification must be handled directly with the broker. No documents are sent automatically.
+  - id: weborama
+    name: Weborama
+    category: marketing
+    routes: [{guide_id: weborama, countries: [FR]}]
+    limit: Guided personal email needs identifiers from the affected browser; a name and dedicated mailbox alone are insufficient.
+  - id: zeotap-data
+    name: Zeotap Data / Roqad
+    category: marketing
+    routes: [{guide_id: zeotap-data, countries: [DE]}]
+    limit: Guided personal email requires chosen advertising identifiers. Not the separate Zeotap SaaS company or blanket partner deletion.
+  - id: quantcast
+    name: Quantcast
+    category: marketing
+    routes: [{guide_id: quantcast-services, countries: [DE, GB, US]}]
+    limit: The affected browser and sole-user attestation are needed; no universal name/email lookup.
+  - id: criteo
+    name: Criteo
+    category: marketing
+    routes: [{guide_id: criteo, countries: [DE, GB]}]
+    limit: Browser/device scope and other controllers remain separate.
+  - id: trade-desk
+    name: The Trade Desk
+    category: marketing
+    routes: [{guide_id: trade-desk-platform, countries: [DE, GB]}]
+    limit: Request must identify the relevant advertising data; not every advertiser's records.
+  - id: whitepages
+    name: Whitepages
+    category: people_search
+    routes: [{guide_id: whitepages, countries: [US]}]
+    limit: Public listing suppression differs from eligible non-public data deletion.
+  - id: spokeo
+    name: Spokeo
+    category: people_search
+    routes: [{guide_id: spokeo, countries: [US, DE]}]
+    limit: ThatsThem needs a separate action; regulated business and court-record exceptions remain.
+  - id: peopleconnect
+    name: PeopleConnect (Intelius, TruthFinder, Instant Checkmate, US Search)
+    category: people_search
+    routes: [{guide_id: peopleconnect-suppression, countries: [US]}]
+    limit: Four named name-search services; non-US tool access requires prior permission.
+  - id: beenverified
+    name: BeenVerified
+    category: people_search
+    routes: [{guide_id: beenverified-personal, countries: [DE, GB, US]}]
+    limit: EEA initial email with address permission; other Lifetime Value brands are not silently included. US form execution remains a gap.
+  - id: truepeoplesearch
+    name: TruePeopleSearch
+    category: people_search
+    routes: [{guide_id: truepeoplesearch-public, countries: [US]}]
+    limit: Official registry instructions reviewed; interactive site blocked inspection. No non-US guarantee.
+  - id: fastpeoplesearch-family
+    name: FastPeopleSearch / SearchPeopleFree / USPhoneBook and seven related sites
+    category: people_search
+    routes: [{guide_id: fastpeoplesearch-family, countries: [US]}]
+    limit: One shared record opt-out per operator filing, not ten confirmed deletions. Browser-cookie choices remain per site; interactive flow untested.
+  - id: peoplefinders
+    name: PeopleFinders
+    category: people_search
+    routes: [{guide_id: peoplefinders-public, countries: [US]}]
+    limit: Footer route documented by operator; interactive flow blocked inspection. Other brands are separate.
+  - id: familytreenow
+    name: FamilyTreeNow
+    category: people_search
+    routes: [{guide_id: familytreenow-public, countries: [US]}]
+    limit: Published opt-out and phone alternative; interactive flow untested.
+  - id: thatsthem
+    name: ThatsThem
+    category: people_search
+    routes: [{guide_id: thatsthem-public, countries: [US]}]
+    limit: Separate from Spokeo's main opt-out; interactive flow blocked inspection.
+  - id: directory-192
+    name: 192.com
+    category: people_search
+    routes: [{guide_id: directory-192-uk, countries: [GB]}]
+    limit: Name/postcode suppression and email confirmation; other addresses require separate requests.
+  - id: nuwber
+    name: Nuwber
+    category: people_search
+    routes: [{guide_id: nuwber-public, countries: [US]}]
+    limit: GAP — domain did not resolve during this check; no reviewed current workflow. Keep the gap rather than claim a working form.
+  - id: radaris
+    name: Radaris (historical)
+    category: people_search
+    routes: [{guide_id: radaris-domain-transfer, countries: [US]}]
+    limit: GAP — former routes show a domain-transfer notice. Historical data custody is unresolved.
+  - id: peekyou
+    name: PeekYou (historical)
+    category: people_search
+    routes: [{guide_id: peekyou-domain-transfer, countries: [US]}]
+    limit: GAP — former opt-out shows a domain-transfer notice, not proof that historical records were deleted.

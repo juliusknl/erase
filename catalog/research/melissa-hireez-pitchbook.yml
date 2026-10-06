@@ -1,0 +1,150 @@
+schema_version: 1
+brokers:
+  - id: melissa-consumer-databases
+    name: Melissa consumer databases
+    match_domains: [melissa.com, melissadata.com]
+    identity:
+      legal_name: Melissa Data Corporation
+      brands: [Melissa, Melissa Lookups]
+      parent: null
+      official_domains: [melissa.com, melissadata.com]
+    relevance:
+      regions: [EU, UK, US, Other countries]
+      category: consumer_marketing
+      data_categories: [Names and addresses, Contact information, Consumer enrichment attributes]
+      note: Database-product removal is separate from Melissa's own marketing unsubscribe and customer account data.
+    removal:
+      method: email
+      destination: ConsumerRequest@melissa.com
+      alternatives: [https://apps.melissa.com/user/consumerprivacy.aspx, https://www.melissa.com/eu-us-data-privacy-framework]
+      steps:
+        - For European database removal, send a written request to ConsumerRequest@melissa.com identifying the records you want removed.
+        - Include a matching name and address only with explicit disclosure permission; review further verification personally.
+        - The webform requires US state and five-digit ZIP fields. Do not invent US details; use the published European contact instead.
+        - Request database deletion explicitly; unsubscribing from Melissa marketing is a different action.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Email checklist unspecified. US form requires name, postal address and email; phone is optional. Correction uploads are not a general deletion requirement.
+    coverage:
+      effect: deletion_request
+      includes: Matched Melissa Lookups and other database-product records under its published removal policy.
+      excludes: Guaranteed erasure of independent customers, source registers or unrelated identity-verification records.
+    automation:
+      mode: manual
+      reason: Initial European email recipe needs postal disclosure permission; additional matching remains reviewed.
+    evidence:
+      - url: https://www.melissa.com/eu-us-data-privacy-framework
+        checked_on: '2026-10-01'
+        published: August 2026
+        excerpt: ConsumerRequest@melissa.com
+        supports: [European_rights, email_route, written_erasure]
+      - url: https://www.melissa.com/privacy-policy
+        checked_on: '2026-10-01'
+        excerpt: Regardless of your state or country of residence
+        supports: [identity, database_removal, geographic_scope]
+      - url: https://apps.melissa.com/user/consumerprivacy.aspx
+        checked_on: '2026-10-01'
+        excerpt: Consumer Privacy Request Form
+        supports: [US_form_fields, correction_documents_not_deletion]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Email matching checklist not specified., Form and email fulfilment untested., Parent ownership and comparable scale unreviewed.]
+
+  - id: hireez-talent-database
+    name: hireEZ Talent Database
+    match_domains: [hireez.com]
+    identity:
+      legal_name: HireTeamMate, Inc.
+      brands: [hireEZ]
+      parent: null
+      official_domains: [hireez.com]
+    relevance:
+      regions: [EEA, UK, US, International]
+      category: recruitment
+      data_categories: [Candidate contacts, Employment and education, Public professional profiles]
+      note: hireEZ controls its passive-candidate Talent Database; customer-uploaded applicant records are processed separately.
+    removal:
+      method: form
+      destination: https://app.hireez.com/ownyourdata
+      alternatives: [datarequests@hireez.com, https://hireez.com/gdpr/]
+      steps:
+        - Open Own Your Data and choose removal of your candidate profile, not creation of a recruiting account.
+        - Enter an email associated with your professional profile and complete any ownership confirmation sent to that address.
+        - If you prefer email, the observed routing reply directs individual requests to datarequests@hireez.com. Delivery to this replacement inbox has not yet been tested. The agent API agreement is not needed for your own request.
+        - Review any additional profile-matching or ownership check personally.
+        - Ask recruiting companies separately about copies they control; do not confuse this with applying for employment at hireEZ.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Complete the portal's matching and ownership steps personally. Exact dynamic fields and end-to-end submission remain untested.
+    coverage:
+      effect: deletion_request
+      includes: Matched candidate records controlled by hireEZ.
+      excludes: Independent recruiters' copies, source profiles and unrelated customer CRM records.
+    automation:
+      mode: manual
+      reason: Use the dedicated candidate portal first; the observed email response redirects there. Use email only if the portal is unavailable.
+    evidence:
+      - url: https://help.hireez.com/hc/en-us/articles/4406155173531-hireEZ-Data-Protection-What-to-reply-when-a-candidate-questions-on-how-you-get-his-her-data
+        checked_on: '2026-10-01'
+        published: '2024-07-12'
+        excerpt: sending them an email request through privacy@hireez.com
+        supports: [candidate_removal_email, matching_context, scope]
+      - url: https://hireez.com/gdpr/
+        checked_on: '2026-10-01'
+        published: '2024-02-02'
+        excerpt: HireTeamMate, Inc. dba hireEZ
+        supports: [identity, European_processing, controller_processor_distinction, portal_link]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [General-policy portal is JavaScript-rendered and not inspected., Own Your Data returned a challenge; no bypass attempted., Email deliverability and later verification untested., Current parent ownership and scale unreviewed.]
+
+  - id: pitchbook-professionals
+    name: PitchBook professional profiles
+    match_domains: [pitchbook.com]
+    identity:
+      legal_name: PitchBook Data, Inc.
+      brands: [PitchBook]
+      parent: Morningstar, Inc.
+      official_domains: [pitchbook.com, morningstar.com]
+    relevance:
+      regions: [EEA, UK, US, International]
+      category: professional
+      data_categories: [Business contacts, Employment and education, Investment activity, Biographies]
+      note: Professional platform profiles are distinct from subscriptions and employment applications.
+    removal:
+      method: form
+      destination: https://www.morningstar.com/request-data
+      alternatives: [https://pitchbook.com/gdpr, https://pitchbook.com/privacy-policy]
+      steps:
+        - Open the parent-company rights portal linked by PitchBook and identify PitchBook as the relevant product.
+        - Request erasure and objection to sale of your professional profile; provide only the matching information requested.
+        - Complete verification and retain the stated scope. If the portal is unavailable, use the DPO contact in PitchBook's current notice.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Official referral verified; portal fields and subsequent verification uninspected after a 403 response.
+    coverage:
+      effect: deletion_request
+      includes: Matched personal professional profile subject to applicable rights and retention exceptions.
+      excludes: Whole-company profile removal, public sources, subscribers' independent copies or all Morningstar products.
+    automation:
+      mode: manual
+      reason: Parent portal requires product selection and identity matching; protected email addresses are not guessed.
+    evidence:
+      - url: https://pitchbook.com/gdpr
+        checked_on: '2026-10-01'
+        excerpt: PitchBook Data Inc. is the controller
+        supports: [identity, European_profile_rights, parent_portal]
+      - url: https://pitchbook.com/privacy-policy
+        checked_on: '2026-10-01'
+        published: '2026-07-14'
+        excerpt: Morningstar, Inc.
+        supports: [parent, scope, regional_rights]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Full portal fields and matching checklist uninspected., Exact privacy inbox unresolved in public extraction., Fulfilment and current comparable scale untested.]

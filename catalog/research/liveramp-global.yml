@@ -1,0 +1,57 @@
+schema_version: 1
+brokers:
+  - id: liveramp-global-controls
+    name: LiveRamp global device controls
+    match_domains: [liveramp.com]
+    identity:
+      legal_name: LiveRamp, Inc.; regional controllers remain identified in the country-specific notices
+      brands: [LiveRamp]
+      parent: null
+      official_domains: [liveramp.com, optout.liveramp.com]
+    relevance:
+      regions: [EEA, UK, CH, US, Global device controls]
+      category: advertising
+      data_categories: [Cookie and mobile IDs, Linked contact identifiers, Marketing connectivity]
+      note: Global device controls supplement, not replace, the existing country-specific rights requests. One company can have multiple routes without becoming extra deletion coverage.
+    removal:
+      method: form
+      destination: https://liveramp.com/privacy
+      alternatives: [https://liveramp.com/opt-out/mobile, https://liveramp.com/privacy/my-privacy-choices]
+      steps:
+        - On the privacy portal choose Global Opt Out of LiveRamp's Third Party Cookie in each affected browser, or Global Opt Out of LiveRamp's Mobile Identifier for the relevant mobile advertising ID.
+        - Repeat for other browsers/devices; neither choice proves deletion across linked names, addresses or email identifiers. Never activate browser preferences from the app server.
+        - For broader rights use your actual country's listed route. Existing French, German, Italian, Spanish and UK guides remain separate instructions, not separate companies.
+        - The US Your Privacy Choices page separates comprehensive opt-out from deletion and limits some rights by state; use it only where applicable. Its guidance recommends opt-out before or instead of deletion when preventing future use is the aim.
+    required_information:
+      fields: [browser_context_or_mobile_advertising_identifier]
+      certainty: not_fully_specified
+      verification: Public instructions and linked destinations reviewed only; no opt-out cookie endpoint was activated and no device identifier submitted. Regional identity checks remain separate.
+    coverage:
+      effect: suppression
+      includes: Selected LiveRamp browser-cookie or mobile-identifier preferences. Broader matched-record rights depend on the appropriate regional process.
+      excludes: Every device, independent customers, regional records not requested and proof of historical database deletion; a global preference is not a completed Data Plus Math measurement-data request.
+    automation:
+      mode: manual
+      reason: Personal browser/device context is essential; do not replay opt-out links on the backend or infer all-record deletion.
+    evidence:
+      - url: https://liveramp.com/privacy
+        checked_on: '2026-10-01'
+        excerpt: Global Opt Out of LiveRamp’s Mobile Identifier
+        supports: [global_controls, country_specific_routing]
+      - url: https://liveramp.com/opt-out/mobile
+        checked_on: '2026-10-01'
+        excerpt: LiveRamp, Inc. may be the data controller
+        supports: [identity, mobile_identifier_scope, European_route]
+      - url: https://liveramp.com/privacy/my-privacy-choices
+        checked_on: '2026-10-01'
+        excerpt: submit an Opt out Request instead of, or before submitting, a Deletion Request
+        supports: [US_scope, suppression_deletion_distinction]
+      - url: https://liveramp.com/privacy/service-privacy-policy
+        checked_on: '2026-10-01'
+        published: August 12, 2026
+        excerpt: when we operate as a “business” or “controller”
+        supports: [product_scope, independent_customer_limits]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Live opt-out results, Broader identifier matches, Current parent ownership following an acquisition announcement is not assumed completed]

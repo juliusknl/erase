@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: catalist-political
+    records: [live:catalist-llc]
+    rationale: Current July 2026 official Catalist LLC notice explicitly covers political data products and distinguishes product suppression from directly collected data deletion; personally reviewed state-specific form is linked by the notice.

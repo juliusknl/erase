@@ -1,0 +1,11 @@
+schema_version: 1
+associations:
+  - guide_id: iqvia-digital-advertising
+    records: [live:iqvia-digital-inc]
+    rationale: Current IQVIA DPF entity list names IQVIA Digital Inc; Digital's official product FAQ and footer link the shared rights portal. Guide scopes the action to advertising, not all research or healthcare records.
+  - guide_id: i360-consumer-political
+    records: [live:i360-llc]
+    rationale: Current official notice names i360 LLC; public linked portal configuration establishes its US-state gate and deletion matching fields. No European workflow is inferred.
+  - guide_id: lightbox-property-professional
+    records: [live:lightbox-parent-l-p]
+    rationale: Current linked product PDF names LightBox Parent LP and specifies a California rights route for professional/property records; this is not inferred from the website-only notice or an email unsubscribe.

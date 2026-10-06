@@ -1,0 +1,39 @@
+schema_version: 1
+assessments:
+  - record: live:netwise-data-llc
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: D&B's current 2026 statement explicitly names NetWise Data LLC and provides a supplemental consumer opt-out link, but that exact link returns HTTP 404. The global TrustArc rights route is published as an alternative, yet its current matching fields and NetWise-specific scope are unverified. Do not copy an obsolete email-only workflow or treat a D&B product redirect as proof of deletion coverage.
+    evidence:
+      - url: https://www.dnb.com/content/dam/web/company/about/content/pdaits/DnB_Privacy-Data-AI-Transparency-Statement.pdf
+        checked_on: '2026-10-01'
+        published: '2026'
+        excerpt: NetWise Consumer Privacy Opt-Out
+        supports: [named_entity_pages_5_17, supplemental_link_annotation_page_7, global_rights_alternative]
+      - url: https://www.netwisedata.com/consumer-privacy-opt-out/
+        checked_on: '2026-10-01'
+        excerpt: 'Research observation: exact URL linked from the current D&B PDF returned HTTP 404.'
+        supports: [broken_official_supplemental_route]
+      - url: https://www.dnb.com/en-us/why-dnb/data-transparency/personal-data.html
+        checked_on: '2026-10-01'
+        excerpt: You may exercise your data subject rights
+        supports: [global_rights_hub_not_tested_NetWise_fulfilment]
+    unresolved: [Verify replacement NetWise-specific consumer route or the global form's matching and entity selection; do not presume every D&B affiliate is covered by one completed request.]
+  - record: live:data-decisions-group-llc
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: The registry identifies Data Decisions Group LLC and its privacy domain, but the homepage returned HTTP 403 and the catalogued privacy notice could not be retrieved. No current official rights recipient or matching checklist was established. Access failure does not prove the company is inactive, irrelevant or data-free.
+    evidence:
+      - url: https://www.datadecisionsgroup.com/
+        checked_on: '2026-10-01'
+        excerpt: 'Research observation: HTTP 403 Access Denied; no current privacy instructions retrieved.'
+        supports: [observed_http_403]
+      - url: https://datadecisionsgroup.com/privacy-policy/
+        checked_on: '2026-10-01'
+        excerpt: 'Research observation: public page retrieval failed; no policy body available for verification.'
+        supports: [unavailable_policy]
+      - url: https://cppa.ca.gov/data_broker_registry/registry.csv
+        checked_on: '2026-10-01'
+        excerpt: Data Decisions Group, LLC
+        supports: [registered_identity_discovery_only]
+    unresolved: [Retrieve current official privacy instructions and establish entity, identifiers, accepted geography and verification before outreach.]

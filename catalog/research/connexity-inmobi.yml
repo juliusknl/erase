@@ -1,0 +1,96 @@
+schema_version: 1
+brokers:
+  - id: connexity-shopping
+    name: Connexity
+    match_domains: [connexity.com]
+    identity:
+      legal_name: Connexity, Inc.
+      brands: [Connexity, Shopzilla, PriceGrabber, Become]
+      parent: Taboola
+      official_domains: [connexity.com]
+    relevance:
+      regions: [EU, US, international]
+      category: advertising
+      data_categories: [Shopping-site activity, Online identifiers, Contact information]
+      note: Sites and technologies covered by Connexity's notice; not every Taboola service.
+    removal:
+      method: form
+      destination: https://www.connexity.com/your-rights/
+      alternatives: [dataprotection@connexity.com]
+      steps:
+        - Use the privacy-request form and specify deletion of matching consumer information, not merely marketing unsubscribe.
+        - If the embedded form does not load, contact the designated privacy inbox. Do not request closure of an unrelated merchant account.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: The public page embeds a HubSpot form; its field checklist and subsequent verification were not tested.
+    coverage:
+      effect: deletion_request
+      includes: Matching records within the published Connexity scope, subject to exceptions.
+      excludes: Independent merchant and parent-company records; device-specific advertising opt-out is separate.
+    automation: {mode: manual, reason: The preferred form and consumer matching requirements need user completion; finding the privacy inbox does not establish a minimal automatic recipe.}
+    evidence:
+      - url: https://www.connexity.com/privacy-policy/
+        checked_on: '2026-09-30'
+        published: '2026-03-16'
+        excerpt: Additional provisions applicable to individuals in the European Union
+        supports: [identity, brands, EU_rights, contact, scope]
+      - url: https://www.connexity.com/your-rights/
+        checked_on: '2026-09-30'
+        excerpt: Connexity is a Taboola Company
+        supports: [preferred_form, parent, embedded_form]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Dynamic form fields and fulfilment., Current notice retains outdated Privacy Shield language; it is not treated as proof of a valid transfer mechanism.]
+  - id: inmobi-advertising
+    name: InMobi Advertising
+    match_domains: [inmobi.com]
+    identity:
+      legal_name: InMobi Technology Services Pte. Ltd. (request policy); InMobi Pte Ltd (EEA notice)
+      brands: [InMobi Advertising]
+      parent: null
+      official_domains: [inmobi.com]
+    relevance:
+      regions: [EEA, UK, CH, international]
+      category: advertising
+      data_categories: [Device and cookie identifiers, Location, Advertising interactions, Inferred audiences]
+      note: Marketing-platform scope; independently offered consumer apps have separate notices.
+    removal:
+      method: email
+      destination: dsr@inmobi.com
+      alternatives: [dpo@inmobi.com, https://advertising.inmobi.com/data-subject-consumer-request-policy]
+      steps:
+        - The published request policy asks for an email to dsr@inmobi.com with dpo@inmobi.com copied, your full name, current country, signed affidavit and screenshots proving the relevant cookie/mobile advertising IDs.
+        - Read the linked affidavit before signing. It asserts EEA residence or citizenship and ownership of mobile identifiers and InMobi cookies under penalty of perjury. Ask the privacy team for an alternative if any declaration is inapplicable; never sign an inaccurate statement.
+        - Specify deletion and objection to future advertising processing separately; retain the response and complete proportionate verification.
+    required_information:
+      fields: [full_name, current_country, cookie_or_mobile_advertising_ids, identifier_screenshots, signed_affidavit]
+      certainty: not_fully_specified
+      verification: Published checklist and linked one-page affidavit reviewed; acceptance when only one identifier type exists, or the person is outside the EEA, remains unconfirmed.
+    coverage:
+      effect: deletion_request
+      includes: Matched marketing-platform records may be deleted or anonymized, with billing/security/legal exceptions.
+      excludes: Independent apps, partner-held copies and automatic closure of customer accounts.
+    automation: {mode: manual, reason: Requires personal identifier evidence and a legal declaration; the app cannot supply or sign these automatically.}
+    evidence:
+      - url: https://advertising.inmobi.com/data-subject-consumer-request-policy
+        checked_on: '2026-09-30'
+        excerpt: A signed affidavit.
+        supports: [designated_email, copied_DPO, identity, checklist]
+      - url: https://advertising.inmobi.com/privacy-policy-for-eea
+        checked_on: '2026-09-30'
+        published: '2021-04'
+        excerpt: 'EFFECTIVE: May 2021'
+        supports: [regional_scope, platform_scope, identifiers]
+      - url: https://go.inmobi.net/hubfs/InMobi%20-%20Subject%20Access%20Request%20-%20Affidavit%20.pdf
+        checked_on: '2026-09-30'
+        excerpt: I declare under penalty of perjury
+        supports: [declaration, EEA_condition, device_ownership, signature]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns:
+      - Request and EEA notices use different entity names; no claim that all historic group datasets are covered.
+      - Official HTML embeds policy text in public page data; static visible render is empty. Submission and acceptance are untested.
+      - General policy page data is labelled October 2026; that future-labelled text is not relied upon as already effective on this check date.

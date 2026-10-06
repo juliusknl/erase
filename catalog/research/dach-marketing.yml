@@ -1,0 +1,137 @@
+schema_version: 1
+brokers:
+  - id: az-direct-at
+    name: AZ Direct Österreich
+    match_domains: [at.az-direct.com]
+    identity:
+      legal_name: AZ Direct Österreich GmbH
+      brands: [AZ Direct Österreich]
+      parent: Bertelsmann Marketing Services (group affiliation)
+      official_domains: [at.az-direct.com]
+    relevance:
+      regions: [AT]
+      category: postal_marketing
+      data_categories: [Names, Postal addresses, Contact details, Business roles, Inferred household attributes]
+      note: Austrian consumer/business address publishing; not the German controller.
+    removal:
+      method: email
+      destination: datenschutz@bertelsmann.at
+      alternatives: [https://at.az-direct.com/links/datenschutz-adressverlag]
+      steps:
+        - Specify Austrian address-marketing records and choose suppression, access or appropriate erasure.
+        - For access, provide name and current address; previous names/addresses and the relevant advertisement are conditional.
+        - Retain suppression if preventing renewed advertising is the goal; removing the blocking entry is a different request.
+    required_information:
+      fields: [full_name, postal_address]
+      certainty: not_fully_specified
+      verification: Access checklist documents name/current address and conditional prior two-year addresses or advertising sample. Identity must be verified; exact additional evidence is unspecified.
+    coverage:
+      effect: suppression
+      includes: Austrian address-marketing suppression; identifiable address suppliers receive the blocking request.
+      excludes: All Bertelsmann companies, German AZ Direct and automatic erasure of retained suppression/correspondence.
+    automation: {mode: manual, reason: Austrian controller selection and postal-identifier disclosure require review.}
+    evidence:
+      - url: https://at.az-direct.com/links/datenschutz-adressverlag
+        checked_on: '2026-09-29'
+        published: '2023-04'
+        excerpt: datenschutz(at)bertelsmann.at
+        supports: [identity, relevance, removal, required_information, coverage]
+      - url: https://at.az-direct.com/links/betroffenenrechte
+        checked_on: '2026-09-29'
+        published: '2024-02'
+        excerpt: übermitteln wir Ihren Sperrwunsch automatisch
+        supports: [required_information, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Request outcome and supplier follow-through untested., Current database scale and exact verification evidence., Austrian Robinson-list coverage is stated but not a universal deletion guarantee.]
+
+  - id: sovendus-de
+    name: Sovendus — German voucher network
+    match_domains: [sovendus.com, web.sovendus.com]
+    identity:
+      legal_name: Sovendus GmbH, HRB 707873 Mannheim
+      brands: [Sovendus Voucher Network, Sovendus Checkout Benefits]
+      parent: null
+      official_domains: [sovendus.com, web.sovendus.com]
+    relevance:
+      regions: [DE, Europe]
+      category: consumer_marketing
+      data_categories: [Email hashes, Transaction metadata, Contact details, Pseudonymous shopping profiles]
+      note: German-controller voucher and checkout-offer network; not all regional Sovendus entities.
+    removal:
+      method: email
+      destination: service@sovendus.com
+      alternatives: [https://web.sovendus.com/de/privacy]
+      steps:
+        - Object to advertising and withdraw applicable consent; request erasure of data not required for suppression or retention.
+        - Separately disable pseudonymous customer analysis using the policy-page switch in the affected browser.
+        - Contact independent offer providers for their records or newsletters; Sovendus completion does not close those requests.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: No universal minimum request fields published. Further evidence is requested if identity is doubtful; do not send transaction or financial data by default.
+    coverage:
+      effect: suppression
+      includes: Sovendus GmbH advertising suppression; necessary blocking identifiers retained.
+      excludes: Independent retailers/providers, other group controllers and blanket removal of legally retained records.
+    automation: {mode: manual, reason: Suppression and browser-analysis choices have different scopes.}
+    evidence:
+      - url: https://web.sovendus.com/de/privacy
+        checked_on: '2026-09-29'
+        published: '2024-05 (page label)'
+        excerpt: interne Werbesperrliste
+        supports: [relevance, removal, required_information, coverage]
+      - url: https://web.sovendus.com/de/imprint
+        checked_on: '2026-09-29'
+        excerpt: HRB 707873
+        supports: [identity, removal]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [No request or browser switch tested., Regional-controller applicability needs review., Current unique-person scale and ownership unreviewed.]
+
+  - id: adrom-at
+    name: adRom — recipient-data scope review
+    match_domains: [adrom.net]
+    identity:
+      legal_name: adRom Media Marketing GmbH, FN 248465 s
+      brands: [adRom, Retarget Mail, Opinion Leads]
+      parent: null
+      official_domains: [adrom.net]
+    relevance:
+      regions: [AT, DACH]
+      category: consumer_marketing
+      data_categories: [Recipient profiles, Email contact, Interest signals, Campaign interactions]
+      note: Markets targeted email campaigns; own-data versus partner/processor scope is unresolved.
+    removal:
+      method: investigate
+      destination: https://adrom.net/datenschutz/
+      alternatives: [datenschutz@adrom.net]
+      steps:
+        - Resolve the recipient-profile controller and product privacy notice before enabling a removal workflow.
+        - Published email handles privacy enquiries, but the linked notice explicitly describes website processing.
+        - Do not treat corporate newsletter unsubscription as deletion from client campaign audiences.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Product matching and verification not documented in the reviewed website notice.
+    coverage:
+      effect: needs_review
+      includes: Product relevance and corporate enquiry route documented.
+      excludes: Verified removal of campaign profiles or independent data-owner records.
+    automation: {mode: blocked, reason: Product-controller scope and removal requirements unverified.}
+    evidence:
+      - url: https://adrom.net/datenschutz/
+        checked_on: '2026-09-29'
+        published: '2018-05-25 (page label)'
+        excerpt: im Rahmen unserer Website
+        supports: [identity, removal, coverage]
+      - url: https://adrom.net/
+        checked_on: '2026-09-29'
+        excerpt: Millionen Empfängerprofile
+        supports: [relevance]
+    scale: null
+    review_status: needs_research
+    tested_outcome: not_tested
+    unknowns: [Current product privacy notice and responsible controller., Minimum fields and verification., Animated scale counters rendered as zero; no numeric scale inferred., Ownership and outcome unreviewed.]

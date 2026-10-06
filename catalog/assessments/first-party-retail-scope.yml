@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "assessments": [
+    {
+      "record": "community:wm-beautysystems",
+      "disposition": "out_of_scope",
+      "checked_on": "2026-09-30",
+      "rationale": "Wellness/cosmetics and studio-brand group. The reviewed notice concerns its own website/user relationships; no independent third-party consumer database is established. Keep any customer/studio privacy request separate and user-directed, rather than automatically request account/service deletion.",
+      "evidence": [
+        {
+          "url": "https://www.wm-beautysystems.com/en/",
+          "checked_on": "2026-09-30",
+          "excerpt": "wellness and cosmetics",
+          "supports": [
+            "business_scope"
+          ]
+        },
+        {
+          "url": "https://www.wm-beautysystems.com/datenschutzhinweise/",
+          "checked_on": "2026-09-30",
+          "excerpt": "WM BEAUTYSYSTEMS AG & Co. KG",
+          "supports": [
+            "identity",
+            "first_party_privacy_scope"
+          ]
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "record": "community:memolife",
+      "disposition": "out_of_scope",
+      "checked_on": "2026-09-30",
+      "rationale": "Goods retailer. Current notice covers orders, customer accounts, advertising tools and service/payment recipients. Exclude from the default independent-broker campaign, not from the person's privacy rights: an account/order request or marketing objection should be deliberately scoped to an existing relationship.",
+      "evidence": [
+        {
+          "url": "https://www.memolife.de/versand-und-zahlung/radlogistik/",
+          "checked_on": "2026-09-30",
+          "excerpt": "memo AG",
+          "supports": [
+            "business_scope"
+          ]
+        },
+        {
+          "url": "https://www.memo.de/ueber-uns/datenschutz/",
+          "checked_on": "2026-09-30",
+          "excerpt": "Datenverarbeitung bei Eröffnung eines Kundenkontos",
+          "supports": [
+            "identity",
+            "first_party_privacy_scope"
+          ]
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "record": "community:gartentraum",
+      "disposition": "out_of_scope",
+      "checked_on": "2026-09-30",
+      "rationale": "Garden-products retailer operated by Werner & Klopfleisch OHG. Its reviewed notice describes shop/customer accounts, orders and advertising tools, not an independent searchable/licensed people database. A user-specific account or marketing request remains possible; do not automatically close retail relationships.",
+      "evidence": [
+        {
+          "url": "https://www.gartentraum.de/datenschutzbestimmungen",
+          "checked_on": "2026-09-30",
+          "excerpt": "Werner & Klopfleisch OHG",
+          "supports": [
+            "business_scope"
+          ]
+        },
+        {
+          "url": "https://www.gartentraum.de/datenschutzbestimmungen",
+          "checked_on": "2026-09-30",
+          "excerpt": "Löschung Ihres Kundenkontos",
+          "supports": [
+            "identity",
+            "first_party_privacy_scope"
+          ]
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "record": "community:ganzeinfach",
+      "disposition": "out_of_scope",
+      "checked_on": "2026-09-30",
+      "rationale": "Consumer-product importer/distributor sharing a website with WD Plus. The reviewed notice covers its own site/contact/customer processing, not an independent consumer-data product. Exclude from the default broker campaign; customer rights and advertising preferences remain available individually.",
+      "evidence": [
+        {
+          "url": "https://www.ganzeinfach.de/de/",
+          "checked_on": "2026-09-30",
+          "excerpt": "Import & Vetrieb",
+          "supports": [
+            "business_scope"
+          ]
+        },
+        {
+          "url": "https://www.ganzeinfach.de/de/datenschutz.html",
+          "checked_on": "2026-09-30",
+          "excerpt": "Ganz Einfach GmbH",
+          "supports": [
+            "identity",
+            "first_party_privacy_scope"
+          ]
+        }
+      ],
+      "unresolved": []
+    }
+  ]
+}

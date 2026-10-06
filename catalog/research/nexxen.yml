@@ -1,0 +1,64 @@
+schema_version: 1
+brokers:
+  - id: nexxen-advertising
+    name: Nexxen advertising (Amobee / RhythmOne)
+    match_domains: [nexxen.com, amobee.com, rhythmone.com]
+    identity:
+      legal_name: Nexxen Inc. (formerly Amobee Inc.); Nexxen Group LLC (formerly Unruly LLC and RhythmOne LLC)
+      brands: [Nexxen, Amobee, RhythmOne, Unruly]
+      parent: Nexxen International Ltd.
+      official_domains: [nexxen.com, amobee.com, rhythmone.com]
+    relevance:
+      regions: [EEA, UK, Israel, United States, Global]
+      category: advertising
+      data_categories: [Device identifiers, Identity graphs, Viewing data, Advertising segments]
+      note: Advertising platform data can concern Europeans without a customer account.
+    removal:
+      method: form
+      destination: https://nexxen.com/privacy-data-subject-rights-request/
+      alternatives: [https://privacyportal.onetrust.com/webform/76394770-3c6c-4d28-a57b-18817b0a8e3f/2bbd01a5-983c-440b-9fd5-fd341c9326a1]
+      steps:
+        - Open the rights center; its old embedded form redirects to the replacement linked here. Select your actual residence and applicable relationship; do not invent employment, customer status or agent authority.
+        - Select deletion and Yourself. Separate requests are required for other rights; an advertising opt-out is not historical erasure.
+        - Use the relevant browser for cookie detection, or supply only the specified advertising-cookie values manually. Never paste an entire cookie store or authentication cookies.
+        - Supply the correspondence email and personally review the affirmation, CAPTCHA and email verification. Name and national-ID fields are conditional employee-access fields, not a universal consumer checklist.
+        - TV records require the relevant Hisense device IDs. Disabling VIDAA ACR features is separate; keep confirmation for each matched identifier.
+    required_information:
+      fields: [residence, relationship, requested_right, requesting_for, email, matching_cookie_or_device_identifier, personal_affirmation]
+      certainty: not_fully_specified
+      verification: Active public form configuration inspected, including visibility rules, CAPTCHA and email verification. Actual rendering, cookie detection and submission remain untested; do not claim every conditional field is required.
+    coverage:
+      effect: deletion_request
+      includes: Matched Nexxen platform-controller records; named advertising cookies and TV identifiers have separate matching.
+      excludes: Customer-controlled processor records, guaranteed future suppression and assumed group-wide deletion.
+    automation:
+      mode: manual
+      reason: Personal browser/device context, conditional fields, affirmation and email verification cannot be replaced by a generic email.
+    evidence:
+      - url: https://nexxen.com/services-privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2026-07-01'
+        excerpt: You can exercise these rights by visiting our Privacy Center.
+        supports: [relevance, European_rights, route, scope]
+      - url: https://nexxen.com/privacy-data-subject-rights-request/
+        checked_on: '2026-10-01'
+        published: '2025-03-04'
+        excerpt: Data Subject Rights Request
+        supports: [embedded_form, parent]
+      - url: https://privacyportal.onetrust.com/webform/76394770-3c6c-4d28-a57b-18817b0a8e3f/9d141ad9-4bc2-4fa2-9b09-ae350a6dc077
+        checked_on: '2026-10-01'
+        excerpt: isDisabled
+        supports: [disabled_legacy_form, published_replacement_redirect]
+      - url: https://privacyportal.onetrust.com/webform/76394770-3c6c-4d28-a57b-18817b0a8e3f/2bbd01a5-983c-440b-9fd5-fd341c9326a1
+        checked_on: '2026-10-01'
+        excerpt: Cookie Source
+        supports: [active_form, conditional_fields, cookie_device_matching, personal_affirmation, email_verification, CAPTCHA]
+      - url: https://www.amobee.com/trust/privacy-policy/
+        checked_on: '2026-09-30'
+        published: 'Legacy page contains 2022 and 2023 update labels'
+        excerpt: Nexxen Inc. (f/k/a Amobee Inc.), Nexxen Group LLC (f/k/a Unruly LLC and RhythmOne, LLC)
+        supports: [legal_renames, legacy_brands]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Interactive rendering and submission untested., Published relationship labels are Customer/Employee/Vendor; seek clarification if none applies., Exact historical legacy records require broker confirmation., No all-device or group-wide erasure claim.]

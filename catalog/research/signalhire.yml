@@ -1,0 +1,50 @@
+schema_version: 1
+brokers:
+  - id: signalhire-professional
+    name: SignalHire
+    match_domains: [signalhire.com]
+    identity:
+      legal_name: SignalHire Sp. z o. o.
+      brands: [SignalHire]
+      parent: null
+      official_domains: [signalhire.com]
+    relevance:
+      regions: [EEA, UK, international]
+      category: professional
+      data_categories: [Work contacts, Employment history, Social profile links]
+      note: Prospects Database and Professional Profiles are distinct from customer accounts.
+    removal:
+      method: form
+      destination: https://www.signalhire.com/opt-out
+      alternatives: [support@signalhire.com]
+      steps:
+        - Enter your business email and the SignalHire profile URL you want removed; use an address associated with your professional identity.
+        - Complete any email verification, retaining the result. The provider keeps an email suppression record to prevent re-addition.
+        - If matching fails, send sufficient profile details to support@signalhire.com. Specify professional-profile removal, not closure of a customer account.
+    required_information:
+      fields: [work_email, profile_url]
+      certainty: not_fully_specified
+      verification: Public form labels business email mandatory and requests the profile URL; the FAQ permits business-email verification. Later checks remain untested.
+    coverage:
+      effect: deletion_request
+      includes: Removal of matching Prospects Database and Professional Profile information, with suppression/retention exceptions.
+      excludes: Original public websites and independently held customer copies; not automatic account closure.
+    automation: {mode: manual, reason: A profile URL and personal email verification are needed for the guided flow; the current sender does not carry broker-specific profile URLs.}
+    evidence:
+      - url: https://www.signalhire.com/opt-out
+        checked_on: '2026-09-30'
+        excerpt: Enter your business email (mandatory)
+        supports: [form, matching_fields, suppression]
+      - url: https://www.signalhire.com/privacy
+        checked_on: '2026-09-30'
+        published: '2026-09-15'
+        excerpt: SignalHire Sp. z o. o.
+        supports: [identity, professional_scope, erasure, account_distinction]
+      - url: https://www.signalhire.com/privacy-faq
+        checked_on: '2026-09-30'
+        excerpt: You may confirm your identity via your business email.
+        supports: [email_alternative, verification]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Post-submission verification and outcomes., Profile URL requirement for the alternative email route is not explicit.]

@@ -1,0 +1,96 @@
+schema_version: 1
+brokers:
+  - id: mediawallah-identity
+    name: MediaWallah identity services
+    match_domains: [mediawallah.com]
+    identity:
+      legal_name: MediaWallah, Inc.
+      brands: [MediaWallah]
+      parent: null
+      official_domains: [mediawallah.com]
+    relevance:
+      regions: [United States, Other regions not established for services]
+      category: advertising
+      data_categories: [Contact identifiers, Hashed email, Cookies, Mobile advertising IDs, Connected-TV identifiers, Cross-device links]
+      note: European rights section concerns website visitors; do not infer either European service coverage or absence of European records.
+    removal:
+      method: form
+      destination: https://mediawallah.com/donotsell/
+      alternatives: [https://mediawallah.com/privacy-policy/, privacy@mediawallah.com]
+      steps:
+        - Use the policy-linked portal for other identifiers; check your actual residence and requested right before submitting.
+        - Browser tracking has a separate opt-out link in the service policy. Perform it in each relevant browser and retain its cookie.
+        - Mobile and TV settings are separate. Do not enable tracking or install an identifier app solely to opt out.
+        - Keep confirmation and distinguish suppression from erasure. Portal fields and regional eligibility were not tested.
+    required_information:
+      fields: [matching_identifier, residence, requested_right]
+      certainty: not_fully_specified
+      verification: Published policy allows identity and residency checks; the embedded OneTrust form was only inspected as a public shell.
+    coverage:
+      effect: suppression
+      includes: Matched MediaWallah identifiers; browser preferences require the relevant device.
+      excludes: All-device erasure, independent client copies and assumed European product eligibility.
+    automation:
+      mode: manual
+      reason: Device matching and regional eligibility need personal review; the European email section is website-specific.
+    evidence:
+      - url: https://mediawallah.com/privacy-policy/
+        checked_on: '2026-10-01'
+        excerpt: Opting Out in Relation to Our Services
+        supports: [identity, service_identifiers, regional_boundary, matching, suppression]
+      - url: https://mediawallah.com/donotsell/
+        checked_on: '2026-10-01'
+        excerpt: Do Not Sell
+        supports: [official_embedded_portal]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Portal fields and eligibility untested., Service geography beyond the United States unestablished., No comparable scale claim.]
+
+  - id: bridg-shopper-data
+    name: Bridg shopper intelligence
+    match_domains: [bridg.com]
+    identity:
+      legal_name: DB Sub, LLC
+      brands: [Bridg]
+      parent: ParTech, Inc. (current notice); PAR Technology Corporation group
+      official_domains: [bridg.com]
+    relevance:
+      regions: [United States]
+      category: consumer_marketing
+      data_categories: [Contact identifiers, Purchase history, Loyalty identifiers, Demographics, Location, Shopping inferences]
+      note: Current notice separates client-directed records from licensed marketing data. Its rights instructions are residence-specific; European applicability is unestablished.
+    removal:
+      method: form
+      destination: https://datagrail.bridg.com/
+      alternatives: [https://www.bridg.com/privacy-policy]
+      steps:
+        - Check the current policy for your actual residence before using its Privacy Request Center; do not claim US residence if inapplicable.
+        - Select deletion or sale/sharing opt-out as appropriate and personally complete matching and verification.
+        - Ask the originating retailer about independently retained or client-controlled records when needed.
+        - Keep confirmation; this is not blanket removal from Cardlytics, PAR products or retailer loyalty accounts.
+    required_information:
+      fields: [residence, matching_identifiers, requested_right]
+      certainty: not_fully_specified
+      verification: Policy permits identity and eligibility checks. DataGrail returned a public JavaScript shell; field requirements and fulfilment untested.
+    coverage:
+      effect: deletion_request
+      includes: Applicable rights requests for matched Bridg records held by DB Sub; licensed and client-directed processing remain distinct.
+      excludes: Entire Cardlytics or PAR group, independent retailers and unverified European eligibility.
+    automation:
+      mode: manual
+      reason: No verified European initial-email route; use only the applicable personally reviewed portal workflow.
+    evidence:
+      - url: https://www.bridg.com/privacy-policy
+        checked_on: '2026-10-01'
+        published: '2026-01-10 (page label; ownership text reflects later acquisition)'
+        excerpt: DB Sub, LLC
+        supports: [current_controller, parent, data_categories, licensed_client_boundary, residence_limits, portal]
+      - url: https://www.sec.gov/Archives/edgar/data/1666071/000162828026020811/exhibit991unauditedproform.htm
+        checked_on: '2026-10-01'
+        excerpt: DB Sub, LLC, an indirectly wholly owned subsidiary of PAR
+        supports: [asset_transaction, buyer_identity, historical_registry_boundary]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [European eligibility unestablished., Portal matching and verification untested., Seller-retained records are not assumed transferred., No comparable scale claim.]

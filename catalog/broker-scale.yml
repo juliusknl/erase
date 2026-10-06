@@ -1,0 +1,35 @@
+# Editorial context, not a market ranking, coverage estimate, or sending rule.
+# Fresh sourced claims may prioritize optional suggestions within the same category.
+# Company-reported database sizes overlap; never sum them. Missing = not researched.
+peopledatalabs.com:
+  name: People Data Labs
+  size: Nearly 3B
+  unit: person records
+  context: Person-data provider supplying datasets and enrichment tools to other businesses.
+  source: https://www.peopledatalabs.com/data-lab/datafication/our-data-build-process
+  source_note: Data-build article published December 2024; describes records, not confirmed unique people.
+  checked_at: '2026-09-28'
+leadiq.com:
+  name: LeadIQ
+  size: 749M+
+  unit: contacts
+  context: Business-contact data used for sales prospecting and CRM enrichment.
+  source: https://www.leadiq.com/enterprise
+  source_note: Enterprise product page; global database claim, not a country-specific count.
+  checked_at: '2026-09-28'
+lusha.com:
+  name: Lusha
+  size: 290M+
+  unit: business contacts
+  context: Business-contact data for sales, marketing, and recruiting teams.
+  source: https://www.lusha.com/data/
+  source_note: Data product page; global database claim, not a country-specific count.
+  checked_at: '2026-09-28'
+apollo.io:
+  name: Apollo.io
+  size: 210M+
+  unit: business contacts
+  context: Searchable business-contact database with sales outreach tools.
+  source: https://www.apollo.io/magazine/how-to-find-an-email-address?format=amp
+  source_note: Email-finder article updated June 2026. Other Apollo pages give different totals; this is the article's claim, not an independently measured count.
+  checked_at: '2026-09-28'

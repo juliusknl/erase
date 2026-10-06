@@ -1,0 +1,241 @@
+schema_version: 1
+brokers:
+  - id: truepeoplesearch-public
+    name: TruePeopleSearch
+    match_domains: [truepeoplesearch.com]
+    identity:
+      legal_name: Free Data Services, LLC
+      brands: [TruePeopleSearch]
+      parent: null
+      official_domains: [truepeoplesearch.com]
+    relevance:
+      regions: [US]
+      category: people_search
+      data_categories: [Public people-search records, Contact details]
+      note: US public-record service. A current broker-filed registry declaration documents the opt-out; non-US acceptance is not established.
+    removal:
+      method: manual
+      destination: https://www.truepeoplesearch.com/
+      alternatives: [https://www.truepeoplesearch.com/removal, https://www.truepeoplesearch.com/privacy, privacy@truepeoplesearch.com]
+      steps:
+        - Open the site and choose Do Not Sell My Personal Information in its footer.
+        - Follow the site's matching and confirmation steps for your own record. No purchase is needed to use a privacy request.
+        - If the site blocks access, use its published privacy request phone number, 888-838-4803. Do not bypass the security challenge.
+        - Website-cookie preferences are separate from the record opt-out. Save the response; submitting is not confirmation of removal.
+    required_information:
+      fields: [matching_record_as_requested]
+      certainty: not_fully_specified
+      verification: The live site returned a security block on 4 October. Current fields, CAPTCHA and confirmation sequence could not be inspected; follow the official tool rather than an assumed checklist.
+    coverage:
+      effect: suppression
+      includes: The record-sale opt-out described by TruePeopleSearch in its current California registry filing.
+      excludes: Source public records, other operators, website-cookie sharing and guaranteed non-US eligibility.
+    automation: {mode: manual, reason: Record selection and the site's security/confirmation steps require the person. No generic email route has been validated.}
+    evidence:
+      - url: https://cppa.ca.gov/data_broker_registry/registry.csv
+        checked_on: '2026-10-04'
+        excerpt: Free Data Services, LLC
+        supports: [broker_filed_identity, official_domain, footer_opt_out_instructions, telephone_alternative, cookie_scope]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Live form fields and completion blocked from inspection., Non-US acceptance unestablished., Filing is broker-reported and is not a regulator certification of fulfilment.]
+
+  - id: fastpeoplesearch-family
+    name: FastPeopleSearch and related people-search sites
+    match_domains: [fastpeoplesearch.com, searchpeoplefree.com, usphonebook.com, advancedbackgroundchecks.com, cyberbackgroundchecks.com, fastbackgroundcheck.com, peoplesearchnow.com, phonebooks.com, smartbackgroundchecks.com, usa-people-search.com]
+    identity:
+      legal_name: Mississippi Tornado Alley, LLC
+      brands: [FastPeopleSearch, SearchPeopleFree, USPhoneBook, AdvancedBackgroundChecks, CyberBackgroundChecks, FastBackgroundCheck, PeopleSearchNow, Phonebooks, SmartBackgroundChecks, USA-People-Search]
+      parent: null
+      official_domains: [fastpeoplesearch.com, searchpeoplefree.com, usphonebook.com, advancedbackgroundchecks.com, cyberbackgroundchecks.com, fastbackgroundcheck.com, peoplesearchnow.com, phonebooks.com, smartbackgroundchecks.com, usa-people-search.com]
+    relevance:
+      regions: [US]
+      category: people_search
+      data_categories: [Public people-search records, Contact details]
+      note: The operator's current registry filing expressly says one record-sale opt-out applies across its ten named sites. This is not ten independent deletion outcomes.
+    removal:
+      method: manual
+      destination: https://www.fastpeoplesearch.com/
+      alternatives: [https://www.fastpeoplesearch.com/removal, https://www.fastpeoplesearch.com/privacy, privacy@mtalley.zendesk.com]
+      steps:
+        - Open FastPeopleSearch and use its footer privacy opt-out. One record opt-out is described as applying to all ten named sites.
+        - Follow the matching and confirmation instructions for your own record. Keep the outcome so you can check the other listed sites.
+        - If access is blocked, contact privacy@mtalley.zendesk.com for help with the operator's published cross-site opt-out. Do not assume an email itself completes suppression.
+        - Cookie-based sale or sharing must be opted out separately on each site; it is not covered by the shared record opt-out.
+    required_information:
+      fields: [matching_record_as_requested]
+      certainty: not_fully_specified
+      verification: FastPeopleSearch, SearchPeopleFree and USPhoneBook returned security blocks during inspection. Current matching fields and confirmation sequence remain untested.
+    coverage:
+      effect: suppression
+      includes: Record-sale opt-out across the ten sites expressly named in Mississippi Tornado Alley's current filing.
+      excludes: Other operators, original public sources and each site's separate cookie-based sharing. No guarantee of European acceptance or deletion of all underlying records.
+    automation: {mode: manual, reason: 'Shared opt-out is documented, but personal matching and security steps cannot be completed by a generic email recipe.'}
+    evidence:
+      - url: https://cppa.ca.gov/data_broker_registry/registry.csv
+        checked_on: '2026-10-04'
+        excerpt: Mississippi Tornado Alley, LLC
+        supports: [broker_filed_identity, named_ten_site_coverage, shared_record_opt_out, separate_cookie_opt_out, contact]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Interactive fields and cross-site outcome untested., Non-US eligibility unestablished., Do not infer shared suppression for additional brands.]
+
+  - id: familytreenow-public
+    name: FamilyTreeNow
+    match_domains: [familytreenow.com]
+    identity:
+      legal_name: Family Tree Now, LLC
+      brands: [FamilyTreeNow]
+      parent: null
+      official_domains: [familytreenow.com]
+    relevance:
+      regions: [US]
+      category: people_search
+      data_categories: [Public people-search records, Family and contact associations]
+      note: The current broker filing supplies a public-record opt-out, distinct from cookie preferences.
+    removal:
+      method: manual
+      destination: https://www.familytreenow.com/
+      alternatives: [https://www.familytreenow.com/optout, https://www.familytreenow.com/privacy, privacy@familytreenow.com]
+      steps:
+        - Open the site and choose Do Not Sell My Personal Information in its footer.
+        - Follow the matching and confirmation steps for your own record; review any further information before providing it.
+        - If blocked, the published privacy request line is 877-838-4889. Cookie-based sharing has a separate preference control.
+    required_information:
+      fields: [matching_record_as_requested]
+      certainty: not_fully_specified
+      verification: Current opt-out fields and confirmation were not inspectable because the site returned a security block.
+    coverage:
+      effect: suppression
+      includes: FamilyTreeNow's published record-sale opt-out.
+      excludes: Original public records, other brokers, cookie-based sharing and guaranteed non-US eligibility.
+    automation: {mode: manual, reason: Person-specific record matching and interactive security steps.}
+    evidence:
+      - url: https://cppa.ca.gov/data_broker_registry/registry.csv
+        checked_on: '2026-10-04'
+        excerpt: Family Tree Now, LLC
+        supports: [broker_filed_identity, footer_opt_out, telephone_alternative, cookie_scope]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Live fields and outcome untested., Non-US acceptance unestablished.]
+
+  - id: peoplefinders-public
+    name: PeopleFinders
+    match_domains: [peoplefinders.com]
+    identity:
+      legal_name: Peoplefinders, LLC
+      brands: [PeopleFinders, FindANeighborhood]
+      parent: null
+      official_domains: [peoplefinders.com, findaneighborhood.com]
+    relevance:
+      regions: [US]
+      category: people_search
+      data_categories: [Public people-search records, Contact details]
+      note: A named sister brand is not proof that one opt-out covers both sites; this action targets PeopleFinders only.
+    removal:
+      method: manual
+      destination: https://www.peoplefinders.com/
+      alternatives: [https://www.peoplefinders.com/about/privacy, customercare@peoplefinders.com]
+      steps:
+        - Open PeopleFinders and use Do Not Sell My Personal Information in the footer.
+        - Follow the tool to identify your own record and complete any confirmation it requests.
+        - If the site blocks access, contact customercare@peoplefinders.com for its opt-out process. Do not purchase a background report to make a privacy request.
+        - Check the response's scope; FindANeighborhood and PeopleFindersDaaS are not marked done by this action.
+    required_information:
+      fields: [matching_record_as_requested]
+      certainty: not_fully_specified
+      verification: Public site presented a security challenge; current field set and confirmation remain uninspected.
+    coverage:
+      effect: suppression
+      includes: PeopleFinders record processing addressed by the published footer opt-out.
+      excludes: Other brands, the separate DaaS business, source records and guaranteed non-US eligibility.
+    automation: {mode: manual, reason: Interactive record matching and verification need the person.}
+    evidence:
+      - url: https://cppa.ca.gov/data_broker_registry/registry.csv
+        checked_on: '2026-10-04'
+        excerpt: Peoplefinders, LLC
+        supports: [broker_filed_identity, footer_opt_out, customer_service_contact, brand_boundary]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Live tool and suppression outcome untested., Cross-brand and non-US scope unestablished.]
+
+  - id: thatsthem-public
+    name: ThatsThem
+    match_domains: [thatsthem.com]
+    identity:
+      legal_name: Spokeo, Inc.
+      brands: [ThatsThem]
+      parent: null
+      official_domains: [thatsthem.com, spokeo.com]
+    relevance:
+      regions: [US]
+      category: people_search
+      data_categories: [Public people-search listings, Contact details]
+      note: Spokeo explicitly excludes this site from its normal public-listing form; it needs this separate action.
+    removal:
+      method: form
+      destination: https://www.thatsthem.com/optout
+      alternatives: [https://www.spokeo.com/contact]
+      steps:
+        - Use the separate ThatsThem opt-out form, even if you already removed a Spokeo listing.
+        - Identify your own matching listing and follow the form's confirmation instructions.
+        - If blocked, ask Spokeo Customer Care to help opt you out of ThatsThem as well as its other public sites.
+    required_information:
+      fields: [matching_listing_as_requested]
+      certainty: not_fully_specified
+      verification: Exact form fields could not be inspected because the destination returned 403; the operator's registry filing explicitly publishes this URL and customer-care alternative.
+    coverage:
+      effect: suppression
+      includes: Public listing suppression on ThatsThem.
+      excludes: Spokeo's other sites, original sources and regulated business data. No underlying universal erasure claim.
+    automation: {mode: manual, reason: Separate record-specific form and verification.}
+    evidence:
+      - url: https://cppa.ca.gov/data_broker_registry/registry.csv
+        checked_on: '2026-10-04'
+        excerpt: Thatsthem.com
+        supports: [operator_filed_identity, exact_form_url, separate_opt_out, customer_care_fallback]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Current form fields and acceptance outside the US untested., No suppression outcome tested.]
+
+  - id: peekyou-domain-transfer
+    name: PeekYou — former removal route unavailable
+    match_domains: [peekyou.com]
+    identity:
+      legal_name: Former service PeekYou LLC; domain now controlled by Atlas Data Privacy Corporation
+      brands: [PeekYou]
+      parent: null
+      official_domains: [peekyou.com]
+    relevance:
+      regions: [Historical US people-search service]
+      category: people_search
+      data_categories: [Historical public people-search profiles]
+      note: Current domain notice reports a settled lawsuit and domain transfer, not an operational removal form or deletion of every historical record.
+    removal:
+      method: investigate
+      destination: https://www.peekyou.com/about/contact/optout/
+      alternatives: []
+      steps: [Do not send personal information to the former form., Establish current data custody and a working request route before presenting a removal action.]
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: No current consumer-removal workflow is published at the former endpoint.
+    coverage:
+      effect: needs_review
+      includes: Historical service identification only.
+      excludes: No claim that domain transfer means all historical data was deleted.
+    automation: {mode: blocked, reason: Former removal URL now serves a domain-transfer notice.}
+    evidence:
+      - url: https://www.peekyou.com/about/contact/optout/
+        checked_on: '2026-10-04'
+        excerpt: now controlled by Atlas Data Privacy Corporation
+        supports: [domain_transfer, obsolete_route, no_current_request_form]
+    scale: null
+    review_status: needs_research
+    tested_outcome: not_tested
+    unknowns: [Current custody of historical data and replacement request route.]

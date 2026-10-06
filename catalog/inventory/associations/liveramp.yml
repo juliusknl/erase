@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: liveramp-de
+    records: [community:liveramp-de]
+    rationale: Official German services notice identifies LiveRamp France SAS, matching the community candidate; global rights page independently confirms the German-resident email.

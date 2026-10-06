@@ -1,0 +1,94 @@
+schema_version: 1
+brokers:
+  - id: bazaarvoice-network
+    name: Bazaarvoice network preferences
+    match_domains: [bazaarvoice.com]
+    identity:
+      legal_name: Bazaarvoice, Inc.
+      brands: [Bazaarvoice]
+      parent: null
+      official_domains: [bazaarvoice.com]
+    relevance:
+      regions: [EEA, UK, Switzerland, United States]
+      category: advertising
+      data_categories: [Review content, Account contacts, Browser identifiers, Analytics]
+      note: Reviews submitted through retailers are customer-controlled; direct accounts and network tracking are separate.
+    removal:
+      method: manual
+      destination: https://www.bazaarvoice.com/legal/privacy-policy/
+      alternatives: [privacy@bazaarvoice.com]
+      steps:
+        - Use the Opting Out section's browser control for network analytics preferences.
+        - Ask the originating retailer or brand to remove submitted reviews or account information.
+        - Direct Bazaarvoice account holders can use account settings or the privacy inbox; review account consequences personally.
+        - Retain separate confirmations for each action; none implies blanket network deletion.
+    required_information:
+      fields: [relevant_browser_or_account, originating_retailer_if_applicable]
+      certainty: not_fully_specified
+      verification: Cookie control needs the relevant browser; account matching and follow-up untested.
+    coverage:
+      effect: suppression
+      includes: Browser analytics preferences, with separate account-removal instructions.
+      excludes: Independent retailer records and presumed all-device erasure.
+    automation:
+      mode: manual
+      reason: Scope and customer relationship determine the appropriate route.
+    evidence:
+      - url: https://www.bazaarvoice.com/legal/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2024-02-14'
+        excerpt: please contact that Client directly
+        supports: [identity, browser_preference, retailer_controller, direct_account_rights]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Interactive controls untested., Parent unreviewed., No comparable scale claim.]
+
+  - id: choozle-platform-preferences
+    name: Choozle advertising preferences
+    match_domains: [choozle.com]
+    identity:
+      legal_name: Choozle, Inc.
+      brands: [Choozle]
+      parent: null
+      official_domains: [choozle.com]
+    relevance:
+      regions: [EEA, United States, Global advertising]
+      category: advertising
+      data_categories: [Cookies, Audience segments, Mobile identifiers, Connected-TV activity]
+      note: Platform uses partner-specific advertising routes, not one universal deletion form.
+    removal:
+      method: manual
+      destination: https://choozle.com/opt-out/
+      alternatives: [privacy@choozle.com, https://choozle.com/privacy-policy/]
+      steps:
+        - Follow the published Europe advertising-choice route in the relevant browser and check which provider is affected.
+        - Mobile and connected-TV controls are separate and must use the relevant device.
+        - Do not treat every historical partner link as current; the page still lists Oracle. Check each destination before using it.
+        - Ask the privacy contact to clarify unmatched records; preferences are not confirmed historical erasure.
+    required_information:
+      fields: [relevant_browser_or_device, applicable_advertising_partner]
+      certainty: not_fully_specified
+      verification: Provider-specific controls and device matching untested.
+    coverage:
+      effect: suppression
+      includes: Applicable advertising preferences per provider and device.
+      excludes: Blanket Choozle or partner-database deletion.
+    automation:
+      mode: manual
+      reason: Multiple device/partner controls require personal selection; no verified generic erasure-email matching route.
+    evidence:
+      - url: https://choozle.com/opt-out/
+        checked_on: '2026-10-01'
+        published: '2022-03-10'
+        excerpt: Opt-Out of Choozle Advertising and Data Services
+        supports: [platform_scope, Europe_preference_route, separate_devices, older_partner_links]
+      - url: https://choozle.com/privacy-policy/
+        checked_on: '2026-10-01'
+        published: 'March 2022'
+        excerpt: Choozle, Inc.
+        supports: [legal_identity, website_platform_boundary]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Older partner list not wholly revalidated., Individual controls and delivery untested., No comparable scale claim.]

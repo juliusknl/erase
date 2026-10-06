@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "associations": [
+    {"guide_id": "33-mile-radius", "records": ["live:33-mile-radius-llc"], "rationale": "July 2026 notice on the exact official domain expressly names 33 Mile Radius LLC among Ignite Visibility affiliates; coverage remains product-specific."},
+    {"guide_id": "activimpact", "records": ["live:activimpact-llc"], "rationale": "Official ActivImpact LLC notice covers audience processing and links its embedded privacy-rights form, with Canadian email route separately documented."},
+    {"guide_id": "anchor-computer", "records": ["live:anchor-computer-inc"], "rationale": "Current official Anchor policy and linked individual consumer form distinguish actual deletion from retained do-not-sell suppression."},
+    {"guide_id": "adttribution", "records": ["live:adttribution-inc"], "rationale": "Exact official domain's product notice supplies device-ID deletion instructions; LLC/Inc. mismatch and older page text are preserved, not silently resolved."},
+    {"guide_id": "advisortarget-finsum", "records": ["live:advisortarget-llc"], "rationale": "FinSum official notice names AdvisorTarget LLC doing business as FinSum and its May 2024 Broadridge acquisition."},
+    {"guide_id": "audiencepoint", "records": ["live:audiencepoint-inc"], "rationale": "Official AudiencePoint Inc. notice distinguishes direct contact rights from customer-processor routing for campaign recipients."},
+    {"guide_id": "allant-group", "records": ["live:allant-group-llc"], "rationale": "June 2026 official policy identifies Allant Group LLC and differentiates deletion ID requirements from opt-out and specific-data access."},
+    {"guide_id": "audience-acuity", "records": ["live:audience-acuity-llc"], "rationale": "Exact registry domain's policy and linked rights form reviewed; Inc./LLC legal suffix mismatch is preserved as unresolved identity detail."},
+    {"guide_id": "agile-education", "records": ["live:agile-education-marketing-llc"], "rationale": "Official privacy policy names Agile Education Marketing LLC; public portal explicitly limits its database to US education employees."},
+    {"guide_id": "attribits", "records": ["live:all-good-media-llc"], "rationale": "Attribits official notice names All Good Media LLC as controller and its opt-out page documents email-based database removal."},
+    {"guide_id": "bdex", "records": ["live:bdex-llc"], "rationale": "Official BDEX privacy landing page embeds the September 2026 Termageddon notice naming BDEX LLC and its rights email."},
+    {"guide_id": "alikeaudience-route-review", "records": ["live:alikeaudience-inc"], "rationale": "Official policy names AlikeAudience Inc.; the NAI member directory corroborates its opt-out portal and privacy inbox. Reviewed scope is identifier-specific advertising suppression, not guaranteed historical deletion."},
+    {"guide_id": "forager-ai", "records": ["live:forager-ai-llc"], "rationale": "September 2026 official policy names Forager AI LLC in its SMS section and explicitly covers non-user Business Contact Data."},
+    {"guide_id": "instantly-foomonk", "records": ["live:foo-monk-llc"], "rationale": "September 2026 official policy explicitly identifies Foo Monk LLC doing business as Instantly.ai and describes its marketing database removal."},
+    {"guide_id": "datanyze", "records": ["live:datanyze-llc"], "rationale": "Datanyze's official center uses an explicitly labelled removal form; linked ZoomInfo policy names Datanyze LLC as a subsidiary."},
+    {"guide_id": "demandscience", "records": ["live:demand-science-us-llc"], "rationale": "The linked public PrivacyEngine form expressly names Demand Science US LLC, independently of the policy's group name."},
+    {"guide_id": "clay-scope-review", "records": ["live:clay-labs-inc"], "rationale": "Published notice names Clay Labs Inc.; inaccessible current policy center and product-controller scope remain unresolved after substantive review."},
+    {"guide_id": "endgame", "records": ["live:endgame-labs-inc"], "rationale": "September 2026 policy identifies Endgame Labs Inc. and differentiates customer-directed contact processing from own-controller data."},
+    {"guide_id": "applovin-advertising", "records": ["live:applovin-corporation"], "rationale": "August 2026 official policy names AppLovin Corporation and distinguishes device-app deletion from email/phone portal deletion."},
+    {"guide_id": "claritas-us", "records": ["live:claritas-llc"], "rationale": "May 2026 official policy identifies Claritas LLC and expressly excludes non-US service data, routing ArtsAI separately."},
+    {"guide_id": "brandwatch-authors", "records": ["live:crimson-hexagon"], "rationale": "Official author notice explicitly names Crimson Hexagon Inc. within Brandwatch's controller entities; no blanket Cision erasure is inferred."},
+    {"guide_id": "azerion-advertising-routes", "records": ["live:azerion-us-inc"], "rationale": "Official US integration announcement links Hybrid Theory to Azerion US; current product notices are reviewed but exact US controller assignment remains unresolved."},
+    {"guide_id": "adeptid-people-search", "records": ["live:adept-id-inc"], "rationale": "Official June 2025 PDF identifies AdeptID Inc. and documents candidate People Search processing and direct rights email."},
+    {"guide_id": "enigma", "records": ["live:enigma-technologies-inc"], "rationale": "Official product privacy notice identifies Enigma Technologies Inc. and covers personal contacts associated with US businesses."},
+    {"guide_id": "explorium", "records": ["live:explorium-inc"], "rationale": "Same official Explorium domain and product, but current policy names Ltd.; the Inc. relationship remains explicitly unresolved, not a proven legal merger."},
+    {"guide_id": "evorra", "records": ["live:evorra-ltd"], "rationale": "Official product policy expressly includes Evorra Limited and Evorra Inc.; dedicated rights portal independently inspected without submission."},
+    {"guide_id": "enlyft", "records": ["live:enlyft-inc"], "rationale": "Current official policy identifies Enlyft Inc. and distinguishes its directory from subscriber-controlled processor records."},
+    {"guide_id": "draup", "records": ["live:draup-inc"], "rationale": "Official general and European policies expressly document People Insights removal and name/email matching."},
+    {"guide_id": "definitive-healthcare", "records": ["live:definitive-healthcare-llc"], "rationale": "August 2026 notice names Definitive Healthcare LLC for View and Carevoyance, while separately routing Monocl and Populi."},
+    {"guide_id": "accurate-append", "records": ["live:accurate-append-inc"], "rationale": "September 2026 official notice names Accurate Append Inc.; inaccessible form and non-customer deletion ambiguity remain unresolved."},
+    {"guide_id": "blis", "records": ["live:blis-global-ltd"], "rationale": "Product notice expressly identifies Blis Global Ltd as group controller for pseudonymous advertising data."},
+    {"guide_id": "clearview-ai", "records": ["live:clearview-ai-inc"], "rationale": "Current public policy identifies Clearview AI Inc.; US image-based rights flows reviewed, European route still unresolved."},
+    {"guide_id": "adswizz", "records": ["live:adswizz-inc"], "rationale": "Official notice names AdsWizz Inc. but treats listener data as publisher-controlled; generic broker request scope is unresolved."},
+    {"guide_id": "faraday", "records": ["live:faraday-inc"], "rationale": "Official legal page links Faraday Inc. policy and consumer forms; product explicitly excludes European data."},
+    {"guide_id": "data-axle", "records": ["live:data-axle-inc"], "rationale": "Official product notice and consumer-rights form identify Data Axle Inc.; independent group entities are not inferred covered."},
+    {"guide_id": "experian-marketing-us", "records": ["live:experian-marketing-solutions-llc"], "rationale": "US marketing notice expressly identifies Experian Marketing Solutions LLC and links the US consumer-rights workflow."},
+    {"guide_id": "epsilon-north-america", "records": ["live:epsilon-data-management-llc"], "rationale": "North American policy identifies Epsilon Data Management LLC; European and UK Abacus product routes remain distinct."},
+    {"guide_id": "cision-media-databases", "records": ["live:cision-us-inc"], "rationale": "Cision.com policy names Cision US Inc. and links the dedicated media/influencer notice and central privacy contact."},
+    {"guide_id": "adapt-directory", "records": ["live:adapt-io"], "rationale": "Official directory notice identifies SLI Technologies and the same Adapt.io domain, with a directory-specific removal route."},
+    {"guide_id": "aidentified", "records": ["live:aidentified-inc"], "rationale": "Current notice names Aidentified Inc. and expressly limits its data products to US information."},
+    {"guide_id": "adstra", "records": ["live:adstra-llc"], "rationale": "September 2026 product notice names Adstra LLC and provides regional rights routes for its marketing technology."},
+    {"guide_id": "anteriad", "records": ["live:anteriad-llc"], "rationale": "July 2026 product notice names Anteriad LLC and its covered brands; separate recruitment controller is not merged."},
+    {"guide_id": "affinity-solutions", "records": ["live:affinity-solutions"], "rationale": "Official notice names Affinity Solutions Inc. and distinguishes bank-processor data from its own controller records."},
+    {
+      "guide_id": "deep-sync",
+      "records": [
+        "live:accudata-integrated-marketing-llc",
+        "live:compact-information-systems-llc"
+      ],
+      "rationale": "The official product notice names Compact Information Systems LLC d/b/a Deep Sync and explicitly includes AccuData Integrated Marketing."
+    },
+    {
+      "guide_id": "propensity",
+      "records": [
+        "live:addapptation-inc"
+      ],
+      "rationale": "Current form and privacy notice distinguish own processing from customers' subscription data; current versus legacy entity names need confirmation."
+    },
+    {
+      "guide_id": "affinity-answers",
+      "records": [
+        "live:affinity-answers-corporation"
+      ],
+      "rationale": "EEA/UK choices are explicit; email-only matching leaves social-handle records outside a complete request."
+    },
+    {
+      "guide_id": "registry-aggknowledge-inc",
+      "records": [
+        "live:aggknowledge-inc"
+      ],
+      "rationale": "Policy distinguishes sold Network Data from Client and Website Data and includes EEA/UK rights."
+    },
+    {
+      "guide_id": "adprime",
+      "records": [
+        "live:adprime-media-llc"
+      ],
+      "rationale": "Advertising audiences include consumers and healthcare professionals; EEA/UK/Swiss controller rights are explicit."
+    },
+    {
+      "guide_id": "azira",
+      "records": [
+        "live:azira-llc"
+      ],
+      "rationale": "Mobile location/audience records require advertising-ID matching; a name/email-only request cannot identify these records."
+    },
+    {
+      "guide_id": "contactout",
+      "records": [
+        "live:contactout"
+      ],
+      "rationale": "Business-contact service for sales, marketing and recruitment; UK complaint authority and California rights appear in the notice."
+    },
+    {
+      "guide_id": "bombora",
+      "records": [
+        "live:bombora-inc"
+      ],
+      "rationale": "Company-level intent aggregation retains underlying device and engagement data; browser and hashed-email choices are separate."
+    },
+    {
+      "guide_id": "fifty-technology",
+      "records": [
+        "live:fifty-technology-limited"
+      ],
+      "rationale": "Current February 2026 notice distinguishes social-profile research from client-platform advertising identifiers it says it does not hold."
+    },
+    {
+      "guide_id": "captify",
+      "records": [
+        "live:captify-technologies"
+      ],
+      "rationale": "Search-intelligence audience requests use cookie matching, not names or email addresses."
+    },
+    {
+      "guide_id": "demandbase",
+      "records": [
+        "live:demandbase-inc"
+      ],
+      "rationale": "Professional databases and advertising signals; EEA/UK/Swiss rights use the dedicated privacy-center form."
+    },
+    {
+      "guide_id": "atdata",
+      "records": [
+        "live:atdata-llc"
+      ],
+      "rationale": "For EU/Swiss/UK end users, the notice limits services to SafeToSend and Fraud API; do not infer European marketing-enrichment coverage."
+    },
+    {
+      "guide_id": "findem",
+      "records": [
+        "live:findem-inc"
+      ],
+      "rationale": "Published removal applies to all consumers; June 2026 clarification says email is sufficient, while the current page also displays name fields."
+    },
+    {
+      "guide_id": "foursquare",
+      "records": [
+        "live:foursquare-labs-inc"
+      ],
+      "rationale": "Location-audience sale/share opt-out differs from deleting a Swarm, City Guide or developer account."
+    },
+    {
+      "guide_id": "altrata-products",
+      "records": [
+        "live:altrata-inc"
+      ],
+      "rationale": "People-intelligence products have a separate notice from website visitors. Product-specific requests should identify the relevant profile."
+    },
+    {
+      "guide_id": "crunchbase",
+      "records": [
+        "live:crunchbase-inc"
+      ],
+      "rationale": "EEA/UK notice covers third-party Person Profile Data, not only registered accounts."
+    },
+    {
+      "guide_id": "alliant-data-products",
+      "records": [
+        "live:alliant-cooperative-data-solutions-llc"
+      ],
+      "rationale": "US state-rights workflow; AnalyticsIQ has a different form despite the shared notice."
+    },
+    {
+      "guide_id": "analyticsiq",
+      "records": [
+        "live:analyticsiq-inc"
+      ],
+      "rationale": "Shared Alliant product policy directs AnalyticsIQ consumers to a distinct rights form."
+    },
+    {
+      "guide_id": "censia",
+      "records": [
+        "live:censia-in"
+      ],
+      "rationale": "Independent candidate data comes from public sources and brokers; customer-supplied profiles can instead be processor records."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+schema_version: 1
+associations:
+  - guide_id: registry-illumin-inc
+    records: [community:acuityads]
+    rationale: Official audited financial statements explicitly identify illumin Inc as formerly AcuityAds Inc, distinct from the holding-company rename; the current platform-rights dossier supplies the route.
+  - guide_id: sojern
+    records: [community:sojern]
+    rationale: The community candidate and reviewed official travel-advertising policy identify the same Sojern Inc entity and domain; device-specific scope remains explicit.
+  - guide_id: start-io
+    records: [community:start-io]
+    rationale: The current official policy explicitly identifies Start.io Inc and its StartApp predecessor; the matching community record uses this same legal entity and official domain.
+  - guide_id: people-data-labs
+    records: [live:people-data-labs-inc]
+    rationale: Exact People Data Labs Inc identity and official domain match; public Privacy Center configuration now documents a Consumer erasure route while personal verification and fulfilment remain untested.
+  - guide_id: criteo
+    records: [community:criteo, live:criteo-corp]
+    rationale: The May 2026 advertising DPA explicitly names Criteo SA for non-US audiences and Criteo Corp for US audiences. The shared guide retains that distinction and does not merge the entities or claim cross-identifier deletion.
+  - guide_id: registry-hivestack-technologies-inc
+    records: [live:hivestack-technologies-inc]
+    rationale: Current official CCPA notice explicitly names Hivestack Technologies Inc dba Perion; this association retains the unresolved Canada controller transition and excludes the distinct Hivestack Inc record.

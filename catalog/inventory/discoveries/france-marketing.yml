@@ -1,0 +1,35 @@
+schema_version: 1
+regions: [FR]
+rationale: Product-specific official sources identify campaign-data processing and targeting services; inclusion is not proof of individual exposure or independent controller status.
+evidence:
+  - url: https://www.valiuz.com/fr/politique-de-confidentialite
+    checked_on: '2026-09-29'
+    excerpt: Expérience multi-marques
+    supports: [discovery]
+  - url: https://www.criteredirect.com/rgpd-et-cookies/
+    checked_on: '2026-09-29'
+    excerpt: prestations de courtage d’adresses
+    supports: [discovery]
+  - url: https://webrivage.com/data-marketing/
+    checked_on: '2026-09-29'
+    excerpt: Bonjour Data
+    supports: [discovery]
+  - url: https://nominations.hospimedia.fr/profil-de-decideur/
+    checked_on: '2026-09-29'
+    excerpt: coordonnées professionnelles
+    supports: [discovery]
+  - url: https://www.avanci.fr/politique-de-confidentialite/politique-de-confidentialite-monetisation-donnees-personnelles/
+    checked_on: '2026-09-29'
+    excerpt: en qualité de sous-traitant
+    supports: [discovery]
+  - url: https://dataondemand.fr/web/
+    checked_on: '2026-09-29'
+    excerpt: CIBLAGE
+    supports: [discovery]
+candidates:
+  - {slug: fr-valiuz, name: VALIUZ SAS}
+  - {slug: fr-critere-direct, name: Critère Direct SARL}
+  - {slug: fr-webrivage, name: WebRivage SAS / Bonjour Data}
+  - {slug: fr-hospimedia-nominations, name: HOSPIMEDIA Nominations}
+  - {slug: fr-avanci, name: AVANCI SAS}
+  - {slug: fr-dataondemand, name: DATAONDEMAND SAS}

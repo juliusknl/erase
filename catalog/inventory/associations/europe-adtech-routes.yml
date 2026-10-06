@@ -1,0 +1,11 @@
+schema_version: 1
+associations:
+  - guide_id: awin-consumers
+    records: [community:awin]
+    rationale: Official privacy policy names AWIN AG and separately documents consumer attribution and the global DPO route; website-contact rights are not substituted for tracking-data matching.
+  - guide_id: audiencerate
+    records: [community:audiencerate]
+    rationale: Official product privacy notice identifies Audiencerate Ltd on the matching domain and distinguishes advertising controller processing from customer-platform processor duties.
+  - guide_id: adjoe-products
+    records: [community:adjoe]
+    rationale: Both published product notices explicitly identify adjoe GmbH. One guide distinguishes Ads Network/Exchange from Playtime contacts and consequences rather than infer a single blanket workflow.

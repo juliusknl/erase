@@ -1,0 +1,30 @@
+schema_version: 1
+regions: [PL, CZ]
+rationale: Official credit-register notices establish separate Polish and Czech workflows absent from existing country guides; not a complete national broker census.
+evidence:
+  - url: https://www.repi.cz/download/8779/
+    checked_on: '2026-09-29'
+    excerpt: Registr REPI
+    supports: [discovery]
+  - url: https://www.registrporadcu.cz/wp-content/uploads/2020/02/IM_ELIXIR_CZE_2020.pdf
+    checked_on: '2026-09-29'
+    excerpt: Služby ELIXIR
+    supports: [discovery]
+  - url: https://www.bik.pl/rodo
+    checked_on: '2026-09-29'
+    excerpt: Biuro Informacji Kredytowej S.A.
+    supports: [discovery]
+  - url: https://cbcb.cz/gdpr/
+    checked_on: '2026-09-29'
+    excerpt: CBCB
+    supports: [discovery]
+  - url: https://www.cncb.cz/obecne-narizeni-o-ochrane-osobnich-udaju/
+    checked_on: '2026-09-29'
+    excerpt: CNCB
+    supports: [discovery]
+candidates:
+  - {slug: cz-repi, name: CRIF – Registr platebních informací s. r. o.}
+  - {slug: cz-crif-elixir, name: CRIF – Czech Credit Bureau / ELIXIR}
+  - {slug: pl-bik, name: Biuro Informacji Kredytowej S.A.}
+  - {slug: cz-cbcb-brki, name: CBCB / BRKI}
+  - {slug: cz-cncb-nrki, name: CNCB / NRKI}

@@ -1,0 +1,49 @@
+schema_version: 1
+brokers:
+  - id: saz-swiss-addresses
+    name: SAZ Swiss marketing address database
+    match_domains: [saz.com]
+    identity:
+      legal_name: SAZ Services AG, St. Gallen, Switzerland
+      brands: [SAZ Services AG]
+      parent: null
+      official_domains: [saz.com]
+    relevance:
+      regions: [Germany, Austria, Switzerland]
+      category: postal_marketing
+      data_categories: [Names, Postal addresses, Marketing selections, Address-list brokerage]
+      note: The Swiss AG identifies itself as controller for brokered addresses. Its German GmbH is a separate entity and explicitly has no own marketing address stock.
+    removal:
+      method: form
+      destination: https://www.saz.com/de/datenschutz
+      alternatives: [datenschutz.ch@saz.com]
+      steps:
+        - Open the Swiss SAZ Services AG privacy form and make the request in your own name; it does not accept requests for other people.
+        - Provide salutation, first and last name, street and house number, postcode, town and actual country. The country selector offers Germany, Austria and Switzerland; do not select a false residence.
+        - Select Opt-Out to block onward address disclosure. Email and the advertising-example or free-text fields are optional; Keine Angabe is an available salutation choice.
+        - Complete the CAPTCHA yourself. SAZ says its reply comes exclusively by post and it may require a further written request by post or fax to check identity.
+        - Keep the postal confirmation and record address suppression, not deletion of all records. Do not send the same request to the German GmbH or assume independent advertisers have erased their copies.
+    required_information:
+      fields: [salutation, full_name, postal_address, country, request_type]
+      certainty: documented
+      verification: Public HTML required fields and country options reviewed; CAPTCHA and any follow-up postal or fax verification remain untested. No automatic identity-document attachment.
+    coverage:
+      effect: suppression
+      includes: Blocking onward disclosure of matched address data by SAZ Services AG in its marketing-address role.
+      excludes: Complete erasure, independent advertiser copies, German SAZ Services GmbH records and guaranteed coverage outside the form's three countries.
+    automation:
+      mode: manual
+      reason: CAPTCHA, own-name restriction, postal reply and possible written identity checks require a personal handoff; the published form is preferred to an assumed equivalent automated email.
+    evidence:
+      - url: https://www.saz.com/de/datenschutz
+        checked_on: '2026-10-01'
+        excerpt: Bitte sperren Sie meine Adressdaten
+        supports: [identity, exact_controller, suppression_scope, required_fields, country_options, verification, postal_reply, alternative_email]
+      - url: https://www.saz.com/de/datenschutzerklaerung
+        checked_on: '2026-10-01'
+        excerpt: zum Nachweis einer ordnungsgemässen Beauskunftung
+        supports: [request_correspondence_retention, website_scope_distinction]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Form submission and postal fulfilment not tested., Coverage outside Germany Austria and Switzerland needs confirmation., Parent and comparable database scale not reviewed.]

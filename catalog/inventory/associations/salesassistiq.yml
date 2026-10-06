@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: salesassistiq
+    records: [live:aniline-inc]
+    rationale: Current official policy explicitly identifies Aniline Inc doing business as SalesAssistIQ and names both domains. This is not a speculative match based on a website redirect.

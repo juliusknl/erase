@@ -1,0 +1,101 @@
+schema_version: 1
+brokers:
+  - id: sovrn-advertising
+    name: Sovrn advertising and data services
+    match_domains: [sovrn.com]
+    identity:
+      legal_name: Sovrn, Inc. (current privacy notice)
+      brands: [Sovrn, Sovrn Exchange, Sovrn Signal, Sovrn Data, Sovrn Commerce]
+      parent: null
+      official_domains: [sovrn.com]
+    relevance:
+      regions: [EEA, United Kingdom, Switzerland, United States]
+      category: advertising
+      data_categories: [Hashed email, Cookies, Mobile advertising IDs, Connected-TV IDs, Reading activity, Interest inferences]
+      note: Reader profiles differ from publisher accounts. The notice describes both controller and processor roles; most reader processing is on publisher instructions.
+    removal:
+      method: email
+      destination: privacy@sovrn.com
+      alternatives: [https://www.sovrn.com/privacy-policy/policy-center/]
+      steps:
+        - EEA residents may send an initial rights request for email-linked records, including hashes, to privacy@sovrn.com; use identifiers you actually use, not just a newly created request mailbox.
+        - Ask Sovrn to distinguish its own controller records from publisher-controlled data and identify any publisher that must handle a separate request. Do not request deletion of a publisher business account by default.
+        - For cookie, mobile or TV records, open the Privacy Center and follow Submit a data rights request or the separate Opt-Out Rights link. Additional technical identifiers and verification require personal review.
+        - Commerce affiliate tracking is a separate browser preference. Its opt-out cookie must remain present; clearing cookies or changing browser requires opting out again.
+        - Record the exact outcome. An email-linked request does not prove removal of all devices, publisher copies or legally retained records.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: No exhaustive email checklist published. The notice permits European email rights requests and describes hashed-email matching; additional identity and device verification remain manual. Portal returned HTTP 403 during inspection.
+    coverage:
+      effect: deletion_request
+      includes: Initial request concerning matched email-linked personal records controlled by Sovrn; device-specific and processor data require the documented separate handling.
+      excludes: Automatic all-device removal, publisher-controlled copies, closure of customer accounts and an assumption that a reader profile contains a plain-text name or email.
+    automation:
+      mode: manual
+      reason: An initial email-linked recipe is implemented; device matching, verification and publisher-controller referrals require manual follow-through.
+    evidence:
+      - url: https://www.sovrn.com/privacy-policy/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2026-01-14'
+        excerpt: Submit requests through our Privacy Center
+        supports: [identity, European_email_rights, hashed_email_data, controller_processor_boundary, retention]
+      - url: https://www.sovrn.com/privacy-policy/policy-center/
+        checked_on: '2026-10-01'
+        published: '2026-01-13'
+        excerpt: Submit a data rights request
+        supports: [form_handoff, device_matching, separate_commerce_opt_out]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Portal fields and identity verification untested after HTTP 403., Email-to-hash matching and fulfilment not tested., Exact legal relationship to the older Sovrn Holdings Inc community entry not established., No comparable scale claim.]
+
+  - id: gumgum-advertising
+    name: GumGum browser advertising choices
+    match_domains: [gumgum.com]
+    identity:
+      legal_name: GumGum, Inc.; GumGum UK Limited is the UK contact named in the notice
+      brands: [GumGum]
+      parent: null
+      official_domains: [gumgum.com]
+    relevance:
+      regions: [EEA, United Kingdom, Switzerland, United States]
+      category: advertising
+      data_categories: [Browser cookies, Device identifiers, IP addresses, Advertising interactions, Partner-site activity]
+      note: Notice covers its services and partner advertising, not just corporate visitors. Browser targeting preferences and broader erasure have different matching requirements.
+    removal:
+      method: form
+      destination: https://gumgum.com/terms-and-policies/opt-out
+      alternatives: [dataprivacy@gumgum.com, https://gumgum.com/terms-and-policies/privacy-policy]
+      steps:
+        - Open the opt-out page in each browser you use and activate its opt-out control yourself.
+        - Keep the opt-out cookie. Clearing cookies, switching browser or using another device means the preference may need to be set again.
+        - This stops behavioral targeting in the matched browser, not all ads and not guaranteed historical erasure.
+        - For broader European rights contact dataprivacy@gumgum.com and review the identifier and verification requirements before supplying more data. A name or new request mailbox cannot be assumed to locate pseudonymous device records.
+        - The policy labels its separate DO NOT SELL form route for California residents only. Do not claim California residence to use it, and do not assume independent advertisers are covered.
+    required_information:
+      fields: [relevant_browser]
+      certainty: documented
+      verification: Browser opt-out behavior and cookie scope described by the official page; the control was not executed. Broader erasure may require specific identifiers and verification not listed exhaustively.
+    coverage:
+      effect: suppression
+      includes: Behavioral advertising preference for the browser in which the GumGum opt-out is performed.
+      excludes: Historical erasure, every device, all advertisements, independent advertisers and unrelated affiliate products.
+    automation:
+      mode: manual
+      reason: Relevant browser context is required. European email is an alternative rights contact, not proof that a generic initial email matches advertising profiles.
+    evidence:
+      - url: https://gumgum.com/terms-and-policies/opt-out
+        checked_on: '2026-10-01'
+        published: '2022-02-03 (still linked by current policy)'
+        excerpt: Your opt-out choice is stored in an opt-out cookie only in this browser.
+        supports: [browser_route, repeat_per_device, suppression_scope]
+      - url: https://gumgum.com/terms-and-policies/privacy-policy
+        checked_on: '2026-10-01'
+        published: '2026-03-11'
+        excerpt: GumGum UK Limited
+        supports: [identity, European_email_rights, service_scope, verification, California_form_limit]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Opt-out control and cookie persistence not exercised., Broader erasure matching and identity requirements untested., Parent and database scale unreviewed.]

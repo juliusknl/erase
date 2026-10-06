@@ -1,0 +1,63 @@
+schema_version: 1
+brokers:
+  - id: zeotap-data
+    name: Zeotap Data — Roqad audience data
+    match_domains: [zeotapdata.net]
+    identity:
+      legal_name: Zeotap Data GmbH
+      brands: [Zeotap Data]
+      parent: Roqad (acquisition stated; exact holding entity not reviewed)
+      official_domains: [zeotapdata.net]
+    relevance:
+      regions: [DE, FR, IT, ES, UK]
+      category: advertising
+      data_categories: [Advertising IDs, Cookie IDs, Hashed contacts, Audience attributes]
+      note: European telecom and publisher-derived advertising audiences; not the separate zeotap GmbH software business.
+    removal:
+      method: email
+      destination: privacy@roq.ad
+      alternatives: [https://roq.ad/opt-out]
+      steps:
+        - Specify Zeotap Data; request deletion and withdrawal of advertising consent.
+        - Supply applicable advertising or cookie IDs for matching. Email or phone hash matching alone can miss other records.
+        - Desktop opt-out covers both Roqad and Zeotap Data tracking; use the affected browser.
+    required_information:
+      fields: [advertising_id_or_cookie_id]
+      certainty: not_fully_specified
+      verification: Full matching requires device identifiers; additional ownership verification is unspecified.
+    coverage:
+      effect: deletion_request
+      includes: Zeotap Data records linked to supplied identifiers.
+      excludes: Independent partners and clients; browser opt-out is not proof of deletion.
+    automation:
+      mode: manual
+      reason: Device identifiers and browser-specific choices require user involvement.
+    evidence:
+      - url: https://zeotapdata.net/privacy-policy/
+        checked_on: '2026-09-29'
+        excerpt: For questions about this Policy or to exercise your rights, please contact Roqad at privacy@roq.ad.
+        supports: [identity, removal, required_information, coverage]
+      - url: https://roq.ad/opt-out
+        checked_on: '2026-09-29'
+        excerpt: Opt out of ROQAD and Zeotap Data tracking on your desktop browser
+        supports: [removal, coverage, automation]
+      - url: https://zeotapdata.net/zeotap-data-powered-contextual-expansion/
+        checked_on: '2026-09-29'
+        excerpt: with the acquisition of Zeotap Data
+        supports: [identity]
+      - url: https://zeotapdata.net/
+        checked_on: '2026-09-29'
+        excerpt: Zeotap Data audiences are available in France, Germany, Italy, Spain and the UK
+        supports: [relevance]
+    scale:
+      claim: More than 500 million unique IDs
+      unit: identifiers, not unique people
+      scope: Vendor homepage claim, not personal exposure; undated. Another company page says billions without reconciliation.
+      source:
+        url: https://zeotapdata.net/
+        checked_on: '2026-09-29'
+        excerpt: Composed of over 500 Million unique IDs
+        supports: [scale]
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Additional verification requirements., Current availability of the policy-mentioned mobile rights app., Outcome and downstream propagation untested.]

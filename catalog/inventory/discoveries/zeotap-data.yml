@@ -1,0 +1,10 @@
+schema_version: 1
+regions: [DE, FR, IT, ES, UK]
+rationale: The original Zeotap privacy policy directs audience-data inquiries to a separate company website. Preserve that entity as an explicit discovery rather than merging controllers by brand.
+evidence:
+  - url: https://zeotap.com/privacy-policy/
+    checked_on: '2026-09-29'
+    excerpt: zeotap Data GmbH
+    supports: [discovery]
+candidates:
+  - {slug: zeotap-data, name: Zeotap Data GmbH}

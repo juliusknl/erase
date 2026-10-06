@@ -1,0 +1,20 @@
+schema_version: 1
+assessments:
+  - record: community:oracle
+    disposition: out_of_scope
+    checked_on: '2026-09-30'
+    rationale: Exclude this mixed Oracle advertising/hospitality/cloud entry from the default independent-broker campaign. Oracle confirms Advertising decommissioning on 30 September 2024. Its current Services notice directs end-user requests for customer-controlled data to that customer; separately controlled operations and other Oracle businesses retain their own rights routes in the privacy hub. This is not proof that every historical or current Oracle record was deleted, nor a reason to close a hotel or cloud account automatically.
+    evidence:
+      - url: https://www.oracle.com/legal/privacy/ccpa-2024/
+        checked_on: '2026-09-30'
+        excerpt: Oracle Advertising has been decommissioned.
+        supports: [advertising_shutdown, historic_reporting_not_current_workflow]
+      - url: https://www.oracle.com/legal/privacy/services-privacy-policy/
+        checked_on: '2026-09-30'
+        excerpt: Your end users should direct any requests related to their Services Personal Information to You.
+        supports: [customer_controller, separate_operations_data]
+      - url: https://www.oracle.com/legal/privacy/
+        checked_on: '2026-09-30'
+        excerpt: different Oracle lines of business
+        supports: [product_specific_notices_and_rights]
+    unresolved: []

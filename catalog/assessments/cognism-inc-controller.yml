@@ -1,0 +1,18 @@
+schema_version: 1
+assessments:
+  - record: live:cognism-inc
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: September 2026 policy designates Limited and Croatian d.o.o as joint platform controllers, already covered by the Cognism guide. The 2024 official notice names Cognism Inc among processor/subprocessor affiliates; current independent Inc scope is not established by that historical role and cannot be silently treated as the same legal controller.
+    evidence:
+      - url: https://www.cognism.com/en/privacy-policy
+        checked_on: '2026-10-01'
+        published: '2026-09-03'
+        excerpt: act as joint controllers
+        supports: [current_named_controllers]
+      - url: https://www.cognism.com/hubfs/2024.10.09-Cognism-Website-Privacy-Policy-final.pdf
+        checked_on: '2026-10-01'
+        published: '2024-10-09'
+        excerpt: Cognism Inc (US)
+        supports: [historical_affiliate_processor_role]
+    unresolved: [Confirm present Inc-specific processing and whether any separate controller request is needed beyond the platform joint controllers.]

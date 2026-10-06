@@ -1,0 +1,8 @@
+schema_version: 1
+associations:
+  - guide_id: apollo-professional
+    records: [live:zenleads-inc, community:apollo-io]
+    rationale: Current policy expressly identifies ZenLeads Inc. as Apollo.io; the professional database is not Apollo Interactive or Apollo-Optik.
+  - guide_id: zoominfo-professional
+    records: [live:zoominfo-technologies-llc, community:zoominfo]
+    rationale: The current ZoomInfo professional-profile policy names Technologies LLC; the legacy community Zoom Information name points to this brand's professional directory, not proof of all historical subsidiary deletion.

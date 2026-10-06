@@ -1,0 +1,9 @@
+{% extends 'setup_base.html' if setup_mode else 'base.html' %}
+{% block title %}Demo mailbox · erase{% endblock %}
+{% block content %}
+<section class="card"><h1>Demo mailbox</h1>
+<p>No Google sign-in or permissions are needed. This connects a local fake mailbox to your test profile.</p>
+<p>After you start automatic emails, simulated receipts appear after about 10 seconds and outcomes after about 35 seconds: deletion, no match, a form, extra information, email verification or an ID request. These are examples, not evidence about the named brokers.</p>
+<form method="post" action="/demo/mailbox"><input type="hidden" name="csrf" value="{{ csrf }}"><button>Connect demo mailbox</button></form>
+</section>
+{% endblock %}

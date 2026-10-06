@@ -1,0 +1,13 @@
+{% extends 'settings_base.html' %}
+{% block title %}Appearance · erase{% endblock %}
+{% block settings_title %}Appearance{% endblock %}
+{% block settings_content %}
+<section class="appearance-settings">
+  <p class="muted">Same app, four looks. Saved in this browser; change it anytime.</p>
+  <form method="post" action="/appearance">
+    <input type="hidden" name="csrf" value="{{ csrf }}">
+    {% include 'appearance_choices.html' %}
+    <div class="button-row"><button>Save appearance</button>{% if request.query_params.get('saved') == '1' %}<span class="appearance-saved" role="status">Appearance saved.</span>{% endif %}</div>
+  </form>
+</section>
+{% endblock %}

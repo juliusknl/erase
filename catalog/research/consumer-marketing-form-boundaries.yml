@@ -1,0 +1,440 @@
+schema_version: 1
+brokers:
+  - id: belardiwong-regional-request
+    name: Belardi Wong regional privacy request
+    match_domains: [belardiwong.com]
+    identity:
+      legal_name: Belardi Wong ALC, LLC
+      brands: [Belardi Wong, Belardi Ostroy]
+      parent: null
+      official_domains: [belardiwong.com]
+    relevance:
+      regions: [European Union, United Kingdom, Canada, Australia, Listed United States jurisdictions]
+      category: consumer_marketing
+      data_categories: [Contact details, Purchase information, Marketing inferences, Browsing activity]
+      note: Non-US website rights and US service-data rights have different stated scope.
+    removal:
+      method: form
+      destination: https://privacyportal.onetrust.com/webform/3d2d5e0c-bd98-46b8-906c-ede68a6f6a80/b727ebf0-c3dd-4f4c-bdba-e91689d7de43
+      alternatives: [https://belardiwong.com/privacy-policy/, privacy.officer@belardiwong.com]
+      steps:
+        - Use this policy-linked non-US form with your real country, relationship and requested right; inspect the available choices personally.
+        - Required fields include name, email, phone and postal address including city, region and postal code; Address Line 2 is optional.
+        - Ask explicitly whether the result covers marketing-service records or only website data; do not assume website deletion clears all brokered lists.
+        - US state requests and authorized agents have separate policy links. Complete verification and retain the exact scope of the response.
+    required_information:
+      fields: [full_name, email, phone, postal_address, country, relationship_context, requested_right]
+      certainty: not_fully_specified
+      verification: Public non-US form configuration inspected without submission; runtime choices and verification untested.
+    coverage:
+      effect: deletion_request
+      includes: Matched records within the accepted regional request scope.
+      excludes: Unconfirmed all-service coverage, independent customers and separate affiliates.
+    automation:
+      mode: manual
+      reason: Regional scope, required phone/postal disclosure and identity verification require review.
+    evidence:
+      - url: https://belardiwong.com/privacy-policy/
+        checked_on: '2026-10-01'
+        published: January 27, 2026
+        excerpt: Belardi Wong ALC, LLC Privacy Office
+        supports: [current_entity, regional_form_delegation, website_versus_service_scope]
+      - url: https://privacyportal.onetrust.com/webform/3d2d5e0c-bd98-46b8-906c-ede68a6f6a80/b727ebf0-c3dd-4f4c-bdba-e91689d7de43
+        checked_on: '2026-10-01'
+        excerpt: Post Town/State/Region/Province
+        supports: [required_matching_fields, optional_address_line_2]
+      - url: https://www.prnewswire.com/news-releases/belardiostroy-announces-expanded-services-leadership-and-name-change-300536812.html
+        checked_on: '2026-10-01'
+        published: October 17, 2017
+        excerpt: Belardi/Ostroy will change its name to Belardi Wong
+        supports: [company_issued_brand_rename_not_extra_database]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Runtime and service-record fulfilment untested., Policy readable through web retrieval while direct HTTP returned 403., Parent and comparable scale unreviewed.]
+  - id: crosspixel-browser-preferences
+    name: Cross Pixel advertising preferences
+    match_domains: [crosspixel.net]
+    identity:
+      legal_name: Cross Pixel Media, Inc.
+      brands: [Cross Pixel]
+      parent: Knower Tech USA
+      official_domains: [crosspixel.net, crsspxl.com]
+    relevance:
+      regions: [United States rights, Browser preference — other regional handling untested]
+      category: advertising
+      data_categories: [Cookie and mobile IDs, Browsing interests, Approximate location]
+      note: The notice says it does not collect names or plaintext emails for this service; a new email cannot match a cookie profile.
+    removal:
+      method: form
+      destination: https://privacy.crsspxl.com/
+      alternatives: [privacy@crosspixel.net]
+      steps:
+        - Use the portal in your actual browser and review its Opt Out action yourself. No preference-changing endpoint was executed during research.
+        - Repeat for other browsers and devices; the portal describes behavioral-targeting and sale suppression, not historical erasure.
+        - For deletion or access, email the privacy team and clarify matching cookie/device identifiers and applicable regional rights first.
+        - Independent publishers and partners have separate data and controls. Save the actual outcome.
+    required_information:
+      fields: [actual_browser_context]
+      certainty: not_fully_specified
+      verification: Portal instructions inspected; action controls, preference persistence and deletion matching untested.
+    coverage:
+      effect: suppression
+      includes: Cross Pixel targeting and sale preference for the acted-on browser context.
+      excludes: Historical erasure, other devices and independent partner data.
+    automation:
+      mode: manual
+      reason: A server-side preference action would use the wrong browser identity; historical requests need technical matching.
+    evidence:
+      - url: https://crosspixel.net/privacy-policy/
+        checked_on: '2026-10-01'
+        published: December 8, 2025
+        excerpt: a subsidiary of Knower Tech USA
+        supports: [entity_and_parent, device_data_scope, rights_email_and_US_scope]
+      - url: https://privacy.crsspxl.com/
+        checked_on: '2026-10-01'
+        excerpt: opt out of behavioral targeting
+        supports: [suppression_portal_not_historical_deletion]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Runtime controls and fulfilment untested., Non-US rights matching and comparable scale unreviewed.]
+  - id: dataline-consumer-marketing
+    name: Dataline marketing suppression
+    match_domains: [datalinedata.com]
+    identity:
+      legal_name: Dataline, Inc.
+      brands: [Dataline]
+      parent: null
+      official_domains: [datalinedata.com]
+    relevance:
+      regions: [United States, Other residence — clarify route]
+      category: consumer_marketing
+      data_categories: [Contact details, Marketing attributes, Household profiles]
+      note: The published form treats deletion requests as do-not-sell requests, not historical erasure.
+    removal:
+      method: form
+      destination: https://datalinedata.com/do-not-sell-my-information/
+      alternatives: [privacy.officer@datalinedata.com]
+      steps:
+        - Review the suppression terms before selecting an action. The form labels legal name, email and address required and offers US state selections.
+        - If you want actual historical deletion rather than suppression, the form tells you to notify privacy.officer@datalinedata.com explicitly.
+        - Do not invent a US address. Ask for an appropriate route if your residence does not fit; access requests require email verification.
+        - Record the actual confirmed outcome, not the label on the button.
+    required_information:
+      fields: [full_name, email, postal_address, requested_right]
+      certainty: not_fully_specified
+      verification: Published required labels inspected; runtime and non-US eligibility untested.
+    coverage:
+      effect: suppression
+      includes: Dataline's stated do-not-sell suppression process.
+      excludes: Historical erasure unless separately confirmed, other controllers and all-browser preferences.
+    automation:
+      mode: manual
+      reason: Postal disclosure and the deletion-versus-suppression mismatch need personal review.
+    evidence:
+      - url: https://datalinedata.com/privacy-policy/
+        checked_on: '2026-10-01'
+        excerpt: privacy.officer@datalinedata.com
+        supports: [controller_and_marketing_scope, rights_contact]
+      - url: https://datalinedata.com/do-not-sell-my-information/
+        checked_on: '2026-10-01'
+        published: July 1, 2026
+        excerpt: we interpret these requests all as “do not sell requests”
+        supports: [suppression_not_erasure, required_labels, explicit_email_clarification]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Form fulfilment and non-US handling untested., Parent and comparable scale unreviewed.]
+  - id: dataman-consumer-marketing
+    name: Dataman Group privacy request
+    match_domains: [datamangroup.com]
+    identity:
+      legal_name: Dataman Group Inc.
+      brands: [Dataman Group, Dataman Group Direct]
+      parent: null
+      official_domains: [datamangroup.com]
+    relevance:
+      regions: [United States — applicable state rights, Other residence — clarify eligibility]
+      category: consumer_marketing
+      data_categories: [Mailing addresses, Consumer and business marketing lists]
+      note: Matching postal records needs more than a new dedicated request email.
+    removal:
+      method: form
+      destination: https://www.datamangroup.com/privacy-request-form/
+      alternatives: [privacy@datamangroup.com]
+      steps:
+        - Enter name and required street, city, state and postal code. Email and additional information are optional in the inspected form.
+        - State the desired deletion or suppression request in Additional Information; review the accuracy confirmation and human-verification question yourself.
+        - The rights page also accepts email. Clarify non-US eligibility and matching instead of assuming the state-focused form grants universal coverage.
+        - Complete any verification and retain the response; acknowledgment only confirms receipt.
+    required_information:
+      fields: [full_name, postal_address, requested_right, human_confirmation]
+      certainty: not_fully_specified
+      verification: Public form fields inspected; later identity checks and regional handling untested.
+    coverage:
+      effect: deletion_request
+      includes: Matched Dataman marketing records under the applicable request.
+      excludes: Independent customer copies and unverified universal regional coverage.
+    automation:
+      mode: manual
+      reason: Postal matching, personal confirmation and regional eligibility need review.
+    evidence:
+      - url: https://www.datamangroup.com/consumer-privacy-rights/
+        checked_on: '2026-10-01'
+        published: July 2026
+        excerpt: prefer to submit your request by email
+        supports: [state_rights_scope, email_alternative, identity_checks]
+      - url: https://www.datamangroup.com/privacy-request-form/
+        checked_on: '2026-10-01'
+        excerpt: I certify that the information I have provided is accurate
+        supports: [required_postal_matching, optional_email, personal_confirmation]
+      - url: https://www.datamangroup.com/privacy/
+        checked_on: '2026-10-01'
+        excerpt: Dataman Group Inc.
+        supports: [entity_and_marketing_list_scope]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Fulfilment and non-US handling untested., Parent and comparable scale unreviewed.]
+  - id: agr-consumer-marketing
+    name: AGR consumer-data opt-out
+    match_domains: [agrmarketingsolutions.com]
+    identity:
+      legal_name: AGR Marketing Solutions, LLC
+      brands: [AGR Marketing Solutions]
+      parent: null
+      official_domains: [agrmarketingsolutions.com]
+    relevance:
+      regions: [United States — applicable state rights, Other residence — clarify eligibility]
+      category: consumer_marketing
+      data_categories: [Consumer profiles, Interests, Demographics, Contact details]
+      note: Third-party consumer records are covered even without a prior website visit.
+    removal:
+      method: form
+      destination: https://agrmarketingsolutions.com/privacy-policy/
+      alternatives: [contact@agrmarketingsolutions.com]
+      steps:
+        - For the embedded OPT-OUT form, review required name, email, phone and full postal address before disclosing them.
+        - Additional emails and phone numbers are optional. Complete verification personally.
+        - The policy accepts access, deletion and opt-out requests by email; explicitly specify deletion if that is the intended outcome.
+        - Published rights focus on US states. Clarify other residence and matching requirements rather than assuming an email-only European workflow.
+    required_information:
+      fields: [full_name, email, phone, postal_address]
+      certainty: not_fully_specified
+      verification: Embedded form's required fields inspected; email matching checklist and non-US eligibility unspecified.
+    coverage:
+      effect: suppression
+      includes: AGR consumer-data opt-out; historical deletion must be separately requested and confirmed.
+      excludes: Guaranteed erasure from an opt-out acknowledgment and independent client records.
+    automation:
+      mode: manual
+      reason: Phone/postal disclosure, regional scope and distinct requested rights need review.
+    evidence:
+      - url: https://agrmarketingsolutions.com/privacy-policy/
+        checked_on: '2026-10-01'
+        excerpt: Submit OPT-OUT Request
+        supports: [entity, consumer_aggregator_scope, form_fields, email_rights_route, US_state_scope]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Email requirements and actual fulfilment untested., Parent and comparable scale unreviewed.]
+  - id: datasys-consumer-records
+    name: Datasys consumer-data request
+    match_domains: [datasys.com]
+    identity:
+      legal_name: Datasys Group, Inc.
+      brands: [Datasys]
+      parent: null
+      official_domains: [datasys.com]
+    relevance:
+      regions: [United States, GDPR rights referenced — regional matching requires review]
+      category: consumer_marketing
+      data_categories: [Consumer marketing data, Contact identifiers, Advertising audiences]
+      note: The preferred portal separates deletion, access and opt-out.
+    removal:
+      method: form
+      destination: https://privacy.datasys.com/request
+      alternatives: [https://datasys.com/privacy/my-privacy-choices, privacy@datasys.com]
+      steps:
+        - Choose Delete My Data for erasure; Opt-Out is the separate do-not-sell/share request.
+        - The first of four steps is publicly visible. Inspect the remaining matching fields, regional choices and verification yourself before submitting.
+        - The policy provides an email fallback if the portal cannot be used, with subject [Your State] Privacy Request. For non-US residence, clarify the appropriate process without inventing a state.
+        - Retain the verified result; suppression retains a do-not-share record and is not the same as historical deletion.
+    required_information:
+      fields: [requested_right, identity_information_as_requested, residence]
+      certainty: not_fully_specified
+      verification: Only the initial action-selection step inspected; subsequent fields and verification untested.
+    coverage:
+      effect: deletion_request
+      includes: Verified Datasys-held personal records subject to stated exceptions.
+      excludes: Guaranteed regional eligibility, independent customer copies and deletion from an opt-out alone.
+    automation:
+      mode: manual
+      reason: Preferred staged portal and undisclosed downstream identity requirements prevent generic email automation.
+    evidence:
+      - url: https://datasys.com/privacy-policy
+        checked_on: '2026-10-01'
+        published: April 9, 2026
+        excerpt: Datasys Group, Inc.
+        supports: [entity, rights_scope, portal_preference, fallback_email]
+      - url: https://datasys.com/privacy/my-privacy-choices
+        checked_on: '2026-10-01'
+        excerpt: You may choose to exercise both rights
+        supports: [deletion_distinct_from_optout, portal_delegation]
+      - url: https://privacy.datasys.com/request
+        checked_on: '2026-10-01'
+        excerpt: Step 1 of 4
+        supports: [public_initial_actions, later_fields_uninspected]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Portal matching and fulfilment untested., Policy's legal assertions not independently endorsed., Parent and comparable scale unreviewed.]
+  - id: datafy-device-location
+    name: Datafy device-data request
+    match_domains: [datafy.com]
+    identity:
+      legal_name: Datafy, LLC
+      brands: [Datafy]
+      parent: null
+      official_domains: [datafy.com]
+    relevance:
+      regions: [United States, GDPR rights referenced — country-specific handling untested]
+      category: advertising
+      data_categories: [Mobile advertising identifiers, Analytics and advertising data, Device-related records]
+      note: A mobile advertising ID, not a new email address, is central to matching device records.
+    removal:
+      method: form
+      destination: https://www.datafy.com/opt-out
+      alternatives: [opt-out@datafy.com, privacy@datafy.com]
+      steps:
+        - Choose yourself, your actual country/state and deletion; provide name and reply email and review the signature personally.
+        - The MAID label says optional, but the HTML input is required and instructions say it is needed for matching. Clarify this with the privacy team if you lack the ID; never fabricate one.
+        - Do not install an unfamiliar ID-retrieval app merely because the page suggests it. Verify any device instructions before acting.
+        - Retain the request ID for the status page and complete subsequent verification. A submitted form is not proof of deletion.
+    required_information:
+      fields: [full_name, email, residence, mobile_advertising_id, requested_right, personal_signature]
+      certainty: not_fully_specified
+      verification: Required MAID HTML and matching instructions conflict with its optional label; signature is visually required but lacks an HTML required attribute. Runtime untested.
+    coverage:
+      effect: deletion_request
+      includes: Datafy records matched to the verified request identifiers.
+      excludes: Independent source databases, unmatched devices and guaranteed regional eligibility.
+    automation:
+      mode: manual
+      reason: Technical identifier matching, contradictory requirements and personal signature need review.
+    evidence:
+      - url: https://www.datafy.com/privacy-policy
+        checked_on: '2026-10-01'
+        published: July 1, 2026
+        excerpt: Datafy, LLC
+        supports: [entity, rights_contact, third_party_source_boundary]
+      - url: https://www.datafy.com/opt-out
+        checked_on: '2026-10-01'
+        excerpt: We require this ID in your request
+        supports: [MAID_requirement_conflict, public_fields, signature_and_status_tracking]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Contradictory matching requirements and regional handling need clarification., Fulfilment untested., Parent and comparable scale unreviewed.]
+  - id: civis-analytics-consumer
+    name: Civis Analytics consumer-rights request
+    match_domains: [civisanalytics.com]
+    identity:
+      legal_name: Civis Analytics, Inc.
+      brands: [Civis Analytics]
+      parent: null
+      official_domains: [civisanalytics.com]
+    relevance:
+      regions: [Listed United States jurisdictions, Non-US form branch — eligibility unverified]
+      category: consumer_marketing
+      data_categories: [Third-party personal data, Contact information, Survey and analytics data]
+      note: Rights are state-specific; a non-US form option does not establish an accepted European deletion route.
+    removal:
+      method: form
+      destination: https://docs.google.com/forms/d/e/1FAIpQLSfvUYww9wEK9Y4F6VY3nQtm0bBS8QTdcDthet6WAKDYqnnwHA/viewform
+      alternatives: [https://www.civisanalytics.com/legal-pages/supplemental-privacy-notice]
+      steps:
+        - Select your actual residence. The opening step offers listed US states, non-US and None of the above; do not falsely attest to US residence.
+        - Later form questions and non-US routing were not exercised; inspect matching requirements and choose the intended right yourself.
+        - The policy says not to submit rights requests to its questions mailbox and that unspecified channels will not be processed.
+        - California consumers also have a telephone route; postal address, email, phone and name are requested there. Do not substitute those telephone requirements for unseen form fields.
+    required_information:
+      fields: [residence, identity_information_as_requested, requested_right]
+      certainty: not_fully_specified
+      verification: Only opening residence choices inspected; downstream form and non-US eligibility untested.
+    coverage:
+      effect: deletion_request
+      includes: Matched Civis records under an accepted applicable rights request.
+      excludes: Guaranteed European coverage, independent clients and unsupported email delivery.
+    automation:
+      mode: manual
+      reason: State eligibility and staged form verification cannot be replaced by the general questions email.
+    evidence:
+      - url: https://www.civisanalytics.com/legal-pages/privacy-policy
+        checked_on: '2026-10-01'
+        excerpt: Civis Analytics, Inc.
+        supports: [entity, third_party_collection_and_service_scope]
+      - url: https://www.civisanalytics.com/legal-pages/supplemental-privacy-notice
+        checked_on: '2026-10-01'
+        published: January 13, 2026
+        excerpt: Please do not use this email address to submit a data subject request.
+        supports: [specified_channels_only, regional_scope, California_phone_requirements]
+      - url: https://docs.google.com/forms/d/e/1FAIpQLSfvUYww9wEK9Y4F6VY3nQtm0bBS8QTdcDthet6WAKDYqnnwHA/viewform
+        checked_on: '2026-10-01'
+        excerpt: I am a non-U.S. resident.
+        supports: [initial_residence_choices_not_proven_eligibility]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Downstream form, non-US handling and fulfilment untested., Parent and comparable scale unreviewed.]
+  - id: cybba-marketing-services
+    name: Cybba marketing-data request
+    match_domains: [cybba.com]
+    identity:
+      legal_name: Cybba Inc.
+      brands: [Cybba]
+      parent: null
+      official_domains: [cybba.com]
+    relevance:
+      regions: [Listed United States jurisdictions, Other countries — clarify applicable rights]
+      category: advertising
+      data_categories: [Website engagement, Contact details, Advertising identifiers]
+      note: The client brand can help distinguish Cybba service data from direct site visits.
+    removal:
+      method: form
+      destination: https://cybba-requests.my.onetrust.com/webform/a4a1351e-d293-4305-bde4-b9cf8f5c0989/81d37a05-cc75-4c12-924c-56c5c45bf269
+      alternatives: [https://cybba.com/privacy-choices/]
+      steps:
+        - Select country, state, relationship and requested right; email is required in the public form configuration.
+        - Names, the relevant client brand and additional matching details are optional in that configuration; supply only what is necessary.
+        - Use the privacy-rights form for deletion. The separate opt-out form and cookie controls do not prove historical erasure.
+        - Review regional eligibility and complete verification personally; retain the result and its actual scope.
+    required_information:
+      fields: [residence, relationship_context, email, requested_right]
+      certainty: not_fully_specified
+      verification: Public configuration inspected; conditional state handling, technical matching and subsequent verification untested.
+    coverage:
+      effect: deletion_request
+      includes: Matched Cybba-held records within the applicable request scope.
+      excludes: Automatic customer-wide deletion and historical erasure through cookie settings alone.
+    automation:
+      mode: manual
+      reason: Regional and client-brand context plus staged verification require review.
+    evidence:
+      - url: https://cybba.com/privacy-policy/
+        checked_on: '2026-10-01'
+        excerpt: Cybba Inc.
+        supports: [entity, service_and_website_scope]
+      - url: https://cybba.com/privacy-choices/
+        checked_on: '2026-10-01'
+        excerpt: privacy rights request form
+        supports: [distinct_rights_and_optout_forms, cookie_scope]
+      - url: https://cybba-requests.my.onetrust.com/webform/a4a1351e-d293-4305-bde4-b9cf8f5c0989/81d37a05-cc75-4c12-924c-56c5c45bf269
+        checked_on: '2026-10-01'
+        excerpt: Anything else that would help us find your information?
+        supports: [required_fields, optional_brand_context, optional_names]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Runtime verification, non-US eligibility and fulfilment untested., Parent and comparable scale unreviewed.]

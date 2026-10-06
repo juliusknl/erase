@@ -1,0 +1,8 @@
+schema_version: 1
+associations:
+  - guide_id: tradedoubler-nyorda
+    records: [community:tradedoubler]
+    rationale: Official June 2026 announcement confirms the registered Tradedoubler AB to Nyorda AB name change, and the current notice identifies the same registration number. Subsidiary/controller and customer-processor scopes remain separate.
+  - guide_id: nativo-advertising
+    records: [live:nativo-inc, community:nativo]
+    rationale: The SEC filing establishes the completed Nativo Inc acquisition; its own consumer-policy URL redirects to the current Life360 Ads Featuring Nativo notice. This maps the current Nativo product route, not all historical records or Life360 app-account deletion.

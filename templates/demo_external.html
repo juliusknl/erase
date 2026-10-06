@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Simulated external step · erase{% endblock %}
+{% block content %}
+<section class="card"><h1>Demo step</h1>
+<p>In the real app, this would open a broker form, confirmation page, source or Gmail. No external site was contacted.</p>
+<p class="footnote">Original destination: {{ destination }}</p>
+<p>To try a manual form or verification step, return to the request and click “I submitted the form”, “I confirmed my request”, or the Quick Win’s “Done” button. That records a simulated step, not a real deletion.</p>
+<p><a class="button" href="/dashboard">Back to demo Home</a></p>
+</section>
+{% endblock %}

@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: dun-bradstreet-regional
+    records: [live:dun-bradstreet-inc]
+    rationale: The live dnb.com record is Dun & Bradstreet Inc; the guide retains the global rights hub and separately labels German-controller routes instead of substituting a German form for US scope.

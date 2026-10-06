@@ -1,0 +1,8 @@
+schema_version: 1
+associations:
+  - guide_id: leadspot-consumer-marketing
+    records: [community:leadspot]
+    rationale: Current notice and consumer-marketing pages name the exact Lead Spot Media GmbH entity in the inventory; use the current published rights inbox and DPO rather than an older community contact.
+  - guide_id: kupona-retargeting
+    records: [community:kupona]
+    rationale: Current retargeting notice identifies the exact KUPONA GmbH controller and browser-specific objection process. This association does not extend to independent records held by every named advertising partner.

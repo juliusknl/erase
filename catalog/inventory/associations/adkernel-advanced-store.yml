@@ -1,0 +1,8 @@
+schema_version: 1
+associations:
+  - guide_id: adkernel-platform
+    records: ["community:adkernel"]
+    rationale: Official policy names vendor 14 and its EEA rights contact; the current TCF vendor record identifies Adkernel LLC and links the same policy.
+  - guide_id: advanced-store-ad4mat
+    records: ["community:advanced-store-com"]
+    rationale: Official ad4mat privacy notice identifies advanced store GmbH; its browser preference is scoped separately from publisher-controlled affiliate processing.

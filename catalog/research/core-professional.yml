@@ -1,0 +1,109 @@
+schema_version: 1
+brokers:
+  - id: apollo-professional
+    name: Apollo.io
+    match_domains: [apollo.io]
+    identity:
+      legal_name: ZenLeads, Inc. d/b/a Apollo.io
+      brands: [Apollo.io]
+      parent: null
+      official_domains: [apollo.io]
+    relevance:
+      regions: [EEA, UK, CH, Global]
+      category: professional
+      data_categories: [Business emails, Names, Employment history, Job titles, Phone numbers, Professional profile URLs]
+      note: Business-contact contributor database; separate from customer-controlled processing and website advertising.
+    removal:
+      method: form
+      destination: https://www.apollo.io/privacy-policy/remove
+      alternatives: [privacy@apollo.io, dpo@apollo.io, https://www.apollo.io/company/privacy-center]
+      steps:
+        - Enter the business email associated with the profile and complete the verification instructions.
+        - If the form cannot match an old or inaccessible work email, use privacy@apollo.io; email is an explicitly accepted rights route.
+        - Request profile erasure and objection to further database use; retain the minimal suppression record if preventing re-addition is desired.
+        - Contact the relevant customer for processing performed solely on that customer's instructions.
+    required_information:
+      fields: [business_email]
+      certainty: not_fully_specified
+      verification: Form initially requests business email. Post-submission verification and alternative-email matching were not tested; do not substitute the dedicated request inbox for a known profile identifier.
+    coverage:
+      effect: deletion_request
+      includes: Apollo-controlled professional profile; published process retains minimal suppression information.
+      excludes: Customer-controlled records, independent copies and separate browser-advertising controls; GPC alone does not remove the contributor profile.
+    automation: {mode: manual, reason: Correct work-email matching and verification are required; email alternative is documented but not tested.}
+    evidence:
+      - url: https://www.apollo.io/privacy-policy
+        checked_on: '2026-09-29'
+        published: '2026-08-10'
+        excerpt: ZenLeads, Inc. d/b/a Apollo.io
+        supports: [identity, relevance, removal, coverage]
+      - url: https://www.apollo.io/privacy-policy/remove
+        checked_on: '2026-09-29'
+        excerpt: Business Email Address
+        supports: [removal, required_information]
+      - url: https://www.apollo.io/company/privacy-center
+        checked_on: '2026-09-29'
+        excerpt: suppression
+        supports: [removal, coverage]
+    scale:
+      claim: Apollo advertises more than 240 million global contacts.
+      unit: contact records
+      scope: Company marketing claim, not independently audited unique people or this user's exposure; do not add company counts to person counts.
+      source:
+        url: https://www.apollo.io/product/b2b-data
+        checked_on: '2026-09-29'
+        excerpt: 240M+ global contacts
+        supports: [scale]
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [No submission or deletion tested by this public-source review., Additional identifiers for inaccessible work emails are unspecified., Parent ownership unreviewed.]
+
+  - id: zoominfo-professional
+    name: ZoomInfo — professional profiles
+    match_domains: [zoominfo.com, privacyrequest.zoominfo.com]
+    identity:
+      legal_name: ZoomInfo Technologies LLC
+      brands: [ZoomInfo]
+      parent: null
+      official_domains: [zoominfo.com, privacyrequest.zoominfo.com]
+    relevance:
+      regions: [EEA, UK, CH, Global]
+      category: professional
+      data_categories: [Names, Business and other emails, Phone numbers, Employment details, Professional profiles]
+      note: Professional directory controller; customers' separately controlled processing is not covered by the same deletion.
+    removal:
+      method: form
+      destination: https://privacyrequest.zoominfo.com/remove/verify
+      alternatives: [privacy@zoominfo.com, https://www.zoominfo.com/trust-center/your-privacy]
+      steps:
+        - Enter an email associated with the profile and complete the subsequent identity and removal steps.
+        - Use privacy@zoominfo.com if the automated route cannot match or complete the request; email is a published alternative.
+        - Preserve the processing acknowledgment, then wait for the outcome; acknowledgment alone is not deletion evidence.
+        - Manage cookie choices separately; a person-profile request does not remove a company listing.
+    required_information:
+      fields: [email]
+      certainty: not_fully_specified
+      verification: Initial public form requires email. Later matching/verification fields were not observed without submission.
+    coverage:
+      effect: deletion_request
+      includes: Individual profile removed from ZoomInfo products; limited request and suppression records may remain.
+      excludes: Company records, independent customer-controlled data, cookie controls and unverified blanket subsidiary coverage.
+    automation: {mode: manual, reason: Multi-step profile matching and verification have not been exercised.}
+    evidence:
+      - url: https://www.zoominfo.com/legal/privacy-policy
+        checked_on: '2026-09-29'
+        published: 'Updated 2025-10-13; effective 2025-10-20'
+        excerpt: ZoomInfo Technologies LLC
+        supports: [identity, relevance, removal, coverage]
+      - url: https://www.zoominfo.com/trust-center/your-privacy
+        checked_on: '2026-09-29'
+        excerpt: Cookie preferences are managed separately.
+        supports: [removal, coverage]
+      - url: https://privacyrequest.zoominfo.com/remove/verify
+        checked_on: '2026-09-29'
+        excerpt: Email Address
+        supports: [removal, required_information]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Form not submitted; subsequent verification and fulfillment untested., Current unique-person scale and parent ownership not reviewed., Datanyze's inclusion in a transfer certification does not establish universal cross-product deletion.]

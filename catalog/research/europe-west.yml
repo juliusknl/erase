@@ -1,0 +1,3631 @@
+{
+  "schema_version": 1,
+  "brokers": [
+    {
+      "id": "whooz-whize",
+      "name": "Whooz / Whize / TDA Analytics",
+      "match_domains": [
+        "whooz.nl",
+        "whize.nl"
+      ],
+      "identity": {
+        "legal_name": "Whooz BV (named in the product privacy notice)",
+        "brands": [
+          "Whooz / Whize / TDA Analytics"
+        ],
+        "parent": null,
+        "official_domains": [
+          "whooz.nl",
+          "whize.nl"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "NL"
+        ],
+        "category": "postal_marketing",
+        "data_categories": [
+          "Address segments",
+          "Housing characteristics",
+          "Lifestyle estimates"
+        ],
+        "note": "Homepage now names TDA Analytics; product notice still names Whooz BV. Address-based estimates are distinct from named-person files."
+      },
+      "removal": {
+        "method": "email",
+        "destination": "compliance@whooz.nl",
+        "alternatives": [
+          "https://www.whize.nl/privacy-en-voorwaarden"
+        ],
+        "steps": [
+          "Email compliance@whooz.nl requesting exclusion of your address from Whooz advertiser selections; supply postcode, house number, street and town.",
+          "For one advertiser's mail, also contact that advertiser. The notice separately links Postfilter for broader Dutch postal preferences; it is not deletion of the underlying address data.",
+          "Retain confirmation of address suppression. Access or correction is a separate request and may need further identity checks."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "postal_address"
+        ],
+        "certainty": "documented",
+        "verification": "Suppression needs postcode, house number, street and town; no ID attachment is specified. Access/correction may require identification. Review any subsequent request."
+      },
+      "coverage": {
+        "effect": "suppression",
+        "includes": "Exclusion of the supplied address from selections for Whooz advertisers.",
+        "excludes": "Does not delete public address data or independently held advertiser records."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "The initial postal-address suppression request is implemented with explicit address-disclosure approval; additional identity checks and access/correction requests remain manual."
+      },
+      "evidence": [
+        {
+          "url": "https://www.whize.nl/privacy-en-voorwaarden",
+          "checked_on": "2026-09-29",
+          "published": "Not specified",
+          "excerpt": "Jouw adres (postcode, huisnummer, straat, woonplaats) wordt dan op onze uitsluitlijst gezet.",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "required_information",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Reconcile TDA Analytics branding with controller name retained in the notice.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "edm-nl",
+      "name": "EDM",
+      "match_domains": [
+        "edm.nl"
+      ],
+      "identity": {
+        "legal_name": "EDM DQ B.V.",
+        "brands": [
+          "EDM"
+        ],
+        "parent": null,
+        "official_domains": [
+          "edm.nl"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "NL"
+        ],
+        "category": "postal_marketing",
+        "data_categories": [
+          "Reference data",
+          "Customer matching",
+          "Segmentation data"
+        ],
+        "note": "Commercial terms establish reference-data services. Reviewed privacy page explicitly concerns information submitted through website forms."
+      },
+      "removal": {
+        "method": "investigate",
+        "destination": "https://www.edm.nl/nl/privacy-statement-en-cookiebeleid/",
+        "alternatives": [],
+        "steps": [
+          "Locate the reference-data privacy notice.",
+          "Confirm whether the published website privacy officer handles that database.",
+          "Do not infer reference-database deletion from an own-marketing unsubscribe."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "A complete matching and verification checklist has not been established."
+      },
+      "coverage": {
+        "effect": "needs_review",
+        "includes": "Candidate reference-data service; website rights contact is privacyofficer@edm.nl.",
+        "excludes": "Website newsletter opt-out does not establish deletion from EDM reference datasets."
+      },
+      "automation": {
+        "mode": "blocked",
+        "reason": "Unresolved controller, product scope or request requirements; resolve the recorded blockers first."
+      },
+      "evidence": [
+        {
+          "url": "https://www.edm.nl/nl/privacy-statement-en-cookiebeleid/",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "EDM DQ B.V.",
+          "supports": [
+            "identity",
+            "relevance",
+            "coverage"
+          ]
+        },
+        {
+          "url": "https://edm.nl/files/original/algemene-voorwaarden-datakwaliteit-en-klantinzicht-edm-2025.pdf",
+          "checked_on": "2026-09-28",
+          "published": "2025 terms; exact effective date not established",
+          "excerpt": "Referentiedata en Segmentatiedata",
+          "supports": [
+            "relevance",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "needs_research",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Obtain the notice governing third-party reference datasets and confirm its controller and erasure route.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "black-tiger-belgium",
+      "name": "Black Tiger Belgium",
+      "match_domains": [
+        "blacktiger.tech"
+      ],
+      "identity": {
+        "legal_name": "Black Tiger Belgium SA",
+        "brands": [
+          "Black Tiger Belgium"
+        ],
+        "parent": null,
+        "official_domains": [
+          "blacktiger.tech"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "BE"
+        ],
+        "category": "identity_risk",
+        "data_categories": [
+          "Identity reference data",
+          "Third-party contact records"
+        ],
+        "note": "Current notice describes identity validation and excludes profiling/direct marketing; historical Bisnode consumer-marketing scope must not be assumed."
+      },
+      "removal": {
+        "method": "email",
+        "destination": "privacy@blacktiger.tech",
+        "alternatives": [
+          "https://www.blacktiger.tech/privacy-notice",
+          "dpoaas@grcilaw.com"
+        ],
+        "steps": [
+          "Ask the privacy team about data-validation/reference records, specifying the right requested and relevant identifiers only after reviewing matching requirements.",
+          "Review any identity-verification request personally; the notice does not publish a fixed minimum field checklist.",
+          "Keep the result scoped to current reference services, not an assumed deletion of all historical Bisnode marketing files."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "Notice permits identity verification but publishes no fixed request-field checklist. Do not infer every collected data category is required for a request."
+      },
+      "coverage": {
+        "effect": "needs_review",
+        "includes": "Current reference/identity-validation processing described by the notice.",
+        "excludes": "No assumption that former Bisnode CMX consumer marketing files remain in operation."
+      },
+      "automation": {
+        "mode": "blocked",
+        "reason": "Unresolved controller, product scope or request requirements; resolve the recorded blockers first."
+      },
+      "evidence": [
+        {
+          "url": "https://www.blacktiger.tech/privacy-notice",
+          "checked_on": "2026-09-29",
+          "published": "2026-09-09",
+          "excerpt": "Black Tiger Belgium SA",
+          "supports": [
+            "identity",
+            "relevance",
+            "coverage",
+            "removal",
+            "required_information"
+          ]
+        },
+        {
+          "url": "https://www.gegevensbeschermingsautoriteit.be/burger/gba-sanctioneert-gegevensbeheerder-black-tiger-belgium-wegens-gebrek-aan-transparantie",
+          "checked_on": "2026-09-28",
+          "published": "2024-01-16; historical decision, not current appeal disposition",
+          "excerpt": "zijn consumentendatabank (“CMX”) had vernietigd",
+          "supports": [
+            "identity",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "needs_research",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Resolve current product scope and identifiers against the legacy Bisnode record before a request.",
+        "Classification is provisional because the schema has no identity-reference category.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "editus-lu",
+      "name": "Editus Luxembourg",
+      "match_domains": [
+        "editus.lu"
+      ],
+      "identity": {
+        "legal_name": "Editus Luxembourg SA",
+        "brands": [
+          "Editus Luxembourg"
+        ],
+        "parent": null,
+        "official_domains": [
+          "editus.lu"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "LU"
+        ],
+        "category": "people_search",
+        "data_categories": [
+          "Telephone directory listings",
+          "Contact details"
+        ],
+        "note": "Private and professional Luxembourg directory listings supplied by telephone operators."
+      },
+      "removal": {
+        "method": "form",
+        "destination": "https://www.editus.lu/en/personal-data-rights",
+        "alternatives": [],
+        "steps": [
+          "Use the rights form, select deletion and describe the listing concerned. Complete the starred name, address, main-phone, email and comment fields.",
+          "Proof of identity is recommended, not labelled mandatory. Decide whether to attach it; optional mobile, profession/title and fax need not be supplied.",
+          "Keep the email response. To stop publication across Luxembourg directories, also contact the telephone operator that supplied the listing."
+        ]
+      },
+      "required_information": {
+        "fields": ["first_name", "last_name", "postal_address", "main_phone", "email", "request_type", "listing_details"],
+        "certainty": "documented",
+        "verification": "Public form marks address, postcode and town separately. ID upload is recommended, maximum 5 MB; the page says proof is deleted after verification. No submission tested."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Editus search-engine and telephone-directory listings identified in the request.",
+        "excludes": "For all Luxembourg directory services the notice directs individuals to their telephone operator."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "The directory form requires listing details, contact fields and personal review of optional identity proof; broader directory removal also needs the telephone operator."
+      },
+      "evidence": [
+        {
+          "url": "https://www.editus.lu/en/personal-data-rights",
+          "checked_on": "2026-09-29",
+          "published": "Not specified",
+          "excerpt": "please complete the form below, preferably attaching proof of identity.",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "required_information",
+            "coverage"
+          ]
+        },
+        {
+          "url": "https://www.editus-business.lu/politique-de-confidentialite",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "Editus Luxembourg SA",
+          "supports": [
+            "identity"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Server-side validation and follow-up verification have not been exercised.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "informa-portugal",
+      "name": "Informa D&B Portugal",
+      "match_domains": [
+        "informadb.pt"
+      ],
+      "identity": {
+        "legal_name": "Informa D&B (Serviços de Gestão de Empresas) Sociedade Unipessoal, Lda.",
+        "brands": [
+          "Informa D&B Portugal"
+        ],
+        "parent": null,
+        "official_domains": [
+          "informadb.pt"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "PT"
+        ],
+        "category": "professional",
+        "data_categories": [
+          "Business executives",
+          "Sole-trader identifiers",
+          "Professional contact data"
+        ],
+        "note": "Product notice concerns individuals represented in the commercial-information database."
+      },
+      "removal": {
+        "method": "email",
+        "destination": "protecaodedados@informadb.pt",
+        "alternatives": [
+          "https://www.informadb.pt/pt/quem-somos/governance/privacidade/informacao-aos-titulares-de-dados-pessoais-que-constam-na-base-de-dados-informa-db/"
+        ],
+        "steps": [
+          "Email protecaodedados@informadb.pt identifying the business record and whether you want access, correction, objection or erasure.",
+          "The general database notice asks for civil-identification number or equivalent identity evidence. The separate sole-trader notice publishes the same email but no document checklist; do not treat all collected business fields as mandatory request fields.",
+          "Review verification privately and retain the decision, including any data retained on legitimate-interest grounds. This is not removal from every D&B entity."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "identity_number_or_equivalent_identity_evidence"
+        ],
+        "certainty": "not_fully_specified",
+        "verification": "General notice specifies identity number or equivalent evidence; sole-trader notice does not specify verification. No blanket ID-copy upload inferred and no sensitive documents sent automatically."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Access, objection and erasure requests for personal information in the Portuguese business database.",
+        "excludes": "Public business information may be retained following assessment; not blanket deletion from every D&B entity."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "The database notice asks for identity-number or equivalent proof; review the separate sole-trader notice and record scope before disclosure."
+      },
+      "evidence": [
+        {
+          "url": "https://www.informadb.pt/pt/quem-somos/governance/privacidade/informacao-aos-titulares-de-dados-pessoais-que-constam-na-base-de-dados-informa-db/",
+          "checked_on": "2026-09-29",
+          "published": "Not specified",
+          "excerpt": "protecaodedados@informadb.pt",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "required_information",
+            "coverage"
+          ]
+        },
+        {
+          "url": "https://www.informadb.pt/pt/quem-somos/governance/privacidade/informacao-aos-empresarios-em-nome-individual/",
+          "checked_on": "2026-09-29",
+          "published": "Not specified",
+          "excerpt": "devem enviar um email para protecaodedados@informadb.pt",
+          "supports": ["relevance", "removal", "required_information", "coverage"]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Review proportionate identity evidence and matching business record before sending.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "informa-spain",
+      "name": "Informa D&B Spain / eInforma",
+      "match_domains": [
+        "informa.es",
+        "einforma.com"
+      ],
+      "identity": {
+        "legal_name": "INFORMA D&B S.A.U. (S.M.E.)",
+        "brands": [
+          "Informa D&B Spain / eInforma"
+        ],
+        "parent": null,
+        "official_domains": [
+          "informa.es",
+          "einforma.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "ES"
+        ],
+        "category": "professional",
+        "data_categories": [
+          "Professional contacts",
+          "Sole-trader business records",
+          "Business risk information"
+        ],
+        "note": "Multiple notices on one page; use the notice for individuals in the database, distinguishing customer and supplier data."
+      },
+      "removal": {
+        "method": "email",
+        "destination": "clientes@informa.es",
+        "alternatives": [
+          "https://www.informa.es/textos-legales",
+          "clientes@einforma.com",
+          "dpo@informa.es"
+        ],
+        "steps": [
+          "Choose the database notice: other individuals use clientes@informa.es; sole traders use clientes@einforma.com. Use subject Protección de Datos and specify access, correction, objection or erasure of the business-linked personal record.",
+          "Identify the associated business if applicable. Additional identity evidence may be requested on reasonable doubt; no routine ID attachment is specified.",
+          "Keep the decision and any retention explanation. For complaints use dpo@informa.es with subject Reclamación Protección de Datos. Customer/supplier notices are separate."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "No fixed initial checklist; business association may need identification and additional proof is conditional on reasonable doubt. Do not send government ID by default."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Personal records in Informa's Spanish business-information products.",
+        "excludes": "Erasure requests are evaluated against claimed legitimate interests and retention; other D&B entities are separate."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Choose the person type first: other individuals and sole traders have different recipients. Include the relevant business record and the required subject."
+      },
+      "evidence": [
+        {
+          "url": "https://www.informa.es/textos-legales",
+          "checked_on": "2026-09-29",
+          "published": "Database notices dated 2025-06-25",
+          "excerpt": "clientes@informa.es",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "required_information",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "No fixed minimum matching checklist or outcome established.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "iberinform-spain",
+      "name": "Iberinform Spain",
+      "match_domains": [
+        "iberinform.es"
+      ],
+      "identity": {
+        "legal_name": "Iberinform Internacional, S.A.U. (NIF A28382927)",
+        "brands": [
+          "Iberinform Spain"
+        ],
+        "parent": "Atradius N.V. (group parent named in the privacy declaration)",
+        "official_domains": [
+          "iberinform.es"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "ES"
+        ],
+        "category": "professional",
+        "data_categories": [
+          "Business contact information",
+          "Commercial risk information"
+        ],
+        "note": "Business intelligence and marketing data concerning sole traders, directors, shareholders and professional contacts; not a general consumer dossier."
+      },
+      "removal": {
+        "method": "email",
+        "destination": "infoprotecciondatosiber@iberinform.es",
+        "alternatives": ["https://www.iberinform.es/gdpr-data-request-form", "dpo@atradius.com"],
+        "steps": [
+          "Email infoprotecciondatosiber@iberinform.es stating the requested right and relevant professional record. This is a direct alternative to the online form.",
+          "Alternatively, enter first name, surname, email and country in the GDPR form; read the follow-up email for further instructions. Postal requests go to Calle de Méndez Álvaro, 31, 28045 Madrid.",
+          "Review any matching or verification request personally. Keep the final decision and retention explanation; an acknowledgement or own-marketing unsubscribe is not database deletion."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "Email has no fixed initial checklist. The alternative form requires first name, surname, email and country, then sends further instructions; downstream verification remains untested."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Personal records in Iberinform Internacional business-information and professional-marketing products.",
+        "excludes": "Retention may continue for business/legal needs and limitation periods; no deletion across other Atradius entities or clients."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Professional-record scope and unspecified email matching requirements need review before submission."
+      },
+      "evidence": [
+        {
+          "url": "https://www.iberinform.es/gdpr-data-request-form",
+          "checked_on": "2026-09-29",
+          "published": "Not specified",
+          "excerpt": "Nombre",
+          "supports": ["removal", "required_information"]
+        },
+        {
+          "url": "https://www.iberinform.es/gdpr",
+          "checked_on": "2026-09-29",
+          "published": "2022-12-01, currently published declaration",
+          "excerpt": "infoprotecciondatosiber@iberinform.es",
+          "supports": ["identity", "relevance", "removal", "coverage", "required_information", "automation"]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Initial email matching checklist and follow-up verification are not published.",
+        "Exact retention period and decision depend on the record.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "equifax-asnef-spain",
+      "name": "ASNEF / Equifax Spain",
+      "match_domains": [
+        "equifax.es"
+      ],
+      "identity": {
+        "legal_name": "ASNEF-EQUIFAX Servicios de Información sobre Solvencia y Crédito, S.L. (file owner, CIF B82064833); EQUIFAX IBERICA S.L. (request handler)",
+        "brands": [
+          "ASNEF / Equifax Spain"
+        ],
+        "parent": null,
+        "official_domains": [
+          "equifax.es"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "ES"
+        ],
+        "category": "credit_reference",
+        "data_categories": [
+          "Credit arrears",
+          "Creditworthiness records"
+        ],
+        "note": "Credit rights workflow kept separate from marketing removal."
+      },
+      "removal": {
+        "method": "manual",
+        "destination": "https://www2.equifax.es/consumidores/auth/login",
+        "alternatives": [
+          "https://www.asnef.com/fichero-asnef/consultar-el-fichero-asnef/"
+        ],
+        "steps": [
+          "Use the free Equifax consumer portal. The linked manual documents email registration, individual account selection, identity/address fields, security question and emailed initial password followed by password change.",
+          "Upload identity evidence in Profile for agent review, then select ASNEF and the appropriate right. Cancellation/disputes need the debt identified and supporting evidence; access is not deletion.",
+          "Alternatively send a signed, dated request to PO Box 10.546, 28080 Madrid, with identity, reply address, the right and relevant evidence. EU citizenship certificates need accompanying passport/home-country ID.",
+          "Check the substantive reply, not just the portal's Resuelto status. If the creditor confirms the entry and removal is refused, follow up with that creditor."
+        ]
+      },
+      "required_information": {
+        "fields": ["full_name", "email", "postal_address", "nationality", "identity_document_type", "identity_document_number", "identity_document_copy", "security_question_and_answer", "request_type"],
+        "certainty": "documented",
+        "verification": "Manual pages 6 and 9 document registration fields and agent validation of ID. Disputes need supporting documents. Postal route instead needs signature/date/reply address. Never automate passwords, security answers or uploads."
+      },
+      "coverage": {
+        "effect": "access_then_review",
+        "includes": "Access and review of records in the ASNEF credit file.",
+        "excludes": "No promise of deletion of accurate credit records or coverage of marketing data."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Credit-file access and disputes require personal authentication, identity evidence and case-specific supporting documents; no automatic erasure of accurate debt records."
+      },
+      "evidence": [
+        {
+          "url": "https://www.asnef.com/fichero-asnef/consultar-el-fichero-asnef/",
+          "checked_on": "2026-09-29",
+          "published": "Not specified",
+          "excerpt": "EQUIFAX IBERICA S.L.",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "required_information",
+            "coverage"
+          ]
+        },
+        {
+          "url": "https://www.asnef.com/media/3813/gu%C3%ADa-usuario_derechos-arcol.pdf",
+          "checked_on": "2026-09-29",
+          "published": "Undated manual linked from current official instructions",
+          "excerpt": "debe completar la pregunta/respuesta de verificación",
+          "supports": ["removal", "required_information", "coverage", "automation"]
+        },
+        {
+          "url": "https://asnef.com/fichero-asnef/preguntas-frecuentes/",
+          "checked_on": "2026-09-29",
+          "published": "Not specified",
+          "excerpt": "ASNEF-EQUIFAX Servicios de Información sobre Solvencia y Crédito, SL con CIF B82064833",
+          "supports": ["identity", "removal", "coverage"]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Current portal shell was accessible but no account created; manual-backed fields may differ from the authenticated UI.",
+        "FAQ describes an additional NIF/letter-reference access route and narrower representation rules than the manual; neither was exercised.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "experian-badexcug",
+      "name": "Experian Spain / BADEXCUG",
+      "match_domains": [
+        "experian.es"
+      ],
+      "identity": {
+        "legal_name": "Experian Bureau de Crédito, S.A.U.",
+        "brands": [
+          "Experian Spain / BADEXCUG"
+        ],
+        "parent": null,
+        "official_domains": [
+          "experian.es"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "ES"
+        ],
+        "category": "credit_reference",
+        "data_categories": [
+          "Debt defaults",
+          "Creditworthiness records"
+        ],
+        "note": "BADEXCUG and BADEXCUG communities-of-owners files have joint responsibilities with contributing creditors."
+      },
+      "removal": {
+        "method": "form",
+        "destination": "https://portaldelconsumidor.experian.es",
+        "alternatives": ["https://www.experian.es/legal/salir-fichero"],
+        "steps": [
+          "Register in the free consumer portal, truthfully choosing whether you received an inclusion notice, then activate the account by email.",
+          "Personally supply the signed request and identity document; select the applicable right. Access is not a prerequisite for requesting deletion.",
+          "Include relevant supporting evidence, such as proof of repayment, and representation authority only when applicable.",
+          "Postal alternative requires identity evidence, but first confirm the box number: the rights page says 1188 and the portal FAQ says 1118, both in 28108 Alcobendas (Madrid).",
+          "Download and read the resulting decision; creditor review may accept or reject deletion. Registration and an acknowledgement are not deletion."
+        ]
+      },
+      "required_information": {
+        "fields": ["email", "signed_request", "identity_document_copy"],
+        "certainty": "not_fully_specified",
+        "verification": "Portal FAQ specifies email activation, signed request and ID. Subsequent registration fields were not exposed without interaction; do not guess them or upload identity documents automatically."
+      },
+      "coverage": {
+        "effect": "access_then_review",
+        "includes": "BADEXCUG and communities-of-owners file access, correction and case-specific deletion review.",
+        "excludes": "Not a marketing unsubscribe or guaranteed erasure of valid debts; restricted legal-retention and statistical records can remain."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Account activation, identity evidence and individual creditor review require the person; no automatic document uploads."
+      },
+      "evidence": [
+        {
+          "url": "https://www.experian.es/legal/salir-fichero/informacion",
+          "checked_on": "2026-09-29",
+          "published": "Not specified",
+          "excerpt": "Experian Bureau de Crédito, S.A.U.",
+          "supports": [
+            "identity",
+            "relevance",
+            "coverage"
+          ]
+        },
+        {
+          "url": "https://www.experian.es/legal/salir-fichero",
+          "checked_on": "2026-09-29",
+          "excerpt": "registrarse previamente e identificarse adecuadamente",
+          "supports": ["removal", "required_information", "coverage"]
+        },
+        {
+          "url": "https://portaldelconsumidor.experian.es/faqs",
+          "checked_on": "2026-09-29",
+          "excerpt": "solicitud firmada y su documento de identidad",
+          "supports": ["removal", "required_information", "coverage"]
+        },
+        {
+          "url": "https://portaldelconsumidor.experian.es/registro-tipo",
+          "checked_on": "2026-09-29",
+          "excerpt": "No tengo Notificación de Inclusión",
+          "supports": ["removal", "required_information"]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Full registration fields and post-login workflow untested; only public portal FAQ and registration-type page reviewed.",
+        "Portal FAQ gives postal box 1118 but main rights page says 1188; use the portal or confirm before posting.",
+        "Portal FAQ's claimed two-month response period is not adopted as the app's legal deadline.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "crif-italy",
+      "name": "CRIF Italy / EURISC",
+      "match_domains": [
+        "crif.it"
+      ],
+      "identity": {
+        "legal_name": "CRIF S.p.A.",
+        "brands": [
+          "CRIF Italy / EURISC"
+        ],
+        "parent": null,
+        "official_domains": [
+          "crif.it"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "IT"
+        ],
+        "category": "credit_reference",
+        "data_categories": [
+          "Loan applications",
+          "Repayment records",
+          "Credit information"
+        ],
+        "note": "Italian SIC workflow differs from German CRIF guide."
+      },
+      "removal": {
+        "method": "manual",
+        "destination": "https://www.modulorichiesta.crif.com/",
+        "alternatives": ["https://www.crif.it/contatti/consumatori/"],
+        "steps": [
+          "Choose the free individual request, not the optional paid METTINCONTO report or the business route.",
+          "Provide first and last name, birth date and place, postal address and Italian tax code. Email is needed only for an email response; ordinary email is accepted without PEC.",
+          "Check the details before confirmation, then download, print and sign the generated PDF. The confirmation page does not mean submission is complete.",
+          "Personally send the signed request with copies of your identity document and tax-code card. CRIF recommends CONTROLLA LA TUA RICHIESTA for document delivery and an automatic receipt. Save that receipt; generating a form is not submitting a complete request.",
+          "Request correction or early deletion only for identified inaccuracies or outdated entries; retain the response. Accurate credit data follows retention rules."
+        ]
+      },
+      "required_information": {
+        "fields": ["first_name", "last_name", "birth_date", "birth_place", "postal_address", "italian_tax_code", "signed_request", "identity_document_copy", "tax_code_card_copy"],
+        "certainty": "documented",
+        "verification": "The official individual-request instructions list matching fields, a signed PDF, identity-document copy and tax-code-card copy. Email is conditional on response preference. Upload and conditional wizard behavior have not been tested; identity evidence must be handled personally."
+      },
+      "coverage": {
+        "effect": "access_then_review",
+        "includes": "Review and correction of inaccurate, outdated or fraudulent credit records.",
+        "excludes": "Correct credit records follow applicable retention periods; no blanket early deletion."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Credit-record access and correction require personally reviewed identifiers, signature and document delivery. Generating the PDF alone is not submission; no automatic sending, uploads or blanket credit-data deletion."
+      },
+      "evidence": [
+        {
+          "url": "https://www.crif.it/consumatori/sistema-informazioni-creditizie-sic/sic-cancellare-modificare-dati/",
+          "checked_on": "2026-09-29",
+          "published": "Not specified",
+          "excerpt": "Puoi ottenere la cancellazione anticipata dei dati direttamente da CRIF solo se questi non sono corretti o aggiornati",
+          "supports": [
+            "identity",
+            "relevance",
+            "coverage"
+          ]
+        },
+        {
+          "url": "https://www.crif.it/consumatori/sistema-informazioni-creditizie-sic/accedi-ai-tuoi-dati-consumatori/",
+          "checked_on": "2026-09-29",
+          "excerpt": "modulo di richiesta firmato e documenti identificativi",
+          "supports": ["removal", "required_information", "coverage"]
+        },
+        {
+          "url": "https://www.modulorichiesta.crif.com/",
+          "checked_on": "2026-09-29",
+          "excerpt": "Per privati la richiesta è gratuita",
+          "supports": ["removal", "required_information"]
+        },
+        {
+          "url": "https://www.modulorichiesta.crif.com/Messages/privacy-policy",
+          "checked_on": "2026-09-29",
+          "excerpt": "Titolare del trattamento dei dati personali raccolti è CRIF SpA",
+          "supports": ["identity", "required_information"]
+        },
+        {
+          "url": "https://www.crif.it/contatti/consumatori/",
+          "checked_on": "2026-09-29",
+          "excerpt": "via Zanardi 41, 40131 Bologna",
+          "supports": ["removal"]
+        },
+        {
+          "url": "https://www.modulorichiesta.crif.com/Messages/InstructionsPF",
+          "checked_on": "2026-10-01",
+          "excerpt": "fotocopia documento di identità e copia del tesserino del codice fiscale",
+          "supports": ["removal", "required_information", "automation"]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Conditional wizard behavior and identity-document delivery have not been tested end to end; the public individual checklist is documented.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "experian-italy",
+      "name": "Experian Italy",
+      "match_domains": [
+        "experian.it"
+      ],
+      "identity": {
+        "legal_name": "Experian Italia S.p.A., tax/VAT number 06016221001",
+        "brands": [
+          "Experian Italy"
+        ],
+        "parent": null,
+        "official_domains": [
+          "experian.it"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "IT"
+        ],
+        "category": "credit_reference",
+        "data_categories": [
+          "Credit records",
+          "Personal financial identifiers"
+        ],
+        "note": "Official consumer service publishes a request form and email/PEC destinations."
+      },
+      "removal": {
+        "method": "email",
+        "destination": "stc.italy@experian.com",
+        "alternatives": [
+          "https://www.experian.it/consumatori/come-contattare-il-servizio-consumatori-di-experian",
+          "consumatori.experian@legalmail.it",
+          "https://www.experian.it/content/dam/noindex/emea/italy/Nuovo-modulo-SIC.pdf"
+        ],
+        "steps": [
+          "Complete the signed SIC/public-data form, selecting access, correction or another applicable right.",
+          "For erasure, specify the records and grounds; for scoring access, identify the lender.",
+          "Personally review and send the form with clear identity-document and fiscal-code copies by email or PEC.",
+          "Use the delegation section only if represented; retain the response and distinguish access from deletion."
+        ]
+      },
+      "required_information": {
+        "fields": ["full_name", "date_of_birth", "place_of_birth", "fiscal_code", "postal_address", "signature", "identity_document_copy", "fiscal_code_copy"],
+        "certainty": "documented",
+        "verification": "Form requires identity and fiscal-code copies plus date/signature. Contact phone/email/PEC are marked optional. Representation and contested-record evidence are conditional."
+      },
+      "coverage": {
+        "effect": "access_then_review",
+        "includes": "Italian SIC and public-data rights, with reasoned correction, objection or erasure requests.",
+        "excludes": "No guaranteed blanket credit deletion. Request-handling records may remain up to ten years; this is not SIC retention."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Signed identity evidence and credit-specific grounds require personal review; do not automatically email documents."
+      },
+      "evidence": [
+        {
+          "url": "https://www.experian.it/consumatori/come-contattare-il-servizio-consumatori-di-experian",
+          "checked_on": "2026-09-29",
+          "published": "Not specified",
+          "excerpt": "stc.italy@experian.com",
+          "supports": [
+            "identity",
+            "relevance",
+            "coverage",
+            "removal"
+          ]
+        },
+        {
+          "url": "https://www.experian.it/content/dam/noindex/emea/italy/Nuovo-modulo-SIC.pdf",
+          "checked_on": "2026-09-29",
+          "published": "Undated form; all six pages reviewed",
+          "excerpt": "copia del codice fiscale",
+          "supports": ["identity", "removal", "required_information", "coverage"]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "ctc-italy",
+      "name": "CTC Italy",
+      "match_domains": [
+        "ctconline.it"
+      ],
+      "identity": {
+        "legal_name": "Consorzio per la Tutela del Credito Società Consortile a responsabilità limitata",
+        "brands": [
+          "CTC Italy"
+        ],
+        "parent": null,
+        "official_domains": [
+          "ctconline.it"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "IT"
+        ],
+        "category": "credit_reference",
+        "data_categories": [
+          "SIC credit records"
+        ],
+        "note": "Official consumer portal creates, supplements and tracks credit database requests."
+      },
+      "removal": {
+        "method": "form",
+        "destination": "https://consumatore.ctconline.it/",
+        "alternatives": ["https://www.ctconline.it/informativa-privacy-e-faq/"],
+        "steps": [
+          "Open the SIC request portal and choose a new request. SPID identification avoids uploading the signed request and identity documents; authenticate personally, never through the app.",
+          "Without SPID, complete the request, download the emailed form, print/sign/scan it, upload it with the requested identification documents, then send. Merely generating the form does not finish submission.",
+          "For correction/cancellation identify the credit relationship and provide supporting evidence. You may instead contact the reporting lender; CTC forwards supporting documents to it.",
+          "Use the portal's supplement/status options to follow up. Credit repayment or withdrawing consent does not itself trigger immediate deletion under CTC's stated SIC rules."
+        ]
+      },
+      "required_information": {
+        "fields": ["request_type", "identity_document_or_spid", "signed_request_without_spid", "supporting_evidence_for_dispute"],
+        "certainty": "not_fully_specified",
+        "verification": "Public SIC application code documents SPID versus signed-form/ID routes. Its document checklist is request-dependent; exact accepted documents and every mandatory personal field remain unverified. Supplement lookup uses fiscal code and protocol number."
+      },
+      "coverage": {
+        "effect": "access_then_review",
+        "includes": "Access to the CTC SIC database and subsequent rights review.",
+        "excludes": "No automatic deletion of accurate credit data."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "SPID authentication or a signed request with identity documents requires personal action; credit corrections need the affected relationship and supporting evidence."
+      },
+      "evidence": [
+        {
+          "url": "https://consumatore.ctconline.it/",
+          "checked_on": "2026-09-29",
+          "published": "Not specified",
+          "excerpt": "Per conoscere le informazioni contenute nella banca dati del SIC di CTC",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "required_information",
+            "coverage"
+          ]
+        },
+        {
+          "url": "https://consumatore.ctconline.it/694-es2017.5e3b95423681c92b74e6.js",
+          "checked_on": "2026-09-29",
+          "published": "Public SIC request module referenced by the current site's runtime",
+          "excerpt": "Entra senza SPID",
+          "supports": ["removal", "required_information", "automation"]
+        },
+        {
+          "url": "https://www.ctconline.it/informativa-privacy-e-faq/",
+          "checked_on": "2026-09-29",
+          "published": "Not specified",
+          "excerpt": "Le richieste, indirizzate a CTC, devono essere sottoscritte e corredate dei documenti identificativi",
+          "supports": ["identity", "relevance", "removal", "required_information", "coverage"]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "No SPID login or request submitted; dynamically fetched document checklist not exercised.",
+        "Do not borrow the separate AISP customer/contract email checklist for SIC without scope confirmation.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "cerved-italy",
+      "name": "Cerved Group",
+      "match_domains": [
+        "cerved.com"
+      ],
+      "identity": {
+        "legal_name": "Cerved Group S.p.A.",
+        "brands": [
+          "Cerved Group"
+        ],
+        "parent": null,
+        "official_domains": [
+          "cerved.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "IT"
+        ],
+        "category": "credit_reference",
+        "data_categories": [
+          "Commercial information",
+          "Business risk records"
+        ],
+        "note": "Public-source commercial risk information about businesses and connected individuals; excludes consumer relationships. Subsidiary notices are separate."
+      },
+      "removal": {
+        "method": "email",
+        "destination": "cerved@cerved.com",
+        "alternatives": ["dpo@cerved.com", "https://www.cerved.com/privacy"],
+        "steps": [
+          "Write to cerved@cerved.com or dpo@cerved.com specifying access, correction, applicable erasure or objection concerning commercial-information records.",
+          "For objection, explain your particular circumstances. The notice limits correction of subjective assessments and does not promise unconditional erasure.",
+          "Review any matching or verification requirements personally; no fixed initial checklist is published. Retain the substantive decision and any retention explanation."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "A complete matching and verification checklist has not been established."
+      },
+      "coverage": {
+        "effect": "access_then_review",
+        "includes": "Cerved Group commercial-information records; retention follows the commercial-information code of conduct, article 9.",
+        "excludes": "No group-wide deletion across separately named Cerved companies."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Commercial-risk scope and case-specific grounds require review; no minimal automatic matching checklist is established."
+      },
+      "evidence": [
+        {
+          "url": "https://www.cerved.com/privacy",
+          "checked_on": "2026-09-29",
+          "published": "Not specified",
+          "excerpt": "CG - Informativa sul trattamento dei dati personali per finalità di informazione commerciale",
+          "supports": [
+            "identity",
+            "relevance",
+            "coverage"
+          ]
+        },
+        {
+          "url": "https://backoffice.cerved.com/uploads/Informativa_BI_Cerved_Group_S_p_A_v6_1_06fffbea97.pdf",
+          "checked_on": "2026-09-29",
+          "published": "December 2021; currently linked by the official privacy directory",
+          "excerpt": "Le richieste vanno rivolte per iscritto al Titolare all’indirizzo cerved@cerved.com",
+          "supports": ["identity", "relevance", "removal", "required_information", "coverage", "automation"]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "No fixed matching or verification checklist; individual retention periods need case-specific review.",
+        "Current directory links a December 2021 notice; newer website-policy contacts are not substituted for this product notice.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "consodata-italy",
+      "name": "Consodata",
+      "match_domains": [
+        "consodata.it"
+      ],
+      "identity": {
+        "legal_name": "Consodata S.r.l.",
+        "brands": [
+          "Consodata"
+        ],
+        "parent": null,
+        "official_domains": [
+          "consodata.it"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "IT"
+        ],
+        "category": "postal_marketing",
+        "data_categories": [
+          "Marketing-data products (precise current scope unresolved)"
+        ],
+        "note": "Current terms name a different legal identifier than some historical guides; resolve the actual marketing-data controller."
+      },
+      "removal": {
+        "method": "investigate",
+        "destination": "https://consodata.it/site/privacy/informativa_privacy.pdf",
+        "alternatives": [
+          "https://consodata.it/site/privacy/terminiecondizioni.pdf"
+        ],
+        "steps": [
+          "Read the referenced data-product notice and identify the relevant record.",
+          "Review matching information before submitting a request.",
+          "Retain the reply and verify the stated scope."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "A complete matching and verification checklist has not been established."
+      },
+      "coverage": {
+        "effect": "needs_review",
+        "includes": "Candidate Italian data-marketing workflow.",
+        "excludes": "Website visitor rights do not establish erasure from licensed marketing datasets."
+      },
+      "automation": {
+        "mode": "blocked",
+        "reason": "Unresolved controller, product scope or request requirements; resolve the recorded blockers first."
+      },
+      "evidence": [
+        {
+          "url": "https://consodata.it/site/privacy/terminiecondizioni.pdf",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "Consodata S.r.I., P.IVA 12656890964",
+          "supports": [
+            "identity",
+            "relevance",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "needs_research",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Read the product-specific notice and distinguish it from portal-user data.",
+        "Confirm current controller and continuity with historical Consodata records.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "weborama",
+      "name": "Weborama",
+      "match_domains": [
+        "weborama.com"
+      ],
+      "identity": {
+        "legal_name": "Weborama SAS",
+        "brands": [
+          "Weborama"
+        ],
+        "parent": null,
+        "official_domains": [
+          "weborama.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "FR",
+          "EEA"
+        ],
+        "category": "advertising",
+        "data_categories": [
+          "Cookie identifiers",
+          "Interest segments",
+          "Browsing data",
+          "Mobile advertising identifiers"
+        ],
+        "note": "Notice describes an advertising database, data sales and identifier synchronization."
+      },
+      "removal": {
+        "method": "email",
+        "destination": "privacy@weborama.com",
+        "alternatives": [
+          "https://www.weborama.com/privacy",
+          "https://cookie-info.weborama.fr",
+          "https://cookie-info.weborama.com"
+        ],
+        "steps": [
+          "In the affected browser, obtain Weborama identifiers from both cookie-info pages linked in its policy.",
+          "Email those identifiers with the right requested to privacy@weborama.com; a name and dedicated inbox cannot identify a cookie-only profile.",
+          "Separately use the policy's opt-out control in each affected browser if desired. It removes that browser's identifier and stops future profile construction, not every partner's data.",
+          "Retain the reply; do not interpret a missing browser identifier as proof that no other device records exist."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "weborama_advertising_identifier"
+        ],
+        "certainty": "documented",
+        "verification": "Both cookie-info domains are expressly published matching routes. Mobile advertising IDs and client-controlled identifiers need separate review; no identifiers were collected during research."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Rights request for the supplied Weborama identifiers.",
+        "excludes": "Browser opt-out is browser-specific and does not establish all-partner deletion."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Obtain the Weborama identifiers from its two official cookie-info pages in the affected browser; a new reply mailbox cannot locate cookie-only records."
+      },
+      "evidence": [
+        {
+          "url": "https://www.weborama.com/privacy",
+          "checked_on": "2026-09-29",
+          "published": "Not specified",
+          "excerpt": "it is necessary that you provide us with your Weborama advertising identifiers",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "required_information",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Repeat identifier review for each relevant browser/device.",
+        "Mobile identifier verification route needs confirmation.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "sirdata",
+      "name": "Sirdata",
+      "match_domains": [
+        "sirdata.com"
+      ],
+      "identity": {
+        "legal_name": "Sirdata SAS (RCS Paris 790193924)",
+        "brands": [
+          "Sirdata"
+        ],
+        "parent": null,
+        "official_domains": [
+          "sirdata.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "FR",
+          "EEA"
+        ],
+        "category": "advertising",
+        "data_categories": [
+          "Cookie identifiers",
+          "Audience data"
+        ],
+        "note": "Official cookie-rights form distinguishes cookie-ID requests from email-linked requests."
+      },
+      "removal": {
+        "method": "form",
+        "destination": "https://www.sirdata.com/en/rights-exercise-cookies",
+        "alternatives": [],
+        "steps": [
+          "Open the cookie-rights form from the affected device/browser.",
+          "Provide the cookie identifier and required device-control declaration.",
+          "For a shared device, review the requirement for other users' agreement; retain the response."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "email",
+          "sirdata_cookie_identifier",
+          "device_control_declaration"
+        ],
+        "certainty": "documented",
+        "verification": "The cookie route requires a device-control declaration. The page distinguishes identity proof for email-related requests from cookie requests."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Sirdata records matched to the supplied cookie identifier.",
+        "excludes": "Other devices and browsers or unrelated identifiers without separate matching."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Cookie identifier and device-control declaration require user review."
+      },
+      "evidence": [
+        {
+          "url": "https://www.sirdata.com/en/rights-exercise-cookies",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "For a request relating to a Cookie identifier, the identifier and the statement on honour are sufficient.",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "required_information",
+            "coverage"
+          ]
+        },
+        {
+          "url": "https://www.sirdata.com/en/Legal-Mentions",
+          "checked_on": "2026-09-28",
+          "published": "2024-09",
+          "excerpt": "Sirdata",
+          "supports": [
+            "identity"
+          ]
+        },
+        {
+          "url": "https://www.sirdata.com/en/rights-exercise-cookies",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "Email",
+          "supports": [
+            "removal",
+            "required_information",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Shared-device agreements may be required.",
+        "No end-to-end submission tested.",
+        "Parent ownership not reviewed."
+      ]
+    },
+    {
+      "id": "numberly",
+      "name": "Numberly",
+      "match_domains": [
+        "numberly.com"
+      ],
+      "identity": {
+        "legal_name": "Numberly SAS, RCS Paris 908 030 018 (current English charter)",
+        "brands": [
+          "Numberly"
+        ],
+        "parent": null,
+        "official_domains": [
+          "numberly.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "FR",
+          "EEA"
+        ],
+        "category": "advertising",
+        "data_categories": [
+          "Personal contact data",
+          "Browsing data",
+          "Partner marketing data"
+        ],
+        "note": "Notice distinguishes Numberly acting as controller from processing on partners' instructions."
+      },
+      "removal": {
+        "method": "email",
+        "destination": "dpo@numberly.com",
+        "alternatives": [
+          "https://numberly.com/en/privacy/",
+          "https://mmtro.com/privacy/en/"
+        ],
+        "steps": [
+          "Contact the DPO for access, deletion or objection concerning Numberly-controlled data and explain the relevant campaign or identifier.",
+          "The charter requests proof of identity or a valid ID copy; review necessity and secure transmission personally rather than automatically attaching ID.",
+          "Use the linked MMtro browser preference page separately for cookies; it does not establish deletion of all personal records.",
+          "For partner-controlled records, identify the partner rather than assuming Numberly can independently delete the source data."
+        ]
+      },
+      "required_information": {
+        "fields": ["identity_proof"],
+        "certainty": "not_fully_specified",
+        "verification": "Charter requires proof of identity or a valid identity document with a rights request; it does not specify a full matching checklist or secure document-upload route. Do not automatically attach documents."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Numberly-controlled personal and browsing data identified in the request.",
+        "excludes": "Partner-controller processing and independently held partner records require separate assessment."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Identity-proof requirements, browser context and controller/processor distinctions require personal review."
+      },
+      "evidence": [
+        {
+          "url": "https://numberly.com/en/privacy/",
+          "checked_on": "2026-09-29",
+          "published": "2026-07-21",
+          "excerpt": "proof of identity or a copy of a valid identity document",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "required_information",
+            "coverage"
+          ]
+        },
+        {
+          "url": "https://numberly.com/en/legal-notices/",
+          "checked_on": "2026-09-29",
+          "excerpt": "B 908 030 018",
+          "supports": ["identity", "removal"]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Matching requirements for browsing-only records.",
+        "Current detailed request verification checklist.",
+        "Former Italian-language page named a different 1000mercis entity (429621311); current charter and legal notice both name 908030018. No blanket legacy-company coverage inferred.",
+        "MMtro preferences require JavaScript; no opt-out activated or outcome tested.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "nomination-fr",
+      "name": "Nomination",
+      "match_domains": [
+        "nomination.fr"
+      ],
+      "identity": {
+        "legal_name": "Nomination, RCS Paris 443 218 003",
+        "brands": [
+          "Nomination"
+        ],
+        "parent": null,
+        "official_domains": [
+          "nomination.fr"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "FR"
+        ],
+        "category": "professional",
+        "data_categories": [
+          "Decision-maker profiles",
+          "Professional contacts",
+          "Job changes"
+        ],
+        "note": "French decision-maker database; the full policy distinguishes its own profiles from client-controlled CRM imports."
+      },
+      "removal": {
+        "method": "email",
+        "destination": "privacy@nomination.fr",
+        "alternatives": [
+          "https://www.nomination.fr/etes-vous-dans-nomination/",
+          "https://www.nomination.fr/protection-des-donnees-personnelles/"
+        ],
+        "steps": [
+          "Request deletion or objection for the decision-maker database at privacy@nomination.fr, identifying the relevant professional record.",
+          "Alternatively enter your professional email in the linked lookup page; the policy describes an emailed link to review, edit or delete the profile.",
+          "Do not use the obsolete lookup URL printed in the PDF; use the current site navigation link recorded here.",
+          "Client-imported CRM data has a separate controller; a newsletter unsubscribe is not proof of database removal."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "Professional email is mandatory for the alternative self-service lookup. The primary DPO-email route has no published fixed initial checklist; provide relevant professional matching identifiers and review any verification follow-up."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Nomination-controlled decision-maker profile and related rights review.",
+        "excludes": "Independent client CRM records, partner publications and the unrelated nomination.com jewellery company."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Confirm the relevant work email and complete the private profile link; DPO route may need further matching."
+      },
+      "evidence": [
+        {
+          "url": "https://www.nomination.fr/protection-des-donnees-personnelles/",
+          "checked_on": "2026-09-29",
+          "published": "2025-10-10",
+          "excerpt": "privacy@nomination.fr",
+          "supports": [
+            "identity",
+            "relevance",
+            "coverage"
+          ]
+        },
+        {
+          "url": "https://www.nomination.fr/wp-content/uploads/2026/04/Politique-de-Confidentialite-Protection-des-donnees-a-caractere-personnel-2025.pdf",
+          "checked_on": "2026-09-29",
+          "published": "2025-10-10; currently linked PDF, section3.7",
+          "excerpt": "supprimer sa fiche de la base NOMINATION",
+          "supports": ["identity", "removal", "coverage", "required_information"]
+        },
+        {
+          "url": "https://www.nomination.fr/etes-vous-dans-nomination/",
+          "checked_on": "2026-09-29",
+          "excerpt": "votre e-mail professionnel (uniquement)",
+          "supports": ["removal", "required_information"]
+        },
+        {
+          "url": "https://www.nomination.fr/data-cleaning/",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "Enrichissement avec des contacts et entreprises qualifiés",
+          "supports": [
+            "relevance"
+          ]
+        }
+      ],
+      "scale": {
+        "claim": "400,000 decision-makers",
+        "unit": "decision-maker profiles",
+        "scope": "French business database claim on the lookup page; not evidence of an individual record or deletion impact.",
+        "source": {
+          "url": "https://www.nomination.fr/etes-vous-dans-nomination/",
+          "checked_on": "2026-09-29",
+          "excerpt": "400 000 décideurs",
+          "supports": ["scale"]
+        }
+      },
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "No work email entered and no private profile link or deletion tested.",
+        "DPO-email minimum matching and verification checklist.",
+        "Parent ownership not reviewed.",
+        "Scale claim measurement date."
+      ]
+    },
+    {
+      "id": "ellisphere-fr",
+      "name": "Ellisphere",
+      "match_domains": [
+        "ellisphere.com"
+      ],
+      "identity": {
+        "legal_name": "ELLISPHERE SAS",
+        "brands": [
+          "Ellisphere"
+        ],
+        "parent": null,
+        "official_domains": [
+          "ellisphere.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "FR"
+        ],
+        "category": "professional",
+        "data_categories": [
+          "Business directors",
+          "Beneficial owners",
+          "Business contact data",
+          "Risk scores"
+        ],
+        "note": "Public/private B2B information; rights notice warns requests may not always be granted."
+      },
+      "removal": {
+        "method": "email",
+        "destination": "hotline@ellisphere.com",
+        "alternatives": [
+          "dpo@ellisphere.com",
+          "https://www.ellisphere.com/uploads/documents/rgpd/Politique_RGPD_Ellisphere.pdf"
+        ],
+        "steps": [
+          "Email hotline@ellisphere.com specifying the right requested for personal records in the B2B database; review any further matching requirements.",
+          "Postal alternative: ELLISPHERE – Relation Client, Immeuble Alpierre, 74 rue Gorge de Loup, 69009 Lyon. Direct privacy questions to dpo@ellisphere.com.",
+          "Read the substantive decision: erasure may be refused. The separate free Charte Transparence registration provides a business score and its logic, not deletion, and is not a prerequisite."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "A complete matching and verification checklist has not been established."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Personal data in Ellisphere B2B information products subject to request review.",
+        "excludes": "Credit and public-register retention claims need separate assessment; no automatic full erasure."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Business-credit records need a scoped request and a retention decision; commercial scoring is not unconditional marketing-list deletion."
+      },
+      "evidence": [
+        {
+          "url": "https://www.ellisphere.com/uploads/documents/rgpd/Politique_RGPD_Ellisphere.pdf",
+          "checked_on": "2026-09-29",
+          "published": "June 2026, document DFJC/R.7.13/06.2026",
+          "excerpt": "hotline@ellisphere.com",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "required_information",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": {
+        "claim": "8.6 million",
+        "unit": "businesses",
+        "scope": "French B2B database; company claim, not people, confirmed exposure or records deleted.",
+        "source": {
+          "url": "https://www.ellisphere.com/uploads/documents/rgpd/Politique_RGPD_Ellisphere.pdf",
+          "checked_on": "2026-09-29",
+          "published": "June 2026",
+          "excerpt": "une base de données sur 8,6 millions d’entreprises en France",
+          "supports": ["scale"]
+        }
+      },
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Matching identifiers and secure verification procedure.",
+        "No fixed retention duration published for B2B records.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "idaia-fr",
+      "name": "IDAIA / Cartégie",
+      "match_domains": [
+        "idaia.group"
+      ],
+      "identity": {
+        "legal_name": "IDAIA SAS (RCS Bordeaux 348 770 561)",
+        "brands": [
+          "IDAIA",
+          "Cartégie"
+        ],
+        "parent": null,
+        "official_domains": [
+          "idaia.group",
+          "base-plus.fr"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "France",
+          "EU"
+        ],
+        "category": "professional",
+        "data_categories": [
+          "Professional names and job roles",
+          "Business contact details",
+          "Partner-supplied consumer marketing contacts"
+        ],
+        "note": "Own professional collection and partner-supplied consumer lists have different controller roles."
+      },
+      "removal": {
+        "method": "email",
+        "destination": "dpo@idaia.group",
+        "alternatives": [
+          "https://www.idaia.group/fr/donnees-personnelles"
+        ],
+        "steps": [
+          "Identify whether the request concerns a professional record or a partner-supplied consumer marketing list.",
+          "Send the deletion/objection request to the DPO, identifying the relevant record or marketing message.",
+          "Clarify matching and proof requirements before sending sensitive documents. The postal instructions mention an identity copy; applicability to email is not explicit.",
+          "Request confirmation of IDAIA's action and source-partner notification separately; notification is not downstream deletion proof."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "The policy provides postal-with-ID and email routes without a fixed email matching checklist. Do not automatically attach identification."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Records handled by IDAIA's teams; the notice promises to inform the supplying partner.",
+        "excludes": "No proof of partner/customer erasure, every subsidiary database, or deletion of non-identifiable statistics."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Select the record/controller context and clarify email matching and identity-proof requirements before enabling automatic delivery."
+      },
+      "evidence": [
+        {
+          "url": "https://www.idaia.group/fr/mentions-legales",
+          "checked_on": "2026-09-30",
+          "excerpt": "IDAIA, SAS au capital de 500 000 €",
+          "supports": [
+            "legal_identity"
+          ]
+        },
+        {
+          "url": "https://www.idaia.group/fr/donnees-personnelles",
+          "checked_on": "2026-09-30",
+          "excerpt": "ou par email à l’adresse suivante : dpo@idaia.group",
+          "supports": [
+            "relevance",
+            "removal",
+            "verification_boundary",
+            "coverage"
+          ]
+        },
+        {
+          "url": "https://www.base-plus.fr/politique-de-donnees-personnelles.html",
+          "checked_on": "2026-09-30",
+          "published": "2026-09-10",
+          "excerpt": "IDAIA supprime les données dans les bases traitées par ses équipes",
+          "supports": [
+            "group_policy_publication",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "No fixed email matching checklist; clarify whether proof is required by email.",
+        "Base Plus publisher still named separately; no automatic legal-entity merger inferred.",
+        "No delivery, verification or downstream fulfilment tested."
+      ]
+    },
+    {
+      "id": "dataventure-fr",
+      "name": "Dataventure / Cardata",
+      "match_domains": [
+        "dataventure.com"
+      ],
+      "identity": {
+        "legal_name": "CARDATA (named in linked charter; current Dataventure controller scope unresolved)",
+        "brands": [
+          "Dataventure / Cardata"
+        ],
+        "parent": null,
+        "official_domains": [
+          "dataventure.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "FR"
+        ],
+        "category": "consumer_marketing",
+        "data_categories": [
+          "Marketing contact records"
+        ],
+        "note": "Official domain hosts Cardata's rights charter; group branding must be reconciled before generic routing."
+      },
+      "removal": {
+        "method": "email",
+        "destination": "dpo@dataventure.com",
+        "alternatives": [
+          "https://www.dataventure.com/wp-content/uploads/2023/07/cardata_charte_protection-des-donnees.pdf"
+        ],
+        "steps": [
+          "Read the referenced data-product notice and identify the relevant record.",
+          "Review matching information before submitting a request.",
+          "Retain the reply and verify the stated scope."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "A complete matching and verification checklist has not been established."
+      },
+      "coverage": {
+        "effect": "needs_review",
+        "includes": "Cardata-charter processing pending controller and product confirmation.",
+        "excludes": "Not evidence that all Dataventure entities or partner recipient lists share erasure coverage."
+      },
+      "automation": {
+        "mode": "blocked",
+        "reason": "Unresolved controller, product scope or request requirements; resolve the recorded blockers first."
+      },
+      "evidence": [
+        {
+          "url": "https://www.dataventure.com/wp-content/uploads/2023/07/cardata_charte_protection-des-donnees.pdf",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "dpo@dataventure.com",
+          "supports": [
+            "identity",
+            "relevance",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "needs_research",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Current legal controller, current charter linkage and required matching fields.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "freedelity-be",
+      "name": "Freedelity",
+      "match_domains": [
+        "freedelity.be",
+        "myfreedelity.com"
+      ],
+      "identity": {
+        "legal_name": "Freedelity SA (BCE 0818.399.886)",
+        "brands": [
+          "Freedelity"
+        ],
+        "parent": null,
+        "official_domains": [
+          "freedelity.be",
+          "myfreedelity.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "BE"
+        ],
+        "category": "identity_risk",
+        "data_categories": [
+          "contact details",
+          "retailer reference profiles"
+        ],
+        "note": "Reference contact sharing and synchronisation; retailer transaction processing is a separate role."
+      },
+      "removal": {
+        "method": "email",
+        "destination": "privacy@myfreedelity.com",
+        "alternatives": [
+          "https://www.myfreedelity.com/fr/vie-privee"
+        ],
+        "steps": [
+          "Read section 7 and identify the retailer and processing concerned.",
+          "Use the authenticated portal or the published email route with proportionate identity proof.",
+          "Ask whether requests forwarded to retailers were actually completed."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "identity_proof"
+        ],
+        "certainty": "documented",
+        "verification": "Review the published identifiers; conditional verification may require a separate response."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Requests concerning Freedelity-controlled or jointly controlled processing.",
+        "excludes": "Retailers' independent databases; processor-held records may require retailer action."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Identify the retailer, then use the authenticated portal or personally reviewed identity proof. Retailer forwarding is not confirmed retailer deletion."
+      },
+      "evidence": [
+        {
+          "url": "https://www.myfreedelity.com/fr/vie-privee",
+          "checked_on": "2026-09-28",
+          "published": "2025-12-31",
+          "excerpt": "privacy@myfreedelity.com",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "required_information",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Portal authentication may avoid separate identity documentation.",
+        "Processing role and retailer must be identified.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "bpost-selectpost-be",
+      "name": "bpost SelectPost",
+      "match_domains": [
+        "bpost.be"
+      ],
+      "identity": {
+        "legal_name": "bpost SA de droit public (BE 0214.596.464)",
+        "brands": [
+          "bpost SelectPost"
+        ],
+        "parent": null,
+        "official_domains": [
+          "bpost.be"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "BE"
+        ],
+        "category": "postal_marketing",
+        "data_categories": [
+          "contact details",
+          "lifestyle questionnaire profiles"
+        ],
+        "note": "SelectPost first-party lifestyle data is offered for marketing; delivery records are a separate purpose."
+      },
+      "removal": {
+        "method": "investigate",
+        "destination": "https://www.bpost.be/en/forms/personal_data/step1",
+        "alternatives": [
+          "https://www.bpost.be/en/privacy"
+        ],
+        "steps": [
+          "Read the referenced data-product notice and identify the relevant record.",
+          "Review matching information before submitting a request.",
+          "Retain the reply and verify the stated scope."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "contact_details",
+          "redacted_identity_proof"
+        ],
+        "certainty": "documented",
+        "verification": "Review the published identifiers; conditional verification may require a separate response."
+      },
+      "coverage": {
+        "effect": "needs_review",
+        "includes": "General bpost privacy rights route found.",
+        "excludes": "Specific SelectPost notice and full form requirements not yet reconciled."
+      },
+      "automation": {
+        "mode": "blocked",
+        "reason": "Unresolved controller, product scope or request requirements; resolve the recorded blockers first."
+      },
+      "evidence": [
+        {
+          "url": "https://www.bpost.be/en/privacy",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "SelectPost",
+          "supports": [
+            "identity",
+            "relevance",
+            "coverage"
+          ]
+        },
+        {
+          "url": "https://www.bpost.be/en/data-solution",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "Data solution",
+          "supports": [
+            "relevance"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "needs_research",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Locate the currently applicable SelectPost-specific notice; specific policies override general policy.",
+        "Inspect the remaining form before submitting.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "smart-profile-benelux",
+      "name": "Smart Profile",
+      "match_domains": [
+        "smartprofile.io"
+      ],
+      "identity": {
+        "legal_name": "Dun & Bradstreet B.V. (current Smart Profile policy contact)",
+        "brands": [
+          "Smart Profile",
+          "Computer Profile"
+        ],
+        "parent": "Altares group",
+        "official_domains": [
+          "smartprofile.io",
+          "altares.nl",
+          "altares.be"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "Netherlands",
+          "Belgium",
+          "Benelux"
+        ],
+        "category": "professional",
+        "data_categories": [
+          "Business-card names",
+          "Job titles",
+          "Business emails",
+          "Employer and purchasing roles"
+        ],
+        "note": "Automotive/IT business-contact unit restarted under Altares in 2023; not every Dun & Bradstreet product."
+      },
+      "removal": {
+        "method": "form",
+        "destination": "https://smartprofile.io/contact/",
+        "alternatives": [
+          "https://smartprofile.io/nl/privacy-statement/faq-data-collection/"
+        ],
+        "steps": [
+          "Use the contact form for a business-card privacy request; explicitly request that none of your business-card information be shared, not merely newsletter unsubscribe.",
+          "Provide the marked name, email, phone and organisation fields; select the correct organisation from its lookup and describe the professional record.",
+          "Leave the anti-spam Phone field unchanged; do not confuse it with the separate required Phone number field. Hidden company-enrichment fields are not extra personal details to invent.",
+          "Do not subscribe to the separate newsletter form. Review verification and retain the response describing actual suppression."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "first_name",
+          "last_name",
+          "email",
+          "phone_number",
+          "organisation",
+          "request_description"
+        ],
+        "certainty": "documented",
+        "verification": "Public form labels and hidden-field notices inspected as HTML. Organisation lookup, CAPTCHA and post-submission checks were not exercised."
+      },
+      "coverage": {
+        "effect": "suppression",
+        "includes": "Published choice not to share information associated with the relevant Smart Profile business card.",
+        "excludes": "Not blanket erasure from the D&B group, all retained matching data or independent licensee copies."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Phone disclosure, organisation lookup and verification need personal action; the app does not submit a general contact form automatically."
+      },
+      "evidence": [
+        {
+          "url": "https://smartprofile.io/privacy-statement/",
+          "checked_on": "2026-09-30",
+          "excerpt": "Dun & Bradstreet B.V.",
+          "supports": [
+            "current_named_entity",
+            "contact_channel"
+          ]
+        },
+        {
+          "url": "https://smartprofile.io/nl/privacy-statement/faq-data-collection/",
+          "checked_on": "2026-09-30",
+          "excerpt": "Request not to share any information related to your Business Card",
+          "supports": [
+            "product_rights",
+            "suppression_scope",
+            "data_categories"
+          ]
+        },
+        {
+          "url": "https://smartprofile.io/contact/",
+          "checked_on": "2026-09-30",
+          "excerpt": "Organisation",
+          "supports": [
+            "public_form_fields",
+            "organisation_lookup",
+            "personal_review"
+          ]
+        },
+        {
+          "url": "https://www.altares.be/en/news/smart-profile-to-make-a-fresh-start-under-the-aegis-of-altares-dun-bradstreet/",
+          "checked_on": "2026-09-30",
+          "published": "2023-08-11",
+          "excerpt": "makes a fresh start under the aegis of",
+          "supports": [
+            "business_unit_transition",
+            "parent",
+            "legacy_brand"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Dynamic organisation selection, CAPTCHA and subsequent verification untested.",
+        "Data-collection FAQ predates the restructuring; current site still publishes it.",
+        "No blanket D&B group coverage or confirmed customer deletion inferred."
+      ]
+    },
+    {
+      "id": "datacentric-es",
+      "name": "DataCentric / Accumin — B2B route reviewed; consumer scope unresolved",
+      "match_domains": [
+        "datacentric.es"
+      ],
+      "identity": {
+        "legal_name": "Accumin Intelligence, S.L.U. (CIF B83086926), confirmed business-database controller",
+        "brands": [
+          "DataCentric"
+        ],
+        "parent": null,
+        "official_domains": [
+          "datacentric.es", "accumin.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "ES"
+        ],
+        "category": "consumer_marketing",
+        "data_categories": [
+          "business contacts",
+          "consumer marketing contacts"
+        ],
+        "note": "Current official footer links a business-contact dataset notice. Consumer telephone leads use rented supplier data and are not automatically covered by the B2B notice."
+      },
+      "removal": {
+        "method": "investigate",
+        "destination": "https://www.accumin.com/es/intelligence/politica-de-proteccion-de-datos-bases-de-datos-empresariales",
+        "alternatives": ["privacidad.datacentric@accumin.com", "dpd.datacentric@accumin.com"],
+        "steps": [
+          "For personal business-contact data, email the published privacy or DPO address to request erasure and marketing opposition; identify the relevant business record.",
+          "For consumer telephone marketing, identify the campaign and source supplier first; the business-contact notice does not establish the rented consumer database's full controller route.",
+          "Review requested identifiers personally; distinguish retained suppression information, original sources and independent customer copies."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "The business-data notice accepts email rights requests but gives no exhaustive matching checklist. Consumer-lead supplier matching and verification remain unresolved."
+      },
+      "coverage": {
+        "effect": "needs_review",
+        "includes": "Business-contact controller and email rights route confirmed; this mixed-product dossier remains under review.",
+        "excludes": "No blanket consumer-lead, source-register, customer-copy or Deyde software-data deletion coverage."
+      },
+      "automation": {
+        "mode": "blocked",
+        "reason": "B2B rights can be requested manually; keep this mixed-product guide blocked from automatic contact until the consumer-product scope and matching are resolved."
+      },
+      "evidence": [
+        {
+          "url": "https://www.accumin.com/es/intelligence/politica-de-proteccion-de-datos-bases-de-datos-empresariales",
+          "checked_on": "2026-10-01",
+          "published": "Not specified",
+          "excerpt": "Estos tratamientos sólo se realizan en el ámbito empresarial",
+          "supports": ["business_dataset_controller", "email_rights", "business_only_scope", "suppression_retention"]
+        },
+        {
+          "url": "https://www.datacentric.es/bases-de-datos-telefonos-particulares/",
+          "checked_on": "2026-10-01",
+          "excerpt": "alquiler de datos",
+          "supports": ["consumer_supplier_scope", "separate_withdrawal_management", "current_legal_footer_links"]
+        },
+        {
+          "url": "https://www.accumin.com/es/intelligence/aviso-legal",
+          "checked_on": "2026-10-01",
+          "excerpt": "CIF B83086926",
+          "supports": ["legal_entity", "current_privacy_contact"]
+        }
+      ],
+      "scale": null,
+      "review_status": "needs_research",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Consumer-lead source controllers and current matching/withdrawal requirements remain unresolved.",
+        "Business-record minimum identifiers and fulfilment are untested.",
+        "No inference that all Accumin/Deyde products or independent recipients share this route."
+      ]
+    },
+    {
+      "id": "iberinform-pt",
+      "name": "Iberinform Portugal",
+      "match_domains": [
+        "iberinform.pt"
+      ],
+      "identity": {
+        "legal_name": "Iberinform Internacional SA – Sucursal em Portugal",
+        "brands": [
+          "Iberinform Portugal"
+        ],
+        "parent": null,
+        "official_domains": [
+          "iberinform.pt"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "PT"
+        ],
+        "category": "professional",
+        "data_categories": [
+          "commercial information"
+        ],
+        "note": "Portuguese commercial-information provider; Spain's form is not presumed to cover Portugal."
+      },
+      "removal": {
+        "method": "investigate",
+        "destination": "https://www.iberinform.pt/noticias/categoria/estudos/bc191068-cb35-428c-a166-286ad8e213dc/pagina/7",
+        "alternatives": [],
+        "steps": [
+          "Read the referenced data-product notice and identify the relevant record.",
+          "Review matching information before submitting a request.",
+          "Retain the reply and verify the stated scope."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "A complete matching and verification checklist has not been established."
+      },
+      "coverage": {
+        "effect": "needs_review",
+        "includes": "Portuguese branch identity and commercial-information activity.",
+        "excludes": "No verified Portugal-specific removal route."
+      },
+      "automation": {
+        "mode": "blocked",
+        "reason": "Unresolved controller, product scope or request requirements; resolve the recorded blockers first."
+      },
+      "evidence": [
+        {
+          "url": "https://www.iberinform.pt/noticias/categoria/estudos/bc191068-cb35-428c-a166-286ad8e213dc/pagina/7",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "Iberinform Internacional",
+          "supports": [
+            "identity",
+            "relevance",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "needs_research",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Full notice access was blocked; verify current rights destination and required identifiers.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "camerdata-es",
+      "name": "Camerdata",
+      "match_domains": [
+        "camerdata.es"
+      ],
+      "identity": {
+        "legal_name": "Unresolved: current Camerdata legal controller",
+        "brands": [
+          "Camerdata"
+        ],
+        "parent": null,
+        "official_domains": [
+          "camerdata.es"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "ES"
+        ],
+        "category": "professional",
+        "data_categories": [
+          "business database information"
+        ],
+        "note": "Spanish commercial database candidate identified through official sector sources."
+      },
+      "removal": {
+        "method": "investigate",
+        "destination": "https://www.camerdata.es/blog/que-es-camerdata-entrevista-revista-global-club/",
+        "alternatives": [],
+        "steps": [
+          "Read the referenced data-product notice and identify the relevant record.",
+          "Review matching information before submitting a request.",
+          "Retain the reply and verify the stated scope."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "A complete matching and verification checklist has not been established."
+      },
+      "coverage": {
+        "effect": "needs_review",
+        "includes": "Database-provider relevance.",
+        "excludes": "Personal-data scope, controller and rights route remain unresolved."
+      },
+      "automation": {
+        "mode": "blocked",
+        "reason": "Unresolved controller, product scope or request requirements; resolve the recorded blockers first."
+      },
+      "evidence": [
+        {
+          "url": "https://www.camerdata.es/blog/que-es-camerdata-entrevista-revista-global-club/",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "Camerdata",
+          "supports": [
+            "identity",
+            "relevance",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "needs_research",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Homepage retrieval failed; inspect current product privacy notice and request requirements.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "axesor-es",
+      "name": "Axesor",
+      "match_domains": [
+        "axesor.es"
+      ],
+      "identity": {
+        "legal_name": "AXESOR CONOCER PARA DECIDIR SA (NIF A18413302)",
+        "brands": [
+          "Axesor"
+        ],
+        "parent": null,
+        "official_domains": [
+          "axesor.es"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "ES"
+        ],
+        "category": "professional",
+        "data_categories": [
+          "commercial information",
+          "business risk information"
+        ],
+        "note": "Commercial-information processing requires separation from ordinary newsletter opt-out."
+      },
+      "removal": {
+        "method": "investigate",
+        "destination": "https://www.axesor.es/informacion-tratamientos-rgpd",
+        "alternatives": [],
+        "steps": [
+          "Read the referenced data-product notice and identify the relevant record.",
+          "Review matching information before submitting a request.",
+          "Retain the reply and verify the stated scope."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "A complete matching and verification checklist has not been established."
+      },
+      "coverage": {
+        "effect": "needs_review",
+        "includes": "Product processing notice found.",
+        "excludes": "No verified complete removal workflow."
+      },
+      "automation": {
+        "mode": "blocked",
+        "reason": "Unresolved controller, product scope or request requirements; resolve the recorded blockers first."
+      },
+      "evidence": [
+        {
+          "url": "https://www.axesor.es/informacion-tratamientos-rgpd",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "AXESOR",
+          "supports": [
+            "identity",
+            "relevance",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "needs_research",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Resolve current subject-rights form or address and matching fields.",
+        "Distinguish public-register commercial information from marketing consent.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "euroleads-fr",
+      "name": "Euroleads",
+      "match_domains": [
+        "euroleads.eu"
+      ],
+      "identity": {
+        "legal_name": "Euroleads SAS (RCS Tours 320179922)",
+        "brands": [
+          "Euroleads"
+        ],
+        "parent": null,
+        "official_domains": [
+          "euroleads.eu"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "FR",
+          "EEA"
+        ],
+        "category": "consumer_marketing",
+        "data_categories": [
+          "consumer and business marketing data"
+        ],
+        "note": "International data-marketing provider; public privacy policy appears mainly website/contact scoped."
+      },
+      "removal": {
+        "method": "investigate",
+        "destination": "https://euroleads.eu/privacy-policy/",
+        "alternatives": [],
+        "steps": [
+          "Read the referenced data-product notice and identify the relevant record.",
+          "Review matching information before submitting a request.",
+          "Retain the reply and verify the stated scope."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "A complete matching and verification checklist has not been established."
+      },
+      "coverage": {
+        "effect": "needs_review",
+        "includes": "Published website rights contact.",
+        "excludes": "Dataset-wide scope and requirements unresolved."
+      },
+      "automation": {
+        "mode": "blocked",
+        "reason": "Unresolved controller, product scope or request requirements; resolve the recorded blockers first."
+      },
+      "evidence": [
+        {
+          "url": "https://euroleads.eu/privacy-policy/",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "contact@euroleads.eu",
+          "supports": [
+            "identity",
+            "relevance",
+            "coverage"
+          ]
+        },
+        {
+          "url": "https://www.euroleads.eu/legal-notice",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "Euroleads",
+          "supports": [
+            "identity"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "needs_research",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Obtain the licensed-database product notice.",
+        "Do not assume website-form deletion removes third-party marketing profiles.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "mediaposte-fr",
+      "name": "MEDIAPOSTE",
+      "match_domains": [
+        "mediaposte.fr"
+      ],
+      "identity": {
+        "legal_name": "MEDIAPOSTE SAS (RCS Nanterre 331648014)",
+        "brands": [
+          "MEDIAPOSTE"
+        ],
+        "parent": null,
+        "official_domains": [
+          "mediaposte.fr"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "FR"
+        ],
+        "category": "postal_marketing",
+        "data_categories": [
+          "marketing lists",
+          "postal contact information"
+        ],
+        "note": "Data-monetisation charter describes MEDIAPOSTE as processor and partners as data controllers."
+      },
+      "removal": {
+        "method": "email",
+        "destination": "exercicedesdroits@mediaposte.fr",
+        "alternatives": [
+          "https://www.mediaposte.fr/charte-dinformation/"
+        ],
+        "steps": [
+          "Email first name, surname and the affected address to the dedicated rights contact, requesting marketing opposition and, if desired, source-data erasure.",
+          "Identify the campaign or advertiser when known. MEDIAPOSTE suppresses direct requests and forwards erasure wishes to the collecting partner or data broker.",
+          "Ask which source controller received the request and retain its response; MEDIAPOSTE's suppression is not proof of source-data deletion."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "full_name",
+          "postal_address"
+        ],
+        "certainty": "documented",
+        "verification": "The data-rental charter specifies first name, surname and address, not an automatic ID attachment. Review any additional verification request before disclosing documents."
+      },
+      "coverage": {
+        "effect": "suppression",
+        "includes": "Distribution suppression and forwarding to source controllers; MEDIAPOSTE separately controls its suppression list.",
+        "excludes": "Source records are not directly erased by MEDIAPOSTE acting as processor. Suppression identifiers remain; other La Poste entities are separate."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Review the region, identifiers and request scope before submission."
+      },
+      "evidence": [
+        {
+          "url": "https://www.mediaposte.fr/charte-dinformation/",
+          "checked_on": "2026-09-29",
+          "published": "Not specified",
+          "excerpt": "exercicedesdroits@mediaposte.fr",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "required_information",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "General privacy policy additionally mentions identity documentation; check applicability and proportionality.",
+        "Identify the campaign/source to establish the relevant controller.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "amabis-fr",
+      "name": "Amabis",
+      "match_domains": [
+        "amabis.com"
+      ],
+      "identity": {
+        "legal_name": "Unresolved: current Amabis legal controller",
+        "brands": [
+          "Amabis"
+        ],
+        "parent": null,
+        "official_domains": [
+          "amabis.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "FR"
+        ],
+        "category": "postal_marketing",
+        "data_categories": [
+          "address and directory data"
+        ],
+        "note": "Data-quality and directory-service candidate; distinguish operator-managed directory rights."
+      },
+      "removal": {
+        "method": "investigate",
+        "destination": "https://www.amabis.com/politique-de-confidentialite/",
+        "alternatives": [],
+        "steps": [
+          "Read the referenced data-product notice and identify the relevant record.",
+          "Review matching information before submitting a request.",
+          "Retain the reply and verify the stated scope."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "A complete matching and verification checklist has not been established."
+      },
+      "coverage": {
+        "effect": "needs_review",
+        "includes": "Published privacy contact.",
+        "excludes": "Controller role and owned marketing-data scope unresolved."
+      },
+      "automation": {
+        "mode": "blocked",
+        "reason": "Unresolved controller, product scope or request requirements; resolve the recorded blockers first."
+      },
+      "evidence": [
+        {
+          "url": "https://www.amabis.com/politique-de-confidentialite/",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "dpd@amabis.fr",
+          "supports": [
+            "identity",
+            "relevance",
+            "coverage"
+          ]
+        },
+        {
+          "url": "https://www.amabis.com/cpce-decret-r10/",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "CPCE",
+          "supports": [
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "needs_research",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Determine whether the affected database is Amabis-controlled or processed for a customer.",
+        "Directory opposition may need the telephone operator.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "isoskele-fr",
+      "name": "ISOSKELE",
+      "match_domains": [
+        "isoskele.fr"
+      ],
+      "identity": {
+        "legal_name": "ISOSKELE SAS (RCS 415068345)",
+        "brands": [
+          "ISOSKELE"
+        ],
+        "parent": null,
+        "official_domains": [
+          "isoskele.fr"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "FR"
+        ],
+        "category": "postal_marketing",
+        "data_categories": [
+          "marketing contacts",
+          "campaign data"
+        ],
+        "note": "Data-driven marketing rights form has requester-dependent branches."
+      },
+      "removal": {
+        "method": "form",
+        "destination": "https://isoskele.fr/exercice-des-droits/",
+        "alternatives": ["droits@isoskele.fr"],
+        "steps": [
+          "Choose private individual or professional contact truthfully; do not invent company/SIRET details for a private-person request.",
+          "Select at least one right, including commercial-prospecting objection or erasure as appropriate, and identify the communication channel.",
+          "Provide matching contact details. Postal address is required for a postal campaign or postal reply; phone is optional.",
+          "Add advertiser, campaign name or media code if known to help locate the source; retain the response and distinguish suppression from deletion."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "requester_status",
+          "salutation_or_prefer_not_to_say",
+          "full_name",
+          "email",
+          "request_type",
+          "communication_channel"
+        ],
+        "certainty": "not_fully_specified",
+        "verification": "Public HTML marks status, salutation (including prefer-not-to-say), first/surname and email required. Company/SIRET conditional behaviour and later verification remain untested."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Requests directed to ISOSKELE under its published form.",
+        "excludes": "Not every campaign partner or La Poste subsidiary. Rights-handling records remain five years, separately from marketing-data erasure."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Review the region, identifiers and request scope before submission."
+      },
+      "evidence": [
+        {
+          "url": "https://isoskele.fr/exercice-des-droits/",
+          "checked_on": "2026-09-29",
+          "published": "Not specified",
+          "excerpt": "Exercice des droits",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "required_information",
+            "coverage"
+          ]
+        },
+        {
+          "url": "https://isoskele.fr/politique-de-confidentialite/",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "ISOSKELE",
+          "supports": [
+            "identity",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Form displays company/SIRET fields; applicability to a private-person branch must be checked.",
+        "Postal address is required for postal campaigns or a postal reply.",
+        "Full dynamic form and verification path not submitted.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "cribis-it",
+      "name": "CRIBIS",
+      "match_domains": [
+        "cribis.com"
+      ],
+      "identity": {
+        "legal_name": "CRIBIS SRL (P.IVA 01691720468)",
+        "brands": [
+          "CRIBIS"
+        ],
+        "parent": null,
+        "official_domains": [
+          "cribis.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "IT"
+        ],
+        "category": "credit_reference",
+        "data_categories": [
+          "commercial information",
+          "public records",
+          "business contacts",
+          "payment behaviour"
+        ],
+        "note": "Commercial reporting and marketing lists include individuals; not the same workflow as CRIF EURISC consumer-credit data."
+      },
+      "removal": {
+        "method": "email",
+        "destination": "direzionegenerale@cribis.com",
+        "alternatives": [
+          "https://www.cribis.com/it/informativa-privacy/"
+        ],
+        "steps": [
+          "Ask whether the commercial-information database contains personal records about you.",
+          "Review the record and legal basis; specify errors or grounds for erasure/opposition.",
+          "Use dirprivacy@cribis.com for DPO questions and keep the outcome."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "A complete matching and verification checklist has not been established."
+      },
+      "coverage": {
+        "effect": "access_then_review",
+        "includes": "Presence/access inquiry followed by justified rectification, erasure or objection.",
+        "excludes": "Accurate lawfully retained public/commercial information is not subject to unconditional deletion."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Identify the commercial-information record through access before deciding correction or erasure grounds; do not automatically delete credit records."
+      },
+      "evidence": [
+        {
+          "url": "https://www.cribis.com/it/informativa-privacy/",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "direzionegenerale@cribis.com",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "required_information",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Matching and identity-verification checklist is not fully published.",
+        "ANCIC lists the historical name CRIBIS D&B SRL; current notice names CRIBIS SRL.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "sevendata-it",
+      "name": "SevenData",
+      "match_domains": [
+        "sevendata.it"
+      ],
+      "identity": {
+        "legal_name": "SevenData S.p.A. (P.IVA 10107290966)",
+        "brands": [
+          "SevenData",
+          "YoUnique Business"
+        ],
+        "parent": null,
+        "official_domains": [
+          "sevendata.it",
+          "younique.business"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "IT"
+        ],
+        "category": "credit_reference",
+        "data_categories": [
+          "Business-associated personal records",
+          "Public-register and commercial reports",
+          "Creditworthiness information"
+        ],
+        "note": "Commercial-information rights are described on the provider's YoUnique site; assess the relevant personal record, not blanket removal of company facts."
+      },
+      "removal": {
+        "method": "manual",
+        "destination": "https://www.informativaprivacyancic.it/richiesta-informativa.aspx",
+        "alternatives": [
+          "dpo@sevendata.it",
+          "https://www.younique.business/privacy/"
+        ],
+        "steps": [
+          "For an initial database-presence check, select SEVENDATA SPA in the ANCIC portal.",
+          "Review all requested details and the identity-document upload personally. This app does not collect or submit them.",
+          "Alternatively contact dpo@sevendata.it about the relevant personal commercial record; its email matching checklist is not fully specified.",
+          "Use the response to request correction, eligible erasure or marketing objection. An access-form submission is not completed deletion."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "first_name",
+          "last_name",
+          "email",
+          "postal_address",
+          "italian_tax_code",
+          "identity_document"
+        ],
+        "certainty": "not_fully_specified",
+        "verification": "ANCIC asks for company selection, tax code, name, email, address/locality/province/postcode, valid identity-document upload and a control code. Dynamic validation and email-route verification are untested."
+      },
+      "coverage": {
+        "effect": "access_then_review",
+        "includes": "Presence check and subsequent rights over SevenData personal commercial-information records.",
+        "excludes": "Accurate company/public-register facts, independent customers and other SevenData products are not blanket deletion coverage."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Presence check requires tax code and identity document; review individually, then decide the relevant correction or erasure request."
+      },
+      "evidence": [
+        {
+          "url": "https://www.younique.business/privacy/",
+          "checked_on": "2026-09-30",
+          "excerpt": "dpo@sevendata.it",
+          "supports": [
+            "legal_identity",
+            "commercial_information_scope",
+            "rights_contact"
+          ]
+        },
+        {
+          "url": "https://www.informativaprivacyancic.it/richiesta-informativa.aspx",
+          "checked_on": "2026-09-30",
+          "excerpt": "caricare un documento d’identità valido",
+          "supports": [
+            "access_form",
+            "matching_requirements",
+            "identity_document",
+            "presence_not_deletion"
+          ]
+        },
+        {
+          "url": "https://www.informativaprivacyancic.it/imprese-iscritte.aspx",
+          "checked_on": "2026-09-30",
+          "excerpt": "SEVENDATA SPA",
+          "supports": [
+            "selected_entity",
+            "portal_membership"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Main sevendata.it notice returned 403; this route uses its published YoUnique product notice and ANCIC portal.",
+        "Portal submission and later verification untested.",
+        "Email matching checklist and parent ownership unreviewed."
+      ]
+    },
+    {
+      "id": "directimedia-pt",
+      "name": "Directimedia",
+      "match_domains": [
+        "directimedia.pt"
+      ],
+      "identity": {
+        "legal_name": "DIRECTIMEDIA - MARKETING DIRECTO LDA. (NIPC 502107472)",
+        "brands": [
+          "Directimedia"
+        ],
+        "parent": null,
+        "official_domains": [
+          "directimedia.pt"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "PT"
+        ],
+        "category": "consumer_marketing",
+        "data_categories": [
+          "marketing database services"
+        ],
+        "note": "Agency offers database marketing; ownership or licensing of consumer profiles remains unconfirmed."
+      },
+      "removal": {
+        "method": "investigate",
+        "destination": "https://www.directimedia.pt/",
+        "alternatives": [],
+        "steps": [
+          "Read the referenced data-product notice and identify the relevant record.",
+          "Review matching information before submitting a request.",
+          "Retain the reply and verify the stated scope."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "A complete matching and verification checklist has not been established."
+      },
+      "coverage": {
+        "effect": "needs_review",
+        "includes": "Database-marketing services and website-only rights policy.",
+        "excludes": "Agency status alone does not prove data brokerage."
+      },
+      "automation": {
+        "mode": "blocked",
+        "reason": "Unresolved controller, product scope or request requirements; resolve the recorded blockers first."
+      },
+      "evidence": [
+        {
+          "url": "https://www.directimedia.pt/",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "Marketing de Bases de Dados",
+          "supports": [
+            "identity",
+            "relevance",
+            "coverage"
+          ]
+        },
+        {
+          "url": "https://www.directimedia.pt/s/20240502-Directimedia-Politica-de-Privacidade.pdf",
+          "checked_on": "2026-09-28",
+          "published": "2024-05-02 in filename; document marked MINUTA",
+          "excerpt": "Directimediaportugal@Directimedia.pt",
+          "supports": [
+            "identity",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "needs_research",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Establish whether this is a broker/controller or solely a customer-data processor.",
+        "Homepage and linked PDF give different rights inboxes; product scope must be resolved.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "adsalsa-iberia",
+      "name": "adSalsa",
+      "match_domains": [
+        "adsalsa.com"
+      ],
+      "identity": {
+        "legal_name": "Unresolved: applicable country-specific adSalsa controller",
+        "brands": [
+          "adSalsa"
+        ],
+        "parent": null,
+        "official_domains": [
+          "adsalsa.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "ES",
+          "PT",
+          "FR",
+          "IT"
+        ],
+        "category": "consumer_marketing",
+        "data_categories": [
+          "online marketing data",
+          "offline marketing data",
+          "lead data"
+        ],
+        "note": "Official site offers online/offline data and lead generation. Each registration form supplies its own controller notice."
+      },
+      "removal": {
+        "method": "investigate",
+        "destination": "https://www.adsalsa.com/en/privacy-policy/",
+        "alternatives": [],
+        "steps": [
+          "Read the referenced data-product notice and identify the relevant record.",
+          "Review matching information before submitting a request.",
+          "Retain the reply and verify the stated scope."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "A complete matching and verification checklist has not been established."
+      },
+      "coverage": {
+        "effect": "needs_review",
+        "includes": "Candidate data-provider group and per-form notice approach.",
+        "excludes": "No verified universal removal contact or controller."
+      },
+      "automation": {
+        "mode": "blocked",
+        "reason": "Unresolved controller, product scope or request requirements; resolve the recorded blockers first."
+      },
+      "evidence": [
+        {
+          "url": "https://www.adsalsa.com/en/privacy-policy/",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "in each registration form",
+          "supports": [
+            "identity",
+            "relevance",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "needs_research",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Identify actual collection brand/country and its privacy notice.",
+        "Generic agency privacy page does not provide a complete subject-rights route.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "webpilots-iberia",
+      "name": "Webpilots España",
+      "match_domains": [
+        "webpilots.com"
+      ],
+      "identity": {
+        "legal_name": "Webpilots España SL",
+        "brands": [
+          "Webpilots España"
+        ],
+        "parent": null,
+        "official_domains": [
+          "webpilots.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "ES",
+          "PT"
+        ],
+        "category": "consumer_marketing",
+        "data_categories": [
+          "marketing leads",
+          "email lists"
+        ],
+        "note": "Official page offers listbroking and reports operations in Spain and Portugal."
+      },
+      "removal": {
+        "method": "investigate",
+        "destination": "https://www.webpilots.com/",
+        "alternatives": [],
+        "steps": [
+          "Read the referenced data-product notice and identify the relevant record.",
+          "Review matching information before submitting a request.",
+          "Retain the reply and verify the stated scope."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "A complete matching and verification checklist has not been established."
+      },
+      "coverage": {
+        "effect": "needs_review",
+        "includes": "List-broking relevance and website legal footer.",
+        "excludes": "Full collection-brand rights notice and requirements unresolved."
+      },
+      "automation": {
+        "mode": "blocked",
+        "reason": "Unresolved controller, product scope or request requirements; resolve the recorded blockers first."
+      },
+      "evidence": [
+        {
+          "url": "https://www.webpilots.com/",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "Listbroking",
+          "supports": [
+            "identity",
+            "relevance",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "needs_research",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Find legal notice and campaign-specific controller routes.",
+        "Do not use advertiser enquiry forms as deletion forms.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "sls-data-fr",
+      "name": "SLS Data",
+      "match_domains": [
+        "sls-data.com"
+      ],
+      "identity": {
+        "legal_name": "SLS DATA SAS (RCS Paris 797879012)",
+        "brands": [
+          "SLS Data"
+        ],
+        "parent": null,
+        "official_domains": [
+          "sls-data.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "FR"
+        ],
+        "category": "consumer_marketing",
+        "data_categories": [
+          "consumer profiles",
+          "business contacts",
+          "marketing identifiers"
+        ],
+        "note": "Mailody and marketing databases combine direct, partner and public sources for prospecting and matching."
+      },
+      "removal": {
+        "method": "email",
+        "destination": "dpo2@sls-data.com",
+        "alternatives": [
+          "https://www.sls-data.com/politique"
+        ],
+        "steps": [
+          "Identify the affected contact or profile and request erasure and marketing objection through the published DPO route.",
+          "Supply further matching or identity information only when justified.",
+          "Ask which recipients were notified and whether a limited suppression record remains."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "A complete matching and verification checklist has not been established."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "SLS-controlled marketing databases; request objection and erasure explicitly.",
+        "excludes": "Independent partner databases; suppression records may remain for five years."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Review the region, identifiers and request scope before submission."
+      },
+      "evidence": [
+        {
+          "url": "https://www.sls-data.com/politique",
+          "checked_on": "2026-09-28",
+          "published": "2026-06-02",
+          "excerpt": "moc.atad-sls@2opd",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "required_information",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": {
+        "claim": "More than 27 million consumer contacts",
+        "unit": "contacts, not verified unique people",
+        "scope": "Company marketing claim; site says totals include SLS and partner databases.",
+        "source": {
+          "url": "https://www.sls-data.com/",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "Plus de 27 millions de contacts",
+          "supports": [
+            "scale"
+          ]
+        }
+      },
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Matching checklist not fully specified; identity proof may be requested in case of doubt.",
+        "Email is reversed in extracted page text; displayed DPO address resolves to dpo2@sls-data.com.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "fcr-media-be",
+      "name": "FCR Media Belgium",
+      "match_domains": [
+        "fcrmedia.be",
+        "goudengids.be",
+        "wittegids.be"
+      ],
+      "identity": {
+        "legal_name": "FCR Media Belgium NV (0807.677.428)",
+        "brands": [
+          "FCR Media Belgium"
+        ],
+        "parent": null,
+        "official_domains": [
+          "fcrmedia.be",
+          "goudengids.be",
+          "wittegids.be"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "BE"
+        ],
+        "category": "professional",
+        "data_categories": [
+          "directory information",
+          "business contacts"
+        ],
+        "note": "Directory publisher and data-partner sharing; unrelated web-design/customer-account processing is distinct."
+      },
+      "removal": {
+        "method": "email",
+        "destination": "info@fcrmedia.be",
+        "alternatives": [
+          "https://fcrmedia.be/privacyverklaring-fcr-media/"
+        ],
+        "steps": [
+          "Read the referenced data-product notice and identify the relevant record.",
+          "Review matching information before submitting a request.",
+          "Retain the reply and verify the stated scope."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "full_name",
+          "postal_address",
+          "phone",
+          "email",
+          "requested_right"
+        ],
+        "certainty": "documented",
+        "verification": "Review the published identifiers; conditional verification may require a separate response."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "FCR-controlled data and processor notification under its rights policy.",
+        "excludes": "Source telecom records and independent data partners may require separate requests."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "The notice requests name, postal address, phone and email; the current sender does not authorize phone disclosure."
+      },
+      "evidence": [
+        {
+          "url": "https://fcrmedia.be/privacyverklaring-fcr-media/",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "info@fcrmedia.be",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "required_information",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Company, VAT number and customer number requested where the person is a business customer.",
+        "A separate directory-source workflow may apply.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "italiaonline-directory-it",
+      "name": "Italiaonline / PagineBianche",
+      "match_domains": [
+        "italiaonline.it",
+        "paginebianche.it"
+      ],
+      "identity": {
+        "legal_name": "Italiaonline SPA",
+        "brands": [
+          "Italiaonline / PagineBianche"
+        ],
+        "parent": null,
+        "official_domains": [
+          "italiaonline.it",
+          "paginebianche.it"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "IT"
+        ],
+        "category": "people_search",
+        "data_categories": [
+          "subscriber directory records"
+        ],
+        "note": "Consumer telephone-directory publication with source records maintained by the subscriber's telephone operator."
+      },
+      "removal": {
+        "method": "manual",
+        "destination": "https://privacy.italiaonline.it/common/cookie/privacy_paginebianche.html",
+        "alternatives": [],
+        "steps": [
+          "Use the telephone operator's directory rights channel to change or remove the source listing.",
+          "Identify the telephone number and subscriber record using that operator's requirements.",
+          "Check PagineBianche after the source change; escalate publisher-specific processing separately."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "A complete matching and verification checklist has not been established."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Written request to the person's telephone operator for the source directory database; publisher updates follow source changes.",
+        "excludes": "Marketing-call opposition registration is not directory deletion or all-product erasure."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Review the region, identifiers and request scope before submission."
+      },
+      "evidence": [
+        {
+          "url": "https://privacy.italiaonline.it/common/cookie/privacy_paginebianche.html",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "proprio operatore telefonico",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "required_information",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "The person's actual operator determines its matching and verification checklist.",
+        "Separate Italiaonline datasets such as advertising identifiers are not covered.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "karma-response-es",
+      "name": "Karma Response / Correo Rápido",
+      "match_domains": [
+        "karmaresponse.com",
+        "correorapido.es"
+      ],
+      "identity": {
+        "legal_name": "KARMA RESPONSE SL (published NIF J66925538; current identity unconfirmed)",
+        "brands": [
+          "Karma Response / Correo Rápido"
+        ],
+        "parent": null,
+        "official_domains": [
+          "karmaresponse.com",
+          "correorapido.es"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "ES"
+        ],
+        "category": "consumer_marketing",
+        "data_categories": [
+          "email marketing profiles"
+        ],
+        "note": "Correo Rápido notice describes third-party list intermediation and names Karma Response."
+      },
+      "removal": {
+        "method": "investigate",
+        "destination": "https://www.correorapido.es/legal.html",
+        "alternatives": [],
+        "steps": [
+          "Read the referenced data-product notice and identify the relevant record.",
+          "Review matching information before submitting a request.",
+          "Retain the reply and verify the stated scope."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "A complete matching and verification checklist has not been established."
+      },
+      "coverage": {
+        "effect": "needs_review",
+        "includes": "Historical marketing-intermediary rights email found.",
+        "excludes": "Current controller status and current GDPR notice not confirmed."
+      },
+      "automation": {
+        "mode": "blocked",
+        "reason": "Unresolved controller, product scope or request requirements; resolve the recorded blockers first."
+      },
+      "evidence": [
+        {
+          "url": "https://www.correorapido.es/legal.html",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "info@karmaresponse.com",
+          "supports": [
+            "identity",
+            "relevance",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "needs_research",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Notice cites pre-GDPR law and the main domain failed retrieval.",
+        "Confirm legal identity, current route and the actual source database before use.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    },
+    {
+      "id": "vip-response-nl",
+      "name": "VIP Response",
+      "match_domains": [
+        "vipresponse.nl"
+      ],
+      "identity": {
+        "legal_name": "VIP RESPONSE BV",
+        "brands": [
+          "VIP Response"
+        ],
+        "parent": null,
+        "official_domains": [
+          "vipresponse.nl"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "NL",
+          "PT"
+        ],
+        "category": "consumer_marketing",
+        "data_categories": [
+          "performance-marketing leads"
+        ],
+        "note": "Portuguese association candidate with Dutch corporate site; database ownership requires clarification."
+      },
+      "removal": {
+        "method": "investigate",
+        "destination": "https://vipresponse.nl/privacy-policy/",
+        "alternatives": [],
+        "steps": [
+          "Read the referenced data-product notice and identify the relevant record.",
+          "Review matching information before submitting a request.",
+          "Retain the reply and verify the stated scope."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "A complete matching and verification checklist has not been established."
+      },
+      "coverage": {
+        "effect": "needs_review",
+        "includes": "Website privacy policy identifies the company.",
+        "excludes": "Website-service notice does not establish deletion of supplied marketing leads."
+      },
+      "automation": {
+        "mode": "blocked",
+        "reason": "Unresolved controller, product scope or request requirements; resolve the recorded blockers first."
+      },
+      "evidence": [
+        {
+          "url": "https://vipresponse.nl/privacy-policy/",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "VIP RESPONSE B.V.",
+          "supports": [
+            "identity",
+            "relevance",
+            "coverage"
+          ]
+        },
+        {
+          "url": "https://www.amd.pt/associados-amd",
+          "checked_on": "2026-09-28",
+          "published": "Not specified",
+          "excerpt": "VIP Response",
+          "supports": [
+            "relevance"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "needs_research",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Find the collection-brand or lead-product notice and subject-rights destination.",
+        "Do not treat website payment/identity fields as removal requirements.",
+        "Parent ownership not reviewed.",
+        "No end-to-end submission tested."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "brokers": [
+    {
+      "id": "spezi-haus-marketing",
+      "name": "Spezialitäten-Haus — postal marketing",
+      "match_domains": [
+        "spezi-haus.de"
+      ],
+      "identity": {
+        "legal_name": "Spezialitäten-Haus G. Schulteis GmbH",
+        "brands": [
+          "Spezialitäten-Haus"
+        ],
+        "parent": null,
+        "official_domains": [
+          "spezi-haus.de"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "DE"
+        ],
+        "category": "postal_marketing",
+        "data_categories": [
+          "Customer postal contacts",
+          "Enriched marketing profiles"
+        ],
+        "note": "Retailer that expressly describes sharing customer postal contacts with selected marketing partners; relevant particularly to existing customers."
+      },
+      "removal": {
+        "method": "email",
+        "destination": "info@spezi-haus.de",
+        "alternatives": [
+          "https://www.spezi-haus.de/datenschutzerklaerung"
+        ],
+        "steps": [
+          "If this retailer holds your details, object to postal marketing and sharing with advertising partners through its published email.",
+          "Identify the affected contact address and channels. Review matching details personally; the notice permits separate objections per channel.",
+          "Keep account/order obligations separate. Ask for suppression confirmation; do not interpret it as erasure from every partner database."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "full_name",
+          "postal_address",
+          "requested_channels"
+        ],
+        "certainty": "not_fully_specified",
+        "verification": "A matching contact address and channel are needed to scope the objection; no complete verification checklist is published."
+      },
+      "coverage": {
+        "effect": "suppression",
+        "includes": "Future marketing use of the affected contact address, including the retailer's documented advertising sharing.",
+        "excludes": "Not account closure, historical erasure or confirmed deletion at independent partners."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Check the actual customer relationship, matching postal address and channels before making a scoped marketing objection."
+      },
+      "evidence": [
+        {
+          "url": "https://www.spezi-haus.de/datenschutzerklaerung",
+          "checked_on": "2026-09-30",
+          "excerpt": "Hierfür genügt eine E-Mail an",
+          "supports": [
+            "sharing_scope",
+            "marketing_objection",
+            "suppression",
+            "identity"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Subsequent matching requirements and which partners received a person's records.",
+        "Actual confirmation and response."
+      ]
+    }
+  ]
+}

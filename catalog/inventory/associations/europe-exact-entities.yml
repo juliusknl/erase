@@ -1,0 +1,185 @@
+schema_version: 1
+associations:
+  - guide_id: alikeaudience-route-review
+    records: [community:alikeaudience]
+    rationale: AlikeAudience Inc is the exact company named by the community entry and reviewed policy. The missing operational contact/form and contradictory identifier scope remain unresolved, not upgraded through association.
+  - guide_id: wunderkind
+    records: [community:bouncex]
+    rationale: Despite its legacy slug, the imported record explicitly names Wunderkind Corporation and its current domain, matching the reviewed controller. Missing affidavit content and customer-controlled data limitations remain explicit.
+  - guide_id: groundtruth
+    records: [community:groundtruth]
+    rationale: The community's xAd Inc is the legal company explicitly trading as GroundTruth in the current policy. US rights instructions do not establish European eligibility or automatic device matching.
+  - guide_id: taboola
+    records: [community:taboola]
+    rationale: Taboola Inc is explicitly named among the shared notice's affiliates. The guide retains Taboola.com Ltd as EEA/UK controller and excludes separately governed Connexity/Skimlinks rather than treating every affiliate as one deletion.
+  - guide_id: valassis
+    records: [community:valassisdigital]
+    rationale: Valassis Digital Corp is expressly included by the dedicated Valassis notice under RRD. Other RRD businesses and the separately managed Save Mailer are not silently merged into deletion coverage.
+  - guide_id: venntel
+    records: [community:venntel]
+    rationale: Venntel Inc matches the current data-services notice and domain; sensitive location matching and security-retention exceptions remain manual, with no implied Unacast group coverage.
+  - guide_id: yieldmo
+    records: [community:yieldmo]
+    rationale: Yieldmo Inc is the identical company in the community record and current advertising-services policy. Device-specific identifiers and customer-controller distinctions remain unchanged.
+  - guide_id: cerved-italy
+    records: [discovery:ancic-cerved-group]
+    rationale: The commercial-information notice identifies Cerved Group S.p.A., tax number 08587760961, matching the named directory member. Cerved Rating Agency and other separately listed group entities remain separate; this is not group-wide deletion.
+  - guide_id: eyeota
+    records: [live:eyeota-pte-ltd]
+    rationale: Current marketplace policy explicitly identifies Eyeota Pte Ltd, Singapore company 201223893Z, matching the registry entity. Browser and email identifiers remain separate and other D&B databases are not included.
+  - guide_id: zeta-global
+    records: [live:zeta-global-corp, community:zetaglobal-com]
+    rationale: The current global services DPA identifies Zeta Global Corp. and expressly makes it controller of its own Zeta Data. This supports the named inventory entity without merging customer-controlled data, separate affiliate notices or all contract entities.
+  - guide_id: black-tiger-belgium
+    records: [community:bisnode-be]
+    rationale: Despite its legacy slug, the discovery record explicitly names Black Tiger Belgium SA/NV, the current notice's Belgian controller. Association preserves unresolved legacy Bisnode dataset scope and identifiers; it does not claim that historic marketing records were deleted or that the route is automated.
+  - guide_id: predactiv-sharethis
+    records: [community:sharethis]
+    rationale: The current ShareThis policy identifies the brand as a Predactiv division and retains ShareThis Inc. contact details. The guide expressly covers ShareThis Data Solutions with separate email and cookie choices.
+  - guide_id: abis-de
+    records: [community:abis]
+    rationale: Current official rights page and imprint identify the same ABIS GmbH at Lyoner Strasse 20. Parent Post Adress and other postal-marketing entities are not merged.
+  - guide_id: deutsche-post-direkt
+    records: ['community:deutsche-post-direkt']
+    rationale: Both records explicitly name Deutsche Post Direkt GmbH and the privacy email. The guide's suppression-versus-deletion distinction remains; this is not a mapping to all DHL/Post services.
+  - guide_id: dun-bradstreet-regional
+    records: ['community:dud-de', 'community:dnb-at']
+    rationale: German and Austrian discoveries name the exact entities documented in separate DE and AT routes. Austrian identity-document requirements differ from Germany; the association does not make countries, fields or deletion eligibility equivalent.
+  - guide_id: registry-lusha-systems-inc
+    records: ['community:lusha']
+    rationale: Lusha Systems Inc. is explicitly one of the joint Contacts/Visitors controllers in the current notice. The legacy community form is not promoted over the current reviewed removal route.
+  - guide_id: applovin-advertising
+    records: ['community:applovin']
+    rationale: Community AppLovin Corporation matches the current official advertising controller; device and email/phone workflows remain separate.
+  - guide_id: audigent
+    records: ['community:audigent']
+    rationale: Predictive Pop Inc. is explicitly the Audigent operating entity in the reviewed platform policy; punctuation is the only legal-name difference.
+  - guide_id: clearview-ai
+    records: ['community:clearview-ai']
+    rationale: Clearview AI Inc. matches the official entity. Its unresolved European route and sensitive verification blocker remain in force.
+  - guide_id: registry-id5-technology-ltd
+    records: ['community:id5']
+    rationale: ID5 Technology Ltd. is the abbreviated name of ID5 Technology Limited in the reviewed platform notice; the association does not turn suppression into deletion.
+  - guide_id: registry-index-exchange-inc
+    records: ['community:indexexchange']
+    rationale: Index Exchange Inc. is explicitly named by the official group policy; browser and device-specific request scope is preserved.
+  - guide_id: registry-inmarket-media-llc
+    records: ['community:ninthdecimal']
+    rationale: Despite its historical slug, this community record explicitly names InMarket Media LLC and inmarket.com, matching the guide. No European service coverage is inferred.
+  - guide_id: pulsepoint
+    records: ['community:pulsepoint']
+    rationale: PulsePoint Inc. is the same entity named in the platform policy; advertising identifiers and healthcare-provider records retain separate instructions.
+  - guide_id: resonate
+    records: ['community:resonate-com']
+    rationale: Resonate Networks Inc. matches the official controller, but the reviewed service notice is US-only; community inclusion does not establish European relevance.
+  - guide_id: revcontent
+    records: ['community:revcontent']
+    rationale: Revcontent LLC is a capitalization variant of RevContent LLC in its current service notice; cookie matching is still required.
+  - guide_id: reveal-mobile
+    records: ['community:revealmobile']
+    rationale: Reveal Mobile Inc. matches the controller and domain in the official mobile-product notice; this association does not establish name/email matching.
+  - guide_id: roqad
+    records: ['community:roq-ad']
+    rationale: The community entry expressly names German Roq.ad GmbH, matching the reviewed European controller, not the US Roq.ad Inc. registry entity.
+  - guide_id: semasio
+    records: ['community:semasio']
+    rationale: Semasio GmbH is the European controller explicitly named by both records; Semasio Inc. and other device records are not silently included.
+  - guide_id: similarweb
+    records: ['community:similarweb']
+    rationale: SimilarWeb Ltd. is the capitalization variant of Similarweb Ltd. in the official policy; supplier-owned contacts retain their routing limitations.
+  - guide_id: dealfront-leadfeeder
+    records: ['community:dealfront-group-gmbh']
+    rationale: Both the community record and reviewed product notice identify Dealfront Group GmbH; this does not establish that all related Dealfront registry entities share the same request.
+  - guide_id: emetriq
+    records: ['community:emetriq']
+    rationale: The official notice and community entry name emetriq GmbH on the same domain; the guide retains its advertising identifier requirements.
+  - guide_id: schufa-de
+    records: ['community:schufa']
+    rationale: SCHUFA Holding AG is the exact controller named by both records; the guide is an access-first credit workflow, not a promise to erase valid credit records.
+  - guide_id: herold-at
+    records: ['community:herold']
+    rationale: Both records identify Austrian HEROLD Business Data GmbH, with the official guide limiting its request to the published business-data scope.
+  - guide_id: crif-at
+    records: ['community:crif-at']
+    rationale: The Austrian CRIF GmbH on crif.at is the controller in this guide; German and other CRIF entities are not implicitly covered.
+  - guide_id: bedirect
+    records: ['community:bedirect']
+    rationale: The legal entity beDirect GmbH & Co. KG and its published website agree across the source entry and independently reviewed guide.
+  - guide_id: panadress
+    records: ['community:panadress']
+    rationale: The legal entity panadress marketing intelligence GmbH matches the controller named in its reviewed German privacy instructions.
+  - guide_id: quadress
+    records: ['community:quadress']
+    rationale: The QUADRESS GmbH discovery record refers to the exact company whose current address-marketing privacy instructions are recorded in this guide.
+  - guide_id: nexiga
+    records: ['community:nexiga']
+    rationale: Both identify Nexiga GmbH, but the distinction between aggregate geographic products and a removable personal record remains unresolved and must not count as a verified workflow.
+  - guide_id: regis24-de
+    records: ['community:regis24']
+    rationale: Regis24 GmbH is named in both records; the credit/identity workflow remains purpose-specific rather than a generic marketing deletion email.
+  - guide_id: euro-pro-de
+    records: ['community:europro']
+    rationale: EURO-PRO Ges. fuer Data Processing mbH is the abbreviated discovery name of the EURO-PRO Gesellschaft fuer Data Processing mbH controller in the official guide.
+  - guide_id: gemini-direct-de
+    records: ['community:geminidirect']
+    rationale: The GEMINI DIRECT marketing solutions GmbH discovery record and reviewed privacy notice identify the same legal entity and website.
+  - guide_id: fonecta-fi
+    records: ['community:fonecta-fi']
+    rationale: Both public sources identify Fonecta Oy in Finland; the guide's specific products and disclosure limitations remain applicable.
+  - guide_id: global-group-de
+    records: ['community:global-group-de']
+    rationale: Global Group TDA Germany GmbH is the exact controller recorded in both sources; the association does not extend to every similarly branded group member.
+  - guide_id: crif-italy
+    records: ['community:crif-it', 'discovery:ancic-crif']
+    rationale: CRIF SpA and CRIF S.p.A. identify the same Italian legal entity. The guide covers individual EURISC credit-record access and correction, not every commercial-information product or the separate CRIF Services Spa entity. Signed identity-document delivery remains manual.
+  - guide_id: weborama
+    records: ['community:weborama']
+    rationale: The official Weborama SAS notice identifies the Weborama brand in the discovery entry; its identifier-specific advertising workflow is preserved.
+  - guide_id: numberly
+    records: ['community:numberly']
+    rationale: Discovery expressly includes the Numberly brand at the same domain and DPO contact. Current English charter and legal notice identify Numberly SAS 908030018; this association covers that current brand route, not every legacy 1000mercis group entity or dataset.
+  - guide_id: idaia-fr
+    records: ['community:idaia-group']
+    rationale: This is the IDAIA brand candidate, but group and Cartégie controller boundaries remain under research; the association preserves that unresolved status.
+  - guide_id: sls-data-fr
+    records: ['community:sls-data']
+    rationale: The SLS Data discovery brand is identified as SLS DATA SAS in the reviewed official source, including its French company registration.
+  - guide_id: fcr-media-be
+    records: ['community:fcrmedia']
+    rationale: The guide identifies FCR Media Belgium NV and its registration number, matching the exact Belgian legal entity in the discovery record.
+  - guide_id: italiaonline-directory-it
+    records: ['community:italiaonline']
+    rationale: Italiaonline SPA and Italiaonline S.p.A. identify the same controller. Directory-specific removal does not establish deletion of every Italiaonline product.
+  - guide_id: karma-response-es
+    records: ['community:karma-response']
+    rationale: The KARMA RESPONSE brand is associated for research tracking only; the guide expressly retains the unresolved published NIF/legal-identity inconsistency.
+  - guide_id: contactout
+    records: ['community:contactout']
+    rationale: Contactout Limited is the capitalization variant of ContactOut Limited named by the current official guide and opt-out portal.
+  - guide_id: bombora
+    records: ['community:bombora']
+    rationale: Bombora Inc is the same legal entity in both records; the reviewed guide retains the distinctions between advertising and business-contact identifiers.
+  - guide_id: captify
+    records: ['community:captify']
+    rationale: Captify Technologies Ltd is the abbreviated legal name of Captify Technologies Limited in its reviewed notice; cookie-linked rights remain distinct from name matching.
+  - guide_id: demandbase
+    records: ['community:demandbase']
+    rationale: Both entries identify Demandbase Inc on demandbase.com. The guide retains possible identity verification rather than assuming a one-message deletion.
+  - guide_id: registry-lotame-solutions-inc
+    records: ['community:lotame']
+    rationale: Lotame Solutions Inc is the exact company named by the discovery entry and reviewed product notice; cookie and device scopes are retained.
+  - guide_id: adagio
+    records: ['community:adagio']
+    rationale: Both identify Onfocus SAS operating Adagio. Product-specific contact and identifier gaps stay unresolved, not upgraded by this identity match.
+  - guide_id: acxiom-uk
+    records: ['community:acxiom-gb']
+    rationale: Acxiom Ltd and Acxiom Limited refer to the UK controller, separate from the US and German entities. The product-scope issue remains unresolved.
+  - guide_id: equifax-uk
+    records: ['community:equifax-gb']
+    rationale: Equifax Ltd and Equifax Limited identify the UK entity in the reviewed credit workflow, not Equifax Inc or another national credit bureau.
+  - guide_id: gbg-identity
+    records: ['community:gb-group']
+    rationale: Both identify GB Group Plc; the linked guide retains unverified product/controller and request-scope issues rather than treating all identity services as one deletion.
+  - guide_id: eyeota
+    records: ['community:eyeota']
+    rationale: Eyeota Pte Ltd is the exact company named by the community record and reviewed notice; its parent group's independent datasets are not inferred covered.

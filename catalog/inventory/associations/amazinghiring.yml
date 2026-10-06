@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: amazinghiring
+    records: [community:amazinghiring]
+    rationale: Current official policy identifies AmazingHiring, Inc. on the exact candidate-search domain; the help article confirms the DPO email alternative for public-profile search removal.

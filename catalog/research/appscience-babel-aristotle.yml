@@ -1,0 +1,149 @@
+schema_version: 1
+brokers:
+  - id: appscience-platform
+    name: App Science
+    match_domains: [appscience.ai, appscience.inc]
+    identity:
+      legal_name: App Science, Inc.
+      brands: [App Science]
+      parent: null
+      official_domains: [appscience.ai, appscience.inc]
+    relevance:
+      regions: [US, EEA, UK, CH]
+      category: advertising
+      data_categories: [Mobile and TV identifiers, Household inferences, Media activity]
+      note: Separate controller from Sabio. European targeted advertising is currently disclaimed, not all processing.
+    removal:
+      method: email
+      destination: privacy@appscience.inc
+      alternatives: [https://www.appscience.ai/do-not-sell-my-info]
+      steps:
+        - Request deletion of matched App Science platform records at its privacy inbox.
+        - For device suppression, use the opt-out page with your email and mobile advertising ID; contact the inbox if its embedded form is absent.
+        - Review verification personally; repeat for other devices. Website cookie controls are separate.
+    required_information:
+      fields: [email, mobile_advertising_id]
+      certainty: not_fully_specified
+      verification: Device opt-out identifiers are published; deletion-specific verification and later challenges are unspecified.
+    coverage:
+      effect: deletion_request
+      includes: Matched App Science records, subject to retention exceptions.
+      excludes: Sabio's separate records, unmatched devices and independent customers; suppression alone is not historical erasure.
+    automation:
+      mode: manual
+      reason: Personal device matching is required; name and email alone cannot establish platform coverage.
+    evidence:
+      - url: https://www.appscience.ai/privacy-policy
+        checked_on: '2026-10-01'
+        published: '2026-06-15'
+        excerpt: App Science, Inc. and its affiliates
+        supports: [identity, rights_email, European_processing, controller]
+      - url: https://www.appscience.ai/do-not-sell-my-info
+        checked_on: '2026-10-01'
+        excerpt: providing your email and mobile advertising ID
+        supports: [identifiers, suppression, device_scope]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Public HTML contains instructions but no visible input form., Later verification untested., Policy also prints Sabio's inbox; the App Science-specific rights inbox is used., Current parent ownership unreviewed.]
+
+  - id: babel-street-intelligence
+    name: Babel Street
+    match_domains: [babelstreet.com]
+    identity:
+      legal_name: Babel Street, Inc.
+      brands: [Babel Street, Babel Street Rosette, Vertical Knowledge]
+      parent: null
+      official_domains: [babelstreet.com]
+    relevance:
+      regions: [US, International]
+      category: identity_risk
+      data_categories: [Public and commercial intelligence, Identity and background information, Online activity]
+      note: Registered broker with product-dependent processing; customer-directed searches are distinct from its own controller records.
+    removal:
+      method: email
+      destination: privacy@babelstreet.com
+      alternatives: [https://privacyportal.onetrust.com/webform/43f52ed9-df36-44dc-94b6-ce2f8458ca29/2ddc0d62-7d6a-4de2-b5c4-9f9f68116970]
+      steps:
+        - Identify the relevant profile, source or product and ask what personal records Babel Street itself controls.
+        - Request eligible deletion or restriction; ask who handles customer-controlled search results.
+        - Review identity verification personally and retain the scope of the response.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Matching to existing information is required; no fixed checklist is published. Portal fields untested.
+    coverage:
+      effect: access_then_review
+      includes: Review of matched records and applicable removal rights.
+      excludes: Guaranteed deletion of public sources, customer-controlled records or all intelligence products.
+    automation:
+      mode: manual
+      reason: Product/controller scope and sensitive identity matching need review before a generic deletion request.
+    evidence:
+      - url: https://www.babelstreet.com/privacy
+        checked_on: '2026-10-01'
+        published: '2026-01-31'
+        excerpt: privacy@babelstreet.com
+        supports: [identity, product_scope, email_rights, verification]
+      - url: https://www.babelstreet.com/privacy/privacy-request-metrics
+        checked_on: '2026-10-01'
+        published: '2026-01-31'
+        excerpt: Babel Street denies data requests if we are unable to verify the request with the data subject.
+        supports: [verification, no_guaranteed_fulfilment]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Request-specific controller and legal exceptions require review., Parent ownership and comparable scale unreviewed., No request submitted.]
+
+  - id: aristotle-political-consumer
+    name: Aristotle political and consumer data
+    match_domains: [aristotle.com]
+    identity:
+      legal_name: Aristotle International, Inc. (request authorization); Aristotle, Inc. (policy introduction)
+      brands: [Aristotle]
+      parent: null
+      official_domains: [aristotle.com, integrity.aristotle.com]
+    relevance:
+      regions: [US; European users have a separate Integrity/International notice]
+      category: consumer_marketing
+      data_categories: [Voter records, Consumer contacts, Political and demographic attributes, Sensitive characteristics]
+      note: Current notice covers state-specific rights; the old California-only FAQ is not the current eligibility rule.
+    removal:
+      method: form
+      destination: https://www.aristotle.com/privacy/delete-my-personal-information/
+      alternatives: [https://www.aristotle.com/privacy/do-not-sell-my-personal-info/, https://integrity.aristotle.com/privacy-policy/]
+      steps:
+        - Check applicable US eligibility before using the deletion form; do not invent a US address or SSN.
+        - Review the required name, US postal address, email, birth date and last four SSN digits directly on the official site.
+        - Complete CAPTCHA and the personal accuracy/authority declaration yourself, then any verification.
+        - European/UK users should use the separate Integrity/International notice to request the applicable route; do not force the US form. Public voter sources and identity-verification products are separate.
+    required_information:
+      fields: [full_name, US_postal_address, email, date_of_birth, last_four_SSN, personal_declaration]
+      certainty: not_fully_specified
+      verification: Initial required fields visible; mobile number has no required asterisk. Later matching and verification untested.
+    coverage:
+      effect: deletion_request
+      includes: Eligible matched personal records under the published US rights process.
+      excludes: Guaranteed deletion of public voter records, government sources or all Integrity customer records.
+    automation:
+      mode: manual
+      reason: SSN fragment, birth date, CAPTCHA and personal declarations must never be filled by the generic email workflow.
+    evidence:
+      - url: https://www.aristotle.com/privacy/delete-my-personal-information/
+        checked_on: '2026-10-01'
+        excerpt: Last 4 Digits of SSN
+        supports: [form, sensitive_identifiers, personal_declaration]
+      - url: https://www.aristotle.com/privacy/
+        checked_on: '2026-10-01'
+        published: '2026-09-17'
+        excerpt: ARISTOTLE INTERNATIONAL, INC. PRIVACY POLICY
+        supports: [identity, relevance, state_rights, international_route]
+      - url: https://integrity.aristotle.com/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2025-11-11'
+        excerpt: generally acting on their behalf as their service provider and processor
+        supports: [Integrity_scope, separate_international_rights]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Policy inconsistently abbreviates the legal name; the form explicitly authorizes Aristotle International Inc., Current policy contains contradictory statements about LLM training; no position inferred., International inbox hidden in public extraction; no address guessed., No live form submission or outcome tested.]

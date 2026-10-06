@@ -1,0 +1,21 @@
+schema_version: 1
+assessments:
+  - record: community:datarade
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: Excluded from default independent-broker outreach, not declared data-free. Datarade is a vendor marketplace currently operated by Monda Labs GmbH, HRB 199191 B. Its own notice addresses visitors, registered users and inquiries; vendor-listing inquiries are shared with the selected vendor. The community credit-agency category is not evidence that Datarade controls every listed personal dataset. Route dataset requests to their actual providers; direct Datarade-account or inquiry rights remain available and should not trigger automatic account closure.
+    evidence:
+      - url: https://datarade.ai/company/terms-of-service
+        checked_on: '2026-10-01'
+        published: '2023-10-05'
+        excerpt: company associated with the Vendor Listing
+        supports: [marketplace_role, inquiry_recipient, separate_vendor_scope]
+      - url: https://datarade.ai/company/privacy-policy
+        checked_on: '2026-10-01'
+        excerpt: 'Company: Monda Labs GmbH'
+        supports: [current_controller, direct_user_records, rights, DPO_postal_route]
+      - url: https://datarade.ai/company/legal-notice
+        checked_on: '2026-10-01'
+        excerpt: HRB 199191 B
+        supports: [current_operator_registration, general_contact_not_verified_rights_email]
+    unresolved: []

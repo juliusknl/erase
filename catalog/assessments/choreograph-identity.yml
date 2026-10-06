@@ -1,0 +1,13 @@
+schema_version: 1
+assessments:
+  - record: live:choreograph-llp
+    disposition: unresolved
+    checked_on: '2026-09-30'
+    rationale: The brand's current global policy supports a separate reviewed guide for Choreograph Limited and LLC, but does not establish the inventory's LLP legal entity as the same controller. Do not merge legal identities by domain alone.
+    evidence:
+      - url: https://www.choreograph.com/global-privacy-policy/global-privacy-policy-english
+        checked_on: '2026-09-30'
+        published: '2024-10-02'
+        excerpt: Choreograph Limited
+        supports: [current_controller_names, global_removal_route]
+    unresolved: [Resolve LLP versus LLC/Limited using primary entity evidence before closing this inventory record.]

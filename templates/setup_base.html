@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en" data-theme="{{ current_appearance(request) }}">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf }}"><meta name="color-scheme" content="{{ appearance_themes[current_appearance(request)].scheme }}">
+  <title>{% block title %}Get started · erase{% endblock %}</title>
+  <link rel="stylesheet" href="/static/setup.css?v={{ css_version }}">
+  <link rel="stylesheet" href="/static/themes.css?v={{ css_version }}">
+</head>
+<body class="setup-body">
+  <header class="setup-top"><a href="/setup" class="setup-brand"><span aria-hidden="true">E</span>erase</a><span class="local-note">On your computer</span></header>
+  <main class="setup-shell">
+    {% block content %}{% endblock %}
+  </main>
+  <script src="/static/setup.js?v={{ css_version }}" defer></script>
+</body>
+</html>

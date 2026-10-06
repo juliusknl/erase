@@ -1,0 +1,45 @@
+schema_version: 1
+assessments:
+  - record: community:onesignal
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: OneSignal Inc's current notice describes customer-directed messaging and analytics, with client end-user requests directed to that client unless it authorizes OneSignal to respond. Exclude default independent-broker outreach, not app-specific rights. Direct OneSignal business-contact requests remain available at Privacy@OneSignal.com. Do not equate notification unsubscribe with erasure of app data.
+    evidence:
+      - url: https://onesignal.com/privacy_policy
+        checked_on: '2026-10-01'
+        published: '2024-04-12'
+        excerpt: OneSignal is primarily a data processor
+        supports: [identity, customer_controlled_processing, european_end_user_request_routing, direct_contact_rights]
+    unresolved: []
+  - record: community:urban-airship
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: Airship Group Inc's notice names the regional Urban Airship entities and distinguishes its own business-account data from customer application and website data. Platform end users must request deletion through the relevant app/site controller. Exclude generic independent-broker campaigns; privacy@airship.com remains available for Airship-controlled data, with personally reviewed matching. This does not mean no data is collected or every Airship-powered app is covered by one request.
+    evidence:
+      - url: https://www.airship.com/legal/privacy/
+        checked_on: '2026-10-01'
+        excerpt: then you should direct your request to our customer
+        supports: [identity, regional_entity_scope, customer_controlled_processing, rights_routing, direct_contact]
+    unresolved: []
+  - record: community:sendinblue
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: The current Brevo policy identifies Sendinblue SAS and regional Sendinblue entities under the Brevo brand. For customer mailing-list storage, delivery and statistics it processes under sender instructions, so request deletion from the sender. Exclude default independent-broker outreach; Brevo's separate controller processing remains subject to rights at dpo@brevo.com. Do not close an active account or imply removal from every sender's own records.
+    evidence:
+      - url: https://www.brevo.com/legal/privacypolicy/
+        checked_on: '2026-10-01'
+        published: '2025-10-01'
+        excerpt: Sendinblue is doing business as Brevo.
+        supports: [identity, regional_entities, processor_and_controller_boundaries, sender_rights_routing, current_DPO]
+    unresolved: []
+  - record: community:optimizely
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: Optimizely's July 2026 notice separates its direct controller services and business contacts from Customer Data processed under customer instructions. Route app/site-specific analytics requests to that customer, not a blanket independent-broker campaign. Direct Optimizely rights remain available at privacy@optimizely.com. Current notice names Optimizely North America Inc and Optimizely AB; this scope assessment does not assert legal succession for every historic Optimizely Inc record.
+    evidence:
+      - url: https://www.optimizely.com/legal/privacy-notice
+        checked_on: '2026-10-01'
+        published: '2026-07-01'
+        excerpt: process that Customer Data (including personal information) under the instruction of the respective client
+        supports: [current_group_identity, customer_controller_scope, separate_direct_controller_rights]
+    unresolved: []

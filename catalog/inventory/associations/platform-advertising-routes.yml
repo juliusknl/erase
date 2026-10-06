@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "associations": [
+    {
+      "guide_id": "trade-desk-platform",
+      "records": [
+        "community:thetradedesk"
+      ],
+      "rationale": "Current platform policy explicitly names The UK Trade Desk Ltd. as responsible for EEA/UK/Swiss processing; separate identity services and independent clients are not merged."
+    },
+    {
+      "guide_id": "beeswax-services",
+      "records": [
+        "live:beeswax",
+        "community:beeswax"
+      ],
+      "rationale": "Both discovery records point to Beeswax; current services policy identifies Beeswax Inc. and the same official domain."
+    },
+    {
+      "guide_id": "liveintent-services",
+      "records": [
+        "live:liveintent",
+        "community:liveintent"
+      ],
+      "rationale": "LiveIntent's current combined policy identifies LiveIntent Inc. and its identity/advertising services; no blanket parent-group coverage is asserted."
+    }
+  ]
+}

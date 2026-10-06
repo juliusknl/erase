@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "associations": [
+    {
+      "guide_id": "acxiom-llc-international",
+      "records": [
+        "live:acxiom-llc"
+      ],
+      "rationale": "Acxiom's current international and GDPR notices explicitly identify Acxiom LLC and its European-data product scope. Regional controllers are not merged into this entry."
+    },
+    {
+      "guide_id": "circana-marketing",
+      "records": [
+        "live:circana-llc"
+      ],
+      "rationale": "The current global notice names Circana LLC and publishes the common rights inbox. The guide limits controller and dataset scope rather than assuming all group databases are covered."
+    }
+  ]
+}

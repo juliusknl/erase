@@ -1,0 +1,143 @@
+schema_version: 1
+brokers:
+  - id: skimlinks-commerce-cookies
+    name: Skimlinks commerce-data preferences
+    match_domains: [skimlinks.com]
+    identity:
+      legal_name: Skimbit Ltd (England and Wales 06347796)
+      brands: [Skimlinks]
+      parent: Taboola group — exact holding entity unreviewed
+      official_domains: [skimlinks.com]
+    relevance:
+      regions: [EEA, United Kingdom, Other locations subject to applicable rights]
+      category: advertising
+      data_categories: [Commerce clicks and sales, Order identifiers, Browser identifiers, Approximate location]
+      note: Skimlinks-powered shopping links can process data without a direct Skimlinks account.
+    removal:
+      method: form
+      destination: https://www.skimlinks.com/privacy-policy/
+      alternatives: [dpo@skimlinks.com, https://www.skimlinks.com/user-cookies/]
+      steps:
+        - In the User section, follow the cookie opt-out link in your actual browsing context; no preference endpoint was executed during research.
+        - Skimlinks links can continue earning commissions after opt-out; the preference changes cookie-based personalization, not the existence of all transaction records.
+        - For access or historical deletion, contact the DPO with the relevant user, publisher or merchant context and ask which identifiers are needed.
+        - Independent affiliate networks have separate cookies and rights routes; Taboola's stated UK/EMEA limitation concerns its specific cookie use, not all Skimlinks processing.
+    required_information:
+      fields: [actual_browser_context]
+      certainty: not_fully_specified
+      verification: Runtime opt-out controls and historical-record matching untested.
+    coverage:
+      effect: suppression
+      includes: Skimlinks cookie-personalization preference within the action's scope.
+      excludes: Historical deletion, account closure and independent affiliate-network data.
+    automation:
+      mode: manual
+      reason: Browser preferences must be performed in the person's browsing context; historical deletion needs separate matching.
+    evidence:
+      - url: https://www.skimlinks.com/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '06.02.2025 as displayed'
+        excerpt: dpo@skimlinks.com
+        supports: [legal_identity, user_processing, rights_contact, optout_scope]
+      - url: https://www.skimlinks.com/user-cookies/
+        checked_on: '2026-10-01'
+        excerpt: Skimlinks does not have control over the Affiliate Network cookies.
+        supports: [affiliate_network_boundaries, regional_cookie_scope]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Runtime controls and fulfilment untested., Exact parent and comparable scale unreviewed.]
+  - id: unity-player-advertising
+    name: Unity game and advertising privacy
+    match_domains: [unity.com, unity3d.com]
+    identity:
+      legal_name: Unity Technologies and affiliates; Unity Technologies ApS is the listed EU contact
+      brands: [Unity, Unity Ads]
+      parent: null
+      official_domains: [unity.com, unity3d.com]
+    relevance:
+      regions: [EEA, United Kingdom, Global game users subject to applicable rights]
+      category: advertising
+      data_categories: [Device and advertising IDs, App usage, Purchases, Ad interactions]
+      note: Game-player data and developer accounts are separate; app developers may control their own analytics.
+    removal:
+      method: form
+      destination: https://unity.com/legal/game-player-and-app-user-privacy-policy
+      alternatives: [DPO@unity3d.com, https://unity.com/legal/game-player-and-app-user-privacy-faq]
+      steps:
+        - For Unity Ads, open the Data Privacy icon in the actual ad. Review device data and request historical deletion or stop further collection as offered.
+        - Check the relevant app and device; implementation depends on the developer. For developer-controlled analytics, contact that developer.
+        - If controls are unavailable, contact the DPO with the service and relevant identifier; do not assume a new request email identifies your device.
+        - Do not select Unity Rewards withdrawal unless you want account and unredeemed-reward deletion. Tapjoy, Player Sign-In and purchases have separate routes in the policy.
+    required_information:
+      fields: [service_and_app_context, relevant_device_or_account_identifier]
+      certainty: not_fully_specified
+      verification: Controls vary by app; Unity may verify the identifier used for the request.
+    coverage:
+      effect: deletion_request
+      includes: Matched Unity-controlled game or advertising data within the selected service.
+      excludes: Developer-controlled records, other networks, unrelated accounts and retained security logs.
+    automation:
+      mode: manual
+      reason: App-specific controls, identifier verification and account consequences require personal review.
+    evidence:
+      - url: https://unity.com/legal/game-player-and-app-user-privacy-policy
+        checked_on: '2026-10-01'
+        published: 'Last edit/review June 30, 2026; last updated July 24, 2025'
+        excerpt: Unity Technologies ApS
+        supports: [EU_contact, service_specific_rights, Rewards_account_loss_warning]
+      - url: https://unity.com/legal/game-player-and-app-user-privacy-faq
+        checked_on: '2026-10-01'
+        excerpt: device identifiers
+        supports: [device_matching, contextual_advertising_not_all_ads_removal]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Runtime controls and fulfilment untested., Exact subsidiary controller may depend on service., Parent and comparable scale unreviewed.]
+  - id: roku-europe-consumer
+    name: Roku European privacy request
+    match_domains: [roku.com]
+    identity:
+      legal_name: Roku International BV
+      brands: [Roku]
+      parent: null
+      official_domains: [roku.com]
+    relevance:
+      regions: [European Union, EEA and Switzerland rights]
+      category: advertising
+      data_categories: [Viewing and account information, Device identifiers, Advertising activity, Household context]
+      note: Device/account preferences and advertising data require different context; this is the European consumer notice.
+    removal:
+      method: form
+      destination: https://privacy.roku.com/contact
+      alternatives: [privacy@roku.com]
+      steps:
+        - Use the privacy contact portal for access or deletion and specify the relevant service, device and account context.
+        - If the portal is unavailable, contact the DPO; research received HTTP 403 and could not inspect its fields.
+        - State whether you want to keep using your Roku account. Review any account-closure consequence before submitting.
+        - Ad-personalization settings are separate from deletion. Save the response and complete verification personally.
+    required_information:
+      fields: [relevant_service_and_identifiers]
+      certainty: not_fully_specified
+      verification: Notice allows identity checks and additional information; portal fields uninspected after HTTP 403.
+    coverage:
+      effect: deletion_request
+      includes: Matched European Roku consumer records within the notice and confirmed request scope.
+      excludes: Frndly TV, TOH Intermediate Holdings and their subsidiaries, independent channels and guaranteed all-device erasure.
+    automation:
+      mode: manual
+      reason: Portal fields, device matching and account consequences require review.
+    evidence:
+      - url: https://docs.roku.com/api/v1/published/userprivacypolicy/de/DE
+        checked_on: '2026-10-01'
+        published: November 3, 2025
+        excerpt: Roku International BV
+        supports: [European_controller, excluded_affiliates, rights_portal, DPO_alternative]
+      - url: https://privacy.roku.com/contact
+        checked_on: '2026-10-01'
+        excerpt: Request blocked.
+        supports: [research_access_failure_not_invalidity_or_no_data]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Portal fields and fulfilment untested., Parent and comparable scale unreviewed.]

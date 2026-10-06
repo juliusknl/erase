@@ -1,0 +1,49 @@
+schema_version: 1
+brokers:
+  - id: catalist-political
+    name: Catalist political data
+    match_domains: [catalist.us]
+    identity:
+      legal_name: Catalist LLC
+      brands: [Catalist]
+      parent: null
+      official_domains: [catalist.us]
+    relevance:
+      regions: [United States]
+      category: other
+      data_categories: [Voter records, Contacts, Demographics, Political inferences, Audience segments]
+      note: Political data services and client-specific processing; the policy offers requests from all US states, not a verified European workflow.
+    removal:
+      method: form
+      destination: https://catalist.us/your-privacy-choices/
+      alternatives: [privacy@catalist.us]
+      steps:
+        - For removal from Catalist products, select the sale opt-out route. The policy distinguishes this from deletion of information collected directly from you.
+        - Use your actual US residence and your own consumer details. Public form labels include name, address, birthdate and email; telephone requirements vary between displayed branches.
+        - Personally review the declaration under penalty of perjury and any verification code or identity-proof request. Never submit an inaccurate residence or sign on another person's behalf without authority.
+        - Retained suppression details help prevent reintroduction. Ask the relevant client separately when Catalist acts only as its service provider.
+    required_information:
+      fields: [full_name, postal_address, US_state, birthdate, email, requested_right]
+      certainty: not_fully_specified
+      verification: Static form contains conditional branches, telephone fields, verification-code control and a perjury declaration. Branch execution and fulfilment untested; sensitive data and declarations are never automatic.
+    coverage:
+      effect: suppression
+      includes: Opt-out of inclusion in Catalist product files with retained suppression details, subject to verified matching and stated exceptions.
+      excludes: Original voter records, independent campaign databases, all historical erasure and assumed non-US eligibility.
+    automation:
+      mode: manual
+      reason: State eligibility, sensitive identity matching and a personal declaration require direct user review; published email is a policy-question contact.
+    evidence:
+      - url: https://catalist.us/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2026-07-01'
+        excerpt: places your information on a suppression list
+        supports: [identity, product_scope, suppression_vs_direct_deletion, state_eligibility]
+      - url: https://catalist.us/your-privacy-choices/
+        checked_on: '2026-10-01'
+        excerpt: under penalty of perjury
+        supports: [matching_fields, conditional_branches, declaration, verification]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Non-US eligibility unestablished., Conditional form fields and actual suppression untested., No comparable scale claim.]

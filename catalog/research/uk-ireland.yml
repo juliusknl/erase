@@ -1,0 +1,1245 @@
+# Public research only. No personal exposure or tested removal is asserted.
+# UK-only email routes remain manual: the existing campaign template assumes EEA residence.
+schema_version: 1
+brokers:
+  - id: acxiom-uk
+    name: Acxiom UK product data — scope review
+    match_domains: [acxiom.co.uk]
+    identity:
+      legal_name: Acxiom Limited
+      brands: [Acxiom]
+      parent: null
+      official_domains: [acxiom.co.uk]
+    relevance:
+      regions: [UK]
+      category: postal_marketing
+      data_categories: [Address data, Lifestyle data, Demographic data]
+      note: Current product notice describes aggregated information; older individual-record opt-out assumptions need review.
+    removal:
+      method: investigate
+      destination: https://www.acxiom.co.uk/privacy/
+      alternatives: [ukconsumerservices@acxiom.com]
+      steps: [Ask whether the relevant product contains identifiable records., Establish the applicable rights workflow before supplying identifiers.]
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: No individual product-deletion identifier checklist established.
+    coverage:
+      effect: needs_review
+      includes: UK product processing described by Acxiom Limited.
+      excludes: Its separate B2B newsletter preference centre does not establish product-data removal.
+    automation:
+      mode: blocked
+      reason: Aggregated-product scope and applicable individual rights need confirmation.
+    evidence:
+      - url: https://www.acxiom.co.uk/privacy/
+        checked_on: '2026-09-28'
+        excerpt: This information is kept in an aggregated form so that individuals cannot be identified
+        supports: [identity, relevance, removal, coverage]
+    scale: null
+    review_status: needs_research
+    tested_outcome: not_tested
+    unknowns: [Individual product-record applicability., Required identifiers., Current parent ownership.]
+
+  - id: sagacity-uk
+    name: Sagacity / My Data Choices
+    match_domains: [sagacitysolutions.co.uk, mydatachoices.co.uk]
+    identity:
+      legal_name: Sagacity Solutions Limited
+      brands: [Sagacity, My Data Choices]
+      parent: Sagacity Group Ltd
+      official_domains: [sagacitysolutions.co.uk, mydatachoices.co.uk]
+    relevance:
+      regions: [UK]
+      category: postal_marketing
+      data_categories: [Contact records, Marketing profiles, Address matching, Identity verification]
+      note: The notice covers marketing and separate non-marketing uses; identify the requested purpose.
+    removal:
+      method: form
+      destination: https://www.mydatachoices.co.uk/Suppress
+      alternatives: [dpo@sagacitysolutions.co.uk]
+      steps: [Choose suppression or explicitly request erasure through the DPO., Review identifiers requested by the form., Retain the response describing purpose and scope.]
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Suppression form fields require interactive review; access requests require proof of identity.
+    coverage:
+      effect: suppression
+      includes: Matching Sagacity database records; suppression retains a blocking record.
+      excludes: Do not infer deletion at every affiliate or independent client; non-marketing uses require specific review.
+    automation:
+      mode: manual
+      reason: Purpose choice and identifiers require review; UK-specific request language is needed.
+    evidence:
+      - url: https://www.mydatachoices.co.uk/Privacy
+        checked_on: '2026-09-28'
+        published: '2026-04-30'
+        excerpt: we do retain a version of your record on our suppression file
+        supports: [identity, relevance, removal, required_information, coverage]
+      - url: https://www.mydatachoices.co.uk/Suppress
+        checked_on: '2026-09-28'
+        excerpt: Data Suppression Registration
+        supports: [removal]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Live form fields., Scope across renamed REaD entities., Exact non-marketing retention.]
+
+  - id: caci-uk
+    name: CACI UK consumer data
+    match_domains: [caci.co.uk]
+    identity:
+      legal_name: CACI Limited
+      brands: [CACI, Ocean, Fresco]
+      parent: null
+      official_domains: [caci.co.uk]
+    relevance:
+      regions: [UK]
+      category: postal_marketing
+      data_categories: [Names, Addresses, Modelled consumer attributes]
+      note: UK consumer marketing data; record-level predictions and company services have different scopes.
+    removal:
+      method: manual
+      destination: compliance@caci.co.uk
+      alternatives: [dpo@caci.co.uk, https://www.caci.co.uk/data-privacy/privacy-policy/]
+      steps: [Ask to stop direct-marketing processing., Specify whether suppression or complete deletion is wanted., Review matching or verification questions.]
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Published notice does not give a complete identifier checklist; name and address database matching needs clarification.
+    coverage:
+      effect: suppression
+      includes: CACI marketing records; the default blocking record prevents reintroduction.
+      excludes: Complete deletion is a separate choice; previously prepared client campaigns may continue temporarily.
+    automation:
+      mode: manual
+      reason: UK-specific wording, postal matching and suppression choice need review.
+    evidence:
+      - url: https://www.caci.co.uk/data-privacy/privacy-policy/
+        checked_on: '2026-09-28'
+        published: '2025-11-06'
+        excerpt: If you wish to be completely deleted, this is also possible.
+        supports: [identity, relevance, removal, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Exact matching fields., Parent ownership., Result for inferred attributes.]
+
+  - id: data-locator-group
+    name: Data Locator Group / Surveys / Consumer Lifestyles
+    match_domains: [dlg.co.uk, surveys.co.uk, consumerlifestyles.co.uk, worthi.org, theprizefinder.com]
+    identity:
+      legal_name: Data Locator Group Ltd
+      brands: [DLG, Surveys, Consumer Lifestyles, Worthi, ThePrizeFinder]
+      parent: DM Ltd
+      official_domains: [dlg.co.uk, surveys.co.uk, consumerlifestyles.co.uk, worthi.org, theprizefinder.com]
+    relevance:
+      regions: [UK]
+      category: postal_marketing
+      data_categories: [Contact information, Survey responses, Demographics, Lifestyle and purchase intent]
+      note: Survey-derived marketing and profiling; Worthi has a narrower direct-marketing scope.
+    removal:
+      method: manual
+      destination: compliance@dlg.co.uk
+      alternatives: [consumerdataprotection@dlg.co.uk, https://www.surveys.co.uk/docs/PrivacyPolicy_Surveys.pdf]
+      steps: [Identify the DLG brand and relevant contact record., Request erasure and objection for the relevant processing., Review follow-up identity requirements.]
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Minimum identifiers are not established; do not submit survey answers or documents automatically.
+    coverage:
+      effect: deletion_request
+      includes: DLG controller processing for the identified brand and purpose; a suppression record may remain.
+      excludes: Separate DM Data and MyOffers controllers and downstream recipients need separate handling.
+    automation:
+      mode: manual
+      reason: UK-only guide and purpose-dependent matching; generic EEA email is unsuitable.
+    evidence:
+      - url: https://www.surveys.co.uk/docs/PrivacyPolicy_Surveys.pdf
+        checked_on: '2026-09-28'
+        published: '2026-09-17'
+        excerpt: consumerdataprotection@dlg.co.uk
+        supports: [identity, relevance, removal, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Minimum matching identifiers., Verification process., Downstream execution.]
+
+  - id: dm-data-uk
+    name: DM Data
+    match_domains: [dmdata.co.uk]
+    identity:
+      legal_name: DM Data Limited
+      brands: [DM Data, every one]
+      parent: null
+      official_domains: [dmdata.co.uk]
+    relevance:
+      regions: [UK]
+      category: postal_marketing
+      data_categories: [Contact records, Consumer profiles, Lifestyle data, Identity tracing]
+      note: Separate controller from DLG despite related brands and data flows.
+    removal:
+      method: manual
+      destination: compliance@dmdata.co.uk
+      alternatives: [https://www.dmdata.co.uk/consumer]
+      steps: [Identify relevant records., Ask to stop processing and sharing and specify any erasure request., Review verification and retained suppression data.]
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Complete current request fields not established.
+    coverage:
+      effect: deletion_request
+      includes: DM Data processing identified in the request.
+      excludes: Not proof of removal from its suppliers or separate group companies.
+    automation:
+      mode: manual
+      reason: UK-specific request and marketing-versus-tracing scope require review.
+    evidence:
+      - url: https://www.dmdata.co.uk/policies/dm-data-privacy-policy.pdf
+        checked_on: '2026-09-28'
+        published: '2025 copyright; exact revision date not established'
+        excerpt: You can ask us to stop processing or sharing your details at any time
+        supports: [identity, relevance, removal, coverage]
+      - url: https://www.dmdata.co.uk/
+        checked_on: '2026-09-28'
+        excerpt: every one
+        supports: [identity, relevance]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Required identifiers., Exact suppression handling., Parent ownership.]
+
+  - id: data8-uk
+    name: Data8
+    match_domains: [data-8.co.uk]
+    identity:
+      legal_name: Data8 Limited
+      brands: [Data8]
+      parent: null
+      official_domains: [data-8.co.uk]
+    relevance:
+      regions: [UK]
+      category: professional
+      data_categories: [Business contacts, Business addresses, Directory data, Cleansing reference data]
+      note: Distinguish its own directory/controller records from client data processed only on instructions.
+    removal:
+      method: manual
+      destination: datagovernance@data-8.co.uk
+      alternatives: [https://www.data-8.co.uk/privacy-policy/]
+      steps: [Identify the directory record or processing in question., Request removal or direct-marketing objection., Ask which controller handles any client-supplied record.]
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Minimum matching and verification fields are unspecified.
+    coverage:
+      effect: deletion_request
+      includes: Data8's own relevant records and published directory-removal route.
+      excludes: Data8 processing a client's data does not make it the controller of that client's source record.
+    automation:
+      mode: manual
+      reason: Controller role and UK request wording need review.
+    evidence:
+      - url: https://www.data-8.co.uk/privacy-policy/
+        checked_on: '2026-09-28'
+        published: '2024-09-06'
+        excerpt: datagovernance@data-8.co.uk
+        supports: [identity, relevance, removal, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Minimum identifiers., Product-specific controller responsibilities., Parent ownership.]
+
+  - id: dbs-data-uk
+    name: DBS Data
+    match_domains: [dbsdata.co.uk]
+    identity:
+      legal_name: DBS Datamarketing Ltd
+      brands: [DBS Data, Purifi]
+      parent: null
+      official_domains: [dbsdata.co.uk]
+    relevance:
+      regions: [UK]
+      category: postal_marketing
+      data_categories: [Business and consumer contacts, Marketing profiles, Cleansing and identity records]
+      note: Commercial data company; not the government's Disclosure and Barring Service.
+    removal:
+      method: manual
+      destination: complianceteam@dbsdata.co.uk
+      alternatives: [https://dbsdata.co.uk/trading-business-and-consumer-data/]
+      steps: [Identify the relevant consumer or business record., Request erasure or objection., Choose whether to retain limited suppression details.]
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Confirm required identifiers with the compliance team.
+    coverage:
+      effect: deletion_request
+      includes: DBS controller data under its traded-data policy.
+      excludes: Erasure may be limited by continued lawful processing; suppression retains minimal identifiers.
+    automation:
+      mode: manual
+      reason: UK-specific wording and a suppression decision are needed.
+    evidence:
+      - url: https://dbsdata.co.uk/trading-business-and-consumer-data/
+        checked_on: '2026-09-28'
+        excerpt: complianceteam@dbsdata.co.uk
+        supports: [identity, relevance, removal, coverage]
+      - url: https://www.data-8.co.uk/data-sources/dbs-purifi/
+        checked_on: '2026-09-28'
+        excerpt: DBS Purifi
+        supports: [identity, relevance]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Matching identifiers., Product-specific retention., Parent ownership.]
+
+  - id: datahq-uk
+    name: Data HQ / Vista
+    match_domains: [datahq.co.uk]
+    identity:
+      legal_name: Data HQ Limited
+      brands: [Data HQ, Vista]
+      parent: null
+      official_domains: [datahq.co.uk]
+    relevance:
+      regions: [UK]
+      category: professional
+      data_categories: [Business names, Job titles, Employer details, Business email and telephone]
+      note: UK professional-contact database; source-register and independent customer records remain separate.
+    removal:
+      method: manual
+      destination: compliance@datahq.co.uk
+      alternatives: [https://datahq.co.uk/legal/privacy-notice-for-business-database]
+      steps: [Use subject Do not contact for marketing objection., Provide name and organisation plus business postcode or another matching detail., Specify erasure separately if wanted.]
+    required_information:
+      fields: [full_name, organisation, business_postcode_or_matching_detail]
+      certainty: documented
+      verification: Notice says these are normal matching details; additional identity verification may be needed.
+    coverage:
+      effect: suppression
+      includes: Relevant Vista record removed from future marketing use and licensing as appropriate.
+      excludes: A minimal blocking record remains; independent customers control their copies.
+    automation:
+      mode: manual
+      reason: Requires professional matching fields and UK-specific wording.
+    evidence:
+      - url: https://datahq.co.uk/legal/privacy-notice-for-business-database
+        checked_on: '2026-09-28'
+        published: August 2026
+        excerpt: Email compliance@datahq.co.uk with "Do not contact" in the subject line
+        supports: [identity, relevance, removal, required_information, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Any additional verification., Parent ownership.]
+
+  - id: epsilon-abacus-uk
+    name: Epsilon UK Abacus Alliance
+    match_domains: [legal.epsilon.com]
+    identity:
+      legal_name: Epsilon International UK Ltd
+      brands: [Epsilon Abacus, Abacus Alliance]
+      parent: null
+      official_domains: [epsilon.com, legal.epsilon.com]
+    relevance:
+      regions: [UK]
+      category: postal_marketing
+      data_categories: [Names, Postal addresses, Purchase histories, Modelled attributes]
+      note: UK charity and retailer cooperative; Epsilon has both controller and processor roles.
+    removal:
+      method: manual
+      destination: nomail@epsilon.com
+      alternatives: [https://legal.epsilon.com/abacus/services-privacy-policy]
+      steps: [Identify the UK Abacus scope., Request postal and connected-TV opt-out or specify controller-data erasure., Review verification and member-controller follow-up.]
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Complete current matching requirements are not specified by the reviewed notice.
+    coverage:
+      effect: suppression
+      includes: Selected UK Abacus marketing uses; controller-data erasure is separately requestable.
+      excludes: US Epsilon products and independent member source databases are not proven covered.
+    automation:
+      mode: manual
+      reason: UK cooperative scope and identifiers need review; no generic EEA email.
+    evidence:
+      - url: https://legal.epsilon.com/abacus/services-privacy-policy
+        checked_on: '2026-09-28'
+        published: '2024-08-19'
+        excerpt: nomail@epsilon.com
+        supports: [identity, relevance, removal, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Exact identifier requirements., Any matching parent-domain association., Parent ownership.]
+
+  - id: kinesso-uk
+    name: KINESSO UK services
+    match_domains: [kinesso.com]
+    identity:
+      legal_name: KINESSO LLC and affiliates; UK controller requires confirmation
+      brands: [KINESSO]
+      parent: null
+      official_domains: [kinesso.com]
+    relevance:
+      regions: [UK]
+      category: advertising
+      data_categories: [Pseudonymous match keys, Audience data, Advertising identifiers]
+      note: UK portal for service data; non-US notice names a collective group rather than one confirmed UK controller.
+    removal:
+      method: form
+      destination: https://kinesso.com/privacy-rights-request-uk/
+      alternatives: [https://kinesso.com/privacy-rights/]
+      steps: [Choose Erase My Personal Information., Confirm the controller and identifier scope., Review form requirements before submitting.]
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Embedded request workflow was not completed; identifier and verification requirements remain unknown.
+    coverage:
+      effect: deletion_request
+      includes: Personal information for which KINESSO acts as controller, subject to exceptions.
+      excludes: Processor-only data and every affiliate or client are not automatically included.
+    automation:
+      mode: manual
+      reason: Interactive UK portal and controller verification required.
+    evidence:
+      - url: https://kinesso.com/privacy-rights-request-uk/
+        checked_on: '2026-09-28'
+        excerpt: Erase My Personal Information
+        supports: [removal, coverage]
+      - url: https://kinesso.com/non-us-kinesso-services-privacy-notice/
+        checked_on: '2026-09-28'
+        published: '2025-04-02'
+        excerpt: KINESSO, LLC and its affiliates
+        supports: [identity, relevance]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Exact UK controller., Form identifiers., Parent ownership.]
+
+  - id: directory-192-uk
+    name: 192.com
+    match_domains: [192.com]
+    identity:
+      legal_name: 192.com Ltd
+      brands: [192.com]
+      parent: null
+      official_domains: [192.com]
+    relevance:
+      regions: [UK]
+      category: people_search
+      data_categories: [Names, Addresses, Electoral and telephone-directory records, Director listings]
+      note: Public UK people/address directory; removal is specific to the submitted name and postcode.
+    removal:
+      method: form
+      destination: https://www.192.com/c01/new-request/
+      alternatives: [https://www.192.com/help/help-home/]
+      steps: [Submit each relevant name and postcode., Use an email you control., Click the confirmation link; repeat for other addresses.]
+    required_information:
+      fields: [first_name, surname, postcode, email]
+      certainty: documented
+      verification: Email confirmation and arithmetic challenge; telephone is optional. The form permits self or immediate-family requests only.
+    coverage:
+      effect: suppression
+      includes: Name/postcode blocking record prevents matching records being displayed on 192.com.
+      excludes: Source registers and search-engine caches are separate; other address variants require separate requests.
+    automation:
+      mode: manual
+      reason: Confirmation link and exact address matching require personal interaction.
+    evidence:
+      - url: https://www.192.com/c01/new-request/
+        checked_on: '2026-09-28'
+        excerpt: Your removal will not be processed until this link has been clicked.
+        supports: [removal, required_information, coverage]
+      - url: https://www.192.com/info/privacy-policy/
+        checked_on: '2026-09-28'
+        excerpt: 192.com
+        supports: [identity, relevance]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Treatment of unmatched variants., Parent ownership.]
+
+  - id: ukphonebook
+    name: UKPhonebook
+    match_domains: [ukphonebook.com]
+    identity:
+      legal_name: Simunix Limited
+      brands: [UKPhonebook]
+      parent: null
+      official_domains: [ukphonebook.com, simunix.com]
+    relevance:
+      regions: [UK]
+      category: postal_marketing
+      data_categories: [Names, Addresses, Telephone-directory data, Electoral data, Director data]
+      note: People/address directory; category is the nearest existing schema fit.
+    removal:
+      method: form
+      destination: https://www.ukphonebook.com/remove-me
+      alternatives: [https://www.ukphonebook.com/privacy]
+      steps: [Personally complete the record-removal form., Enter the name and postcode and select the relevant address., Supply a reply email and review the result.]
+    required_information:
+      fields: [first_name, surname, postcode, postal_address, email]
+      certainty: documented
+      verification: Parsed form includes name, postcode, address summary and email; telephone optional. Additional live checks not tested.
+    coverage:
+      effect: deletion_request
+      includes: Removal of matching records from UKPhonebook's website.
+      excludes: T2A, Orbis, source registers and cached search results are not proven removed.
+    automation:
+      mode: manual
+      reason: Policy explicitly redirects third-party requests to the individual's own removal form.
+    evidence:
+      - url: https://www.ukphonebook.com/privacy
+        checked_on: '2026-09-28'
+        excerpt: we are NOT able to process requests received through third parties
+        supports: [identity, relevance, removal, coverage]
+      - url: https://www.ukphonebook.com/remove-me
+        checked_on: '2026-09-28'
+        excerpt: Record Removal Request Form
+        supports: [required_information, removal]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Additional live verification., Retained suppression data., Parent ownership.]
+
+  - id: transunion-uk
+    name: TransUnion UK — credit and separate marketing choices
+    match_domains: [transunion.co.uk]
+    identity:
+      legal_name: TransUnion Information Group Limited and UK subsidiaries; product controller must be checked
+      brands: [TransUnion UK]
+      parent: null
+      official_domains: [transunion.co.uk]
+    relevance:
+      regions: [UK]
+      category: credit_reference
+      data_categories: [Credit accounts, Electoral records, Address links, Credit searches]
+      note: Credit report access is separate from the marketing suppression service.
+    removal:
+      method: form
+      destination: https://www.transunion.co.uk/consumer/statutory-credit-report
+      alternatives: [https://www.transunion.co.uk/consumer/support/contact]
+      steps: [Request the free statutory report and review specific entries., Raise corrections or disputes through consumer support., For marketing only use the separate opt-out instructions on the contact page.]
+    required_information:
+      fields: [current_address, previous_addresses]
+      certainty: not_fully_specified
+      verification: These addresses are documented; full personal-information and identity-check requirements depend on the live report flow.
+    coverage:
+      effect: access_then_review
+      includes: TransUnion credit-file review; separate marketing opt-out uses ukconsumer@transunion.com.
+      excludes: Marketing suppression does not erase the credit file; other UK credit bureaus are separate.
+    automation:
+      mode: blocked
+      reason: Specialist access/correction workflow; never use the marketing deletion template.
+    evidence:
+      - url: https://www.transunion.co.uk/consumer/statutory-credit-report
+        checked_on: '2026-09-28'
+        excerpt: including your current address, and any previous addresses
+        supports: [relevance, removal, required_information, coverage]
+      - url: https://www.transunion.co.uk/consumer/support/contact
+        checked_on: '2026-09-28'
+        excerpt: Request to opt out of marketing services
+        supports: [removal, coverage]
+      - url: https://www.transunion.co.uk/legal/privacy-centre/pc-general
+        checked_on: '2026-09-28'
+        published: '2026-08-12'
+        excerpt: TransUnion Information Group Limited
+        supports: [identity]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Full report identifiers., Product-specific legal controller., Record-specific retention.]
+
+  - id: equifax-uk
+    name: Equifax UK credit reference
+    match_domains: [equifax.co.uk]
+    identity:
+      legal_name: Equifax Limited
+      brands: [Equifax UK]
+      parent: null
+      official_domains: [equifax.co.uk]
+    relevance:
+      regions: [UK]
+      category: credit_reference
+      data_categories: [Credit history, Identity and address information, Financial associations]
+      note: Specialist UK credit-file access; do not infer a marketing deletion workflow from historical sector investigations.
+    removal:
+      method: form
+      destination: https://www.equifax.co.uk/products/credit/statutory-report
+      alternatives: [https://www.equifax.co.uk/efx_pdf/CreditReportApplicationForm.pdf]
+      steps: [Request a free statutory report., Review records for inaccuracies., Follow the report's dispute instructions for specific entries.]
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Current online identity fields require direct review; do not upload documents automatically.
+    coverage:
+      effect: access_then_review
+      includes: Equifax UK statutory credit report.
+      excludes: Access is not erasure and does not change other bureaus' files.
+    automation:
+      mode: blocked
+      reason: Credit-reference access and correction require a specialist workflow.
+    evidence:
+      - url: https://www.equifax.co.uk/products/credit/statutory-report
+        checked_on: '2026-09-28'
+        excerpt: Statutory Credit Report
+        supports: [relevance, removal, coverage]
+      - url: https://www.equifax.co.uk/privacy-hub/ein
+        checked_on: '2026-09-28'
+        published: August 2026
+        excerpt: Equifax Limited
+        supports: [identity]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Exact current form fields., Current non-credit marketing scope., Parent ownership.]
+
+  - id: gbg-identity
+    name: GBG identity and risk services
+    match_domains: [gbgplc.com]
+    identity:
+      legal_name: GB Group Plc
+      brands: [GBG]
+      parent: null
+      official_domains: [gbgplc.com, gbg.com]
+    relevance:
+      regions: [UK, EEA]
+      category: credit_reference
+      data_categories: [Identity reference data, Address data, Device information, Government records]
+      note: Identity/fraud verification; credit_reference is a conservative specialist-workflow category, not a claim that every service is credit reporting.
+    removal:
+      method: manual
+      destination: https://www.gbgplc.com/legal-and-regulatory/products-and-services-privacy-policy-1/
+      alternatives: []
+      steps: [Follow How to Make a Privacy Rights Request to the current webform., Identify the relevant service and request access or applicable erasure., Review identity-document requirements personally.]
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Policy permits proof-of-identity documents; authorised agents need authorisation. The linked live form did not render in this review.
+    coverage:
+      effect: access_then_review
+      includes: GBG product records for the identified service and applicable jurisdiction.
+      excludes: Separate customer and supplier records are not automatically covered; lawful verification uses may remain.
+    automation:
+      mode: blocked
+      reason: Product/controller selection and identity verification require specialist review.
+    evidence:
+      - url: https://www.gbgplc.com/legal-and-regulatory/products-and-services-privacy-policy-1/
+        checked_on: '2026-09-28'
+        published: '2026-07-01'
+        excerpt: we may ask you to provide proof of identity
+        supports: [identity, relevance, removal, required_information, coverage]
+    scale: null
+    review_status: needs_research
+    tested_outcome: not_tested
+    unknowns: [Working embedded request form., Product-specific controller and retention., Full identifier set.]
+
+  - id: lexisnexis-risk-uk
+    name: LexisNexis Risk Solutions Business Services
+    match_domains: [risk.lexisnexis.co.uk, risk.lexisnexis.com]
+    identity:
+      legal_name: Tracesmart Limited and the Business Services controllers listed in the current notice
+      brands: [LexisNexis Risk Solutions, Tracesmart]
+      parent: RELX Group
+      official_domains: [risk.lexisnexis.co.uk, risk.lexisnexis.com]
+    relevance:
+      regions: [UK, EEA, US]
+      category: identity_risk
+      data_categories: [Identity verification data, Public records, Fraud and risk information]
+      note: Business Services controller data; the customer's own decisions and other LexisNexis products remain separate.
+    removal:
+      method: form
+      destination: https://reedelsevierinc3.my.site.com/webform/s/
+      alternatives: [https://risk.lexisnexis.com/corporate/processing-notices/business-services, https://consumer.risk.lexisnexis.com/request]
+      steps:
+        - Outside the US, use the international form linked from the current Business Services notice; identify the relevant service and request access, correction or applicable erasure.
+        - Review any identity-document request personally. Legal obligations or overriding reasons may limit erasure.
+        - If the JavaScript form fails, the notice provides a postal DPO contact at Global Reach, Dunleavy Drive, Cardiff CF11 0SN.
+        - US residents should use the separate consumer portal and review its state-law scope and identification requirements.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: International form returned a JavaScript/CSS shell; fields and submission were not tested. The notice permits relevant identity checks.
+    coverage:
+      effect: deletion_request
+      includes: Applicable rights over matched Business Services controller records.
+      excludes: Independent customer decisions, unrelated LexisNexis products and justified retention; not blanket group deletion.
+    automation:
+      mode: manual
+      reason: Region, service and identity verification require personal review; no generic email or automatic submission.
+    evidence:
+      - url: https://risk.lexisnexis.com/corporate/processing-notices/business-services
+        checked_on: '2026-09-30'
+        published: '2025-12-17'
+        excerpt: For non-U.S. Privacy requests
+        supports: [current_controllers, regional_routes, rights_and_retention, postal_fallback]
+      - url: https://reedelsevierinc3.my.site.com/webform/s/
+        checked_on: '2026-09-30'
+        excerpt: LNRS Consumer International Requests
+        supports: [official_linked_form, untested_javascript_workflow]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [International form fields and verification., Individual product controller and lawful retention outcome.]
+    regional_routes:
+      - regions: [US]
+        legal_entity: LexisNexis Risk Solutions consumer-reporting entities; product-specific scope
+        removal:
+          method: form
+          destination: https://consumer.risk.lexisnexis.com/request
+          alternatives: [https://consumer.risk.lexisnexis.com/]
+          steps: [Select the applicable report or state-law privacy request., Review deletion versus sale opt-out and exempt data., Complete personal identity verification.]
+        required_information:
+          fields: [full_name, postal_address, date_of_birth, SSN_or_drivers_license_for_deletion]
+          certainty: not_fully_specified
+          verification: SSN or driver's license/state is required for deletion or disclosure but not opt-out/opt-in; verified email is optional for email-linked data. Conditional validation is untested.
+        coverage:
+          effect: access_then_review
+          includes: Consumer disclosure and applicable state-law requests.
+          excludes: Exempt information and separate European rights; an opt-out does not delete all data.
+        automation: {mode: manual, reason: Sensitive identifiers and request-specific state-law choices require personal handling.}
+        evidence:
+          - url: https://consumer.risk.lexisnexis.com/request
+            checked_on: '2026-09-30'
+            excerpt: required to provide a copy of your information or in support of a deletion request
+            supports: [conditional_identifiers, request_types, state_law_limits]
+        unknowns: [Conditional validation and actual fulfilment.]
+
+  - id: crif-visionnet-ireland
+    name: CRIF VisionNet / SoloCheck
+    match_domains: [vision-net.ie, solocheck.ie]
+    identity:
+      legal_name: CRIF VisionNet Limited
+      brands: [Vision-Net, SoloCheck]
+      parent: CRIF SpA
+      official_domains: [vision-net.ie, solocheck.ie]
+    relevance:
+      regions: [IE, UK]
+      category: credit_reference
+      data_categories: [Business officer identities, Corporate histories, Property records, Risk information]
+      note: Business-information and compliance services; personal director data is relevant even without a customer account.
+    removal:
+      method: manual
+      destination: privacy@vision-net.ie
+      alternatives: [https://www.vision-net.ie/privacy/]
+      steps: [Identify the listing or service and request access., Review the relevant controller role., Request record-specific correction or applicable erasure.]
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Current minimum matching and verification requirements need confirmation.
+    coverage:
+      effect: access_then_review
+      includes: CRIF VisionNet's controller records for the identified service.
+      excludes: Source public registers, processor-only records and other CRIF entities require separate review.
+    automation:
+      mode: blocked
+      reason: Public-register and compliance records need specialist assessment before deletion requests.
+    evidence:
+      - url: https://www.vision-net.ie/privacy/
+        checked_on: '2026-09-28'
+        excerpt: privacy@vision-net.ie
+        supports: [identity, relevance, removal, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Matching identifiers., Record-specific retention and erasure eligibility.]
+
+  - id: central-credit-register-ireland
+    name: Ireland Central Credit Register
+    match_domains: [centralcreditregister.ie]
+    identity:
+      legal_name: Central Bank of Ireland
+      brands: [Central Credit Register]
+      parent: null
+      official_domains: [centralcreditregister.ie, centralbank.ie]
+    relevance:
+      regions: [IE]
+      category: credit_reference
+      data_categories: [Identity information, Loan records, Repayment history, Credit-report access footprints]
+      note: Statutory register included as a specialist access workflow, not a commercial marketing broker.
+    removal:
+      method: form
+      destination: https://www.centralcreditregister.ie/borrower-area/start-your-application/
+      alternatives: [https://www.centralcreditregister.ie/borrower-area/faq/]
+      steps: [Choose the individual report application., Personally supply the required identity evidence., Review the report and request correction from the lender or register.]
+    required_information:
+      fields: [proof_of_identity, proof_of_address, proof_of_ppsn, signature]
+      certainty: documented
+      verification: Application requires signed photo ID, recent address proof, PPSN proof and signature; review acceptable documents on the official site.
+    coverage:
+      effect: access_then_review
+      includes: Individual CCR report and amendment requests.
+      excludes: Access does not erase statutory records or automatically correct other credit bureaus.
+    automation:
+      mode: blocked
+      reason: Sensitive identity documents and statutory credit processing are outside marketing automation.
+    evidence:
+      - url: https://www.centralcreditregister.ie/borrower-area/start-your-application/
+        checked_on: '2026-09-28'
+        excerpt: Proof of PPSN
+        supports: [removal, required_information]
+      - url: https://www.centralcreditregister.ie/borrower-area/faqs/
+        checked_on: '2026-09-28'
+        excerpt: The Central Bank is the data controller for the Central Credit Register
+        supports: [identity, relevance, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Record-specific amendment eligibility., Additional live application fields.]
+
+  - id: business-ie-bizmaps
+    name: Business.ie / Bizmaps — route review
+    match_domains: [business.ie]
+    identity:
+      legal_name: Bizmaps Ltd.
+      brands: [Business.ie]
+      parent: null
+      official_domains: [business.ie]
+    relevance:
+      regions: [IE]
+      category: professional
+      data_categories: [Business database records, Business and consumer information]
+      note: Current official search result identifies Bizmaps; do not infer continuity with older Data Ireland ownership.
+    removal:
+      method: investigate
+      destination: https://business.ie/privacyPolicy
+      alternatives: []
+      steps: [Render the current policy and identify the controller's rights contact., Establish whether an individual's record is held., Confirm identifiers before making a request.]
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Policy body did not render; no request or verification fields established.
+    coverage:
+      effect: needs_review
+      includes: No operational removal scope established.
+      excludes: No An Post or historic Data Ireland parent-wide deletion claim.
+    automation:
+      mode: blocked
+      reason: Current controller notice and rights route need direct verification.
+    evidence:
+      - url: https://business.ie/privacyPolicy
+        checked_on: '2026-09-28'
+        excerpt: Bizmaps Ltd.
+        supports: [identity, relevance]
+    scale: null
+    review_status: needs_research
+    tested_outcome: not_tested
+    unknowns: [Full policy text., Rights contact., Required identifiers., Historic Data Ireland relationship., Parent ownership.]
+
+  - id: market-location-uk
+    name: Market Location business contacts
+    match_domains: [marketlocation.com, marketlocation.co.uk]
+    identity:
+      legal_name: Market Location Limited (01864009); joint controller with 118 Data Resource Limited for the 118 Business Database
+      brands: [Market Location, BiziReach, LeadsStream]
+      parent: null
+      official_domains: [marketlocation.com, marketlocation.co.uk]
+    relevance:
+      regions: [UK]
+      category: professional
+      data_categories: [Business contacts, Names and job titles, Business email and telephone]
+      note: UK business-contact datasets; the notice permits subject-rights requests without a residence restriction, including a relevant record held about an EEA resident.
+    removal:
+      method: email
+      destination: customerservices@marketlocation.com
+      alternatives: [compliance@marketlocation.com, https://www.marketlocation.com/privacy-policy/]
+      steps:
+        - Request erasure and marketing opposition for your personal business-contact record; distinguish ML's own dataset from the jointly controlled 118 Business Database.
+        - Supply relevant matching details and review further verification personally. Minimal suppression information may remain to prevent re-acquisition.
+        - Ask which datasets were covered; neither independent 118 processing nor customer/source copies are automatically erased.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: No exhaustive request checklist published. Name, work email and employer are an initial proposal, not guaranteed sufficient identifiers; no sensitive documents are attached automatically.
+    coverage:
+      effect: deletion_request
+      includes: Personal ML Business Database records and the expressly joint 118 Business Database scope.
+      excludes: Independent 118 purposes, customer copies, source records and necessary suppression retention.
+    automation:
+      mode: manual
+      reason: Reviewed initial-email recipe uses minimal business identifiers; later matching, scope confirmation and verification remain personal.
+    evidence:
+      - url: https://externaldocuments.marketlocation.co.uk/api/PrivacyPolicyML?showtitle=false&cookiePolicyUrl=https://www.marketlocation.com/cookie-policy/
+        checked_on: '2026-10-01'
+        published: '2026-02-11 (version 1.16)'
+        excerpt: customerservices@marketlocation.com
+        supports: [controller_identity, joint_database_scope, email_rights, suppression_retention]
+      - url: https://www.marketlocation.com/privacy-policy/
+        checked_on: '2026-10-01'
+        excerpt: externaldocuments.marketlocation.co.uk/api/PrivacyPolicyML
+        supports: [official_public_policy_endpoint]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Complete matching checklist and verification., Actual dataset-specific fulfilment., Parent ownership.]
+
+  - id: information-118-uk
+    name: 118 business-contact database
+    match_domains: [118information.co.uk]
+    identity:
+      legal_name: 118 Data Resource Limited (06325712), product controller; site footer separately names 118 Information Limited
+      brands: [118 Information]
+      parent: null
+      official_domains: [118information.co.uk]
+    relevance:
+      regions: [UK]
+      category: professional
+      data_categories: [UK business information]
+      note: Current embedded policy identifies 118 Data Resource Limited and its joint database with Market Location; footer entity is not assumed to be the dataset controller.
+    removal:
+      method: email
+      destination: customer.services@118Group.co.uk
+      alternatives: [https://www.118information.co.uk/Home/PrivacyPolicy]
+      steps:
+        - Request erasure and marketing opposition for your personal record in the 118 Business Database, identifying the business and contact concerned.
+        - The notice allows rights requests to either joint controller for that database; avoid duplicating a confirmed request already covering it through Market Location.
+        - Confirm the scope and any matching requirements; independent processing by either company and downstream copies remain separate.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: No exhaustive matching checklist published; ask for specific verification requirements before disclosing more information.
+    coverage:
+      effect: deletion_request
+      includes: Personal records in the explicitly joint 118 Business Database; minimal suppression retained to prevent re-import.
+      excludes: Independent Market Location processing, customer/source copies and any unsupported claim that the footer's separate entity is the dataset controller.
+    automation:
+      mode: manual
+      reason: Check existing Market Location request coverage before a second request; matching and separate processing need personal review.
+    evidence:
+      - url: https://externaldocuments.marketlocation.co.uk/api/PrivacyPolicy?cookiePolicyUrl=http%3A%2F%2Fwww.118information.co.uk%2FHome%2Fcookiepolicy%2F
+        checked_on: '2026-10-01'
+        published: '2026-02-11 (version 1.16)'
+        excerpt: customer.services@118Group.co.uk
+        supports: [dataset_controller, joint_rights_route, email_rights, suppression_retention]
+      - url: https://www.118information.co.uk/Home/PrivacyPolicy
+        checked_on: '2026-10-01'
+        excerpt: 118 Information Limited
+        supports: [distinct_footer_entity, official_embedded_notice_link]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Additional matching requirements., Actual deletion scope and independent processing., Footer company relationship beyond the expressly named product controller.]
+
+  - id: myoffers-uk
+    name: MyOffers marketing and competition data
+    match_domains: [myoffers.co.uk]
+    identity:
+      legal_name: MyOffers 2019 Limited (company 12199927)
+      brands: [MyOffers, Testers Keepers, ImproveMyHearing, ImproveMyVision, SwitchMyUtility]
+      parent: DM Ltd
+      official_domains: [myoffers.co.uk]
+    relevance:
+      regions: [UK]
+      category: consumer_marketing
+      data_categories: [Competition entries, Contact information, Marketing profiles, Identity and tracing records]
+      note: UK-oriented records; rights contact has no stated residence restriction. Boilerplate DLG references do not prove all group databases share one removal route.
+    removal:
+      method: email
+      destination: compliance@myoffersltd.co.uk
+      alternatives: [https://www.myoffers.co.uk/account, https://www.myoffers.co.uk/privacy-statement/]
+      steps:
+        - Ask compliance to stop marketing and profiling, withdraw marketing consent and erase applicable MyOffers records; identify the relevant brand and record.
+        - Keep minimal suppression information if needed to prevent re-import. Ask separately about identity/tracing retention and independent recipients.
+        - Existing members can review My Account privacy controls; preferences are not proof of historical deletion or group-wide erasure.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: No exhaustive matching checklist published; review additional identifiers personally. Public policy content was read without signing in or submitting a request.
+    coverage:
+      effect: deletion_request
+      includes: Applicable MyOffers-controlled marketing and competition records.
+      excludes: DLG/PDV/DM Data, independent recipients and justified retention; preferences alone do not prove deletion.
+    automation:
+      mode: manual
+      reason: Reviewed initial-email recipe requires matching emails and explicit postal-address permission; additional identifiers and verification remain personal.
+    evidence:
+      - url: https://cfeliveapi.myoffers.co.uk/api/ContentManagement/getPrivacyStatement
+        checked_on: '2026-10-01'
+        published: '2026-05-13'
+        excerpt: compliance@myoffersltd.co.uk
+        supports: [current_identity, brands, marketing_data, rights_contact, retention_and_suppression]
+      - url: https://www.myoffers.co.uk/privacy-statement/
+        checked_on: '2026-10-01'
+        excerpt: Free UK Competitions Online
+        supports: [public_javascript_page]
+      - url: https://www.myoffers.co.uk/7193.3cf680d64ab7b474.js
+        checked_on: '2026-10-01'
+        excerpt: api/ContentManagement/getPrivacyStatement
+        supports: [public_page_policy_content_endpoint]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Full matching and verification requirements., Actual erasure and retained identity/tracing scope., Group-branded boilerplate does not establish shared deletion coverage.]
+
+  - id: eyeota
+    name: Eyeota
+    match_domains: [eyeota.com]
+    identity:
+      legal_name: Eyeota Pte Ltd
+      brands: [Eyeota]
+      parent: Dun & Bradstreet
+      official_domains: [eyeota.com]
+    relevance:
+      regions: [UK, EEA]
+      category: advertising
+      data_categories: [Cookie identifiers, Mobile advertising IDs, Hashed emails, Audience segments]
+      note: Pseudonymous advertising platform; email-only matching is insufficient for cookie-associated records.
+    removal:
+      method: form
+      destination: https://www.eyeota.com/data-subject-request
+      alternatives: [https://www.eyeota.com/how-to-opt-out]
+      steps: [Select deletion for the relevant platform data., Follow instructions to locate relevant cookies and authenticate the request., Separately choose hashed-email suppression or browser opt-out if desired.]
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Platform requests receive cookie-location and authentication instructions; live form field set not established.
+    coverage:
+      effect: deletion_request
+      includes: Eyeota data associated with verified platform or business identifiers.
+      excludes: Browser opt-out and hashed-email suppression are narrower choices; other devices and DNB databases are not automatically covered.
+    automation:
+      mode: manual
+      reason: Identifier-specific form and browser verification are required.
+    evidence:
+      - url: https://www.eyeota.com/data-subject-request
+        checked_on: '2026-09-28'
+        excerpt: to ask that Eyeota delete your data
+        supports: [removal, required_information, coverage]
+      - url: https://www.eyeota.com/eyeota-marketplace-privacy-policy
+        checked_on: '2026-09-29'
+        published: '2025-12-18'
+        excerpt: The Platform is operated by Eyeota Pte Ltd
+        supports: [identity, relevance]
+      - url: https://www.eyeota.com/how-to-opt-out
+        checked_on: '2026-09-28'
+        excerpt: we will place your HEM into an opt-out database
+        supports: [coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Complete current form fields., Scope across multiple devices., Removal outcome.]
+
+  - id: zeta-global
+    name: Zeta Global
+    match_domains: [zetaglobal.com]
+    identity:
+      legal_name: Zeta Global Corp. (own Zeta Data under the global services DPA)
+      brands: [Zeta Global, Zeta Data Cloud, Zeta Marketing Platform]
+      parent: null
+      official_domains: [zetaglobal.com]
+    relevance:
+      regions: [UK, EEA]
+      category: advertising
+      data_categories: [Email-linked consumer data, Cookie IDs, Purchase intent, Audience profiles]
+      note: Data Cloud email records and browser advertising records have different request paths.
+    removal:
+      method: form
+      destination: https://privacyportal-cdn.onetrust.com/dsarwebform/bc2d3301-11a5-4de5-b15e-ce796187a352/d0720d0f-d427-4a7d-a773-5d6793229f15.html
+      alternatives: [https://www.zetaglobal.com/rights-request/, privacy@zetaglobal.com]
+      steps: [Use the linked Data Cloud form for email-associated data., Use the rights-request browser page for cookie-associated records., Select deletion and complete identifier verification.]
+    required_information:
+      fields: [email_or_browser_cookie]
+      certainty: not_fully_specified
+      verification: Policy requires access to the relevant mailbox or browser; complete form fields are not rendered.
+    coverage:
+      effect: deletion_request
+      includes: Verified Data Cloud or browser-associated Zeta records. Global DPA names Zeta Global Corp. as controller of its own Zeta Data.
+      excludes: Customer-controlled data and other affiliate/contract entities are not automatically included. Disqus and LiveIntent have separate notices; sale/share opt-out and unsubscribe are narrower.
+    automation:
+      mode: manual
+      reason: Separate identifier channels and verification; do not generalize the own-data controller to customer datasets.
+    evidence:
+      - url: https://www.zetaglobal.com/privacy-policy/
+        checked_on: '2026-09-29'
+        published: 'Services notice 2026-06-24; website notice 2026-07-01'
+        excerpt: For data in our Data Cloud, verification will require access to the email address
+        supports: [identity, relevance, removal, required_information, coverage]
+      - url: https://www.zetaglobal.com/rights-request/
+        checked_on: '2026-09-28'
+        excerpt: Data Rights Request
+        supports: [removal]
+      - url: https://www.zetaglobal.com/data-processing-terms/
+        checked_on: '2026-09-29'
+        excerpt: With respect to Zeta Data Processed, Zeta will exclusively act as a Data Controller.
+        supports: [identity, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Complete embedded form fields., Other affiliate and customer-controlled records need separate scope checks., No submission or deletion outcome tested.]
+
+  - id: infosum-scope-review
+    name: InfoSum — controller scope review
+    match_domains: [infosum.com]
+    identity:
+      legal_name: InfoSum Limited
+      brands: [InfoSum]
+      parent: WPP
+      official_domains: [infosum.com]
+    relevance:
+      regions: [UK]
+      category: advertising
+      data_categories: [Client-controlled collaboration datasets, Website and business-contact data]
+      note: Data-collaboration infrastructure is not evidence of an independent consumer broker database.
+    removal:
+      method: investigate
+      destination: https://www.infosum.com/legals/privacy-policy
+      alternatives: [dpo@infosum.com]
+      steps: [Determine whether the record belongs to InfoSum or a client dataset., Use the DPO for InfoSum's own controller records or routing clarification., Direct client-dataset rights to the responsible controller.]
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Record owner and matching requirements must be established first.
+    coverage:
+      effect: needs_review
+      includes: Reviewed notice covers website and business interactions; deletion rights exist for those records.
+      excludes: No evidence that a DPO request deletes every client's advertising dataset or the wider WPP group.
+    automation:
+      mode: blocked
+      reason: Controller-specific scope is unresolved; cannot treat platform use as independent broker exposure.
+    evidence:
+      - url: https://www.infosum.com/legals/privacy-policy
+        checked_on: '2026-09-28'
+        published: 'Header 2025-06-02; footer also states 2024-03-06'
+        excerpt: dpo@infosum.com
+        supports: [identity, removal, coverage]
+      - url: https://www.infosum.com/platform/privacy
+        checked_on: '2026-09-28'
+        excerpt: owned and controlled by each collaborator
+        supports: [relevance, coverage]
+    scale: null
+    review_status: needs_research
+    tested_outcome: not_tested
+    unknowns: [Consumer-level independent controller role., Relevant client controller., Matching identifiers.]
+
+  - id: conexance-choreograph
+    name: Conexance by Choreograph
+    match_domains: [conexance.com]
+    identity:
+      legal_name: CHOREOGRAPH SAS (SIREN 489496331)
+      brands: [Conexance, Alliance / IBehavior, Conex+ / IBehavior+]
+      parent: null
+      official_domains: [conexance.com]
+    relevance:
+      regions: [FR, UK]
+      category: postal_marketing
+      data_categories: [Contact records, Purchase histories, Interests, Household and demographic segments]
+      note: French cooperative notice; UK connection is Sagacity's named reseller list and requires record-specific regional confirmation.
+    removal:
+      method: manual
+      destination: data-privacy@wppmedia.com
+      alternatives: [https://www.conexance.com/politique-de-confidentialite]
+      steps: [Identify the relevant programme or source member., Request objection or erasure and specify the contact details concerned., Confirm routing to the controller and any retained suppression record.]
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Notice asks for the contact details to suppress but gives no universal identity checklist.
+    coverage:
+      effect: suppression
+      includes: Programme suppression; rights requests may be forwarded to the responsible member/client controller.
+      excludes: Processor role does not imply authority to erase every member's source records or all WPP datasets.
+    automation:
+      mode: manual
+      reason: Programme controller, regional applicability and matching details need review.
+    evidence:
+      - url: https://www.conexance.com/politique-de-confidentialite
+        checked_on: '2026-09-28'
+        published: '2026-03-27'
+        excerpt: data-privacy@wppmedia.com
+        supports: [relevance, removal, required_information, coverage]
+      - url: https://www.conexance.com/mentions-legales
+        checked_on: '2026-09-28'
+        published: '2026-03-27'
+        excerpt: 'SIREN : 489 496 331'
+        supports: [identity]
+      - url: https://www.mydatachoices.co.uk/Privacy
+        checked_on: '2026-09-28'
+        excerpt: Conexance
+        supports: [relevance]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Exact UK record applicability., Minimum matching identifiers., Parent ownership.]
+
+  - id: datatrac-uk
+    name: Datatrac
+    match_domains: [datatrac.co.uk]
+    identity:
+      legal_name: Datatrac Limited
+      brands: [Datatrac]
+      parent: null
+      official_domains: [datatrac.co.uk]
+    relevance:
+      regions: [UK]
+      category: identity_risk
+      data_categories: [Names, Addresses, Email addresses, Telephone numbers, Birth dates, Employment information, Credit application data, Lifestyle data]
+      note: Tracing and verification coexist with postal and hosted-email marketing; purpose-specific handling is necessary.
+    removal:
+      method: manual
+      destination: compliance@datatrac.co.uk
+      alternatives: [https://www.datatrac.co.uk/privacy-policy]
+      steps: [Identify the relevant product and purpose., Request marketing suppression and separately review objection or erasure for non-marketing records., Ask for matching requirements before sending documents.]
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Notice does not establish a minimum identifier or authentication checklist.
+    coverage:
+      effect: suppression
+      includes: Marketing consent withdrawal and suppression; other rights can be raised with the DPO.
+      excludes: Tracing or fraud records are not automatically erased by a marketing opt-out; source partners remain independent.
+    automation:
+      mode: manual
+      reason: Identity-risk purposes and UK-specific request wording need individual review.
+    evidence:
+      - url: https://www.datatrac.co.uk/privacy-policy
+        checked_on: '2026-09-28'
+        published: '2025-05'
+        excerpt: compliance@datatrac.co.uk
+        supports: [identity, relevance, removal, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Minimum identifiers., Purpose-specific retention., Parent ownership.]
+
+  - id: pdv-uk
+    name: PDV
+    match_domains: [pdv.agency]
+    identity:
+      legal_name: PDV Ltd
+      brands: [PDV]
+      parent: DM Ltd
+      official_domains: [pdv.agency]
+    relevance:
+      regions: [UK]
+      category: consumer_marketing
+      data_categories: [Names, Postal addresses, Marketing audience records]
+      note: Marketing-data processor that offers its own suppression request; source-controller rights remain distinct.
+    removal:
+      method: form
+      destination: https://www.pdv.agency/consumer/
+      alternatives: [compliance@pdv.agency]
+      steps: [Enter the matching name and postal address., Add an email only if confirmation or further information is wanted., Review the response for any separate controller referral.]
+    required_information:
+      fields: [first_name, last_name, postal_address, postcode]
+      certainty: documented
+      verification: Form displays name and address fields; email and message are optional; further authentication is unspecified.
+    coverage:
+      effect: suppression
+      includes: PDV suppression base; retains enough information to block future marketing.
+      excludes: Processor status does not establish deletion from every supplier or client; enquiries may be referred to the source controller.
+    automation:
+      mode: manual
+      reason: Address form and processor-controller distinction require review.
+    evidence:
+      - url: https://www.pdv.agency/consumer/
+        checked_on: '2026-09-28'
+        excerpt: Email Address*
+        supports: [identity, relevance, removal, required_information, coverage]
+      - url: https://www.pdv.agency/policies/pdv-privacy-policy.pdf
+        checked_on: '2026-09-28'
+        published: '2025-08-16'
+        excerpt: PDV Ltd primarily acts as a Data Processor
+        supports: [identity, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Further authentication., Downstream controller completion.]

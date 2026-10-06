@@ -1,0 +1,10 @@
+schema_version: 1
+regions: [EE]
+rationale: Official Estonian controller policy identifies independent payment-default and credit-information processing. National entities and client-controlled records stay separate.
+evidence:
+  - url: https://web.creditinfo.ee/doc/personal_data_processing_principles_020326.pdf
+    checked_on: '2026-09-29'
+    excerpt: AS CREDITINFO EESTI
+    supports: [discovery]
+candidates:
+  - {slug: ee-creditinfo, name: AS CREDITINFO EESTI}

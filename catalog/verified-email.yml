@@ -1,0 +1,103 @@
+# Official privacy contacts inspected September 9, 2026. Not proven deletion integrations.
+verified_at: "2026-09-09T00:00:00+00:00"
+brokers:
+  - name: Hunter
+    domain: hunter.io
+    contact: privacy@hunter.io
+    policy_url: https://hunter.io/privacy-policy
+  - name: Cognism
+    domain: cognism.com
+    contact: privacy@cognism.com
+    policy_url: https://www.cognism.com/en/privacy-policy
+  - name: Kaspr
+    domain: kaspr.io
+    contact: privacy@kaspr.io
+    policy_url: https://www.kaspr.io/privacy-policy
+    preferred_form: https://kaspr.privacy.saymine.io/kaspr
+  - name: SignalHire
+    domain: signalhire.com
+    contact: support@signalhire.com
+    policy_url: https://www.signalhire.com/privacy-faq
+  - name: ContactOut
+    domain: contactout.com
+    contact: support@contactout.com
+    policy_url: https://contactout.com/privacy_data_subjects
+  - name: Snov.io
+    domain: snov.io
+    contact: snovio_dpo@snov.io
+    policy_url: https://snov.io/privacy-policy
+  - name: Lusha
+    domain: lusha.com
+    contact: privacy@lusha.com
+    policy_url: https://docs.lusha.com/user-guide/privacy-and-compliance/what-are-my-rights-as-a-data-subject
+  - name: LeadIQ
+    domain: leadiq.com
+    contact: privacy@leadiq.com
+    policy_url: https://privacy.leadiq.com/legal/privacy-policy
+    preferred_form: https://leadiq.com/request-removal
+  # Additional official privacy routes inspected September 10, 2026.
+  - name: Apollo.io (ZenLeads Inc.)
+    domain: apollo.io
+    contact: privacy@apollo.io
+    policy_url: https://www.apollo.io/privacy-policy
+  - name: Acxiom LLC
+    domain: acxiom.com
+    contact: datenschutz@acxiom.com
+    policy_url: https://www.acxiom.de/Datenschutz/
+  - name: HubSpot, Inc.
+    domain: hubspot.com
+    contact: privacy@hubspot.com
+    policy_url: https://legal.hubspot.com/privacy-policy
+  - name: RocketReach
+    domain: rocketreach.co
+    contact: privacy@rocketreach.co
+    policy_url: https://rocketreach.co/privacy
+  - name: Seamless.AI
+    domain: seamless.ai
+    contact: privacy@seamlessleads.com
+    policy_url: https://seamless.ai/policies/privacy-policy
+    request_form: https://preferences.seamless.ai/
+  - name: Azira
+    domain: azira.com
+    contact: privacy@azira.com
+    policy_url: https://azira.com/privacy-policy
+  - name: Lead411
+    domain: lead411.com
+    contact: support@lead411.io
+    policy_url: https://www.lead411.com/privacy-policy/
+  - name: Bombora
+    domain: bombora.com
+    contact: legal@bombora.com
+    policy_url: https://bombora.com/privacy-policy/
+  - name: OnAudience
+    domain: onaudience.com
+    contact: privacy@onaudience.com
+    policy_url: https://onaudience.com/internet-advertising-privacy-policy/
+  - name: Eyeota
+    domain: eyeota.com
+    contact: privacy@eyeota.com
+    policy_url: https://www.eyeota.com/eyeota-marketplace-privacy-policy
+  - name: SalesIntel
+    domain: salesintel.io
+    contact: support@salesintel.io
+    policy_url: https://salesintel.io/privacy-policy/
+  - name: SalesQL
+    domain: salesql.com
+    contact: privacy@salesql.com
+    policy_url: https://salesql.com/privacy-center
+  - name: StackAdapt
+    domain: stackadapt.com
+    contact: privacy@stackadapt.com
+    policy_url: https://www.stackadapt.com/legal-document-centre/platform-and-services-privacy-policy
+  - name: UpLead
+    domain: uplead.com
+    contact: support@uplead.com
+    policy_url: https://www.uplead.com/privacy/
+  - name: Adapt.io
+    domain: adapt.io
+    contact: support@adapt.io
+    policy_url: https://www.adapt.io/privacy.htm
+  - name: Pipl
+    domain: pipl.com
+    contact: privacy@pipl.com
+    policy_url: https://pipl.com/privacy-center

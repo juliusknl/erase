@@ -1,0 +1,382 @@
+schema_version: 1
+brokers:
+  - id: 01advertising
+    name: 01Advertising
+    match_domains: [01advertising.com]
+    identity:
+      legal_name: 01Advertising Inc.
+      brands: [01Advertising]
+      parent: null
+      official_domains: [01advertising.com]
+    relevance:
+      regions: [US, other_regions_not_established]
+      category: advertising
+      data_categories: [device_identifiers, household_identifiers, hashed_contact_data, location, demographic_attributes]
+      note: Advertising data supplier; its policy describes app/publisher and aggregator data. The rights section names US state residents; a working EEA-specific workflow is not established.
+    removal:
+      method: form
+      destination: https://www.01advertising.com/legal/dsar/
+      alternatives: [legal@01advertising.com, privacy@01advertising.com]
+      steps:
+        - Open the official data-subject request page and choose deletion, not only website cookie preferences.
+        - State your actual country and the identifiers relevant to the data being requested. Do not claim US residency if untrue.
+        - Complete only proportionate verification requested through the official route and save the response.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Policy says it verifies identity against held information, may request additional information, and requires signed permission for an agent. The embedded form's exact required fields remain unverified.
+    coverage:
+      effect: deletion_request
+      includes: Request concerning personal information processed by 01Advertising, including the supplier-data categories described in its notice.
+      excludes: Cookie preference changes are not equivalent to database deletion. Independent supplier/customer copies and non-US eligibility are not established.
+    automation:
+      mode: manual
+      reason: Use the official request flow; EEA applicability and the form's exact identifier/verification requirements need checking before automation.
+    evidence:
+      - url: https://www.01advertising.com/legal/privacy/
+        checked_on: 2026-09-28
+        published: January 31, 2026
+        excerpt: To request to review, update, or delete your personal information, please fill out and submit a data subject access request.
+        supports: [identity, data_categories, removal, verification, regional_limitations]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Exact form fields and EEA handling, Parent ownership and database size, End-to-end processing outcome]
+
+  - id: above-data
+    name: Above Data
+    match_domains: [abovedata.io]
+    identity:
+      legal_name: Above Data, Inc.
+      brands: [Above Data]
+      parent: null
+      official_domains: [abovedata.io]
+    relevance:
+      regions: [US, international_scope_not_quantified]
+      category: advertising
+      data_categories: [hashed_email, device_identifiers, cookie_identifiers, modeled_attributes, transaction_signals]
+      note: Its product-specific notice covers pseudonymous data licensing and marketplace products, separately from the website policy. Named contact data is not the right default identifier for these products.
+    removal:
+      method: manual
+      destination: https://www.abovedata.io/product-privacy-policy/
+      alternatives: [privacy@abovedata.io]
+      steps:
+        - Read the product notice and follow its Above Data Request Form link, or contact the published privacy mailbox.
+        - Request deletion and suppression for the relevant pseudonymous identifier; do not send an identity document or postal address speculatively.
+        - Keep the result; if the identifier cannot be verified, do not mark deletion as established.
+    required_information:
+      fields: [relevant_pseudonymous_identifier]
+      certainty: documented
+      verification: The product notice says verification uses supplied identifiers such as hashed email or device ID, does not request additional identifying information, and may fail if it cannot verify the request. Exact form controls still require inspection.
+    coverage:
+      effect: suppression
+      includes: Deletion/suppression of applicable pseudonymous identifiers in Above Data products, models and marketplace distributions; downstream propagation where feasible.
+      excludes: Not blanket erasure of third-party source databases or aggregate statistics. The policy does not promise that an ordinary name/email request can identify all product data.
+    automation:
+      mode: manual
+      reason: Requires identifier-specific handling, distinct from the app's name/email template; regional eligibility and the form must be checked.
+    evidence:
+      - url: https://www.abovedata.io/product-privacy-policy/
+        checked_on: 2026-09-28
+        published: August 1, 2026
+        excerpt: We verify requests using only the identifiers you provide to us
+        supports: [identity, data_categories, removal, verification, coverage, regional_scope]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Exact live form controls, EEA-specific handling, Parent ownership and comparable personal-record count, End-to-end processing outcome]
+
+  - id: bookyourdata
+    name: Bookyourdata
+    match_domains: [bookyourdata.com]
+    identity:
+      legal_name: A Direct Marketing Inc.
+      brands: [Bookyourdata]
+      parent: null
+      official_domains: [bookyourdata.com]
+    relevance:
+      regions: [EEA, US, global]
+      category: professional
+      data_categories: [professional_contacts, business_emails, phone_numbers, employment_details]
+      note: Professional contact database; the current policy expressly provides GDPR withdrawal and erasure routes, not just a US-only opt-out.
+    removal:
+      method: form
+      destination: https://optout.bookyourdata.com
+      alternatives: [data@bookyourdata.com]
+      steps:
+        - Open the official opt-out portal linked from the privacy policy.
+        - Request deletion and withdrawal/objection as applicable to your actual residence, rather than merely newsletter unsubscribe.
+        - Enter the email to remove and select deletion, suppression, or both; name and state/region are optional matching aids.
+        - For deletion, follow the confirmation link emailed to that address. Suppression does not require email confirmation. Retain the final acknowledgement.
+    required_information:
+      fields: [email, request_type]
+      certainty: documented
+      verification: Live form requires email and at least one action. Name and region are optional. Deletion requires emailed confirmation; opt-out does not. The page includes a Turnstile challenge field, which must not be bypassed.
+    coverage:
+      effect: deletion_request
+      includes: Personal contact information processed by Bookyourdata; its policy says it asks service providers and customers to delete after a valid deletion request.
+      excludes: A request does not independently verify deletion by customers, erase original public sources, or remove records retained under a stated exception.
+    automation:
+      mode: manual
+      reason: Form can be prepared with email and requested action, but browser challenge and deletion confirmation remain human steps. Published alternative mailbox is not yet tested as a complete email-only workflow.
+    evidence:
+      - url: https://www.bookyourdata.com/privacy-policy
+        checked_on: 2026-09-28
+        excerpt: For GDPR; You may withdraw your consent fully or partially at any time by submitting a request at optout.bookyourdata.com
+        supports: [removal, regional_scope, verification, coverage]
+      - url: https://www.bookyourdata.com/
+        checked_on: 2026-09-28
+        excerpt: a registered trademark of A Direct Marketing Inc.
+        supports: [identity, brand_association, professional_data_product]
+      - url: https://optout.bookyourdata.com/
+        checked_on: 2026-09-28
+        excerpt: a deletion request gets an email with a link to confirm it.
+        supports: [required_fields, optional_fields, verification, alternative_email, request_actions]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Whether the alternate mailbox supports a complete email-only workflow, Parent ownership and database size, End-to-end processing outcome]
+
+  - id: 360-media-direct
+    name: 360 Media Direct
+    match_domains: [360mediadirect.com]
+    identity:
+      legal_name: 360 Media Direct (legal suffix not established in reviewed notice)
+      brands: [360 Media Direct, 360MD]
+      parent: null
+      official_domains: [360mediadirect.com]
+    relevance:
+      regions: [US-CA, other_regions_not_established]
+      category: postal_marketing
+      data_categories: [contact_data, survey_responses, demographic_data, marketing_preferences]
+      note: Marketing company whose current notice describes sharing, renting and selling personal information. The published detailed deletion workflow is California-specific; EEA eligibility is unverified.
+    removal:
+      method: form
+      destination: https://360-media-direct.privacy.saymine.io/360_Media_Direct
+      alternatives: [privacy@360mediadirect.com]
+      steps:
+        - Open the portal linked from the official privacy notice and request deletion, not marketing enrollment.
+        - Use your actual location; ask the privacy team about an applicable non-California route if necessary.
+        - Complete verification and retain the response. Do not send date of birth or an authorization document unless that specific agent process applies.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Policy requires enough information to match the subject and may use email confirmation. Its separate agent-designation instructions mention name, email and date of birth; these are not treated as universal self-request fields.
+    coverage:
+      effect: deletion_request
+      includes: Request for the company's held personal information, subject to policy exceptions; an opt-out can separately suppress future marketing.
+      excludes: Other marketing partners must be contacted independently. EEA handling, full entity boundaries and exact portal fields are not established.
+    automation:
+      mode: manual
+      reason: California-focused instructions and interactive verification are not compatible with an automatically sent EEA template.
+    evidence:
+      - url: https://360mediadirect.com/privacy-policy/
+        checked_on: 2026-09-28
+        published: January 1, 2026
+        excerpt: Making a verifiable User request does not require you to create an account with us.
+        supports: [identity, data_categories, removal, verification, coverage, regional_limitations]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [EEA-specific handling and exact portal fields, Full legal-entity name and parent, Database size, End-to-end processing outcome]
+
+  - id: 5x5-data
+    name: 5×5 Data
+    match_domains: [5x5data.com, 5x5coop.com]
+    identity:
+      legal_name: 5×5 US, LLC
+      brands: [5×5, Five by Five]
+      parent: null
+      official_domains: [5x5data.com, 5x5coop.com]
+    relevance:
+      regions: [US, other_regions_not_established]
+      category: consumer_marketing
+      data_categories: [contact_identifiers, professional_information, browsing_activity, location, demographic_inferences]
+      note: Member-contributed data cooperative. Its consumer notice contractually excludes contributions about individuals outside the US; the portal accepts country selection but that does not prove EEA exposure.
+    removal:
+      method: form
+      destination: https://privacy.5x5data.com/5x5/opt-out
+      alternatives: []
+      steps:
+        - Enter email, first and last name, and actual residence country in the official portal.
+        - Choose deletion/erasure; sale-sharing and targeted-advertising opt-outs are separate request choices.
+        - Review the accuracy/authorization statement and complete any subsequent verification. A proxy email is optional for an agent, not required for self-service.
+    required_information:
+      fields: [email, first_name, last_name, country, request_type]
+      certainty: documented
+      verification: Live form marks these inputs required. Additional identity checks may follow; verification was not submitted or tested.
+    coverage:
+      effect: deletion_request
+      includes: Request against 5×5's data products and systems, subject to exceptions.
+      excludes: Independent member databases and anonymized information are not proven erased; newsletter unsubscribe is separate.
+    automation:
+      mode: manual
+      reason: Browser form, country selection and possible identity checks; not a validated email-only route.
+    evidence:
+      - url: https://5x5data.com/privacy-policy-consumer/
+        checked_on: 2026-09-28
+        published: July 25, 2025
+        excerpt: In providing the Service, we operate as a data aggregator and broker.
+        supports: [identity, data_categories, regional_scope, coverage]
+      - url: https://privacy.5x5data.com/5x5/opt-out
+        checked_on: 2026-09-28
+        excerpt: Please enter a current email address and full name.
+        supports: [required_fields, verification, removal]
+      - url: https://5x5data.com/privacy-policy/
+        checked_on: 2026-09-28
+        excerpt: 5×5 US, LLC
+        supports: [identity, current_brand, linked_5x5coop_documentation]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Parent ownership and comparable database size, Handling of requests outside the stated US product scope, End-to-end verification and result]
+
+  - id: 33across
+    name: 33Across / WealthStage
+    match_domains: [33across.com]
+    identity:
+      legal_name: 33Across Inc. d/b/a WealthStage
+      brands: [33Across, WealthStage]
+      parent: null
+      official_domains: [33across.com, 33across.co.uk]
+    relevance:
+      regions: [US, UK, EEA_collection_exclusion_claim]
+      category: advertising
+      data_categories: [browser_identifiers, device_identifiers, hashed_email, online_activity]
+      note: The current UK-domain notice also says EEA product collection stopped in 2020 and excludes EEA-indicated IPs. This company claim is not proof of no personal records, including activity outside the EEA; corporate-site data is separate.
+    removal:
+      method: form
+      destination: https://udp.33across.com/udp_opt_out
+      alternatives: [https://www.33across.co.uk/privacy-policy]
+      steps:
+        - Open the data portal in the browser whose advertising records you want to manage.
+        - ERASE MY DATA opens a request form; select Erase My Data, enter your matching email and acknowledge the accuracy/privacy/contact statements. Complete any verification email and retain the result.
+        - Separately apply BROWSER OPT-OUT and, if relevant, EMAIL OPT-OUT for future targeting. Neither is proof that every identifier was deleted.
+        - Repeat browser controls for each relevant browser/device; email-based suppression is a distinct option.
+    required_information:
+      fields: [browser_context, email_for_erasure_request, request_type, accuracy_privacy_contact_acknowledgment]
+      certainty: not_fully_specified
+      verification: Public HTML confirms the required email/request-type fields and acknowledgment. Later verification is untested. Browser preferences and email-hash suppression are separate; no personal request was submitted.
+    coverage:
+      effect: suppression
+      includes: Browser opt-out and email-hash suppression in 33Across systems, with a separate verified erasure-request route.
+      excludes: Not all devices, independent third parties or every WealthStage product by implication; losing opt-out storage may require repeating preferences.
+    automation:
+      mode: manual
+      reason: Browser context, matching-email selection and verification require personal action; a server opt-out cannot set the user's preferences.
+    evidence:
+      - url: https://udp.33across.com/udp_opt_out
+        checked_on: 2026-09-28
+        excerpt: you need to complete the opt-out procedure for each computer and browser.
+        supports: [removal, required_identifiers, scope]
+      - url: https://www.33across.com/privacy-policy
+        checked_on: 2026-09-28
+        excerpt: no longer collect new personal data from data subjects in the European Economic Area
+        supports: [regional_limitation]
+      - url: https://www.33across.co.uk/privacy-policy
+        checked_on: '2026-10-01'
+        excerpt: 33Across d/b/a WealthStage
+        supports: [identity, EEA_exclusion_claim, product_and_website_distinction, opt_out_limits]
+      - url: https://udp.33across.com/udp_opt_out/submit_request?type=delete
+        checked_on: '2026-10-01'
+        excerpt: Erase My Data
+        supports: [request_type_choices, email_requirement, consent_acknowledgment, unsubmitted_public_form]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Independent verification of the company's EEA deletion claim, Exact matched identifiers after email verification, Parent and database size, End-to-end result]
+
+  - id: 6sense
+    name: 6sense
+    match_domains: [6sense.com]
+    identity:
+      legal_name: 6Sense Insights, Inc.
+      brands: [6sense]
+      parent: null
+      official_domains: [6sense.com]
+    relevance:
+      regions: [EEA, UK, CH, US]
+      category: professional
+      data_categories: [professional_contacts, employment_details, business_inferences, online_identifiers]
+      note: Business-contact database with explicit EEA/UK/Swiss rights. Customer-controlled processor data needs the originating business.
+    removal:
+      method: form
+      destination: https://6sense.com/privacy-center/
+      alternatives: [https://6sense.com/privacy-policy/]
+      steps:
+        - Open Privacy Center and select Your Rights.
+        - Request removal from the Business Database and complete the specified identity check.
+        - If the form is unavailable, use the current policy's privacy contact; do not substitute its security mailbox.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Current policy requires identity verification and may request additional information. The form was blocked by a browser security check during research.
+    coverage:
+      effect: deletion_request
+      includes: Business Database removal; customers receive opt-out notifications and historical exports redact removed contacts.
+      excludes: Customer copies with an independent lawful basis, processor data and retention exceptions are not blanket-deleted.
+    automation:
+      mode: manual
+      reason: Current form fields remain inaccessible; no current unobscured privacy mailbox was independently confirmed for automated use.
+    evidence:
+      - url: https://6sense.com/privacy-policy/
+        checked_on: 2026-09-28
+        published: August 24, 2026
+        excerpt: including the right to be removed from our Business Database
+        supports: [identity, regional_scope, removal, verification, exceptions]
+      - url: https://support.6sense.com/docs/contacts-and-compliance
+        checked_on: 2026-09-28
+        published: April 10, 2026
+        excerpt: unless you have an independent lawful basis to possess and use the Contact’s personal information.
+        supports: [downstream_scope, customer_exceptions]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Exact current form fields and alternate mailbox, Parent and database size, End-to-end result]
+
+  - id: 4eyes-delivr-review
+    name: 4Eyes / Delivr.ai — controller review
+    match_domains: [4-eyes.ai]
+    identity:
+      legal_name: 4Eyes.ai Inc. (registry); current Delivr.ai legal-controller relationship unresolved
+      brands: [4Eyes.ai, Delivr.ai]
+      parent: null
+      official_domains: [4-eyes.ai, delivr.ai]
+    relevance:
+      regions: [US, EEA_scope_unconfirmed]
+      category: advertising
+      data_categories: [identity_graph, browser_activity, contact_identifiers, device_identifiers]
+      note: The registered 4Eyes request link displays Delivr.ai, while Delivr's current notice uses a different request platform. Do not assume the legacy portal covers current products.
+    removal:
+      method: investigate
+      destination: https://www.delivr.ai/privacy
+      alternatives: [info@delivr.ai]
+      steps:
+        - Start from Delivr.ai's current privacy notice and its Submit a Request control.
+        - Confirm which controller holds the legacy 4Eyes data before supplying additional identifiers.
+        - Request erasure and sale/sharing opt-out as appropriate; retain the response rather than treating a portal submission as completion.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Legacy PieEye form displays requester/action, username, first/last name, email, phone, comments and accuracy confirmation, but HTML does not establish required fields. Current notice instead identifies Concord as its request platform.
+    coverage:
+      effect: needs_review
+      includes: Current notice describes Delivr site/pixel identity processing and rights requests.
+      excludes: Legacy 4Eyes product data, other controllers and full corporate continuity are not established by a redirect or branded form.
+    automation:
+      mode: blocked
+      reason: Conflicting legacy/current forms and unverified controller continuity require resolution before sending.
+    evidence:
+      - url: https://www.delivr.ai/privacy
+        checked_on: 2026-09-28
+        published: August 30, 2026
+        excerpt: Concord (strictly necessary) Records your cookie preferences and powers our data subject request form.
+        supports: [current_request_platform, data_categories, rights, scope]
+      - url: https://dsrp-platform.pii.ai/7886d230-6f28-42d6-ba95-7d141f0a6520/submit.html
+        checked_on: 2026-09-28
+        excerpt: Powered by PieEye Inc.
+        supports: [legacy_portal_conflict, visible_form_controls]
+    scale: null
+    review_status: needs_research
+    tested_outcome: not_tested
+    unknowns: [Current exact controller and legal continuity, Which form processes legacy data, Required current form fields, Parent and database size, End-to-end result]

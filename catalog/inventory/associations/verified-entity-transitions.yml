@@ -1,0 +1,14 @@
+schema_version: 1
+associations:
+  - guide_id: samba-tv
+    records: [community:samba-tv]
+    rationale: The issuer's SEC-filed agreement explicitly identifies Samba TV Inc as formerly Free Stream Media Corp, resolving the community entry's old legal name. The guide retains device-specific and regional scope limitations.
+  - guide_id: equativ
+    records: [community:smartadserver]
+    rationale: Official Equativ announcement confirms the Smart AdServer rebrand; current billing documentation identifies Equativ SAS and the matching registration number. This maps the core SSP/adserver, not all acquired subsidiaries.
+  - guide_id: dealfront-leadfeeder
+    records: [live:dealfront-finland-oy]
+    rationale: The February 2026 data-subject notice explicitly names Dealfront Finland Oy as a joint controller with Dealfront Group and Germany for the described processing. The association is limited to that search-index workflow and does not add a second independent deletion count.
+  - guide_id: sharethrough-legacy
+    records: [community:sharethrough]
+    rationale: The community's historical Sharethrough Inc identity is exactly the legacy entity investigated in this guide; the documented Equativ transition remains unresolved and is not counted as a ready workflow.

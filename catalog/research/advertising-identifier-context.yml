@@ -1,0 +1,184 @@
+schema_version: 1
+brokers:
+  - id: miq-advertising-context
+    name: MiQ advertising and business-contact data
+    match_domains: [wearemiq.com, miqdigital.com]
+    identity:
+      legal_name: MiQ Digital Limited and relevant group controller
+      brands: [MiQ]
+      parent: null
+      official_domains: [wearemiq.com, miqdigital.com]
+    relevance:
+      regions: [EEA, United Kingdom, Switzerland, Other locations subject to applicable rights]
+      category: advertising
+      data_categories: [Advertising identifiers, Browsing and purchase signals, Inferred interests, Business contacts]
+      note: The responsible group entity depends on the relationship; an advertising identifier and a business email identify different datasets.
+    removal:
+      method: manual
+      destination: privacy@miqdigital.com
+      alternatives: [https://2uk12.share.hsforms.com/2rzLX2iKGRfejUgV13ZaLAQ]
+      steps:
+        - Contact the DPO for European rights; specify whether the request concerns advertising data or a direct business relationship.
+        - Ask for the matching identifiers and responsible entity before disclosing additional data. Request deletion and marketing objection within that scope.
+        - The notice also links an online form in its US-rights section; its dynamic fields were not inspected. Do not invent regional eligibility or required fields.
+        - Browser consent withdrawal is a separate preference action, not evidence of historical or group-wide deletion.
+    required_information:
+      fields: [relationship_context, relevant_matching_identifiers, requested_right]
+      certainty: not_fully_specified
+      verification: Matching checklist and live verification untested.
+    coverage:
+      effect: access_then_review
+      includes: Matched records of the responsible MiQ controller.
+      excludes: Guaranteed all-affiliate or independent-partner erasure.
+    automation:
+      mode: manual
+      reason: Establish dataset and identifiers before preparing a scoped request; email alone is not proven to match advertising records.
+    evidence:
+      - url: https://www.wearemiq.com/uk/policy/privacy-and-compliance
+        checked_on: '2026-10-01'
+        published: August 1, 2026
+        excerpt: privacy@miqdigital.com
+        supports: [group_controller_context, European_DPO_route, advertising_identifiers, US_form_delegation]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Form fields and fulfilment untested., Exact controller and identifiers require context., Comparable scale unreviewed.]
+  - id: knorex-advertising-context
+    name: Knorex advertising data
+    match_domains: [knorex.com]
+    identity:
+      legal_name: Knorex Inc. and affiliates
+      brands: [Knorex, Knorex XPO]
+      parent: null
+      official_domains: [knorex.com]
+    relevance:
+      regions: [EEA, Global advertising subject to applicable rights]
+      category: advertising
+      data_categories: [Cookie and device identifiers, IP and location, Advertising interests, Connected-TV viewing signals]
+      note: Platform data and direct website/account data are separate; the relevant customer may control submitted records.
+    removal:
+      method: manual
+      destination: privacy@knorex.com
+      alternatives: [https://www.knorex.com/privacy/]
+      steps:
+        - Describe the advertising or direct-contact context and ask how to identify the relevant records.
+        - For personal data provided directly to Knorex, request access or deletion. For customer-submitted EEA data, the notice directs you to the relevant customer.
+        - For ad-personalization suppression, use the Privacy Center's regional industry tools in each relevant browser or device; generic advertising can continue.
+        - Preserve the result and distinguish browser preference changes from historical deletion.
+    required_information:
+      fields: [record_and_controller_context, relevant_matching_identifiers]
+      certainty: not_fully_specified
+      verification: The notice does not publish a universal advertising-record matching checklist.
+    coverage:
+      effect: access_then_review
+      includes: Matched Knorex-controlled records or a referral to the relevant customer controller.
+      excludes: Guaranteed customer-wide deletion and erasure from a browser opt-out alone.
+    automation:
+      mode: manual
+      reason: Determine controller and technical matching before disclosure; name-and-email alone is insufficiently supported.
+    evidence:
+      - url: https://www.knorex.com/privacy-policy-services/
+        checked_on: '2026-10-01'
+        published: May 30, 2025
+        excerpt: privacy@knorex.com
+        supports: [platform_scope, direct_data_rights, EEA_customer_referral]
+      - url: https://www.knorex.com/privacy/
+        checked_on: '2026-10-01'
+        excerpt: Advertising Services Privacy Policy
+        supports: [product_policy_separation, regional_preference_tools]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Matching and fulfilment untested., Parent and comparable scale unreviewed.]
+  - id: iqm-advertising-identifiers
+    name: IQM advertising-data request
+    match_domains: [iqm.com]
+    identity:
+      legal_name: IQM Corporation (notice also uses IQM Inc.)
+      brands: [IQM]
+      parent: null
+      official_domains: [iqm.com]
+    relevance:
+      regions: [EEA, Other locations subject to applicable rights]
+      category: advertising
+      data_categories: [Cookie IDs, Mobile advertising IDs, Location signals, Audience segments, Direct contact details]
+      note: Email is a reply contact, not necessarily the identifier of an advertising profile.
+    removal:
+      method: form
+      destination: https://privacyportal-de.onetrust.com/webform/7436a756-393f-458a-a582-dca7d0d14e78/6e117877-3171-4edd-b9ef-4b42732bcace
+      alternatives: [privacy@iqm.com]
+      steps:
+        - Select your relationship and Data Deletion; supply first and last name, email and request details.
+        - The public form marks country, state and Cookie/MAIDs optional. Include a relevant advertising identifier only if available and necessary to match the records.
+        - Review the account-loss warning personally; do not accept unrelated account closure just to remove advertising data.
+        - Complete further verification and save the result. A submission is not a deletion confirmation.
+    required_information:
+      fields: [full_name, email, relationship_context, request_details, requested_right]
+      certainty: not_fully_specified
+      verification: Public form configuration inspected without submission; conditional fields and later verification untested. Cookie/MAIDs is optional in the form, but may be necessary for actual matching.
+    coverage:
+      effect: deletion_request
+      includes: IQM-controlled records matched to the request and verified identifiers.
+      excludes: Unrelated accounts, independent partners and unidentifiable advertising records.
+    automation:
+      mode: manual
+      reason: Advertising identifiers and a conditional account-loss warning require personal review.
+    evidence:
+      - url: https://iqm.com/privacy-policy/
+        checked_on: '2026-10-01'
+        excerpt: IQM Corporation
+        supports: [controller_and_platform_scope, rights_form_delegation]
+      - url: https://privacyportal-de.onetrust.com/webform/7436a756-393f-458a-a582-dca7d0d14e78/6e117877-3171-4edd-b9ef-4b42732bcace
+        checked_on: '2026-10-01'
+        excerpt: Please provide us Cookie/MAIDs
+        supports: [public_required_fields, optional_advertising_ID_field, conditional_account_loss_warning]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Form submission and fulfilment untested., Notice mixes Corporation and Inc. and contains legacy transfer language; legal conclusions are not endorsed., Parent and comparable scale unreviewed.]
+  - id: yoc-visx-browser
+    name: YOC VIS.X ad-personalization choice
+    match_domains: [yoc.com]
+    identity:
+      legal_name: YOC AG
+      brands: [YOC, VIS.X]
+      parent: null
+      official_domains: [yoc.com]
+    relevance:
+      regions: [Europe, Relevant VIS.X advertising contexts]
+      category: advertising
+      data_categories: [Online activity, Interest segments, Device context, Approximate location]
+      note: The generic ad-explanation page contains placeholders, not a finding that YOC has this user's data.
+    removal:
+      method: form
+      destination: https://ads-privacy.yoc.com/dsa.html
+      alternatives: [privacy@yoc.com, https://yoc.com/privacy]
+      steps:
+        - Open YOC's ad-explanation page in the browser where you see its ads and follow its ad-personalization opt-out link yourself.
+        - The linked action goes to t.visx.net/opt-out. It was not opened during research because it may change browser preferences.
+        - Save any confirmation and check other relevant browsing contexts separately. Persistence and runtime controls have not been tested.
+        - To request historical access or deletion, contact privacy@yoc.com to clarify platform identifiers and scope; the browser preference is not proof of erasure.
+    required_information:
+      fields: [actual_browser_context]
+      certainty: not_fully_specified
+      verification: Official explanatory page and delegated action link inspected; action itself untested.
+    coverage:
+      effect: suppression
+      includes: Ad-personalization preference in the browsing context acted on, subject to the runtime result.
+      excludes: Historical erasure, all-device suppression and independent partner data.
+    automation:
+      mode: manual
+      reason: A server-side opt-out would use the wrong browser context; the person must inspect and perform the action.
+    evidence:
+      - url: https://yoc.com/privacy
+        checked_on: '2026-10-01'
+        excerpt: privacy@yoc.com
+        supports: [YOC_AG_identity, privacy_contact, website_scope]
+      - url: https://ads-privacy.yoc.com/dsa.html
+        checked_on: '2026-10-01'
+        excerpt: To opt-out from ad personalization
+        supports: [VIS_X_advertising_context, delegated_optout_link_not_executed]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Runtime controls and preference persistence untested., Platform deletion matching requires clarification., Parent and comparable scale unreviewed.]

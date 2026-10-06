@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "brokers": [
+    {
+      "id": "liveramp-fr",
+      "name": "LiveRamp — France",
+      "match_domains": [
+        "liveramp.fr"
+      ],
+      "identity": {
+        "legal_name": "LiveRamp France SAS",
+        "brands": [
+          "LiveRamp"
+        ],
+        "parent": null,
+        "official_domains": [
+          "liveramp.fr",
+          "liveramp.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "FR"
+        ],
+        "category": "advertising",
+        "data_categories": [
+          "Contact identities",
+          "Pseudonymous identifiers",
+          "Cross-device links"
+        ],
+        "note": "Regional route for the same European controller, not an additional independent database."
+      },
+      "removal": {
+        "method": "email",
+        "destination": "cil@liveramp.com",
+        "alternatives": [
+          "https://liveramp.fr/vos-donnees-personnelles-vos-droits/"
+        ],
+        "steps": [
+          "Use this inbox only for France residents; identify the email addresses used outside this request mailbox.",
+          "Request removal of matched controller-held marketing records and objection to continued marketing use. Ask what minimal suppression data must remain.",
+          "Review additional matching or verification personally. Client-controlled processing needs the relevant client's request.",
+          "The French portal distinguishes objection from erasure: erasing the opt-out record can allow later re-entry. Ask for clarification if the response treats them as incompatible."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "No universal initial-email matching checklist is published. Name and matching email are the initial proposal, not a claim of complete matching; additional identifiers may be required."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Matched controller-held personal marketing records under the France service route.",
+        "excludes": "Other residence routes, independent client copies and every device are not automatically covered."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Residence-specific initial email is implemented; additional identifiers and verification remain personally reviewed."
+      },
+      "evidence": [
+        {
+          "url": "https://liveramp.com/privacy",
+          "checked_on": "2026-09-30",
+          "excerpt": "cil@liveramp.com",
+          "supports": [
+            "resident_specific_email_route"
+          ]
+        },
+        {
+          "url": "https://liveramp.fr/politique-de-confidentialite-de-nos-produits-et-services-2/",
+          "checked_on": "2026-09-30",
+          "published": "Not specified",
+          "excerpt": "LiveRamp France SAS",
+          "supports": [
+            "controller_identity",
+            "product_scope",
+            "rights",
+            "identifiers_processed"
+          ]
+        },
+        {
+          "url": "https://liveramp.fr/vos-donnees-personnelles-vos-droits/",
+          "checked_on": "2026-09-30",
+          "excerpt": "nous n’aurons plus de trace de votre opposition",
+          "supports": [
+            "erasure_suppression_tradeoff",
+            "form_alternative",
+            "verification_may_be_required"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Initial matching and follow-up verification untested.",
+        "No independent client or cross-device deletion demonstrated."
+      ]
+    },
+    {
+      "id": "liveramp-it",
+      "name": "LiveRamp — Italy",
+      "match_domains": [
+        "liveramp.it"
+      ],
+      "identity": {
+        "legal_name": "LiveRamp France SAS",
+        "brands": [
+          "LiveRamp"
+        ],
+        "parent": null,
+        "official_domains": [
+          "liveramp.it",
+          "liveramp.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "IT"
+        ],
+        "category": "advertising",
+        "data_categories": [
+          "Contact identities",
+          "Pseudonymous identifiers",
+          "Cross-device links"
+        ],
+        "note": "Regional route for the same European controller, not an additional independent database."
+      },
+      "removal": {
+        "method": "email",
+        "destination": "privacy.it@liveramp.com",
+        "alternatives": [],
+        "steps": [
+          "Use this inbox only for Italy residents; identify the email addresses used outside this request mailbox.",
+          "Request removal of matched controller-held marketing records and objection to continued marketing use. Ask what minimal suppression data must remain.",
+          "Review additional matching or verification personally. Client-controlled processing needs the relevant client's request."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "No universal initial-email matching checklist is published. Name and matching email are the initial proposal, not a claim of complete matching; additional identifiers may be required."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Matched controller-held personal marketing records under the Italy service route.",
+        "excludes": "Other residence routes, independent client copies and every device are not automatically covered."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Residence-specific initial email is implemented; additional identifiers and verification remain personally reviewed."
+      },
+      "evidence": [
+        {
+          "url": "https://liveramp.com/privacy",
+          "checked_on": "2026-09-30",
+          "excerpt": "privacy.it@liveramp.com",
+          "supports": [
+            "resident_specific_email_route"
+          ]
+        },
+        {
+          "url": "https://liveramp.it/privacy-policy-italia/privacy-policy-dei-servizi/",
+          "checked_on": "2026-09-30",
+          "published": "January 2025",
+          "excerpt": "LiveRamp France SAS",
+          "supports": [
+            "controller_identity",
+            "product_scope",
+            "rights",
+            "identifiers_processed"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Initial matching and follow-up verification untested.",
+        "No independent client or cross-device deletion demonstrated.",
+        "Italian service notice currently redirects to an Italian-language page on liveramp.com."
+      ]
+    },
+    {
+      "id": "liveramp-es",
+      "name": "LiveRamp — Spain",
+      "match_domains": [
+        "liveramp.es"
+      ],
+      "identity": {
+        "legal_name": "LiveRamp France SAS",
+        "brands": [
+          "LiveRamp"
+        ],
+        "parent": null,
+        "official_domains": [
+          "liveramp.es",
+          "liveramp.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "ES"
+        ],
+        "category": "advertising",
+        "data_categories": [
+          "Contact identities",
+          "Pseudonymous identifiers",
+          "Cross-device links"
+        ],
+        "note": "Regional route for the same European controller, not an additional independent database."
+      },
+      "removal": {
+        "method": "email",
+        "destination": "privacy.es@liveramp.com",
+        "alternatives": [],
+        "steps": [
+          "Use this inbox only for Spain residents; identify the email addresses used outside this request mailbox.",
+          "Request removal of matched controller-held marketing records and objection to continued marketing use. Ask what minimal suppression data must remain.",
+          "Review additional matching or verification personally. Client-controlled processing needs the relevant client's request."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "No universal initial-email matching checklist is published. Name and matching email are the initial proposal, not a claim of complete matching; additional identifiers may be required."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Matched controller-held personal marketing records under the Spain service route.",
+        "excludes": "Other residence routes, independent client copies and every device are not automatically covered."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Residence-specific initial email is implemented; additional identifiers and verification remain personally reviewed."
+      },
+      "evidence": [
+        {
+          "url": "https://liveramp.com/privacy",
+          "checked_on": "2026-09-30",
+          "excerpt": "privacy.es@liveramp.com",
+          "supports": [
+            "resident_specific_email_route"
+          ]
+        },
+        {
+          "url": "https://liveramp.es/politica-de-privacidad-de-servicios/",
+          "checked_on": "2026-09-30",
+          "published": "January 2025",
+          "excerpt": "LiveRamp France SAS",
+          "supports": [
+            "controller_identity",
+            "product_scope",
+            "rights",
+            "identifiers_processed"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Initial matching and follow-up verification untested.",
+        "No independent client or cross-device deletion demonstrated."
+      ]
+    }
+  ]
+}

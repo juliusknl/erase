@@ -1,0 +1,100 @@
+schema_version: 1
+brokers:
+  - id: exact-data-consumer-base
+    name: Exact Data / Consumer Base
+    match_domains: [exactdata.com]
+    identity:
+      legal_name: Consumer Base LLC dba Exact Data
+      brands: [Exact Data]
+      parent: Data Axle Inc.
+      official_domains: [exactdata.com, data-axle.com]
+    relevance:
+      regions: [EU, United Kingdom, United States]
+      category: consumer_marketing
+      data_categories: [Consumer contacts, Household attributes, Professional contacts, Marketing segments]
+      note: Named affiliate in the current parent policy; its own site publishes the shared rights mailbox.
+    removal:
+      method: email
+      destination: privacyteam@data-axle.com
+      alternatives: [https://www.data-axle.com/privacy-rights-request/]
+      steps:
+        - Identify Consumer Base LLC / Exact Data explicitly and request deletion and direct-marketing objection for matching records.
+        - Review inclusion of your current postal address; the published email checklist uses name, address and requested right. Include relevant matching emails.
+        - Review any later identity-document request personally. If an existing Data Axle request already names this affiliate, follow up on that scope instead of duplicating it.
+    required_information:
+      fields: [full_name, postal_address, requested_right]
+      certainty: documented
+      verification: Email checklist on the still-published 2022 affiliate notice; current parent notice allows further identity checks. Initial mail attaches no ID.
+    coverage:
+      effect: deletion_request
+      includes: Matched Consumer Base / Exact Data marketing records, with affiliate-specific confirmation requested.
+      excludes: Other Data Axle entities, independent clients and lawfully retained records without explicit confirmation.
+    automation:
+      mode: manual
+      reason: EU initial-email recipe requires postal-disclosure approval; additional identity checks remain manual.
+    evidence:
+      - url: https://www.data-axle.com/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2026-09-01'
+        excerpt: Consumer Base LLC dba Exact Data
+        supports: [identity, group_policy, EU_UK_rights, verification]
+      - url: https://www.exactdata.com/privacy-policy.html
+        checked_on: '2026-10-01'
+        published: '2022-06-30'
+        excerpt: privacyteam@data-axle.com
+        supports: [affiliate_published_recipient, name_address_right_checklist]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Affiliate notice is older than the parent policy., Delivery and exact record matching untested., No inferred coverage of independent customer copies.]
+  - id: donorbase-marketing
+    name: DonorBase
+    match_domains: [donorbase.com]
+    identity:
+      legal_name: DonorBase, Inc.
+      brands: [DonorBase]
+      parent: Data Axle Inc.
+      official_domains: [donorbase.com, dataaxlenonprofit.com, data-axle.com]
+    relevance:
+      regions: [EU, United Kingdom, United States]
+      category: consumer_marketing
+      data_categories: [Donor contacts, Giving-related marketing segments, Household attributes]
+      note: Donor co-operative identified by the parent; applicability depends on actual matching, not residence or a presumption of giving history.
+    removal:
+      method: email
+      destination: privacyteam@data-axle.com
+      alternatives: [https://www.data-axle.com/privacy-rights-request/]
+      steps:
+        - Ask Data Axle's privacy team specifically about DonorBase Inc records; request deletion and marketing objection without claiming a donation history.
+        - Review disclosure of name, current postal address and relevant matching emails; ask for the exact datasets covered.
+        - Handle verification personally. Check whether an existing parent request already includes DonorBase before repeating it; do not assume a charity's own donor records are erased.
+    required_information:
+      fields: [full_name, postal_address, requested_right]
+      certainty: not_fully_specified
+      verification: Uses the shared group email checklist, not a tested DonorBase-specific identity flow. Parent policy allows further verification, potentially ID.
+    coverage:
+      effect: deletion_request
+      includes: DonorBase-controlled matched marketing data, with explicit product confirmation requested.
+      excludes: Charities' independent donor records, other group entities and retention exceptions.
+    automation:
+      mode: manual
+      reason: EU initial-email recipe requires postal-disclosure approval; later matching remains personally reviewed.
+    evidence:
+      - url: https://www.data-axle.com/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2026-09-01'
+        excerpt: DonorBase, Inc.
+        supports: [named_affiliate, group_policy, donor_product, EU_UK_rights, verification]
+      - url: https://www.exactdata.com/privacy-policy.html
+        checked_on: '2026-10-01'
+        published: '2022-06-30'
+        excerpt: privacyteam@data-axle.com
+        supports: [shared_group_recipient_and_initial_checklist_not_DonorBase_delivery_test]
+      - url: https://donorbase.com/
+        checked_on: '2026-10-01'
+        excerpt: 'Research observation: redirected to www.dataaxlenonprofit.com; destination returned HTTP 403.'
+        supports: [brand_redirect_only]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Dedicated nonprofit page inaccessible; parent policy supplies current entity and rights evidence., DonorBase-specific matching and fulfilment untested.]

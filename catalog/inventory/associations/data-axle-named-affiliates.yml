@@ -1,0 +1,8 @@
+schema_version: 1
+associations:
+  - guide_id: exact-data-consumer-base
+    records: [live:consumerbase-llc]
+    rationale: Current Data Axle policy explicitly names Consumer Base LLC dba Exact Data, matching the registry name and exactdata.com product. This is an affiliate-specific request, not an assumption that the existing parent request completed it.
+  - guide_id: donorbase-marketing
+    records: [live:donorbase-inc]
+    rationale: Current parent policy expressly names DonorBase Inc and the DonorBase donor co-operative; donorbase.com redirects to the named nonprofit business. Shared recipient does not prove completion or erase charities' separate records.

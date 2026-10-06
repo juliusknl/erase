@@ -1,0 +1,46 @@
+schema_version: 1
+brokers:
+  - id: neustar-european-privacy
+    name: Neustar European privacy choices
+    match_domains: [home.neustar]
+    identity:
+      legal_name: NeuStar, Inc. and the named Neustar controller businesses in the current TransUnion notice
+      brands: [Neustar, Neustar Information Services, TRUSTID, MarketShare Partners, Neustar IP Intelligence]
+      parent: TransUnion
+      official_domains: [home.neustar, transunion.com]
+    relevance:
+      regions: [EEA, United Kingdom, Switzerland, United States, Brazil]
+      category: advertising
+      data_categories: [Identity matching, Cookies, Mobile advertising identifiers, Hashed email, Audience attributes, Geolocation, Advertising measurement]
+      note: Current notice explicitly describes European advertising and matching data; US fraud and risk products and other TransUnion businesses have separate scope.
+    removal:
+      method: form
+      destination: https://privacychoices.home.neustar/
+      alternatives: [privacy@transunion.com, https://www.transunion.com/privacy/neustar]
+      steps:
+        - Open the official portal from your own relevant browser. The notice tells EEA residents to use an EEA IP address to see the regional choices; do not claim a false location or residence.
+        - Choose the relevant erasure or objection option and match the actual cookie, mobile advertising ID, email hash or other identifier involved. A fresh request-only mailbox does not identify all device records.
+        - If you are an EEA resident unable to access the European portal, use privacy@transunion.com to ask for the published manual process; explain the access issue accurately without attaching identity documents.
+        - Complete any ownership and identity checks yourself. The portal returned an access block during public inspection, so exact fields and later confirmations are not verified.
+        - Record the scope reported by Neustar. Do not equate a browser opt-out with erasure across all TransUnion products or a credit report.
+    required_information:
+      fields: [matching_browser_or_device_or_email_identifier, residence, requested_right]
+      certainty: not_fully_specified
+      verification: Policy explains pseudonymous identifier classes and region-dependent portal access. Exact portal fields and identity challenge remain uninspected after HTTP 403.
+    coverage:
+      effect: deletion_request
+      includes: Matched personal data controlled by the named Neustar businesses, subject to applicable rights and exceptions; opt-out is a separate choice.
+      excludes: All TransUnion businesses, independent customers as controllers, regulated retained data, credit-report deletion and automatic matching of every device.
+    automation:
+      mode: manual
+      reason: Region-dependent portal, technical identifier matching and unknown verification. The fallback email is conditional on portal-access problems, not a generic automatic campaign route.
+    evidence:
+      - url: https://www.transunion.com/privacy/neustar
+        checked_on: '2026-10-01'
+        published: '2026-07-01'
+        excerpt: Information for EEA, UK, and Switzerland Residents.
+        supports: [identity, parent, European_processing, official_portal, conditional_email_fallback, coverage_limits]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Portal fields and fulfilment not tested after access block., Exact identifier checklist varies by product and region., No personal exposure or database-size claim.]

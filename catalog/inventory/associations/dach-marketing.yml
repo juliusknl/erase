@@ -1,0 +1,11 @@
+schema_version: 1
+associations:
+  - guide_id: az-direct-at
+    records: [community:az-direct-at]
+    rationale: Austrian official address-publishing notice names AZ Direct Österreich GmbH; distinct from the existing German AZ Direct guide.
+  - guide_id: sovendus-de
+    records: [community:sovendus]
+    rationale: Official legal notice and privacy policy identify Sovendus GmbH; the separate Sovendus AB discovery is not covered by this association.
+  - guide_id: adrom-at
+    records: [discovery:at-adrom]
+    rationale: Official website identifies Austrian company FN248465s and recipient-profile marketing; the product-data removal workflow remains explicitly unresolved.

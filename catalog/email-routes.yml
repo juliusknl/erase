@@ -1,0 +1,1214 @@
+schema_version: 1
+# Initial requests only. These rules do not claim a successful deletion outcome.
+# Countries describe the person's residence, never the provider's headquarters.
+routes:
+  - guide_id: rb-information-professional
+    destination: contact@rbinformationservices.de
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please delete my matched personal business-contact records from your marketing lists and stop their use or supply for direct marketing. Explain any records retained solely for suppression or another necessary purpose, and identify the scope and recipients covered. This does not request deletion of non-personal company facts or cancellation of a service account.
+    why: RBI rents and sells named business-contact lists for direct marketing.
+    follow_up: Review requests for employer or business-address matching personally. Independent recipients and public sources are separate.
+    evidence:
+      - url: https://rbinformationservices.de/datenschutz.html
+        checked_on: '2026-10-01'
+        excerpt: contact@rbinformationservices.de
+        supports: [professional_list_rights_contact]
+  - guide_id: biscred-professional
+    destination: privacy@biscred.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please delete my matched Biscred professional profile and stop sharing it with customers. Confirm the identifiers covered and explain any necessary retained records. This is not a request to cancel a Bisnow subscription or unrelated service account.
+    why: Biscred supplies business profiles about commercial-real-estate professionals.
+    follow_up: Complete additional identity checks personally; independent customer copies are separate.
+    evidence:
+      - url: https://www.biscred.com/privacy-policy
+        checked_on: '2026-10-01'
+        excerpt: privacy@biscred.com
+        supports: [professional_profile_and_European_email_rights]
+  - guide_id: prospectbase-uk-professional
+    destination: privacy@prospectbase.com
+    countries: [EEA]
+    fields: [full_name, email, work_email]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please delete my matched professional lead records controlled by ProspectBase UK Limited and stop their use for direct marketing. Confirm the controller and identifiers covered, retaining only information necessary to respect my suppression preference or another explained obligation. Do not close a business account; if another entity controls the records, explain the appropriate route.
+    why: ProspectBase supplies professional leads and content-syndication marketing services.
+    follow_up: Review further matching personally. A shared mailbox does not prove that Ireland or independent clients deleted their records.
+    evidence:
+      - url: https://www.prospectbase.com/legal/privacy-policy-uk
+        checked_on: '2026-10-01'
+        excerpt: privacy@prospectbase.com
+        supports: [UK_controller_rights_route_and_suppression]
+  - guide_id: foundry-professional-marketing
+    destination: dataprotection@foundryco.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase my matched professional marketing and lead records controlled by Foundry and stop using or disclosing them for marketing. Identify the controllers and datasets covered and explain any retained suppression or legal records. Do not cancel a paid subscription or unrelated service account.
+    why: Foundry collects professional contact details and supplies B2B marketing services.
+    follow_up: Additional matching may be needed. Independent sponsors and recipients require separate follow-up.
+    evidence:
+      - url: https://foundryco.com/privacy-policy/
+        checked_on: '2026-10-01'
+        published: September 2025
+        excerpt: dataprotection@foundryco.com
+        supports: [current_European_rights_route, marketing_scope]
+  - guide_id: listkit-professional
+    destination: hello@listkit.io
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please remove my matched professional contact profile from the ListKit database and stop disclosing it for prospecting. This concerns my database profile, not cancellation of a subscriber account. Explain any necessary retained records or further verification.
+    why: ListKit supplies business contact profiles to customers.
+    follow_up: Customer-directed records and independent exports require separate requests; review further verification personally.
+    evidence:
+      - url: https://www.listkit.io/privacy
+        checked_on: '2026-10-01'
+        excerpt: hello@listkit.io
+        supports: [contact_database_removal, European_email_rights]
+  - guide_id: recruitbot-candidates
+    destination: privacy@recruitbot.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please delete my matched profile from the candidate database you control and stop supplying it for recruitment. I do not want inclusion in this database. This does not request closure of a business account or withdrawal of an application held independently by an employer. Please explain any retention exception or further verification needed.
+    why: RecruitBot maintains and shares candidate profiles across recruitment customers.
+    follow_up: Additional identity checks may follow; employer-controlled records are separate.
+    evidence:
+      - url: https://recruitbot.com/privacy-policy/
+        checked_on: '2026-10-01'
+        excerpt: privacy@recruitbot.com
+        supports: [candidate_deletion, European_email_rights]
+  - guide_id: pgm-consumer-marketing
+    destination: privacy@porchgroupmedia.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails, postal_address]
+    requires_matching_email: true
+    effect: suppression
+    subject: Marketing database opt-out
+    request: Please opt my matched records out of PGM's internal marketing database and its marketing data products and services. Stop further marketing disclosure and confirm the identifiers covered and any retained suppression data. I am using your general marketing opt-out, not asserting US residence or requesting closure of another Porch service.
+    why: PGM provides consumer and household marketing audiences.
+    follow_up: Review further matching personally. Suppression is not proof of full erasure or deletion by independent recipients.
+    evidence:
+      - url: https://porchgroupmedia.com/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2026-01-23'
+        excerpt: privacy@porchgroupmedia.com
+        supports: [general_marketing_optout_email]
+      - url: https://optout.porchgroupmedia.com/
+        checked_on: '2026-10-01'
+        excerpt: name, address, phone and/or email
+        supports: [matching_identifiers_not_mandatory_email_checklist]
+  - guide_id: exact-data-consumer-base
+    destination: privacyteam@data-axle.com
+    countries: [AT, BE, BG, HR, CY, CZ, DK, EE, FI, FR, DE, GR, HU, IE, IT, LV, LT, LU, MT, NL, PL, PT, RO, SK, SI, ES, SE]
+    fields: [full_name, email, other_emails, postal_address]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please delete my matched personal data controlled by Consumer Base LLC dba Exact Data and stop its use for direct marketing. Please confirm specifically which Exact Data records and identifiers are covered, explain retention exceptions and distinguish independent customer copies. This is my own EU-resident request, not an agent bulk submission or proof that you hold my data.
+    why: Exact Data markets consumer and professional contact lists and audience segments.
+    follow_up: Personally review later identity checks; this request contains no identity document and does not claim all-group deletion. If an existing parent request already covers this entity, use its thread rather than duplicating it.
+    evidence:
+      - url: https://www.data-axle.com/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2026-09-01'
+        excerpt: Consumer Base LLC dba Exact Data
+        supports: [entity, EU_email_rights, verification]
+      - url: https://www.exactdata.com/privacy-policy.html
+        checked_on: '2026-10-01'
+        published: '2022-06-30'
+        excerpt: privacyteam@data-axle.com
+        supports: [recipient, name_address_right_checklist]
+  - guide_id: donorbase-marketing
+    destination: privacyteam@data-axle.com
+    countries: [AT, BE, BG, HR, CY, CZ, DK, EE, FI, FR, DE, GR, HU, IE, IT, LV, LT, LU, MT, NL, PL, PT, RO, SK, SI, ES, SE]
+    fields: [full_name, email, other_emails, postal_address]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please delete my matched personal data controlled by DonorBase Inc and stop its use for direct marketing. Please identify the DonorBase datasets and identifiers covered and explain anything retained. I am not asserting a donation history or asking you to close a charity account. This is my own EU-resident request, not an authorized-agent bulk request.
+    why: DonorBase operates a donor-data co-operative used for marketing audiences.
+    follow_up: Review any further verification personally; no identity document is attached. A shared Data Axle mailbox does not prove that this request deletes independent charities' records or all other affiliates.
+    evidence:
+      - url: https://www.data-axle.com/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2026-09-01'
+        excerpt: DonorBase, Inc.
+        supports: [named_affiliate, group_policy, EU_rights]
+      - url: https://www.exactdata.com/privacy-policy.html
+        checked_on: '2026-10-01'
+        published: '2022-06-30'
+        excerpt: privacyteam@data-axle.com
+        supports: [shared_group_recipient_and_checklist]
+  - guide_id: aventura-post-marketing
+    destination: info@de.aventurapost.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: suppression
+    request: I withdraw any marketing consent attributed to me and object to further advertising use of my matching contact records, including records supplied by partners. Please suppress marketing, erase personal data not required for a specific explained retention purpose, and confirm the result. Explain the scope and duration of any retained legal-purpose or blocking-list data. I do not assert a particular signup; do not cancel unrelated contracts or services.
+    why: Aventura receives partner-supplied contacts and sends advertising email.
+    follow_up: The notice describes suppression and legal-purpose retention, not guaranteed immediate total deletion; review further matching personally.
+    evidence:
+      - url: https://www.aventurapost.com/sc/todo=cp_aventurapost
+        checked_on: '2026-10-01'
+        excerpt: info@de.aventurapost.com
+        supports: [rights_email, partner_contacts, suppression]
+  - guide_id: leadspot-consumer-marketing
+    destination: datenschutz@leadspot.de
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase my matched consumer marketing records and withdraw any marketing consent attributed to me. Stop marketing and onward sponsor disclosure, identify recipients and explain any retained records or additional matching needed. I do not assert that I entered a competition. Do not cancel unrelated services or contracts.
+    why: Lead Spot advertises its own consumer email and postal databases and sponsor lead generation.
+    follow_up: Additional identifiers and sponsor outcomes need review; name and email do not guarantee a complete match.
+    evidence:
+      - url: https://www.leadspot.de/datenschutz/
+        checked_on: '2026-10-01'
+        excerpt: datenschutz@leadspot.de
+        supports: [rights_email, withdrawal]
+  - guide_id: smash-sponsor-marketing
+    destination: mail@agentur-smash.de
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase my matched marketing records, withdraw any marketing consent attributed to me and stop sponsor disclosure. Please identify recipients and explain retained records or additional matching needed. I do not assert that I entered a competition. Do not cancel unrelated services or contracts.
+    why: Smash supplies marketing contact data to sponsors.
+    follow_up: Further identifiers and independent sponsor requests require review.
+    evidence:
+      - url: https://agentur-smash.de/datenschutz/
+        checked_on: '2026-10-01'
+        excerpt: mail@agentur-smash.de
+        supports: [rights_email, sponsor_scope]
+  - guide_id: inside-lead-consumer
+    destination: service@inside-lead.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails, postal_address]
+    requires_matching_email: true
+    effect: suppression
+    request: I withdraw any consent attributed to me for marketing and object to use or onward supply of my personal lead and contact data for direct marketing. Please suppress further marketing and erase matched personal data except where retention is necessary and explained. Please notify sponsors that received my data of this withdrawal and identify those recipients. I do not assert that I entered a competition; if an actual participation depends on marketing consent, I understand withdrawal may end that participation. This is not a request to cancel unrelated subscriptions or contracts. Please confirm the scope and any further matching needed.
+    why: Inside Lead supplies consumer contacts for sponsor email, postal and telephone marketing.
+    follow_up: Original matching email and postal details follow the published suggested template. Postal disclosure must be approved; sponsor notification is not proof of sponsor deletion.
+    evidence:
+      - url: https://www.inside-lead.com/
+        checked_on: '2026-10-01'
+        excerpt: Vorlage Widerruf - Inside Lead GmbH
+        supports: [rights_email, original_identifier_matching, sponsor_notification, participation_consequence]
+  - guide_id: all-travel-sponsor-marketing
+    destination: datenschutz@all-travel-marketing.de
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase my matched personal marketing and sponsor-disclosure records controlled by All Travel Marketing. I withdraw any marketing consent attributed to me and object to further use or disclosure for direct marketing. I do not assert participation in a competition. Please identify recipients to whom my data was disclosed, explain any retained records, and tell me if additional matching or verification is necessary. Do not cancel unrelated travel services or contracts.
+    why: All Travel Marketing's policy describes supplying email, telephone and postal details to named marketing sponsors.
+    follow_up: Initial email-linked request only; postal or telephone matching and independent sponsor requests require personal review.
+    evidence:
+      - url: https://www.all-travel-marketing.de/datenschutz/
+        checked_on: '2026-10-01'
+        excerpt: datenschutz@all-travel-marketing.de
+        supports: [rights_email, sponsor_disclosure, erasure_objection]
+  - guide_id: best-relations-sponsor-marketing
+    destination: datenschutz@best-relations-digital.de
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase my matched personal marketing records controlled by Best Relations Digital. I withdraw any marketing consent attributed to me and object to further use or disclosure to sponsors for direct marketing. This does not assert that I entered any competition. Please identify recipients and any records retained, and explain additional matching or verification needed. Do not cancel unrelated services or contracts.
+    why: Best Relations Digital's published notice describes sponsor disclosure of email, telephone and postal contact data for marketing.
+    follow_up: Name and matching emails only initially; further identifiers and sponsor follow-through remain reviewed.
+    evidence:
+      - url: https://www.best-relations-digital.de/datenschutzerklaerung/
+        checked_on: '2026-10-01'
+        excerpt: datenschutz@best-relations-digital.de
+        supports: [rights_email, sponsor_marketing_scope]
+  - guide_id: costar-professional-property
+    destination: support@costar.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails, work_email, employer]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase my matched personal professional and property-contact records in CoStar's information services where you act as controller, and stop using or disclosing those records for direct marketing. This is not a request to close a customer account or remove an entire property or company listing. Please use the identifying details below and explain any additional matching or identity verification needed. Please identify any retained personal data and any separate product controller I should contact; I do not assume this request covers all CoStar Group brands or independent recipients.
+    why: CoStar professional property information can link named people to business contacts and property relationships.
+    follow_up: Initial CoStar-product email only. Further address, phone, identity checks and brand-specific referrals remain manual.
+    evidence:
+      - url: https://www.costar.com/en-gb/gbr/about/privacy-notice
+        checked_on: '2026-10-01'
+        published: '2026-08-10'
+        excerpt: 'Email: Support@costar.com'
+        supports: [official_rights_email, European_rights, product_specific_scope]
+  - guide_id: sovrn-advertising
+    destination: privacy@sovrn.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase personal advertising and data-service records linked to the email identifiers below, including their hashed forms, where you act as controller, and stop their use or disclosure for direct marketing and targeted advertising. This concerns reader data, not closure of any publisher account. Please explain any additional matching or verification needed and identify the appropriate publisher controller where you process data only on its instructions. I do not assume this email identifies all of my cookies or devices.
+    why: Sovrn Signal and Data services use hashed email for cross-device matching and distribute audience data.
+    follow_up: Initial email-linked request only. Technical identifiers, further verification and publisher referrals remain manual; no home address or identity document is sent.
+    evidence:
+      - url: https://www.sovrn.com/privacy-policy/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2026-01-14'
+        excerpt: For EEA/UK/Switzerland residents
+        supports: [European_email_rights, email_hash_identifiers, controller_processor_limits]
+  - guide_id: burda-direkt-marketing
+    destination: burdadirektservices@datenschutzanfrage.de
+    countries: [EEA]
+    fields: [full_name, email, other_emails, postal_address]
+    effect: suppression
+    request: I object to the processing and disclosure of my personal data for direct marketing and related profiling, and withdraw any marketing or contact-enrichment consent attributed to me. Please suppress my matched records from those uses, including enrichment of telephone contact details. I do not assert that I entered a competition. Do not cancel any paid subscriptions or unrelated services. Please identify the controllers and datasets covered and explain any limited consent-evidence or suppression retention and any separate sponsor requests required.
+    why: The current Burda Direkt notice describes sponsor marketing, shared subscription marketing and telephone enrichment from external sources.
+    follow_up: Postal disclosure needs explicit permission. Initial marketing-only request; referrals, further proof and retained records need review.
+    evidence:
+      - url: https://www.burdadirect.com/datenschutz
+        checked_on: '2026-10-01'
+        excerpt: Datenschutz
+        supports: [official_embedded_notice]
+      - url: https://cdn.datenschutz.burda.com/1552.js
+        checked_on: '2026-10-01'
+        published: '2026-09-28'
+        excerpt: burdadirektservices@datenschutzanfrage.de
+        supports: [European_rights_email, marketing_objection, controller_scope]
+  - guide_id: cbinsights-professional
+    destination: privacy@cbinsights.com
+    countries: [EEA]
+    fields: [full_name, email, work_email, employer]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase my matched personal professional and business-contact data controlled by CB Insights, including data obtained from external sources, and stop using my personal information for direct marketing. Please search using the professional identifiers below. This is not merely a newsletter unsubscribe or a request to delete an entire company profile. Please identify any further verification needed and explain any retained personal data.
+    why: CB Insights obtains professional identities and contacts from public sources, partners and data suppliers.
+    follow_up: Name, work email and employer are initial matching details; additional verification and retention decisions remain reviewed.
+    evidence:
+      - url: https://www.cbinsights.com/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2026-07-31'
+        excerpt: To exercise your rights, please contact us at
+        supports: [European_email_rights, external_professional_data]
+  - guide_id: melissa-consumer-databases
+    destination: ConsumerRequest@melissa.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails, postal_address]
+    effect: deletion_request
+    request: Please delete my matching personal records from Melissa Lookups and the consumer database products you control. I object to use or supply of my personal information for marketing. This concerns database records, not merely unsubscribing from Melissa's own advertising. Please explain any further matching requirements and any retained data.
+    why: Melissa database products connect names and addresses with contact and consumer attributes.
+    follow_up: Postal disclosure permission is required. This is an initial written request; additional verification or retained records need review.
+    evidence:
+      - url: https://www.melissa.com/eu-us-data-privacy-framework
+        checked_on: '2026-10-01'
+        published: August 2026
+        excerpt: ConsumerRequest@melissa.com
+        supports: [European_email_rights, written_deletion]
+  - guide_id: market-location-uk
+    destination: customerservices@marketlocation.com
+    countries: [EEA]
+    fields: [full_name, email, work_email, employer]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase my matched personal business-contact records from the ML Business Database and the 118 Business Database you jointly control with 118 Data Resource Limited, where applicable. I object to use of my personal information for direct marketing. Please retain only minimal suppression information needed to prevent re-acquisition, identify the datasets searched and explain any separate customer or source-controller requests required. This is not a claim of UK residence or a request to erase a company record or independent 118 processing.
+    why: Business-contact databases distribute named professional identities and direct contact details for marketing.
+    follow_up: The current product notice accepts email rights requests without restricting them to UK residents. Name, work email and employer are an initial matching proposal; no home address, phone or identity document is disclosed.
+    evidence:
+      - url: https://externaldocuments.marketlocation.co.uk/api/PrivacyPolicyML?showtitle=false&cookiePolicyUrl=https://www.marketlocation.com/cookie-policy/
+        checked_on: '2026-10-01'
+        published: '2026-02-11 (version 1.16)'
+        excerpt: To make a data protection rights request
+        supports: [email_rights, business_database_scope, joint_controller_limits]
+  - guide_id: myoffers-uk
+    destination: compliance@myoffersltd.co.uk
+    countries: [EEA]
+    fields: [full_name, email, other_emails, postal_address]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase my matched personal records controlled by MyOffers 2019 Limited where applicable, stop direct marketing and marketing profiling, and withdraw any marketing consent attributed to me. Preserve only minimal suppression data needed to respect my objection. Please separately explain any identity-verification or tracing retention and identify which datasets and brands were covered. I do not claim UK residence or that I entered a competition; this request does not assume deletion across every DM group company or independent recipient.
+    why: Competition and lifestyle data can be reused for marketing profiles and identity/tracing services.
+    follow_up: The published product rights channel has no stated residence restriction. Name, matching emails and a consented postal address are an initial proposal, not an exhaustive checklist; review additional verification personally.
+    evidence:
+      - url: https://cfeliveapi.myoffers.co.uk/api/ContentManagement/getPrivacyStatement
+        checked_on: '2026-10-01'
+        published: '2026-05-13'
+        excerpt: You can ask us to stop processing or sharing your details at any time
+        supports: [product_rights, email_contact, suppression_tradeoff]
+  - guide_id: beenverified-personal
+    destination: dpo@beenverified.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails, postal_address]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase my matched personal records held by BeenVerified, LLC where applicable and exclude them from your people-search results. I am exercising my own privacy rights regarding my listed records, not asking you to close a paid customer account. Please identify which records and identifiers are covered, distinguish public-listing suppression from deletion, and explain any retained information or separate source-controller requests needed. This is not a request to erase every Lifetime Value affiliate's database.
+    why: Public-record aggregation can expose contact details, address histories and household associations.
+    follow_up: Current general rights allow written notice and identify the DPO and EU representative. Name, matching emails and a consented address are an initial proposal; further verification may be needed, and no identification document is attached.
+    evidence:
+      - url: https://www.beenverified.com/faq/privacy/
+        checked_on: '2026-09-30'
+        published: '2026-09-09'
+        excerpt: by written notice to us
+        supports: [general_rights_request, EU_contact, service_data_scope]
+  - guide_id: firmenliste-dach
+    destination: support@firmenliste.net
+    countries: [DE, AT]
+    fields: [full_name, email, work_email, employer]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase my matched personal marketing record controlled by Adresskontor GmbH for FirmenListe.net where applicable, and stop using or supplying my personal information for direct marketing. This concerns my personal business record, not deletion of the company itself or an original public register. Please identify the records covered, explain any retained information and tell me which independent recipients require a separate request.
+    why: Business-address lists include named representatives and can supply personal contact details for third-party marketing.
+    follow_up: Name and employer are a minimal initial matching proposal, not a guaranteed complete checklist. Review any additional verification personally; no home address, phone or identification document is supplied.
+    evidence:
+      - url: https://www.firmenliste.net/datenschutz.php
+        checked_on: '2026-09-30'
+        published: '2026-08-01'
+        excerpt: Ansprüche auf Auskunft, Berichtigung oder Löschung
+        supports: [Article14_personal_business_records, email_rights]
+      - url: https://www.firmenliste.net/kontakt.php
+        checked_on: '2026-09-30'
+        excerpt: Kontaktdaten
+        supports: [published_support_recipient, DACH_scope]
+  - guide_id: adpublisher-consumer
+    destination: datenschutz@adpublisher.com
+    countries: [EEA]
+    fields: [full_name, email, postal_address, other_emails]
+    effect: deletion_request
+    request: Please erase my matched marketing records controlled by adpublisher AG and stop using or supplying my personal data for direct marketing and marketing enrichment. I object to direct marketing and, if you rely on any marketing consent attributed to me, withdraw it. Identify the records and any separate recipients concerned; explain any required retention or minimal suppression record. This is not an assertion that I entered a sweepstakes.
+    why: Postal-address trading and marketing enrichment can connect contact details across advertisers.
+    follow_up: Name and explicitly permitted address match the documented postal-data scope; further verification may be needed. Do not copy the sweepstakes registration checklist into a privacy request.
+    evidence:
+      - url: https://www.adpublisher.com/
+        checked_on: '2026-09-30'
+        excerpt: datenschutz@adpublisher.com
+        supports: [Article14_rights_route, postal_scope]
+      - url: https://www.adpublisher.com/datenschutz.php
+        checked_on: '2026-09-30'
+        published: '2026-04-30'
+        excerpt: Hierzu genügt eine E-Mail an
+        supports: [marketing_objection_email, erasure_right]
+  - guide_id: add-conti
+    destination: datenschutz@addconti.ch
+    countries: [DE]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase my matched personal records controlled by Add Conti GmbH and stop using or disclosing my data for direct marketing. If you rely on marketing consent attributed to me, I withdraw it. This is not an assertion that I entered any sweepstakes. Please identify which records you matched, explain any required retention and identify independent recipients needing a separate request.
+    why: Published sweepstakes processing includes contact details and sponsor marketing disclosures involving German residents.
+    follow_up: Matching emails are an initial proposal; no phone, birth date, document or address is sent. The Swiss regulator reported unanswered requests in 2025, so delivery must not be treated as fulfilment.
+    evidence:
+      - url: https://addconti.ch/
+        checked_on: '2026-09-30'
+        excerpt: datenschutz@addconti.ch
+        supports: [published_privacy_mailbox]
+      - url: https://addconti.ch/page2.html
+        checked_on: '2026-09-30'
+        published: '2023-04-06'
+        excerpt: Recht auf Berichtigung oder Löschung
+        supports: [rights, marketing_scope]
+  - guide_id: circana-marketing
+    destination: privacy@circana.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase individually identifiable marketing and audience profiles about me that Circana controls, and stop using my personal data for direct marketing or related profiling. Identify the controller and datasets searched. This does not instruct you to close a panel or customer account, erase genuinely deidentified aggregates, or claim deletion from independently controlled client databases. Please explain any distinct process needed for those records.
+    why: Purchase-derived audience profiles can link household spending to advertising segments.
+    follow_up: The EEA rights notice accepts email requests. Name and matching emails are an initial proposal, not a guaranteed complete matching set; further verification and controller-specific steps need personal review.
+    evidence:
+      - url: https://www.circana.com/the-circana-group-global-privacy-policy-and-notice
+        checked_on: '2026-09-30'
+        excerpt: privacy@circana.com
+        supports: [EEA_rights_route, controller_scope]
+      - url: https://www.circana.com/solutions/complete-audiences
+        checked_on: '2026-09-30'
+        excerpt: loyalty card databases and receipt capture panels
+        supports: [audience_product_relevance]
+  - {"guide_id":"liveramp-fr","destination":"cil@liveramp.com","countries":["FR"],"fields":["full_name","email","other_emails"],"requires_matching_email":true,"effect":"deletion_request","request":"Please erase my matched personal marketing records held by LiveRamp France SAS as controller and stop their use for direct marketing. Please preserve only minimal suppression information necessary to respect my objection, and explain if your erasure and objection processes require a different choice. Identify the datasets and matching identifiers covered; do not treat this as deletion of every client-controlled record.","why":"Identity linkage can connect contact information to advertising identifiers and devices.","follow_up":"Name and matching email are an initial matching proposal. No address, phone, device ID or document is sent. Review requests for more information personally.","evidence":[{"url":"https://liveramp.com/privacy","checked_on":"2026-09-30","excerpt":"cil@liveramp.com","supports":["resident_specific_email_route"]},{"url":"https://liveramp.fr/politique-de-confidentialite-de-nos-produits-et-services-2/","checked_on":"2026-09-30","published":"Not specified","excerpt":"LiveRamp France SAS","supports":["controller_identity","product_scope","rights","identifiers_processed"]}]}
+  - {"guide_id":"liveramp-it","destination":"privacy.it@liveramp.com","countries":["IT"],"fields":["full_name","email","other_emails"],"requires_matching_email":true,"effect":"deletion_request","request":"Please erase my matched personal marketing records held by LiveRamp France SAS as controller and stop their use for direct marketing. Please preserve only minimal suppression information necessary to respect my objection, and explain if your erasure and objection processes require a different choice. Identify the datasets and matching identifiers covered; do not treat this as deletion of every client-controlled record.","why":"Identity linkage can connect contact information to advertising identifiers and devices.","follow_up":"Name and matching email are an initial matching proposal. No address, phone, device ID or document is sent. Review requests for more information personally.","evidence":[{"url":"https://liveramp.com/privacy","checked_on":"2026-09-30","excerpt":"privacy.it@liveramp.com","supports":["resident_specific_email_route"]},{"url":"https://liveramp.it/privacy-policy-italia/privacy-policy-dei-servizi/","checked_on":"2026-09-30","published":"January 2025","excerpt":"LiveRamp France SAS","supports":["controller_identity","product_scope","rights","identifiers_processed"]}]}
+  - {"guide_id":"liveramp-es","destination":"privacy.es@liveramp.com","countries":["ES"],"fields":["full_name","email","other_emails"],"requires_matching_email":true,"effect":"deletion_request","request":"Please erase my matched personal marketing records held by LiveRamp France SAS as controller and stop their use for direct marketing. Please preserve only minimal suppression information necessary to respect my objection, and explain if your erasure and objection processes require a different choice. Identify the datasets and matching identifiers covered; do not treat this as deletion of every client-controlled record.","why":"Identity linkage can connect contact information to advertising identifiers and devices.","follow_up":"Name and matching email are an initial matching proposal. No address, phone, device ID or document is sent. Review requests for more information personally.","evidence":[{"url":"https://liveramp.com/privacy","checked_on":"2026-09-30","excerpt":"privacy.es@liveramp.com","supports":["resident_specific_email_route"]},{"url":"https://liveramp.es/politica-de-privacidad-de-servicios/","checked_on":"2026-09-30","published":"January 2025","excerpt":"LiveRamp France SAS","supports":["controller_identity","product_scope","rights","identifiers_processed"]}]}
+  - guide_id: amazinghiring
+    destination: dpo@amazinghiring.com
+    countries: [EEA]
+    fields: [full_name, email, work_email]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please remove my matching candidate profile and associated public accounts from AmazingHiring search results. I request erasure of the personal candidate data you control and object to its continued use for recruitment sourcing. Please distinguish search suppression from deletion and identify any retained request evidence or customer-controlled copies requiring separate action.
+    why: Recruitment search exposes professional contact details and aggregates public profiles.
+    follow_up: The help center accepts email search-removal requests. Name and work email follow its visible form's matching fields; further verification remains personal, and downstream deletion is not assumed.
+    evidence:
+      - url: https://help.amazinghiring.com/article/4824
+        checked_on: '2026-09-30'
+        excerpt: disappear from the search results on AmazingHiring
+        supports: [email_alternative, limited_search_scope]
+      - url: https://amazinghiring.com/gdpr-form
+        checked_on: '2026-09-30'
+        excerpt: Work email
+        supports: [matching_information]
+      - url: https://amazinghiring.com/privacy-policy
+        checked_on: '2026-09-30'
+        excerpt: Processing of Personal Data in the European Economic Area
+        supports: [EEA_scope, erasure_rights]
+  - guide_id: b2b-datenbank-de
+    destination: datenschutz@b2b-datenbank.de
+    countries: [EEA]
+    fields: [full_name, email, work_email, employer]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please delete my matched professional record from the B2B-Datenbank.de search index and stop processing it for direct marketing. This concerns my listed personal data, not a customer account or the company as a whole. Please explain any retained data and any customer-held copies requiring separate action.
+    why: Public professional identities are indexed for paid business prospecting.
+    follow_up: The product notice accepts email requests but publishes no fixed matching checklist. Review any further requirements personally; no identity document is attached.
+    evidence:
+      - url: https://b2b-datenbank.de/assets/files/Datenschutzhinweise-betroffene.pdf
+        checked_on: '2026-09-30'
+        published: January 2024
+        excerpt: datenschutz@b2b-datenbank.de
+        supports: [database_rights_recipient, professional_scope, deletion_request]
+  - guide_id: salesassistiq
+    destination: legal@salesassistiq.ai
+    countries: [EEA]
+    fields: [full_name, email, work_email, employer]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please delete my professional profile and stop supplying it for sales targeting. This concerns my directory record, not a subscriber account. Please clarify which data you hold and which customer-held copies require separate action.
+    why: Public career information is supplied to customer CRMs.
+    follow_up: General policy choices accept database deletion by email without a residence restriction. Verification and downstream results remain untested.
+    evidence:
+      - url: https://salesassistiq.ai/privacy-policy/
+        checked_on: 2026-09-30
+        published: "2026-08-10"
+        excerpt: or emailing us at legal@salesassistiq.ai.
+        supports: [general_email_deletion, matching, scope]
+  - guide_id: data-axle
+    destination: privacyteam@data-axle.com
+    countries: [AT, BE, BG, HR, CY, CZ, DK, EE, FI, FR, DE, GR, HU, IE, IT, LV, LT, LU, MT, NL, PL, PT, RO, SK, SI, ES, SE]
+    fields: [full_name, email, other_emails, postal_address]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please delete my matched personal data from the consumer and business marketing databases controlled by Data Axle Inc. I object to continued use for direct marketing. Please identify the datasets and identifiers covered and explain any records retained. This is a personal EU-resident request, not an authorized-agent bulk submission.
+    why: Marketing databases associate contact identities with household, business and online attributes.
+    follow_up: The policy may require additional verification, including identity documents. Review those requests personally; this initial request attaches no document and does not claim group-wide deletion.
+    evidence:
+      - url: https://www.data-axle.com/privacy-policy/
+        checked_on: 2026-09-30
+        published: "2026-09-01"
+        excerpt: Residents of the European Union and United Kingdom
+        supports: [EU_email_route, deletion_scope, verification]
+      - url: https://www.exactdata.com/privacy-policy.html
+        checked_on: 2026-09-30
+        published: "2022-06-30"
+        excerpt: please send an email to privacyteam@data-axle.com
+        supports: [published_recipient, name_address_right_matching]
+  - guide_id: liveramp-de
+    destination: privacy.de@liveramp.com
+    countries: [DE]
+    fields: [full_name, email, other_emails, postal_address]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase my matched personal contact and identity-linkage records held by LiveRamp France SAS as controller under your German services privacy notice. I object to their continued processing for direct marketing. Please identify the records and identifiers covered, and explain any retained data or customer-controlled records requiring a separate request.
+    why: Linking contact identities to advertising identifiers can connect activity across devices and services.
+    follow_up: This requests controller-held records, not every customer's copy or every device. Review additional matching requirements personally; no identity document is attached.
+    evidence:
+      - url: https://liveramp.com/privacy
+        checked_on: 2026-09-30
+        excerpt: privacy.de@liveramp.com
+        supports: [German_resident_email_route]
+      - url: https://liveramp.de/privacy/datenschutzerklarung-fur-die-liveramp-dienste/
+        checked_on: 2026-09-30
+        excerpt: Ihren Vor- und Nachnamen, Ihre Postanschrift, Ihre E-Mail-Adresse
+        supports: [required_information, erasure_route, controller_scope]
+  - guide_id: vendelux
+    destination: privacy@vendelux.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    optional_fields: [work_email]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please delete my individual Professional Profile from the Vendelux database and stop supplying my personal contact information for prospecting. Search the matching email identifiers supplied below. This request concerns my individual profile, not removal of an event or company listing or cancellation of a customer account.
+    why: Conference intelligence can connect professional contact details with event participation.
+    follow_up: Additional matching or identity verification may be requested. Independent customer copies and customer-controlled uploads are separate; an email request is not proof of deletion.
+    evidence:
+      - url: https://vendelux.com/privacy
+        checked_on: 2026-09-29
+        published: "2026-05-04"
+        excerpt: Vendelux Inc.
+        supports: [reviewed_privacy_mailbox, profile_scope]
+      - url: https://vendelux.com/privacy
+        checked_on: 2026-09-30
+        published: "2026-05-04"
+        excerpt: If you are unable to, or choose not to utilize our Privacy Center
+        supports: [email_alternative, European_residents, profile_deletion]
+  - guide_id: salesintel
+    destination: gary.holtz@salesintel.io
+    countries: [EEA]
+    fields: [full_name, email, work_email, employer]
+    requires_matching_email: true
+    effect: deletion_request
+    subject: Professional database deletion and opt-out
+    request: Please delete my matching professional contact record from the SalesIntel database and stop distributing it for marketing. I object to direct marketing and related profiling. My employer and work email are provided for matching. Please confirm removal and any minimal suppression or required retention. This does not request deletion of an employer's account or assume independent customer copies are erased.
+    why: SalesIntel researches and licenses professional contact data, including European business records.
+    follow_up: Requires work email and employer. Complete any additional identity check personally; previous completed requests remain completed.
+    evidence:
+      - url: https://salesintel.io/data-gathering-privacy/
+        checked_on: 2026-09-30
+        excerpt: include your full name, employer, work email address, and the specific right you wish to exercise
+        supports: [DPO_email_route, required_professional_matching, European_rights]
+  - guide_id: revenuebase
+    destination: privacy@revenuebase.ai
+    countries: [EEA]
+    fields: [full_name, email, work_email, employer]
+    requires_matching_email: true
+    effect: deletion_request
+    subject: Opt-Out Request
+    request: Please remove my professional contact information from the RevenueBase database and add the matching identifiers to your suppression list to prevent reintroduction, including through customer submissions. My work email and current or most recent employer are supplied for matching. Please confirm the scope of removal and retained suppression information. Independent customer CRM copies remain separate.
+    why: RevenueBase licenses professional contact records worldwide and publishes a specific removal checklist.
+    follow_up: Requires a work email and current or most recent employer. Further verification may follow; removal does not automatically delete past customer exports.
+    evidence:
+      - url: https://wf.revenuebase.ai/privacy-policy
+        checked_on: 2026-09-30
+        excerpt: Include your full name, work email address, and current or most recent employer.
+        supports: [database_email_removal, required_subject, professional_matching, suppression]
+  - guide_id: scileads
+    destination: legal@scileads.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please delete my matching researcher or professional contact profile from the SciLeads database supplied to clients, and retain only the minimum suppression information necessary to prevent re-addition or specifically required records. I object to use for direct marketing. This concerns your licensed profile database, not the original publications or an employer's customer account.
+    why: SciLeads supplies researcher and scientific-professional profiles for commercial outreach.
+    follow_up: Include a relevant professional email. Further profile matching or identity checks may follow; publications and independent customer copies are separate.
+    evidence:
+      - url: https://scileads.com/privacy-policy/
+        checked_on: 2026-09-30
+        published: '2026-07-01'
+        excerpt: unless you notify us to delete that data by contacting us at legal@scileads.com
+        supports: [licensed_database_email_alternative, suppression, verification_follow_up]
+  - guide_id: anteriad
+    destination: privacy@anteriad.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please remove my matching contact records from Anteriad's active marketing databases and stop using them for direct marketing and related profiling. Please retain only the minimal suppression information needed to prevent reintroduction, together with any specifically explained required retention. I am supplying email identifiers, not mobile advertising IDs; this does not establish removal of device-only records. Please distinguish customer-controlled CRM data from your own datasets.
+    why: Anteriad licenses business contacts and marketing audiences and explicitly documents European database rights.
+    follow_up: Additional matching or verification may follow. Device-level removal requires an advertising ID; source websites, customer-controlled files and independent advertising controllers remain separate.
+    evidence:
+      - url: https://anteriad.com/privacy-policy
+        checked_on: 2026-09-30
+        published: 'July 2026'
+        excerpt: privacy@anteriad.com
+        supports: [EU_contact_erasure_email, suppression_retention, device_ID_only_for_device_requests]
+  - guide_id: registry-global-source-data-solutions-inc
+    destination: privacy@gsdsi.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase matching email-associated personal marketing records controlled by GSDSI and stop their use for direct marketing and related profiling. Please identify any customer controller responsible for records you process solely on its instructions. I am not claiming to identify device-only records or asking to erase legally required financial records; please explain any retained data and its basis separately.
+    why: GSDSI receives contact and audience data from partners, public sources and other brokers, including European processing.
+    follow_up: The European notice permits privacy contact and provides a rights portal and representative. Further matching may require that portal; financial-data exceptions and device-only data need separate review.
+    evidence:
+      - url: https://www.gsdsi.com/privacy-policy
+        checked_on: 2026-09-30
+        excerpt: EU and UK individuals may limit marketing uses by contacting privacy@gsdsi.com.
+        supports: [EU_privacy_contact, Europe_rights_and_representative, contact_vs_device_scope]
+  - guide_id: smarte
+    destination: privacy@smarteprivacy.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    subject: Master database removal request
+    request: Please remove my matching professional contact records from the SMARTe master database and stop licensing them to customers or partners. Please use the supplied professional email identifiers to locate the record and tell me if additional profile information is necessary. This is a noncustomer database request, not an Extension Data Request or cancellation of a customer account.
+    why: SMARTe licenses researched business-contact records, including records of EU professionals.
+    follow_up: Include a relevant professional email. Identity verification or another profile reference may follow; source websites and independent customer records are separate.
+    evidence:
+      - url: https://www.smarte.pro/privacy-policy
+        checked_on: 2026-09-30
+        published: '2026-08-03'
+        excerpt: Such persons may opt out of the SMARTe database by emailing privacy@smarteprivacy.com.
+        supports: [EU_master_database_email_removal, controller_scope, extension_route_separate]
+  - guide_id: revoptimal
+    destination: privacy@revoptimal.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase the matching email-associated personal audience records that RevOptimal controls and stop using them for direct marketing and related profiling. Please distinguish those records from data processed solely on a customer's instructions and identify that controller where possible. I have not supplied device identifiers; do not treat this as proof that every device-level record has been matched or removed.
+    why: RevOptimal builds marketing audiences using contact information and other identifiers, including European records.
+    follow_up: The EEA notice expressly allows email as an alternative to its preferred portal. Further matching or verification may be needed; device-only and customer-controlled records require separate handling.
+    evidence:
+      - url: https://revoptimal.com/eea-uk-privacy/
+        checked_on: 2026-09-30
+        published: '2026-09-24'
+        excerpt: 'Email: privacy@revoptimal.com'
+        supports: [EEA_erasure_email_alternative, controller_vs_processor, verification_follow_up]
+  - guide_id: stirista
+    destination: privacy@stirista.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails, postal_address]
+    requires_matching_email: true
+    effect: suppression
+    subject: Marketing database removal and suppression
+    request: Please remove the supplied email identifiers and current postal address from your active marketing databases and suppress their future use for marketing and cross-context advertising. This request supplies my current address only, not a complete residence history. Please distinguish suppression from full erasure, and identify the customer controller if you process a matching record only on its instructions. Independent sources and unmatched device records remain separate.
+    why: Stirista combines contact and audience data for marketing and publishes a direct database opt-out.
+    follow_up: Requires permission to include the saved current postal address. Past addresses are optional and are not supplied; email confirmation or additional matching may follow.
+    evidence:
+      - url: https://www.stirista.com/privacy-policy/
+        checked_on: 2026-09-30
+        published: '2026-01-15'
+        excerpt: please provide your current address, your email address
+        supports: [direct_database_email_route, current_address_required, prior_addresses_optional, suppression_not_blanket_erasure]
+  - guide_id: adapt-directory
+    destination: support@adapt.io
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please remove my matching Business Contact Information from the Adapt.io Directory and stop making it available to customers. Please search the supplied professional email identifiers and tell me if another profile reference is needed. This concerns your directory, not cancellation of a customer account or removal of the original source websites.
+    why: Adapt's directory supplies professional contact records for sales and recruitment.
+    follow_up: Include a professional email used outside this app. The business-email lookup is an alternative, not a required first step; matching and verification may still need a reply.
+    evidence:
+      - url: https://www.adapt.io/privacy.htm
+        checked_on: 2026-09-30
+        published: '2019-07-22; still published'
+        excerpt: Individuals may choose to have their Business Contact Information removed from the Adapt.io Directory.
+        supports: [directory_email_removal_alternative, global_directory_scope, account_data_separate]
+  - guide_id: nomination-fr
+    destination: privacy@nomination.fr
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please remove my matching decision-maker profile from the database produced by NOMINATION and stop its use for commercial prospecting. Please distinguish this database from records imported into your services by customers, and identify any customer controller that requires a separate request. I am requesting database removal, not only newsletter unsubscribe.
+    why: Nomination tracks decision-makers, professional contact details and career changes for prospecting.
+    follow_up: Include a relevant professional email. DPO email is an alternative to the private lookup link; additional matching or identity checks may follow. Mainly relevant to the French business database.
+    evidence:
+      - url: https://www.nomination.fr/protection-des-donnees-personnelles/
+        checked_on: 2026-09-30
+        published: '2025-10-10'
+        excerpt: privacy@nomination.fr
+        supports: [DPO_email_route, own_database_vs_customer_records]
+      - url: https://www.nomination.fr/wp-content/uploads/2026/04/Politique-de-Confidentialite-Protection-des-donnees-a-caractere-personnel-2025.pdf
+        checked_on: 2026-09-30
+        published: '2025-10-10'
+        excerpt: Les décideurs suivis par NOMINATION ont également la possibilité
+        supports: [section_3_7_email_rights, lookup_is_alternative]
+  - guide_id: toleadoo-consumer
+    destination: info@de.toleadoo.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: suppression
+    subject: Withdrawal of advertising consent and marketing objection
+    request: I withdraw any advertising consent for the supplied email identifiers and object to their use for marketing by toleadoo GmbH. Please place them on the blocking list described in your notice and stop advertising processing. Explain any legal-purpose retention separately. This request does not assume that independent partners' own lists are also cleared.
+    why: toleadoo receives consent-based contacts from partner sites and uses them to deliver advertising.
+    follow_up: The notice describes suppression followed by later erasure, not immediate total deletion. Further matching may follow; the contact form's CAPTCHA is not a requirement of this email alternative.
+    evidence:
+      - url: https://www.toleadoo.com/sc/todo=cp_toleadoo
+        checked_on: 2026-09-30
+        excerpt: info@de.toleadoo.com
+        supports: [published_rights_inbox, consent_withdrawal, blocking_list_and_retention]
+  - guide_id: planet49-consumer
+    destination: info@de.planet49.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: suppression
+    subject: Withdrawal of advertising consent and marketing objection
+    request: I withdraw any advertising consent for the supplied email identifiers and object to marketing processing by Planet49 GmbH. Please put the matching contacts on your blocking list and confirm the scope and retention of that block. This concerns the current Planet49 controller named in your notice, not an assumed group-wide deletion or cancellation of unrelated services.
+    why: Planet49 uses partner-supplied contacts for advertising messages and publishes a direct rights inbox.
+    follow_up: Necessary legal-purpose information may remain before later erasure. Review any matching request and contact independent partners separately; historical brand associations do not establish shared coverage.
+    evidence:
+      - url: https://www.planet49.com/sc/todo=cp_planet49
+        checked_on: 2026-09-30
+        excerpt: info@de.planet49.com
+        supports: [published_rights_inbox, consent_withdrawal, suppression_scope]
+  - guide_id: zs-opinion-leader
+    destination: dataprivacy@zs.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please exclude any matching profile of me from ZS Opinion Leader Intelligence and erase personal profile information you no longer need to retain. I object to inclusion and use for outreach profiling. If you act on a client's instructions, please identify the relevant controller and assist with routing this request. This concerns professional profiles, not patient records or underlying scientific publications.
+    why: Opinion Leader Intelligence profiles healthcare and research experts for life-sciences clients.
+    follow_up: Mainly relevant to healthcare and research professionals. Further profile matching or verification may be needed; original publications and independent client records are not automatically removed.
+    evidence:
+      - url: https://www.zs.com/compliance/opinion-leader-privacy-notice
+        checked_on: 2026-09-30
+        excerpt: To opt out of being included in OLI, please email dataprivacy@zs.com
+        supports: [explicit_profile_opt_out, email_erasure, professional_scope]
+  - guide_id: semantiq
+    destination: privacy@semantiqhealth.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase any matching personal professional-profile data that Semantiq Health controls and stop sharing it for direct marketing. This is a request concerning your provider datasets, not patient medical records or cancellation of a platform account. If another controller holds the relevant record, please identify it and explain the appropriate next step.
+    why: Semantiq Health processes healthcare-professional information for analytics and commercial services.
+    follow_up: Mainly relevant to healthcare professionals. The notice may ask for relationship or profile details and identity verification; never supply patient records to satisfy a matching request.
+    evidence:
+      - url: https://www.semantiqhealth.com/privacy-policy
+        checked_on: 2026-09-30
+        excerpt: To exercise your rights under the GDPR, please contact us at privacy@semantiqhealth.com.
+        supports: [European_email_rights, conditional_verification, professional_scope]
+  - guide_id: sports-innovation-lab
+    destination: privacy@sportsilab.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase my matching personal marketing records controlled by Sports Innovation Lab and stop selling or sharing them for targeting. Please keep only the suppression information necessary to prevent future marketing use and explain any records retained. If you process the records only for a customer, identify that controller separately. Please distinguish deletion, deidentification and suppression in your response.
+    why: Sports Innovation Lab builds sports-fan and consumer marketing audiences; its notice also offers a route for European residents.
+    follow_up: The service says its data products generally are not directed to Europe, so personal exposure is uncertain. Email ownership or address verification may follow; this does not cover all Genius Sports services.
+    evidence:
+      - url: https://www.sportsilab.com/privacy-policy
+        checked_on: 2026-09-30
+        excerpt: please use our webform here or email us at privacy@sportsilab.com.
+        supports: [European_request_route, verification, suppression_vs_deletion]
+  - guide_id: deutsche-post-direkt
+    destination: datenschutz@postdirekt.de
+    countries: [DE]
+    fields: [full_name, email, postal_address]
+    effect: suppression
+    subject: Werbewiderspruch - Adressvermietung
+    request: Please block my supplied name and postal address from Deutsche Post Direkt address-rental advertising. I choose advertising suppression, not complete deletion of the blocking record. Please retain the information needed to honor this objection. This request does not concern parcel services or the separate address-deliverability matching service.
+    why: Deutsche Post Direkt selects consumer addresses for third-party postal advertising through lettershops.
+    follow_up: Address disclosure needs permission. Further matching may be requested. Previously selected mailings may still arrive; the blocking record remains until deletion is requested.
+    evidence:
+      - url: https://www.deutschepost.de/dam/jcr:d2c20ba5-1b40-45c3-ab68-5ab2373b4119/dp-ddp-informationen-zur-dv-fuer-av-und-adressabgleich.pdf
+        checked_on: 2026-09-30
+        published: '2021-12-06'
+        excerpt: Werbewiderspruch und Löschung schließen sich gegenseitig aus.
+        supports: [email_route, postal_matching, suppression_not_deletion]
+  - guide_id: gemini-direct-de
+    destination: datenschutz@geminidirect.de
+    countries: [DE]
+    fields: [full_name, email, postal_address]
+    effect: deletion_request
+    request: Please erase my matching personal marketing records and stop selecting my supplied name and postal address for GEMINI DIRECT advertising campaigns. Retain only the necessary suppression record to respect my objection, and explain what remains. This concerns your marketing database and lettershop selections, not independent advertisers' customer accounts.
+    why: GEMINI DIRECT selects postal addresses and audiences for advertisers' campaigns.
+    follow_up: Name and address are initial postal matching information, not a published exhaustive checklist. Further verification may follow; independent advertisers and device-only records are separate.
+    evidence:
+      - url: https://www.geminidirect.de/datensicherheit/
+        checked_on: 2026-09-30
+        excerpt: Für Datenschutzanfragen nutzen Sie bitte datenschutz@geminidirect.de.
+        supports: [email_route, postal_campaign_scope, erasure_and_objection]
+  - guide_id: quadress
+    destination: info@quadress.de
+    countries: [DE]
+    fields: [full_name, email, postal_address]
+    effect: suppression
+    subject: Eintrag in die Sperrliste
+    request: Please put my supplied name and postal address on the QUADRESS suppression list and stop using or supplying these records for direct advertising and associated enrichment. Retain the minimum blocking information needed to honor this objection. Please confirm suppression rather than treating this as an access-portal request.
+    why: QUADRESS provides consumer and business addresses and selection attributes for direct marketing.
+    follow_up: Supply a complete address including house number, postcode and town. The published suppression form opens an email draft; qToken belongs to the separate access portal, not this request.
+    evidence:
+      - url: https://quadress.de/daten-sperren.html
+        checked_on: 2026-09-30
+        excerpt: per E-Mail an info@quadress.de Ihren Widerspruch an uns senden.
+        supports: [explicit_email_suppression, name_address_country_fields, separate_access_portal]
+  - guide_id: whooz-whize
+    destination: compliance@whooz.nl
+    countries: [NL]
+    fields: [full_name, email, postal_address]
+    effect: suppression
+    subject: Address exclusion from Whooz advertiser selections
+    request: Please exclude my supplied Dutch postal address from address selections for advertisers working with Whooz and record it on your exclusion list. This concerns mail addressed to the residents at this address. I am not asking you to erase public building records or claiming that your address segments are named-person profiles.
+    why: Whize segments Dutch addresses using housing, neighbourhood and lifestyle estimates for audience selection.
+    follow_up: The address must include postcode, house number, street and town. Individual advertisers and Postfilter preferences are separate; further identification may be requested.
+    evidence:
+      - url: https://www.whize.nl/privacy-en-voorwaarden
+        checked_on: 2026-09-30
+        excerpt: Jouw adres (postcode, huisnummer, straat, woonplaats) wordt dan op onze uitsluitlijst gezet.
+        supports: [email_route, Dutch_address_fields, suppression_scope]
+  - guide_id: sls-data-fr
+    destination: dpo2@sls-data.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase my matching contact records from SLS Data's marketing databases, including Mailody, and stop marketing, profiling and partner sharing linked to the supplied email identifiers. I withdraw any relevant consent and object to direct marketing. Please notify relevant recipients and retain only necessary suppression and compliance records.
+    why: SLS Data combines consumer and professional contact information from partners, public sources and its own collection.
+    follow_up: Email matching does not cover every postal or telephone-only record. Proof may be requested if identity is doubtful; the notice retains suppression records for five years and partners remain separate.
+    evidence:
+      - url: https://www.sls-data.com/politique
+        checked_on: 2026-09-30
+        published: '2026-06-02'
+        excerpt: moc.atad-sls@2opd
+        supports: [email_route_reversed_in_page_text, erasure_objection, conditional_verification]
+  - guide_id: critere-direct-fr
+    destination: dpo@criteredirect.com
+    countries: [FR]
+    fields: [full_name, email, postal_address]
+    effect: suppression
+    subject: Postal marketing objection and controller notification
+    request: Please stop using my supplied name and postal address for direct marketing within Critere Direct's brokerage services. Where you act for a file owner or advertiser, please apply this objection within your services and forward it to those controllers as your policy describes. Please identify actions completed by you separately from any responses still due from others.
+    why: Critere Direct brokers and hosts marketing files for owners and advertisers.
+    follow_up: Campaign details or additional matching information may be requested. Applying or forwarding an objection does not establish deletion by the original file owner.
+    evidence:
+      - url: https://www.criteredirect.com/rgpd-et-cookies/
+        checked_on: 2026-09-30
+        published: '2023-10-04'
+        excerpt: par e-mail à dpo@criteredirect.com
+        supports: [email_route, processor_suppression_and_forwarding, conditional_matching]
+  - guide_id: audiencepoint
+    destination: privacy@audiencepoint.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase my matching contact data that AudiencePoint controls and stop using it for email-engagement profiling. Where you process the supplied email identifiers only on a customer's instructions, please identify the appropriate controller and forward or assist with the request. This is a contact-data request, not cancellation of a customer subscription.
+    why: AudiencePoint processes email-recipient interactions and third-party contact information for campaign optimisation.
+    follow_up: The EEA contact section explicitly allows email requests. Identity checks and customer referral may follow; individual senders' mailing lists are not automatically removed.
+    evidence:
+      - url: https://audiencepoint.com/privacy-policy/
+        checked_on: 2026-09-30
+        excerpt: by emailing AudiencePoint at privacy@audiencepoint.com
+        supports: [EEA_contact_erasure_route, controller_processor_boundary, conditional_verification]
+  - guide_id: registry-hunt-club-inc
+    destination: privacy@huntclub.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase my matching personal candidate and professional-profile information held by Hunt Club and stop supplying it for recruitment or prospecting. Please distinguish your own records from information held independently by employers or platform users and explain any retention needed for legal obligations.
+    why: Hunt Club collects professional and referral information to identify candidates for employers.
+    follow_up: No account is required to request deletion. Sufficient identity matching and a clear request are required; additional verification can follow before deletion.
+    evidence:
+      - url: https://www.huntclub.com/privacy
+        checked_on: 2026-09-30
+        excerpt: To request deletion of your Personal Data, please submit a request to us by emailing us at privacy@huntclub.com.
+        supports: [email_deletion_route, European_rights, no_account_required]
+  - guide_id: registry-growthcode-llc
+    destination: delete@growthcode.io
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    subject: Do Not Sell or Share My Personal Information
+    request: Please delete GrowthCode identity-graph records matched to each supplied email identifier and stop selling or sharing the associated personal data. Please search the corresponding hashed email identifiers separately and report which matched. Retain only necessary suppression and compliance records; a no-match for one email must not be treated as a search of all my identifiers.
+    why: GrowthCode uses hashed emails and pseudonymous identity links to connect advertising audiences across publishers.
+    follow_up: Matching is limited to supplied emails; unrelated device records can remain. Email ownership verification may follow. The notice covers European rights but does not prove that a particular European has a record.
+    evidence:
+      - url: https://www.growthcode.io/privacy
+        checked_on: 2026-09-30
+        excerpt: EU and UK residents have rights under GDPR.
+        supports: [European_scope, individual_rights]
+      - url: https://www.growthcode.io/platform-privacy
+        checked_on: 2026-09-30
+        published: '2026-08-12'
+        excerpt: GrowthCode matches deletion requests against hashed email addresses (HEMs) only.
+        supports: [email_deletion_route, matching_limit]
+      - url: https://www.growthcode.io/do-not-sell
+        checked_on: 2026-09-30
+        excerpt: Do Not Sell or Share My Personal Information
+        supports: [required_subject, dedicated_deletion_inbox]
+  - guide_id: registry-leadiq-inc
+    destination: privacy@leadiq.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    subject: Privacy Request
+    request: Please remove my matching professional profile from the LeadIQ Directory Database and stop supplying it to customers for prospecting or recruitment. Please erase information not needed to honor this request and keep only necessary suppression information. This concerns the directory profile, not cancellation of a customer account or deletion of customer-controlled CRM records.
+    why: LeadIQ combines licensed, public and contributed professional contact data for prospecting and recruitment.
+    follow_up: Include a professional email in Identity; consumer Gmail addresses generally are not matching keys. Identity verification may follow; customer records and browser cookie choices remain separate.
+    evidence:
+      - url: https://leadiq.com/legal/privacy-policy
+        checked_on: 2026-09-30
+        published: '2026-07-21'
+        excerpt: privacy@leadiq.com
+        supports: [email_deletion_alternative, required_subject, European_residents, professional_matching]
+  - guide_id: vainu
+    destination: privacy@vainu.io
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase my matching professional contact records from the Vainu Database Record and stop making them available to your customers. If you retain public-register information on another basis, identify those records and explain the reason. This concerns your database, not cancellation of a customer account.
+    why: Vainu indexes public business roles and work contact details for searchable company and contact data.
+    follow_up: Matching or verification may require clarification. Source registers and customer exports are separate; some public-interest records may be retained.
+    evidence:
+      - url: https://www.vainu.com/legal-stuff/database-privacy-statement/
+        checked_on: 2026-09-30
+        published: '2024-04-08'
+        excerpt: please submit all requests and inquiries on data protection primarily to the following address privacy@vainu.io.
+        supports: [email_route, European_residents, database_erasure, retention_limits]
+  - guide_id: bizmachine
+    destination: osobniudaje@bizmachine.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase my personal contact records from the business-data products you control and stop supplying them for lead generation and direct marketing. Please distinguish records you can remove from public-register information you believe must be retained, and identify any source records that need a separate request.
+    why: BizMachine connects public business contacts and company relationships into reports and prospecting data.
+    follow_up: Public source records and independent customer copies are separate. The policy does not give a fixed initial matching checklist; further identifiers may be requested.
+    evidence:
+      - url: https://www.bizmachine.com/en/personal-data-processing
+        checked_on: 2026-09-30
+        excerpt: The request for erasure of your personal data can be made using the aforementioned contact details.
+        supports: [email_route, business_data_erasure, matching_scope]
+  - guide_id: schober-capaneo
+    destination: datenschutz@capaneo.de
+    countries: [EEA]
+    fields: [full_name, email, other_emails, postal_address]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase the contact records matching the supplied name and email identifiers from Capaneo's dialogue-marketing datasets and stop using or supplying them for direct marketing. Please keep only necessary suppression information. This initial request concerns records identifiable by these contact details, not a claim that they identify every device or household record.
+    why: Capaneo, formerly Schober, combines contact information and audience data for marketing.
+    follow_up: Name and email do not identify every postal or device dataset. If additional identifiers are needed, review that request separately; suppression entries may remain.
+    evidence:
+      - url: https://capaneo.de/datenschutz/
+        checked_on: 2026-09-30
+        excerpt: datenschutz[at]capaneo.de
+        supports: [current_controller, email_route, erasure_and_marketing_objection, dataset_limits]
+  - guide_id: bedirect
+    destination: datenschutz@bedirect.de
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: suppression
+    subject: Business-contact marketing objection
+    request: Please stop using or supplying my matching personal business-contact records for marketing through beDirect and beAddress. Please retain only the necessary blocking information to respect this objection. This request concerns your own marketing database, not erasure of Creditreform source records or a company as a legal entity.
+    why: beDirect supplies and enriches B2B address data, including identifiable company representatives and self-employed people.
+    follow_up: A suppression record and correspondence remain. More business-record identifiers or identity verification may be needed; independent sources and customers are not automatically covered.
+    evidence:
+      - url: https://beaddress.de/info/Datenschutz
+        checked_on: 2026-09-30
+        published: '2024-07-16'
+        excerpt: 'E-Mail: datenschutz@bedirect.de'
+        supports: [email_route, marketing_suppression, retained_blocking_record]
+  - guide_id: az-direct-at
+    destination: datenschutz@bertelsmann.at
+    countries: [AT]
+    fields: [full_name, email, postal_address]
+    effect: suppression
+    subject: Austrian address-marketing objection
+    request: Please suppress my name and Austrian postal address from advertising use by AZ Direct Oesterreich GmbH. Retain the minimum blocking record necessary to honor this objection. Where you can identify the suppliers of my address, please forward the suppression request as described in your notice and confirm its scope.
+    why: The Austrian controller processes consumer and business addresses and household attributes for direct marketing.
+    follow_up: Identity verification may follow. This does not cover German AZ Direct or all Bertelsmann companies; supplier compliance must not be assumed from forwarding alone.
+    evidence:
+      - url: https://at.az-direct.com/links/datenschutz-adressverlag
+        checked_on: 2026-09-30
+        excerpt: speichern wir Ihre Adresse in unserer Werbewiderspruchsliste
+        supports: [Austrian_address_scope, email_route, suppression]
+      - url: https://at.az-direct.com/links/betroffenenrechte
+        checked_on: 2026-09-30
+        published: '2024-02'
+        excerpt: übermitteln wir Ihren Sperrwunsch automatisch
+        supports: [supplier_forwarding, conditional_verification, retention]
+  - guide_id: mediaposte-fr
+    destination: exercicedesdroits@mediaposte.fr
+    countries: [FR]
+    fields: [full_name, email, postal_address]
+    effect: suppression
+    subject: Marketing objection and source-data removal request
+    request: Please stop using my supplied name and postal address for commercial prospecting through MEDIAPOSTE and record the necessary suppression. Where you process rented data for another controller, please forward my objection and deletion request to the relevant collector or data broker as your notice describes. Please identify which actions you completed and which remain with other controllers.
+    why: MEDIAPOSTE routes consumer marketing data through collectors, brokers and advertiser partners.
+    follow_up: Its notice says a direct deletion request may result in suppression and forwarding, not source erasure. Blocking information is retained; verify downstream outcomes separately.
+    evidence:
+      - url: https://www.mediaposte.fr/charte-dinformation/
+        checked_on: 2026-09-30
+        excerpt: en précisant votre nom, prénom et adresse
+        supports: [email_route, name_and_address, suppression_not_source_erasure]
+  - guide_id: sovendus-de
+    destination: service@sovendus.com
+    countries: [DE]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: suppression
+    subject: Advertising objection for my email identifiers
+    request: I object to advertising use of the supplied email identifiers by Sovendus GmbH and withdraw any advertising consent I may have given for them. Please stop advertising processing for these identifiers and retain only necessary blocking information and legally required records. This concerns your German voucher and checkout-offer processing, not cancellation of independent retailers' services.
+    why: Shopping voucher and checkout offers can link email hashes and transaction-related information to advertising.
+    follow_up: Necessary blocking data remains. Browser-based pseudonymous analysis has a separate policy-page switch; this email does not operate it or remove independent retailers' records.
+    evidence:
+      - url: https://web.sovendus.com/de/privacy
+        checked_on: 2026-09-30
+        excerpt: genügt jederzeit eine kurze Nachricht
+        supports: [email_advertising_objection, German_controller, suppression_retention]
+  - guide_id: cision-media-databases
+    destination: privacy@cision.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please remove any matching profile from Cision's Media Database and Social Influencer Database and stop the associated profiling. Please route this request to the relevant Cision controller and confirm which databases were checked. This does not concern a customer account, Brandwatch, or deletion of original publications.
+    why: Media and influencer profiles expose professional contacts, public content and inferred interests to communications teams.
+    follow_up: Mainly relevant to journalists, commentators and public creators. Profile details may be needed for matching; Brandwatch and customer copies require separate handling.
+    evidence:
+      - url: https://privacy.cision.com/dataprivacynotice_influencers
+        checked_on: 2026-09-30
+        excerpt: If at any time you want us to remove you from the Databases please email us at Privacy@cision.com
+        supports: [explicit_database_email_removal, European_residents, profiling_objection]
+  - guide_id: adeptid-people-search
+    destination: privacy@adept-id.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase my matching candidate records from AdeptID People Search and stop using those records for candidate profiling. This request concerns searchable candidate data you control, not cancellation of a customer account. If another organization controls any matching records, identify the appropriate route and distinguish those records from your own database.
+    why: People Search combines candidate contact and career information with recruitment-related inferences.
+    follow_up: Candidate matching and identity verification may require a reply. Backups, retained legal records and previously disclosed customer copies are not guaranteed removed.
+    evidence:
+      - url: https://www.adept-id.com/wp-content/uploads/2025/06/AdeptID-Privacy-Policy_Updated-June-13-2025.pdf
+        checked_on: 2026-09-30
+        published: '2025-06-13'
+        excerpt: request erasure of your information
+        supports: [European_residents, email_route, People_Search_scope, conditional_verification]
+  - guide_id: preqin
+    destination: GroupPrivacy@BlackRock.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    subject: Preqin professional-database deletion request
+    request: Please remove my matching professional contact information from Preqin's subscription databases and stop selling or disclosing it to subscribers. Please route this specifically to the team responsible for Preqin database records. This is not an instruction to close financial accounts or delete unrelated BlackRock client or regulatory records.
+    why: Preqin makes professional information available through subscription databases focused on investment markets.
+    follow_up: Mainly relevant to investment-industry professionals. The group privacy team may ask about your relationship or profile to identify the records; unrelated financial records are outside this request.
+    evidence:
+      - url: https://www.preqin.com/policies/privacy-policy
+        checked_on: 2026-09-30
+        excerpt: You may exercise your rights at any time by emailing GroupPrivacy@BlackRock.com
+        supports: [group_email_route, professional_database_scope, conditional_verification]
+  - guide_id: registry-getvector-inc
+    destination: security@vector.co
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please delete my matching personal business-contact and person-linked marketing records held by Vector. The requested action is deletion, not merely correction or information. Please search the supplied affected email identifiers and confirm the datasets covered. This is not a request to close a customer account.
+    why: Vector links business contacts to intent and marketing signals used for account-based advertising.
+    follow_up: The public removal page accepts name and email and offers email submission without a residence restriction. This establishes an initial route, not evidence of European database exposure; verification may follow.
+    evidence:
+      - url: https://www.vector.co/opt-out
+        checked_on: 2026-09-30
+        excerpt: Email us (security@vector.co)
+        supports: [unrestricted_initial_route, affected_email, deletion_action]
+  - guide_id: snovio
+    destination: help@snov.io
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please delete my prospect and professional contact records from the Snov.io database and stop making them available through your search tools. Please check the supplied identifiers and explain which were matched. This concerns prospect-data removal, not cancellation of a customer account. Please explain the scope of any forwarding to client controllers.
+    why: Professional email discovery and prospecting tools expose contact records collected from public sources and extensions.
+    follow_up: Snov.io's prospecting tools match business emails, not consumer Gmail addresses; include your professional address in Identity. Email verification may follow and downstream client deletion is not guaranteed.
+    evidence:
+      - url: https://snov.io/gdpr
+        checked_on: 2026-09-30
+        excerpt: contacting us via email at help@snov.io or snovio_dpo@snov.io
+        supports: [unconditional_email_alternative, European_residents, prospect_deletion]
+      - url: https://snov.io/privacy-policy
+        checked_on: 2026-09-30
+        published: June 26, 2026
+        excerpt: We do not collect, generate, or process personal (non-business) email addresses
+        supports: [matching_scope, business_identifiers]
+  - guide_id: cognism
+    destination: privacy@cognism.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please erase my professional profile from the Cognism Platform and stop making it available to your customers. Please retain only the minimum information needed to respect my objection to future inclusion.
+    why: Professional contact records can expose work identities and contact details to customers seeking individuals.
+    follow_up: Email or identity verification may follow. Customer exports and original source websites require separate requests.
+    evidence:
+      - url: https://www.cognism.com/en/privacy-policy
+        checked_on: 2026-09-30
+        excerpt: contact us at privacy@cognism.com.
+        supports: [email_route, European_residents, platform_erasure]
+  - guide_id: dealfront-leadfeeder
+    destination: privacy@leadfeeder.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please remove my personal professional records from the Dealfront and Leadfeeder search index described in your Privacy Information for Data Subjects. I object to their continued use for sales and marketing. Please identify the datasets and controllers covered by your response.
+    why: Searchable business profiles combine publicly collected professional identities and contact details.
+    follow_up: The published notice allows verification. Independent customer records and source websites are separate.
+    evidence:
+      - url: https://marketing.dealfront.com/privacy-information-for-data-subjects-en.pdf
+        checked_on: 2026-09-30
+        published: February 2026
+        excerpt: privacy@leadfeeder.com
+        supports: [email_route, identifiers, scope, European_processing]
+  - guide_id: draup
+    destination: privacy@draup.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    subject: Opt-Out
+    request: Please remove my Candidate/Lead profile, including any matching pseudonymous profile, from Draup People Insights and opt me out of sale of that information. Search the matching email identifiers listed below. Retain only the minimum suppression information necessary to honor this request.
+    why: Professional profiles combine contact details, career history and publicly sourced social information.
+    follow_up: Draup requires a name and an email it already holds; additional verification may follow.
+    evidence:
+      - url: https://draup.com/privacy-policy
+        checked_on: 2026-09-30
+        excerpt: first and last name and an email address that we have on file for you
+        supports: [matching_fields, email_route, profile_removal]
+      - url: https://draup.com/eu-user-privacy-policy
+        checked_on: 2026-09-30
+        excerpt: our Data Protection Officer at privacy@draup.com.
+        supports: [European_residents, email_route]
+  - guide_id: registry-leadgenius-com
+    destination: privacy@leadgenius.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: Please delete my professional contact data from the LeadGenius databases you control and stop supplying it for sales and marketing. This request concerns my broker-held profile, including any records matching the supplied emails. Please explain any additional matching or verification needed.
+    why: Business contact records are sourced from partners and public sources and supplied to customers.
+    follow_up: Initial email is explicitly accepted for European residents; the policy does not publish a fixed verification checklist.
+    evidence:
+      - url: https://www.leadgenius.com/legal/privacy
+        checked_on: 2026-09-30
+        excerpt: Submit requests via privacy@leadgenius.com
+        supports: [European_residents, email_route, deletion]
+  - guide_id: registry-getprospect-com
+    destination: support@getprospect.com
+    countries: [EEA]
+    fields: [full_name, email, other_emails]
+    requires_matching_email: true
+    effect: deletion_request
+    request: I am requesting erasure and restriction of disclosure of my Contact profile from the GetProspect database because I do not want my personal contact data supplied for prospecting. This concerns a database Contact, not cancellation of a subscriber account. Please inform relevant recipients of this request as described in your privacy policy.
+    why: The Contact database exposes professional identity and email details through a search service and extension.
+    follow_up: Additional matching or verification may be requested. Previously exported customer copies are not proven removed.
+    evidence:
+      - url: https://getprospect.com/privacy
+        checked_on: 2026-09-30
+        excerpt: If you are a Contact, you can exercise this right either by contacting us
+        supports: [contact_database_erasure, email_route]
+  - guide_id: az-direct-de
+    destination: datenschutz@az-direct.com
+    countries: [DE]
+    fields: [full_name, email, postal_address]
+    effect: suppression
+    subject: Advertising objection and suppression request
+    request: I object to use of my name and postal address for advertising. Please place these identifiers on your internal advertising suppression list and use them only to honor this objection. I understand that this retains a blocking record to prevent reintroduction. Please confirm the suppression and its scope.
+    why: Postal marketing records connect a person's name to their home address.
+    follow_up: AZ Direct normally replies by post. Record that response in the request page; email delivery alone does not confirm suppression.
+    evidence:
+      - url: https://www.az-direct.com/site/faq
+        checked_on: 2026-09-30
+        excerpt: Wir bitten Sie daher, uns Ihre vollständige postalische Adresse mitzuteilen.
+        supports: [required_address, email_route, suppression, postal_reply]
+  - guide_id: panadress
+    destination: datenschutz@panadress.de
+    countries: [DE]
+    fields: [full_name, email, postal_address]
+    effect: suppression
+    subject: Advertising objection and suppression request
+    request: I object to processing my name and postal address for advertising and withdraw any consent for that purpose. Please place the necessary identifiers on your internal advertising suppression list and use them only to honor my objection. Please confirm the scope of this suppression.
+    why: Address and marketing attributes can link identifiable people to households for targeting.
+    follow_up: A suppression record remains; this is not complete erasure. Further verification may be requested.
+    evidence:
+      - url: https://www.panadress.de/datenschutz/
+        checked_on: 2026-09-30
+        published: March 2026
+        excerpt: Name, Anschrift, ggf. E-Mail-Adresse
+        supports: [suppression_identifiers, email_route, suppression]

@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: nielsen-marketing-cloud
+    records: [community:nielsen]
+    rationale: Nielsen's official privacy hub and embedded NMC notices establish this brand's marketing-cloud controller and rights route. The guide explicitly limits the association to NMC, not all measurement or panel services, and does not treat the community Dublin address as the German controller address.

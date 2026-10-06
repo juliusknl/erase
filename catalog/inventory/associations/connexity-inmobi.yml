@@ -1,0 +1,8 @@
+schema_version: 1
+associations:
+  - guide_id: connexity-shopping
+    records: ["community:connexity"]
+    rationale: Current Connexity Inc. notice corroborates the community discovery's entity and official domain, with a separate consumer privacy form.
+  - guide_id: inmobi-advertising
+    records: ["community:inmobi"]
+    rationale: The official InMobi EEA notice names the discovery entity and links to the request-policy family. The guide records its different request-policy entity wording and avoids claiming blanket group coverage.

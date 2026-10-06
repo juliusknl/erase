@@ -1,0 +1,97 @@
+schema_version: 1
+brokers:
+  - id: beenverified-personal
+    name: BeenVerified
+    match_domains: [beenverified.com]
+    identity:
+      legal_name: BeenVerified, LLC
+      brands: [BeenVerified]
+      parent: The Lifetime Value Co. LLC
+      official_domains: [beenverified.com]
+    relevance:
+      regions: [US, EEA, UK]
+      category: people_search
+      data_categories: [Public-record identities, Contact and address histories, Professional and household associations]
+      note: US-focused public records; European residence does not itself prove a matching listing. The current notice supplies EU/UK rights contacts.
+    removal:
+      method: email
+      destination: dpo@beenverified.com
+      alternatives: [privacy@beenverified.com, support@beenverified.com, https://www.beenverified.com/svc/optout/search/optouts, https://edpo.com/gdpr-data-request/]
+      steps:
+        - Request erasure of matched personal records and exclusion from people-search results; distinguish your search listing from any paid customer account.
+        - Supply relevant matching details only with consent and review additional verification personally.
+        - Record the confirmed scope separately; source databases and other Lifetime Value brands are not automatically covered.
+    required_information:
+      fields: [full_name, email, other_emails, postal_address]
+      certainty: not_fully_specified
+      verification: These are an initial matching proposal, not a published exhaustive checklist. The opt-out tool returned a security challenge and was not exercised.
+    coverage:
+      effect: deletion_request
+      includes: Matching BeenVerified personal records under applicable rights.
+      excludes: Original public records, independent affiliates, customer-account closure and lawful retention exceptions.
+    automation: {mode: manual, reason: Reviewed initial-email recipe requires matching emails and explicit postal-address permission; later verification remains personal.}
+    evidence:
+      - url: https://www.beenverified.com/faq/privacy/
+        checked_on: '2026-09-30'
+        published: '2026-09-09'
+        excerpt: Our data protection officer's contact details are
+        supports: [current_entity, service_data, general_written_rights, EU_UK_contacts, matching_and_limits]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Complete matching checklist and live fulfilment., Historic Inc.-named entity continuity beyond this current product route.]
+  - id: peopleconnect-suppression
+    name: PeopleConnect people-search suppression
+    match_domains: [peopleconnect.us, truthfinder.com, instantcheckmate.com, intelius.com, ussearch.com]
+    identity:
+      legal_name: The Control Group Media Company LLC dba PeopleConnect, with participating people-search entities
+      brands: [TruthFinder, Instant Checkmate, Intelius, US Search]
+      parent: null
+      official_domains: [peopleconnect.us, truthfinder.com, instantcheckmate.com, intelius.com, ussearch.com]
+    relevance:
+      regions: [US]
+      category: people_search
+      data_categories: [Public background reports, Names and identity associations]
+      note: The shared tool targets name-search reports. Its terms require written approval for access from outside the US and territories; do not assume European access is permitted.
+    removal:
+      method: manual
+      destination: https://suppression.peopleconnect.us/
+      alternatives: [privacy@peopleconnect.us, https://suppression.peopleconnect.us/privacy-center]
+      steps:
+        - If outside the US and territories, contact privacy@peopleconnect.us for a permitted suppression route before using the tool; do not bypass its access restrictions.
+        - Where permitted, enter your email, review the terms and transactional-email consent, finish email verification and select the matching report for suppression.
+        - Keep the Suppression Center user record. Deleting it also removes its suppressions and does not hide your background report.
+        - Review remaining name variants and other search types separately; contact support if a report remains visible.
+    required_information:
+      fields: [email, matching_report_selection]
+      certainty: not_fully_specified
+      verification: Public first step verifies email ownership; authenticated matching fields and later checks are untested. Special protected-person declarations are not generic requirements.
+    coverage:
+      effect: suppression
+      includes: Name-search background-report suppression on the four expressly listed participating sites.
+      excludes: Classmates, source records, phone/address/email searches, some statutory lists, and deletion of subscriber accounts or all family brands.
+    automation:
+      mode: manual
+      reason: Geographic permission, personal terms review, authenticated report matching and preserving the suppression record prevent generic automatic email or submission.
+    evidence:
+      - url: https://suppression.peopleconnect.us/
+        checked_on: '2026-09-30'
+        excerpt: TruthFinder.com, InstantCheckmate.com, Intelius.com and USSearch.com
+        supports: [named_product_coverage, initial_email_verification, search_scope]
+      - url: https://suppression.peopleconnect.us/privacy-center
+        checked_on: '2026-09-30'
+        excerpt: we must delete your any and all suppressions associated with your user
+        supports: [destructive_user_deletion_tradeoff, retained_suppression_requirement, privacy_contact]
+      - url: https://peopleconnect.us/terms-of-use/
+        checked_on: '2026-09-30'
+        excerpt: without the Company’s prior written approval
+        supports: [non_US_access_restriction, personal_use_only]
+      - url: https://peopleconnect.us/privacy-policy/
+        checked_on: '2026-09-30'
+        published: '2026-06-30'
+        excerpt: The Control Group Media Company LLC, dba PeopleConnect
+        supports: [tool_operator_identity, separate_sister_site_notices]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Non-US permission and later verification requirements., Actual suppression and remaining search variants.]

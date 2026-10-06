@@ -1,0 +1,150 @@
+schema_version: 1
+brokers:
+  - id: maxmind-services
+    name: MaxMind GeoIP and fraud services
+    match_domains: [maxmind.com]
+    identity:
+      legal_name: MaxMind, Inc.
+      brands: [MaxMind, GeoIP, minFraud]
+      parent: null
+      official_domains: [maxmind.com]
+    relevance:
+      regions: [EEA, UK, CH, US]
+      category: identity_risk
+      data_categories: [IP geolocation, Email identifiers, Transaction risk information]
+      note: MaxMind has both customer-processor and own-controller uses; this is not ordinary marketing-list erasure.
+    removal:
+      method: form
+      destination: https://www.maxmind.com/en/data-deletion-and-verification
+      alternatives: [https://support.maxmind.com/knowledge-base/articles/data-privacy-requests, https://www.maxmind.com/en/opt-out]
+      steps:
+        - Select your true jurisdiction and Myself, enter full name and the email whose records you want reviewed, and personally confirm the declarations. Finish email verification.
+        - Repeat separately for each matching email. The new request-only mailbox does not stand in for older addresses.
+        - IP is optional, but omitting it leaves IP-only records outside this request. Supply only an address relevant to your own activity; never substitute the app server's IP or claim control of a shared network.
+        - Keep the broker response and any retention explanation. For customer-controlled records identify the originating business; account closure and newsletter unsubscribe are separate support actions.
+    required_information:
+      fields: [jurisdiction, self_or_agent_choice, full_name, email, accuracy_and_contact_declarations]
+      certainty: not_fully_specified
+      verification: Public HTML exposes the fields and per-email requirement; optional IP and agent-only documents are distinct. Email verification and later conditional checks were not performed.
+    coverage:
+      effect: deletion_request
+      includes: Matched email-associated data and optional supplied IP records, subject to applicable rights and controller scope.
+      excludes: Other emails/IPs, customer-controlled records, legal or justified fraud-prevention retention, and anonymous aggregates; no blanket promise of removing fraud signals.
+    automation:
+      mode: manual
+      reason: Per-identifier selection, IP ownership, personal declarations and fraud-data context require an individually reviewed form.
+    evidence:
+      - url: https://www.maxmind.com/en/data-deletion-and-verification
+        checked_on: '2026-10-01'
+        excerpt: complete this form for each email address
+        supports: [required_fields, optional_IP, per_email_scope, declarations, verification]
+      - url: https://www.maxmind.com/en/privacy-policy
+        checked_on: '2026-10-01'
+        published: August 11, 2026
+        excerpt: MaxMind also operates as a controller
+        supports: [identity, regions, mixed_controller_roles, fraud_retention, source_customer_route]
+      - url: https://support.maxmind.com/knowledge-base/articles/data-privacy-requests
+        checked_on: '2026-10-01'
+        excerpt: under any legislation
+        supports: [deletion_form_regional_routing]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Subsequent verification and IP ownership checks, Actual matched records and retention decision, End-to-end result]
+
+  - id: fideo-identity
+    name: Fideo identity graph
+    match_domains: [fideo.ai]
+    identity:
+      legal_name: Fideo Intelligence Inc.
+      brands: [Fideo, Verify, Signals, Lens]
+      parent: null
+      official_domains: [fideo.ai]
+    relevance:
+      regions: [EEA, UK, US, Other regions]
+      category: identity_risk
+      data_categories: [Identity graph, Contact identifiers, Enrichment and verification signals]
+      note: Consumer graph records are distinct from customer-submitted processor data.
+    removal:
+      method: email
+      destination: privacy@fideo.ai
+      alternatives: [dpo@fideo.ai, https://app.fideo.ai/your-privacy-choices]
+      steps:
+        - Request applicable erasure/objection for your Consumer identity-graph record; identify relevant contact details and personally review additional verification.
+        - Alternatively use Your Privacy Choices. Browser GPC alone does not opt out of data sales; retain the broker's scope and retention response.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Case-specific matching; public portal shell fetched without login or submission.
+    coverage:
+      effect: deletion_request
+      includes: Matched proprietary Consumer identity-graph records, subject to rights exceptions.
+      excludes: Customer-controlled input, independent copies and permitted fraud/legal retention.
+    automation:
+      mode: manual
+      reason: Fraud/identity scope and verification require a dedicated reviewed workflow, not ordinary marketing autopilot.
+    evidence:
+      - url: https://www.fideo.ai/privacy/privacy-policy/
+        checked_on: '2026-10-01'
+        published: May 16, 2024; current published policy
+        excerpt: regardless of residency
+        supports: [identity, consumer_graph, email_rights, regions, verification, exceptions, GPC_limit]
+      - url: https://www.fideo.ai/legal/services-agreement/
+        checked_on: '2026-10-01'
+        excerpt: Fideo Data
+        supports: [licensed_product_scope]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Exact matching requirements, Case-specific fraud retention, Portal fields and completed outcome, Parent ownership]
+
+  - id: mastercard-ekata-identity
+    name: Mastercard Identity / Ekata
+    match_domains: [ekata.com]
+    identity:
+      legal_name: Mastercard Europe SA for EEA/UK/Switzerland; Mastercard International Inc. for US residents
+      brands: [Mastercard Identity, Ekata, Pro Insight]
+      parent: Mastercard
+      official_domains: [mastercard.com, mastercard.us, ekata.com]
+    relevance:
+      regions: [EEA, UK, CH, US]
+      category: identity_risk
+      data_categories: [Name and contact identifiers, IP data, Customer queries, Derived identity and fraud insights]
+      note: June 2026 Identity notice updates the old Ekata mailbox and controller details. This is not a request to erase all Mastercard payment records.
+    removal:
+      method: email
+      destination: ekataprivacyanddataprotection@mastercard.com
+      alternatives: [https://www.mastercard.us/public/my-data/dgr-public/personal-data-request.html]
+      steps:
+        - Identify Mastercard Identity/Ekata as the product and your actual residence. Ask about applicable erasure or objection and which records/exceptions apply.
+        - Provide matching information only as needed and review verification personally. The originating customer can also handle requests concerning its submitted information.
+        - Keep the response; a general payment-data request or marketing unsubscribe is not confirmation of Identity database removal.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Current notice publishes the email and My Data route but not an exhaustive identifier checklist; portal rendering and completion untested.
+    coverage:
+      effect: deletion_request
+      includes: Applicable matched Identity-service data and derived insights under the residence-specific controller.
+      excludes: Independent source records, unrelated Mastercard services and legally justified fraud/security retention.
+    automation:
+      mode: manual
+      reason: Identity-risk processing needs scoped personal review; no old Ekata inbox or automatic fraud-record deletion is assumed.
+    evidence:
+      - url: https://www.mastercard.com/global/en/identity-privacy-policy.html
+        checked_on: '2026-10-01'
+        published: June 9, 2026
+        excerpt: ekataprivacyanddataprotection@mastercard.com
+        supports: [current_controllers, current_rights_route, matching_uncertainty, retention]
+      - url: https://www.mastercard.com/europe/en/business/cybersecurity-fraud-prevention/identity/security-and-privacy.html
+        checked_on: '2026-10-01'
+        excerpt: Ekata responds to Data Subject requests
+        supports: [Ekata_identity_product_continuity, controller_role, GDPR_rights, source_provider_notifications]
+      - url: https://www.mastercard.com/global/en/identity-agreements-and-terms/msa.html
+        checked_on: '2026-10-01'
+        excerpt: digital identity verification and fraud prevention
+        supports: [product_scope, customer_query_and_derived_data]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Actual matching checklist, Case-specific exceptions, Portal fields and completed outcome, Records held under prior Ekata legal entities]

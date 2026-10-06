@@ -1,0 +1,241 @@
+schema_version: 1
+brokers:
+  - id: rb-information-professional
+    name: RB Information Services business contacts
+    match_domains: [rbinformationservices.de]
+    identity:
+      legal_name: Rüdiger Birkenbach trading as RB Information Services
+      brands: [RB Information Services, RBI]
+      parent: null
+      official_domains: [rbinformationservices.de]
+    relevance:
+      regions: [Germany, EEA rights]
+      category: professional
+      data_categories: [Business contact names, Job functions, Work emails, Company postal addresses]
+      note: Business-contact lists are rented or sold for direct marketing; source company records remain separate.
+    removal:
+      method: email
+      destination: contact@rbinformationservices.de
+      alternatives: [ruediger.birkenbach@rbinformationservices.de]
+      steps:
+        - Request deletion of your matched personal business-contact records and object to their use or supply for direct marketing.
+        - Include your name and matching professional email identifiers. If needed, review a request for employer or business-address context personally.
+        - Ask which records and recipients were covered; customer copies and original public company sources are separate.
+    required_information:
+      fields: [full_name, email, requested_right]
+      certainty: not_fully_specified
+      verification: No fixed initial matching checklist is published; employer or business-address details may be necessary for contacts without a stored email.
+    coverage:
+      effect: deletion_request
+      includes: Matched personal records in RBI's professional marketing lists, with only necessary suppression or legally retained records remaining.
+      excludes: Independent customer copies, source company registers, non-personal business facts and account cancellation.
+    automation:
+      mode: manual
+      reason: Initial email is supported; additional professional matching and verification require personal review.
+    evidence:
+      - url: https://rbinformationservices.de/datenschutz.html
+        checked_on: '2026-10-01'
+        excerpt: contact@rbinformationservices.de
+        supports: [professional_list_processing, controller_contact, erasure_and_marketing_objection]
+      - url: https://rbinformationservices.de/impressum.html
+        checked_on: '2026-10-01'
+        excerpt: 'Inhaber: Rüdiger Birkenbach'
+        supports: [exact_proprietor_identity]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Matching and fulfilment untested., Comparable current list size not published in reviewed sources.]
+  - id: geno-media-consumer-marketing
+    name: Geno Media Circle marketing lists
+    match_domains: [geno-media-circle.de]
+    identity:
+      legal_name: Geno Media Circle GmbH (Hamburg HRB 196119)
+      brands: [Geno Media Circle]
+      parent: null
+      official_domains: [geno-media-circle.de]
+    relevance:
+      regions: [Germany, EEA rights]
+      category: consumer_marketing
+      data_categories: [Competition and survey participation, Contact details, Marketing preferences, Tracking identifiers]
+      note: The notice covers database marketing and transfers to sponsors; withdrawing from an active promotion may have separate consequences.
+    removal:
+      method: email
+      destination: info@geno-media-circle.de
+      alternatives: [datenschutz@geno-media-circle.de]
+      steps:
+        - Send a dated request with subject AUSÜBUNG DER RECHTE, your full name, the right requested and a postal address for replies.
+        - Ask to delete matched marketing records, stop further marketing and explain which recipients were notified. Review postal disclosure before sending.
+        - If you want to preserve an ongoing competition entry, clarify that scope first. Partner copies and separately identified tracking records are not automatically erased.
+    required_information:
+      fields: [full_name, postal_address, request_date, requested_right]
+      certainty: documented
+      verification: The notice expressly requires date, full name, request subject and reply postal address. Later verification has not been tested.
+    coverage:
+      effect: deletion_request
+      includes: Matched Geno Media Circle marketing database records, subject to the stated purpose and retention exceptions.
+      excludes: Automatic erasure by independent sponsors, tracking partners and contractual promotion records that require scope clarification.
+    automation:
+      mode: manual
+      reason: A dated request with explicit postal disclosure and promotion scope must be prepared; the current initial-email renderer does not supply the required request date.
+    evidence:
+      - url: https://www.geno-media-circle.de/datenschutz.php
+        checked_on: '2026-10-01'
+        excerpt: Ihr Antrag muss das Datum, ihren vollständigen Namen
+        supports: [marketing_database_scope, rights_email, explicit_date_and_postal_requirements]
+      - url: https://www.geno-media-circle.de/impressum.php
+        checked_on: '2026-10-01'
+        excerpt: Amtsgericht Hamburg HRB 196119
+        supports: [current_body_legal_name_and_registration]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Imprint page title still says eG while its legal body and notice consistently say GmbH., Parent and comparable scale unreviewed., No sending or fulfilment tested.]
+  - id: qdivision-browser-advertising
+    name: Q division browser advertising
+    match_domains: [q-division.de]
+    identity:
+      legal_name: Q division GmbH
+      brands: [Q division]
+      parent: null
+      official_domains: [q-division.de]
+    relevance:
+      regions: [Germany, EEA browser advertising]
+      category: advertising
+      data_categories: [Cookie IDs, Browsing interests, Device parameters, Approximate location, Purchase signals]
+      note: Cookie-linked data is personal data even though the provider says it does not know names; name-and-email alone cannot identify these profiles.
+    removal:
+      method: form
+      destination: https://q-division.de/datenschutz/widerspruch/
+      alternatives: [https://q-division.de/cookieabfrage/, datenschutz@q-division.de]
+      steps:
+        - Open the preference page in the actual browser you use and choose withdrawal, not consent; repeat for other relevant browsers or profiles.
+        - The provider says it replaces its advertising IDs with an opt-out cookie. Preserve that cookie; clearing it can lose the preference.
+        - If you first want access, use the cookie lookup and privacy contact before withdrawal; the provider says removing the ID prevents later matching and orphaned attributes expire within 180 days.
+        - The provider describes propagation delays of up to 36 hours. Do not equate a preference click with immediate historical erasure or partner-wide deletion.
+    required_information:
+      fields: [actual_browser_context]
+      certainty: documented
+      verification: Browser-cookie context supplies the matching identifier. No actual browser preference was changed or live result tested.
+    coverage:
+      effect: suppression
+      includes: Q division advertising processing matched to the browser's cookie context.
+      excludes: Other browsers, cleared cookies, immediate historical deletion and independent partner databases.
+    automation:
+      mode: manual
+      reason: A server-side click would act on the wrong browser identity; personal browser action is required.
+    evidence:
+      - url: https://q-division.de/dsgvo/datenschutz/
+        checked_on: '2026-10-01'
+        excerpt: Q division GmbH
+        supports: [controller_and_cookie_profile_scope]
+      - url: https://q-division.de/datenschutz/widerspruch/
+        checked_on: '2026-10-01'
+        excerpt: neutrales Opt-out-Cookie
+        supports: [browser_action, preference_persistence, propagation_delay]
+      - url: https://q-division.de/cookieabfrage/
+        checked_on: '2026-10-01'
+        excerpt: spätestens 180 Tagen
+        supports: [provider_stated_matching_loss_and_attribute_retention]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Current runtime controls and backend propagation untested., Legacy legal and vendor references in the published notice are not endorsed as current legal conclusions., Parent and comparable scale unreviewed.]
+  - id: cs-connect-business-credit
+    name: CS Connect business-role credit records
+    match_domains: [cs-connect.de]
+    identity:
+      legal_name: CS Connect GmbH & Co. KG
+      brands: [CS Connect]
+      parent: SCHUFA Holding AG
+      official_domains: [cs-connect.de]
+    relevance:
+      regions: [Germany, International company records — separate source referral]
+      category: credit_reference
+      data_categories: [Company officer roles, Business credit information, Insolvency and debtor information, Risk profiles]
+      note: The provider distinguishes company officers from private consumers, whose separate records belong to SCHUFA's consumer services.
+    removal:
+      method: manual
+      destination: https://cs-connect.de/kontakt/datenkopie.jsp
+      alternatives: [datenschutz@cs-connect.de, https://cs-connect.de/kontakt/sonstige-anliegen.jsp]
+      steps:
+        - If you are a company officer, use the data-copy route to establish your stored roles and records; provide an existing reference number if you have one.
+        - Review the actual matching fields personally; the public page's dynamic form fields were not exposed during this check.
+        - Request correction, justified erasure or restriction of specific records after review. Do not automatically demand deletion of all accurate credit or public-register information.
+        - Pure consumer records have a separate SCHUFA route. The product notice directs international-company enquiries to Coface Information Services; verify that separate controller before disclosure.
+    required_information:
+      fields: [company_role_context, identity_information_as_requested]
+      certainty: not_fully_specified
+      verification: Existing reference number is optional in the page instructions; runtime identity and document requirements remain uninspected.
+    coverage:
+      effect: access_then_review
+      includes: Personal records linked to company functions in CS Connect's business database.
+      excludes: Automatic credit-history erasure, separate SCHUFA consumer records, source public registers and guaranteed Coface processing outcomes.
+    automation:
+      mode: manual
+      reason: Credit and company-role records need context, matching and record-specific review.
+    evidence:
+      - url: https://cs-connect.de/
+        checked_on: '2026-10-01'
+        excerpt: Muttergesellschaft, der SCHUFA Holding AG
+        supports: [controller_product_identity, parent_and_consumer_boundary]
+      - url: https://cs-connect.de/information-auskunfteiverfahren.html
+        checked_on: '2026-10-01'
+        excerpt: datenschutz@cs-connect.de
+        supports: [business_credit_scope, rights_contact, international_source_referral]
+      - url: https://cs-connect.de/kontakt/datenkopie.jsp
+        checked_on: '2026-10-01'
+        excerpt: Datenkopie nach Art 15 DS-GVO
+        supports: [officer_access_route, optional_existing_reference]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Form matching and fulfilment untested., Comparable database size unreviewed., Older .jsp policy URLs returned the homepage; current .html notice used instead.]
+  - id: windaten-marketing-information
+    name: WINDATEN marketing information
+    match_domains: [win-daten.de]
+    identity:
+      legal_name: Boris Winkler trading as WINDATEN
+      brands: [WINDATEN, WIN DATEN Informationsnetze und Daten]
+      parent: null
+      official_domains: [win-daten.de]
+    relevance:
+      regions: [Germany]
+      category: consumer_marketing
+      data_categories: [Business contacts and managers, Property and building information, Moving and business-change signals, Marketing enrichment]
+      note: Product pages describe proprietary consumer/business data; not every building or business attribute is personal data.
+    removal:
+      method: manual
+      destination: info@win-daten.de
+      alternatives: [https://win-daten.de/datenschutz]
+      steps:
+        - Ask which personal marketing, business-contact or property-linked records WINDATEN holds and what identifiers are needed to locate them.
+        - Distinguish product-database records from website contact records; the general notice does not publish a product-specific matching checklist.
+        - After matching, request appropriate erasure or marketing objection and retain the stated scope. Do not send identity documents or unrelated household details without review.
+    required_information:
+      fields: [relevant_product_context, matching_information_as_requested]
+      certainty: not_fully_specified
+      verification: Product matching and verification are not specified in the published general rights notice.
+    coverage:
+      effect: access_then_review
+      includes: Identifying personal records in WINDATEN-controlled products before choosing the appropriate request.
+      excludes: Assumed erasure of all property/business facts, independent customers or source public registers.
+    automation:
+      mode: manual
+      reason: The product and matching scope must be clarified before a minimally disclosed automated request can be selected.
+    evidence:
+      - url: https://win-daten.de/
+        checked_on: '2026-10-01'
+        excerpt: eigene Technologie zur Generierung und Analyse von Big Data
+        supports: [proprietary_marketing_products_and_categories]
+      - url: https://win-daten.de/impressum
+        checked_on: '2026-10-01'
+        excerpt: Boris Winkler
+        supports: [proprietor_identity]
+      - url: https://win-daten.de/datenschutz
+        checked_on: '2026-10-01'
+        excerpt: info@win-daten.de
+        supports: [general_rights_contact_not_product_matching_checklist]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Exact personal-record matching and fulfilment untested., Product-specific retention and customer-copy coverage unestablished., No comparable scale verified.]

@@ -1,0 +1,108 @@
+schema_version: 1
+brokers:
+  - id: quantyoo-media
+    name: Quantyoo media profiles
+    match_domains: [quantyoo.de]
+    identity:
+      legal_name: Quantyoo GmbH & Co. KG (HRA 13835)
+      brands: [Quantyoo]
+      parent: null
+      official_domains: [quantyoo.de]
+    relevance:
+      regions: [DE, EEA]
+      category: advertising
+      data_categories: [Media-partner account identities, Listening and browsing interests, Advertising segments]
+      note: Radio/media partners contribute consent-linked profiles; partner migrations do not automatically revoke older consent.
+    removal:
+      method: form
+      destination: https://quantyoo.de/account/consents
+      alternatives: [privacy@quantyoo.de, support@quantyoo.de, https://quantyoo.de/account]
+      steps:
+        - With an existing partner account, sign into the User-Center and review/revoke the relevant Quantyoo and partner consents; do not create an account just for removal.
+        - Without an account or for an unmatched profile, contact privacy@quantyoo.de with the relevant partner and identifiers, asking for erasure and withdrawal guidance.
+        - For browser-only tracking, also withdraw consent on the participating partner's site; independently retained partner data needs separate review.
+    required_information:
+      fields: [existing_partner_account_or_matching_context]
+      certainty: not_fully_specified
+      verification: Public login needs email and password; authenticated controls and matching for unregistered users were not tested.
+    coverage:
+      effect: deletion_request
+      includes: Quantyoo's consent-linked profiles; its technology notice describes deletion after withdrawal.
+      excludes: Independent partner retention, other partner purposes and unrelated databases.
+    automation: {mode: manual, reason: Existing account or device/partner matching must be reviewed personally.}
+    evidence:
+      - url: https://quantyoo.de/technology
+        checked_on: '2026-09-30'
+        published: '2019-08 (still linked by current site)'
+        excerpt: können Sie sich per E-Mail an privacy@quantyoo.de
+        supports: [technology_controller, partner_scope, user_center, email_alternative, withdrawal_and_limits]
+      - url: https://quantyoo.de/gdpr
+        checked_on: '2026-09-30'
+        published: '2024-12'
+        excerpt: auf den Digital-Angeboten unserer Partner
+        supports: [current_tracking_controller, partner_consent_withdrawal, device_identifiers]
+      - url: https://quantyoo.de/imprint
+        checked_on: '2026-09-30'
+        excerpt: HRA 13835
+        supports: [current_legal_entity, profile_support]
+      - url: https://quantyoo.de/account
+        checked_on: '2026-09-30'
+        excerpt: E-Mail-Adresse Passwort
+        supports: [public_login_only]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Authenticated withdrawal controls., Exact matching for unregistered profiles and independent partner outcomes.]
+  - id: equifax-work-number
+    name: Equifax The Work Number
+    match_domains: [theworknumber.com]
+    identity:
+      legal_name: Equifax Workforce Solutions LLC
+      brands: [The Work Number]
+      parent: Equifax Inc.
+      official_domains: [theworknumber.com, equifax.com]
+    relevance:
+      regions: [US]
+      category: identity_risk
+      data_categories: [Employment history, Income and payroll records]
+      note: Relevant to records supplied by participating employers/payroll providers; European residence alone does not establish a record or eligibility for this US form.
+    removal:
+      method: form
+      destination: https://employees.theworknumber.com/data-freeze-form
+      alternatives: [https://employees.theworknumber.com/employee-data-freeze, TWNFreeze@equifax.com, https://employees.theworknumber.com/employment-data-report, https://employees.theworknumber.com/employee-data-dispute]
+      steps:
+        - Decide whether to freeze access to your employment/income report; a freeze can delay job, loan or benefits checks and is not deletion.
+        - If the US form fits your circumstances, complete it personally and choose Freeze, not Remove Freeze; otherwise contact the listed service team for the appropriate route.
+        - Review electronic-communication consent and verification; retain the confirmation and instructions for a later temporary lift.
+        - Use the separate report/dispute routes for access or errors; do not treat this as Equifax-wide credit-file deletion.
+    required_information:
+      fields: [SSN, first_name, last_name, US_mailing_address, phone, email, request_type]
+      certainty: not_fully_specified
+      verification: Public form marks these identifiers required and offers contact preferences. Conditional validation and later identity checks remain untested; never send an SSN or identity documents automatically.
+    coverage:
+      effect: suppression
+      includes: Access freeze for the matched Work Number employment/income record.
+      excludes: Record deletion, source employer data and Equifax credit files; verification-dependent applications may require extra paperwork or lifting the freeze.
+    automation: {mode: manual, reason: Sensitive identifiers and consequences for lending/employment/benefits require a personal choice.}
+    evidence:
+      - url: https://employees.theworknumber.com/employee-data-freeze
+        checked_on: '2026-09-30'
+        excerpt: A data freeze may slow down the application process
+        supports: [free_freeze, consequences, email_and_phone_alternatives]
+      - url: https://employees.theworknumber.com/data-freeze-form
+        checked_on: '2026-09-30'
+        excerpt: SSN
+        supports: [public_required_fields, contact_consent, request_types]
+      - url: https://theworknumber.com/terms-of-use
+        checked_on: '2026-09-30'
+        published: '2022-04-04'
+        excerpt: Equifax Workforce Solutions LLC
+        supports: [operator_identity]
+      - url: https://employees.theworknumber.com/
+        checked_on: '2026-09-30'
+        excerpt: income and employment
+        supports: [service_scope, employer_records, report_and_dispute_routes]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Personal record relevance., Non-US matching route and conditional verification., Actual freeze outcome.]

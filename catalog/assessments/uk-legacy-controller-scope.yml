@@ -1,0 +1,35 @@
+schema_version: 1
+assessments:
+  - record: community:callcredit-gb
+    disposition: guide
+    guide_id: transunion-uk
+    checked_on: '2026-10-01'
+    rationale: Companies House confirms Callcredit Information Group Limited became TransUnion Information Group Limited in 2019 under the same company number. Use the existing UK product-specific rights guide, not TransUnion US state-law forms; marketing suppression remains distinct from credit-file erasure.
+    evidence:
+      - url: https://find-and-update.company-information.service.gov.uk/company/04968328
+        checked_on: '2026-10-01'
+        excerpt: CALLCREDIT INFORMATION GROUP LIMITED
+        supports: [exact_previous_legal_name, continuity]
+      - url: https://www.transunion.co.uk/legal/privacy-centre/pc-general
+        checked_on: '2026-10-01'
+        excerpt: TransUnion Information Group Limited
+        supports: [current_group_controller_scope]
+      - url: https://www.transunion.co.uk/legal/privacy-centre/your-data-rights
+        checked_on: '2026-10-01'
+        excerpt: consumer marketing data
+        supports: [distinct_rights_and_product_limits]
+    unresolved: []
+  - record: community:ksv1870
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: This row names KSV1870 Holding AG, the group website operator and processor, not the independent credit/address-trading controller. The official notice assigns that product to KSV1870 Information GmbH, already covered by the separate ksv1870-at guide. Exclude a redundant default holding-company broker request; direct website, recruitment or survey rights remain available and this is not a no-data finding.
+    evidence:
+      - url: https://www.ksv.at/datenschutzerklaerung
+        checked_on: '2026-10-01'
+        excerpt: Ihr Auftragsverarbeiter ist die KSV1870 Holding AG
+        supports: [separate_group_controller_roles, holding_website_scope, rights_contact]
+      - url: https://www.ksv.at/unternehmen/organisation
+        checked_on: '2026-10-01'
+        excerpt: zu je 100 Prozent im Eigentum der KSV1870 Holding AG
+        supports: [distinct_subsidiaries]
+    unresolved: []

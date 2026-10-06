@@ -1,0 +1,5 @@
+<nav class="request-tabs" aria-label="Settings sections">
+  <a href="/onboarding" {% if request.url.path == '/onboarding' %}aria-current="page"{% endif %}>Profile</a>
+  <a href="/campaign" {% if request.url.path == '/campaign' %}aria-current="page"{% endif %}>Automatic emails</a>
+  <a href="/appearance" {% if request.url.path == '/appearance' %}aria-current="page"{% endif %}>Appearance</a>
+</nav>

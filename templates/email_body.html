@@ -1,0 +1,1 @@
+<div class="email-body">{{ email_text | urlize(trim_url_limit=60, target='_blank', rel='noreferrer noopener') if email_text else 'This message has no readable text body.' }}</div>

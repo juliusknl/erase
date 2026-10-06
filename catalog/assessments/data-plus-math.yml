@@ -1,0 +1,17 @@
+schema_version: 1
+assessments:
+  - record: community:dataplusmath
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: LiveRamp's August 2026 DPF notice expressly includes Data Plus Math Corporation and regional privacy contacts, establishing current group privacy scope. It does not establish that LiveRamp's browser/mobile opt-out matches and deletes this measurement product's own records. Keep that matching/workflow gap visible.
+    evidence:
+      - url: https://liveramp.com/privacy/ita-data-privacy-framework
+        checked_on: '2026-10-01'
+        published: August 28, 2026
+        excerpt: Data Plus Math Corporation
+        supports: [exact_affiliate_identity, transferred_data_scope, regional_contacts, controller_processor_distinction]
+      - url: https://liveramp.com/privacy
+        checked_on: '2026-10-01'
+        excerpt: Global Opt Out of LiveRamp’s Mobile Identifier
+        supports: [device_controls_not_measurement_deletion_proof]
+    unresolved: [Product-specific record matching and removal instructions for Data Plus Math measurement records]

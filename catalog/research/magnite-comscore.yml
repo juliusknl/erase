@@ -1,0 +1,106 @@
+schema_version: 1
+brokers:
+  - id: magnite-advertising
+    name: Magnite advertising platforms
+    match_domains: [magnite.com, rubiconproject.com, telaria.com]
+    identity:
+      legal_name: Magnite, Inc. and affiliates for controller-operated advertising platforms
+      brands: [Magnite, Rubicon Project, Telaria, Magnite DV+, Magnite CTV, SpringServe]
+      parent: null
+      official_domains: [magnite.com, rubiconproject.com]
+    relevance:
+      regions: [EEA, UK, CH, US]
+      category: advertising
+      data_categories: [Cookie identifiers, Advertising device identifiers, IP addresses, Online activity]
+      note: Platform data rather than corporate-site visitors; generic name/email matching cannot identify these pseudonymous records.
+    removal:
+      method: form
+      destination: https://www.magnite.com/legal/user-choice-portal/
+      alternatives: [privacy@magnite.com, dpo@magnite.com]
+      steps:
+        - Open User Choice Portal in each affected browser, select the opt-out box and confirm OK; repeat separately on other devices. Retain preference cookies.
+        - Historical deletion is separate. Use the portal's identifier instructions and email privacy@magnite.com or dpo@magnite.com with the relevant identifier and requested right; review any screenshot/device evidence personally.
+        - The listed cookie names are khaos, tvid, ssid, sst, ccuid and ccsid on the specified platform domains. Never send all browser cookies or account session tokens.
+        - For mobile/TV records, use the device-specific controls or relevant advertising identifier. A server-side opt-out cannot alter your browser preferences.
+    required_information:
+      fields: [browser_context_for_opt_out, digital_identifier_for_deletion, identifier_ownership_evidence_if_requested]
+      certainty: not_fully_specified
+      verification: The public portal describes identifier and screenshot/device checks; no private cookies were inspected, opt-out activated or request submitted.
+    coverage:
+      effect: suppression
+      includes: Device/browser-specific targeting, sale and sharing preferences, with a separate identifier-matched deletion request for controller-held platform data.
+      excludes: Other devices, independent clients, processor-only client records, corporate accounts and legally retained records are not blanket-erased.
+    automation:
+      mode: manual
+      reason: Personal device context and identifier evidence are required; name/email-only delivery would not implement the published route.
+    evidence:
+      - url: https://www.magnite.com/legal/user-choice-portal/
+        checked_on: '2026-10-01'
+        published: July 1, 2026
+        excerpt: opt-outs must be performed separately on each browser and each device
+        supports: [removal, required_identifiers, published_email_contacts, verification, preference_limits]
+      - url: https://www.magnite.com/legal/advertising-platform-privacy-policy/
+        checked_on: '2026-10-01'
+        published: July 1, 2026
+        excerpt: Magnite, Inc. and its affiliates
+        supports: [identity, controller_scope, regions, data_categories, retention]
+      - url: https://www.magnite.com/blog/weve-re-introduced-our-platforms-magnite-ctv-and-magnite-dv/
+        checked_on: '2026-10-01'
+        excerpt: The Telaria platform is now called
+        supports: [Telaria_and_Rubicon_product_continuity_not_all_legal_entities]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Exact identifier ownership checks, Personal presence and actual erasure outcome, Coverage of records independently retained by former regional entities]
+
+  - id: comscore-tagging
+    name: Comscore / ScorecardResearch tagging
+    match_domains: [comscore.com, scorecardresearch.com]
+    identity:
+      legal_name: Comscore B.V. for EU/EEA/UK residents; Comscore, Inc. for other residents
+      brands: [Comscore, ScorecardResearch, VoiceFive tagging]
+      parent: null
+      official_domains: [comscore.com, scorecardresearch.com, voicefive.com]
+    relevance:
+      regions: [EEA, UK, US, Other regions]
+      category: advertising
+      data_categories: [Browser cookie IDs, Mobile advertising IDs, Browsing and app activity, Audience measurement]
+      note: Tagging is separate from panel membership, surveys, employment and applicants. Some commissioned surveys and restricted measurement are client-controlled.
+    removal:
+      method: form
+      destination: https://www.comscore.com/About/Privacy/Data-Subject-Rights/Data-Subject-Rights-Tagging
+      alternatives: [DSR@comscore.com, https://www.comscore.com/About/Privacy/Data-Subject-Rights, https://www.comscore.com/About/Privacy/Data-Subject-Rights/Data-Subject-Rights-Combined]
+      steps:
+        - Open the tagging form in the browser/device you actually use. It attempts to read existing ScorecardResearch/VoiceFive cookie IDs; a no-cookie result on another browser is not proof of no records.
+        - Enter email, first/last name and true country; provide state/province if applicable. Add a mobile advertising ID only if you want those records included.
+        - Select deletion rather than access alone. The form says deletion also opts that browser/device out of the associated research programs.
+        - Review the sole-user/device-authority declaration personally. Do not certify sole use on a shared device if untrue; ask DSR support how to proceed. Finish verification and retain confirmation.
+        - Repeat for other relevant browsers/devices. Use the separate Panel and Other Data form if you participated in a panel or survey; tagging removal alone does not cover those records or job applications.
+    required_information:
+      fields: [email, first_name, last_name, residence_country, relevant_browser_context, sole_user_device_authority_declaration]
+      certainty: not_fully_specified
+      verification: Public HTML shows required contact/location fields, conditional state/province and optional mobile ID. A personal device declaration and possible further identity checks remain manual; no request or cookie retrieval was performed.
+    coverage:
+      effect: deletion_request
+      includes: Matched ScorecardResearch/VoiceFive tagging records for the current browser and supplied mobile ID, plus the described browser research opt-out.
+      excludes: Other browsers/devices, separate panel records, applicants, client-controlled surveys and retained request-audit records; no-cookie output is not an all-data result.
+    automation:
+      mode: manual
+      reason: The request depends on personal browser identifiers and a truthful device declaration; never submit it from the local app's server or sign it automatically.
+    evidence:
+      - url: https://www.comscore.com/About/Privacy/Data-Subject-Rights/Data-Subject-Rights-Tagging
+        checked_on: '2026-10-01'
+        excerpt: I am the sole user of the device
+        supports: [tagging_fields, browser_matching, deletion_and_opt_out, personal_declaration, request_record_retention]
+      - url: https://www.comscore.com/About/Privacy/Data-Subject-Rights
+        checked_on: '2026-10-01'
+        excerpt: Panel and Other Data
+        supports: [separate_product_routes, verification, authorized_agents, DSR_contact]
+      - url: https://www.comscore.com/About/Privacy
+        checked_on: '2026-10-01'
+        excerpt: the data controller is Comscore B.V.
+        supports: [regional_controller_identity, data_sources, controller_processor_limits]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Live conditional rendering and subsequent verification, Actual device matches and completed deletion, Separate panel-specific outcomes]

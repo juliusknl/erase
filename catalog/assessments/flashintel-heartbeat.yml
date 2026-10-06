@@ -1,0 +1,46 @@
+schema_version: 1
+assessments:
+  - record: live:flashintel
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: FlashIntel redirects to FlashLabs. Current website terms name FlashCloud Intelligence Asia Pte Ltd, while the US privacy notice names FlashCloud Intelligence Group and describes website collection. The cookie preference page does not establish deletion of the professional people-search database. The European product scope, exact controller continuity and matching workflow need clarification before promotion.
+    evidence:
+      - url: https://www.flashintel.ai/
+        checked_on: '2026-10-01'
+        excerpt: FlashLabs
+        supports: [official_redirect_not_legal_merger_proof]
+      - url: https://www.flashlabs.ai/terms-conditions
+        checked_on: '2026-10-01'
+        published: '2023-08-18'
+        excerpt: FlashCloud Intelligence Asia Pte. Ltd.
+        supports: [website_operator]
+      - url: https://www.flashlabs.ai/privacy-statement-us
+        checked_on: '2026-10-01'
+        published: '2025-12-16'
+        excerpt: FlashCloud Intelligence Group
+        supports: [US_website_notice_not_complete_European_product_workflow]
+      - url: https://www.flashlabs.ai/opt-out-preferences
+        checked_on: '2026-10-01'
+        excerpt: cookies
+        supports: [browser_preferences_not_database_deletion]
+    unresolved: [Establish exact professional-database controller and European route., Confirm product matching and verification rather than website cookie preferences.]
+  - record: live:heartbeat-ai-inc
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: Current provider-contact site is active, but the privacy-policy retrieval returns a bot-check page and web retrieval fails. The support article's opt-out instructions point to an editorial corrections article that links back to support without a concrete matching intake or email. These circular articles do not establish an executable professional-profile removal route.
+    evidence:
+      - url: https://heartbeat.ai/privacy-policy
+        checked_on: '2026-10-01'
+        excerpt: Checking for any bots
+        supports: [current_notice_unavailable_not_inactive_company]
+      - url: https://heartbeat.ai/resources/company/contact/
+        checked_on: '2026-10-01'
+        published: '2026-08-31'
+        excerpt: corrections and update policy
+        supports: [support_refers_to_editorial_page]
+      - url: https://heartbeat.ai/resources/trust-methodology/corrections-update-policy/
+        checked_on: '2026-10-01'
+        published: '2026-08-31'
+        excerpt: editorial contact method
+        supports: [circular_editorial_intake_not_verified_data_removal]
+    unresolved: [Retrieve current data-subject notice and exact controller., Find concrete profile removal intake and matching requirements without inferring from recruiting advice.]

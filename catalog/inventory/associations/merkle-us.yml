@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: merkle-us-data-products
+    records: [live:merkle-inc]
+    rationale: Current Data Product Privacy Notice and Data Use Terms identify Merkle Inc for US proprietary data services. This exact US row is not merged with Merkle UK One Limited or Dentsu UK's separately scoped identity product.

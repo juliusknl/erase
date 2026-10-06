@@ -1,0 +1,40 @@
+schema_version: 1
+assessments:
+  - record: community:adtargeting-de
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: The current official notice describes campaign and agency work on client instructions, explicitly restricting entrusted client data to commissioned purposes. Exclude from the default independent-broker campaign on that documented product role, not a claim that it holds no personal information. Direct website, customer and contractual rights remain available at its published DPO contact; source-controller follow-up may still be appropriate.
+    evidence:
+      - url: https://www.adtargeting.de/datenschutz.html
+        checked_on: '2026-10-01'
+        excerpt: keinen anderen, als den auftragsgemäßen Zwecken
+        supports: [agency_scope, processor_role, default_campaign_exclusion]
+    unresolved: []
+  - record: community:e2ma-de
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: Current homepage establishes consumer lead generation, co-registration, email and postal marketing and names KIOSK Media as its brand. Its privacy notice's deletion inbox appears under website contact-form processing; that is not sufficient evidence of the consumer-lead matching process. The old Hamburg community address differs from the current Nuremberg controller address.
+    evidence:
+      - url: https://e2ma.de/
+        checked_on: '2026-10-01'
+        excerpt: Mit unserer Marke KIOSK Media
+        supports: [relevance, brand, current_address]
+      - url: https://e2ma.de/datenschutz-2/
+        checked_on: '2026-10-01'
+        excerpt: datenschutz@e2ma.de
+        supports: [website_contact_rights, controller, scope_limit]
+    unresolved: [Consumer-lead controller notice and identifiers remain unestablished., KIOSK Media privacy URL returned HTTP 403; campaign-specific notice needs review., No automatic email or verified consumer-database removal claimed.]
+  - record: community:directscouts
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: Current site describes door-to-door, call-centre and other lead-generation services. The privacy notice gives a current Langenfeld address and DPO inbox but primarily describes visitors, inquiries and recruitment. It does not establish whether campaign leads are held independently or on customer instructions, so neither an automatic consumer-database route nor an exclusion is justified yet.
+    evidence:
+      - url: https://directscouts.de/
+        checked_on: '2026-10-01'
+        excerpt: Professionelle In- und Outbound Telefonie
+        supports: [relevance, current_identity]
+      - url: https://directscouts.de/datenschutz/
+        checked_on: '2026-10-01'
+        excerpt: datenschutz@directscouts.de
+        supports: [website_rights_contact, controller, scope_limit]
+    unresolved: [Establish lead-processing controller and campaign notice., Determine minimum matching fields and downstream scope before enabling sending.]

@@ -1,0 +1,11 @@
+schema_version: 1
+associations:
+  - guide_id: listkit-professional
+    records: [live:listkit-llc]
+    rationale: Current listkit.io notice names ListKit LLC and accepts database-contact removal by email. Unrelated similarly named domains are not matched.
+  - guide_id: recruitbot-candidates
+    records: [live:recruitbot-inc]
+    rationale: Current candidate policy names RecruitBot Inc and distinguishes its own database from employer-controlled records.
+  - guide_id: lightcast-professional
+    records: [live:lightcast-llc, live:economic-modeling-llc]
+    rationale: Current notice names Lightcast LLC; linked official request-center configuration explicitly includes Economic Modeling and EMSI. This is documented shared portal scope, not an inferred legal merger or an assertion that all brand records match one email. Rhetorik's separate guide remains distinct.

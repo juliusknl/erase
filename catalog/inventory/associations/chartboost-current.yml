@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: registry-loopme-limited
+    records: ["community:chartboost"]
+    rationale: Chartboost's official documentation links the shared September 2026 LoopMe advertising notice, which explicitly names Chartboost LLC and distinguishes the controller by ad delivery. The older discovery Inc. name is retained as history; no claim of automatic closure across both companies.

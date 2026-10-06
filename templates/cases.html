@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Requests · erase{% endblock %}
+{% block content %}
+<header class="workspace-head compact-head"><div><h1>Requests</h1></div><a class="button secondary" href="/brokers">Browse brokers</a></header>
+{% if view != 'mail' %}<nav class="request-filters" aria-label="Filter requests"><a href="/cases?q={{ q | urlencode }}" {% if view != 'attention' and not state %}aria-current="page"{% endif %}>All</a><a href="/cases?view=attention&q={{ q | urlencode }}" {% if view == 'attention' %}aria-current="page"{% endif %}>Needs you ({{ attention_items | length }})</a><a href="/cases?state=waiting&q={{ q | urlencode }}" {% if state == 'waiting' %}aria-current="page"{% endif %}>Waiting</a><a href="/cases?state=done&q={{ q | urlencode }}" {% if state in ['done', 'removed'] %}aria-current="page"{% endif %}>Done</a></nav>{% endif %}
+{% if unmatched_count and view != 'mail' %}<p class="mail-matching-notice"><a href="/cases?view=mail">{{ unmatched_count }} {{ 'message needs' if unmatched_count == 1 else 'messages need' }} matching to a broker →</a></p>{% endif %}
+{% if view == 'mail' %}<a class="back-link" href="/cases">← Back to requests</a><h2>Messages to match</h2>{% endif %}
+{% if view != 'mail' %}<form method="get" class="request-search"><input type="hidden" name="view" value="{{ view }}"><input type="hidden" name="state" value="{{ state }}"><label for="request-search">Find a broker</label><div class="button-row"><input type="search" id="request-search" name="q" value="{{ q }}" placeholder="Search requests"><button class="secondary">Search</button></div></form>{% endif %}
+{% if view == 'mail' %}{% include 'unmatched_mail.html' %}
+{% else %}
+<section class="toolbar">
+<span class="result-count">{{ cases | length }} request{{ '' if cases | length == 1 else 's' }}</span>
+</section>
+<section class="card table-card"><div class="table-wrap"><table data-sortable><thead><tr><th data-sort="text">Broker</th><th data-sort="text">Status</th><th data-sort="number" aria-sort="descending">Updated</th></tr></thead><tbody>
+{% for case in cases %}<tr><td><a class="broker-link" href="{{ attention_urls[case.id] if view == 'attention' else '/cases/' ~ case.id }}">{{ case.broker.name }} →</a></td><td><span class="status status-{{ case.state }}">{{ 'Route needs review' if case.state in ['needs_action', 'delivery_failed'] and case.id not in attention_case_ids else ('Done' if case.state == 'not_found' else case.state | state_label) }}</span></td><td data-sort-value="{{ request_updated[case.id].timestamp() if request_updated[case.id] else '' }}">{{ request_updated[case.id] | relative_time }}</td></tr>{% else %}<tr><td colspan="3" class="empty">{{ 'No requests need your attention.' if view == 'attention' and not q else 'No requests match this filter.' }}</td></tr>{% endfor %}
+</tbody></table></div></section>
+{% endif %}
+<p class="footnote"><a href="/export.csv">Export history</a></p>
+{% endblock %}

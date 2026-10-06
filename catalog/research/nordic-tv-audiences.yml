@@ -1,0 +1,135 @@
+schema_version: 1
+brokers:
+  - id: nordic-data-resources
+    name: Nordic Data Resources
+    match_domains: [nordicdataresources.com]
+    identity:
+      legal_name: Nordic Data Resources AS (915775179; policy styles it A/S)
+      brands: [NDR]
+      parent: null
+      official_domains: [nordicdataresources.com]
+    relevance:
+      regions: [EEA, 'NO', international]
+      category: advertising
+      data_categories: [Advertising identifiers, Hashed contacts, Browsing and purchase segments, Location]
+      note: Norwegian audience-data provider; company number resolves the policy's A/S spelling.
+    removal:
+      method: form
+      destination: https://www.nordicdataresources.com/opt-out/
+      alternatives: [privacy@nordicdataresources.com, https://www.nordicdataresources.com/privacy/products/]
+      steps:
+        - Use the email-linked opt-out for an address actually associated with your records; a dedicated request-only address may not match.
+        - Cookie opt-out applies to the current browser. Repeat for other browsers and after clearing cookies.
+        - For historical device-data deletion, email the privacy team with the relevant advertising ID. Do not assume email opt-out deletes unlinked device records.
+        - Check off only your selected scope after completing its confirmation. Do not install an unfamiliar app merely to retrieve an ID.
+    required_information:
+      fields: [matching_email_or_advertising_id, requested_scope]
+      certainty: not_fully_specified
+      verification: Email and device controls are separate; subsequent confirmation and ownership checks are untested.
+    coverage:
+      effect: suppression
+      includes: Processing opt-out linked to the supplied email, device or browser choice.
+      excludes: Historical deletion is a separate advertising-ID email request; unlinked identifiers and independent partners are not covered.
+    automation: {mode: manual, reason: Select matching identifier and scope personally; the app does not store or automatically transmit device IDs.}
+    evidence:
+      - url: https://www.nordicdataresources.com/opt-out/
+        checked_on: '2026-09-30'
+        excerpt: Opt out of NDR segments by email
+        supports: [form, identifier_scopes, suppression]
+      - url: https://www.nordicdataresources.com/privacy/products/
+        checked_on: '2026-09-30'
+        published: '2024-07-30'
+        excerpt: submitting their Ad ID to our Privacy Team
+        supports: [identity, product_data, deletion_email, unlinked_identifiers]
+      - url: https://data.brreg.no/enhetsregisteret/api/enheter/915775179
+        checked_on: '2026-09-30'
+        excerpt: NORDIC DATA RESOURCES AS
+        supports: [legal_identity, official_domain]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Post-submission verification and fulfilment., Parent and comparable scale unreviewed.]
+
+  - id: alphonso-tv
+    name: Alphonso — European smart-TV data
+    match_domains: [alphonso.tv]
+    identity:
+      legal_name: Alphonso Inc.
+      brands: [Alphonso]
+      parent: null
+      official_domains: [alphonso.tv]
+    relevance:
+      regions: [EEA, UK, CH]
+      category: advertising
+      data_categories: [TV viewing history, Device identifiers, Household interests]
+      note: European smart-TV ACR notice; future collection settings and retained-data rights differ.
+    removal:
+      method: email
+      destination: privacy@alphonso.tv
+      alternatives: [info-EU@alphonso.tv, DPO.Alphonso@twobirds.com, https://alphonso.tv/privacy/smart-tvs/smart-tv-privacy-policy-eu/]
+      steps:
+        - On a participating television, turn off ACR in its settings to withdraw future collection consent.
+        - Request erasure of matching retained viewing/device records through the privacy inbox. Ask which device identifiers are required before disclosing them.
+        - Complete ownership verification and retain the scope response. Do not treat a browser advertising preference as historical TV-data erasure.
+    required_information:
+      fields: [relevant_tv_or_device_identifier]
+      certainty: not_fully_specified
+      verification: Device matching is needed; the notice gives no exhaustive identifier or verification checklist.
+    coverage:
+      effect: deletion_request
+      includes: Matching Alphonso-controlled TV-service records; policy describes partner handling of verified deletion requests.
+      excludes: No automatic erasure of anonymized reports or every partner copy; ACR disablement alone is not deletion confirmation.
+    automation:
+      mode: manual
+      reason: Television settings, device matching and identity checks require personal handling; no generic name/email-only recipe.
+    evidence:
+      - url: https://alphonso.tv/privacy/smart-tvs/smart-tv-privacy-policy-eu/
+        checked_on: '2026-09-30'
+        published: 'May 2026'
+        excerpt: To exercise any of these rights, please contact us at privacy@alphonso.tv.
+        supports: [identity, European_scope, ACR_control, rights_email, verification]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Device-specific settings and matching checklist., Actual deletion and partner fulfilment., Parent and scale unreviewed.]
+
+  - id: choreograph-global
+    name: Choreograph — global advertising data
+    match_domains: [choreograph.com]
+    identity:
+      legal_name: Choreograph Limited (EEA/Switzerland); Choreograph LLC (outside those territories)
+      brands: [Choreograph]
+      parent: WPP (published notice)
+      official_domains: [choreograph.com]
+    relevance:
+      regions: [EEA, UK, CH, international]
+      category: advertising
+      data_categories: [Online and offline identities, Purchases, Advertising profiles]
+      note: Global service policy, separate from website accounts and Conexance's regional programme.
+    removal:
+      method: form
+      destination: https://cpp.choreograph.com/
+      alternatives: [privacy@choreograph.com, dpo@choreograph.com]
+      steps:
+        - Select your actual country and relevant online/offline records in the Consumer Preference Portal; request deletion explicitly.
+        - Review matching and verification personally. Digital preferences apply to the current browser/device, not automatically all identifiers.
+        - Use the published privacy email for rights or routing problems. Do not treat this as deletion across WPP or the separate Conexance programme.
+    required_information:
+      fields: [country, requested_scope, matching_identifiers]
+      certainty: not_fully_specified
+      verification: Policy permits identity checks; dynamic portal fields remain untested.
+    coverage:
+      effect: deletion_request
+      includes: Matching records of the controller and service addressed by the request.
+      excludes: Independent customers, all WPP companies and blanket device coverage are not implied.
+    automation: {mode: manual, reason: Online/offline and country routing need individual review; no generic initial-email recipe.}
+    evidence:
+      - url: https://www.choreograph.com/global-privacy-policy/global-privacy-policy-english
+        checked_on: '2026-09-30'
+        published: '2024-10-02'
+        excerpt: the responsible legal entity is Choreograph LLC
+        supports: [controllers, service_scope, global_portal, rights_email, device_limits]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Dynamic verification and fulfilment., Inventory's Choreograph LLP legal-name mismatch remains unresolved; do not infer identical entity., UK controller wording needs confirmation for a UK-specific request.]

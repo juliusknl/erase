@@ -1,0 +1,14 @@
+schema_version: 1
+associations:
+  - guide_id: adjust-device
+    records: [community:adjust-com]
+    rationale: Current official imprint names Adjust GmbH on adjust.com; the reviewed Forget Device form covers attribution opt-out only, not historical deletion.
+  - guide_id: branch-saas
+    records: [community:branch-io]
+    rationale: Official SaaS policy names Branch Metrics, Inc., matching the community entity and domain. The guide distinguishes app-controller deletion from device opt-out and does not extend to Branch Discovery.
+  - guide_id: appsflyer-services
+    records: [community:appsflyer]
+    rationale: Official current OpenDSR documentation explicitly names AppsFlyer Germany GmbH as EU representative. Association records that representative role, not an inference that every group entity controls the same data.
+  - guide_id: adikteev-app-users
+    records: [community:adikteev]
+    rationale: The official mobile-user policy explicitly names Adikteev SA and its US affiliate; it routes rights requests to app customers and is distinct from visitor-only privacy.

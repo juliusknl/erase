@@ -1,0 +1,331 @@
+schema_version: 1
+brokers:
+  - id: valiuz-fr
+    name: Valiuz — combined retail profile
+    match_domains: [valiuz.com, hello.valiuz.com]
+    identity:
+      legal_name: VALIUZ SAS, RCS Lille Métropole 817460801
+      brands: [Valiuz]
+      parent: null
+      official_domains: [valiuz.com, hello.valiuz.com]
+    relevance:
+      regions: [FR]
+      category: consumer_marketing
+      data_categories: [Retail purchases, Customer profiles, Browsing, Inferred interests, Pseudonymous identifiers]
+      note: Combines participating retailers' customer profiles; also performs separate retailer-directed processing.
+    removal:
+      method: form
+      destination: https://hello.valiuz.com/mon-espace
+      alternatives: [mesdroits@valiuz.com]
+      steps:
+        - Enter the email associated with your retail accounts and follow the login link from hello@valiuz.com; it is single-use and expires after 24 hours.
+        - Withdraw multi-brand profile consent. The policy says this deletes the combined profile associated with that email.
+        - Separately reject Valiuz cookies through each retailer's cookie settings and address retailer-specific processing or marketing directly with that retailer.
+        - For other rights use mesdroits@valiuz.com; retain the reply's actual scope.
+    required_information:
+      fields: [email]
+      certainty: documented
+      verification: Portal uses an emailed login link. No email was entered; authenticated controls and DPO verification were not tested.
+    coverage:
+      effect: deletion_request
+      includes: Combined multi-brand profile associated with the supplied email.
+      excludes: Independent retailer records, retailer-directed processing, direct marketing preferences and cookie collection not separately disabled.
+    automation:
+      mode: manual
+      reason: Private login link, explicit consent choice and separate retailer/browser settings.
+    evidence:
+      - url: https://hello.valiuz.com/mentions-legales
+        checked_on: '2026-09-29'
+        excerpt: Immatriculée au RCS de Lille Métropole sous le numéro 817 460 801
+        supports: [identity]
+      - url: https://www.valiuz.com/fr/politique-de-confidentialite
+        checked_on: '2026-09-29'
+        excerpt: Le retrait du consentement implique la suppression du profil client unique
+        supports: [relevance, removal, coverage]
+      - url: https://hello.valiuz.com/mon-espace
+        checked_on: '2026-09-29'
+        excerpt: ce lien ne fonctionne qu’une seule fois et pendant 24h.
+        supports: [removal, required_information]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Authenticated deletion controls not inspected., Alternative DPO matching checklist., Parent ownership and comparable current profile count.]
+
+  - id: critere-direct-fr
+    name: Critère Direct
+    match_domains: [criteredirect.com]
+    identity:
+      legal_name: Critère Direct SARL, RCS Bordeaux 424008191
+      brands: [Critère Direct, myLIST]
+      parent: null
+      official_domains: [criteredirect.com]
+    relevance:
+      regions: [FR]
+      category: postal_marketing
+      data_categories: [Contact details, Purchase and donation history, Scores]
+      note: Address brokerage and hosting on owners' instructions; website records are separately controlled.
+    removal:
+      method: email
+      destination: dpo@criteredirect.com
+      alternatives: [https://www.criteredirect.com/rgpd-et-cookies/]
+      steps:
+        - Object to use of your campaign data and ask for the request to reach the source owner and advertiser.
+        - The published procedure applies opposition within its services and forwards it to the relevant controllers.
+        - Review any matching-information request before providing more identifiers.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Additional information may be requested; no minimum campaign-matching checklist is published.
+    coverage:
+      effect: suppression
+      includes: Opposition within brokerage services and onward notification.
+      excludes: Guaranteed deletion by independent owners or advertisers.
+    automation:
+      mode: manual
+      reason: Needs campaign-specific matching and suppression-aware wording.
+    evidence:
+      - url: https://www.criteredirect.com/rgpd-et-cookies/
+        checked_on: '2026-09-29'
+        published: '2023-10-04'
+        excerpt: Critère Direct qui l’appliquera dans le cadre des prestations fournies
+        supports: [identity, relevance, removal, required_information, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Exact matching identifiers., Parent ownership., Comparable record count., No request tested.]
+
+  - id: webrivage-fr
+    name: WebRivage / Bonjour Data — product notice unresolved
+    match_domains: [webrivage.com, bonjourdata.io]
+    identity:
+      legal_name: WebRivage SAS, RCS Aix-en-Provence 512302894
+      brands: [WebRivage, Bonjour Data]
+      parent: null
+      official_domains: [webrivage.com, bonjourdata.io]
+    relevance:
+      regions: [FR]
+      category: consumer_marketing
+      data_categories: [Email, Telephone, Postal contacts, Targeting attributes, Consent history]
+      note: Direct collection and multichannel prospect marketing; Bonjour Data is explicitly its product, not an additional broker.
+    removal:
+      method: investigate
+      destination: https://webrivage.com/protection-des-donnees/
+      alternatives: [dpo@webrivage.com]
+      steps:
+        - Establish the notice and scope for the collection campaign or Bonjour Data record.
+        - The published rights form displays email and request text; ask for deletion and opposition for the relevant product, not merely website-contact removal.
+        - Clarify the secure verification method before any ID disclosure; the policy's DPO paragraph requests signed ID while its general rights section says proof may be requested.
+    required_information:
+      fields: [email, request_details]
+      certainty: not_fully_specified
+      verification: Visible form fields reviewed without submission. Product matching and inconsistent ID wording remain unresolved; no automatic ID attachment.
+    coverage:
+      effect: needs_review
+      includes: Public rights enquiry route and documented data-product relationship.
+      excludes: Verified deletion procedure across collection sites, licensed recipients or every Bonjour Data record.
+    automation:
+      mode: blocked
+      reason: Corporate and Bonjour Data privacy pages use website-scoped wording; product-specific notice and verification need resolution.
+    evidence:
+      - url: https://webrivage.com/policy/
+        checked_on: '2026-09-29'
+        published: '2024-04-23'
+        excerpt: Notre politique de confidentialité ne concerne que les informations collectées sur notre site.
+        supports: [identity, removal, required_information, coverage]
+      - url: https://webrivage.com/protection-des-donnees/
+        checked_on: '2026-09-29'
+        excerpt: Votre email
+        supports: [removal, required_information]
+      - url: https://bonjourdata.io/politique-de-confidentialite/
+        checked_on: '2026-09-29'
+        published: '2024-04-23'
+        excerpt: POLITIQUE DE CONFIDENTIALITE DES DONNEES DE LA SOCIETE WEBRIVAGE
+        supports: [identity, coverage]
+      - url: https://webrivage.com/engagement-juridique/
+        checked_on: '2026-09-29'
+        excerpt: WebRivage administre à 100% ses supports de collecte
+        supports: [relevance]
+    scale:
+      claim: 35 million contact points
+      unit: contact points
+      scope: Bonjour Data product claim; channel counts can overlap and are not unique people or personal exposure.
+      source:
+        url: https://webrivage.com/data-marketing/
+        checked_on: '2026-09-29'
+        excerpt: 35 millions de points de contact
+        supports: [scale, identity, relevance]
+    review_status: needs_research
+    tested_outcome: not_tested
+    unknowns: [Product-specific collection notice., Verification and scope of consumer deletion., Parent ownership., Scale date., No submission tested.]
+
+  - id: hospimedia-nominations-fr
+    name: HOSPIMEDIA Nominations
+    match_domains: [nominations.hospimedia.fr]
+    identity:
+      legal_name: HOSPIMEDIA SASU, SIRET 43912574100033
+      brands: [HOSPIMEDIA Nominations]
+      parent: nehs group
+      official_domains: [nominations.hospimedia.fr, hospimedia-groupe.fr]
+    relevance:
+      regions: [FR]
+      category: professional
+      data_categories: [Professional contacts, Roles, Career movements, Education, Professional relationships]
+      note: Healthcare-sector decision-makers, not patient medical records; distinct from Nomination.fr.
+    removal:
+      method: email
+      destination: juridique@hospimedia-groupe.fr
+      alternatives: [dataprivacy@groupe-nehs.com]
+      steps:
+        - Request deletion or object to processing of your Nominations decision-maker profile.
+        - The FAQ asks that the group DPO at dataprivacy@groupe-nehs.com be copied on an opposition request.
+        - Alternatively reply to the profile-update notification to object; retain confirmation of the scope.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Request must come from the person or an authorised representative. Further identifying information, potentially ID proof, may be requested if matching fails; never attach ID automatically.
+    coverage:
+      effect: deletion_request
+      includes: Nominations professional profile and its processing.
+      excludes: Other nehs services, underlying public records and independent subscribers' records.
+    automation:
+      mode: manual
+      reason: Review professional matching information and the documented additional DPO recipient; generic single-recipient dispatch does not implement that instruction.
+    evidence:
+      - url: https://nominations.hospimedia.fr/mentions-legales/
+        checked_on: '2026-09-29'
+        published: '2024-05-06'
+        excerpt: 'SIRET : 43912574100033'
+        supports: [identity]
+      - url: https://nominations.hospimedia.fr/politique-de-confidentialite/
+        checked_on: '2026-09-29'
+        published: '2024-04-02'
+        excerpt: Les décideurs peuvent également exercer leurs droits en adressant un email à juridique@hospimedia-groupe.fr.
+        supports: [identity, relevance, removal, required_information, coverage]
+      - url: https://nominations.hospimedia.fr/faq-decideurs/
+        checked_on: '2026-09-29'
+        excerpt: en mettant en copie de l’email le délégué à la protection des données
+        supports: [removal]
+    scale:
+      claim: 30,000 decision-makers
+      unit: professional profiles
+      scope: Healthcare leadership product claim, not patients, personal exposure or deleted records.
+      source:
+        url: https://nominations.hospimedia.fr/profil-de-decideur/
+        checked_on: '2026-09-29'
+        excerpt: 30 000 décideurs référencés
+        supports: [scale, relevance]
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Exact email matching checklist., No request submitted., Scale measurement date.]
+
+  - id: avanci-fr
+    name: Avanci — campaign data
+    match_domains: [avanci.fr, mes-datas.fr]
+    identity:
+      legal_name: AVANCI SAS, RCS Tours 432388718
+      brands: [Avanci, mes-datas.fr]
+      parent: MV GROUP
+      official_domains: [avanci.fr, mes-datas.fr]
+    relevance:
+      regions: [FR]
+      category: consumer_marketing
+      data_categories: [Contact details, Interests, Purchases, Identity verification]
+      note: Acts as processor for campaign collectors and advertisers; separately controls its rights-management website.
+    removal:
+      method: manual
+      destination: https://mes-datas.fr/
+      alternatives: [dpost@avanci.fr, dpoprofilia@avanci.fr]
+      steps:
+        - Enter the campaign code from the postal advertisement or telephone operator to identify the source and exercise rights.
+        - Codes apply to one campaign and expire twelve months after generation; without one, contact the advertiser or Avanci's campaign DPO at dpost@avanci.fr.
+        - Ask for opposition and forwarding of the deletion request to the original collector; Avanci describes suppression without deletion for 36 months.
+        - Use dpoprofilia@avanci.fr for mes-datas platform enquiries or its separately controlled website records.
+    required_information:
+      fields: [campaign_code]
+      certainty: documented
+      verification: Code required for portal entry; later fields and alternative email identity checks are not fully specified.
+    coverage:
+      effect: suppression
+      includes: Campaign suppression and forwarding to the source controller.
+      excludes: Immediate erasure by every collector, advertiser or MV GROUP company; platform-account data is separate.
+    automation:
+      mode: manual
+      reason: Campaign-specific code and separate source-controller handling.
+    evidence:
+      - url: https://www.avanci.fr/mentions-legales/
+        checked_on: '2026-09-29'
+        excerpt: La société Avanci est une société du Groupe MVGroup
+        supports: [identity]
+      - url: https://www.avanci.fr/politique-de-confidentialite/politique-de-confidentialite-monetisation-donnees-personnelles/
+        checked_on: '2026-09-29'
+        excerpt: mise en opposition, sans suppression, pendant 36 mois
+        supports: [relevance, removal, coverage]
+      - url: https://mes-datas.fr/
+        checked_on: '2026-09-29'
+        excerpt: Il est uniquement valable pour la campagne avec laquelle il est communiqué.
+        supports: [removal, required_information]
+      - url: https://mes-datas.fr/mandatory/ppd
+        checked_on: '2026-09-29'
+        excerpt: dpoprofilia@avanci.fr
+        supports: [identity, removal, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [No code entered or request submitted., Email verification checklist., Comparable database count.]
+
+  - id: dataondemand-fr
+    name: DataOnDemand — product scope unresolved
+    match_domains: [dataondemand.fr]
+    identity:
+      legal_name: DATAONDEMAND SAS, RCS Paris 791086028
+      brands: [DataOnDemand]
+      parent: null
+      official_domains: [dataondemand.fr]
+    relevance:
+      regions: [FR, Europe]
+      category: consumer_marketing
+      data_categories: [Email, Telephone, Postal addresses, Demographics, Household attributes, Behavioural segments]
+      note: Markets third-party targeting, acquisition and enrichment; website-contact notice alone does not establish product-data rights handling.
+    removal:
+      method: investigate
+      destination: https://dataondemand.fr/web/confidentialite/
+      alternatives: [dataprivacy@dataondemand.fr, contact@dataondemand.fr]
+      steps:
+        - Establish the controller and rights process for the relevant campaign or supplied dataset before sending personal identifiers.
+        - The contact-form footer publishes dataprivacy, while the website policy publishes contact; neither establishes a complete product-data procedure.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Campaign matching and verification not established. Sales-form company, role and telephone fields are not a deletion checklist.
+    coverage:
+      effect: needs_review
+      includes: Documented data-marketing relevance and website rights contacts.
+      excludes: Verified removal from supplied third-party datasets or all source collectors.
+    automation:
+      mode: blocked
+      reason: Product-data controller, request route and matching requirements remain unresolved.
+    evidence:
+      - url: https://dataondemand.fr/web/mentionslegales/
+        checked_on: '2026-09-29'
+        excerpt: 'Immatriculation : n° 791 086 028 au RCS de Paris'
+        supports: [identity]
+      - url: https://dataondemand.fr/web/
+        checked_on: '2026-09-29'
+        excerpt: ENRICHISSEMENT MULTICRITÈRES
+        supports: [relevance]
+      - url: https://dataondemand.fr/web/confidentialite/
+        checked_on: '2026-09-29'
+        excerpt: Nous collectons vos données à caractère personnel sur le Site
+        supports: [removal, coverage]
+    scale:
+      claim: More than 90 million European email addresses, including 30 million in France
+      unit: email addresses
+      scope: Published campaign-network reach, not unique people, ownership, current availability or personal exposure; undated claim.
+      source:
+        url: https://dataondemand.fr/web/
+        checked_on: '2026-09-29'
+        excerpt: plus de 90 millions d’adresses emails en Europe
+        supports: [scale]
+    review_status: needs_research
+    tested_outcome: not_tested
+    unknowns: [Product-specific notice and controller allocation., Verified campaign request route and identifiers., Parent ownership., Claim measurement date., No request submitted.]

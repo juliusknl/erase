@@ -1,0 +1,137 @@
+schema_version: 1
+brokers:
+  - id: jwx-advertising
+    name: JWX / Connatix
+    match_domains: [jwx.com, connatix.com]
+    identity:
+      legal_name: CJX Holdings LLC group, including Connatix Holdings Inc. and Connatix Native Exchange Inc.
+      brands: [JWX, JWP Connatix, Connatix]
+      parent: CJX Holdings, LLC
+      official_domains: [jwx.com, connatix.com]
+    relevance:
+      regions: [EEA, UK, CH, US]
+      category: advertising
+      data_categories: [Pseudonymous identifiers, Video and advertising activity, Browser and device signals]
+      note: Advertising technologies on partner properties, distinct from customer accounts and other independently governed services.
+    removal:
+      method: form
+      destination: https://portal.connatix.com/data-rights-request
+      alternatives: [privacy@jwx.com, privacy@connatix.com]
+      steps:
+        - Open the form in the browser whose advertising data you want addressed. Enter your email and select deletion and, separately, opt-out of processing if wanted.
+        - Follow the verification email. Verification initiates the request; wait for its completion confirmation.
+        - Repeat for other browsers/devices. The published form warns it cannot delete cookie-linked data if it cannot read that cookie; clearing cookies first can prevent matching.
+    required_information:
+      fields: [email, request_choices, relevant_browser_cookie]
+      certainty: not_fully_specified
+      verification: Public form script documents email verification and browser-cookie matching. No form was submitted and no verification link was tested.
+    coverage:
+      effect: deletion_request
+      includes: Matched advertising data within the JWX notice's scope.
+      excludes: Other browsers without matching, independent publisher records and unrelated account closure; cookie opt-out can be lost when cookies are cleared.
+    automation: {mode: manual, reason: A server-side email request cannot reproduce the user's browser-cookie context or personal verification.}
+    evidence:
+      - url: https://jwx.com/legal/privacy/
+        checked_on: '2026-09-30'
+        published: '2026-07-17'
+        excerpt: Data Access or Deletion Requests
+        supports: [entities, regions, scope, deletion_portal, privacy_contact]
+      - url: https://portal.connatix.com/data-rights-request
+        checked_on: '2026-09-30'
+        excerpt: JWX Portal
+        supports: [portal, linked_public_script]
+      - url: https://portal.connatix.com/main-IJGYQD3A.js
+        checked_on: '2026-09-30'
+        excerpt: An email address is required to validate your identity.
+        supports: [form_fields, email_verification, browser_cookie_matching, completion_distinction]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Actual request acceptance and outcome., Form still uses the older privacy@connatix.com contact while the current policy uses privacy@jwx.com.]
+  - id: niq-gfk-research
+    name: NIQ / GfK
+    match_domains: [nielseniq.com, gfk.com]
+    identity:
+      legal_name: Nielsen Consumer LLC and relevant NIQ Group controller, including GfK GmbH, GfK Switzerland AG and GfK U.K. Limited
+      brands: [NielsenIQ, NIQ, GfK]
+      parent: null
+      official_domains: [nielseniq.com, gfk.com]
+    relevance:
+      regions: [EEA, UK, CH, international]
+      category: consumer_marketing
+      data_categories: [Research and survey responses, Purchase behavior, Media activity, Inferred audiences]
+      note: Research participants and third-party enrichment are covered; exposure is not established merely by living in a covered country.
+    removal:
+      method: form
+      destination: https://privacyportal-eu.onetrust.com/webform/07a2e8c2-346a-4f58-865f-0d56c9baaff5/b08b21dd-cb09-46bb-ac7c-d983a6224d1b
+      alternatives: [connect.privacy@nielseniq.com]
+      steps:
+        - Use the rights portal or privacy email; identify the relevant GfK/NIQ service or research relationship and request deletion or objection for that scope.
+        - Complete verification. The notice warns that deleting some data may also require account deletion; clarify this before proceeding if you want to keep participating.
+        - Retain the entity and product scope confirmed in the response; do not assume all historically GfK-branded panels or separate Nielsen services are covered.
+    required_information:
+      fields: [relevant_service_or_research_relationship]
+      certainty: not_fully_specified
+      verification: NIQ may ask questions about previous interactions. Dynamic portal fields and subsequent verification remain untested.
+    coverage:
+      effect: deletion_request
+      includes: Matched personal records of the relevant NIQ Group controller, subject to exceptions.
+      excludes: Anonymous research results, independent customer copies, divested businesses and separate Nielsen marketing-cloud records.
+    automation: {mode: manual, reason: Service-specific matching and possible account consequences need review before sending a blanket deletion request.}
+    evidence:
+      - url: https://nielseniq.com/global/en/legal/nielseniq-niq-privacy-notice/
+        checked_on: '2026-09-30'
+        published: '2026-06-01'
+        excerpt: We may be unable to delete your information without also deleting your account with us.
+        supports: [scope, rights_route, matching, account_consequences]
+      - url: https://nielseniq.com/global/en/legal/gdpr-operating-entities/
+        checked_on: '2026-09-30'
+        excerpt: GfK Switzerland AG
+        supports: [GfK_DE_CH_UK_entities]
+      - url: https://www.sec.gov/Archives/edgar/data/2054696/000119312525151230/d893022ds1.htm
+        checked_on: '2026-09-30'
+        excerpt: GfK SE (currently named GfK GmbH)
+        supports: [GfK_name_change, consumer_panel_divestiture]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Exact request fields and fulfilment., Controller depends on the particular collection relationship; shared group membership is not proof of group-wide deletion.]
+  - id: adgear-samsung-ads
+    name: AdGear / Samsung Ads platform
+    match_domains: [adgear.com, samsungads.ca]
+    identity:
+      legal_name: AdGear Technologies, Inc.
+      brands: [AdGear, Samsung Ads]
+      parent: Samsung Electronics Canada, Inc.
+      official_domains: [adgear.com, samsungads.ca]
+    relevance:
+      regions: [EEA, UK, CH]
+      category: advertising
+      data_categories: [Advertising interactions, Device identifiers, Browser signals]
+      note: AdGear's advertising platform, not Samsung Account or all Samsung television services.
+    removal:
+      method: email
+      destination: privacy@adgear.com
+      alternatives: [https://samsungads.ca/en/privacy/english-eu/]
+      steps:
+        - Contact the platform privacy team for erasure or objection and ask which advertising identifiers are needed to match your data.
+        - Specify AdGear-platform records. Keep Samsung Account and other Samsung-service requests separate.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: The notice publishes rights but no complete matching checklist; generic name/email matching is not established.
+    coverage:
+      effect: deletion_request
+      includes: Eligible matched AdGear-controller information.
+      excludes: Samsung Account, independent publishers and affiliates; a browser opt-out cookie does not establish historical deletion.
+    automation: {mode: manual, reason: Device matching is unspecified and the platform must not be confused with unrelated Samsung accounts.}
+    evidence:
+      - url: https://samsungads.ca/en/privacy/english-eu/
+        checked_on: '2026-09-30'
+        published: '2023-08-01'
+        excerpt: Platform Privacy Statement (EU – UK – Switzerland)
+        supports: [identity, parent, platform_scope, rights, contact]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Policy reviewed through indexed official-source text; direct retrieval failed on check date., Current device matching and fulfilment., Exact browser opt-out endpoint was not verified or added as a quick win.]

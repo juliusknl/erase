@@ -1,0 +1,101 @@
+schema_version: 1
+brokers:
+  - id: leadspot-consumer-marketing
+    name: Lead Spot consumer marketing
+    match_domains: [leadspot.de]
+    identity:
+      legal_name: Lead Spot Media GmbH
+      brands: [Lead Spot]
+      parent: null
+      official_domains: [leadspot.de]
+    relevance:
+      regions: [Germany, Austria, Switzerland, EEA]
+      category: consumer_marketing
+      data_categories: [Email, Postal contacts, Demographics, Interests, Marketing consent]
+      note: Advertises its own consumer mailing databases and sponsor lead generation.
+    removal:
+      method: email
+      destination: datenschutz@leadspot.de
+      alternatives: [datenschutz@sph-consulting.de]
+      steps:
+        - Use the published rights inbox to request erasure and marketing withdrawal for matching emails.
+        - Ask for recipients and any further matching needed; independent sponsors require separate confirmation.
+        - Do not use the sales contact form, which includes marketing consent. Do not assert competition participation or cancel unrelated contracts.
+    required_information:
+      fields: [full_name, email, other_emails]
+      certainty: not_fully_specified
+      verification: No complete matching checklist is published. Name and matching email are a minimal initial request, not guaranteed identification; review further checks personally.
+    coverage:
+      effect: deletion_request
+      includes: Matched Lead Spot marketing records and attributed marketing consent.
+      excludes: Automatic deletion by independent sponsors or closure of unrelated accounts.
+    automation:
+      mode: manual
+      reason: Initial email recipe available; additional matching remains personally reviewed.
+    evidence:
+      - url: https://www.leadspot.de/datenschutz/
+        checked_on: '2026-10-01'
+        excerpt: datenschutz@leadspot.de
+        supports: [identity, rights_email, external_dpo, withdrawal]
+      - url: https://www.leadspot.de/e-mail-marketing/
+        checked_on: '2026-10-01'
+        excerpt: Unsere Datenbanken liefern Ihnen für jeden Anlass den nötigen B2C Kontakt.
+        supports: [consumer_database_scope, data_categories]
+      - url: https://www.leadspot.de/leadgenerierung/co-sponsoring/
+        checked_on: '2026-10-01'
+        excerpt: Mit dem Ausfüllen des Formulars erkläre ich mich einverstanden
+        supports: [sponsor_lead_generation, sales_form_marketing_consent]
+    scale:
+      claim: Around 11 million own address opportunities
+      unit: Advertised address opportunities, not unique verified people
+      scope: Undated company claim for DACH; not personal exposure or confirmed deletion coverage.
+      source:
+        url: https://www.leadspot.de/e-mail-marketing/
+        checked_on: '2026-10-01'
+        excerpt: gesamt rund 11 Mio. eigene Adresspotentiale für die DACH-Region
+        supports: [self_reported_scale]
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Initial delivery and matching untested., Parent ownership unreviewed., Sponsor outcomes require separate evidence.]
+  - id: kupona-retargeting
+    name: KUPONA browser preferences
+    match_domains: [kupona.de]
+    identity:
+      legal_name: KUPONA GmbH
+      brands: [KUPONA]
+      parent: null
+      official_domains: [kupona.de]
+    relevance:
+      regions: [Germany, EEA]
+      category: advertising
+      data_categories: [Cookie identifiers, Browsing interests, Consent signals]
+      note: Joint retargeting controller with participating sites.
+    removal:
+      method: form
+      destination: https://www.kupona.de/dsgvo/
+      alternatives: [dsgvo@kupona.de]
+      steps:
+        - In each relevant browser, open Widerspruch and inspect the embedded preference control.
+        - Choose objection, not renewed consent. The page warns that loading embedded content involves third-party disclosure.
+        - Keep the opt-out cookie; clearing cookies loses the preference. Propagation may take up to 36 hours.
+        - This is browser-specific suppression, not proof that every partner erased historical records.
+    required_information:
+      fields: [relevant_browser]
+      certainty: not_fully_specified
+      verification: Embedded controls untested; matching uses cookies rather than name/email.
+    coverage:
+      effect: suppression
+      includes: KUPONA retargeting preference for the selected browser.
+      excludes: Other browsers and independent partner records.
+    automation:
+      mode: manual
+      reason: Requires personal browser context; never activate preferences from the backend.
+    evidence:
+      - url: https://www.kupona.de/dsgvo/
+        checked_on: '2026-10-01'
+        excerpt: Eine Datenverarbeitung kann bis zu 36 Stunden dauern.
+        supports: [identity, joint_controller, browser_matching, suppression, delay, rights_contact]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Embedded control behavior untested., Parent ownership unreviewed.]

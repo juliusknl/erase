@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: liveramp-global-controls
+    records: [live:liveramp-inc]
+    rationale: LiveRamp's current mobile-control page expressly names LiveRamp Inc and links European rights routes. This guide covers global device preferences and regional handoff, not an assumed legal merger or all-record deletion across subsidiaries.

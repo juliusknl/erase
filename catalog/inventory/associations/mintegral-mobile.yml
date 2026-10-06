@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: mintegral-mobile
+    records: [community:mintegral]
+    rationale: The discovery row expressly includes the Mintegral brand, current website and several entities in the official 2026 controller list. The guide covers the current regional service route, not blanket erasure of historical Mobvista Guangzhou or every affiliate's separate records.

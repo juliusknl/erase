@@ -1,0 +1,16 @@
+<section class="completion-trend" aria-labelledby="completion-trend-title">
+  <div class="progress-chart-heading"><h2 id="completion-trend-title">Progress over time</h2><div class="progress-legend"><span><i class="legend-sent" aria-hidden="true"></i>Sent</span><span><i class="legend-completed" aria-hidden="true"></i>Completed</span></div></div>
+  <div class="completion-plot" id="progress-plot" {% if not progress_chart.maximum %}hidden{% endif %}>
+    <div class="completion-axis" aria-hidden="true"><span id="progress-maximum">{{ progress_chart.maximum }}</span><span>0</span></div>
+    <svg viewBox="0 0 1000 120" preserveAspectRatio="none" role="img" aria-labelledby="completion-graph-title completion-graph-desc">
+      <title id="completion-graph-title">Sent and completed requests over time</title>
+      <desc id="completion-graph-desc">{{ progress_chart.description }}</desc>
+      <path class="completion-grid" d="M 0 12 H 1000 M 0 108 H 1000" vector-effect="non-scaling-stroke" />
+      <path class="sent-line" d="{{ progress_chart.sent_path }}" vector-effect="non-scaling-stroke" />
+      <path class="completion-line" d="{{ progress_chart.path }}" vector-effect="non-scaling-stroke" />
+    </svg>
+    <div class="completion-dates" aria-hidden="true"><span id="progress-start">{{ progress_chart.start }}</span><span id="progress-end">{{ progress_chart.end }}</span></div>
+  </div>
+  <p class="footnote" id="progress-empty" {% if progress_chart.maximum %}hidden{% endif %}>Your progress will appear here when the first request is sent or completed.</p>
+  <p class="footnote" id="progress-undated" {% if not progress_chart.missing_note %}hidden{% endif %}>{{ progress_chart.missing_note }}</p>
+</section>

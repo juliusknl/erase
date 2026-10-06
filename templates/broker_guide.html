@@ -1,0 +1,39 @@
+<div class="broker-guide">
+  {% set executable = email_workflows.get(guide.match_domains[0]) if email_workflows is defined else none %}
+  <p class="tag-row"><span class="tag">{{ guide.relevance.regions | join(' · ') }}</span><span class="tag">{{ guide.relevance.category.replace('_', ' ') | title }}</span><span class="tag">{{ 'Instructions reviewed' if guide.review_status == 'instructions_reviewed' else 'Research incomplete' }}</span></p>
+  <p>{{ guide.relevance.note }}</p>
+  {% if not guide.fresh %}<p class="notice">These instructions are older than 90 days and need rechecking before automatic email use.</p>{% endif %}
+  <h3>What to do</h3>
+  <ol>{% for step in guide.removal.steps %}<li>{{ step }}</li>{% endfor %}</ol>
+  <p>{% if guide.removal.destination.startswith('https://') %}<a class="button secondary" href="{{ guide.removal.destination }}" target="_blank" rel="noopener noreferrer">Open official instructions ↗</a>{% else %}<strong>Published request email:</strong> <code>{{ guide.removal.destination }}</code>{% endif %}</p>
+  <dl class="guide-facts">
+    <dt>Information needed</dt><dd>{{ guide.required_information.fields | join(', ') | replace('_', ' ') if guide.required_information.fields else 'No complete identifier checklist established yet.' }} {{ guide.required_information.verification }}</dd>
+    <dt>What this covers</dt><dd>{{ guide.coverage.includes }}</dd>
+    <dt>What it does not establish</dt><dd>{{ guide.coverage.excludes }}</dd>
+    <dt>Automation</dt><dd>{% if executable %}{{ 'Reviewed initial email workflow' if executable.fresh and guide.fresh else 'Email workflow needs rechecking' }}. <a href="/campaign?tab=messages">View exact email previews.</a> {{ executable.follow_up }}{% else %}{{ guide.automation.reason }}{% endif %} An initial request is not automatic identity verification or a guaranteed outcome.</dd>
+    <dt>Workflow testing</dt><dd>No end-to-end test recorded in this shared guide. Your personal request history remains separate.</dd>
+  </dl>
+  {% if guide.regional_routes %}<h3>Choose the relevant country and controller</h3>
+  {% for route in guide.regional_routes %}{% if expanded_guide %}<section><h3>{{ route.regions | join(' / ') }} · {{ route.legal_entity }}</h3>{% else %}<details><summary>{{ route.regions | join(' / ') }} · {{ route.legal_entity }}</summary>{% endif %}
+    <ol>{% for step in route.removal.steps %}<li>{{ step }}</li>{% endfor %}</ol>
+    <p>{% if route.removal.destination.startswith('https://') %}<a class="button secondary" href="{{ route.removal.destination }}" target="_blank" rel="noopener noreferrer">Open regional instructions ↗</a>{% else %}<code>{{ route.removal.destination }}</code>{% endif %}</p>
+    <dl class="guide-facts"><dt>Information needed</dt><dd>{{ route.required_information.fields | join(', ') | replace('_', ' ') }}. {{ route.required_information.verification }}</dd><dt>Scope</dt><dd>{{ route.coverage.includes }} {{ route.coverage.excludes }}</dd><dt>Automation</dt><dd>{{ route.automation.reason }}</dd></dl>
+    {% if route.removal.alternatives %}<p>Alternative routes: {% for destination in route.removal.alternatives %}{% if destination.startswith('https://') %}<a href="{{ destination }}" target="_blank" rel="noopener noreferrer">Official route {{ loop.index }}</a>{% else %}<code>{{ destination }}</code>{% endif %}{{ ', ' if not loop.last }}{% endfor %}</p>{% endif %}
+    <ul>{% for source in route.evidence %}<li><a href="{{ source.url }}" target="_blank" rel="noopener noreferrer">Regional source</a> · checked {{ source.checked_on }} · <q>{{ source.excerpt }}</q></li>{% endfor %}</ul>
+    {% if route.unknowns %}<p>Still to verify: {{ route.unknowns | join('; ') }}</p>{% endif %}
+  {% if expanded_guide %}</section>{% else %}</details>{% endif %}{% endfor %}{% endif %}
+  {% if expanded_guide %}<section><h3>Identity, evidence and remaining gaps</h3>{% else %}<details><summary>Identity, evidence and remaining gaps</summary>{% endif %}
+    <dl class="guide-facts">
+      <dt>Legal entity</dt><dd>{{ guide.identity.legal_name }}</dd>
+      <dt>Brands</dt><dd>{{ guide.identity.brands | join(', ') }}</dd>
+      <dt>Parent company</dt><dd>{{ guide.identity.parent or 'Not established in this review' }}</dd>
+      <dt>Official domains</dt><dd>{{ guide.identity.official_domains | join(', ') }}</dd>
+      <dt>Data categories</dt><dd>{{ guide.relevance.data_categories | join(', ') }}</dd>
+      <dt>Scale</dt><dd>{% if guide.scale %}{{ guide.scale.claim }} {{ guide.scale.unit }} · {{ guide.scale.scope }} <a href="{{ guide.scale.source.url }}" target="_blank" rel="noopener noreferrer">Source</a>{% else %}No database-size claim established in this guide. This is not a measure of your exposure.{% endif %}</dd>
+    </dl>
+    {% if guide.removal.alternatives %}<h3>Other official routes</h3><ul>{% for destination in guide.removal.alternatives %}<li>{% if destination.startswith('https://') %}<a href="{{ destination }}" target="_blank" rel="noopener noreferrer">{{ destination }}</a>{% else %}<code>{{ destination }}</code>{% endif %}</li>{% endfor %}</ul>{% endif %}
+    <h3>Source evidence</h3>
+    <ul>{% for source in guide.evidence %}<li><a href="{{ source.url }}" target="_blank" rel="noopener noreferrer">Official source {{ loop.index }}</a> · checked {{ source.checked_on }} · document date: {{ source.published }}<br><q>{{ source.excerpt }}</q><br><small>Supports: {{ source.supports | join(', ') | replace('_', ' ') }}</small></li>{% endfor %}</ul>
+    {% if guide.unknowns %}<h3>Still to verify</h3><ul>{% for gap in guide.unknowns %}<li>{{ gap }}</li>{% endfor %}</ul>{% endif %}
+  {% if expanded_guide %}</section>{% else %}</details>{% endif %}
+</div>

@@ -1,0 +1,200 @@
+schema_version: 1
+brokers:
+  - id: payback-member-privacy
+    name: PAYBACK member privacy
+    match_domains: [payback.de]
+    identity:
+      legal_name: PAYBACK GmbH; PAYBACK Rabattverein e.V. for points administration
+      brands: [PAYBACK Germany]
+      parent: null
+      official_domains: [payback.de]
+    relevance:
+      regions: [Germany]
+      category: consumer_marketing
+      data_categories: [Member identity, Shopping activity, Advertising profiles, Partner interactions]
+      note: Member-specific loyalty data, not an independent database of everyone. Separate partners and consent types have different responsibilities.
+    removal:
+      method: form
+      destination: https://www.payback.de/info/mein-payback/einwilligungen
+      alternatives: [https://www.payback.de/info/ewe23, datenschutz@payback.de]
+      steps:
+        - If you are a PAYBACK member, sign into your own account and review your advertising consents.
+        - Withdraw personalized advertising and any separate online-marketing permissions you no longer want. Withdrawing one does not withdraw all other consents.
+        - You can still collect and redeem points without the personalized-advertising consent. Do not choose membership cancellation merely to stop profiling.
+        - For broader deletion contact the privacy team and review account, points and retention consequences yourself; no automatic cancellation is authorized by this guide.
+    required_information:
+      fields: [member_account_access]
+      certainty: not_fully_specified
+      verification: Authenticated account flow is untested; identity checks for separate privacy requests may differ.
+    coverage:
+      effect: suppression
+      includes: Future uses based on the specific withdrawn member advertising permissions; relevant partners are notified as described in the notice.
+      excludes: Membership data needed to provide points, separate consents, independent partner purposes and legally retained transaction records.
+    automation:
+      mode: manual
+      reason: Existing member login and choice between advertising withdrawal and account closure require the user's decision.
+    evidence:
+      - url: https://www.payback.de/info/hinweise-datenschutz-23
+        checked_on: '2026-10-01'
+        excerpt: Sie können auch ohne die Einwilligung am PAYBACK Programm teilnehmen
+        supports: [joint_controllers, withdrawal_without_cancellation, account_link, separate_consents]
+      - url: https://www.payback.de/faq/datenschutz
+        checked_on: '2026-10-01'
+        excerpt: Mitglieder- und Verteilerliste
+        supports: [membership_end, retention_limits]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Authenticated settings and confirmation untested., User membership is not assumed., Parent and comparable scale unreviewed.]
+
+  - id: deutschlandcard-member-privacy
+    name: DeutschlandCard member privacy
+    match_domains: [deutschlandcard.de]
+    identity:
+      legal_name: DeutschlandCard GmbH
+      brands: [DeutschlandCard]
+      parent: null
+      official_domains: [deutschlandcard.de]
+    relevance:
+      regions: [Germany]
+      category: consumer_marketing
+      data_categories: [Membership information, Shopping and program activity, Interest profiles]
+      note: Member-specific marketing and partner sharing; the September 2026 program notice, not the older community address, controls this dossier.
+    removal:
+      method: form
+      destination: https://www.deutschlandcard.de/kontakt
+      alternatives: [https://www.deutschlandcard.de/datenschutz/datenschutz-programm]
+      steps:
+        - For an existing membership, open the official contact page and follow its Meine DeutschlandCard service-area link to review data and advertising permissions.
+        - Withdraw unwanted marketing permissions and object to direct-marketing processing; do not close the account unless you independently choose that outcome.
+        - For broader rights use the privacy contact in the current program notice or its postal address, marked Datenschutz. Do not send identity documents to a guessed address.
+        - Record the scope and retained data. Account termination is not immediate deletion of every record; statutory and claims-related retention can continue.
+    required_information:
+      fields: [member_account_access]
+      certainty: not_fully_specified
+      verification: Account settings and exact subsequent identity checklist uninspected; current notice's email is protected in public extraction.
+    coverage:
+      effect: suppression
+      includes: Member marketing choices and rights requests for processing controlled by DeutschlandCard and documented joint-controller arrangements.
+      excludes: All partner records, mandatory transaction retention, a guaranteed immediate deletion or an instruction to surrender points.
+    automation:
+      mode: manual
+      reason: Optional existing membership and account effects require personal review, not mass broker email.
+    evidence:
+      - url: https://www.deutschlandcard.de/kontakt
+        checked_on: '2026-10-01'
+        excerpt: persönlichen Daten und Einwilligungen anpassen
+        supports: [member_service_route]
+      - url: https://www.deutschlandcard.de/datenschutz/datenschutz-programm
+        checked_on: '2026-10-01'
+        published: '2026-09-17'
+        excerpt: DeutschlandCard GmbH, Neumarkter Straße 26
+        supports: [identity, rights, partner_sharing, retention]
+      - url: https://www.deutschlandcard.de/datenschutz/datenschutz-hinweise-deutschlandcard-app
+        checked_on: '2026-10-01'
+        published: March 2026
+        excerpt: Widerrufs- und Widerspruchsrechten
+        supports: [contact_page_for_rights, app_alternative]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Authenticated settings and exact contact inbox uninspected., Reported forthcoming program changes need a current first-party timetable before making lifecycle claims., User membership and parent ownership not assumed.]
+
+  - id: dtm-private-directory
+    name: DTM private directory listings
+    match_domains: [dastelefonbuch.de]
+    identity:
+      legal_name: DTM Deutsche Tele Medien GmbH
+      brands: [Das Telefonbuch private listings]
+      parent: null
+      official_domains: [dtme.de, dastelefonbuch.de]
+    relevance:
+      regions: [Germany]
+      category: people_search
+      data_categories: [Names, Postal addresses, Telephone numbers, Public directory entries]
+      note: Private directory listing rights differ from business advertising entries, web search results and independent source records.
+    removal:
+      method: form
+      destination: https://www.dtme.de/ihr-eintrag/ihr-privater-eintrag/
+      alternatives: [https://www.dastelefonbuch.de/Hilfe, https://www.dastelefonbuch.de/Datenschutz]
+      steps:
+        - Use the official private-entry service and select deletion of your existing listing, not creation of a new entry.
+        - DTM's help requires identity proof for direct changes; review the document yourself and redact all but name, photograph and address, marking it as a copy as instructed.
+        - Alternatively ask your telephone provider to withdraw the source directory entry. Do not upload identity documents through this app or to an unverified recipient.
+        - Web-result removal is a separate choice. Keep the listing confirmation and do not assume it erases every source or other publisher's independent record.
+    required_information:
+      fields: [matching_private_entry, identity_proof_or_provider_authentication]
+      certainty: not_fully_specified
+      verification: Official help documents proof and provider alternative; linked DTM form could not be retrieved and its exact fields are untested.
+    coverage:
+      effect: deletion_request
+      includes: Matched private directory entry handled by DTM, with the final directories covered confirmed in the response.
+      excludes: Guaranteed removal of all public sources, third-party search indexes, business advertisements or all records merely sharing a surname.
+    automation:
+      mode: manual
+      reason: Listing matching, ownership proof and choice of provider authentication require personal review.
+    evidence:
+      - url: https://www.dastelefonbuch.de/Hilfe
+        checked_on: '2026-10-01'
+        excerpt: Löschung, Änderung oder Neubeauftragung eines Eintrags
+        supports: [controller, private_entry_route, redacted_proof, provider_alternative]
+      - url: https://www.dastelefonbuch.de/Datenschutz
+        checked_on: '2026-10-01'
+        excerpt: Eintragsbearbeitung – Eintragslöschung
+        supports: [official_private_entry_link, source_scope]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [DTM form and post-proof confirmation untested after connection failures., Exact independent directory scope requires the response., Parent and comparable personal-record scale unreviewed.]
+
+  - id: burda-direkt-marketing
+    name: Burda Direkt marketing data
+    match_domains: [burdadirect.com, burdadirect.de]
+    identity:
+      legal_name: Burda Direkt Services GmbH
+      brands: [BurdaDirect]
+      parent: null
+      official_domains: [burdadirect.com, burdadirect.de, datenschutzanfrage.de]
+    relevance:
+      regions: [Germany, EEA]
+      category: consumer_marketing
+      data_categories: [Contact and address data, Competition consent records, Subscription marketing, Enriched telephone data]
+      note: The privacy notice names Burda Direkt Services as controller despite a separate technical-provider masthead. Shared subscription-marketing arrangements do not imply every Burda company is covered.
+    removal:
+      method: email
+      destination: burdadirektservices@datenschutzanfrage.de
+      alternatives: ['https://datenschutzanfrage.de/?source=burdadirect&lang=de', BurdaVerlag_CSS@datenschutzanfrage.de]
+      steps:
+        - Object to direct marketing, related profiling and enrichment at the published privacy inbox, supplying matching identifiers only with permission.
+        - Withdraw any marketing consent attributed to you without claiming you entered a competition. Explicitly keep existing paid subscriptions unchanged.
+        - For joint subscription-marketing records the notice also names BurdaVerlag_CSS@datenschutzanfrage.de as a coordinating contact; review referrals before a separate request.
+        - Ask which controller and datasets were covered. Consent evidence, suppression records and contractual records may remain; this is not blanket group deletion.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: No fixed rights-email matching checklist. Name, email and consented postal address are an initial proposal; further proof is reviewed.
+    coverage:
+      effect: suppression
+      includes: Matched direct-marketing, related profiling and consent-based contact enrichment within the notice's controller scope.
+      excludes: Subscription cancellation, statutory/consent-proof retention, independent sponsors and every Burda company automatically.
+    automation:
+      mode: manual
+      reason: Initial marketing-only email recipe requires address disclosure permission; additional matching and cross-controller referrals are reviewed.
+    evidence:
+      - url: https://www.burdadirect.com/datenschutz
+        checked_on: '2026-10-01'
+        excerpt: Datenschutz
+        supports: [official_policy_script_referral]
+      - url: https://cdn.datenschutz.burda.com/1552.js
+        checked_on: '2026-10-01'
+        published: '2026-09-28'
+        excerpt: burdadirektservices@datenschutzanfrage.de
+        supports: [controller, rights_email, sponsored_competitions, enrichment, joint_marketing_scope]
+      - url: https://www.burdadirect.de/impressum
+        checked_on: '2026-10-01'
+        excerpt: Burda Direkt Services GmbH
+        supports: [controller_distinct_from_technical_provider]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Initial matching and deliverability untested., Sponsor and joint-controller responses must establish actual covered records., Parent and comparable scale unreviewed.]

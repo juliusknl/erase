@@ -1,0 +1,20 @@
+schema_version: 1
+assessments:
+  - record: community:merkleinc
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: The candidate is Merkle UK One Limited, not Merkle Inc. ICO confirms that exact entity, but the current US product policy expressly separates UK products and Dentsu's Identity Product policy names the commissioning affiliate. No primary evidence yet maps all of UK One's broker-product processing to either route.
+    evidence:
+      - url: https://ico.org.uk/ESDWebPages/Entry/Z2680063
+        checked_on: '2026-10-01'
+        excerpt: Merkle UK One Limited
+        supports: [exact_UK_controller_identity]
+      - url: https://www.merkle.com/en/privacy-policy/data-product-privacy-notice.html
+        checked_on: '2026-10-01'
+        excerpt: separate data products in the U.K. and the U.S.
+        supports: [not_US_route_equivalence]
+      - url: https://www.dentsu.com/our-policies/dentsu-identity-product-privacy-notice
+        checked_on: '2026-10-01'
+        excerpt: the entity who commissioned the CCS survey
+        supports: [no_blanket_affiliate_coverage]
+    unresolved: [Current UK One product-controller scope and applicable removal route; group membership alone is insufficient]

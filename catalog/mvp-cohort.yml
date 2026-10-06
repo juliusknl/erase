@@ -1,0 +1,368 @@
+schema_version: 1
+# A finite initial pilot, not an exhaustive market or exposure claim.
+# Provider headquarters never determine priority or eligibility.
+email_guides:
+  - rb-information-professional
+  - biscred-professional
+  - prospectbase-uk-professional
+  - foundry-professional-marketing
+  - listkit-professional
+  - recruitbot-candidates
+  - pgm-consumer-marketing
+  - exact-data-consumer-base
+  - donorbase-marketing
+  - aventura-post-marketing
+  - leadspot-consumer-marketing
+  - smash-sponsor-marketing
+  - inside-lead-consumer
+  - all-travel-sponsor-marketing
+  - best-relations-sponsor-marketing
+  - costar-professional-property
+  - sovrn-advertising
+  - burda-direkt-marketing
+  - cbinsights-professional
+  - melissa-consumer-databases
+  - market-location-uk
+  - myoffers-uk
+  - beenverified-personal
+  - firmenliste-dach
+  - adpublisher-consumer
+  - add-conti
+  - circana-marketing
+  - liveramp-fr
+  - liveramp-it
+  - liveramp-es
+  - amazinghiring
+  - b2b-datenbank-de
+  - salesassistiq
+  - data-axle
+  - liveramp-de
+  - vendelux
+  - salesintel
+  - revenuebase
+  - scileads
+  - anteriad
+  - registry-global-source-data-solutions-inc
+  - smarte
+  - revoptimal
+  - stirista
+  - adapt-directory
+  - nomination-fr
+  - toleadoo-consumer
+  - planet49-consumer
+  - zs-opinion-leader
+  - semantiq
+  - sports-innovation-lab
+  - deutsche-post-direkt
+  - gemini-direct-de
+  - quadress
+  - whooz-whize
+  - sls-data-fr
+  - critere-direct-fr
+  - audiencepoint
+  - registry-hunt-club-inc
+  - registry-growthcode-llc
+  - cognism
+  - dealfront-leadfeeder
+  - draup
+  - registry-leadgenius-com
+  - registry-getprospect-com
+  - snovio
+  - az-direct-de
+  - panadress
+  - vainu
+  - bizmachine
+  - schober-capaneo
+  - bedirect
+  - az-direct-at
+  - mediaposte-fr
+  - sovendus-de
+  - cision-media-databases
+  - adeptid-people-search
+  - preqin
+  - registry-getvector-inc
+  - registry-leadiq-inc
+guided_forms:
+  - {guide_id: caci-uk, quick_win: caci-uk}
+  - {guide_id: numberly, quick_win: numberly-personal-request}
+  - {guide_id: weborama, quick_win: weborama-identifiers}
+  - {guide_id: zeotap-data, quick_win: zeotap-data-identifiers}
+  - {guide_id: acxiom-de, quick_win: acxiom-germany}
+  - {guide_id: epsilon-europe-digital, quick_win: epsilon-europe}
+  - {guide_id: epsilon-north-america, quick_win: epsilon-north-america}
+  - {guide_id: experian-marketing-us, quick_win: experian-us-marketing}
+  - {guide_id: claritas-us, quick_win: claritas-us}
+  - {guide_id: transunion-us, quick_win: transunion-us-privacy}
+  - {guide_id: eyeota, quick_win: eyeota}
+  - {guide_id: quantcast-services, quick_win: quantcast}
+  - {guide_id: liveramp-uk, quick_win: liveramp-uk}
+  - {guide_id: whitepages, quick_win: whitepages}
+  - {guide_id: spokeo, quick_win: spokeo}
+  - {guide_id: peopleconnect-suppression, quick_win: peopleconnect}
+  - {guide_id: directory-192-uk, quick_win: directory-192-uk}
+  - {guide_id: truepeoplesearch-public, quick_win: truepeoplesearch}
+  - {guide_id: fastpeoplesearch-family, quick_win: fastpeoplesearch-family}
+  - {guide_id: familytreenow-public, quick_win: familytreenow}
+  - {guide_id: peoplefinders-public, quick_win: peoplefinders}
+  - {guide_id: thatsthem-public, quick_win: thatsthem}
+  - guide_id: mediavine-reader-advertising
+    quick_win: mediavine-reader-advertising
+  - guide_id: hireez-talent-database
+    quick_win: hireez-talent-database
+  - guide_id: registry-grin-technologies-inc
+    quick_win: registry-grin-technologies-inc
+  - guide_id: registry-intent-iq-llc
+    quick_win: registry-intent-iq-llc
+  - guide_id: registry-lead411-corporation
+    quick_win: registry-lead411-corporation
+  - guide_id: matchbook-device-data
+    quick_win: matchbook-device-data
+  - guide_id: fraiser-consumer-data
+    quick_win: fraiser-consumer-data
+  - guide_id: besurance-his-insurance
+    quick_win: besurance-his-insurance
+  - guide_id: intrum-information-services-de
+    quick_win: intrum-information-services-de
+  - guide_id: belardiwong-regional-request
+    quick_win: belardiwong-regional-request
+  - guide_id: crosspixel-browser-preferences
+    quick_win: crosspixel-browser-preferences
+  - guide_id: dataline-consumer-marketing
+    quick_win: dataline-consumer-marketing
+  - guide_id: dataman-consumer-marketing
+    quick_win: dataman-consumer-marketing
+  - guide_id: agr-consumer-marketing
+    quick_win: agr-consumer-marketing
+  - guide_id: datasys-consumer-records
+    quick_win: datasys-consumer-records
+  - guide_id: datafy-device-location
+    quick_win: datafy-device-location
+  - guide_id: civis-analytics-consumer
+    quick_win: civis-analytics-consumer
+  - guide_id: cybba-marketing-services
+    quick_win: cybba-marketing-services
+  - guide_id: skimlinks-commerce-cookies
+    quick_win: skimlinks-commerce-cookies
+  - guide_id: unity-player-advertising
+    quick_win: unity-player-advertising
+  - guide_id: roku-europe-consumer
+    quick_win: roku-europe-consumer
+  - guide_id: iqm-advertising-identifiers
+    quick_win: iqm-advertising-identifiers
+  - guide_id: yoc-visx-browser
+    quick_win: yoc-visx-browser
+  - guide_id: qdivision-browser-advertising
+    quick_win: qdivision-browser-advertising
+  - guide_id: infotracer-records
+    quick_win: infotracer-records
+  - guide_id: recordsfinder-records
+    quick_win: recordsfinder-records
+  - guide_id: kids-live-safe-records
+    quick_win: kids-live-safe-records
+  - guide_id: quick-public-records
+    quick_win: quick-public-records
+  - guide_id: blackpearl-intent-data
+    quick_win: blackpearl-intent-data
+  - guide_id: modigie-professional-validation
+    quick_win: modigie-professional-validation
+  - guide_id: redidata-marketing-lists
+    quick_win: redidata-marketing-lists
+  - guide_id: complete-mailing-lists
+    quick_win: complete-mailing-lists
+  - guide_id: jdpower-consumer-research
+    quick_win: jdpower-consumer-research
+  - guide_id: infutor-lead-intelligence
+    quick_win: infutor-lead-intelligence
+  - guide_id: iqvia-digital-advertising
+    quick_win: iqvia-digital-advertising
+  - guide_id: i360-consumer-political
+    quick_win: i360-consumer-political
+  - guide_id: lightbox-property-professional
+    quick_win: lightbox-property-professional
+  - guide_id: lightcast-professional
+    quick_win: lightcast-professional
+  - guide_id: nativo-advertising
+    quick_win: nativo-advertising
+  - guide_id: altair-consumer-marketing
+    quick_win: altair-consumer-marketing
+  - guide_id: perion-high-impact
+    quick_win: perion-high-impact
+  - guide_id: rakuten-advertising-identifiers
+    quick_win: rakuten-advertising-identifiers
+  - guide_id: simplifi-advertising
+    quick_win: simplifi-advertising
+  - guide_id: adagio
+    quick_win: adagio
+  - guide_id: mintegral-mobile
+    quick_win: mintegral-mobile
+  - guide_id: kupona-retargeting
+    quick_win: kupona-retargeting
+  - guide_id: nexxen-advertising
+    quick_win: nexxen-advertising
+  - guide_id: clickagy-browser
+    quick_win: clickagy-browser
+  - guide_id: costar-professional-property
+    quick_win: costar-professional-property
+  - guide_id: sovrn-advertising
+    quick_win: sovrn-advertising
+  - guide_id: gumgum-advertising
+    quick_win: gumgum-advertising
+  - guide_id: nielsen-marketing-cloud
+    quick_win: nielsen-marketing-cloud
+  - guide_id: neustar-european-privacy
+    quick_win: neustar-european-privacy
+  - guide_id: saz-swiss-addresses
+    quick_win: saz-swiss-addresses
+  - guide_id: dtm-private-directory
+    quick_win: dtm-private-directory
+  - guide_id: retention-rb2b-network
+    quick_win: retention-rb2b
+  - guide_id: enformion-data-products
+    quick_win: enformion
+  - guide_id: media-net-platform
+    quick_win: media-net
+  - guide_id: datonics-advertising
+    quick_win: datonics
+  - guide_id: cadent-household-platform
+    quick_win: cadent
+  - guide_id: mobilefuse-platform
+    quick_win: mobilefuse
+  - guide_id: pitchbook-professionals
+    quick_win: pitchbook
+  - guide_id: alikeaudience-route-review
+    quick_win: alikeaudience
+  - guide_id: liveramp-global-controls
+    quick_win: liveramp-device-controls
+  - guide_id: maxmind-services
+    quick_win: maxmind
+  - guide_id: merkle-us-data-products
+    quick_win: merkle-us
+  - guide_id: magnite-advertising
+    quick_win: magnite
+  - guide_id: comscore-tagging
+    quick_win: comscore-tagging
+  - guide_id: criteo
+    quick_win: criteo
+  - guide_id: 33across
+    quick_win: 33across
+  - guide_id: people-data-labs
+    quick_win: people-data-labs
+  - guide_id: lexisnexis-risk-uk
+    quick_win: lexisnexis-business-services
+  - guide_id: quantyoo-media
+    quick_win: quantyoo
+  - guide_id: equifax-work-number
+    quick_win: work-number-freeze
+  - guide_id: experian-uk-marketing
+    quick_win: experian-uk-marketing
+  - guide_id: innovid-flashtalking
+    quick_win: innovid-flashtalking
+  - guide_id: doubleverify-solutions
+    quick_win: doubleverify
+  - guide_id: advanced-store-ad4mat
+    quick_win: advanced-store
+  - guide_id: jwx-advertising
+    quick_win: jwx
+  - guide_id: niq-gfk-research
+    quick_win: niq-gfk
+  - guide_id: connexity-shopping
+    quick_win: connexity
+  - guide_id: cuebiq-location
+    quick_win: cuebiq
+  - guide_id: dstillery-advertising
+    quick_win: dstillery
+  - guide_id: signalhire-professional
+    quick_win: signalhire
+  - guide_id: nordic-data-resources
+    quick_win: nordic-data-resources
+  - guide_id: choreograph-global
+    quick_win: choreograph
+  - guide_id: unacast
+    quick_win: unacast
+  - guide_id: foursquare
+    quick_win: foursquare
+  - guide_id: nextroll-services
+    quick_win: nextroll
+  - guide_id: rocketreach-professional
+    quick_win: rocketreach
+  - guide_id: trade-desk-platform
+    quick_win: trade-desk
+  - guide_id: liveintent-services
+    quick_win: liveintent
+  - guide_id: catalina-consumer
+    quick_win: catalina
+  - guide_id: acxiom-llc-international
+    quick_win: acxiom-international
+  - guide_id: attribits
+    quick_win: attribits
+  - guide_id: bdex
+    quick_win: bdex
+  - guide_id: amazinghiring
+    quick_win: amazinghiring
+  - guide_id: adjust-device
+    quick_win: adjust-device
+  - guide_id: smart-profile-benelux
+    quick_win: smart-profile
+  - guide_id: active-leads-nordic
+    quick_win: active-leads
+  - guide_id: sojern
+    quick_win: sojern
+  - guide_id: bookyourdata
+    quick_win: bookyourdata
+  - guide_id: forager-ai
+    quick_win: forager
+  - guide_id: enlyft
+    quick_win: enlyft
+  - guide_id: wiza
+    quick_win: wiza
+  - guide_id: salesql
+    quick_win: salesql
+  - guide_id: relpro
+    quick_win: relpro
+  - guide_id: uplead
+    quick_win: uplead
+  - guide_id: instantly-foomonk
+    quick_win: instantly
+  - guide_id: amplemarket
+    quick_win: amplemarket
+  - guide_id: rampedup
+    quick_win: rampedup
+  - guide_id: explorium
+    quick_win: explorium
+  - guide_id: registry-hubspot-inc
+    quick_win: hubspot
+  - guide_id: registry-growbots-inc
+    quick_win: growbots
+  - guide_id: contactout
+    quick_win: contactout
+  - guide_id: zoominfo-professional
+    quick_win: zoominfo
+  - guide_id: registry-lusha-systems-inc
+    quick_win: lusha
+  - guide_id: registry-hunter-web-services-inc
+    quick_win: hunter
+  - guide_id: apollo-professional
+    quick_win: apollo-io
+# These remain priorities even where automation needs more identifiers/research.
+# Inclusion expresses potential exposure from the data type, not misconduct.
+priority_frontiers:
+  - area: Observed email-route failures
+    examples: [Goava, MyGimi, HealthLink Dimensions]
+    reason: Goava and MyGimi rejected delivery; HealthLink requires requests from each matching mailbox rather than a dedicated request inbox.
+    remaining: Verify replacement destinations or support sender-address-specific manual requests. These are excluded from automatic pilot email coverage, not claimed fixed.
+  - area: Home addresses and public lookup
+    examples: [Acxiom, Whitepages, Spokeo, LexisNexis]
+    reason: Linking a named person to contact and household details can facilitate unwanted contact and identification.
+    remaining: Confirm personal relevance and product scope; country-specific and public-listing routes must be distinguished.
+  - area: Location and device histories
+    examples: [Azira, Veraset, Foursquare, Reveal Mobile, Venntel]
+    reason: Device-associated movement can reveal sensitive routines even without a name or email address.
+    remaining: Review actual regional collection and required advertising identifiers; generic name-and-email requests cannot cover these datasets.
+  - area: Identity links and advertising audiences
+    examples: [LiveRamp, Epsilon, Quantcast, PubMatic, Zeotap Data]
+    reason: Linking identifiers across datasets can extend profiling and the reach of personal information.
+    remaining: Distinguish device-specific suppression, historical deletion and independent customer data.
+  - area: Professional contacts and enrichment
+    examples: [Apollo, ZoomInfo, Cognism, Lusha, People Data Labs, RocketReach]
+    reason: Searchable work identities, phone numbers and email addresses can facilitate targeting and unwanted outreach.
+    remaining: Broaden field-specific workflows and record actual matching and completion outcomes.

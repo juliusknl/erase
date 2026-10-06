@@ -1,0 +1,8 @@
+schema_version: 1
+associations:
+  - guide_id: chooseleads-uk
+    records: ["community:chooseleads"]
+    rationale: Current homepage links the March 2025 policy naming Choose Leads Limited and its contacted-number workflow; old broken policy URLs are not used.
+  - guide_id: firmenliste-dach
+    records: ["community:firmenliste"]
+    rationale: Current imprint confirms Adresskontor GmbH and the August 2026 notice explicitly covers public business records including named legal representatives. Direct current page differs from an older indexed policy.

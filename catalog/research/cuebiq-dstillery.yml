@@ -1,0 +1,88 @@
+schema_version: 1
+brokers:
+  - id: cuebiq-location
+    name: Cuebiq
+    match_domains: [cuebiq.com]
+    identity:
+      legal_name: Cuebiq Group, LLC
+      brands: [Cuebiq]
+      parent: null
+      official_domains: [cuebiq.com]
+    relevance:
+      regions: [EEA, UK, US, international]
+      category: advertising
+      data_categories: [Precise location, Mobile advertising IDs, Movement and inferred interests]
+      note: Location services distinguish Cuebiq-controlled records from customer-controlled platform uploads.
+    removal:
+      method: form
+      destination: https://cuebiq.com/privacy-request/
+      alternatives: [privacy@cuebiq.com]
+      steps:
+        - Choose deletion and enter a contact email, ID type and your mobile advertising ID; identify yourself as acting for yourself.
+        - Complete device-ownership verification. Do not install an unfamiliar app just to retrieve an identifier; ask the privacy contact for assistance if necessary.
+        - Separately request opt-out to stop future collection and sharing. Deletion alone does not prevent recollection.
+    required_information:
+      fields: [email, mobile_advertising_id, id_type, request_type, acting_for_self]
+      certainty: not_fully_specified
+      verification: Public form describes device-ownership validation; subsequent checks and submission were not tested. Agent documentation is not a requirement for someone acting for themselves.
+    coverage:
+      effect: deletion_request
+      includes: Cuebiq-held device-identifiable information, subject to verification and retention exceptions.
+      excludes: Independent supplier/customer records; opting out and erasing retained information are separate choices.
+    automation: {mode: manual, reason: The current sender lacks device identifiers and cannot complete ownership verification or the form's anti-bot step.}
+    evidence:
+      - url: https://cuebiq.com/privacy-request/
+        checked_on: '2026-09-30'
+        excerpt: Your Mobile Advertising ID (MAID)
+        supports: [form, matching_fields, verification, separate_choices]
+      - url: https://cuebiq.com/privacy-policy/
+        checked_on: '2026-09-30'
+        published: '2026-08-21'
+        excerpt: data collection will continue even after an Erasure request
+        supports: [identity, scope, recollection, contact]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Later verification and fulfilment., The current notice does not establish succession of every historic Cuebiq Inc. dataset.]
+  - id: dstillery-advertising
+    name: Dstillery
+    match_domains: [dstillery.com]
+    identity:
+      legal_name: Dstillery, Inc.
+      brands: [Dstillery]
+      parent: null
+      official_domains: [dstillery.com]
+    relevance:
+      regions: [EEA, UK, CH, US]
+      category: advertising
+      data_categories: [Pseudonymous advertising identifiers, Hashed emails, Browsing and device signals]
+      note: Current notice describes European Bidstream Modeling and ID-Free services; the older EU-exclusion statement is not current.
+    removal:
+      method: form
+      destination: https://privacyportal-eu-cdn.onetrust.com/dsarwebform/246426b7-49c6-4bf5-879b-d3fdd4cbc15d/35502283-7b19-4b67-b3e0-ede06d3820c5.html
+      alternatives: [privacy@dstillery.com, dpo@dstillery.com]
+      steps:
+        - Use the policy-linked privacy form for deletion; supply relevant matching identifiers when requested.
+        - Separately select opt-out for hashed-email targeting; browser/device preferences are scoped separately.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Dynamic form checklist and subsequent verification untested; a name and email cannot necessarily match pseudonymous records.
+    coverage:
+      effect: deletion_request
+      includes: Matching Dstillery-controlled personal information, subject to applicable exceptions.
+      excludes: Independent client records; advertising opt-out is not historical erasure.
+    automation: {mode: manual, reason: The designated form and pseudonymous matching cannot be replaced with the app's generic email template.}
+    evidence:
+      - url: https://dstillery.com/privacy-policy/
+        checked_on: '2026-09-30'
+        excerpt: As of January 1, 2026
+        supports: [identity, current_European_services, rights_form, matching_limits]
+      - url: https://privacyportal-eu-cdn.onetrust.com/dsarwebform/246426b7-49c6-4bf5-879b-d3fdd4cbc15d/35502283-7b19-4b67-b3e0-ede06d3820c5.html
+        checked_on: '2026-09-30'
+        excerpt: Privacy Web Form
+        supports: [policy_linked_form_shell]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Full form fields and submission outcome., Policy contains a broken local-host browser-opt-out link; that link is not used here.]

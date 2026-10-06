@@ -1,0 +1,17 @@
+schema_version: 1
+associations:
+  - guide_id: rb-information-professional
+    records: [community:rb-information-services]
+    rationale: Current notice and imprint corroborate the exact proprietor, business-contact lists and published rights contact.
+  - guide_id: geno-media-consumer-marketing
+    records: [community:geno-media-circle]
+    rationale: Current notice and imprint body name Geno Media Circle GmbH; updated address and explicit dated postal request requirements replace the older email-only discovery assumptions.
+  - guide_id: qdivision-browser-advertising
+    records: [community:q-division]
+    rationale: Exact current product notice describes cookie-profile matching and browser withdrawal; no name-only email removal is inferred.
+  - guide_id: cs-connect-business-credit
+    records: [community:cs-connect]
+    rationale: Current official pages identify the business-credit subsidiary and separate officer access from parent-company consumer records.
+  - guide_id: windaten-marketing-information
+    records: [community:windaten]
+    rationale: Current proprietor, proprietary data products and general rights contact are reviewed; the guide expressly requires product matching clarification instead of claiming a verified deletion workflow.

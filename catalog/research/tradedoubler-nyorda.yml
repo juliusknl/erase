@@ -1,0 +1,49 @@
+schema_version: 1
+brokers:
+  - id: tradedoubler-nyorda
+    name: Tradedoubler / Nyorda
+    match_domains: [tradedoubler.com, nyorda.com]
+    identity:
+      legal_name: Nyorda AB (556575-7423), formerly Tradedoubler AB
+      brands: [Tradedoubler, Nyorda]
+      parent: null
+      official_domains: [tradedoubler.com, nyorda.com]
+    relevance:
+      regions: [EEA, United Kingdom, International]
+      category: advertising
+      data_categories: [Purchased business contacts, Consumer leads, Affiliate identifiers]
+      note: Own lead/contact processing differs from brand-controlled affiliate tracking.
+    removal:
+      method: manual
+      destination: privacy@tradedoubler.com
+      alternatives: [dpo@tradedoubler.com, https://www.tradedoubler.com/privacy-policy]
+      steps:
+        - Identify the relevant product or interaction and request erasure/marketing objection for its own records.
+        - Include matching contact details and signup country if registered; do not assume it equals current residence.
+        - For affiliate tracking, contact the brand controller. Do not close an active publisher account unintentionally.
+    required_information:
+      fields: [matching_contact, interaction_context, signup_country_if_applicable]
+      certainty: not_fully_specified
+      verification: Identity checks depend on processing context; no universal checklist.
+    coverage:
+      effect: deletion_request
+      includes: Matched own-controller contacts/leads, subject to retention.
+      excludes: Brand-controlled tracking, all subsidiaries and Metapic records without separate scope review.
+    automation:
+      mode: manual
+      reason: Product and relationship context must be supplied; no generic tracking-erasure email.
+    evidence:
+      - url: https://www.tradedoubler.com/privacy-policy
+        checked_on: '2026-10-01'
+        published: '2026-06-05'
+        excerpt: privacy@tradedoubler.com
+        supports: [controller, lead_and_prospect_data, rights, contextual_verification, processor_boundary]
+      - url: https://www.tradedoubler.com/corporate-press-releases/tradedoubler-ab-changes-name-to-nyorda-ab-and-begins-trading-under-new-ticker
+        checked_on: '2026-10-01'
+        published: '2026-06-15'
+        excerpt: Tradedoubler AB has changed its corporate name
+        supports: [registered_name_change, continuing_Tradedoubler_brand]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Product-specific matching and actual fulfilment untested., Group ownership and separate subsidiary workflows not reviewed.]

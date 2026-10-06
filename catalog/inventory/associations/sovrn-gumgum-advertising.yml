@@ -1,0 +1,8 @@
+schema_version: 1
+associations:
+  - guide_id: sovrn-advertising
+    records: [live:sovrn-inc]
+    rationale: The current Sovrn policy expressly defines the controller as Sovrn Inc, matching the live registration. The older Holdings company is not silently merged into this identity.
+  - guide_id: gumgum-advertising
+    records: [community:gumgum]
+    rationale: The March 2026 GumGum policy expressly names the UK Limited contact and US Inc contact recorded in the community entry, using the same dataprivacy inbox and a separately documented per-browser opt-out.

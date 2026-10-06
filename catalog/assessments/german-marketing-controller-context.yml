@@ -1,0 +1,48 @@
+schema_version: 1
+assessments:
+  - record: community:digital-dialog-lab
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: Digital Dialog Lab GmbH's current legal landing page links its seven-page privacy PDF. The notice names the company and Jan Carlson, describes website services, competitions and newsletter marketing, and gives info@digital-dialog-lab.de for contact and rights. It does not establish an independently sourced broker database, sponsor-sharing scope or matching checklist. Clarify the actual product or promotion before a generic broker template or an account-affecting request.
+    evidence:
+      - url: https://www.digital-dialog-lab.de/
+        checked_on: '2026-10-01'
+        excerpt: Digital Dialog Lab GmbH
+        supports: [legal_identity_and_official_PDF_delegation]
+      - url: https://ddl-datenschutz.s3.eu-central-1.amazonaws.com/Digital_Dialog_Lab_Datenschutz.pdf
+        checked_on: '2026-10-01'
+        excerpt: info@digital-dialog-lab.de
+        supports: [site_and_newsletter_scope, rights_contact_not_broker_database_proof]
+    unresolved: [Establish relevant marketing product and controller scope., Determine matching and sponsor coverage if this is more than a first-party newsletter.]
+  - record: community:marketwing
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: marketwing GmbH's official service page describes nonprofit fundraising, donor acquisition, address specialists and client data management. The current privacy notice is mainly website-facing and gives datenschutz@marketwing.de, but does not specify which donor datasets it controls independently versus handles for nonprofit clients. Identify the organization and campaign and establish the responsible controller before requesting deletion; do not inadvertently cancel a donation or treat a website-only response as donor-database erasure.
+    evidence:
+      - url: https://marketwing.de/leistungen/
+        checked_on: '2026-10-01'
+        excerpt: Spendenverwaltung
+        supports: [fundraising_and_client_data_services]
+      - url: https://marketwing.de/datenschutz/
+        checked_on: '2026-10-01'
+        excerpt: datenschutz@marketwing.de
+        supports: [website_controller_and_privacy_contact]
+    unresolved: [Establish donor database controller and appropriate organization-specific route., Confirm matching identifiers and any independent marketing-list coverage.]
+  - record: community:campaign-services-de
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: campaign-services.de redirects to Bertelsmann Marketing Services Campaign. Its current notice still names direct services Gütersloh GmbH Business Unit Campaign and gives datenschutz@bertelsmann.de. The service portfolio includes client recall, loyalty, direct mail and address/database management; the inspected notice covers website data, not a universal independent consumer database. Establish the specific client and campaign controller before a request, rather than equating the group privacy mailbox with all-client deletion.
+    evidence:
+      - url: https://www.campaign-services.de/de/datenschutz
+        checked_on: '2026-10-01'
+        excerpt: direct services Gütersloh GmbH
+        supports: [official_redirect_and_named_website_entity]
+      - url: https://www.bms-campaign.de/de/datenschutz
+        checked_on: '2026-10-01'
+        excerpt: datenschutz@bertelsmann.de
+        supports: [published_privacy_contact_not_all_client_scope]
+      - url: https://www.bms-campaign.de/de/
+        checked_on: '2026-10-01'
+        excerpt: Internationales Adressdatenmanagement
+        supports: [client_campaign_services]
+    unresolved: [Determine controller and matching for the relevant client campaign., Distinguish client-held data from Campaign's direct website records.]

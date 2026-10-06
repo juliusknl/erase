@@ -1,0 +1,67 @@
+schema_version: 1
+brokers:
+  - id: people-data-labs
+    name: People Data Labs
+    match_domains: [peopledatalabs.com, privacy.peopledatalabs.com]
+    identity:
+      legal_name: People Data Labs, Inc.
+      brands: [People Data Labs, PDL]
+      parent: null
+      official_domains: [peopledatalabs.com, privacy.peopledatalabs.com]
+    relevance:
+      regions: [EEA, UK, CH, US]
+      category: professional
+      data_categories: [Professional identity, Contact identifiers, Employment history, Education, Public profile URLs, Professional inferences]
+      note: The Article 14 notice covers indirectly sourced B2B datasets, not just website visitors or employees. Database inclusion remains unknown for an individual.
+    removal:
+      method: form
+      destination: https://privacy.peopledatalabs.com/
+      alternatives: [privacy@peopledatalabs.com, https://www.peopledatalabs.com/do-not-sell-or-share]
+      steps:
+        - Open Privacy Center, choose Consumer for your broker-held record and Delete my information; use your actual location, not an employee/applicant or sales-only request.
+        - Supply a matching email you control and finish its verification link. Review optional phone/profile-URL identifiers; phone matching may need separate SMS verification and is not mandatory.
+        - Review the suppression and no-presumed-record acknowledgments, plus any applicable SMS wording. The public configuration flags the SMS acknowledgment required despite an optional phone; review the live form or contact privacy support if this is unclear, rather than supplying an unwanted number.
+        - Keep the minimal suppression entry to prevent re-import. Save the confirmation and wait for the broker's outcome; the portal text describes a 14-day cancellation window, not immediate deletion.
+        - If the portal cannot be completed, contact privacy@peopledatalabs.com about the specific difficulty and requested erasure/objection. Do not send identity documents automatically.
+    required_information:
+      fields: [email, residence_country, suppression_acknowledgment, no_presumed_record_acknowledgment]
+      certainty: not_fully_specified
+      verification: Public static portal configuration documents email-link login and Consumer erasure, with optional phone/social URL fields. Configuration and policy describe optional SMS matching; conditional rendering and post-verification checks are untested. No login or request was made.
+    coverage:
+      effect: deletion_request
+      includes: Matched PDL-held personal data, subject to exceptions, with minimal retained suppression identifiers to prevent ingestion into future products and deliveries.
+      excludes: Legal/security retention, independently controlled customer copies and identifiers not matched or verified. A submitted request does not establish that PDL held a record.
+    automation:
+      mode: manual
+      reason: Verified email, optional identifier matching and acknowledgment choices require personal review; public configuration is not an end-to-end form test.
+    evidence:
+      - url: https://privacy.peopledatalabs.com/
+        checked_on: '2026-10-01'
+        excerpt: Privacy Center
+        supports: [official_entry_point, public_static_configuration_loaded_by_page]
+      - url: https://www.peopledatalabs.com/do-not-sell-or-share
+        checked_on: '2026-09-30'
+        excerpt: Once you submit this form, we will no longer sell your personal information.
+        supports: [official_entity_footer, public_form, visible_initial_fields, suppression_scope, linked_privacy_center]
+      - url: https://privacy.peopledatalabs.com/static/privacy.peopledatalabs.com/privacyCenterSubjects.json
+        checked_on: '2026-10-01'
+        excerpt: Delete my information
+        supports: [Consumer_erasure_action, supported_regions, email_verification, optional_fields, acknowledgments, cancellation_window]
+      - url: https://privacy.peopledatalabs.com/static/privacy.peopledatalabs.com/privacyCenterPolicies-en.json
+        checked_on: '2026-10-01'
+        published: Privacy Policy effective September 21, 2026
+        excerpt: GDPR/UK GDPR Article 14 Notice
+        supports: [controller_identity, product_scope, regions, rights_routes, suppression_retention, optional_SMS]
+      - url: https://privacy.peopledatalabs.com/static/privacy.peopledatalabs.com/privacyCenter.json
+        checked_on: '2026-10-01'
+        excerpt: privacy@peopledatalabs.com
+        supports: [privacy_support_contact]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns:
+      - Conditional live rendering, including the optional-phone versus required-SMS-acknowledgment interaction.
+      - Actual cancellation timing; public descriptive text says 14 days but the action delay setting is null.
+      - Identifier coverage after verification and completed deletion outcome.
+      - Parent ownership and sourced database scale.
+      - Personal experiment outcomes remain private and do not validate this public guide.

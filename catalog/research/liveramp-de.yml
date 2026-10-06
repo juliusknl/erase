@@ -1,0 +1,51 @@
+schema_version: 1
+brokers:
+  - id: liveramp-de
+    name: LiveRamp — German resident route
+    match_domains: [liveramp.de]
+    identity:
+      legal_name: LiveRamp France SAS
+      brands: [LiveRamp]
+      parent: null
+      official_domains: [liveramp.de, liveramp.com]
+    relevance:
+      regions: [DE]
+      category: advertising
+      data_categories: [Contact identities, Cross-device identity links, Advertising identifiers]
+      note: German services notice identifies the French controller; not a separate German data company.
+    removal:
+      method: email
+      destination: privacy.de@liveramp.com
+      alternatives: [https://liveramp.de/privacy/datenschutzerklarung-fur-die-liveramp-dienste/]
+      steps:
+        - Request erasure of matched controller-held contact and identity-linkage records and object to marketing.
+        - Supply matching name, emails and postal address; review any additional matching personally.
+        - Browser/device opt-outs and independent customers' records remain separate.
+    required_information:
+      fields: [full_name, email, postal_address]
+      certainty: documented
+      verification: Services notice lists name, address and email as possible matching data. Its identity-proof requirement concerns access requests, not this initial erasure request.
+    coverage:
+      effect: deletion_request
+      includes: Matched LiveRamp France controller records under the German services notice.
+      excludes: Customer-controlled processing, unrelated identifiers and automatic group-wide erasure.
+    automation:
+      mode: manual
+      reason: Postal disclosure requires approval; the app has a reviewed initial-email recipe gated on that permission. Additional verification remains manual.
+    evidence:
+      - url: https://liveramp.de/privacy/
+        checked_on: '2026-09-30'
+        excerpt: LiveRamp France SAS
+        supports: [identity, relevance]
+      - url: https://liveramp.com/privacy
+        checked_on: '2026-09-30'
+        excerpt: privacy.de@liveramp.com
+        supports: [German_resident_email_route]
+      - url: https://liveramp.de/privacy/datenschutzerklarung-fur-die-liveramp-dienste/
+        checked_on: '2026-09-30'
+        excerpt: Ihren Vor- und Nachnamen, Ihre Postanschrift, Ihre E-Mail-Adresse
+        supports: [required_information, erasure_route, controller_scope, verification]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Individual matching and deletion untested., Coverage of additional device identifiers requires confirmation., Parent legal entity unreviewed.]

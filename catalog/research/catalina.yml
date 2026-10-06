@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "brokers": [
+    {
+      "id": "catalina-consumer",
+      "name": "Catalina — consumer and shopping data",
+      "match_domains": [
+        "catalina.com"
+      ],
+      "identity": {
+        "legal_name": "Catalina Marketing Corporation; relevant EU/UK affiliate for regional controller records",
+        "brands": [
+          "Catalina"
+        ],
+        "parent": null,
+        "official_domains": [
+          "catalina.com",
+          "catalinamarketing.fr"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "US",
+          "EEA",
+          "UK"
+        ],
+        "category": "consumer_marketing",
+        "data_categories": [
+          "Loyalty identifiers and purchase histories",
+          "Coupon usage",
+          "Audience inferences",
+          "Device identifiers"
+        ],
+        "note": "Shopping-based marketing; retailer-held data and Catalina-controlled records are distinct."
+      },
+      "removal": {
+        "method": "form",
+        "destination": "https://privacyportal.onetrust.com/webform/7665c53e-aae8-4a03-9dd3-66fb6bce8f55/6c428920-a20e-4932-a5c9-a16f4a7abea2",
+        "alternatives": [
+          "dpo@catalina.com",
+          "privacyteam@catalina.com",
+          "https://www.catalina.com/legal#privacy-notice",
+          "https://privacyportal.onetrust.com/webform/7665c53e-aae8-4a03-9dd3-66fb6bce8f55/1bb0c042-b42f-49cc-8779-0bdf8f2ac522"
+        ],
+        "steps": [
+          "EU/UK residents: use the GDPR portal, choose erasure or objection and identify the relevant product or retailer relationship.",
+          "Review matching and identity checks personally. Published processing categories include loyalty and device IDs, but the complete portal checklist is untested.",
+          "For processor-held retailer data, ask the retailer/controller to handle deletion; Catalina's rights inboxes are email alternatives for clarification or rights requests.",
+          "Consider effects on coupon/account services before withdrawing consent. US rights use the separate US portal; cookie opt-out alone is not deletion."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "country",
+          "service_or_retailer",
+          "matching_identifiers",
+          "requested_right"
+        ],
+        "certainty": "not_fully_specified",
+        "verification": "The notice requires identity and jurisdiction verification; the exact identifiers depend on the request. No sensitive matching information is automatically collected or sent."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Applicable controller-held Catalina records or correctly routed processor requests.",
+        "excludes": "Not automatic deletion of retailer loyalty accounts, independent client copies, or every group dataset."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Product/controller selection, identifier verification and possible service effects require personal review."
+      },
+      "evidence": [
+        {
+          "url": "https://www.catalina.com/legal#privacy-notice",
+          "checked_on": "2026-09-30",
+          "excerpt": "Privacy Notice",
+          "supports": [
+            "official_policy_link"
+          ]
+        },
+        {
+          "url": "https://privacyportal-cdn.onetrust.com/7665c53e-aae8-4a03-9dd3-66fb6bce8f55/privacy-notices/7ae86bb8-81c7-4e33-8fb6-12b1e3e82256-en-us.json",
+          "checked_on": "2026-09-30",
+          "published": "2025-09-11",
+          "excerpt": "For business-to-business services Catalina is generally the processor.",
+          "supports": [
+            "identity",
+            "controller_processor",
+            "rights_portals",
+            "verification",
+            "service_effects"
+          ]
+        },
+        {
+          "url": "https://catalinamarketing.fr/mentions-legales",
+          "checked_on": "2026-09-30",
+          "excerpt": "Catalina Marketing France SAS",
+          "supports": [
+            "distinct_regional_identity"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Dynamic portal fields and post-submission verification.",
+        "Actual matching controller, holdings and completion for a person."
+      ]
+    }
+  ]
+}

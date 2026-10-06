@@ -1,0 +1,23 @@
+schema_version: 1
+assessments:
+  - record: community:arkoselabs
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: Current notice explicitly identifies Arkose Labs as processor/service provider for production anti-fraud services and directs end users to the customer that collected their information. Exclude from default independent marketing-broker requests; actual website/customer marketing records and applicable requests through its privacy portal remain distinct, and this is not a claim it holds no data.
+    evidence:
+      - url: https://www.arkoselabs.com/privacy-policy
+        checked_on: '2026-10-01'
+        published: '2026-09-10'
+        excerpt: we do not determine the purpose and means of processing
+        supports: [production_processor_scope, customer_first_rights, separate_marketing_records]
+    unresolved: []
+  - record: community:digitrust
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: The operator's published notice says the shared DigiTrust ID service was sunset on 31 July 2020. It is not an active independent-broker sending target. This does not establish that historical downstream recipients erased data, and it does not exclude other current IAB Tech Lab services by association.
+    evidence:
+      - url: https://iabtechlab.com/digitrust-the-final-chapter/
+        checked_on: '2026-10-01'
+        excerpt: agreed to sunset the DigiTrust service by July 31, 2020
+        supports: [operator_confirmed_service_retirement, named_product_scope]
+    unresolved: []

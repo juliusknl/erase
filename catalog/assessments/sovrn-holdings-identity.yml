@@ -1,0 +1,17 @@
+schema_version: 1
+assessments:
+  - record: community:sovrn
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: Current privacy notice defines Sovrn Inc as controller, whereas the community entry names Sovrn Holdings Inc. Sovrn's own current CMP support article still uses Holdings. This establishes the shared brand but not legal identity or all-Holdings coverage; the reviewed Sovrn Inc product guide must not silently erase the distinction.
+    evidence:
+      - url: https://www.sovrn.com/privacy-policy/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2026-01-14'
+        excerpt: refer to Sovrn, Inc.
+        supports: [current_controller]
+      - url: https://knowledge.sovrn.com/kb/what-is-sovrn-s-cmp-id
+        checked_on: '2026-10-01'
+        excerpt: registered as Sovrn Holdings Inc
+        supports: [distinct_legal_name_needs_resolution]
+    unresolved: [Establish current Inc versus Holdings relationship and whether the same rights route covers both entities.]

@@ -1,0 +1,8 @@
+schema_version: 1
+associations:
+  - guide_id: databroker-uk
+    records: ["community:data-broker-gb"]
+    rationale: Official privacy notice and FAQ identify Databroker Ltd and its actual intermediary workflow; a generic reference to a data broker is insufficient evidence of involvement.
+  - guide_id: marketscan-uk
+    records: ["community:marketscan-gb"]
+    rationale: Current notice names Marketscan Data Solutions Ltd, while the buyer-issued 2025 announcement documents its purchase of Marketscan Limited. The guide covers current Megabase suppression rather than asserting every legacy record is erased.

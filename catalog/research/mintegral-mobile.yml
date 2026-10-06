@@ -1,0 +1,58 @@
+schema_version: 1
+brokers:
+  - id: mintegral-mobile
+    name: Mintegral mobile advertising
+    match_domains: [mintegral.com]
+    identity:
+      legal_name: Mintegral North America Inc.; Mintegral International Limited; Adlogic Technology Pte. Ltd.; MINTEGRAL PTE. LTD. (joint controllers outside China and the United States)
+      brands: [Mintegral]
+      parent: null
+      official_domains: [mintegral.com, assets-official.mintegral.com]
+    relevance:
+      regions: [EEA, United Kingdom, Switzerland, United States, Other regions]
+      category: advertising
+      data_categories: [Advertising identifiers, App activity, Ad interactions, Approximate location, Inferred interests]
+      note: Mobile ad platform; most service processing is controller-held, but advertiser attribution may be processor-held. China and US controller assignments differ.
+    removal:
+      method: form
+      destination: https://www.mintegral.com/en/opt-out
+      alternatives: [privacy@mintegral.com]
+      steps:
+        - For advertising suppression, select your actual residence, device identifier type and matching advertising ID. Repeat for each device.
+        - Review the privacy-policy acknowledgement before submitting. Never enable tracking or install an unfamiliar app just to obtain an identifier.
+        - For an explicit erasure request, email the DPO with the relevant device ID and requested right; the opt-out form does not separately label deletion.
+        - Review any verification personally. Keep the response and distinguish suppression from historical deletion and independently controlled app records.
+    required_information:
+      fields: [residence, device_identifier_type, device_identifier]
+      certainty: not_fully_specified
+      verification: Public form offers IDFA, GAID or Other. Later validation and verification are untested; name and mailbox alone cannot reliably match mobile records.
+    coverage:
+      effect: suppression
+      includes: Advertising preference for the supplied identifier; separate erasure may be requested through the DPO.
+      excludes: Other devices, independent app/controller records and proof of historical deletion from the opt-out form alone.
+    automation:
+      mode: manual
+      reason: Personal device identifiers and verification require review; do not substitute generic name/email outreach or collect identity documents automatically.
+    evidence:
+      - url: https://www.mintegral.com/en/opt-out
+        checked_on: '2026-10-01'
+        excerpt: Device ID Type
+        supports: [form, residence_field, device_matching, opt_out_email, acknowledgement]
+      - url: https://www.mintegral.com/en/privacy
+        checked_on: '2026-10-01'
+        published: '2026-05-14'
+        excerpt: Privacy Policy
+        supports: [official_policy_entrypoint]
+      - url: https://www.mintegral.com/api/v2/legal_business_post?title=privacy_policy&website=mintegral&language=en
+        checked_on: '2026-10-01'
+        published: '2026-05-14'
+        excerpt: You can contact our DPO by sending a written request to privacy@mintegral.com.
+        supports: [official_page_content_api, service_scope, European_rights, verification, controller_processor_distinction]
+      - url: https://assets-official.mintegral.com/mintegral/privacy/entities_list_2026.pdf
+        checked_on: '2026-10-01'
+        excerpt: The following entities are jointly responsible
+        supports: [regional_controller_identities]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Submission and verification untested., Exact parent ownership unreviewed., Historical records of older named group entities are not proven covered.]

@@ -1,0 +1,11 @@
+schema_version: 1
+associations:
+  - guide_id: jwx-advertising
+    records: ["live:connatix-native-exchange-inc", "community:connatix"]
+    rationale: The current JWX notice explicitly names both Connatix Native Exchange Inc. and Connatix Holdings Inc.; it links a common advertising-rights portal without asserting every product is erased together.
+  - guide_id: niq-gfk-research
+    records: ["community:gfk", "community:gfk-ch", "community:gfk-gb"]
+    rationale: Official operating-entity list includes GfK GmbH, Switzerland AG and U.K. Limited. NIQ's SEC filing establishes the former SE name; the guide excludes divested businesses and requires product/controller-specific confirmation.
+  - guide_id: adgear-samsung-ads
+    records: ["community:adgear"]
+    rationale: Official European platform notice identifies AdGear Technologies Inc. operating as Samsung Ads, and explicitly separates Samsung Account and other affiliates' records.

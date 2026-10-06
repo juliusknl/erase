@@ -1,0 +1,8 @@
+schema_version: 1
+associations:
+  - guide_id: bazaarvoice-network
+    records: [community:bazaarvoice]
+    rationale: Exact current named company; guide separates network-cookie preferences, direct accounts and retailer-controlled reviews instead of treating the privacy inbox as universal deletion.
+  - guide_id: choozle-platform-preferences
+    records: [community:choozle]
+    rationale: Exact Choozle Inc policy and platform notice describe multiple partner/device controls; mapping does not claim those partners or their entire databases are covered.

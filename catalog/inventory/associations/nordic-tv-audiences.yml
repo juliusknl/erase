@@ -1,0 +1,8 @@
+schema_version: 1
+associations:
+  - guide_id: nordic-data-resources
+    records: ["live:nordic-data-resources-as"]
+    rationale: Current product notice and Norway's official entity register identify company 915775179 and its official domain; policy's A/S typography is recorded rather than treated as a separate Danish company.
+  - guide_id: alphonso-tv
+    records: ["live:alphonso-inc", "community:alphonso-tv"]
+    rationale: Current European TV policy explicitly identifies Alphonso Inc. and its official domain; guide limits its workflow to relevant TV data rather than all regional products.

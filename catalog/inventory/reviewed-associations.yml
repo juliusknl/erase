@@ -1,0 +1,62 @@
+schema_version: 1
+associations:
+  - guide_id: schober-capaneo
+    records: ['live:guide-schober-capaneo', 'community:schober']
+    rationale: Reviewed official Capaneo notice identifies the Schober brand transition; the community record already names Capaneo GmbH. Only the explicitly covered German route is associated.
+  - guide_id: az-direct-de
+    records: ['live:guide-az-direct-de', 'community:az-direct']
+    rationale: Both public records identify AZ Direct GmbH on az-direct.com, matching the German suppression guide, not the separate Swiss entity.
+  - guide_id: acxiom-de
+    records: ['live:guide-acxiom-de', 'community:acxiom']
+    rationale: These records explicitly identify Acxiom Deutschland on acxiom.de. No association with Acxiom LLC or the UK controller is inferred.
+  - guide_id: deutsche-post-direkt
+    records: ['live:guide-deutsche-post-direkt']
+    rationale: Existing guide discovery is the exact Deutsche Post Direkt entry; its unresolved product-specific route stays unresolved in the completion gate.
+  - guide_id: kaspr
+    records: ['live:kaspr', 'community:kaspr']
+    rationale: The live Kaspr brand entry and community KASPR SAS entry refer to the controller named in the reviewed Kaspr privacy notice.
+  - guide_id: adsquare
+    records: ['live:adsquare-gmbh', 'community:adsquare']
+    rationale: Both entries name adsquare GmbH and adsquare.com, the exact controller and domain in the mobile-advertising identifier guide.
+  - guide_id: experian-uk-marketing
+    records: ['live:guide-experian-uk-marketing']
+    rationale: The existing guide discovery is specifically Experian UK Marketing Services. The broader community Experian Ltd record is not assumed to exclude credit products.
+  - guide_id: liveramp-uk
+    records: ['live:guide-liveramp-uk', 'community:liveramp-gb']
+    rationale: The community entity is LiveRamp UK Limited and the live discovery is explicitly UK-scoped; both map to the UK notice, not the US controller.
+  - guide_id: kompass
+    records: ['live:guide-kompass']
+    rationale: The live discovery was created for the Kompass guide and its named KOMPASS INTERNATIONAL controller; country-franchise coverage is not inferred.
+  - guide_id: crif-de
+    records: ['live:guide-crif-de', 'community:crifbuergel']
+    rationale: German CRIF GmbH on crif.de matches the reviewed credit-access guide; CRIF Austria, Switzerland and Italy remain separate.
+  - guide_id: experian-infoscore-de
+    records: ['live:guide-experian-infoscore-de', 'community:infoscore']
+    rationale: Both records concern infoscore Consumer Data GmbH and the German credit-access workflow, not Experian marketing suppression.
+  - guide_id: zeotap
+    records: ['live:guide-zeotap', 'community:zeotap']
+    rationale: These are the existing Zeotap discovery records. The change of controller between software and data businesses is explicitly unresolved, not treated as verified equivalence.
+  - guide_id: 01advertising
+    records: ['live:01advertising-inc']
+    rationale: The January 2026 official notice expressly names 01Advertising Inc., matching the live registry entry and its data product categories.
+  - guide_id: above-data
+    records: ['live:above-data-inc']
+    rationale: The August 2026 product-specific notice names Above Data Inc.; it covers the data marketplace represented by this catalog entry, not only website visitors.
+  - guide_id: bookyourdata
+    records: ['live:a-direct-marketing-inc']
+    rationale: Official website footer and live opt-out form identify Bookyourdata as operated by A Direct Marketing Inc., resolving this brand-to-registry association.
+  - guide_id: 360-media-direct
+    records: ['live:360-media-direct']
+    rationale: Official 360 Media Direct policy and linked privacy portal match the live business name and domain. The corporate suffix remains explicitly unestablished.
+  - guide_id: 5x5-data
+    records: ['live:5x5-us-llc', 'live:5x5-us-llc-2']
+    rationale: Both registry rows name 5x5 US LLC. The current official policy identifies that entity and links its 5x5coop documentation, while the old website redirects to the current 5x5data brand. These are duplicate discovery rows, not two proven independent deletions.
+  - guide_id: 33across
+    records: ['live:33across-inc', 'community:33across']
+    rationale: Both records identify 33Across Inc on its US domain. The regional-policy inconsistency is retained as an unresolved assessment rather than claiming the UK policy covers this entity.
+  - guide_id: 6sense
+    records: ['live:6sense-insights-inc']
+    rationale: Current official policy identifies 6Sense Insights Inc and its Business Database. Form inspection was blocked, so the guide records exact verification gaps without guessing fields.
+  - guide_id: 4eyes-delivr-review
+    records: ['live:4eyes-ai-inc']
+    rationale: The live registry portal now shows Delivr branding and a legacy PieEye form; current controller continuity and portal choice remain substantively researched but unresolved.

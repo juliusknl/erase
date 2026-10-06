@@ -1,0 +1,89 @@
+schema_version: 1
+brokers:
+  - id: matchbook-device-data
+    name: Matchbook
+    match_domains: [matchbookdata.com]
+    identity:
+      legal_name: Matchbook Data
+      brands: [Matchbook]
+      parent: null
+      official_domains: [matchbookdata.com]
+    relevance:
+      regions: [EEA, US]
+      category: advertising
+      data_categories: [Mobile advertising identifiers, Precise location, Device information]
+      note: Location-data licensing; names and email addresses alone cannot locate device records.
+    removal:
+      method: form
+      destination: https://www.matchbookdata.com/your-privacy-choices/
+      alternatives: [privacy@matchbookdata.com]
+      steps:
+        - Use your device or app's existing privacy support screen, or ask its publisher, for the identifier used by Matchbook. Do not enable tracking or install an unfamiliar app to obtain one.
+        - Enter that device identifier and a reply email in the Privacy Choices form. Repeat for relevant devices you own.
+        - For a deletion request rather than only opt-out, email privacy@matchbookdata.com with that device identifier and explicitly request deletion. Name and email alone will not match these records.
+        - Keep the response; resetting an identifier or turning off tracking does not prove historical data was deleted.
+    required_information:
+      fields: [mobile_advertising_or_installation_id, email]
+      certainty: documented
+      verification: Device matching is required. Further access/identity checks stay outside the app.
+    coverage:
+      effect: suppression
+      includes: Opt-out for the supplied device identifier; deletion must be requested and confirmed separately.
+      excludes: Other identifiers, independent recipients and automatically verified deletion of historic data.
+    automation:
+      mode: manual
+      reason: A device identifier is necessary; automatically emailing names and addresses does not provide a useful match.
+    evidence:
+      - url: https://www.matchbookdata.com/your-privacy-choices/
+        checked_on: '2026-10-04'
+        excerpt: Device ID
+        supports: [form_fields, matching_identifier, distinct_deletion_email]
+      - url: https://www.matchbookdata.com/privacy-policy/
+        checked_on: '2026-10-04'
+        excerpt: Right to Request Deletion
+        supports: [EEA_rights, location_data, controller_scope]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Full legal entity and parent not established., Form submission and deletion fulfilment untested.]
+  - id: fraiser-consumer-data
+    name: Fraiser
+    match_domains: [fraiser.org]
+    identity:
+      legal_name: Fraiser LLC
+      brands: [Fraiser]
+      parent: null
+      official_domains: [fraiser.org]
+    relevance:
+      regions: [US]
+      category: consumer_marketing
+      data_categories: [Consumer contact information]
+      note: Public individual-rights instructions are California-focused; European eligibility is not established.
+    removal:
+      method: form
+      destination: https://fraiser.org/data-request-form/
+      alternatives: [https://www.fraiser.org/ccpa]
+      steps:
+        - Open the Individual Rights Form linked by Fraiser's official CCPA notice and select the right you want to exercise.
+        - Give truthful residence and matching details. Do not claim California residency if it does not apply to you.
+        - If your country or request is not supported, reply to the privacy team asking for the applicable route. Handle identity or residency documents directly in email, not in erase.
+    required_information:
+      fields: [matching_contact_details, residence, requested_right]
+      certainty: not_fully_specified
+      verification: The notice describes identity and California-residency checks for access, deletion and correction. Dynamic form fields remain untested.
+    coverage:
+      effect: deletion_request
+      includes: Applicable individual deletion requests for Fraiser-controlled records.
+      excludes: Guaranteed European eligibility, independent recipients and proof that submission completes deletion.
+    automation:
+      mode: manual
+      reason: The email reply directs rights requests to the form; country eligibility and verification need review.
+    evidence:
+      - url: https://www.fraiser.org/ccpa
+        checked_on: '2026-10-04'
+        excerpt: Individual Rights Form
+        supports: [official_form_link, California_scope, verification]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [European form eligibility not established., Form could not be rendered by research fetch., Submission and fulfilment untested.]

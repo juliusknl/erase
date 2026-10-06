@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}{{ case.broker.name }} · erase{% endblock %}
+{% block content %}
+<a class="back-link" href="/cases">← Back to requests</a>
+<header class="detail-head broker-summary">
+  <div><h1 title="{{ case.broker.name }}">{{ case.broker.name }}</h1><p class="broker-category">{{ category_label }}</p>
+    <p class="lede">{% if case.state == 'candidate' %}Nothing has been sent or completed for this broker yet.{% elif recovery_messages %}A reply arrived, but its content is unavailable here. {{ 'Your recorded completion is unchanged.' if case.state in ['done', 'removed', 'not_found'] else 'Your request is still tracked.' }}{% elif case.state == 'needs_action' and selected_action %}This request needs a step from you before it can continue.{% elif case.state in ['needs_action', 'delivery_failed'] %}This request is paused because its route or delivery needs review. Other eligible requests can continue.{% else %}{{ case.state | state_help }}{% endif %}</p>
+  </div>
+  <span class="broker-status status-{{ case.state }}"><span class="broker-status-icon" aria-hidden="true">{{ '✓' if case.state in ['done', 'removed', 'not_found'] else ('!' if selected_action else '…') }}</span><span>{{ 'Done' if case.state in ['done', 'removed', 'not_found'] else ('Route needs review' if case.state in ['needs_action', 'delivery_failed'] and not selected_action else case.state | state_label) }}</span></span>
+</header>
+<nav class="request-tabs" aria-label="Request sections">
+  {% for key, label in [('overview', 'Overview'), ('conversation', 'Conversation'), ('details', 'Details')] %}<a href="/cases/{{ case.id }}?tab={{ key }}{% if selected_action %}&amp;step={{ selected_action.record.id }}{% endif %}" {% if tab == key %}aria-current="page"{% endif %}>{{ label }}</a>{% endfor %}
+</nav>
+{% if tab == 'overview' %}
+  {% for recovery in recovery_messages %}<section class="card" role="status"><h2>We couldn’t load this reply</h2><p>Your request is still tracked. {{ 'Retrieval attempts did not recover the content. You can read the original in Gmail.' if recovery.status == 'unavailable' else 'We’re retrying retrieval during mailbox checks while the app is running.' }}</p><a href="{{ recovery.gmail_url }}" target="_blank" rel="noopener noreferrer">Open message in Gmail ↗</a></section>{% endfor %}
+  {% if selected_action %}{% include 'case_next_step.html' %}
+  {% elif case.state == 'candidate' %}
+  {% if manual_resource %}
+  <section class="card"><h2>Complete their privacy step</h2>
+    <p>{{ manual_resource.about }}</p>
+    <ol>{% for step in manual_resource.steps %}<li>{{ step }}</li>{% endfor %}</ol>
+    {% if manual_resource.url.startswith('mailto:') %}<p class="footnote">Open email creates a draft in your mail app. Replace the bracketed placeholders and send from your connected request mailbox before selecting Done.</p>{% endif %}
+    {% with item=manual_resource, action_return='/cases/' ~ case.id %}{% include 'quick_win_buttons.html' %}{% endwith %}
+    <p class="footnote">Done records that you completed the step, not that the broker confirmed deletion.</p>
+  </section>
+  {% else %}
+  <section class="card"><h2>Not started</h2><p>Instructions, requirements and sources are in Details. Eligible emails are handled by your automatic plan.</p></section>
+  {% endif %}
+  {% elif case.state == 'prepared' %}
+  <section class="card"><h2>Request prepared</h2><p><a href="/cases/{{ case.id }}?tab=details">Review the exact message and information included →</a></p>
+    {% if not (case.broker | contact_verified) %}<p>The broker’s contact needs checking before sending.</p>{% elif not live and case.broker.connector_type == 'email' %}<p>Sending is currently turned off.</p>{% else %}<form method="post" action="/cases/{{ case.id }}/schedule"><input type="hidden" name="csrf" value="{{ csrf }}"><button>{{ 'Start request' if case.broker.connector_type == 'browser' else 'Send request' }}</button></form>{% endif %}
+  </section>
+  {% elif case.state in ['recheck_due', 'rejected'] %}
+  <section class="card"><h2>Review this request</h2><p>See Conversation and Details for this request’s history and removal instructions.</p></section>
+  {% elif not recovery_messages %}
+  <section class="card broker-overview-note"><h2>{{ 'Request complete' if case.state in ['done', 'removed', 'not_found'] else ('Review request' if case.state in ['needs_action', 'delivery_failed'] else 'You’re up to date') }}</h2>
+    <p>{% if case.state in ['done', 'removed', 'not_found'] %}{{ case.state | state_help }}{% elif case.state in ['needs_action', 'delivery_failed'] %}Check the conversation and request details before continuing.{% else %}No step for you right now. Updates will appear in the conversation.{% endif %}</p>
+    <a class="button secondary" href="/cases/{{ case.id }}?tab=conversation">View conversation →</a>
+  </section>
+  {% endif %}
+  {% if pending_actions | length > 1 %}<p class="footnote">{{ pending_actions | length - 1 }} other pending {{ 'step' if pending_actions | length == 2 else 'steps' }}. <a href="/cases/{{ case.id }}?tab=details#pending-steps">View all steps →</a></p>{% endif %}
+{% elif tab == 'conversation' %}
+  <section aria-label="Conversation" class="broker-conversation">
+    <div class="section-head"><h2>Conversation</h2><span class="footnote">Newest first</span></div>
+    {% for item in correspondence %}<article class="card conversation-entry" id="message-{{ loop.index }}">
+      <div class="conversation-meta"><strong>{{ 'You sent' if item.kind == 'sent' else ('Broker reply' if item.kind == 'received' else 'Recorded step') }}</strong><time>{{ item.record.created_at | relative_time }}</time>{% if item.held %}<span class="status status-needs_action">Sender not verified</span>{% endif %}</div>
+      {% if item.kind == 'step' %}<p>{{ item.get('summary', item.record.summary) }}</p>{% else %}
+      <h3>{{ item.mail.get('subject') or ('Request sent' if item.kind == 'sent' else 'Incoming reply') }}</h3>
+      {% if item.mail.get('from') or item.mail.get('destination') %}<p class="footnote">{{ item.mail.get('from', item.mail.get('destination', '')) }}</p>{% endif %}
+      {% if item.mail.get('body') %}{% with email_text=item.mail.body %}{% include 'email_body.html' %}{% endwith %}
+      {% else %}<p class="notice">Message content is unavailable. {{ 'The send was recorded, but no message body was saved.' if item.kind == 'sent' else 'A reply was recorded, but no readable body was saved. Check the original in Gmail before taking action.' }}</p>{% endif %}
+      {% endif %}
+    </article>{% else %}<div class="card"><p>No messages or completed steps yet. Prepared drafts appear in Details.</p></div>{% endfor %}
+  </section>
+  {% if case.submitted_at %}{% if overview_composer %}<p><a class="button secondary" href="/cases/{{ case.id }}?tab=overview#reply-composer">Review prepared reply →</a></p>{% else %}{% include 'case_reply_composer.html' %}{% endif %}{% endif %}
+{% else %}
+  {% include 'case_information.html' %}
+{% endif %}
+<script src="/static/case-tabs.js?v={{ css_version }}" defer></script>
+<script src="/static/reply-drafts.js?v={{ css_version }}" defer></script>
+{% endblock %}

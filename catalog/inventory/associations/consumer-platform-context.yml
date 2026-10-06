@@ -1,0 +1,17 @@
+schema_version: 1
+associations:
+  - guide_id: skimlinks-commerce-cookies
+    records: [community:skimlinks]
+    rationale: Current official notice names the exact Skimbit Ltd entity and distinguishes user-cookie preferences from publisher and merchant accounts.
+  - guide_id: unity-player-advertising
+    records: [community:unity3d]
+    rationale: Current game-player notice explicitly names Unity Technologies ApS as EU contact; this maps to the regional route, not a claim that every group company or game is covered.
+  - guide_id: roku-europe-consumer
+    records: [community:roku]
+    rationale: Current European consumer notice expressly names Roku International BV and links the rights portal, while identifying excluded affiliates.
+  - guide_id: triplelift
+    records: [community:triplelift]
+    rationale: Current April 2026 platform notice explicitly names TripleLift UK Limited as UK representative for the controller Triple Lift Inc; this maps a representative to the existing route without treating it as a second database.
+  - guide_id: outbrain
+    records: [community:outbrain]
+    rationale: Current legacy-Outbrain notice expressly names Outbrain UK Limited as European controller and maintains its distinct ob-privacy route under Teads branding.

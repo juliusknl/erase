@@ -1,0 +1,308 @@
+schema_version: 1
+brokers:
+  - id: infotorg-no
+    name: Infotorg / Tieto Norwegian credit service
+    match_domains: [infotorg.no]
+    identity:
+      legal_name: Tietoevry Norway AS (933012867; named in official service documentation)
+      brands: [Infotorg, Tieto, Tietoevry]
+      parent: Tieto group; current legal rebranding not independently reconciled
+      official_domains: [infotorg.no]
+    relevance:
+      regions: ['NO']
+      category: credit_reference
+      data_categories: [Creditworthiness information, Register-derived information]
+      note: This reviewed workflow is voluntary blocking of Infotorg Kreditt, not deletion of all Infotorg register services.
+    removal:
+      method: manual
+      destination: https://www.infotorg.no/credit/credit-freeze
+      alternatives: [onlineservice@tietoevry.com, https://www.infotorg.no/sperre-mot-kredittvurdering]
+      steps:
+        - Only if you want a credit block, personally use BankID to activate or remove it on the official portal. Review the effect on obtaining credit first.
+        - Published alternative is an email with full name and birth date, or a letter to Tieto v/Onlineservice, Postboks 4, 1330 Fornebu. Guardian authority is conditional, not a routine attachment.
+        - The page also states electronic identification is required; additional verification for email/post is not documented. Do not assume the first email completes blocking.
+        - Keep the confirmation limited to Infotorg Kreditt. Database access/erasure requires separate scope review; other agencies are not covered.
+    required_information:
+      fields: [bankid_or_manual_verification]
+      certainty: not_fully_specified
+      verification: Browser uses BankID; email/post asks full name and birth date. Subsequent verification is unresolved and must be handled personally.
+    coverage:
+      effect: suppression
+      includes: Voluntary blocking of Infotorg Kreditt disclosure, reversible by the user.
+      excludes: Not erasure, not blocking at other agencies, and not every Infotorg public-register product. Blocking can prevent purchases on credit.
+    automation:
+      mode: manual
+      reason: Credit blocking has financial consequences and needs explicit user choice and identity verification.
+    evidence:
+      - url: https://www.infotorg.no/credit/credit-freeze
+        checked_on: '2026-09-29'
+        excerpt: Kredittsperren vi tilbyr gjelder Infotorg Kreditt
+        supports: [relevance, removal, coverage, automation]
+      - url: https://www.infotorg.no/sperre-mot-kredittvurdering
+        checked_on: '2026-09-29'
+        excerpt: Oppgi fullt navn og fødselsdato
+        supports: [removal, required_information, coverage, automation]
+      - url: https://www.infotorg.no/aktuelt/avtaler
+        checked_on: '2026-09-29'
+        excerpt: Tietoevry Norway AS
+        supports: [identity]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns:
+      - Product-specific erasure notice and retention schedule remain unreviewed; general group policy is insufficient for automatic credit erasure.
+      - Current Tieto branding versus Tietoevry legal name and non-BankID verification need reconciliation.
+      - No login, submission or result tested; size claim not sourced.
+
+  - id: kredittreform-no
+    name: Kredittreform Norway
+    match_domains: [kredittreform.no]
+    identity:
+      legal_name: Kredittreform AS
+      brands: [Kredittreform]
+      parent: null
+      official_domains: [kredittreform.no]
+    relevance:
+      regions: ['NO']
+      category: credit_reference
+      data_categories: [Business-credit information; personal-record scope unconfirmed]
+      note: Official homepage describes company reports. Regulator places it in business-only credit agencies; that does not rule out linked-person data.
+    removal:
+      method: investigate
+      destination: https://kredittreform.no/
+      alternatives: []
+      steps:
+        - Locate a current product-specific privacy notice identifying any business-linked personal records.
+        - Establish a rights-request recipient and minimum identifiers before sending.
+        - Do not use the order form to purchase a report or treat customer service as a validated deletion route.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Homepage and linked order form do not establish a privacy-request checklist.
+    coverage:
+      effect: needs_review
+      includes: Candidate business-credit provider requiring further product-scope review.
+      excludes: No consumer-file or deletion coverage established.
+    automation:
+      mode: blocked
+      reason: No product-specific rights route found after homepage, linked order-form and targeted official-domain checks.
+    evidence:
+      - url: https://kredittreform.no/
+        checked_on: '2026-09-29'
+        excerpt: Kredittreform AS
+        supports: [identity, relevance]
+      - url: https://kredittreform.no/kontakt-og-bestilling/
+        checked_on: '2026-09-29'
+        excerpt: Kredittvurdering av selskap
+        supports: [removal, required_information, automation]
+    scale: null
+    review_status: needs_research
+    tested_outcome: not_tested
+    unknowns: [Product-specific controller scope and rights notice, Request recipient and verification requirements, Retention and database size, Parent ownership, No request or result tested]
+
+  - id: kredittopplysningen-no
+    name: Kredittopplysningen / KO International
+    match_domains: [kredittopplysningen.no]
+    identity:
+      legal_name: Kredittopplysningen AS (regulator entry; product notice still needed)
+      brands: [Kredittopplysningen, KO International (regulator-listed alias)]
+      parent: null
+      official_domains: [kredittopplysningen.no]
+    relevance:
+      regions: ['NO']
+      category: credit_reference
+      data_categories: [Business credit ratings; linked-person data scope unresolved]
+      note: Official consumer page redirects private credit enquiries to other agencies. Published privacy notice concerns website/customer data, not clearly report subjects.
+    removal:
+      method: investigate
+      destination: https://kredittopplysningen.no/personvern/
+      alternatives: []
+      steps:
+        - Obtain the notice governing individuals appearing in business-credit reports and confirm KO International scope.
+        - Establish matching, rights recipient and retention before using a deletion template.
+        - Do not substitute the website/customer privacy route or legacy consumer-agency links for product-specific instructions.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: No product-subject matching or secure verification workflow established.
+    coverage:
+      effect: needs_review
+      includes: Candidate business-credit reporting; customer privacy notice reviewed only for scope.
+      excludes: No established deletion coverage for report subjects or other agencies.
+    automation:
+      mode: blocked
+      reason: Website/customer notice, company description and consumer page do not resolve the business-report rights workflow.
+    evidence:
+      - url: https://kredittopplysningen.no/personvern/
+        checked_on: '2026-09-29'
+        excerpt: hvordan dette nettstedet samler inn og behandler personopplysninger
+        supports: [coverage, removal, required_information, automation]
+      - url: https://kredittopplysningen.no/privat/
+        checked_on: '2026-09-29'
+        excerpt: kredittvurdering av bedrifter og organisasjoner
+        supports: [relevance, coverage]
+      - url: https://www.datatilsynet.no/personvern-pa-ulike-omrader/kredittvurdering/virksomheter-som-kredittvurderer/
+        checked_on: '2026-09-29'
+        published: '2025-10-30'
+        excerpt: Kredittopplysningen AS (inkluderer KO International)
+        supports: [identity, relevance]
+    scale: null
+    review_status: needs_research
+    tested_outcome: not_tested
+    unknowns: [Product-specific controller notice and KO International scope, Matching and verification, Retention and database size, Parent ownership, No request or result tested]
+
+  - id: enin-no
+    name: Enin
+    match_domains: [enin.ai]
+    identity:
+      legal_name: Enin AS (917 540 640)
+      brands: [Enin, Enin AI]
+      parent: null
+      official_domains: [enin.ai]
+    relevance:
+      regions: ['NO']
+      category: professional
+      data_categories: [Business roles, Public-register information, News and court information]
+      note: Company-risk research includes connected individuals; not just website visitors.
+    removal:
+      method: email
+      destination: privacy@enin.ai
+      alternatives: []
+      steps:
+        - Email privacy@enin.ai specifying the relevant Enin AI record and requested right.
+        - For objection, explain your particular situation; erasure is conditional. Review any identity checks personally.
+        - Keep the substantive reply. Newsletter unsubscribe is separate from removal of database records.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: No fixed initial matching or verification checklist published; do not infer mandatory fields from collected data categories.
+    coverage:
+      effect: deletion_request
+      includes: Personal records in Enin-controlled business intelligence.
+      excludes: Lawful retention may continue; original public sources are not removed.
+    automation:
+      mode: manual
+      reason: Record identification and case-specific grounds need review.
+    evidence:
+      - url: https://www.enin.ai/privacy
+        checked_on: '2026-09-29'
+        published: Undated current page
+        excerpt: privacy@enin.ai
+        supports: [identity, relevance, removal, required_information, coverage, automation]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns:
+      - Matching checklist, parent and database size not established.
+      - Notice body and footer give different addresses; postal route not selected.
+      - No request submitted or outcome tested.
+
+  - id: proff-no
+    name: Proff Norway / Proff Forvalt
+    match_domains: [proff.no, forvalt.no]
+    identity:
+      legal_name: Proff AS (918298037)
+      brands: [Proff, Proff Forvalt]
+      parent: Enento Group Plc
+      official_domains: [proff.no, forvalt.no]
+    relevance:
+      regions: ['NO']
+      category: professional
+      data_categories: [Business roles, Shareholding and beneficial ownership, Business-linked contact data, Birth year]
+      note: Public business listings and restricted Forvalt credit-information services have different purposes and retention.
+    removal:
+      method: email
+      destination: support@proff.no
+      alternatives: [dpo@enento.com]
+      steps:
+        - Email support@proff.no requesting the applicable right for published business-linked personal data; distinguish Proff and Forvalt records.
+        - For objection, explain your circumstances. Public-role erasure is assessed individually rather than guaranteed.
+        - Official registry errors should also be corrected with Brønnøysundregistrene/Altinn; contact support for incorrect contact information. Do not deregister a business merely to hide a listing.
+        - Keep the decision and its scope; removing a user account is a different workflow.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: No fixed rights-request checklist published. BankID on the shareholder-update workflow is not established as a general deletion requirement.
+    coverage:
+      effect: deletion_request
+      includes: Personal records published through proff.no and forvalt.no, subject to review.
+      excludes: Policy states 12 months after registration/update on Proff and no fixed statistical retention on Forvalt; no group-wide erasure.
+    automation:
+      mode: manual
+      reason: Public-register and credit-processing exceptions require individual review.
+    evidence:
+      - url: https://www.proff.no/info/privacy-notice-business/
+        checked_on: '2026-09-29'
+        published: February 2025
+        excerpt: support@proff.no
+        supports: [identity, relevance, removal, required_information, coverage, automation]
+      - url: https://www.proff.no/info/hjelp-og-kontakt/
+        checked_on: '2026-09-29'
+        excerpt: 'Org.nr.: 918298037'
+        supports: [identity, removal, required_information, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns:
+      - Minimum matching identifiers, secure verification and database size not established.
+      - No submission or deletion outcome tested.
+
+  - id: experian-no
+    name: Experian Norway / Min Experian
+    match_domains: [experian.no, minexperian.no]
+    identity:
+      legal_name: Experian AS (881917122); Experian Gjeldsregister AS (920438679) for the debt register
+      brands: [Experian Norway, Min Experian]
+      parent: Experian group; Gjeldsregister is wholly owned by Experian AS
+      official_domains: [experian.no, minexperian.no]
+    relevance:
+      regions: ['NO']
+      category: credit_reference
+      data_categories: [Credit scores and payment remarks, Income and tax data, Property data, Unsecured debt]
+      note: Credit bureau and debt register are separate controllers even though they share the consumer portal.
+    removal:
+      method: manual
+      destination: https://www.minexperian.no/
+      alternatives: [kundesenter@no.experian.com, dponorway@experian.com]
+      steps:
+        - Use the free Min Experian service personally with BankID to inspect your credit/debt records and inquiry letters. Read registration terms and communication choices before proceeding.
+        - Request applicable correction or erasure through the published customer-service contact. Supply supporting information only after reviewing the request; access does not itself delete data.
+        - For incorrect debt-register entries, contact the reporting lender to update them. The portal identifies the reporting source.
+        - Optional credit blocking is separate, remains until lifted and has statutory exceptions. It can prevent new credit or subscriptions; never activate it silently as part of deletion.
+    required_information:
+      fields: [bankid, national_identity_number, email, mobile_phone]
+      certainty: not_fully_specified
+      verification: Public portal terms list BankID, Norwegian registration and contact information, with tax-history eligibility exceptions. Authenticated correction/deletion fields remain uninspected; do not email BankID credentials or identity numbers automatically.
+    coverage:
+      effect: access_then_review
+      includes: Norwegian credit and debt records; conditional rectification/erasure and separately chosen credit blocking.
+      excludes: Credit archives can persist up to ten years from original registration; debt transaction logs up to two years. No other Experian country or marketing dataset is implied covered.
+    automation:
+      mode: manual
+      reason: BankID, sensitive financial data and credit-blocking consequences require personal action.
+    evidence:
+      - url: https://www.experian.no/lovlig/vilkaar-og-rettigheter/bruk-av-personopplysninger
+        checked_on: '2026-09-29'
+        published: '2026-02-23'
+        excerpt: Experian AS, Org nr. 881917122
+        supports: [identity, relevance, removal, coverage]
+      - url: https://www.minexperian.no/
+        checked_on: '2026-09-29'
+        published: Undated public portal and terms
+        excerpt: For å få tilgang til tjenesten kreves det BankID.
+        supports: [removal, required_information, automation]
+      - url: https://www.minexperian.no/Home/FAQ
+        checked_on: '2026-09-29'
+        excerpt: Oppretter du en sperre, blir den stående helt til du selv opphever den.
+        supports: [removal, coverage, automation]
+      - url: https://www.experian.no/kredittlosninger/kredittlosninger
+        checked_on: '2026-09-29'
+        excerpt: Du må kontakte finansforetaket direkte
+        supports: [removal, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns:
+      - Authenticated request fields, eligibility exceptions and non-BankID access route remain unverified.
+      - Current database size not sourced.
+      - No login, credit block, submission or deletion outcome tested.

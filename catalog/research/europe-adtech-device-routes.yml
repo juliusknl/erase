@@ -1,0 +1,187 @@
+schema_version: 1
+brokers:
+  - id: hybrid-theory-platform
+    name: Hybrid Theory advertising
+    match_domains: [hybridtheory.com]
+    identity:
+      legal_name: Hybrid Theory Global Ltd.
+      brands: [Hybrid Theory]
+      parent: Azerion group
+      official_domains: [hybridtheory.com]
+    relevance:
+      regions: [EEA, UK, Global advertising]
+      category: advertising
+      data_categories: [Advertising identifiers, Cookies, Browsing activity, Interest segments, Location]
+      note: Platform profiles need device matching; an email address does not identify every browser.
+    removal:
+      method: email
+      destination: dpo@azerion.com
+      alternatives: [https://www.hybridtheory.com/opt-out/]
+      steps:
+        - Specify Hybrid Theory Global Ltd., your name, reply email and requested deletion or objection.
+        - Ask which platform identifiers are necessary before supplying technical identifiers; do not assume an email-only search is comprehensive.
+        - For browser preferences, use the separate official opt-out page in each relevant browser. Do not weaken browser protections just to reveal a missing button.
+        - Keep the response and distinguish browser preferences from confirmed erasure.
+    required_information:
+      fields: [full_name, email, requested_right, matching_identifier]
+      certainty: not_fully_specified
+      verification: Name, email and request description are published; platform matching and later verification are untested.
+    coverage:
+      effect: deletion_request
+      includes: Matched Hybrid Theory platform records; cookie preference is a separate device-scoped action.
+      excludes: Other Azerion products and independent client copies.
+    automation:
+      mode: manual
+      reason: Device matching is unresolved; do not launch repeated generic requests to the shared group DPO.
+    evidence:
+      - url: https://www.hybridtheory.com/privacy-notice/
+        checked_on: '2026-10-01'
+        published: '2026-01-14'
+        excerpt: Hybrid Theory Global LTD
+        supports: [controller, platform_scope, rights_email, required_request_details]
+      - url: https://www.hybridtheory.com/opt-out/
+        checked_on: '2026-10-01'
+        excerpt: Opt-Out of Hybrid Theory Cookies
+        supports: [separate_browser_preference]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Interactive opt-out untested., Exact platform matching and fulfilment untested., No comparable scale claim.]
+
+  - id: delta-projects-platform
+    name: Delta Projects advertising
+    match_domains: [deltaprojects.com]
+    identity:
+      legal_name: Azerion Technology B.V. (Delta Projects platform)
+      brands: [Delta Projects]
+      parent: Azerion group
+      official_domains: [deltaprojects.com]
+    relevance:
+      regions: [EEA, Global advertising]
+      category: advertising
+      data_categories: [Device identifiers, Cookies, Browsing activity, Interest segments, Location]
+      note: Current platform notice names a Dutch controller, not the historical Swedish AB inventory entity.
+    removal:
+      method: email
+      destination: dpo@azerion.com
+      alternatives: [https://www.deltaprojects.com/opt-out/]
+      steps:
+        - Identify the Delta Projects platform, your name, reply email and requested right.
+        - Ask for safe matching instructions before disclosing device identifiers. Client-controlled records may need referral.
+        - The canonical opt-out page describes browser-specific preferences, not historical erasure. Avoid the obsolete raw-IP footer link.
+        - Retain confirmation of the actual scope; do not mark other group products erased.
+    required_information:
+      fields: [full_name, email, requested_right, matching_identifier]
+      certainty: not_fully_specified
+      verification: Published name, email and request description; device matching remains untested.
+    coverage:
+      effect: deletion_request
+      includes: Matched platform-controller records; browser opt-out is separate.
+      excludes: Independent clients, other Azerion products and unproven historical AB retained records.
+    automation:
+      mode: manual
+      reason: Device matching and controller scope require review before a useful request can be prepared.
+    evidence:
+      - url: https://www.deltaprojects.com/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2023-12-29'
+        excerpt: Azerion Technology B.V.
+        supports: [current_controller, platform_data, rights_email, request_details]
+      - url: https://www.deltaprojects.com/opt-out/
+        checked_on: '2026-10-01'
+        excerpt: each browser and on each computer
+        supports: [browser_specific_preference, canonical_host]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Published notice is old; delivery and device matching untested., Historical AB record custody unestablished., No comparable scale claim.]
+
+  - id: emerse-advertising
+    name: Emerse advertising preferences
+    match_domains: [emerse.com]
+    identity:
+      legal_name: Emerse Sverige AB
+      brands: [Emerse]
+      parent: null
+      official_domains: [emerse.com]
+    relevance:
+      regions: [EEA, Global advertising]
+      category: advertising
+      data_categories: [Cookies, Mobile identifiers, Truncated IP addresses, Audience segments]
+      note: Vendor calls platform data anonymous; this is its claim, not an independent legal or technical finding.
+    removal:
+      method: manual
+      destination: https://www.emerse.com/privacy-policy
+      alternatives: [dataprotectionofficer@emerse.com]
+      steps:
+        - Follow the policy's Your Online Choices link and choose Emerse where available in the relevant browser.
+        - Treat this as an advertising preference, not proof that historical or all-device records were erased.
+        - Actual newsletter or contact-form users may separately ask the DPO to delete their supplied contact information.
+        - Do not send unrelated personal identifiers solely to look for a cookie profile.
+    required_information:
+      fields: [relevant_browser]
+      certainty: not_fully_specified
+      verification: Interactive preference controls untested; contact-record matching is a separate relationship-specific request.
+    coverage:
+      effect: suppression
+      includes: Emerse advertising preferences in the relevant browser.
+      excludes: Historical erasure, other devices and independent partners.
+    automation:
+      mode: manual
+      reason: Browser preferences cannot be performed by a generic name-and-email request.
+    evidence:
+      - url: https://www.emerse.com/privacy-policy
+        checked_on: '2026-10-01'
+        excerpt: Emerse Sverige AB, registration number 556805-2582
+        supports: [identity, browser_preference, separate_contact_records, DPO]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Notice retains old Swedish statutory references despite TCF v2.2 text., Interactive flow untested., No comparable scale claim.]
+
+  - id: adux-advertising
+    name: AdUX advertising
+    match_domains: [adux.com]
+    identity:
+      legal_name: ADUX (RCS Paris 418 093 761)
+      brands: [AdUX]
+      parent: null
+      official_domains: [adux.com]
+    relevance:
+      regions: [France, EEA]
+      category: advertising
+      data_categories: [Advertising cookies, Browsing categories, Shared registration information]
+      note: Service notice covers targeted advertising; website enquiries have separate first-party scope.
+    removal:
+      method: email
+      destination: privacy@adux.com
+      alternatives: [https://www.adux.com/donnees-personnelles/]
+      steps:
+        - Describe the AdUX processing and requested right to the DPO; ask what identifiers are needed before disclosing technical data.
+        - The service notice also links browser advertising controls. Use the relevant browser and retain confirmation.
+        - Sirdata and other partner controls are separate; completing one is not removal from the entire AdUX network.
+    required_information:
+      fields: [requested_right, matching_identifier]
+      certainty: not_fully_specified
+      verification: Notice requests a description but does not specify platform matching or proof requirements.
+    coverage:
+      effect: deletion_request
+      includes: Individually matched AdUX-controlled records after scope and identity are established.
+      excludes: Independent partners and presumed all-device deletion.
+    automation:
+      mode: manual
+      reason: Published DPO route lacks a complete platform-matching checklist.
+    evidence:
+      - url: https://www.adux.com/donnees-personnelles/
+        checked_on: '2026-10-01'
+        published: 'Version 6, September 2021'
+        excerpt: TRAITEMENT DES DEMANDES ET INCIDENTS
+        supports: [service_scope, DPO_email, browser_controls, partner_boundary]
+      - url: https://www.adux.com/informations-legales/
+        checked_on: '2026-10-01'
+        excerpt: 'RCS: 418 093 761 Paris'
+        supports: [legal_identity]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Current page carries an old version date., Device matching and delivery untested., No comparable scale claim.]

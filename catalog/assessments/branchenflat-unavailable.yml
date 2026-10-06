@@ -1,0 +1,16 @@
+schema_version: 1
+assessments:
+  - record: community:branchenflat
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: The inventory's branchenflat domain did not resolve. Public directories suggest b2badressenmarketing.de and adressendiscounter.de, but direct checks find a domain-sale page and unrelated home-improvement posts, respectively. These are not validated successor controllers or safe destinations for personal identifiers; domain failure does not prove company dissolution or record deletion.
+    evidence:
+      - url: https://www.b2badressenmarketing.de/
+        checked_on: '2026-10-01'
+        excerpt: This domain is for sale
+        supports: [candidate_domain_not_operating_broker_contact]
+      - url: https://adressendiscounter.de/
+        checked_on: '2026-10-01'
+        excerpt: Industriecharme für Küche und Werkstatt
+        supports: [candidate_domain_unrelated_current_content]
+    unresolved: [Find current authoritative legal/contact information for B2B Adressenmarketing GmbH without sending identifiers to parked or repurposed domains.]

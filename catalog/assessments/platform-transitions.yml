@@ -1,0 +1,35 @@
+schema_version: 1
+assessments:
+  - record: community:appnexus
+    disposition: unresolved
+    checked_on: '2026-09-30'
+    rationale: Xandr's Microsoft-hosted consumer instructions require advertising identifiers rather than name/email. Their linked privacy center returns 404 and their platform policy redirects to Microsoft's general policy. Customer-only API documentation is not a replacement consumer endpoint. No automatic account deletion or unrelated Microsoft privacy request is justified.
+    evidence:
+      - url: https://about.ads.microsoft.com/en/forms/opt-out-personalized-ads-sales-sharing
+        checked_on: '2026-09-30'
+        excerpt: indirect identifiers
+        supports: [identifier_requirement, published_consumer_links]
+      - url: https://learn.microsoft.com/en-us/xandr/digital-platform-api/privacy-service
+        checked_on: '2026-09-30'
+        excerpt: only data that is related to your account for the given user is impacted
+        supports: [customer_API_not_consumer_route]
+    unresolved: [Verify a working current consumer endpoint and exact controller for historical AppNexus data., Resolve device-identifier matching and consumer verification.]
+  - record: community:adcolony
+    disposition: unresolved
+    checked_on: '2026-09-30'
+    rationale: Digital Turbine's official legal index confirms the AdColony/Fyber/Appreciate acquisitions, but the candidate privacy URL is expressly website-only. The Ignite notice concerns app installation, not all advertising datasets. The Trust Center shows general DSR options without establishing advertising-product scope or the full matching workflow; no group-wide deletion route is inferred.
+    evidence:
+      - url: https://www.digitalturbine.com/legal
+        checked_on: '2026-09-30'
+        excerpt: acquired AdColony, Appreciate, and Fyber
+        supports: [group_transition]
+      - url: https://www.digitalturbine.com/legal/privacy-policy
+        checked_on: '2026-09-30'
+        published: July 2025
+        excerpt: Website Privacy Policy
+        supports: [website_not_platform_scope]
+      - url: https://trust.digitalturbine.com/
+        checked_on: '2026-09-30'
+        excerpt: Data Subject Access Request
+        supports: [candidate_request_tool]
+    unresolved: [Find current DT advertising/exchange controller notice and distinguish legacy AdColony and Fyber datasets., Inspect identifier and verification requirements in the linked DSR flow.]

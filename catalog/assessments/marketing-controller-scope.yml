@@ -1,0 +1,54 @@
+schema_version: 1
+assessments:
+  - record: community:adressmonster
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: Inventory names B2B Monster UG, but the current imprint names Bulgarian G.I.G OOD while the privacy page names AdressMonster Reborn GmbH at a placeholder-looking Musterstrasse address and uses the different addressmonster.de spelling in its inbox. Do not resolve this conflict by guessing which entity or email controls the sold professional records.
+    evidence:
+      - url: https://adressmonster.de/impressum
+        checked_on: '2026-10-01'
+        excerpt: G.I.G OOD
+        supports: [current_imprint_entity]
+      - url: https://adressmonster.de/datenschutz
+        checked_on: '2026-10-01'
+        excerpt: AdressMonster Reborn GmbH
+        supports: [conflicting_privacy_controller, different_email_domain]
+    unresolved: [Resolve legal succession and contradictory current notices before sending personal identifiers.]
+  - record: community:better-mail-media
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: Official site advertises consumer targeting and lead generation, but its current rights notice concerns website visitors, enquiries and newsletter subscriptions. Exact Better Mail Media GmbH identity and service inbox are published; control and matching instructions for externally sourced consumer audiences remain unestablished. A first-party deletion address alone does not establish that missing route.
+    evidence:
+      - url: https://better-mail-media.de/
+        checked_on: '2026-10-01'
+        excerpt: Wir haben die passenden Consumer für Sie
+        supports: [consumer_targeting_services]
+      - url: https://better-mail-media.de/datenschutzerklaerung/
+        checked_on: '2026-10-01'
+        excerpt: service@better-mail-media.de
+        supports: [published_entity_contact, first_party_notice_scope]
+    unresolved: [Identify the notice and matching route for third-party campaign audiences, including controller versus processor roles.]
+  - record: community:berlinfive
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: Current company portfolio provides commissioned business photography, Street View tours, 3D models and local listing distribution. Its privacy notice concerns website, enquiries, newsletters and social pages. Exclude from the default independent consumer-broker campaign, without claiming actual clients have no personal records or rights.
+    evidence:
+      - url: https://berlinfive.com/
+        checked_on: '2026-10-01'
+        excerpt: Fotografie, Produktion und Vertrieb
+        supports: [commissioned_business_visibility_services]
+      - url: https://berlinfive.com/datenschutz/
+        checked_on: '2026-10-01'
+        excerpt: Hinweis zur Verantwortlichen Stelle
+        supports: [website_customer_notice_scope]
+    unresolved: []
+  - record: community:aklamio
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: Current official notice describes referral and cashback reward administration, including limited joint controllership with participating merchants. It is not an established independent audience-data removal target. Exclude generic broker outreach; actual participants can contact Aklamio or the participating merchant, and should review reward/account consequences rather than receive an unsolicited blanket closure request.
+    evidence:
+      - url: https://get.aklamio.com/privacy-policy
+        checked_on: '2026-10-01'
+        excerpt: strictly limited to the evaluation, verification, collection, processing, and fulfilment of the reward or cashback
+        supports: [reward_service_scope, limited_joint_controllership, participant_rights_route]
+    unresolved: []

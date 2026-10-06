@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: altair-consumer-marketing
+    records: [live:altair-data-resources-inc]
+    rationale: The exact registered Altair Data Resources entity and altairdata.com match the official policy and linked Altair Help Center. This guide covers the individual consumer-marketing flow only; it does not grant API access or infer deletion from upstream credit bureaus.

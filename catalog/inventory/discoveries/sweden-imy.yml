@@ -1,0 +1,41 @@
+schema_version: 1
+regions: [SE]
+rationale: The regulator lists credit-information permit holders, including historical aliases. Each needs separate current identity, product scope and rights review. A permit is not a deletion integration; do not merge shared brands across countries.
+evidence:
+  - url: https://www.imy.se/privatperson/kreditupplysning/innehavare-av-kreditupplysningstillstand/
+    checked_on: '2026-09-29'
+    published: Page says last updated 2025-04-01
+    excerpt: Innehavare av kreditupplysnings­tillstånd
+    supports: [discovery]
+candidates:
+  - {slug: imy-alektum-risk, name: Alektum Risk Optimisation AB}
+  - {slug: imy-bis-lab-credit, name: Bis Lab Credit Sverige AB}
+  - {slug: imy-bisnode-dnb, name: Bisnode Dun & Bradstreet Sverige AB}
+  - {slug: imy-bisnode-kredit, name: Bisnode Kredit AB}
+  - {slug: imy-checknode, name: Checknode AB}
+  - {slug: imy-creditsafe, name: CreditSafe i Sverige AB}
+  - {slug: imy-dnb-credit, name: Dun & Bradstreet Credit AB}
+  - {slug: imy-krafguard, name: Krafguard AB}
+  - {slug: imy-safenode, name: Safenode AB}
+  - {slug: imy-syna, name: Syna AB}
+  - {slug: imy-intelligence-company, name: The Intelligence Company AB (publ)}
+  - {slug: imy-uc, name: UC AB}
+  - {slug: imy-valitive, name: Valitive Credit AB}
+  - {slug: imy-atradius, name: Atradius filial Sverige}
+  - {slug: imy-biluthyrarna, name: Biluthyrarna Sverige}
+  - {slug: imy-breadify, name: Breadify AB}
+  - {slug: imy-coface, name: Coface Sverige Services AB}
+  - {slug: imy-credon, name: Credon AB}
+  - {slug: imy-ebie, name: Ebie AB}
+  - {slug: imy-euler-hermes-service, name: Euler Hermes Service AB}
+  - {slug: imy-euler-hermes-filial, name: Euler Hermes Sverige filial}
+  - {slug: imy-intellicred, name: Intellicred AB}
+  - {slug: imy-inyett, name: Inyett AB}
+  - {slug: imy-neufeld, name: "Neufeld, Robert med firma Neufeld's Creditinformation"}
+  - {slug: imy-precheck, name: PreCheck AB}
+  - {slug: imy-publictech, name: PublicTech AB (formerly DoubleCheck AB)}
+  - {slug: imy-risika, name: Risika A/S}
+  - {slug: imy-ropo, name: Ropo AB (formerly Colligent Inkasso AB)}
+  - {slug: imy-sfk-estate, name: SFK Estate Market Service AB}
+  - {slug: imy-trejo, name: Trejo information AB}
+  - {slug: imy-we-circle, name: We Circle Service Solutions AB}

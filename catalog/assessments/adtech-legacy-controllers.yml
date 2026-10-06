@@ -1,0 +1,48 @@
+schema_version: 1
+assessments:
+  - record: community:admedo
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: Companies House currently lists the exact Admedo Ltd entity, number 08136680, in liquidation. Its old policy endpoint failed TLS checks. Neither liquidation nor an unavailable website proves deletion of records; do not send identifiers to the historical privacy inbox or assume a similarly named company acquired the data.
+    evidence:
+      - url: https://find-and-update.company-information.service.gov.uk/company/08136680
+        checked_on: '2026-10-01'
+        excerpt: Company status Liquidation
+        supports: [exact_legal_entity, current_status]
+      - url: https://find-and-update.company-information.service.gov.uk/company/08136680/insolvency
+        checked_on: '2026-10-01'
+        excerpt: Creditors voluntary liquidation
+        supports: [formal_insolvency_process]
+    unresolved: [Establish who controls retained advertising records and a current rights route through authoritative transaction or insolvency evidence.]
+  - record: community:adludio-limited
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: Companies House lists Adludio Limited, number 08227542, in liquidation. The historical privacy URL now redirects to a Vietnamese affiliate-marketing article on permate.com, not an Adludio rights notice. The redirect is not evidence of legal succession or authority to receive personal identifiers.
+    evidence:
+      - url: https://find-and-update.company-information.service.gov.uk/company/08227542
+        checked_on: '2026-10-01'
+        excerpt: Company status Liquidation
+        supports: [exact_legal_entity, current_status]
+      - url: https://find-and-update.company-information.service.gov.uk/company/08227542/filing-history
+        checked_on: '2026-10-01'
+        excerpt: Notice of move from Administration case to Creditors Voluntary Liquidation
+        supports: [formal_entity_transition_not_data_erasure]
+    unresolved: [Find the current controller or custodian of historical advertising records without treating a repurposed domain as a validated recipient.]
+  - record: community:4wmarketplace
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: The old 4w domain currently serves AdHub Media S.r.l. branding and a publisher/comment-user privacy notice. Its platform privacy page names AdHub Media but covers registered publisher accounts and enquiries, not an established historical 4w audience-profile removal route. Shared web infrastructure alone does not prove the records or legal liabilities transferred.
+    evidence:
+      - url: https://www.4wmarketplace.com/en/contacts/
+        checked_on: '2026-10-01'
+        excerpt: AdHub Media S.r.l.
+        supports: [current_domain_operator]
+      - url: https://www.4wmarketplace.com/en/privacy-policy/
+        checked_on: '2026-10-01'
+        excerpt: such as some or all the comments you made
+        supports: [first_party_content_scope_not_audience_matching]
+      - url: https://www.adhubplatform.com/en/privacy/
+        checked_on: '2026-10-01'
+        excerpt: AdHub Media S.r.l.
+        supports: [published_platform_account_controller]
+    unresolved: [Establish 4w Marketplace legal and advertising-record succession, the end-user controller and required matching identifiers; current platform URL now redirects to a portal shell.]

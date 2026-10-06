@@ -1,0 +1,17 @@
+schema_version: 1
+associations:
+  - guide_id: akv-europa-at
+    records: [community:akv-at]
+    rationale: Exact Austrian association and DPO match the current official notice and linked private-person form. Credit access and retention remain separate from marketing deletion.
+  - guide_id: toleadoo-consumer
+    records: [community:toleadoo]
+    rationale: Current imprint identifies toleadoo GmbH and the same rights email. Blocking-list retention remains explicit; no group-wide deletion is inferred.
+  - guide_id: planet49-consumer
+    records: [community:planet49]
+    rationale: Current Planet49 site identifies its own GmbH and rights email; current imprint and contact supersede the older address/email in discovery. Historical PLANET49 branding in the eGENTIC record does not prove equivalence.
+  - guide_id: egentic-lead-generation
+    records: [community:egentic]
+    rationale: Exact eGENTIC GmbH and HRB 80853 match the current imprint. This association tracks unresolved consumer-lead scope rather than converting the website notice into validated removal instructions.
+  - guide_id: deutsche-post-adress
+    records: [community:deutsche-post-adress]
+    rationale: Exact Deutsche Post Adress GmbH & Co. KG matches the current official page and signed postal form. Imported suggested email transport is not adopted; the website expressly rejects email self-access.

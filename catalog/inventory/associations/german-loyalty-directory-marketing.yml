@@ -1,0 +1,14 @@
+schema_version: 1
+associations:
+  - guide_id: payback-member-privacy
+    records: [community:payback]
+    rationale: Current official notice names PAYBACK GmbH and its joint points administrator, with a documented marketing-withdrawal route that does not imply membership termination.
+  - guide_id: deutschlandcard-member-privacy
+    records: [community:deutschlandcard]
+    rationale: The September 2026 program notice identifies DeutschlandCard GmbH and current address; authenticated member choices remain separate from default broker sending.
+  - guide_id: dtm-private-directory
+    records: [community:dastelefonbuch]
+    rationale: Das Telefonbuch's own current help and privacy notice name DTM and link the private-entry removal service, including proof and telephone-provider alternatives.
+  - guide_id: burda-direkt-marketing
+    records: [community:burda-direct-services]
+    rationale: The currently embedded September 2026 policy explicitly identifies Burda Direkt Services GmbH and its matching rights inbox; the separately named technical provider is not treated as a rename.

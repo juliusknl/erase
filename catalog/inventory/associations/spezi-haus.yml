@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "associations": [
+    {
+      "guide_id": "spezi-haus-marketing",
+      "records": [
+        "community:spezi-haus-de"
+      ],
+      "rationale": "The official retailer notice explicitly describes postal-contact sharing with advertising partners and an email marketing-objection route. Keep it in scope for targeted suppression, not blanket account deletion."
+    }
+  ]
+}

@@ -1,0 +1,576 @@
+schema_version: 1
+brokers:
+  - id: "deutsche-post-adress"
+    name: "Deutsche Post Adress"
+    match_domains: ["postadress.de"]
+    identity: {"legal_name":"Deutsche Post Adress GmbH & Co. KG","brands":["Deutsche Post Adress"],"parent":null,"official_domains":["postadress.de"]}
+    relevance: {"regions":["DE"],"category":"postal_marketing","data_categories":["Postal addresses","Address updates"],"note":"Address-maintenance service separately scoped from Deutsche Post Direkt."}
+    removal: {"method":"manual","destination":"https://www.deutschepost.de/de/p/postadress/datenschutz.html","alternatives":["datenschutz@postadress.de","https://img.postadress.de/datenschutz/selbstauskunft.pdf"],"steps":["Download the linked two-page self-access form. Fill first/last name, date of birth, street, house number, postcode and town.","Date and sign, then post to Deutsche Post Adress GmbH & Co. KG, Datenschutz, Am Anger 33, 33332 Gütersloh. Request only in your own name; the website rejects email/telephone self-access.","Salutation, birthplace, former names and former addresses are optional. No ID attachment is specified. Review the postal reply before requesting correction, objection or erasure."]}
+    required_information: {"fields":["first_name","last_name","date_of_birth","postal_address","signature","request_date"],"certainty":"documented","verification":"Starred fields on page 2 identify the minimum personal fields; date/signature complete the request. Form does not require ID copy. Do not send personal details to the question mailbox as an automatic substitute."}
+    coverage: {"effect":"access_then_review","includes":"Records held by Deutsche Post Adress.","excludes":"The privacy mailbox is for questions and is not the published self-access submission route."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://www.deutschepost.de/de/p/postadress/datenschutz.html","checked_on":"2026-09-29","published":"Not specified","excerpt":"Anfragen per E-Mail oder Telefon können wir nicht beantworten","supports":["identity","relevance","removal","coverage"]},{"url":"https://www.deutschepost.de/de/t/tochterunternehmen.html","checked_on":"2026-09-28","published":"Not specified","excerpt":"Deutsche Post Adress GmbH & Co. KG","supports":["identity"]},{"url":"https://img.postadress.de/datenschutz/selbstauskunft.pdf","checked_on":"2026-09-29","published":"Undated two-page form linked from current rights page","excerpt":"Alle anderen Angaben sind optional","supports":["identity","removal","required_information","coverage"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Follow-up verification not exercised.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "emetriq"
+    name: "emetriq"
+    match_domains: ["emetriq.com"]
+    identity: {"legal_name":"emetriq GmbH","brands":["emetriq"],"parent":"Deutsche Telekom","official_domains":["emetriq.com"]}
+    relevance: {"regions":["DE"],"category":"advertising","data_categories":["Cookie IDs","Advertising IDs","Browsing interests"],"note":"Targeting data pool; browser-specific opt-out."}
+    removal: {"method":"manual","destination":"https://www.emetriq.com/opt-out/","alternatives":["datenschutz@emetriq.com"],"steps":["Use Deaktivieren in each relevant browser.","Keep the opt-out cookie.","Use the privacy contact to clarify data beyond this browser scope."]}
+    required_information: {"fields":["browser_cookie"],"certainty":"documented","verification":"Opt-out acts in the current browser; no name/email match is claimed."}
+    coverage: {"effect":"suppression","includes":"emetriq interest-based collection in the browser used.","excludes":"Other providers, browsers and devices are not covered by a single click."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://www.emetriq.com/opt-out/","checked_on":"2026-09-28","published":"Not specified","excerpt":"Die Deaktivierung gilt ausschließlich für die Erhebung von Daten durch emetriq für interessenbasierte Werbung.","supports":["removal","required_information","coverage"]},{"url":"https://www.emetriq.com/datenschutz/","checked_on":"2026-09-28","published":"Not specified","excerpt":"Verantwortlich für die Datenverarbeitung ist die emetriq GmbH, eine Tochtergesellschaft der Telekom.","supports":["identity","relevance"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Deletion timing after disassociation is described only generally.","Current database scale not established.","No request or deletion outcome tested."]
+  - id: "schufa-de"
+    name: "SCHUFA"
+    match_domains: ["schufa.de","meineschufa.de"]
+    identity: {"legal_name":"SCHUFA Holding AG","brands":["SCHUFA"],"parent":null,"official_domains":["schufa.de","meineschufa.de"]}
+    relevance: {"regions":["DE"],"category":"credit_reference","data_categories":["Credit records","Credit scores"],"note":"Access-first route for German credit-reference data."}
+    removal: {"method":"manual","destination":"https://www.schufa.de/faq/privatpersonen/auskunft/welche-schufa-auskuenfte-gibt-es-und-wie-erhalte-ich-sie.jsp","alternatives":[],"steps":["Follow the official link for the free Article 15 data copy.","Review the current identifier and identity-check requirements.","Use the copy to identify specific errors or deletion grounds."]}
+    required_information: {"fields":[],"certainty":"not_fully_specified","verification":"The linked application was not interactively completed; its full fields are unknown."}
+    coverage: {"effect":"access_then_review","includes":"SCHUFA data-copy scope described by the official FAQ.","excludes":"No blanket deletion of accurate credit records; other national entities and creditors require separate review."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://www.schufa.de/faq/privatpersonen/auskunft/welche-schufa-auskuenfte-gibt-es-und-wie-erhalte-ich-sie.jsp","checked_on":"2026-09-28","published":"Not specified","excerpt":"Kopie der personenbezogenen Daten","supports":["relevance","removal","coverage"]},{"url":"https://www.schufa.de/newsroom/schufa/schufa-datenkopie-art-15-dsgvo/","checked_on":"2026-09-28","published":"2024-02-16","excerpt":"SCHUFA Holding AG","supports":["identity"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Current data-copy form fields and verification.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "boniversum-de"
+    name: "Creditreform Boniversum"
+    match_domains: ["boniversum.de"]
+    identity: {"legal_name":"Creditreform Boniversum GmbH","brands":["Creditreform Boniversum"],"parent":null,"official_domains":["boniversum.de"]}
+    relevance: {"regions":["DE"],"category":"credit_reference","data_categories":["Creditworthiness records","Scores"],"note":"Consumer self-access is separate from its employee or supplier privacy records."}
+    removal: {"method":"manual","destination":"https://www.boniversum.de/selbstauskunft","alternatives":["selbstauskunft@boniversum.de"],"steps":["Choose the official self-access route.","Review its identifiers before applying.","Check the response for accuracy and appropriate correction grounds."]}
+    required_information: {"fields":[],"certainty":"not_fully_specified","verification":"Postal and in-person routes are published; in-person access requires ID. Full application fields remain unreviewed."}
+    coverage: {"effect":"access_then_review","includes":"Boniversum consumer credit records.","excludes":"No blanket deletion of accurate credit records; other national entities and creditors require separate review."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://www.boniversum.de/selbstauskunft","checked_on":"2026-09-28","published":"Not specified","excerpt":"selbstauskunft@boniversum.de","supports":["removal","coverage","relevance"]},{"url":"https://www.boniversum.de/fileadmin/user_upload/aktuelles/eu-dsgvo/Boniversum_Textbaustein_Informationspflicht-Art.-14-EU-DSGVO.pdf","checked_on":"2026-09-28","published":"Not specified","excerpt":"Creditreform Boniversum GmbH","supports":["identity"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Current digital or postal form fields.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "post-at-marketing"
+    name: "Österreichische Post marketing data"
+    match_domains: ["post.at"]
+    identity: {"legal_name":"Österreichische Post AG","brands":["Österreichische Post marketing data"],"parent":null,"official_domains":["post.at"]}
+    relevance: {"regions":["AT"],"category":"postal_marketing","data_categories":["Names","Postal addresses","Marketing records"],"note":"Scope is third-party marketing data, not termination of postal services."}
+    removal: {"method":"email","destination":"team-datenschutz@post.at","alternatives":["https://datenschutzanfrage.post.at"],"steps":["Specify objection or deletion for third-party marketing purposes.","Review required name, birth date and postal address.","Retain the response and distinguish marketing data from postal-service records."]}
+    required_information: {"fields":["full_name","date_of_birth","postal_address"],"certainty":"documented","verification":"The policy exempts marketing objection and third-party marketing deletion from its photo-ID/digital-signature requirement; include service email only when applicable."}
+    coverage: {"effect":"deletion_request","includes":"The Post's processing for third-party marketing identified in the request.","excludes":"Operational or statutory postal records and independent marketing recipients."}
+    automation: {"mode":"manual","reason":"The Austrian marketing request needs birth date as well as name and postal address; the current sender does not collect or authorize birth-date disclosure."}
+    evidence: [{"url":"https://www.post.at/i/c/datenschutz","checked_on":"2026-09-28","published":"Not specified","excerpt":"Löschung der Daten zu Marketingzwecken Dritter","supports":["identity","relevance","removal","required_information","coverage"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Whether any further matching clarification will be necessary.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "herold-at"
+    name: "HEROLD"
+    match_domains: ["herold.at"]
+    identity: {"legal_name":"HEROLD Business Data GmbH","brands":["HEROLD"],"parent":null,"official_domains":["herold.at"]}
+    relevance: {"regions":["AT"],"category":"professional","data_categories":["Names","Business contacts","Postal addresses","Marketing records"],"note":"Austrian business directory and marketing-data products."}
+    removal: {"method":"email","destination":"datenschutz@herold.at","alternatives":[],"steps":["Identify the directory or marketing record.","Request the relevant erasure or objection.","Review the explicitly required identity proof before sending it."]}
+    required_information: {"fields":["identity_document"],"certainty":"documented","verification":"The policy says identity proof is always requested for erasure, correction, restriction, objection and withdrawal; additional matching fields are not fully specified."}
+    coverage: {"effect":"deletion_request","includes":"HEROLD data covered by the request, subject to retained lawful purposes.","excludes":"No promise that independent recipients or other group companies erase their copies."}
+    automation: {"mode":"manual","reason":"The published route requires identity proof. Review the specific directory record and send proof personally through a suitable channel."}
+    evidence: [{"url":"https://www.herold.at/datenschutzerklaerung/","checked_on":"2026-09-28","published":"2026-04-01","excerpt":"E-Mail: datenschutz@herold.at","supports":["identity","removal","required_information","coverage"]},{"url":"https://datasolutions.herold.at/faq/","checked_on":"2026-09-28","published":"Not specified","excerpt":"HEROLD muss als Adressverlag und Direkt-Marketing-Unternehmen die Auflagen der Gewerbeordnung gemäß §151 erfüllen","supports":["relevance"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Complete identifier checklist beyond the stated identity proof.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "az-direct-ch"
+    name: "AZ Direct Switzerland"
+    match_domains: ["az-direct.ch"]
+    identity: {"legal_name":"AZ Direct AG","brands":["AZ Direct Switzerland"],"parent":null,"official_domains":["az-direct.ch"]}
+    relevance: {"regions":["CH"],"category":"postal_marketing","data_categories":["Consumer addresses","Business decision-makers","Household attributes","Marketing contact details"],"note":"AZ Data World Consumer and Business; separate Swiss entity."}
+    removal: {"method":"email","destination":"datenschutz@az-direct.ch","alternatives":["https://www.az-direct.ch/faq-fuer-konsumentinnen/"],"steps":["Identify the relevant AZ Data World record.","Choose erasure or an objection to marketing.","Review the requested identity proof and any postal identifiers."]}
+    required_information: {"fields":["identity_document"],"certainty":"not_fully_specified","verification":"The notice generally requires proof of identity; the complete matching checklist is not stated."}
+    coverage: {"effect":"deletion_request","includes":"AZ Direct AG's Swiss data processing.","excludes":"German AZ Direct and copies held by independent recipients, including credit agencies."}
+    automation: {"mode":"manual","reason":"The Swiss route requires identity proof and separate Swiss applicability; the EEA email sender does not implement this."}
+    evidence: [{"url":"https://www.az-direct.ch/datenschutz/","checked_on":"2026-09-28","published":"Not specified","excerpt":"Für die Bearbeitung Ihrer Gesuche verlangen wir im Allgemeinen einen Identitätsnachweis.","supports":["identity","relevance","removal","required_information","coverage"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Matching details and suppression-versus-erasure handling for an individual request.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "crif-at"
+    name: "CRIF Austria"
+    match_domains: ["crif.at","mycrifdata.at"]
+    identity: {"legal_name":"CRIF GmbH","brands":["CRIF Austria"],"parent":null,"official_domains":["crif.at","mycrifdata.at"]}
+    relevance: {"regions":["AT"],"category":"credit_reference","data_categories":["Identity and contact records","Payment history","Credit assessments"],"note":"Austrian entity; deletion grounds need review after access."}
+    removal: {"method":"email","destination":"auskunft@crif.com","alternatives":["https://portal.mycrifdata.at/"],"steps":["Prepare the Austrian access request.","Review the delivery address and identity document.","Review returned records and supporting grounds before any correction or erasure request."]}
+    required_information: {"fields":["postal_address","identity_document"],"certainty":"documented","verification":"Official FAQ requests a delivery address and copy of government photo ID."}
+    coverage: {"effect":"access_then_review","includes":"CRIF Austria records matched to the requester.","excludes":"No blanket deletion of accurate credit records; other national entities and creditors require separate review."}
+    automation: {"mode":"manual","reason":"Start with the Austrian credit-data access process and personally review identity proof; correction or erasure depends on the returned records."}
+    evidence: [{"url":"https://www.crif.at/fuer-privatpersonen/faqs-zur-selbsauskunft/fragen-fuer-konsumentinnen/","checked_on":"2026-09-28","published":"Not specified","excerpt":"auskunft@crif.com","supports":["removal","required_information","coverage","relevance"]},{"url":"https://www.crif.at/konsumenten/datenschutzerklaerung-auskunftei-und-adressverlag","checked_on":"2026-09-28","published":"Not specified","excerpt":"CRIF GmbH","supports":["identity"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Which specific records would qualify for removal.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "crif-ch"
+    name: "CRIF Switzerland"
+    match_domains: ["crif.ch"]
+    identity: {"legal_name":"CRIF AG","brands":["CRIF Switzerland"],"parent":null,"official_domains":["crif.ch"]}
+    relevance: {"regions":["CH"],"category":"credit_reference","data_categories":["Identity records","Creditworthiness records"],"note":"Swiss self-access is a separate national process."}
+    removal: {"method":"email","destination":"selbstauskunft.ch@crif.com","alternatives":[],"steps":["Review a scan of an official identity document showing name and birth date.","Include the current postal address.","Review the postal response before seeking corrections or erasure."]}
+    required_information: {"fields":["full_name","date_of_birth","postal_address","identity_document"],"certainty":"documented","verification":"Official instructions request ID with name and date of birth and current address; response is postal."}
+    coverage: {"effect":"access_then_review","includes":"CRIF AG's Swiss self-access records.","excludes":"No blanket deletion of accurate credit records; other national entities and creditors require separate review."}
+    automation: {"mode":"manual","reason":"Swiss credit-data access requires birth date, current address and identity proof, with a postal response; this is not a generic erasure email."}
+    evidence: [{"url":"https://www.crif.ch/privatpersonen/selbstauskunft/selbstauskunft-beantragen/","checked_on":"2026-09-28","published":"Not specified","excerpt":"Per Mail an selbstauskunft.ch@crif.com","supports":["identity","relevance","removal","required_information","coverage"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Record-specific removal eligibility.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "moneyhouse-ch"
+    name: "Moneyhouse"
+    match_domains: ["moneyhouse.ch"]
+    identity: {"legal_name":"Neue Zürcher Zeitung AG (Moneyhouse; CHE-106.838.812)","brands":["Moneyhouse"],"parent":null,"official_domains":["moneyhouse.ch"]}
+    relevance: {"regions":["CH"],"category":"credit_reference","data_categories":["Business relationships","Company and person records","Credit information"],"note":"Separate records may come from public registers or other credit providers."}
+    removal:
+      method: manual
+      destination: https://www.moneyhouse.ch/de/privacy
+      alternatives: [contact@moneyhouse.ch]
+      steps:
+        - Identify whether you want private-listing removal, access to records, or account marketing preferences. Do not buy a credit report or close an account merely to request privacy rights.
+        - Request removal of private data not in the commercial register at contact@moneyhouse.ch. Moneyhouse requires its own request even after removal elsewhere.
+        - For self-access, the published procedure requires an official ID copy and returns the report by post. Personally review document disclosure; ask for a secure channel or use Moneyhouse, Neue Zürcher Zeitung AG, Falkenstrasse 11, CH-8008 Zürich. Never attach identity documents automatically.
+        - Review the returned records and any retention explanation. Credit and payment data sourced from CRIF require a separate CRIF request; do not treat this as global NZZ or public-register deletion.
+    required_information: {"fields":["identity_document"],"certainty":"not_fully_specified","verification":"The main-platform notice requires an official ID copy for self-access, with a postal response; it does not publish a separate complete private-listing deletion checklist. Review matching and document disclosure personally."}
+    coverage: {"effect":"access_then_review","includes":"Moneyhouse self-access and specifically requested removal of private data absent from the commercial register.","excludes":"Commercial-register entries, CRIF's separate credit/payment database, unrelated NZZ services and automatic account closure."}
+    automation: {"mode":"manual","reason":"Separate private-listing removal from credit access and personally review any ID disclosure; no generic automatic credit-deletion email."}
+    evidence:
+      - url: https://www.moneyhouse.ch/de/privacy
+        checked_on: '2026-10-01'
+        published: '2021-08-01'
+        excerpt: contact@moneyhouse.ch
+        supports: [removal, required_information, independent_database, private_listing_scope, crif_boundary]
+      - url: https://www.moneyhouse.ch/de/imprint
+        checked_on: '2026-10-01'
+        excerpt: Neue Zürcher Zeitung AG
+        supports: [identity, current_operator, postal_address]
+      - url: https://www.moneyhouse.ch/de/howto
+        checked_on: '2026-10-01'
+        excerpt: Handelsregister
+        supports: [relevance, public_and_private_listing_scope]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Main-platform notice still displays its 2021 effective date; live procedure and responses untested.","Separate listing-deletion verification checklist not published.","No inferred legal succession for every historical Moneyhouse AG record.","Current database scale not established."]
+  - id: "uc-se"
+    name: "UC Sweden"
+    match_domains: ["uc.se","minuc.se"]
+    identity: {"legal_name":"UC AB","brands":["UC Sweden"],"parent":null,"official_domains":["uc.se","minuc.se"]}
+    relevance: {"regions":["SE"],"category":"credit_reference","data_categories":["Personal credit records","Scores"],"note":"Swedish register-extract route; paid monitoring is a different product."}
+    removal: {"method":"manual","destination":"https://www1.uc.se/globalassets/pdfer/blanketter-och-avtal/registerutdragsblankett-person","alternatives":["hej@uc.se"],"steps":["Complete the register-extract form and sign it.","Use the email or postal submission route printed on the form.","Review the extract delivered to the registered address."]}
+    required_information: {"fields":["full_name","national_id","postal_address","signature","phone"],"certainty":"documented","verification":"The form requires a handwritten signature and lists personnummer, name, address, place/date and telephone."}
+    coverage: {"effect":"access_then_review","includes":"UC's personal credit register.","excludes":"No blanket deletion of accurate credit records; other national entities and creditors require separate review."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://www1.uc.se/globalassets/pdfer/blanketter-och-avtal/registerutdragsblankett-person","checked_on":"2026-09-28","published":"Not specified","excerpt":"Beställning av registerutdrag kan göras via e-post eller skriftligt och undertecknas.","supports":["identity","removal","required_information","coverage"]},{"url":"https://www.uc.se/hjalp--kontakt/registerutdrag/hur-kan-jag-fa-information-om-vad-uc-har-for-uppgifter-om-mig-som-privatperson","checked_on":"2026-09-28","published":"2025-05-19","excerpt":"UC AB","supports":["identity","relevance"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Whether all telephone fields are mandatory in current handling.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "syna-se"
+    name: "Syna"
+    match_domains: ["syna.se"]
+    identity: {"legal_name":"AB Syna","brands":["Syna"],"parent":null,"official_domains":["syna.se"]}
+    relevance: {"regions":["SE"],"category":"credit_reference","data_categories":["Personal credit information","Business records"],"note":"Postal signed request; email is not an accepted extract-request route."}
+    removal: {"method":"manual","destination":"https://upplysningar.syna.se/publicarticle/integritetspolicy","alternatives":["dso@syna.se"],"steps":["Download the linked register-extract form.","Fill all its fields and sign it.","Send by post; review errors before using the written correction route."]}
+    required_information: {"fields":["signature"],"certainty":"not_fully_specified","verification":"Policy requires all form fields and signature; extract is sent to the registered address. Complete form field list remains unreviewed."}
+    coverage: {"effect":"access_then_review","includes":"Syna's credit-information records.","excludes":"DPO email is for privacy questions; the policy excludes email, telephone and fax for register extracts."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://upplysningar.syna.se/publicarticle/integritetspolicy","checked_on":"2026-09-28","published":"Not specified","excerpt":"Vi tar ej emot beställningar via telefon, e-post eller fax.","supports":["identity","relevance","removal","required_information","coverage"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Full current form identifier checklist.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "valitive-credit-se"
+    name: "Valitive Credit"
+    match_domains: ["valitive.com"]
+    identity: {"legal_name":"Valitive Credit AB","brands":["Valitive Credit"],"parent":"Alektum Group","official_domains":["valitive.com"]}
+    relevance: {"regions":["SE"],"category":"credit_reference","data_categories":["Credit records","Identity details"],"note":"Swedish credit-register access procedure."}
+    removal: {"method":"manual","destination":"https://valitive.com/lovable-uploads/blankett-begaran-om-registerutdrag.pdf","alternatives":[],"steps":["Enter name and personnummer in the published form.","Print, sign and post it to the address in the form.","Review the returned extract for specific corrections."]}
+    required_information: {"fields":["full_name","national_id","signature"],"certainty":"documented","verification":"Signed postal request; the form explicitly rejects email submission."}
+    coverage: {"effect":"access_then_review","includes":"Valitive Credit AB's credit register.","excludes":"No blanket deletion of accurate credit records; other national entities and creditors require separate review."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://valitive.com/lovable-uploads/blankett-begaran-om-registerutdrag.pdf","checked_on":"2026-09-28","published":"Not specified","excerpt":"Blanketten får inte skickas via e-post.","supports":["identity","relevance","removal","required_information","coverage"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Document publication date not supplied; current PDF branding names Alektum Group.","Current database scale not established.","No request or deletion outcome tested."]
+  - id: "safenode-se"
+    name: "Safenode"
+    match_domains: ["safenode.se"]
+    identity: {"legal_name":"Safenode AB","brands":["Safenode"],"parent":null,"official_domains":["safenode.se"]}
+    relevance: {"regions":["SE"],"category":"credit_reference","data_categories":["Credit and risk information"],"note":"Official site identifies distribution through Ratsit and Kreditupplysning; no inferred coverage of those sites."}
+    removal: {"method":"investigate","destination":"https://www.safenode.se/","alternatives":[],"steps":["Ask the official contact which secure self-access procedure applies.","Verify identifiers before disclosing them.","Review the response for record-specific correction grounds."]}
+    required_information: {"fields":[],"certainty":"not_fully_specified","verification":"The homepage publishes a fraud-block contact but no complete self-access instructions."}
+    coverage: {"effect":"access_then_review","includes":"Safenode's own credit processing once confirmed.","excludes":"Fraud blocking is not deletion; Ratsit and other distributors are not mapped to this guide."}
+    automation: {"mode":"blocked","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://www.safenode.se/","checked_on":"2026-09-28","published":"Not specified","excerpt":"Kontakta Safenode AB","supports":["identity","relevance","removal"]}]
+    scale: null
+    review_status: "needs_research"
+    tested_outcome: "not_tested"
+    unknowns: ["Secure rights-request workflow and mandatory identifiers.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "experian-dk-rki"
+    name: "Experian Denmark / RKI"
+    match_domains: ["experian.dk","dininfo.dk"]
+    identity: {"legal_name":"Experian A/S","brands":["Experian Denmark / RKI"],"parent":null,"official_domains":["experian.dk","dininfo.dk"]}
+    relevance: {"regions":["DK"],"category":"credit_reference","data_categories":["RKI payment-default records"],"note":"Consumer RKI portal; business data requires a different inquiry."}
+    removal: {"method":"manual","destination":"https://www.dininfo.dk/","alternatives":["https://www.experian.dk/gyldige/forretningsvilkaar/brug-af-personlige-oplysninger"],"steps":["Use the official DinInfo portal and the user's own MitID.","Review the RKI records and reporting creditor.","Use consumer support if the portal excludes the user's situation."]}
+    required_information: {"fields":["national_eid"],"certainty":"documented","verification":"MitID is required. The site lists exclusions for foreign address, missing-person status and no fixed residence."}
+    coverage: {"effect":"access_then_review","includes":"Current RKI information available through DinInfo.","excludes":"Business data, deleted registrations, other Experian entities and a creditor's own records."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://www.dininfo.dk/","checked_on":"2026-09-28","published":"Not specified","excerpt":"Dininfo.dk er en forbrugerportal leveret af Experian A/S.","supports":["identity","relevance","removal","required_information","coverage"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Support verification for people excluded from the portal.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "risika-dk"
+    name: "Risika"
+    match_domains: ["risika.com"]
+    identity: {"legal_name":"Risika A/S","brands":["Risika"],"parent":null,"official_domains":["risika.com"]}
+    relevance: {"regions":["DK"],"category":"credit_reference","data_categories":["Company credit records","Business-related personal data"],"note":"Approved Danish credit bureau; review relevance for a business owner or representative."}
+    removal: {"method":"email","destination":"contact@risika.com","alternatives":["dpo@risika.com"],"steps":["Request access to relevant business-associated personal data.","Review any verification requirements.","Seek correction or eligible deletion of identified records."]}
+    required_information: {"fields":[],"certainty":"not_fully_specified","verification":"Written requests are published but the exact identity checklist is not specified."}
+    coverage: {"effect":"access_then_review","includes":"Risika's credit processing described in the Danish notice.","excludes":"No blanket deletion of accurate credit records; other national entities and creditors require separate review."}
+    automation: {"mode":"manual","reason":"Identify the business-linked risk record through access first, then review correction or erasure grounds."}
+    evidence: [{"url":"https://risika.com/privacy/","checked_on":"2026-09-28","published":"2021-08-19","excerpt":"Risika A/S","supports":["identity","relevance","removal","coverage"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Verification requirements.","Old policy date warrants a fresh operational check.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "bislab-no"
+    name: "Bislab Norway"
+    match_domains: ["bislab.no"]
+    identity: {"legal_name":"Bislab AS","brands":["Bislab Norway"],"parent":null,"official_domains":["bislab.no","bislab.io"]}
+    relevance: {"regions":["NO"],"category":"credit_reference","data_categories":["Payment remarks","Credit ratings","Identity and business records"],"note":"Norwegian entity only; Swedish and Finnish entities are separate."}
+    removal: {"method":"manual","destination":"https://bislab.io/privacy-policy","alternatives":["personvern@bislab.no","https://my.bislab.io/"],"steps":["Contact personvern@bislab.no for access and secure identity-verification instructions; do not send a national ID through ordinary email by default.","The official site links My Bislab for credit freeze and my data; interactive login and record-access steps remain untested.","Review specific payment-record disputes with the reporting source. Do not activate a credit freeze as a substitute for deletion."]}
+    required_information: {"fields":[],"certainty":"not_fully_specified","verification":"Full access-request identifiers and secure response mechanism are not established."}
+    coverage: {"effect":"access_then_review","includes":"Bislab AS Norwegian processing.","excludes":"Credit blocking is distinct from deletion; no coverage inferred for Bislab Sweden or Finland."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://bislab.io/privacy-policy","checked_on":"2026-10-01","published":"2023-06-22","excerpt":"personvern@bislab.no","supports":["identity","relevance","coverage","rights_contact","linked_personal_portal","credit_retention_limits"]},{"url":"https://my.bislab.io/","checked_on":"2026-10-01","excerpt":"Bislab - My Page","supports":["public_portal_shell_only"]}]
+    scale: null
+    review_status: "needs_research"
+    tested_outcome: "not_tested"
+    unknowns: ["Secure access workflow and exact matching requirements.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "asiakastieto-fi"
+    name: "Suomen Asiakastieto"
+    match_domains: ["asiakastieto.fi"]
+    identity: {"legal_name":"Suomen Asiakastieto Oy","brands":["Suomen Asiakastieto"],"parent":"Enento Group","official_domains":["asiakastieto.fi"]}
+    relevance: {"regions":["FI"],"category":"credit_reference","data_categories":["Credit records","Business affiliations","Marketing and decision-maker records"],"note":"Access request can explicitly include marketing and decision-maker data beyond consumer credit."}
+    removal: {"method":"manual","destination":"https://www.asiakastieto.fi/web/fi/kuluttajille/omien-tietojen-tarkastuspyynto","alternatives":["https://mail.asiakastieto.fi/"],"steps":["Use Omatieto with bank credentials/mobile certificate for credit access.","For broader records use the linked secure email service and specify each dataset.","Review record-specific correction, marketing objection or deletion options."]}
+    required_information: {"fields":["full_name","national_id","postal_address","phone","email"],"certainty":"documented","verification":"Secure-email route requires personal identity code, full name, address and phone; electronic credit access uses strong authentication."}
+    coverage: {"effect":"access_then_review","includes":"Requested credit, business-affiliation and specifically requested marketing/decision-maker records.","excludes":"Other Enento companies and independent official registers."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://www.asiakastieto.fi/web/fi/kuluttajille/omien-tietojen-tarkastuspyynto","checked_on":"2026-09-28","published":"Not specified","excerpt":"Käytä aina suojattua sähköpostia, kun lähetät henkilötietojasi!","supports":["identity","relevance","removal","required_information","coverage"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Record-specific removal eligibility.","Current database scale not established.","No request or deletion outcome tested."]
+  - id: "vainu"
+    name: "Vainu"
+    match_domains: ["vainu.com","vainu.io"]
+    identity: {"legal_name":"Vainu.io Software Oy","brands":["Vainu"],"parent":null,"official_domains":["vainu.com","vainu.io"]}
+    relevance: {"regions":["Finland","Nordics"],"category":"professional","data_categories":["Business roles","Work contact details","Registered representatives' birth dates"],"note":"Public-source company and decision-maker database."}
+    removal: {"method":"email","destination":"privacy@vainu.io","alternatives":["dpo@vainu.io"],"steps":["Request erasure of the Database Record and identify the relevant professional record.","Review any refusal or verification request; source removal is a separate action."]}
+    required_information: {"fields":[],"certainty":"not_fully_specified","verification":"No mandatory identification workflow stated in the reviewed database notice."}
+    coverage: {"effect":"deletion_request","includes":"Vainu-controlled professional database records, subject to stated retention exceptions.","excludes":"Exported customer copies and original public registers are separate."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://www.vainu.com/legal-stuff/database-privacy-statement/","checked_on":"2026-09-28","published":"2024-04-08","excerpt":"please submit all requests and inquiries on data protection primarily to the following address privacy@vainu.io","supports":["identity","relevance","removal","coverage"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Matching fields and any follow-up verification are unspecified.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "goava"
+    name: "Goava"
+    match_domains: ["goava.com"]
+    identity: {"legal_name":"Goava Sales Intelligence AB","brands":["Goava"],"parent":null,"official_domains":["goava.com"]}
+    relevance: {"regions":["Sweden","Nordics"],"category":"professional","data_categories":["Professional names and roles","Employer","Work email and telephone"],"note":"Publishes publicly sourced business contacts; distinguishes customer-imported data."}
+    removal: {"method":"manual","destination":"https://www.goava.com/help-center/privacy-and-information-security-policy","alternatives":[],"steps":["The published privacy mailbox rejected an external request. Check the official policy for a working replacement before sending.","Once a working route is confirmed, request erasure of professional-contact records; customer imports and news content are separate."]}
+    required_information: {"fields":[],"certainty":"not_fully_specified","verification":"The policy specifies no mandatory additional fields and says no explanation of the request is required."}
+    coverage: {"effect":"deletion_request","includes":"Goava-controlled professional contacts.","excludes":"Customer-controlled imports and news content claimed to have publication protection need separate review."}
+    automation: {"mode":"blocked","reason":"Live email delivery to privacy@goava.com failed. Automatic requests remain blocked pending a verified replacement route."}
+    evidence: [{"url":"https://www.goava.com/help-center/privacy-and-information-security-policy","checked_on":"2026-09-28","published":"2026-08-18","excerpt":"Requests can be made to privacy@goava.com.","supports":["identity","relevance","removal","coverage"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Matching and verification follow-up unspecified.","Enento is described as a part-owner, not established as sole parent.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "bizmachine"
+    name: "BizMachine"
+    match_domains: ["bizmachine.com"]
+    identity: {"legal_name":"BizMachine s.r.o.","brands":["BizMachine"],"parent":null,"official_domains":["bizmachine.com"]}
+    relevance: {"regions":["Czech Republic"],"category":"professional","data_categories":["Business contact details","Management roles","Self-employed professionals"],"note":"Company-information database using public registers and websites."}
+    removal: {"method":"email","destination":"osobniudaje@bizmachine.com","alternatives":[],"steps":["Request erasure of personal data in the business database.","Review matching requests and any claimed retention exceptions."]}
+    required_information: {"fields":[],"certainty":"not_fully_specified","verification":"No fixed identification checklist is stated in the reviewed policy."}
+    coverage: {"effect":"deletion_request","includes":"Personal information controlled by BizMachine, including professional profiles.","excludes":"No promise that independent recipients or other group companies erase their copies."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://www.bizmachine.com/en/personal-data-processing","checked_on":"2026-09-28","published":"2022-12-02","excerpt":"You can request erasure of your personal data at any time.","supports":["identity","relevance","removal","coverage"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Current identity-verification workflow unspecified.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "big-infomonitor-pl"
+    name: "BIG InfoMonitor"
+    match_domains: ["big.pl"]
+    identity: {"legal_name":"Biuro Informacji Gospodarczej InfoMonitor S.A.","brands":["BIG InfoMonitor"],"parent":null,"official_domains":["big.pl"]}
+    relevance: {"regions":["Poland"],"category":"credit_reference","data_categories":["Consumer payment information","Credit-information enquiries"],"note":"Listed in the Polish ministry's economic-information bureau register."}
+    removal: {"method":"manual","destination":"https://www.big.pl/centrum-pomocy/temat-pomocy/dla-konsumentow","alternatives":[],"steps":["Use the official consumer instructions to obtain information about yourself.","Review any inaccuracies or retention grounds before requesting correction or deletion."]}
+    required_information: {"fields":[],"certainty":"not_fully_specified","verification":"Account and postal routes require identity checks; do not send a minimal-email blanket deletion request."}
+    coverage: {"effect":"access_then_review","includes":"Consumer information and enquiry history held by BIG InfoMonitor.","excludes":"No blanket deletion of accurate credit records; other national entities and creditors require separate review."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://www.big.pl/centrum-pomocy/temat-pomocy/dla-konsumentow","checked_on":"2026-09-28","published":"Not specified","excerpt":"Dla konsumentów","supports":["identity","relevance","removal","coverage"]},{"url":"https://www.big.pl/rodo","checked_on":"2026-09-28","published":"Not specified","excerpt":"Biuro Informacji Gospodarczej InfoMonitor S.A.","supports":["identity","coverage"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Complete mandatory fields differ by access route and require review.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "kbig-pl"
+    name: "KBIG"
+    match_domains: ["kbig.pl"]
+    identity: {"legal_name":"Krajowe Biuro Informacji Gospodarczej S.A.","brands":["KBIG"],"parent":null,"official_domains":["kbig.pl"]}
+    relevance: {"regions":["Poland"],"category":"credit_reference","data_categories":["Consumer economic information","Enquiry history"],"note":"Polish economic-information bureau."}
+    removal: {"method":"manual","destination":"https://kbig.pl/dla-konsumentow/informacje-o-sobie/","alternatives":["dpo@kbig.pl"],"steps":["Use the own-information instructions for registration or a postal/in-person report.","Review the report before raising an accuracy or retention dispute."]}
+    required_information: {"fields":[],"certainty":"not_fully_specified","verification":"The published workflow uses a completed registration/request form; all mandatory fields were not established."}
+    coverage: {"effect":"access_then_review","includes":"KBIG own-data report and enquiry history.","excludes":"No blanket deletion of accurate credit records; other national entities and creditors require separate review."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://kbig.pl/dla-konsumentow/informacje-o-sobie/","checked_on":"2026-09-28","published":"Not specified","excerpt":"Informacje o sobie","supports":["identity","relevance","removal","coverage"]},{"url":"https://kbig.pl/polityka-prywatnosci/","checked_on":"2026-09-28","published":"Not specified","excerpt":"dpo@kbig.pl","supports":["identity","removal"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Full form and identity-check requirements need manual review.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "krd-pl"
+    name: "KRD"
+    match_domains: ["krd.pl"]
+    identity: {"legal_name":"Krajowy Rejestr Długów Biuro Informacji Gospodarczej S.A.","brands":["KRD"],"parent":null,"official_domains":["krd.pl"]}
+    relevance: {"regions":["Poland"],"category":"credit_reference","data_categories":["Consumer debts","Economic information","Enquiries"],"note":"Polish economic-information bureau with separate own-data and dispute forms."}
+    removal: {"method":"manual","destination":"https://konsument.krd.pl/regulaminy","alternatives":[],"steps":["Select the request for your own data, not a paid third-party screening product.","Use the separate correction/deletion procedure only after reviewing the information."]}
+    required_information: {"fields":[],"certainty":"not_fully_specified","verification":"Official information describes identity checks via bank transfer, AIS, identity document or mObywatel; inspect the chosen route."}
+    coverage: {"effect":"access_then_review","includes":"Consumer data controlled by KRD.","excludes":"No blanket deletion of accurate credit records; other national entities and creditors require separate review."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://konsument.krd.pl/regulaminy","checked_on":"2026-09-28","published":"Not specified","excerpt":"Krajowy Rejestr Długów Biuro Informacji Gospodarczej S.A.","supports":["identity","relevance","removal","coverage"]},{"url":"https://konsument.krd.pl/obowiazek-informacyjny","checked_on":"2026-09-28","published":"Not specified","excerpt":"mObywatel","supports":["required_information"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Complete required fields for each authentication alternative unspecified here.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "erif-pl"
+    name: "ERIF"
+    match_domains: ["erif.pl"]
+    identity: {"legal_name":"ERIF Biuro Informacji Gospodarczej S.A.","brands":["ERIF"],"parent":null,"official_domains":["erif.pl"]}
+    relevance: {"regions":["Poland"],"category":"credit_reference","data_categories":["Consumer economic information","Enquiry history"],"note":"Polish economic-information bureau."}
+    removal: {"method":"manual","destination":"https://erif.pl/konsumenci/jak-czytac-raporty-ktore-dla-ciebie-udostepniamy/raporty-na-twoj-temat/","alternatives":["dpo@erif.pl"],"steps":["Follow the official own-report workflow using the consumer account.","Review report contents and dispute only inaccurate or improperly retained information."]}
+    required_information: {"fields":[],"certainty":"not_fully_specified","verification":"Authenticated consumer workflow; the full registration and verification checklist was not established."}
+    coverage: {"effect":"access_then_review","includes":"ERIF consumer reports and enquiries.","excludes":"No blanket deletion of accurate credit records; other national entities and creditors require separate review."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://erif.pl/konsumenci/jak-czytac-raporty-ktore-dla-ciebie-udostepniamy/raporty-na-twoj-temat/","checked_on":"2026-09-28","published":"Not specified","excerpt":"Raporty na Twój temat","supports":["identity","relevance","removal","coverage"]},{"url":"https://infokonsument.erif.pl/erif/common/cms/cms-ik-privacy","checked_on":"2026-09-28","published":"Not specified","excerpt":"dpo@erif.pl","supports":["identity","removal"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Full matching and account-verification requirements not recorded.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "solus-cz"
+    name: "SOLUS"
+    match_domains: ["solus.cz"]
+    identity: {"legal_name":"SOLUS, zájmové sdružení právnických osob","brands":["SOLUS"],"parent":null,"official_domains":["solus.cz"]}
+    relevance: {"regions":["Czech Republic"],"category":"credit_reference","data_categories":["Consumer credit and payment-register records"],"note":"Czech credit-register association; positive and negative registers have different rules."}
+    removal: {"method":"manual","destination":"https://www.solus.cz/pristup-k-osobnim-udajum/","alternatives":[],"steps":["Use the access form and the official secure electronic or signed postal route.","Review the particular register before requesting correction, objection or deletion."]}
+    required_information: {"fields":["full_name","national_id","date_of_birth","postal_address","identity_document","signature"],"certainty":"not_fully_specified","verification":"Postal form requires identity evidence or certified signature; additional historical names and nationality fields occur on the form."}
+    coverage: {"effect":"access_then_review","includes":"Own personal data in SOLUS-operated registers.","excludes":"No blanket erasure of negative credit records; positive-register objection is a distinct procedure."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://www.solus.cz/pristup-k-osobnim-udajum/","checked_on":"2026-09-28","published":"Not specified","excerpt":"Přístup k osobním údajům","supports":["identity","relevance","removal","coverage"]},{"url":"https://www.solus.cz/wp-content/uploads/2019/10/Formular_FO_and_FOP_2019_10_17.pdf","checked_on":"2026-09-28","published":"2019-10-17","excerpt":"SOLUS, zájmové sdružení právnických osob","supports":["identity","required_information"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Check current form and register-specific legal grounds before submitting.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "crif-cz-kolikmam"
+    name: "CRIF Czech / kolikmam"
+    match_domains: ["crif.cz","kolikmam.cz","registrporadcu.cz"]
+    identity: {"legal_name":"CRIF – Czech Credit Bureau, a.s., IČO 26212242","brands":["CRIF Czech / kolikmam","ELIXIR"],"parent":null,"official_domains":["crif.cz","kolikmam.cz","registrporadcu.cz"]}
+    relevance: {"regions":["Czech Republic"],"category":"credit_reference","data_categories":["Financial-adviser reliability and obligations","Portal records"],"note":"ELIXIR concerns financial intermediaries, not their clients. CRIF also handles requests for separately controlled registers."}
+    removal: {"method":"manual","destination":"https://kolikmam.cz/gdpr","alternatives":["klient@crif.com","poverenec.ELIXIR@crif.com","poverenec@crif.com"],"steps":["Request free Article15 access, selecting ELIXIR or kolikmam as applicable; do not buy a report to exercise rights.","Assess correction, restriction or erasure against the specific record and purpose. ELIXIR's DPO is separate from the website DPO.","Use a secure data-box, authenticated portal or signed channel. The centre stopped in-person visits in August2024."]}
+    required_information: {"fields":["full_name","birth_name","date_of_birth","national_id","gender","nationality","postal_address","signature","register_selection"],"certainty":"not_fully_specified","verification":"Shared paper form marks identity fields; business IDs are conditional and phone/email optional. Online access offers ID upload with alternatives; no documents uploaded or mandatory-field validation tested."}
+    coverage: {"effect":"access_then_review","includes":"CRIF Czech-controlled ELIXIR and kolikmam records, with separate register selection.","excludes":"REPI has a separate legal operator; BRKI banks and CNCB/NRKI are also distinct. Shared handling does not merge coverage."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence:
+      - {url: 'https://www.registrporadcu.cz/wp-content/uploads/2020/02/IM_ELIXIR_CZE_2020.pdf', checked_on: '2026-09-29', published: '2020-03-01', excerpt: 'poverenec.ELIXIR@crif.com', supports: [identity, relevance, removal, coverage]}
+      - {url: 'https://kolikmam.cz/klientske-centrum', checked_on: '2026-09-29', excerpt: 'R4QDCBE', supports: [removal, required_information]}
+      - {url: 'https://kolikmam.cz/ochrana-osobnich-udaju', checked_on: '2026-09-29', excerpt: 'poverenec@crif.com', supports: [identity, coverage, removal]}
+      - {url: 'https://kolikmam.cz/upload/237-gdpr-17-18-21-10-6-2022.pdf', checked_on: '2026-09-29', excerpt: 'ELIXIR KOLIKMAM.CZ', supports: [required_information]}
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Channel-specific verification and foreign-applicant fields need individual review.","The ELIXIR memorandum remains dated2020 despite being currently linked; actual retention decisions are untested.","Current scale and parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "bedirect"
+    name: "beDirect / beAddress"
+    match_domains: ["bedirect.de","bedirect-online.de","beaddress.de"]
+    identity: {"legal_name":"beDirect GmbH & Co. KG","brands":["beDirect / beAddress"],"parent":null,"official_domains":["bedirect.de","bedirect-online.de","beaddress.de"]}
+    relevance: {"regions":["Germany"],"category":"professional","data_categories":["Company contacts","Business roles","Self-employed business addresses"],"note":"B2B address supply, enrichment and marketing; Creditreform source records remain separate."}
+    removal: {"method":"email","destination":"datenschutz@bedirect.de","alternatives":[],"steps":["Object to marketing use of the business-contact record and request appropriate erasure.","Keep the minimal suppression entry if needed to prevent reimport."]}
+    required_information: {"fields":[],"certainty":"not_fully_specified","verification":"Policy discusses identity proof where needed and redacting irrelevant ID details; minimum matching fields not specified."}
+    coverage: {"effect":"suppression","includes":"beDirect-controlled B2B marketing use; suppression data is retained.","excludes":"Creditreform source records and independent customers are not automatically covered."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://beaddress.de/info/Datenschutz","checked_on":"2026-09-28","published":"2024-07-16","excerpt":"E-Mail: datenschutz@bedirect.de","supports":["identity","relevance","removal","coverage"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Parent ownership and complete request identifiers not established.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "panadress"
+    name: "panadress"
+    match_domains: ["panadress.de"]
+    identity: {"legal_name":"panadress marketing intelligence GmbH","brands":["panadress"],"parent":null,"official_domains":["panadress.de"]}
+    relevance: {"regions":["Germany"],"category":"postal_marketing","data_categories":["Consumer and business addresses","Contact details","Marketing selection attributes"],"note":"Supplies address data for third-party advertising and enrichment."}
+    removal: {"method":"email","destination":"datenschutz@panadress.de","alternatives":[],"steps":["Send an objection to advertising processing.","Ask for confirmation of suppression; distinguish it from erasure of all records."]}
+    required_information: {"fields":["full_name","postal_address"],"certainty":"not_fully_specified","verification":"Policy names name, address and where applicable email as the retained suppression identifiers; full verification procedure unspecified."}
+    coverage: {"effect":"suppression","includes":"Future advertising use within the objection; minimal suppression record remains.","excludes":"Anonymous statistics, customer-controlled processing and independent recipients require separate treatment."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://www.panadress.de/datenschutz/","checked_on":"2026-09-28","published":"2026-03","excerpt":"datenschutz@panadress.de","supports":["identity","relevance","removal","coverage"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Whether additional matching or verification is required.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "quadress"
+    name: "QUADRESS"
+    match_domains: ["quadress.de"]
+    identity: {"legal_name":"QUADRESS GmbH","brands":["QUADRESS"],"parent":null,"official_domains":["quadress.de"]}
+    relevance: {"regions":["Germany"],"category":"postal_marketing","data_categories":["Consumer and business addresses","Marketing selection attributes"],"note":"Provides addresses and enrichment for third-party direct marketing."}
+    removal: {"method":"email","destination":"info@quadress.de","alternatives":["datenschutz@quadress.de","https://quadress.de/daten-sperren.html","https://auskunft.quadress.de/"],"steps":["Request entry in the suppression list by email to info@quadress.de; the current suppression form prepares an email to the same address.","Supply first and last name, street and house number, postcode, town and country. Telephone is optional.","The separate access portal requires qToken plus one other field; access is not suppression or deletion."]}
+    required_information: {"fields":["full_name","postal_address"],"certainty":"documented","verification":"Public suppression form marks name, full postal address and country mandatory; the campaign includes residence. Additional verification may follow; no ID attachment is specified."}
+    coverage: {"effect":"suppression","includes":"Objection to the documented advertising/enrichment purposes.","excludes":"No promise that independent recipients or other group companies erase their copies."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://quadress.de/daten-sperren.html","checked_on":"2026-09-30","published":"Not specified","excerpt":"per E-Mail an info@quadress.de Ihren Widerspruch an uns senden.","supports":["identity","removal","required_information","coverage"]},{"url":"https://quadress.de/wp-content/uploads/2018/10/Informationspflichten_DSGVO_QUADRESS.pdf","checked_on":"2026-09-30","published":"2024-06-01","excerpt":"Sie können der künftigen Nutzung Ihrer Daten zu diesen Zwecken widersprechen.","supports":["relevance","coverage"]},{"url":"https://auskunft.quadress.de/","checked_on":"2026-09-28","published":"Not specified","excerpt":"Bitte geben Sie dafür Ihre qToken ein","supports":["access_alternative"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Additional verification and retention of the suppression record are not fully specified.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "nexiga"
+    name: "Nexiga"
+    match_domains: ["nexiga.com"]
+    identity: {"legal_name":"Nexiga GmbH","brands":["Nexiga"],"parent":null,"official_domains":["nexiga.com"]}
+    relevance: {"regions":["Germany"],"category":"advertising","data_categories":["Geographic marketing attributes","Building and household statistics"],"note":"Location-intelligence supplier; distinguish anonymous aggregate products from identifiable records."}
+    removal: {"method":"investigate","destination":"https://nexiga.com/datenschutz/","alternatives":["datenschutzbeauftragter@nexiga.com"],"steps":["Determine whether the relevant product holds identifiable personal data.","Ask the published privacy contact for access and applicable objection/erasure routing."]}
+    required_information: {"fields":[],"certainty":"not_fully_specified","verification":"General rights contact is published; a product-specific identification process was not established."}
+    coverage: {"effect":"needs_review","includes":"Investigation of personal-data processing, not a verified database deletion procedure.","excludes":"Anonymous geographic statistics cannot be treated as a named-person record."}
+    automation: {"mode":"blocked","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://nexiga.com/datenschutz/","checked_on":"2026-09-28","published":"2025-08-01","excerpt":"datenschutzbeauftragter@nexiga.com","supports":["identity","removal"]},{"url":"https://nexiga.com/daten/","checked_on":"2026-09-28","published":"Not specified","excerpt":"22 Millionen Gebäuden","supports":["relevance","scale"]}]
+    scale: null
+    review_status: "needs_research"
+    tested_outcome: "not_tested"
+    unknowns: ["Product-specific controller role, identifiers and erasure route require review.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "regis24-de"
+    name: "Regis24"
+    match_domains: ["regis24.de","regis24.com"]
+    identity: {"legal_name":"Regis24 GmbH","brands":["Regis24"],"parent":null,"official_domains":["regis24.de","regis24.com"]}
+    relevance: {"regions":["Germany"],"category":"credit_reference","data_categories":["Credit and payment records","Address history","Risk information"],"note":"Consumer credit information and address investigation."}
+    removal: {"method":"manual","destination":"https://www.regis24.de/verbraucher-service/","alternatives":["datenschutz@regis24.de"],"steps":["Request the free Article 15 copy through the official consumer service.","Review the current form and privacy notice before choosing the secure submission route.","Review inaccuracies or retention before seeking changes."]}
+    required_information: {"fields":["full_name","date_of_birth","postal_address","previous_addresses","identity_document","signature"],"certainty":"not_fully_specified","verification":"Current Article 14 notice requests ID and up to five years' addresses; older signed form says three. Resolve the mismatch with the controller."}
+    coverage: {"effect":"access_then_review","includes":"Regis24 consumer information and recipient disclosures.","excludes":"No blanket deletion of accurate credit records; other national entities and creditors require separate review."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://www.regis24.de/verbraucher-service/","checked_on":"2026-09-28","published":"Not specified","excerpt":"Regis24 GmbH","supports":["identity","relevance","removal","coverage"]},{"url":"https://be.m.mail.regis24.de/asset/32%3Ainformationen-nach-art-14-dsgvo","checked_on":"2026-09-28","published":"Not specified","excerpt":"eine Kopie Ihres Ausweises beizufügen","supports":["required_information","removal"]},{"url":"https://www.regis24.de/datenschutz/","checked_on":"2026-09-28","published":"2026-07","excerpt":"datenschutz@regis24.de","supports":["removal"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Three- versus five-year address-history requirements differ between published documents.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "ksv1870-at"
+    name: "KSV1870 Information"
+    match_domains: ["ksv.at"]
+    identity: {"legal_name":"KSV1870 Information GmbH","brands":["KSV1870 Information"],"parent":null,"official_domains":["ksv.at"]}
+    relevance: {"regions":["Austria"],"category":"credit_reference","data_categories":["Consumer credit information","Risk and payment records"],"note":"Free own-information access differs from paid InfoPass products and association processing."}
+    removal: {"method":"manual","destination":"https://www.ksv.at/15","alternatives":["datenschutz@ksv.at"],"steps":["Choose the free Article 15 own-information request.","Authenticate using the offered official method and review the controller/report scope.","Assess corrections or retention after access."]}
+    required_information: {"fields":[],"certainty":"not_fully_specified","verification":"Official guidance describes ID Austria or PIN-TAN identity verification; complete application fields need manual review."}
+    coverage: {"effect":"access_then_review","includes":"KSV1870 Information GmbH access workflow.","excludes":"Do not assume identical processing by Kreditschutzverband von 1870 (association), other subsidiaries or creditors."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://www.ksv.at/ueber/barrierefreiheitserklaerung-digitaler-antrag-fuer-infopass-ksv-auszug-auskunft-art-15-dsgvo","checked_on":"2026-09-28","published":"Not specified","excerpt":"KSV1870 Information GmbH","supports":["identity","relevance","removal","coverage"]},{"url":"https://ksv.at/ksvblog/500-auskuenfte-privatpersonen-pro-tag","checked_on":"2026-09-28","published":"Not specified","excerpt":"ID Austria","supports":["required_information"]},{"url":"https://www.ksv.at/media/2303/download","checked_on":"2026-09-28","published":"Not specified","excerpt":"datenschutz@ksv.at","supports":["identity","removal","coverage"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Application fields and exact report coverage must be checked in the current request.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "abis-de"
+    name: "ABIS"
+    match_domains: ["abis-online.de"]
+    identity: {"legal_name":"ABIS GmbH, Frankfurt HRB 34228","brands":["ABIS"],"parent":"Deutsche Post Adress GmbH & Co. KG","official_domains":["abis-online.de"]}
+    relevance: {"regions":["Germany"],"category":"postal_marketing","data_categories":["Postal addresses","Address history"],"note":"Address updating only: official source says no new-customer address sale; category is the nearest address-data classification."}
+    removal: {"method":"email","destination":"datenschutz@abis-online.de","alternatives":[],"steps":["Request own-data access with the published mandatory identifiers.","Review address processing and grounds before seeking restriction or deletion."]}
+    required_information: {"fields":["full_name","postal_address"],"certainty":"documented","verification":"Birth surname is required where applicable; previous five-year addresses optional. Additional proof may be requested if identity is doubtful."}
+    coverage: {"effect":"access_then_review","includes":"ABIS address updating and research records; responses are postal unless another format is requested.","excludes":"Not a marketing-list opt-out or erasure at clients or source databases."}
+    automation: {"mode":"manual","reason":"This is an access-first address-reference workflow: name and current postal address are required, prior addresses are optional, and a postal reply is the default. Review the returned records before erasure."}
+    evidence:
+      - {url: 'https://www.abis-online.de/betroffenenanfrage/', checked_on: '2026-09-29', excerpt: 'datenschutz@abis-online.de', supports: [identity, relevance, removal, required_information, coverage]}
+      - {url: 'https://www.abis-online.de/impressum/', checked_on: '2026-09-29', excerpt: 'Deutsche Post Adress GmbH & Co. KG', supports: [identity]}
+      - {url: 'https://www.abis-online.de/ueber-uns/datenschutz/', checked_on: '2026-09-29', excerpt: 'Berichtigungen, Löschungen oder Sperrungen', supports: [coverage]}
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Erasure-specific grounds and requirements are case-dependent; documented minimum fields apply to access.","Current database scale not established.","Requests must be in the data subject's own name; responses default to postal delivery unless another format is requested.","No request or deletion outcome tested."]
+  - id: "euro-pro-de"
+    name: "EURO-PRO"
+    match_domains: ["europro.de"]
+    identity: {"legal_name":"EURO-PRO Gesellschaft für Data Processing mbH","brands":["EURO-PRO"],"parent":null,"official_domains":["europro.de"]}
+    relevance: {"regions":["Germany"],"category":"credit_reference","data_categories":["Addresses and tracing information","Creditworthiness information"],"note":"German credit-information and address-investigation provider."}
+    removal: {"method":"manual","destination":"https://www.europro.de/datenschutz/","alternatives":["datenschutz@europro.de"],"steps":["Use the free online or postal data-copy form linked in the privacy page.","Review credit/address records and dispute accuracy or retention where appropriate."]}
+    required_information: {"fields":[],"certainty":"not_fully_specified","verification":"Complete current form fields and identification checks require manual review."}
+    coverage: {"effect":"access_then_review","includes":"EURO-PRO own-data access.","excludes":"CRIF-derived scores and source records require separate controller review; no blanket debt-record deletion."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://www.europro.de/datenschutz/","checked_on":"2026-09-28","published":"Not specified","excerpt":"Sie können eine kostenlose Selbstauskunft (Datenkopie) postalisch oder online beantragen.","supports":["identity","relevance","removal","coverage"]},{"url":"https://www.europro.de/Information-nach-Art.-14-EU-DSGVO.pdf","checked_on":"2026-09-28","published":"2021-11","excerpt":"Die EURO-PRO berechnet diese Werte nicht selbst","supports":["coverage"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Full identification requirements and current scope of source-database coverage.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "gemini-direct-de"
+    name: "GEMINI DIRECT"
+    match_domains: ["geminidirect.de"]
+    identity: {"legal_name":"GEMINI DIRECT marketing solutions GmbH","brands":["GEMINI DIRECT"],"parent":null,"official_domains":["geminidirect.de"]}
+    relevance: {"regions":["Germany"],"category":"postal_marketing","data_categories":["Postal marketing addresses","Audience selection data"],"note":"Selects addresses for lettershop campaigns; advertiser does not receive the recipient list in that documented workflow."}
+    removal: {"method":"email","destination":"datenschutz@geminidirect.de","alternatives":[],"steps":["Request erasure of personal marketing data and object to future advertising use.","Review whether a minimal suppression record will remain."]}
+    required_information: {"fields":[],"certainty":"not_fully_specified","verification":"Published email request route; mandatory matching fields and verification unspecified."}
+    coverage: {"effect":"deletion_request","includes":"GEMINI DIRECT-controlled marketing records and requested advertising block.","excludes":"No promise that independent recipients or other group companies erase their copies."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://www.geminidirect.de/datensicherheit/","checked_on":"2026-09-28","published":"Not specified","excerpt":"Für Datenschutzanfragen nutzen Sie bitte datenschutz@geminidirect.de.","supports":["identity","relevance","removal","coverage"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Matching identifiers, identity checks and suppression-retention details unspecified.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "fonecta-fi"
+    name: "Fonecta / Finder"
+    match_domains: ["fonecta.fi","fonecta.com","finder.fi"]
+    identity: {"legal_name":"Fonecta Oy","brands":["Fonecta / Finder"],"parent":null,"official_domains":["fonecta.fi","fonecta.com","finder.fi"]}
+    relevance: {"regions":["Finland"],"category":"professional","data_categories":["Professional contacts and roles","Company decision-makers","Telephone-directory entries"],"note":"Separate decision-maker and subscriber databases; guide prioritises professional records."}
+    removal: {"method":"manual","destination":"https://tuki.fonecta.com/tietosuojaseloste","alternatives":["tietosuoja@fonecta.com"],"steps":["Identify the decision-maker or subscriber register before requesting action.","For professional-record access follow the listed fields and email or signed form.","For subscriber-directory correction/removal contact the telecom operator as instructed."]}
+    required_information: {"fields":["full_name","phone","postal_address","email","company_name","company_id"],"certainty":"documented","verification":"Fields listed for professional access; online form uses bank/mobile electronic signature, further proof possible if doubt exists."}
+    coverage: {"effect":"needs_review","includes":"Fonecta-controlled professional and subscriber records through their distinct procedures.","excludes":"Other group companies and telecom source records are not erased by a single Fonecta request."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://tuki.fonecta.com/tietosuojaseloste","checked_on":"2026-09-28","published":"2026-09-24","excerpt":"tietosuoja@fonecta.com","supports":["identity","relevance","removal","coverage"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Erasure matching fields may differ from documented access fields.","Parent ownership not fully reviewed.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "global-group-de"
+    name: "Global Group Germany"
+    match_domains: ["global-group.de"]
+    identity: {"legal_name":"Global Group TDA Germany GmbH","brands":["Global Group Germany"],"parent":null,"official_domains":["global-group.de"]}
+    relevance: {"regions":["Germany"],"category":"postal_marketing","data_categories":["Marketing addresses","Audience and selection data"],"note":"Provides address-based acquisition and marketing-data services."}
+    removal: {"method":"form","destination":"https://www.global-group.de/sofortige-sperrung","alternatives":["https://www.global-group.de/de-weitere-betroffenenrechte"],"steps":["Complete the immediate-suppression form with name and address.","Use the separate rights form for access or another request."]}
+    required_information: {"fields":["full_name","postal_address"],"certainty":"documented","verification":"Suppression form marks name and address mandatory; email is for acknowledgement and not marked mandatory."}
+    coverage: {"effect":"suppression","includes":"Suppression of the address; company says it forwards the wish to affected suppliers and customers.","excludes":"Already-started campaigns may continue for five to six weeks; no verified recipient erasure."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://www.global-group.de/impressum","checked_on":"2026-09-28","published":"Not specified","excerpt":"Global Group TDA Germany GmbH","supports":["identity"]},{"url":"https://www.global-group.de/sofortige-sperrung","checked_on":"2026-09-28","published":"Not specified","excerpt":"MEINE DATEN SOFORT AUF DIE SPERRLISTE SETZEN","supports":["removal","required_information","coverage"]},{"url":"https://www.global-group.de/","checked_on":"2026-09-28","published":"Not specified","excerpt":"Multi Channel Zielgruppen Potentiale","supports":["relevance"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Full marketing privacy PDF could not be opened.","Immediate ownership differs between imprint/footer branding; not resolved.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]
+  - id: "adressmonster"
+    name: "AdressMonster"
+    match_domains: ["adressmonster.de"]
+    identity: {"legal_name":"G.I.G OOD","brands":["AdressMonster"],"parent":null,"official_domains":["adressmonster.de"]}
+    relevance: {"regions":["Germany","Austria","Switzerland"],"category":"professional","data_categories":["Business contact details","Business addresses"],"note":"Business address broker; current Bulgarian operator differs from discovery inventory's old German entity."}
+    removal: {"method":"form","destination":"https://adressmonster.de/dsgvo","alternatives":[],"steps":["Choose access and the additional deletion option on the rights form.","Supply only mandatory matching fields; check any follow-up."]}
+    required_information: {"fields":["full_name","postal_code","city","email"],"certainty":"documented","verification":"Company name, street and message are optional on the inspected form."}
+    coverage: {"effect":"deletion_request","includes":"Stored company/contact record on the reviewed German platform.","excludes":"Independent buyers and other national domains are not automatically covered."}
+    automation: {"mode":"manual","reason":"Identifiers and verification must be reviewed before using this regional route."}
+    evidence: [{"url":"https://adressmonster.de/impressum","checked_on":"2026-09-28","published":"Not specified","excerpt":"G.I.G OOD","supports":["identity"]},{"url":"https://adressmonster.de/dsgvo","checked_on":"2026-09-28","published":"Not specified","excerpt":"Zusätzlich Löschung nach Art. 17 DSGVO","supports":["removal","required_information","coverage"]},{"url":"https://adressmonster.de/ueber-uns","checked_on":"2026-09-28","published":"Not specified","excerpt":"Ihr B2B-Adressbroker","supports":["relevance"]}]
+    scale: null
+    review_status: "instructions_reviewed"
+    tested_outcome: "not_tested"
+    unknowns: ["Source page gives inconsistent scale and acquisition-year figures; not adopted.","Whether records remain in suppression or buyer databases is untested.","Current database scale not established.","Parent ownership not reviewed.","No request or deletion outcome tested."]

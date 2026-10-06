@@ -1,0 +1,10 @@
+<fieldset class="appearance-choices"{% if appearance_preview | default(false) %} data-preview="true"{% endif %}>
+  <legend class="sr-only">Choose your appearance</legend>
+  {% for key, theme in appearance_themes.items() %}
+  <label class="appearance-option" data-palette="{{ key }}">
+    <span class="appearance-miniature" aria-hidden="true"><span class="appearance-mini-nav"><span></span><span></span><span></span></span><span class="appearance-mini-heading">Dashboard</span><span class="appearance-mini-cards"><span>Requests<br><b>24</b></span><span>Done<br><b>12</b></span></span></span>
+    <span class="appearance-choice-name"><input type="radio" name="theme" value="{{ key }}" data-scheme="{{ theme.scheme }}" {% if current_appearance(request) == key %}checked{% endif %} required><strong>{{ theme.name }}</strong></span>
+  </label>
+  {% endfor %}
+</fieldset>
+<script src="/static/appearance.js?v={{ css_version }}" defer></script>

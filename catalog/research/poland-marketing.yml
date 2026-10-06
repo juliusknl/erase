@@ -1,0 +1,101 @@
+schema_version: 1
+brokers:
+  - id: cloud-technologies-pl
+    name: Cloud Technologies — Polish advertising controller
+    match_domains: [cloudtechnologies.pl]
+    identity:
+      legal_name: Cloud Technologies S.A., KRS 0000405842
+      brands: [Cloud Technologies]
+      parent: null
+      official_domains: [cloudtechnologies.pl]
+    relevance:
+      regions: [PL, EU, Global]
+      category: advertising
+      data_categories: [Advertising IDs, Cookies, Hashed email, IP addresses, Inferred demographics, Approximate location]
+      note: Polish service controller; OnAudience and other group companies have distinct notices and guides.
+    removal:
+      method: email
+      destination: privacy@cloudtechnologies.pl
+      alternatives: [https://www.cloudtechnologies.pl/en/opt-out]
+      steps:
+        - Request erasure or objection for advertising-service records and clarify which technical identifier is needed for matching.
+        - Use browser opt-out separately on each relevant browser/device; retain its opt-out cookie.
+        - The US do-not-sell route expressly requires an advertising identifier; do not claim California residency or assume that route proves European erasure.
+    required_information:
+      fields: [advertising_identifier]
+      certainty: not_fully_specified
+      verification: Advertising identifier is documented for do-not-sell requests. The European erasure checklist is unspecified; generic name/contact email cannot be assumed to match pseudonymous records.
+    coverage:
+      effect: deletion_request
+      includes: Rights review for matched Polish-controller advertising records; separate browser suppression.
+      excludes: Group-wide deletion, unprovided identifiers and independent partners' records.
+    automation:
+      mode: manual
+      reason: Technical matching, purpose and jurisdiction require review.
+    evidence:
+      - url: https://www.cloudtechnologies.pl/en/internet-advertising-privacy-policy
+        checked_on: '2026-09-29'
+        excerpt: privacy@cloudtechnologies.pl
+        supports: [identity, relevance, removal, coverage]
+      - url: https://www.cloudtechnologies.pl/en/opt-out
+        checked_on: '2026-09-29'
+        excerpt: you must opt out on each browser or device
+        supports: [removal, required_information, coverage]
+      - url: https://www.cloudtechnologies.pl/en/do-not-sell-my-personal-info
+        checked_on: '2026-09-29'
+        excerpt: we will need your Advertising Identifier
+        supports: [removal, required_information]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [European matching checklist., Do-not-sell page denies storing IP whereas service notice includes IP; exact matching support needs clarification., English notice gives privacy email while Polish translation renders a different accented address., No outcome tested., Comparable controller-specific scale and ownership.]
+
+  - id: selectivv-pl
+    name: Selectivv
+    match_domains: [selectivv.com]
+    identity:
+      legal_name: SELECTIVV spółka z ograniczoną odpowiedzialnością, KRS 0000564540
+      brands: [Selectivv, Geotrapping]
+      parent: Fonia Group (site attribution)
+      official_domains: [selectivv.com]
+    relevance:
+      regions: [PL, Europe]
+      category: advertising
+      data_categories: [Mobile advertising IDs, Location, Browsing and app activity, Inferred preferences]
+      note: Mobile audience targeting and research; describes managed campaigns rather than supplying raw user data to clients.
+    removal:
+      method: email
+      destination: privacy@selectivv.com
+      alternatives: [selectivv@selectivv.com]
+      steps:
+        - Request deletion and object to mobile profiling, specifying the relevant advertising record rather than only website correspondence.
+        - State the affected person, reason, requested rights and desired response as the Polish notice instructs.
+        - Ask which device identifiers are needed before supplying extra data; do not mistake the sales form's fields for deletion requirements.
+    required_information:
+      fields: [subject_identification, request_reason, requested_rights, requested_response]
+      certainty: not_fully_specified
+      verification: Polish policy lists request contents but not a complete mobile-ID matching or verification procedure.
+    coverage:
+      effect: deletion_request
+      includes: Selectivv-controlled profiling and applicable personal records.
+      excludes: Independent source apps, ad networks, other Fonia companies and aggregate research results.
+    automation:
+      mode: manual
+      reason: Mobile matching and actual profile scope need review; ordinary name/email matching is not established.
+    evidence:
+      - url: https://selectivv.com/polityka-prywatnosci/
+        checked_on: '2026-09-29'
+        excerpt: privacy@selectivv.com
+        supports: [identity, relevance, removal, required_information, coverage]
+      - url: https://selectivv.com/en/privacy-policy/
+        checked_on: '2026-09-29'
+        excerpt: Part of Fonia Group
+        supports: [identity]
+      - url: https://selectivv.com/oferta/marketing-cyfrowy/reklama-w-aplikacjach-mobilnych/
+        checked_on: '2026-09-29'
+        excerpt: Działamy w modelu managed-service
+        supports: [relevance, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Full mobile verification checklist., English policy is truncated and lacks the detailed Polish product-rights text., No request submitted., Comparable current unique-person scale.]

@@ -1,0 +1,20 @@
+services:
+  web:
+    build: .
+    env_file: .env
+    environment:
+      ERASURE_DATABASE_URL: sqlite:////data/erasure.db
+      ERASURE_MASTER_KEY: ${ERASURE_MASTER_KEY}
+      ERASURE_PASSWORD_HASH: ${ERASURE_PASSWORD_HASH}
+      ERASURE_SESSION_SECRET: ${ERASURE_SESSION_SECRET}
+      ERASURE_LIVE_SUBMISSIONS: ${ERASURE_LIVE_SUBMISSIONS:-false}
+    ports:
+      - "127.0.0.1:8787:8787"
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8787/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3

@@ -1,0 +1,52 @@
+schema_version: 1
+brokers:
+  - id: pgm-consumer-marketing
+    name: PGM Solutions / DataMentors
+    match_domains: [porchgroupmedia.com]
+    identity:
+      legal_name: DataMentors, LLC dba PGM Solutions
+      brands: [PGM Solutions, Porch Group Media]
+      parent: Porch.com, Inc.
+      official_domains: [porchgroupmedia.com, pgmsolutions.com]
+    relevance:
+      regions: [US-focused; general marketing opt-out offered to any person]
+      category: consumer_marketing
+      data_categories: [Consumer contacts, Household attributes, Mover data, Marketing segments]
+      note: Presence in its database is unknown; non-US statutory deletion is not established here.
+    removal:
+      method: email
+      destination: privacy@porchgroupmedia.com
+      alternatives: [https://optout.porchgroupmedia.com/, https://datarightsrequest.porchgroupmedia.com/]
+      steps:
+        - Request marketing-database suppression by email, with name, matching emails and approved postal address. Ask which identifiers matched.
+        - The individual opt-out form instead asks for identity certification, address, US state/ZIP, email, phone and date. Never invent US residence or agent authority.
+        - The separate deletion form is limited to its listed US states. Choose deletion only if eligible, and complete further verification personally.
+    required_information:
+      fields: [full_name, email, postal_address, requested_right]
+      certainty: not_fully_specified
+      verification: Initial email matching proposal, not a published mandatory email checklist. Form requirements differ; later checks untested.
+    coverage:
+      effect: suppression
+      includes: Matched PGM marketing databases.
+      excludes: Independent recipients, other Porch companies and guaranteed full erasure.
+    automation:
+      mode: manual
+      reason: Initial email needs postal-disclosure approval; form certifications and later verification remain personal.
+    evidence:
+      - url: https://porchgroupmedia.com/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2026-01-23'
+        excerpt: any person can request
+        supports: [identity, general_marketing_optout, email_alternative, separate_state_rights]
+      - url: https://optout.porchgroupmedia.com/
+        checked_on: '2026-10-01'
+        excerpt: Must have 5 digits.
+        supports: [public_fields, US_address_constraints, personal_certification]
+      - url: https://datarightsrequest.porchgroupmedia.com/
+        checked_on: '2026-10-01'
+        excerpt: Requests may be made only by or on behalf of a current resident
+        supports: [state_eligibility, separate_deletion_selection, matching_fields]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Non-US matching and fulfilment untested., Exact minimum email identifiers and later verification unknown.]

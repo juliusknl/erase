@@ -1,0 +1,50 @@
+schema_version: 1
+brokers:
+  - id: cifas-fraud-records
+    name: Cifas fraud-risk records
+    match_domains: [cifas.org.uk]
+    identity:
+      legal_name: CIFAS (company 02584687)
+      brands: [Cifas]
+      parent: null
+      official_domains: [cifas.org.uk]
+    relevance:
+      regions: [UK]
+      category: identity_risk
+      data_categories: [Fraud-risk markers, Identity and application information]
+      note: A fraud-prevention membership organisation, not a credit bureau or ordinary marketing list. Check personal relevance before disclosing identifiers.
+    removal:
+      method: manual
+      destination: https://www.cifas.org.uk/dsar
+      alternatives: [https://www.cifas.org.uk/contact-us/subject-access-request/subject-access-request-form, https://www.cifas.org.uk/contact-us/i-want-to-make-a-complaint]
+      steps:
+        - If there is reason to believe a record exists, request the free personal DSAR and review the returned record; access alone is not removal.
+        - To contest a marker, first complain with evidence to the organisation that registered it and obtain its final response if it rejects the complaint.
+        - Then submit that final response and supporting correspondence to Cifas for independent review; do not claim guaranteed marker removal.
+        - Provide identity evidence personally only when required. Do not remove victim-protection markers automatically or purchase a paid removal service as part of this workflow.
+    required_information:
+      fields: [full_name, date_of_birth, six_year_address_history, phone, email]
+      certainty: not_fully_specified
+      verification: The DSAR page may additionally require identity and current-address proof; uploaded evidence and conditional validation were not tested. Complaint review needs the filing organisation's final response.
+    coverage:
+      effect: access_then_review
+      includes: Personal access and evidence-based dispute of Cifas fraud-risk records.
+      excludes: Guaranteed erasure, credit-bureau deletion, independent member records and automatic removal of protective markers.
+    automation: {mode: manual, reason: Sensitive verification and a record-specific complaint process; never send a generic marketing deletion email.}
+    evidence:
+      - url: https://www.cifas.org.uk/dsar
+        checked_on: '2026-10-01'
+        excerpt: address history for the last 6 years
+        supports: [free_access, matching_requirements, conditional_proofs, fraud_not_credit_bureau]
+      - url: https://www.cifas.org.uk/contact-us/i-want-to-make-a-complaint
+        checked_on: '2026-10-01'
+        excerpt: First you must contact the organisation/s that registered the warning
+        supports: [member_first_dispute, final_response, independent_review]
+      - url: https://find-and-update.company-information.service.gov.uk/company/02584687
+        checked_on: '2026-10-01'
+        excerpt: Private Limited Company by guarantee without share capital use of 'Limited' exemption
+        supports: [legal_entity]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Actual record relevance and lawful retention., Dynamic verification and dispute outcome.]

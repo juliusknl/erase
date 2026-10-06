@@ -1,0 +1,105 @@
+schema_version: 1
+brokers:
+  - id: perion-high-impact
+    name: Perion / Undertone advertising
+    match_domains: [undertone.com]
+    identity:
+      legal_name: Perion, Inc. (High Impact Advertising)
+      brands: [Perion, Undertone]
+      parent: Perion Network Ltd.
+      official_domains: [perion.com, undertone.com]
+    relevance:
+      regions: [EEA, United Kingdom, Switzerland, United States, Canada]
+      category: advertising
+      data_categories: [Device identifiers, Advertising interactions, Location, Inferred interests]
+      note: High Impact Advertising is separate from Vidazoo media services and the Canadian DOOH controller.
+    removal:
+      method: form
+      destination: https://forms.monday.com/forms/2e643e95786ac0c2cdf2dca015d20c68?r=use1
+      alternatives: [https://perion.com/perion-offering-privacy-policy/, https://perion.com/data-access-request/]
+      steps:
+        - Open the offering-linked request form; identify High Impact Advertising / Undertone and the right you want to exercise.
+        - Supply the form's name, reply email, country and requester role. Do not provide your home address; written authorization is for representatives.
+        - Provide the relevant mobile advertising ID or cookie ID. The Identification field is not marked mandatory in the public configuration, but its instructions require a digital identifier for matching; name/email alone cannot locate ad records.
+        - Cookie lookup requires a sole-owner/controller declaration. Only affirm it if true; do not submit it automatically. Review CAPTCHA, further verification and the response personally.
+    required_information:
+      fields: [full_name, reply_email, residence, requester_role, requested_right, matching_mobile_or_cookie_id]
+      certainty: not_fully_specified
+      verification: Public Monday form configuration inspected without submission. Name/email/country/requester role/request are marked mandatory; device matching is needed despite the optional Identification marker. Conditional visibility and completion untested.
+    coverage:
+      effect: deletion_request
+      includes: Matched High Impact Advertising records of Perion Inc; request scope must identify the product.
+      excludes: Automatic deletion across Vidazoo, Canadian DOOH, other devices or independent publishers. Opt-out is not historical deletion.
+    automation:
+      mode: manual
+      reason: Device matching and truthful personal declarations require review; no name-and-email-only automatic outreach.
+    evidence:
+      - url: https://perion.com/perion-offering-privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2026-07-01'
+        excerpt: Perion, Inc
+        supports: [product_controller, scope, digital_matching, official_form_link]
+      - url: https://forms.monday.com/forms/2e643e95786ac0c2cdf2dca015d20c68?r=use1
+        checked_on: '2026-10-01'
+        excerpt: DO NOT include your personal home address
+        supports: [public_form_configuration, matching_identifiers, required_fields, country_only, representative_authorization]
+      - url: https://perion.com/data-access-request/
+        checked_on: '2026-10-01'
+        excerpt: owner and the sole controller
+        supports: [personal_device_declaration]
+      - url: https://perion.com/investors/press/perion-announces-transformational-perion-one-strategy-unifying-all-of-its-technologies-and-brands/
+        checked_on: '2026-10-01'
+        published: '2025-02-03'
+        excerpt: Undertone
+        supports: [brand_relationship_not_blanket_legal_succession]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Live submission and later verification untested., No all-group or historical-entity removal guarantee.]
+  - id: rakuten-advertising-identifiers
+    name: Rakuten Advertising identifiers
+    match_domains: [rakutenadvertising.com, rakutenmarketing.com]
+    identity:
+      legal_name: Rakuten Marketing LLC dba Rakuten Advertising
+      brands: [Rakuten Advertising]
+      parent: Rakuten Group, Inc.
+      official_domains: [rakutenadvertising.com, rakutenmarketing.com, ut.ra.linksynergy.com]
+    relevance:
+      regions: [EEA, United Kingdom, United States, Other applicable jurisdictions]
+      category: advertising
+      data_categories: [Cookie identifiers, Business contacts, Affiliate interactions]
+      note: Customer-controlled advertising records normally require the merchant/publisher; a separate digital-identifier control is published alongside business-contact rights.
+    removal:
+      method: form
+      destination: https://rakutenadvertising.com/legal-notices/privacy-request-forms/
+      alternatives: [https://rakutenadvertising.com/privacy-policy/]
+      steps:
+        - Use this only for Rakuten Advertising, not Rakuten Rewards, Viber or other group products. Do not claim to be a business customer if you are not.
+        - For ad identifiers, use the form's cookie-information link in your relevant browser and copy the existing values into Digital Identifiers. Select identifier erasure or the separate opt-out choice as intended.
+        - The form also requires matching and reply emails and a selected email-related right. Review applicability personally or use its other-request option; name/email alone do not match advertising identifiers. Leave the anti-spam Name field blank.
+        - Review the declaration and complete the verification email; the request is not actioned before verification. Clear the local cookie only after preserving the matching identifier; server-side deletion does not clear browser cookies.
+    required_information:
+      fields: [matching_email, reply_email, requested_right, relevant_cookie_identifier]
+      certainty: not_fully_specified
+      verification: Public form fields inspected; email verification explicitly required. Consumer-only submission through the combined business-contact form and conditional validation untested.
+    coverage:
+      effect: deletion_request
+      includes: Supplied Rakuten Advertising digital identifiers; directly held business contacts only if applicable.
+      excludes: Rakuten Rewards and other group businesses, independent merchants/publishers, mobile advertising controls and removal of cookies from the user's browser.
+    automation:
+      mode: manual
+      reason: Browser identifier matching, mixed business-contact form applicability and email verification need personal review.
+    evidence:
+      - url: https://rakutenadvertising.com/legal-notices/privacy-request-forms/
+        checked_on: '2026-10-01'
+        excerpt: We will not action your request until you have verified it.
+        supports: [form, digital_identifier_controls, group_exclusions, email_verification, conditional_applicability]
+      - url: https://rakutenadvertising.com/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2025-08-15'
+        excerpt: Rakuten Marketing LLC dba Rakuten Advertising
+        supports: [identity, parent, customer_processor_scope, direct_controller_scope]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Mixed-purpose form runtime and later responses untested., No inferred succession for historical Rakuten Marketing Europe Ltd.]

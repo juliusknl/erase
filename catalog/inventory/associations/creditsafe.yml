@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: creditsafe-regional
+    records: [discovery:creditsafe-de, discovery:creditsafe-uk, discovery:no-creditsafe]
+    rationale: Each exact controller has its own documented regional route in the guide. Norway's business-marketing objection and credit-freeze verification remain separate; this association does not cover Italy or other unreviewed group companies.

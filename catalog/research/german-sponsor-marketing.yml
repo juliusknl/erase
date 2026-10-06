@@ -1,0 +1,170 @@
+schema_version: 1
+brokers:
+  - id: inside-lead-consumer
+    name: Inside Lead consumer marketing
+    match_domains: [inside-lead.com]
+    identity:
+      legal_name: Inside Lead GmbH
+      brands: [Inside Lead]
+      parent: null
+      official_domains: [inside-lead.com]
+    relevance:
+      regions: [Germany, EEA]
+      category: consumer_marketing
+      data_categories: [Contact details, Postal addresses, Marketing permissions, Survey interests]
+      note: Co-sponsoring and lead supply for email, postal and telephone marketing; participation must not be invented.
+    removal:
+      method: email
+      destination: service@inside-lead.com
+      alternatives: [https://www.inside-lead.com/#widerruf]
+      steps:
+        - Request marketing withdrawal, suppression and erasure of matched lead records using the original matching details.
+        - The published suggested letter includes name, matching email and postal address including country. Postal disclosure needs explicit permission in this app.
+        - Request notification of sponsors that already received the data. That notification is not proof that every sponsor deleted its copy.
+        - Withdrawal can end any actual competition participation; do not copy the template's assertion of participation unless true.
+    required_information:
+      fields: [full_name, email, postal_address]
+      certainty: not_fully_specified
+      verification: Published suggested withdrawal template uses original participant details; salutation is included but an exhaustive mandatory checklist and subsequent verification are not established.
+    coverage:
+      effect: suppression
+      includes: Matched Inside Lead marketing records and requested sponsor notification; limited legal-evidence retention may remain.
+      excludes: Proven erasure by every sponsor, records that cannot be matched and unrelated subscriptions or services.
+    automation:
+      mode: manual
+      reason: Initial email recipe is implemented but requires matching email and explicitly approved postal disclosure; further verification stays manual.
+    evidence:
+      - url: https://www.inside-lead.com/
+        checked_on: '2026-10-01'
+        excerpt: service@inside-lead.com
+        supports: [identity, product_lead_supply, rights_email, sponsor_notification, matching_template]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Delivery and fulfilment untested., No exhaustive verification checklist., No comparable scale claim or reviewed parent.]
+
+  - id: all-travel-sponsor-marketing
+    name: All Travel Marketing sponsor data
+    match_domains: [all-travel-marketing.de]
+    identity:
+      legal_name: All Travel Marketing GmbH
+      brands: [All Travel Marketing]
+      parent: null
+      official_domains: [all-travel-marketing.de]
+    relevance:
+      regions: [Germany, EEA]
+      category: consumer_marketing
+      data_categories: [Email, Telephone, Postal addresses, Competition and sponsor permissions]
+      note: Policy explicitly describes sponsor disclosure for marketing, not merely corporate website analytics.
+    removal:
+      method: email
+      destination: datenschutz@all-travel-marketing.de
+      alternatives: [https://www.all-travel-marketing.de/datenschutz/]
+      steps:
+        - Request erasure of matched marketing data and object to further sponsor disclosure; withdraw any marketing consent attributed to you without claiming you participated.
+        - Begin with your name and actual matching email aliases; review any additional postal or telephone matching request personally.
+        - Ask which sponsors received your data and what remains retained. Separate sponsor copies are not automatically proven deleted.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Rights and email contact published, but no exhaustive identifier or verification checklist; initial email is not guaranteed to locate every record.
+    coverage:
+      effect: deletion_request
+      includes: Matched personal marketing records controlled by All Travel Marketing and objection to further disclosure.
+      excludes: Automatic sponsor-wide erasure, unrelated travel accounts and a claim of actual competition participation.
+    automation:
+      mode: email_minimal
+      reason: Initial matching-email request supported by the sponsor-data policy; further identifiers and retained-record explanations pause for review.
+    evidence:
+      - url: https://www.all-travel-marketing.de/datenschutz/
+        checked_on: '2026-10-01'
+        excerpt: datenschutz@all-travel-marketing.de
+        supports: [identity, sponsor_data, rights_email, erasure_objection]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Policy publication date and current delivery unestablished., Sponsor-specific matching and outcome untested., No comparable scale claim or reviewed parent.]
+
+  - id: best-relations-sponsor-marketing
+    name: Best Relations Digital sponsor data
+    match_domains: [best-relations-digital.de]
+    identity:
+      legal_name: Best Relations Digital GmbH
+      brands: [Best Relations Digital]
+      parent: null
+      official_domains: [best-relations-digital.de]
+    relevance:
+      regions: [Germany, EEA]
+      category: consumer_marketing
+      data_categories: [Email, Telephone, Postal addresses, Sponsor permissions, Competition data]
+      note: Published policy describes consent-based sponsor disclosure and marketing rights; current policy address differs from the older community entry.
+    removal:
+      method: email
+      destination: datenschutz@best-relations-digital.de
+      alternatives: [https://www.best-relations-digital.de/datenschutzerklaerung/]
+      steps:
+        - Request erasure of matched sponsor-marketing records, withdraw attributed marketing consent and object to further disclosure.
+        - Start with your name and matching emails; do not assert competition participation. Review further matching requests personally.
+        - Ask for recipients and retained-data explanations; independently held sponsor copies need separate confirmation.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Published email and rights route, but matching and subsequent identity checks are not exhaustively documented.
+    coverage:
+      effect: deletion_request
+      includes: Matched personal sponsor-marketing data controlled by Best Relations Digital.
+      excludes: Guaranteed erasure by independent sponsors, unverified aliases and automatic account cancellation.
+    automation:
+      mode: email_minimal
+      reason: Initial name-and-matching-email request; no automatic postal address, telephone number or identity document disclosure.
+    evidence:
+      - url: https://www.best-relations-digital.de/datenschutzerklaerung/
+        checked_on: '2026-10-01'
+        excerpt: datenschutz@best-relations-digital.de
+        supports: [identity, sponsor_disclosure, rights_email, erasure_objection]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Notice has older wording and no clear publication date; live fulfilment untested., Sponsor-specific scope may require follow-up., No comparable scale claim or reviewed parent.]
+
+  - id: blueleads-newsletter
+    name: blueleads marketing subscriptions
+    match_domains: [blueleads.online]
+    identity:
+      legal_name: blueleads GmbH
+      brands: [blueleads]
+      parent: null
+      official_domains: [blueleads.online]
+    relevance:
+      regions: [Germany, EEA]
+      category: consumer_marketing
+      data_categories: [Subscriber names, Email, Marketing permissions, Signup evidence]
+      note: Reviewed notice concerns its own newsletter, consultation and webinar records; no broader independent-broker dataset is established.
+    removal:
+      method: email
+      destination: widerruf@blueleads.online
+      alternatives: [datenschutz@blueleads.online]
+      steps:
+        - If you receive blueleads marketing, unsubscribe through that message or send withdrawal from the matching address to the published withdrawal inbox.
+        - Use the privacy inbox for broader rights questions; this does not establish a need to contact blueleads for everyone in the app.
+        - The notice retains evidence for up to three years after withdrawal while stopping advertising use; contractual messages may continue.
+    required_information:
+      fields: [email]
+      certainty: not_fully_specified
+      verification: Matching newsletter address documented; any further identity checks untested.
+    coverage:
+      effect: suppression
+      includes: Future marketing to the matched subscriber address, with stated evidentiary retention.
+      excludes: Immediate erasure of all evidence, contractual correspondence and an unverified third-party broker database.
+    automation:
+      mode: manual
+      reason: Relationship-specific newsletter action, not a generic campaign target; only use if the person actually receives this marketing.
+    evidence:
+      - url: https://blueleads.online/datenschutz.html
+        checked_on: '2026-10-01'
+        excerpt: widerruf@blueleads.online
+        supports: [current_identity, subscriber_scope, withdrawal_email, three_year_evidence_retention]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Historical 4Wave succession not independently established; community record already names blueleads., Broader broker dataset not established., Notice contains dated transfer terminology; delivery and fulfilment untested.]

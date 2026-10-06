@@ -1,0 +1,63 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "personal-erasure"
+version = "0.1.0"
+description = "Local-only personal data broker removal assistant"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.116,<1",
+  "httpx>=0.28,<1",
+  "filelock>=3.16,<4",
+  "pyjwt[crypto]>=2.10,<3",
+  "jinja2>=3.1,<4",
+  "pydantic-settings>=2.10,<3",
+  "pynacl>=1.5,<2",
+  "python-dotenv>=1,<2",
+  "python-multipart>=0.0.20,<1",
+  "pyyaml>=6.0,<7",
+  "sqlalchemy>=2.0,<3",
+  "uvicorn[standard]>=0.35,<1",
+]
+
+[project.scripts]
+erase = "erasure.desktop:main"
+erase-demo = "erasure.demo:main"
+erasure-secrets = "erasure.secrets_cli:main"
+erasure-keychain = "erasure.keychain_cli:main"
+erasure-backup = "erasure.backup_cli:main"
+erasure-catalog = "erasure.catalog_cli:main"
+
+
+
+[dependency-groups]
+dev = [
+  "playwright>=1.55,<2",
+  "pytest>=8.4,<9",
+  "pytest-cov>=6.2,<7",
+  "ruff>=0.12,<1",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/erasure"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--strict-markers"
+markers = ["visual: renders responsive UI in a real browser"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S"]
+ignore = ["B008", "E501", "S101"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S106"]

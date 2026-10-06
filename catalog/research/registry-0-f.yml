@@ -1,0 +1,2292 @@
+{
+  "schema_version": 1,
+  "brokers": [
+    {
+      "id": "33-mile-radius", "name": "33 Mile Radius", "match_domains": ["33mileradius.com"],
+      "identity": {"legal_name": "33 Mile Radius LLC", "brands": ["33 Mile Radius", "EverConnect"], "parent": "Ignite Visibility group; precise ownership chain not specified", "official_domains": ["33mileradius.com"]},
+      "relevance": {"regions": ["US"], "category": "consumer_marketing", "data_categories": ["Home-service enquiries and contacts", "Property projects", "Call data", "Pseudonymous advertising audiences"], "note": "July 2026 shared notice names multiple affiliates but excludes enterprise-customer processor data."},
+      "removal": {"method": "manual", "destination": "https://www.33mileradius.com/privacy-policy/", "alternatives": [], "steps": ["Use the contact in the Sale, Sharing, and Licensing section to request applicable deletion and opt-out.", "Identify 33 Mile Radius and the relevant home-service enquiry or contact record.", "Ask which affiliate and identifiers were covered; retain that response rather than marking the entire group deleted."]},
+      "required_information": {"fields": [], "certainty": "not_fully_specified", "verification": "No fixed matching or authentication field list is published. Email links are protected in the public rendering."},
+      "coverage": {"effect": "deletion_request", "includes": "Matched own-controller records under applicable rights, including pseudonymous data.", "excludes": "Enterprise-client processor data, independent home-service partners and guaranteed group-wide erasure."},
+      "automation": {"mode": "manual", "reason": "Product scope and undocumented matching require review through the published contact."},
+      "evidence": [{"url": "https://www.33mileradius.com/privacy-policy/", "checked_on": "2026-09-29", "published": "2026-07-30", "excerpt": "to request access, correction, or deletion.", "supports": ["identity", "relevance", "removal", "required_information", "coverage"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested", "unknowns": ["Exact identifiers and verification, European relevance and precise parent chain.", "Whether a request propagates to other named affiliates."]
+    },
+    {
+      "id": "activimpact", "name": "ActivImpact", "match_domains": ["activimpact.ai"],
+      "identity": {"legal_name": "ActivImpact, LLC", "brands": ["ActivImpact"], "parent": null, "official_domains": ["activimpact.ai"]},
+      "relevance": {"regions": ["US", "Canada"], "category": "consumer_marketing", "data_categories": ["Contacts and pseudonymous identifiers", "Interest profiles", "Health and fitness-related attributes", "Online activity"], "note": "Audience processing includes third-party wellness/fitness sources; no European-specific route established."},
+      "removal": {"method": "form", "destination": "https://activimpact.ai/dsar", "alternatives": ["privacy@activimpact.ai"], "steps": ["Open the official rights page and choose deletion in its embedded form.", "Complete the requested record-matching and any agent-authority verification.", "Canadian rights requests may use the explicitly published privacy email; browser-only opt-out is separate."]},
+      "required_information": {"fields": [], "certainty": "not_fully_specified", "verification": "Policy verifies data points already on file; exact OneTrust fields were not retrievable. Agent authority may require additional information."},
+      "coverage": {"effect": "deletion_request", "includes": "Matched ActivImpact personal data under applicable regional rights.", "excludes": "Lawful retention, independent recipients and browser settings alone as proof of deletion."},
+      "automation": {"mode": "manual", "reason": "Sensitive profile data and unspecified portal matching need human review."},
+      "evidence": [{"url": "https://activimpact.ai/privacy-policy", "checked_on": "2026-09-29", "excerpt": "we will ask you to verify data points based on information we have in our records", "supports": ["identity", "relevance", "removal", "required_information", "coverage"]}, {"url": "https://activimpact.ai/dsar", "checked_on": "2026-09-29", "excerpt": "Your Privacy Choices", "supports": ["removal"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested", "unknowns": ["Rendered form fields; ROR Partners-branded portal does not by itself establish common-controller deletion.", "European relevance and database size."]
+    },
+    {
+      "id": "anchor-computer", "name": "Anchor Computer", "match_domains": ["anchorcomputer.com"],
+      "identity": {"legal_name": "Anchor Computer Inc.", "brands": ["Anchor Computer"], "parent": null, "official_domains": ["anchorcomputer.com", "ecom2.anchorcomputer.com"]},
+      "relevance": {"regions": ["US", "Canada"], "category": "consumer_marketing", "data_categories": ["Contacts and addresses", "Email reference data", "Demographics", "Identity matching"], "note": "Address hygiene/data enhancement uses US and Canadian databases; other-country data is returned or deleted."},
+      "removal": {"method": "form", "destination": "https://ecom2.anchorcomputer.com/privacyrequest", "alternatives": ["privacyteam@anchorcomputer.com"], "steps": ["Use the individual consumer form and choose Delete my data; Do not sell retains the record with a restriction.", "Personally review the requested sensitive identifiers before proceeding; do not automatically supply SSN or birth date.", "Respond to its emailed verification. Bulk-request businesses are directed to the privacy team, not this individual form."]},
+      "required_information": {"fields": ["first_name", "last_name", "postal_address", "email", "phone", "date_of_birth", "ssn_last4"], "certainty": "not_fully_specified", "verification": "Policy lists these matching identifiers. Form marks some fields required; whether SSN can be omitted was not established. Email verification is mandatory."},
+      "coverage": {"effect": "deletion_request", "includes": "Matched Anchor databases; separate suppression can help prevent re-addition.", "excludes": "Independent client sources and legally retained risk/compliance/anti-fraud data."},
+      "automation": {"mode": "manual", "reason": "Sensitive identifiers and email verification require deliberate user review."},
+      "evidence": [{"url": "https://www.anchorcomputer.com/privacy-policy/", "checked_on": "2026-09-29", "published": "2026-06-01", "excerpt": "Anchor uses only US and Canada databases for Address Hygiene and Data Enhancement Processing.", "supports": ["identity", "relevance", "required_information", "coverage"]}, {"url": "https://ecom2.anchorcomputer.com/privacyrequest", "checked_on": "2026-09-29", "excerpt": "Do not sell my data (Keep data, but mark as do not sell)", "supports": ["removal", "required_information", "coverage"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested", "unknowns": ["Least-invasive accepted matching combination and optionality of SSN.", "Comparable unique-person count; email-record counts are not people."]
+    },
+    {
+      "id": "adttribution", "name": "Adttribution", "match_domains": ["adttribution.com"],
+      "identity": {"legal_name": "ADTTRIBUTION LLC (policy); Inc. (registry)", "brands": ["Adttribution"], "parent": null, "official_domains": ["adttribution.com"]},
+      "relevance": {"regions": ["US", "EU"], "category": "advertising", "data_categories": ["Advertising and CTV identifiers", "Location and app activity", "Cookies", "Hashed emails and phones"], "note": "Product-data notice describes device-linked audiences; LLC/Inc. mismatch remains explicit."},
+      "removal": {"method": "email", "destination": "dpo@adttribution.com", "alternatives": ["https://adttribution.com/privacy-policy/"], "steps": ["Provide the relevant advertising ID to the published DPO and request deletion of linked User Data.", "Ask separately about known cookie or hashed-contact identifiers not linked to that ID.", "Do not substitute resetting an ID or blocking cookies for deletion of stored records."]},
+      "required_information": {"fields": ["device_advertising_id"], "certainty": "documented", "verification": "Policy specifies advertising ID; ownership challenges and non-ID matching procedures are not published."},
+      "coverage": {"effect": "deletion_request", "includes": "User Data linked to the submitted advertising ID, plus prevention of future use of that ID.", "excludes": "Unlinked cookies/hashed emails/phones may remain until a Data Partner requests deletion; independent recipients remain separate."},
+      "automation": {"mode": "manual", "reason": "Device identifier must be supplied deliberately and coverage checked per identifier."},
+      "evidence": [{"url": "https://adttribution.com/privacy-policy/", "checked_on": "2026-09-29", "excerpt": "Users may delete data associated with their Ad ID by submitting their Ad ID to our Privacy Team", "supports": ["identity", "relevance", "removal", "required_information", "coverage"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested", "unknowns": ["Current legal LLC/Inc. relationship; page still contains 2018 modification text and outdated transfer references.", "Non-ID deletion workflow, ownership verification and size."]
+    },
+    {
+      "id": "advisortarget-finsum", "name": "AdvisorTarget / FinSum", "match_domains": ["finsum.com"],
+      "identity": {"legal_name": "AdvisorTarget LLC", "brands": ["AdvisorTarget", "FinSum"], "parent": "Broadridge Financial Solutions, Inc.", "official_domains": ["finsum.com", "broadridge.com"]},
+      "relevance": {"regions": ["US"], "category": "professional", "data_categories": ["Financial advisers and their practices", "Contacts", "Browsing and engagement"], "note": "Own-purpose adviser reports differ from financial-account data processed for clients."},
+      "removal": {"method": "form", "destination": "https://app.smartsheet.com/b/form/48a44f05a4644a1f824601e77ad1719d", "alternatives": ["https://www.finsum.com/what-we-do/your-privacy-choices", "Privacy@Broadridge.com"], "steps": ["Use AdvisorTarget's linked Privacy Request Form to request deletion and sale opt-out.", "Complete identity verification and retain the scoped result.", "Contact the relevant financial firm for records AdvisorTarget processes on that client's behalf; newsletter unsubscribe is separate."]},
+      "required_information": {"fields": [], "certainty": "not_fully_specified", "verification": "Rights page requires identity verification for deletion. Exact Smartsheet fields could not be retrieved; privacy email is an inquiry/escalation alternative, not a proven no-form substitute."},
+      "coverage": {"effect": "deletion_request", "includes": "AdvisorTarget own-purpose personal information, potentially deleted or anonymized.", "excludes": "Client-controlled financial-account records, internal lawful retention and other Broadridge products."},
+      "automation": {"mode": "manual", "reason": "Form verification and controller-specific routing must be handled interactively."},
+      "evidence": [{"url": "https://finsum.com/what-we-do/privacy-policy", "checked_on": "2026-09-29", "excerpt": "AdvisorTarget LLC, d/b/a FinSum", "supports": ["identity", "relevance", "coverage"]}, {"url": "https://www.finsum.com/what-we-do/your-privacy-choices", "checked_on": "2026-09-29", "published": "2025-01-31", "excerpt": "We will need to verify your identity before we can process your request.", "supports": ["removal", "required_information", "coverage"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested", "unknowns": ["Exact portal fields, non-US database coverage and regional eligibility.", "Current comparable database size."]
+    },
+    {
+      "id": "audiencepoint", "name": "AudiencePoint", "match_domains": ["audiencepoint.com"],
+      "identity": {"legal_name": "AudiencePoint, Inc.", "brands": ["AudiencePoint"], "parent": null, "official_domains": ["audiencepoint.com"]},
+      "relevance": {"regions": ["US", "EEA"], "category": "advertising", "data_categories": ["Email recipients and contacts", "Email engagement and delivery", "Device and usage data"], "note": "Email analytics uses both own-controller and customer-processor roles; it is not a public people-search directory."},
+      "removal": {"method": "email", "destination": "privacy@audiencepoint.com", "alternatives": [], "steps": ["Request deletion/objection for AudiencePoint-controlled contact and engagement data.", "For a particular sender's customer-controlled address book, contact that sender as well.", "Review identity challenges and any customer-referral response before marking completion."]},
+      "required_information": {"fields": [], "certainty": "not_fully_specified", "verification": "Policy allows contact identity verification but does not publish a fixed matching-field list."},
+      "coverage": {"effect": "deletion_request", "includes": "AudiencePoint-controlled personal data; contact section explicitly accepts direct rights requests.", "excludes": "Independent customer lists, anonymized statistics and lawful retention; backups may be isolated until deletion is possible."},
+      "automation": {"mode": "manual", "reason": "Controller/processor routing and unspecified identity matching require review."},
+      "evidence": [{"url": "https://audiencepoint.com/privacy-policy/", "checked_on": "2026-09-29", "excerpt": "by emailing AudiencePoint at privacy@audiencepoint.com", "supports": ["identity", "relevance", "removal", "required_information", "coverage"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested", "unknowns": ["Exact identifier matching and customer-controller allocation for an individual record.", "Current unique-person database size."]
+    },
+    {
+      "id": "allant-group", "name": "Allant Group", "match_domains": ["allantgroup.com"],
+      "identity": {"legal_name": "Allant Group, LLC", "brands": ["Allant", "AMP+"], "parent": null, "official_domains": ["allantgroup.com"]},
+      "relevance": {"regions": ["US"], "category": "consumer_marketing", "data_categories": ["Contacts and household attributes", "Property and vehicles", "Interests", "Online identifiers"], "note": "US-state rights route; notice identifies non-US addresses as a possible jurisdictional exclusion."},
+      "removal": {"method": "form", "destination": "https://privacyportal-cdn.onetrust.com/dsarwebform/cbbe21b6-d675-445f-9c24-f625c01dafb3/b0160307-96f2-4e7b-9cd8-c70b09b0a76b.html", "alternatives": ["privacy@allantgroup.com"], "steps": ["Choose deletion or sale/share opt-out in the official portal.", "Provide the documented matching information.", "For deletion, personally review its government-ID requirement; never attach identity documents automatically."]},
+      "required_information": {"fields": ["full_name", "postal_address", "phone", "email", "government_id"], "certainty": "documented", "verification": "Deletion requires ID showing name/address; opt-out lists contact fields without ID. Birth date and selfie belong to specific-data access, not deletion."},
+      "coverage": {"effect": "deletion_request", "includes": "Allant active systems subject to legal retention.", "excludes": "Clients' independently controlled records; European coverage not established."},
+      "automation": {"mode": "manual", "reason": "Address and ID disclosure require deliberate human review."},
+      "evidence": [{"url": "https://allantgroup.com/privacy-policy", "checked_on": "2026-09-29", "published": "2026-06-17", "excerpt": "Government-issued ID Upload: A clear image of a government-issued ID showing name and address.", "supports": ["identity", "relevance", "removal", "required_information", "coverage"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested", "unknowns": ["Actual portal verification behavior and European eligibility.", "Comparable database size."]
+    },
+    {
+      "id": "audience-acuity", "name": "Audience Acuity", "match_domains": ["audienceacuity.com"],
+      "identity": {"legal_name": "Audience Acuity, Inc. (policy); LLC (registry)", "brands": ["Audience Acuity", "Realink", "Identity Authority", "Onsight"], "parent": null, "official_domains": ["audienceacuity.com", "privacy.audienceacuity.com", "optout.audienceacuity.com"]},
+      "relevance": {"regions": ["US", "EU"], "category": "consumer_marketing", "data_categories": ["Contacts", "Demographic and interest segments", "Device identifiers", "Business contacts"], "note": "Notice covers EU-transferred data; legal suffix differs from registry and is not silently merged."},
+      "removal": {"method": "form", "destination": "https://privacy.audienceacuity.com/", "alternatives": ["privacy@audienceacuity.com", "https://optout.audienceacuity.com/"], "steps": ["Select Right to Delete, not just access, in the consumer-rights form.", "Use first/last name and matching email as one published identifier combination.", "Confirm self/agent status and complete later verification; sale opt-out is a separate form."]},
+      "required_information": {"fields": ["first_name", "last_name", "email"], "certainty": "documented", "verification": "Form also permits name/phone or name/address/ZIP matching combinations. Agent signed permission is separate. Further identity checks may follow."},
+      "coverage": {"effect": "deletion_request", "includes": "Audience Acuity proprietary records and marketing uses.", "excludes": "Client databases and retained risk/compliance/anti-fraud data; browser choices remain separate."},
+      "automation": {"mode": "manual", "reason": "Explicit form confirmation and possible further verification."},
+      "evidence": [{"url": "https://audienceacuity.com/privacy-policy/", "checked_on": "2026-09-29", "published": "2025-12-29", "excerpt": "only data in Audience Acuity’s own database", "supports": ["identity", "relevance", "removal", "coverage"]}, {"url": "https://privacy.audienceacuity.com/", "checked_on": "2026-09-29", "excerpt": "#2 First Name, Last Name, and the Email.", "supports": ["removal", "required_information"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested", "unknowns": ["Inc./LLC legal relationship and exact later verification.", "Comparable unique-person size."]
+    },
+    {
+      "id": "agile-education", "name": "Agile Education Marketing", "match_domains": ["agile-ed.com"],
+      "identity": {"legal_name": "Agile Education Marketing, LLC", "brands": ["Agile Education Marketing", "AgileInsight", "Prospector"], "parent": null, "official_domains": ["agile-ed.com", "personalinforequest.agile-ed.com"]},
+      "relevance": {"regions": ["US"], "category": "professional", "data_categories": ["Education professionals' identities", "Employment", "Professional contacts"], "note": "Portal expressly limits records to current US school/district employees; not general consumer exposure."},
+      "removal": {"method": "email", "destination": "automated_info_requests@agile-ed.com", "alternatives": ["https://personalinforequest.agile-ed.com/"], "steps": ["If a record is known, email deletion/opt-out with sufficient school-associated matching information.", "For an existence check or access, use the linked secure portal instead.", "Review additional matching or authentication requests without automatically sharing home address."]},
+      "required_information": {"fields": ["first_name", "last_name", "school_name", "school_address"], "certainty": "not_fully_specified", "verification": "Official email link prepopulates these labels; further matching varies. Portal instead requires home address, home email and educator/self-or-agent confirmations."},
+      "coverage": {"effect": "deletion_request", "includes": "Matched Education Database records, subject to applicable rights.", "excludes": "Independent customer records and unsupported general European coverage."},
+      "automation": {"mode": "manual", "reason": "Known-record versus lookup routing and school-specific identifiers need review."},
+      "evidence": [{"url": "https://agile-ed.com/privacy-policy/", "checked_on": "2026-09-29", "excerpt": "Agile maintains a database containing professional information concerning individuals associated with educational institutions.", "supports": ["identity", "relevance", "coverage"]}, {"url": "https://agile-ed.com/california-privacy-rights/", "checked_on": "2026-09-29", "excerpt": "Please provide sufficient information for Agile to identify the record to which your request applies.", "supports": ["removal", "required_information"]}, {"url": "https://personalinforequest.agile-ed.com/", "checked_on": "2026-09-29", "excerpt": "Agile only maintains information about people who are currently employed by schools or school districts in the United States.", "supports": ["relevance", "required_information", "coverage"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested", "unknowns": ["Email-only matching sufficiency and authentication in each case.", "Comparable unique-person size."]
+    },
+    {
+      "id": "attribits",
+      "name": "Attribits / All Good Media",
+      "match_domains": [
+        "attribits.com"
+      ],
+      "identity": {
+        "legal_name": "All Good Media, LLC",
+        "brands": [
+          "Attribits"
+        ],
+        "parent": null,
+        "official_domains": [
+          "attribits.com",
+          "allgoodmediagroup.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "US"
+        ],
+        "category": "consumer_marketing",
+        "data_categories": [
+          "Emails and associated contacts",
+          "Email engagement",
+          "Device identifiers",
+          "Business contacts"
+        ],
+        "note": "Email-centered marketing data; California-specific rights supplement general jurisdiction-dependent deletion."
+      },
+      "removal": {
+        "method": "form",
+        "destination": "https://www.attribits.com/do-not-sell",
+        "alternatives": [
+          "compliance@allgoodmediagroup.com"
+        ],
+        "steps": [
+          "Submit each email address you want removed separately; do not use only a dedicated request mailbox.",
+          "The page offers compliance@allgoodmediagroup.com as an alternative. Keep each matching address in its own request.",
+          "Check the confirmation delivered to each submitted address. Finish every intended address before checking this task off."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "email"
+        ],
+        "certainty": "not_fully_specified",
+        "verification": "The public instructions specify one email and a confirmation to that address. Interactive validation and later checks have not been tested."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Email and associated personal information in All Good Media's Attribits databases.",
+        "excludes": "Other addresses not submitted, independent clients and lawful retention. The public opt-out page shows no residence restriction; this is not proof of European acceptance or personal exposure."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "One matching email per request; the campaign currently sends one initial request per broker, not per identifier. Use the guided form rather than batch all emails into an unsupported message."
+      },
+      "evidence": [
+        {
+          "url": "https://www.attribits.com/privacy-policy",
+          "checked_on": "2026-09-29",
+          "excerpt": "Attribits, a subsidiary of All Good Media, LLC",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "coverage"
+          ]
+        },
+        {
+          "url": "https://www.attribits.com/do-not-sell",
+          "checked_on": "2026-09-30",
+          "excerpt": "If you have more than one email address, please submit a separate request for each one.",
+          "supports": [
+            "removal",
+            "required_information",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Post-submission verification and acceptance for each resident have not been tested.",
+        "Whether this broker holds the person's data."
+      ]
+    },
+    {
+      "id": "bdex",
+      "name": "BDEX",
+      "match_domains": [
+        "bdex.com"
+      ],
+      "identity": {
+        "legal_name": "BDEX, LLC",
+        "brands": [
+          "BDEX"
+        ],
+        "parent": null,
+        "official_domains": [
+          "bdex.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "US"
+        ],
+        "category": "consumer_marketing",
+        "data_categories": [
+          "Contact and address information",
+          "Advertising identifiers",
+          "Demographics",
+          "Online activity"
+        ],
+        "note": "Current linked notice enumerates US-state rights; European eligibility is not established."
+      },
+      "removal": {
+        "method": "form",
+        "destination": "https://www.bdex.com/privacy-policy/data-sharing-opt-out/",
+        "alternatives": [
+          "privacy@bdex.com"
+        ],
+        "steps": [
+          "Enter an email associated with your data and select the option to stop sharing on the BDEX platform.",
+          "The separate information-access option is not a deletion request. Inspect any verification or residence requirements before submitting.",
+          "For deletion, contact privacy@bdex.com with the matching email. Its current rights table lists US states; European acceptance is not established."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "email",
+          "opt_out_selection"
+        ],
+        "certainty": "not_fully_specified",
+        "verification": "Visible form asks for email and action choice; no residence field is visible in public HTML. Subsequent validation and confirmation remain untested."
+      },
+      "coverage": {
+        "effect": "suppression",
+        "includes": "The form requests sharing suppression for the matched BDEX information.",
+        "excludes": "Not historical erasure or downstream deletion. Current legal rights are residence-dependent; European fulfilment is unproven."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "The public form offers sharing opt-out, while the deletion-email notice lists US-state rights. Review the exact action and eligibility personally; do not send a blanket European deletion request as an established route."
+      },
+      "evidence": [
+        {
+          "url": "https://www.bdex.com/privacy-policy-old/",
+          "checked_on": "2026-09-29",
+          "excerpt": "BDEX, LLC Privacy Policy",
+          "supports": [
+            "identity"
+          ]
+        },
+        {
+          "url": "https://policies.termageddon.com/api/policy/VlcxYVpsSmxXa2RLTkUxQ1JXYzlQUT09",
+          "checked_on": "2026-09-30",
+          "published": "2026-09-16",
+          "excerpt": "your preference will be applied to your account and our databases, including offline sales.",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "required_information",
+            "coverage"
+          ]
+        },
+        {
+          "url": "https://www.bdex.com/privacy-policy/data-sharing-opt-out/",
+          "checked_on": "2026-09-30",
+          "excerpt": "Opt out of sharing my information on the BDEX platform",
+          "supports": [
+            "form",
+            "matching_information",
+            "suppression_scope"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "European product coverage and rights route.",
+        "Subsequent matching challenges and database size."
+      ]
+    },
+    {
+      "id": "alikeaudience-route-review", "name": "AlikeAudience", "match_domains": ["alikeaudience.com"],
+      "identity": {"legal_name": "AlikeAudience Inc.", "brands": ["AlikeAudience"], "parent": null, "official_domains": ["alikeaudience.com"]},
+      "relevance": {"regions": ["US", "EEA"], "category": "advertising", "data_categories": ["Device and OTT identifiers", "Email-based audiences", "Aggregated household areas"], "note": "Notice discusses EEA processing and California rights but inconsistently says no identifying emails are held."},
+      "removal": {"method": "form", "destination": "https://privacy-optout.alikeaudience.com/", "alternatives": ["privacy@alikeaudience.com", "https://www.alikeaudience.com/privacy-policy/"], "steps": ["Choose the relevant advertising type in the opt-out portal and enter the matching identifier requested; its initial public view asks for an email.", "Complete any confirmation personally. For email opt-out by email, send from the address being suppressed, not an unrelated dedicated inbox.", "For deletion rather than suppression, contact privacy@alikeaudience.com; device matching may require personally reviewed proof. Handle other devices separately."]},
+      "required_information": {"fields": ["advertising_type", "matching_identifier"], "certainty": "not_fully_specified", "verification": "Initial form visible; conditional fields and confirmation untested. Deletion may require device-control evidence."},
+      "coverage": {"effect": "suppression", "includes": "Advertising opt-out for the submitted identifier.", "excludes": "Historical erasure, other devices and independent partner records."},
+      "automation": {"mode": "manual", "reason": "Advertising-type selection, matching identifier and sender-ownership requirements need personal review."},
+      "evidence": [
+        {"url": "https://privacy-optout.alikeaudience.com/", "checked_on": "2026-10-01", "excerpt": "Please select your Advertising Type here", "supports": ["form", "initial_fields"]},
+        {"url": "https://thenai.org/how-to-opt-out/how-to-exercise-your-privacy-choices/", "checked_on": "2026-10-01", "published": "2025-09-30", "excerpt": "AlikeAudience", "supports": ["member_published_form", "privacy_email"]},
+        {"url": "https://www.alikeaudience.com/privacy-policy/", "checked_on": "2026-10-01", "published": "2026-01-01", "excerpt": "You will need to individually opt-out all devices.", "supports": ["identity", "relevance", "removal", "required_information", "coverage"]}
+      ],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested", "unknowns": ["Conditional form fields and verification untested.", "Policy's device-only statement conflicts with its email/household discussion; no complete erasure assumed.", "Current comparable database size."]
+    },
+    {
+      "id": "forager-ai", "name": "Forager.ai", "match_domains": ["forager.ai"],
+      "identity": {"legal_name": "Forager AI LLC", "brands": ["Forager.ai"], "parent": null, "official_domains": ["forager.ai", "app.forager.ai"]},
+      "relevance": {"regions": ["US", "EU", "UK", "Global professional profiles"], "category": "professional", "data_categories": ["Business contacts", "Employment", "Professional social profiles"], "note": "Non-customer Business Contact Data is explicitly covered; GDPR applicability is conditional."},
+      "removal": {"method": "form", "destination": "https://www.forager.ai/consumer-rights-form", "alternatives": ["https://app.forager.ai/privacy/data-removal"], "steps": ["Enter full name and matching business email in the consumer-rights form.", "Request deletion and exclusion from future business-contact sales in the message.", "Complete any verification request and retain the response."]},
+      "required_information": {"fields": ["full_name", "email", "request_description"], "certainty": "documented", "verification": "Visible form requires these fields. Policy may request further matching information; later challenges not tested."},
+      "coverage": {"effect": "deletion_request", "includes": "Business Contact Data; verified opt-out excludes future sales and processing.", "excludes": "Legal retention and independent recipient copies; opt-out alone does not prove all archives erased."},
+      "automation": {"mode": "manual", "reason": "Form and possible matching challenge require interaction."},
+      "evidence": [{"url": "https://www.forager.ai/privacy", "checked_on": "2026-09-29", "published": "2026-09-17", "excerpt": "Once we verify your request, we will remove your data from future sales and processing.", "supports": ["identity", "relevance", "removal", "required_information", "coverage"]}, {"url": "https://www.forager.ai/consumer-rights-form", "checked_on": "2026-09-29", "excerpt": "Consumer Rights Form", "supports": ["removal", "required_information"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested", "unknowns": ["Subsequent identity challenges and archive retention.", "Comparable database size."]
+    },
+    {
+      "id": "instantly-foomonk", "name": "Instantly.ai", "match_domains": ["instantly.ai"],
+      "identity": {"legal_name": "Foo Monk, LLC", "brands": ["Instantly.ai"], "parent": null, "official_domains": ["instantly.ai", "app.instantly.ai"]},
+      "relevance": {"regions": ["US", "EU", "UK", "Global marketing data"], "category": "professional", "data_categories": ["Business and personal contacts", "Employment", "Demographics", "Device identifiers and interactions"], "note": "Own marketing databases and retargeting are distinguished from corporate customer accounts."},
+      "removal": {"method": "form", "destination": "https://app.instantly.ai/privacy/opt-out", "alternatives": ["https://app.instantly.ai/privacy/info", "privacy@instantly.ai", "dpo@instantly.ai"], "steps": ["Use the official opt-out portal to remove marketing-database records.", "For erasure beyond suppression, specify deletion through its privacy request manager and clarify any retention response.", "Complete identity verification; retargeting choices must separately cover each browser."]},
+      "required_information": {"fields": ["full_name", "email"], "certainty": "not_fully_specified", "verification": "Policy says deletion verification may at minimum require name and email. Portal fields are JavaScript-rendered; email response or other matching may follow."},
+      "coverage": {"effect": "deletion_request", "includes": "Matched active marketing profiles; policy usually processes database opt-out within 15 business days.", "excludes": "Suppression identifiers, lawful retention, independent recipients and browser-specific retargeting."},
+      "automation": {"mode": "manual", "reason": "Portal, identity verification and deletion-versus-suppression choices need interaction."},
+      "evidence": [{"url": "https://instantly.ai/privacy", "checked_on": "2026-09-29", "published": "2026-09-22", "excerpt": "remove your personal information from our active marketing databases within 15 business days", "supports": ["identity", "relevance", "removal", "required_information", "coverage"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested", "unknowns": ["Exact rendered portal fields and individual verification requirements.", "Comparable database size."]
+    },
+    {
+      "id": "datanyze", "name": "Datanyze", "match_domains": ["datanyze.com"],
+      "identity": {"legal_name": "Datanyze LLC", "brands": ["Datanyze"], "parent": "ZoomInfo", "official_domains": ["datanyze.com", "privacyrequest.zoominfo.com"]},
+      "relevance": {"regions": ["US", "EU", "UK", "Switzerland", "Global professional profiles"], "category": "professional", "data_categories": ["Professional contacts", "Employment and company associations"], "note": "Official Datanyze center routes to a Datanyze-specific ZoomInfo-hosted removal flow."},
+      "removal": {"method": "form", "destination": "https://privacyrequest.zoominfo.com/remove/verify?origin=datanyze", "alternatives": ["https://www.datanyze.com/privacy-center"], "steps": ["Use the Datanyze-labelled removal form and provide a profile-associated email.", "Complete matching/verification steps and retain the processing notification.", "Do not assume this removes company information or all ZoomInfo products."]},
+      "required_information": {"fields": ["email"], "certainty": "documented", "verification": "Initial form marks email required; full name and phone are shown without required marks. Later verification was not exercised."},
+      "coverage": {"effect": "deletion_request", "includes": "Individual Datanyze profile removal and sale/share opt-out.", "excludes": "Company information explicitly remains; other products and independent copies are not proven removed."},
+      "automation": {"mode": "manual", "reason": "Profile matching and portal verification require interaction."},
+      "evidence": [{"url": "https://www.datanyze.com/privacy-center", "checked_on": "2026-09-29", "excerpt": "Datanyze does not remove company information.", "supports": ["relevance", "removal", "coverage"]}, {"url": "https://privacyrequest.zoominfo.com/remove/verify?origin=datanyze", "checked_on": "2026-09-29", "excerpt": "Email Address*", "supports": ["removal", "required_information"]}, {"url": "https://www.zoominfo.com/legal/privacy-policy", "checked_on": "2026-09-29", "excerpt": "its subsidiary, Datanyze LLC", "supports": ["identity", "relevance"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested",
+      "unknowns": ["Later verification and whether shared systems propagate a request across products.", "Current comparable unique-person count."]
+    },
+    {
+      "id": "demandscience", "name": "DemandScience", "match_domains": ["demandscience.com"],
+      "identity": {"legal_name": "Demand Science Group, LLC; request portal names Demand Science US, LLC", "brands": ["DemandScience", "Audience Builder"], "parent": null, "official_domains": ["demandscience.com"]},
+      "relevance": {"regions": ["EEA", "UK", "US", "Global B2B"], "category": "professional", "data_categories": ["Business contacts and employment", "Buyer interests", "Website and email activity"], "note": "Own business-contact database is covered; client-provided data and customer privacy practices are excluded."},
+      "removal": {"method": "form", "destination": "https://portal.privacyengine.io/app/0CEB4BAE-BBE7-4DD9-BD70-4E2DBB01D64D/4F5BED3F-8BFB-4BF4-A1F8-8A2261BDE0CE", "alternatives": ["privacy@demandscience.com", "https://demandscience.com/privacy-rights/"], "steps": ["Choose self request and deletion in the published public privacy form.", "Provide the relevant business identifiers and residence; review regional eligibility with the privacy team if unclear.", "Validate the request using the email it sends; processing does not start before validation."]},
+      "required_information": {"fields": ["first_name", "last_name", "business_email", "company_name", "country", "business_phone", "data_subject_category"], "certainty": "not_fully_specified", "verification": "Form marks these fields required and displays requester/subject phone branches; exact self/agent conditional behavior was not tested. Email validation mandatory."},
+      "coverage": {"effect": "deletion_request", "includes": "Matched DemandScience business-contact records, subject to retention exceptions.", "excludes": "Client-controlled records, unsubscribing alone and a blanket group-entity deletion guarantee."},
+      "automation": {"mode": "manual", "reason": "Phone/business fields, email validation and European-route ambiguity require review."},
+      "evidence": [{"url": "https://demandscience.com/privacy-policy/", "checked_on": "2026-09-29", "published": "2025-10-23", "excerpt": "Business Contact Information (BCI) like name, job title, business email, and business phone number", "supports": ["identity", "relevance", "removal", "coverage"]}, {"url": "https://portal.privacyengine.io/app/0CEB4BAE-BBE7-4DD9-BD70-4E2DBB01D64D/4F5BED3F-8BFB-4BF4-A1F8-8A2261BDE0CE", "checked_on": "2026-09-29", "excerpt": "We can not proceed until we have valid verification.", "supports": ["identity", "removal", "required_information"]}, {"url": "https://demandscience.com/terms-of-use/audience-builder/", "checked_on": "2026-09-29", "excerpt": "For privacy questions, please contact privacy@demandscience.com.", "supports": ["removal"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested",
+      "unknowns": ["Policy's European my.privacyengine.io link redirects to vendor sign-in; public portal regional handling needs confirmation.", "Exact conditional form fields and regional entity allocation.", "Terminus merger and privacy-page redirect are established, but legacy Terminus controller/product deletion scope is not; no group-wide closure should be inferred.", "Parent ownership and comparable scale."]
+    },
+    {
+      "id": "clay-scope-review", "name": "Clay", "match_domains": ["clay.com"],
+      "identity": {"legal_name": "Clay Labs Inc.", "brands": ["Clay"], "parent": null, "official_domains": ["clay.com"]},
+      "relevance": {"regions": ["US", "EEA", "Global sales enrichment; exact profile scope unresolved"], "category": "professional", "data_categories": ["Business contacts and enrichment", "Professional and social profiles", "Customer workspace data"], "note": "Published legacy notice describes own website/marketing data; current AI documentation describes customer data as processor-held."},
+      "removal": {"method": "investigate", "destination": "https://privacy.clay.com/policies", "alternatives": ["privacy@clay.com", "https://www.clay.com/privacy"], "steps": ["Inspect the current privacy-center notice and establish whether data is Clay-controlled or held for a customer.", "Legacy notice publishes privacy@clay.com for deletion; ask which enrichment/provider records this covers.", "Contact the relevant customer for its workspace data; do not assume removal from all upstream providers."]},
+      "required_information": {"fields": [], "certainty": "not_fully_specified", "verification": "Legacy notice allows record matching and contact through an existing email/phone. Current portal requirements were not exposed."},
+      "coverage": {"effect": "needs_review", "includes": "Potential own-controller removal or customer-directed workspace deletion.", "excludes": "All upstream providers and customer workspaces are not documented as one central deletion scope."},
+      "automation": {"mode": "blocked", "reason": "Current privacy-center policy and non-user enrichment scope need resolution before generic sending."},
+      "evidence": [{"url": "https://www.clay.com/privacy", "checked_on": "2026-09-29", "published": "2020-09-11; still published", "excerpt": "privacy@clay.com", "supports": ["identity", "relevance", "removal", "required_information"]}, {"url": "https://university.clay.com/docs/ai-in-clay", "checked_on": "2026-09-29", "excerpt": "Clay acts as a data processor; you remain the data controller.", "supports": ["relevance", "coverage"]}, {"url": "https://privacy.clay.com/policies", "checked_on": "2026-09-29", "excerpt": "JavaScript has been disabled", "supports": ["removal"]}],
+      "scale": null, "review_status": "needs_research", "tested_outcome": "not_tested",
+      "unknowns": ["Current privacy-center text and independent enrichment database scope.", "Matching fields, verification, parent ownership and comparable scale."]
+    },
+    {
+      "id": "endgame", "name": "Endgame", "match_domains": ["endgame.io"],
+      "identity": {"legal_name": "Endgame Labs, Inc.", "brands": ["Endgame"], "parent": null, "official_domains": ["endgame.io"]},
+      "relevance": {"regions": ["US and international services; specific European coverage unknown"], "category": "professional", "data_categories": ["Professional contacts and profiles", "Customer CRM and communications", "AI-derived relationship insights"], "note": "Customer contacts are processor-held; Endgame's own website and prospecting records are distinct."},
+      "removal": {"method": "email", "destination": "privacy@endgame.io", "alternatives": ["https://docs.endgame.io/trust/privacy"], "steps": ["For Endgame-held personal information, use subject Forget me and describe the record/context.", "For a customer's account data, first request deletion from that customer.", "An automation API may be requested with subject Automated Personal Information Management; no public endpoint or access is established."]},
+      "required_information": {"fields": [], "certainty": "not_fully_specified", "verification": "Minimum identifiers and verification method are not published."},
+      "coverage": {"effect": "access_then_review", "includes": "Own-controller deletion or customer-directed processing, depending on record context.", "excludes": "One central request is not documented to erase every customer's CRM, communications or AI-derived insights."},
+      "automation": {"mode": "manual", "reason": "Controller/customer scope and matching information need resolution."},
+      "evidence": [{"url": "https://www.endgame.io/privacy", "checked_on": "2026-09-29", "published": "2026-09-11", "excerpt": "please email privacy@endgame.io with the subject Forget me.", "supports": ["identity", "relevance", "removal", "coverage"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested",
+      "unknowns": ["Which customer/controller holds a particular record and exact verification.", "Automation API availability and contract restrictions.", "Parent ownership and comparable profile count."]
+    },
+    {
+      "id": "applovin-advertising", "name": "AppLovin advertising", "match_domains": ["applovin.com"],
+      "identity": {"legal_name": "AppLovin Corporation", "brands": ["AppLovin"], "parent": null, "official_domains": ["applovin.com"]},
+      "relevance": {"regions": ["Global", "EU", "UK", "Switzerland", "US"], "category": "advertising", "data_categories": ["Advertising IDs and device signals", "Advertising interactions", "Merchant-provided email and phone identifiers"], "note": "Separate matching paths for device advertising IDs versus email/phone-associated e-commerce advertising data."},
+      "removal": {"method": "manual", "destination": "https://applovin.com/en/privacy-data-request", "alternatives": ["dataprotection@applovin.com", "https://legal.applovin.com/privacy/"], "steps": ["For email/phone-linked data, choose deletion in the privacy-rights portal.", "For device-linked data, use the AppLovin Privacy Management Application described in the policy on each relevant device.", "EU/UK/Swiss rights can also be raised with the DPO; specify the relevant identifier category."]},
+      "required_information": {"fields": ["email"], "certainty": "not_fully_specified", "verification": "Portal requires valid email and later identifier verification; later-step fields were not exposed. Device app uses advertising identifier."},
+      "coverage": {"effect": "deletion_request", "includes": "Matched AppLovin advertising records for the selected identifier.", "excludes": "Other identifier types, partner-controller copies and lawful retained records are not automatically removed."},
+      "automation": {"mode": "manual", "reason": "Separate portal/app flows and identifier authentication require user participation."},
+      "evidence": [{"url": "https://legal.applovin.com/privacy/", "checked_on": "2026-09-29", "published": "2026-08-06", "excerpt": "The above data rights mechanisms are available to you regardless of where you live.", "supports": ["identity", "relevance", "removal", "required_information", "coverage"]}, {"url": "https://applovin.com/en/privacy-data-request", "checked_on": "2026-09-29", "excerpt": "Permanently remove the personal data AppLovin has associated with your email or phone number from our advertising systems.", "supports": ["removal", "coverage"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested",
+      "unknowns": ["Later portal fields and device app behavior.", "Comparable unique-person scale and ultimate ownership."]
+    },
+    {
+      "id": "claritas-us", "name": "Claritas US marketing", "match_domains": ["claritas.com"],
+      "identity": {"legal_name": "Claritas, LLC", "brands": ["Claritas"], "parent": null, "official_domains": ["claritas.com"]},
+      "relevance": {"regions": ["US"], "category": "consumer_marketing", "data_categories": ["Household and contact information", "Device and browser identifiers", "Audience characteristics and advertising activity"], "note": "Company says its services exclude non-US personal data and routes international processing to AdXcel dba ArtsAI separately."},
+      "removal": {"method": "form", "destination": "https://privacyportal.onetrust.com/webform/68582716-6ce4-4f6e-bf08-78371b5f3292/6c7dc52d-0e2b-481f-9256-0755179e3783", "alternatives": ["https://claritas.com/privacy-legal/"], "steps": ["US residents select deletion in the designated form, or call 1-888-994-9312.", "Provide first/last name and home address at minimum.", "For non-US processing, identify the relevant ArtsAI route instead of assuming Claritas deletion covers it."]},
+      "required_information": {"fields": ["first_name", "last_name", "home_address"], "certainty": "not_fully_specified", "verification": "These minimum fields are mandatory in the notice; extra portal fields and verification vary. Agent requests may require signed authority."},
+      "coverage": {"effect": "deletion_request", "includes": "Eligible matched US Claritas database information.", "excludes": "ArtsAI international data, browser-only opt-outs, independent copies and legal-retention exceptions."},
+      "automation": {"mode": "manual", "reason": "Postal matching, designated form and regional scope need review."},
+      "evidence": [{"url": "https://claritas.com/privacy-legal/", "checked_on": "2026-09-29", "published": "2026-05-08", "excerpt": "A properly submitted deletion request will include, at minimum, your first and last name and home address.", "supports": ["identity", "relevance", "removal", "required_information", "coverage"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested",
+      "unknowns": ["Live form fields and verification.", "ArtsAI product route must be separately researched; no deletion there is implied.", "Parent ownership and comparable person count."]
+    },
+    {
+      "id": "brandwatch-authors", "name": "Brandwatch online author database", "match_domains": ["brandwatch.com"],
+      "identity": {"legal_name": "Runtime Collective Limited; named subsidiaries/affiliates may also act as controllers", "brands": ["Brandwatch", "Crimson Hexagon", "Paladin", "Falcon.io"], "parent": null, "official_domains": ["brandwatch.com"]},
+      "relevance": {"regions": ["UK", "EEA", "US", "Global public online content"], "category": "consumer_marketing", "data_categories": ["Social handles and public posts", "Public images and employment", "Author analytics"], "note": "Author-database policy explicitly names Crimson Hexagon Inc.; this is distinct from customer-account information."},
+      "removal": {"method": "email", "destination": "privacy@brandwatch.com", "alternatives": ["https://www.brandwatch.com/legal/data-subject-access-request/"], "steps": ["Request deletion and further-use/sale objection for the online author profiles.", "Identify relevant handles or public profiles after confirming matching requirements.", "Consider source-platform privacy settings to reduce re-collection; Brandwatch cannot erase original posts."]},
+      "required_information": {"fields": [], "certainty": "not_fully_specified", "verification": "Additional identifying information may be requested; exact minimum fields are unpublished. Agents need signed permission and possible direct verification."},
+      "coverage": {"effect": "deletion_request", "includes": "Matched Brandwatch author records, subject to retention exceptions.", "excludes": "Original public posts, independent customer copies and blanket deletion across every Cision product."},
+      "automation": {"mode": "manual", "reason": "Author-handle matching and verification are not fully specified."},
+      "evidence": [{"url": "https://www.brandwatch.com/legal/author-privacy-policy/", "checked_on": "2026-09-29", "published": "2024-11-15", "excerpt": "we are Runtime Collective Limited, and we trade as Brandwatch", "supports": ["identity", "relevance", "removal", "required_information", "coverage"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested",
+      "unknowns": ["Exact controller for a particular profile, required identifiers and live form fields.", "Current legal parent ownership and comparable unique-author count."]
+    },
+    {
+      "id": "azerion-advertising-routes", "name": "Azerion advertising routes", "match_domains": ["azerion.com"],
+      "identity": {"legal_name": "Azerion Group N.V.; product controllers include Azerion Technology B.V. and Hybrid Theory", "brands": ["Azerion", "FMS", "Hybrid Theory", "Azerion Native"], "parent": null, "official_domains": ["azerion.com", "hybridtheory.com"]},
+      "relevance": {"regions": ["EEA", "UK", "US", "Global advertising"], "category": "advertising", "data_categories": ["Device identifiers and IP addresses", "Ad interactions and browsing", "Location and inferred interests"], "note": "FMS, Native and Hybrid Theory have distinct notices. The US integration announcement does not prove blanket deletion coverage."},
+      "removal": {"method": "email", "destination": "dpo@azerion.com", "alternatives": ["dpo_strossle@azerion.com"], "steps": ["Identify the relevant product and ask the DPO to resolve its legal controller.", "FMS and Hybrid Theory request name, email and a description of the right exercised.", "Native publishes a separate DPO address. Ask which device/cookie identifiers are needed before sending more data."]},
+      "required_information": {"fields": ["full_name", "email"], "certainty": "not_fully_specified", "verification": "Published starting fields do not establish how pseudonymous/device records are matched or verified."},
+      "coverage": {"effect": "deletion_request", "includes": "Matched records within the selected product/controller, with retention exceptions.", "excludes": "Independent publishers, ad partners, games and every group subsidiary are not automatically covered."},
+      "automation": {"mode": "manual", "reason": "Product/controller selection and pseudonymous matching must precede automation."},
+      "evidence": [{"url": "https://www.azerion.com/azerion-fms-platform-privacy-notice/", "checked_on": "2026-09-29", "published": "2025-07-29", "excerpt": "providing your name, your email address as well as a description of your request", "supports": ["identity", "relevance", "removal", "required_information", "coverage"]}, {"url": "https://www.hybridtheory.com/privacy-notice/", "checked_on": "2026-09-29", "published": "2026-01-14", "excerpt": "Hybrid Theory", "supports": ["identity", "removal", "relevance"]}, {"url": "https://www.azerion.com/azerion-native-privacy-notice/", "checked_on": "2026-09-29", "published": "2026-02-26", "excerpt": "dpo_strossle@azerion.com", "supports": ["identity", "removal"]}, {"url": "https://www.azerion.com/azerion-expands-into-north-america-merging-three-adtech-acquisitions/", "checked_on": "2026-09-29", "published": "2023-09-21", "excerpt": "Hybrid Theory, Infinia, and Targetspot – to form a single entity, Azerion US.", "supports": ["identity"]}, {"url": "https://www.azerion.com/azerion-global-corporate-privacy-notice/", "checked_on": "2026-09-29", "excerpt": "Each such specific privacy policy or notice supplements and amends this Notice.", "supports": ["identity", "coverage"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested",
+      "unknowns": ["Current US legal-controller allocation and product-wide matching procedure.", "Whether multiple product requests can be consolidated safely.", "Comparable person count; event volume is not personal exposure."]
+    },
+    {
+      "id": "adeptid-people-search", "name": "AdeptID People Search", "match_domains": ["adept-id.com"],
+      "identity": {"legal_name": "AdeptID, Inc.", "brands": ["AdeptID", "People Search"], "parent": null, "official_domains": ["adept-id.com"]},
+      "relevance": {"regions": ["EU", "UK", "Canada", "US"], "category": "recruitment", "data_categories": ["Candidate contacts and career history", "Skills, education and social profiles", "Demographics and inferred salary"], "note": "Searchable candidate profiles and algorithmic suitability insights; organization-controlled processor records are separate."},
+      "removal": {"method": "email", "destination": "privacy@adept-id.com", "alternatives": ["https://www.adept-id.com/privacy-policy/"], "steps": ["Request People Search erasure and objection to candidate profiling.", "Do not confuse website cookie or marketing preferences with profile removal.", "Review any identity challenge personally."]},
+      "required_information": {"fields": [], "certainty": "not_fully_specified", "verification": "Minimum matching fields unspecified. US verification may involve email, telephone or video questions; no new account required."},
+      "coverage": {"effect": "deletion_request", "includes": "Matched active/readily searchable candidate records.", "excludes": "Non-erasable backups, anonymized data and previously disclosed customer copies may remain."},
+      "automation": {"mode": "manual", "reason": "Candidate matching and variable identity verification need review."},
+      "evidence": [{"url": "https://www.adept-id.com/wp-content/uploads/2025/06/AdeptID-Privacy-Policy_Updated-June-13-2025.pdf", "checked_on": "2026-09-29", "published": "2025-06-13", "excerpt": "Making a verifiable consumer request does not require you to create an account with us.", "supports": ["identity", "relevance", "removal", "required_information", "coverage"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested",
+      "unknowns": ["Minimum matching identifiers and applicable verification.", "Parent ownership and comparable profile count."]
+    },
+    {
+      "id": "enigma", "name": "Enigma", "match_domains": ["enigma.com"],
+      "identity": {"legal_name": "Enigma Technologies, Inc.", "brands": ["Enigma"], "parent": null, "official_domains": ["enigma.com"]},
+      "relevance": {"regions": ["US businesses; global website users"], "category": "identity_risk", "data_categories": ["Business-associated contacts and registered agents", "Business registrations", "Revenue and transaction data"], "note": "Business intelligence includes associated individuals; business verification/risk tools are not ordinary consumer marketing alone."},
+      "removal": {"method": "email", "destination": "privacy@enigma.com", "alternatives": ["https://www.enigma.com/legal/do-not-sell"], "steps": ["Request deletion and future sale/share opt-out.", "Send from the email associated with the record where possible.", "Review additional identity verification before providing more information."]},
+      "required_information": {"fields": ["email"], "certainty": "not_fully_specified", "verification": "Associated sender email or additional identifying information is required; further fields are unspecified."},
+      "coverage": {"effect": "deletion_request", "includes": "Eligible matched personal information and future sale/share restrictions.", "excludes": "Legal-retention exceptions and previously disclosed customer data; not deletion of underlying government registers."},
+      "automation": {"mode": "manual", "reason": "Associated-email authentication and risk-product exceptions require review."},
+      "evidence": [{"url": "https://www.enigma.com/legal/privacy-policy", "checked_on": "2026-09-29", "published": "2024-07-01", "excerpt": "send it from the email address associated with your information", "supports": ["identity", "relevance", "removal", "required_information", "coverage"]}, {"url": "https://www.enigma.com/legal/do-not-sell", "checked_on": "2026-09-29", "excerpt": "please email privacy@enigma.com, or submit the webform below.", "supports": ["removal", "coverage"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested",
+      "unknowns": ["European business-person coverage and exact additional matching fields.", "Parent ownership and comparable personal-record count."]
+    },
+    {
+      "id": "explorium", "name": "Explorium enrichment data", "match_domains": ["explorium.ai"],
+      "identity": {"legal_name": "Explorium Ltd.; registry Inc. relationship unconfirmed", "brands": ["Explorium", "Vibe Prospecting"], "parent": null, "official_domains": ["explorium.ai", "vibeprospecting.ai"]},
+      "relevance": {"regions": ["EEA", "UK", "US"], "category": "professional", "data_categories": ["Contacts and professional histories", "Social and online activity", "Education and geographic attributes"], "note": "Current policy treats enrichment as controller data; customer-uploaded records remain processor data."},
+      "removal": {"method": "form", "destination": "https://www.explorium.ai/do-not-sell-my-personal-info/", "alternatives": ["https://www.explorium.ai/privacy-policy/"], "steps": ["Request enrichment-data erasure using the official opt-out form.", "Specify deletion rather than only website marketing preferences.", "For customer-uploaded data, contact that customer separately."]},
+      "required_information": {"fields": [], "certainty": "not_fully_specified", "verification": "Dynamic form fields were unavailable; policy permits matching existing identifiers and additional verification."},
+      "coverage": {"effect": "deletion_request", "includes": "Matched enrichment records; policy says deletion and do-not-share requests both remove database data.", "excludes": "Customer-controlled uploads, exempt data and unrelated processing are not blanket-covered."},
+      "automation": {"mode": "manual", "reason": "Live form and regional/controller identity need review."},
+      "evidence": [{"url": "https://www.explorium.ai/privacy-policy/", "checked_on": "2026-09-29", "published": "2026-06-28", "excerpt": "For all other personal information described in this Privacy Policy, Explorium acts as a controller.", "supports": ["identity", "relevance", "required_information", "coverage"]}, {"url": "https://www.explorium.ai/do-not-sell-my-personal-info/", "checked_on": "2026-09-29", "excerpt": "erase your personal information that we use as Enrichment Data", "supports": ["removal", "coverage"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested",
+      "unknowns": ["Explorium Inc. versus Ltd. entity relationship.", "Live form requirements, parent ownership and comparable scale."]
+    },
+    {
+      "id": "evorra", "name": "Evorra", "match_domains": ["evorra.com"],
+      "identity": {"legal_name": "Evorra, Inc. and Evorra Limited", "brands": ["Evorra"], "parent": null, "official_domains": ["evorra.com"]},
+      "relevance": {"regions": ["EEA", "UK", "US"], "category": "advertising", "data_categories": ["Pseudonymous email, phone and device identifiers", "Demographics and interests", "Browsing and location"], "note": "Product notice names both entities as covered; exact regional controller allocation remains unspecified."},
+      "removal": {"method": "form", "destination": "https://privacy.evorra.com/", "alternatives": ["privacy@evorra.com", "DPO@evorra.com"], "steps": ["Select own-data request and Delete my data, optionally also sale opt-out.", "Provide name, email and country; US residents additionally select state.", "Complete the anti-bot check yourself and review any later verification."]},
+      "required_information": {"fields": ["first_name", "last_name", "email", "country"], "certainty": "documented", "verification": "US state conditional. Turnstile present. Access/correction uses emailed code; agents additionally require signed authorization and company/consumer details."},
+      "coverage": {"effect": "deletion_request", "includes": "Matched Evorra product records.", "excludes": "Independent partner/controller copies and unmatched devices; cookie preferences alone are not erasure."},
+      "automation": {"mode": "manual", "reason": "Human anti-bot interaction and device/profile matching may be necessary."},
+      "evidence": [{"url": "https://evorra.com/privacy-data-policies/product-privacy-policy/", "checked_on": "2026-09-29", "published": "2024-07-02; reporting updated 2026-07-01", "excerpt": "Evorra, Inc. and any affiliates including Evorra Limited", "supports": ["identity", "relevance", "removal", "coverage"]}, {"url": "https://privacy.evorra.com/", "checked_on": "2026-09-29", "excerpt": "If you ask to access or correct your own data, we email you a code", "supports": ["removal", "required_information"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested",
+      "unknowns": ["Exact regional controller assignment and device matching.", "Parent ownership and comparable population count."]
+    },
+    {
+      "id": "enlyft", "name": "Enlyft", "match_domains": ["enlyft.com"],
+      "identity": {"legal_name": "Enlyft, Inc.", "brands": ["Enlyft"], "parent": null, "official_domains": ["enlyft.com"]},
+      "relevance": {"regions": ["EU", "EEA", "UK", "US", "Canada"], "category": "professional", "data_categories": ["Professional contacts and employment", "Commercial interactions", "Online activity and inferences"], "note": "Own-directory controller records differ from Enterprise subscribers' first-party processor data."},
+      "removal": {"method": "form", "destination": "https://enlyft.com/privacy/check-email", "alternatives": ["privacy@enlyft.com"], "steps": ["Enter the work email associated with the professional profile.", "If matched, use the emailed removal link; the FAQ says confirmation follows within 30 days.", "For broader erasure or profiling objections, contact the privacy team."]},
+      "required_information": {"fields": ["business_email"], "certainty": "documented", "verification": "Initial form requires work email and uses an emailed link. Further email-request verification is unspecified."},
+      "coverage": {"effect": "deletion_request", "includes": "Matched Enlyft directory records; policy allows deletion, deidentification or aggregation.", "excludes": "Subscriber-controlled records and independent customer usage require separate requests."},
+      "automation": {"mode": "manual", "reason": "Inbox confirmation and matching work-email selection are required."},
+      "evidence": [{"url": "https://enlyft.com/privacy-policy", "checked_on": "2026-09-29", "published": "2025-10-08", "excerpt": "Enlyft may permanently delete, deidentify, or aggregate Personal Data in response to a request for deletion.", "supports": ["identity", "relevance", "removal", "coverage"]}, {"url": "https://enlyft.com/privacy/faq", "checked_on": "2026-09-29", "excerpt": "you will be notified via email and provided with a link to Opt-out", "supports": ["removal", "required_information"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested",
+      "unknowns": ["Post-link verification and request outcome.", "Parent ownership and comparable personal-profile count."]
+    },
+    {
+      "id": "draup", "name": "Draup People Insights", "match_domains": ["draup.com"],
+      "identity": {"legal_name": "Draup, Inc.", "brands": ["Draup", "People Insights"], "parent": null, "official_domains": ["draup.com"]},
+      "relevance": {"regions": ["EU", "EEA", "US", "Global professional profiles"], "category": "professional", "data_categories": ["Professional contacts", "Career, education and skills", "Public social profiles and pictures"], "note": "Independent candidate/lead database is separate from customer-uploaded processor data."},
+      "removal": {"method": "email", "destination": "privacy@draup.com", "alternatives": ["https://draup.com/do-not-sell-my-personal-information"], "steps": ["Use subject Opt-Out and request removal from People Insights, including pseudonymous profiles.", "Provide first and last name and the email held on the profile.", "Review any additional verification request; the portal also begins with work-email verification."]},
+      "required_information": {"fields": ["full_name", "email"], "certainty": "documented", "verification": "Policy specifies first/last name and an email already held; further information may be requested."},
+      "coverage": {"effect": "deletion_request", "includes": "People Insights profile removal and sale opt-out; minimal suppression information remains.", "excludes": "Customer-controlled uploads and independently exported records are not blanket-covered."},
+      "automation": {"mode": "manual", "reason": "Matching email must be selected; any additional identity verification remains human-reviewed."},
+      "evidence": [{"url": "https://draup.com/privacy-policy", "checked_on": "2026-09-29", "excerpt": "email us at privacy@draup.com using the email subject line “Opt-Out,”", "supports": ["identity", "removal", "required_information", "coverage"]}, {"url": "https://draup.com/eu-user-privacy-policy", "checked_on": "2026-09-29", "excerpt": "the minimum amount of information necessary for this purpose", "supports": ["relevance", "coverage"]}, {"url": "https://draup.com/do-not-sell-my-personal-information", "checked_on": "2026-09-29", "excerpt": "you are also opting out of the sale of the information contained in it", "supports": ["removal", "coverage"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested",
+      "unknowns": ["Policy update date and subsequent verification.", "Legacy GDPR page contains outdated compliance statements; no independent compliance endorsement.", "Parent ownership and comparable profile count."]
+    },
+    {
+      "id": "definitive-healthcare", "name": "Definitive Healthcare View and Carevoyance", "match_domains": ["definitivehc.com"],
+      "identity": {"legal_name": "Definitive Healthcare LLC", "brands": ["View", "Carevoyance"], "parent": null, "official_domains": ["definitivehc.com"]},
+      "relevance": {"regions": ["US", "Canada", "European website and business contacts"], "category": "professional", "data_categories": ["Healthcare professional contacts and affiliations", "Licences and practice metrics", "Healthcare executive profiles"], "note": "View excludes European HCP personal profiles; global Monocl experts and US Populi consumers have separate notices."},
+      "removal": {"method": "form", "destination": "https://preferences.definitivehc.com/privacy", "alternatives": ["privacy@definitivehc.com"], "steps": ["Select a privacy-rights deletion request, not newsletter unsubscribe.", "Specify the relevant product and professional identifiers.", "Check Monocl or Populi separately if applicable; no group-wide removal is presumed."]},
+      "required_information": {"fields": [], "certainty": "not_fully_specified", "verification": "Public portal rendered an empty application shell. Policy allows identity checks without specifying exact fields."},
+      "coverage": {"effect": "deletion_request", "includes": "Matched active/readily searchable records, subject to exceptions.", "excludes": "Non-erasable backups and independent customer copies; separate product coverage requires confirmation."},
+      "automation": {"mode": "manual", "reason": "Product selection and live portal requirements need review."},
+      "evidence": [{"url": "https://www.definitivehc.com/privacy-policy", "checked_on": "2026-09-29", "published": "2026-08-31", "excerpt": "we search the products and systems reasonably likely to contain information about the individual", "supports": ["identity", "relevance", "removal", "required_information", "coverage"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested",
+      "unknowns": ["Exact current form fields and matching requirements.", "Parent ownership and comparable person count."]
+    },
+    {
+      "id": "accurate-append", "name": "Accurate Append", "match_domains": ["accurateappend.com"],
+      "identity": {"legal_name": "Accurate Append Inc.", "brands": ["Accurate Append"], "parent": null, "official_domains": ["accurateappend.com"]},
+      "relevance": {"regions": ["US; European coverage unresolved"], "category": "consumer_marketing", "data_categories": ["Names and contact information", "Age and marital status", "Postal locations"], "note": "Policy separates third-party data from website and customer-input records."},
+      "removal": {"method": "investigate", "destination": "https://clients.accurateappend.com/public/optout/capture", "alternatives": ["https://accurateappend.com/privacy-policy/"], "steps": ["Use the published opt-out form or toll-free rights number 833-663-1919.", "Clarify non-account-holder deletion and geographic eligibility before providing personal information.", "Do not create an account merely to request removal."]},
+      "required_information": {"fields": [], "certainty": "not_fully_specified", "verification": "Form was inaccessible. Policy requires existing account deletion first but does not explain non-customer handling."},
+      "coverage": {"effect": "needs_review", "includes": "California sale opt-out and deletion rights are published.", "excludes": "Email-list unsubscribe is not whole-database deletion; European applicability is unproven."},
+      "automation": {"mode": "blocked", "reason": "Inaccessible form and ambiguous account condition require clarification."},
+      "evidence": [{"url": "https://accurateappend.com/privacy-policy/", "checked_on": "2026-09-29", "published": "2026-09", "excerpt": "You must delete your Account before we can process this request.", "supports": ["identity", "relevance", "removal", "required_information", "coverage"]}],
+      "scale": null, "review_status": "needs_research", "tested_outcome": "not_tested",
+      "unknowns": ["Non-customer deletion procedure and European coverage.", "Required identifiers, form verification and parent ownership."]
+    },
+    {
+      "id": "blis", "name": "Blis", "match_domains": ["blis.com"],
+      "identity": {"legal_name": "Blis Global Ltd", "brands": ["Blis"], "parent": null, "official_domains": ["blis.com"]},
+      "relevance": {"regions": ["UK", "EEA", "US", "Global advertising"], "category": "advertising", "data_categories": ["Mobile and cookie identifiers", "Precise location and location history", "Browsing and inferred interests"], "note": "Policy names Blis Global Ltd as controller. Advertising records are pseudonymous and are not linked to consumer names or emails in its stated model."},
+      "removal": {"method": "email", "destination": "privacy@blis.com", "alternatives": ["dpo@blis.com", "https://blis.com/privacy-centre/"], "steps": ["Request erasure and advertising objection through the privacy team.", "Ask which cookie or advertising identifiers are needed to match your devices; an email alone does not establish a match.", "Handle each device/browser separately for local advertising opt-outs."]},
+      "required_information": {"fields": ["device_or_cookie_identifier"], "certainty": "not_fully_specified", "verification": "Identifier matching follows the documented pseudonymous data model; exact deletion verification is not specified."},
+      "coverage": {"effect": "deletion_request", "includes": "Matched Blis advertising records, subject to security and legal retention.", "excludes": "Unmatched devices, partner-controller records and local opt-outs do not establish total erasure."},
+      "automation": {"mode": "manual", "reason": "No name/email matching; device identifiers and verification require review."},
+      "evidence": [{"url": "https://blis.com/blis-privacy-policy-for-online-advertising-and-related-uses/", "checked_on": "2026-09-29", "published": "2025-11-17", "excerpt": "We do not associate that identifier with your name, email, address, or phone number", "supports": ["identity", "relevance", "removal", "required_information", "coverage"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested",
+      "unknowns": ["Exact identifier submission and verification procedure.", "Ultimate ownership and comparable database size."]
+    },
+    {
+      "id": "clearview-ai", "name": "Clearview AI", "match_domains": ["clearview.ai"],
+      "identity": {"legal_name": "Clearview AI, Inc.", "brands": ["Clearview AI"], "parent": null, "official_domains": ["clearview.ai"]},
+      "relevance": {"regions": ["US state-specific rights routes; European route unresolved"], "category": "identity_risk", "data_categories": ["Public facial images", "Image metadata", "Facial appearance-derived information"], "note": "Facial-search service for government and law-enforcement users. Published product purpose does not imply absence of European faces."},
+      "removal": {"method": "investigate", "destination": "https://www.clearview.ai/privacy-and-requests", "alternatives": ["privacy@clearview.ai"], "steps": ["Identify the applicable regional rights route before submitting anything.", "Published US routes use state-specific forms; ordinary request email is generally rejected by the notice.", "Review the necessity and consequences of providing a headshot or identity documents personally."]},
+      "required_information": {"fields": ["email", "headshot"], "certainty": "not_fully_specified", "verification": "Published US opt-out instructions require email and headshot; government ID is additionally required for access. These are not established European requirements."},
+      "coverage": {"effect": "needs_review", "includes": "State-specific deletion or exclusion from Clearview search results, depending on route.", "excludes": "Source websites, government-held copies and universal European processing are not proven covered."},
+      "automation": {"mode": "blocked", "reason": "European route unresolved; facial image/document submission must never be automatic."},
+      "evidence": [{"url": "https://www.clearview.ai/public-privacy-policy", "checked_on": "2026-09-29", "published": "2026-07-01", "excerpt": "Please do not email us requesting to process your consumer request such as opting out and access.", "supports": ["identity", "relevance", "removal", "required_information", "coverage"]}, {"url": "https://www.clearview.ai/privacy-and-requests", "checked_on": "2026-09-29", "excerpt": "For California Residents:", "supports": ["removal", "relevance"]}],
+      "scale": null, "review_status": "needs_research", "tested_outcome": "not_tested",
+      "unknowns": ["Current European request channel and regulator-specific treatment.", "Whether a selected route erases underlying material or only suppresses search results.", "Parent ownership and current comparable image/person counts."]
+    },
+    {
+      "id": "adswizz", "name": "AdsWizz", "match_domains": ["adswizz.com"],
+      "identity": {"legal_name": "AdsWizz Inc.; collecting regional group entity where specified", "brands": ["AdsWizz"], "parent": null, "official_domains": ["adswizz.com"]},
+      "relevance": {"regions": ["EU", "US", "Global audio services"], "category": "advertising", "data_categories": ["Audio listening and advertising events", "Device and session data", "Business and website contacts"], "note": "Product notice describes publisher/advertiser data as processor data. Website and business-contact controller records have a different route."},
+      "removal": {"method": "manual", "destination": "https://www.adswizz.com/privacy-policy/", "alternatives": ["privacy@adswizz.com", "https://privacyportal.onetrust.com/webform/613d75ce-3c5b-4623-bcef-a0d3694b4214/5d4c0df7-4981-40cd-b9b0-00fa325d444f"], "steps": ["For listener data, submit deletion through the relevant radio, music or podcast app/publisher.", "For AdsWizz-controlled website or business data, use its privacy contact or linked rights portal.", "Do not treat an app-specific response as deletion across all publishers."]},
+      "required_information": {"fields": ["relevant_publisher_or_app"], "certainty": "not_fully_specified", "verification": "Listener matching and verification depend on the publisher. Controller portal fields were not verified."},
+      "coverage": {"effect": "access_then_review", "includes": "Publisher-directed deletion or separate controller request as appropriate.", "excludes": "One central request is not documented to erase every listener record or independent advertiser copy."},
+      "automation": {"mode": "blocked", "reason": "Resolve product/controller scope before preparing a generic broker deletion request."},
+      "evidence": [{"url": "https://www.adswizz.com/privacy-policy/", "checked_on": "2026-09-29", "excerpt": "We act as a data processor for the personal information we receive from publishers and advertisers", "supports": ["identity", "relevance", "coverage"]}, {"url": "https://www.adswizz.com/adswizz-california-consumers-privacy-notice/", "checked_on": "2026-09-29", "published": "2024-08-01", "excerpt": "submit your requests directly to the website or app with whom you have a direct relationship.", "supports": ["removal", "required_information", "coverage"]}],
+      "scale": null, "review_status": "needs_research", "tested_outcome": "not_tested",
+      "unknowns": ["Whether any independently controlled audience products require a further product-specific route.", "Main notice displays malformed @www.adswizz.com addresses; California notice independently publishes privacy@adswizz.com.", "Current parent ownership, exact portal fields and comparable scale."]
+    },
+    {
+      "id": "faraday", "name": "Faraday", "match_domains": ["faraday.ai"],
+      "identity": {"legal_name": "Faraday, Inc.", "brands": ["Faraday", "Faraday Identity Graph"], "parent": null, "official_domains": ["faraday.ai"]},
+      "relevance": {"regions": ["US; company says no European data"], "category": "consumer_marketing", "data_categories": ["Contacts and demographics", "Purchases and location", "Sensitive attributes and predictive inferences"], "note": "Consumer-data enrichment and prediction provider. The rights page says European requests will not match; that is a company statement, not a personal search result."},
+      "removal": {"method": "form", "destination": "https://faraday.ai/privacy-options", "alternatives": [], "steps": ["Use the embedded deletion/opt-out/do-not-sell form, not the data-access form.", "Select all relevant deletion and sharing choices and identify yourself as the consumer.", "Review later verification requirements before disclosing extra information."]},
+      "required_information": {"fields": ["email", "first_name", "last_name", "request_type", "consumer_or_agent"], "certainty": "not_fully_specified", "verification": "Initial deletion-form fields above are required; birth date and address fields are optional there. Later stages were not submitted. Access separately requires government ID and address proof."},
+      "coverage": {"effect": "deletion_request", "includes": "Faraday-controlled matched records; company reports implementing sale/share opt-out as deletion.", "excludes": "Client-controlled data, upstream suppliers, independent recipients and retention exceptions."},
+      "automation": {"mode": "manual", "reason": "Multistage form; access-document requirements must not be misapplied to deletion."},
+      "evidence": [{"url": "https://faraday.ai/privacy-options", "checked_on": "2026-09-29", "excerpt": "since Faraday does not hold or process European data, they will not be matched.", "supports": ["relevance", "removal", "coverage"]}, {"url": "https://docs.google.com/forms/d/e/1FAIpQLSd4h_G6XcXXpHq8FGeYgHH9CkQ3s4_qdIE-ZBKlNtdzKSXPfA/viewform", "checked_on": "2026-09-29", "excerpt": "Faraday Data Deletion/Opt-out/Do-Not-Sell request form", "supports": ["removal", "required_information"]}, {"url": "https://docs.google.com/document/d/e/2PACX-1vRJPA64MHyDUJFrQW7UCZAO0HyrdnQa2_jJihnBRbIkhX5S3o6uRRWrf5ECez_hAWOuztOGMv9iIh4n/pub?embedded=true", "checked_on": "2026-09-29", "published": "2026-06-30", "excerpt": "Faraday, Inc.", "supports": ["identity", "relevance", "coverage"]}],
+      "scale": {"claim": "Approximately 240 million US adults", "unit": "Company-reported adult profiles", "scope": "Faraday Identity Graph claim; not verified uniqueness, personal exposure or successful removal.", "source": {"url": "https://faraday.ai", "checked_on": "2026-09-29", "excerpt": "approximately 240 million U.S. adults and their households", "supports": ["scale"]}},
+      "review_status": "instructions_reviewed", "tested_outcome": "not_tested",
+      "unknowns": ["Later deletion-form stages and verification completion.", "Parent ownership; actual matching and deletion outcomes."]
+    },
+    {
+      "id": "data-axle", "name": "Data Axle", "match_domains": ["data-axle.com"],
+      "identity": {"legal_name": "Data Axle Inc.", "brands": ["Data Axle", "Salesgenie", "Reference Solutions", "Audience360"], "parent": null, "official_domains": ["data-axle.com"]},
+      "relevance": {"regions": ["EU", "United Kingdom", "United States"], "category": "consumer_marketing", "data_categories": ["Consumer and business contacts", "Household segments", "Device-linked interests"], "note": "September 2026 policy explicitly accepts EU/UK rights by email; the alternative consumer form is US-address-oriented."},
+      "removal": {"method": "email", "destination": "privacyteam@data-axle.com", "alternatives": ["https://www.data-axle.com/privacy-rights-request/"], "steps": ["EU/UK residents may email a deletion request describing the personal information concerned.", "The published email instructions list name, current address and requested right; include existing matching emails if relevant.", "US consumer form additionally asks phone, state/ZIP and an attestation. Review identity verification personally; never automatically attach ID."]},
+      "required_information": {"fields": ["full_name", "postal_address", "requested_right"], "certainty": "documented", "verification": "Published email checklist is on the older Exact Data policy; current parent policy allows additional identity checks, potentially government ID. No account required."},
+      "coverage": {"effect": "deletion_request", "includes": "Eligible Data Axle personal-data records.", "excludes": "Independent recipients, retention exceptions and other legal entities are not proven covered by shared branding."},
+      "automation": {"mode": "manual", "reason": "EU initial-email recipe requires postal-disclosure approval. Subsequent identity checks and other regional routes remain manual."},
+      "evidence": [{"url": "https://www.data-axle.com/privacy-policy/", "checked_on": "2026-09-30", "published": "2026-09-01", "excerpt": "Residents of the European Union and United Kingdom", "supports": ["identity", "relevance", "EU_UK_email_route", "coverage", "verification"]}, {"url": "https://www.exactdata.com/privacy-policy.html", "checked_on": "2026-09-30", "published": "2022-06-30", "excerpt": "please send an email to privacyteam@data-axle.com", "supports": ["published_recipient", "email_matching_fields"]}, {"url": "https://www.data-axle.com/privacy-rights-request/", "checked_on": "2026-09-29", "excerpt": "Phone(Required)", "supports": ["US_form_fields"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested",
+      "unknowns": ["Main policy masks its email link; exact recipient is corroborated by the still-published older affiliate policy, not a delivery test.", "No proof of group-wide deletion from shared request statistics.", "Parent ownership and individual matching outcome unreviewed."]
+    },
+    {
+      "id": "experian-marketing-us", "name": "Experian Marketing Solutions — US", "match_domains": ["experian.com"],
+      "identity": {"legal_name": "Experian Marketing Solutions, LLC", "brands": ["Experian Marketing Solutions"], "parent": null, "official_domains": ["experian.com"]},
+      "relevance": {"regions": ["US"], "category": "consumer_marketing", "data_categories": ["Consumer and household contacts", "Purchase and property information", "Demographics and inferred interests", "Device identifiers"], "note": "US marketing-data workflow, distinct from UK marketing and credit-report processes."},
+      "removal": {"method": "form", "destination": "https://consumerprivacy.experian.com/", "alternatives": ["optout@experian.com"], "steps": ["Use the consumer portal for deletion; email accepts opt-out or limit requests only.", "Provide matching contact details and answer identity questions.", "Repeat after moving if necessary because privacy settings are address-linked."]},
+      "required_information": {"fields": ["full_name", "current_address", "phone", "email"], "certainty": "documented", "verification": "Online deletion requires authentication questions. Social Security number and birth date are explicitly optional. Postal requests require identity and address evidence."},
+      "coverage": {"effect": "deletion_request", "includes": "Eligible data under the US consumer-data notice.", "excludes": "Credit-report deletion, credit-score changes, client-controlled records, non-US controllers and statutory retention exceptions."},
+      "automation": {"mode": "manual", "reason": "Address matching and interactive authentication cannot be replaced by minimal email."},
+      "evidence": [{"url": "https://www.experian.com/privacy/marketing-data-practices-and-policies", "checked_on": "2026-09-29", "published": "2026-04-14", "excerpt": "Experian Marketing Solutions, LLC", "supports": ["identity", "relevance", "coverage"]}, {"url": "https://www.experian.com/privacy/us-consumer-data-privacy-policy", "checked_on": "2026-09-29", "excerpt": "social security number and date of birth are not required", "supports": ["removal", "required_information", "coverage"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested",
+      "unknowns": ["Interactive portal completion and verification were not tested.", "Full group structure and comparable marketing database size."]
+    },
+    {
+      "id": "epsilon-north-america", "name": "Epsilon — North American products", "match_domains": ["epsilon.com"],
+      "identity": {"legal_name": "Epsilon Data Management, LLC; affiliate Conversant LLC", "brands": ["Epsilon", "Yieldify", "CitrusAd", "Lotame"], "parent": null, "official_domains": ["epsilon.com"]},
+      "relevance": {"regions": ["US", "Canada"], "category": "consumer_marketing", "data_categories": ["Contact and device identifiers", "Purchases and demographics", "Inferred audiences and identity graphs"], "note": "September 2026 North American notice names these trade names; European controllers and UK Abacus remain separate."},
+      "removal": {"method": "form", "destination": "https://legal.epsilon.com/dsr", "alternatives": ["privacy@epsilon.com"], "steps": ["Choose your country and request deletion in the consumer portal.", "Confirm using the email link Epsilon sends.", "Request sale/share and advertising opt-out separately if desired; email is for clarification, not an assumed portal substitute."]},
+      "required_information": {"fields": ["country", "email"], "certainty": "not_fully_specified", "verification": "Deletion uses email-link confirmation; access uses identity questions. Other country-dependent form fields were not exposed."},
+      "coverage": {"effect": "deletion_request", "includes": "North American controller product data, subject to exceptions.", "excludes": "Client-controlled records, employment records, European product routes and independent customer copies."},
+      "automation": {"mode": "manual", "reason": "Country-dependent form and email confirmation require supervised handling."},
+      "evidence": [{"url": "https://legal.epsilon.com/us/NA-products-privacy-policy", "checked_on": "2026-09-29", "published": "2026-09-21", "excerpt": "We will verify your identity through your confirmation of email where you click the link in the email.", "supports": ["identity", "relevance", "removal", "required_information", "coverage"]}, {"url": "https://legal.epsilon.com/dsr", "checked_on": "2026-09-29", "excerpt": "Country", "supports": ["required_information", "removal"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested",
+      "unknowns": ["European service notice returned 403; do not apply this North American guide there.", "Country-dependent fields, current ownership evidence and comparable scale."]
+    },
+    {
+      "id": "cision-media-databases", "name": "Cision media and influencer databases", "match_domains": ["cision.com"],
+      "identity": {"legal_name": "Cision US Inc.; regional Cision entities listed separately", "brands": ["CisionOne", "Cision Communications Cloud", "MyGorkana", "CisionPoint"], "parent": null, "official_domains": ["cision.com"]},
+      "relevance": {"regions": ["US", "UK", "EEA", "Global media profiles"], "category": "professional", "data_categories": ["Journalist and influencer contacts", "Employment and education", "Public social profiles and content", "Audience and interest profiles"], "note": "Specialist media/influencer repositories, not a universal consumer database. Product notice expressly excludes Brandwatch."},
+      "removal": {"method": "email", "destination": "privacy@cision.com", "alternatives": ["https://privacy.cision.com/data-subject-request"], "steps": ["Request removal from both media and social-influencer databases and associated profiling.", "Identify the relevant professional or social profile; ask the privacy team to resolve the regional controller.", "Review any verification request before supplying additional data."]},
+      "required_information": {"fields": [], "certainty": "not_fully_specified", "verification": "Public instructions provide email but do not specify minimum matching identifiers or verification."},
+      "coverage": {"effect": "deletion_request", "includes": "Matching Cision media/social-influencer profile.", "excludes": "Brandwatch, original publications, customers' independent lists and exported copies are not automatically removed."},
+      "automation": {"mode": "manual", "reason": "Profile matching and regional controller assignment are not fully specified."},
+      "evidence": [{"url": "https://privacy.cision.com/dataprivacynotice_influencers", "checked_on": "2026-09-29", "excerpt": "This Privacy Notice does not apply to Brandwatch.", "supports": ["relevance", "removal", "coverage"]}, {"url": "https://www.cision.com/legal/privacy-policy/", "checked_on": "2026-09-29", "published": "2024-04-11", "excerpt": "we mean Cision US Inc.", "supports": ["identity", "removal"]}, {"url": "https://privacy.cision.com/legalentities", "checked_on": "2026-09-29", "published": "2026-04-13", "excerpt": "Cision Germany GMBH", "supports": ["identity", "relevance"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested",
+      "unknowns": ["Which regional entity controls an individual profile.", "Minimum identifiers, verification, parent ownership and comparable profile count."]
+    },
+    {
+      "id": "adapt-directory",
+      "name": "Adapt.io business directory",
+      "match_domains": ["adapt.io"],
+      "identity": {"legal_name": "SLI Technologies Inc.", "brands": ["Adapt.io"], "parent": null, "official_domains": ["adapt.io"]},
+      "relevance": {"regions": ["Global business directory; social identifiers limited to US in notice"], "category": "professional", "data_categories": ["Business contact details", "Job and company information", "Social profile identifiers"], "note": "The directory notice is separate from account and website information. Home addresses and personal phone numbers are excluded by the stated directory policy."},
+      "removal": {"method": "email", "destination": "support@adapt.io", "alternatives": ["https://www.adapt.io/check-my-email"], "steps": ["Request removal of business contact information from the Adapt directory, not merely account cancellation.", "Alternatively use the published directory lookup with your business email and follow its removal instructions."]},
+      "required_information": {"fields": [], "certainty": "not_fully_specified", "verification": "Business email is mandatory for the alternative lookup form, not a published fixed checklist for the primary support-email route. Supply relevant professional matching emails; review any later verification."},
+      "coverage": {"effect": "deletion_request", "includes": "Removal of the matching directory listing.", "excludes": "Account records and independent customer copies are not proven removed."},
+      "automation": {"mode": "manual", "reason": "Email matching and subsequent verification have not been tested."},
+      "evidence": [{"url": "https://www.adapt.io/privacy.htm", "checked_on": "2026-09-29", "published": "2019-07-22; still published", "excerpt": "Individuals may choose to have their Business Contact Information removed from the Adapt.io Directory.", "supports": ["identity", "relevance", "removal", "coverage"]}, {"url": "https://www.adapt.io/check-my-email", "checked_on": "2026-09-29", "excerpt": "Enter business email address", "supports": ["required_information", "removal"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested",
+      "unknowns": ["Age of the published notice and current email verification behavior.", "Parent ownership and comparable database scale."]
+    },
+    {
+      "id": "aidentified",
+      "name": "Aidentified",
+      "match_domains": ["aidentified.com"],
+      "identity": {"legal_name": "Aidentified, Inc. (successor to Aidentified, LLC)", "brands": ["Aidentified"], "parent": null, "official_domains": ["aidentified.com"]},
+      "relevance": {"regions": ["US only, according to policy"], "category": "professional", "data_categories": ["Professional and household contacts", "Education and employment", "Transactions and relationship inferences"], "note": "Combines professional and consumer information for prospecting. European exposure is not inferred from global website availability."},
+      "removal": {"method": "form", "destination": "https://www.aidentified.com/delete-my-data", "alternatives": ["privacy@aidentified.com"], "steps": ["Request deletion and opt-out using the dedicated form or privacy email.", "For email requests, supply the seven matching fields specified in the policy.", "Review any verification request before providing additional information."]},
+      "required_information": {"fields": ["first_name", "last_name", "email", "phone", "state_or_region", "job_title", "company_name"], "certainty": "documented", "verification": "These fields are expressly requested for email or postal requests; the embedded form's required fields were not exposed by public HTML."},
+      "coverage": {"effect": "deletion_request", "includes": "Aidentified database records and derived inferences, subject to applicable exceptions.", "excludes": "Unsubscribing from promotional email is different; independent customer records are not covered automatically."},
+      "automation": {"mode": "manual", "reason": "Phone, employment and regional matching exceed minimal-email automation."},
+      "evidence": [{"url": "https://www.aidentified.com/privacy--policy", "checked_on": "2026-09-29", "published": "2026-01-29", "excerpt": "Aidentified collects and processes U.S. data only.", "supports": ["identity", "relevance", "removal", "required_information", "coverage"]}, {"url": "https://www.aidentified.com/delete-my-data", "checked_on": "2026-09-29", "excerpt": "Delete My Data", "supports": ["removal"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested",
+      "unknowns": ["Live form requirements and verification completion.", "Parent ownership and current comparable scale."]
+    },
+    {
+      "id": "adstra",
+      "name": "Adstra",
+      "match_domains": ["adstradata.com"],
+      "identity": {"legal_name": "Adstra, LLC", "brands": ["Adstra"], "parent": null, "official_domains": ["adstradata.com"]},
+      "relevance": {"regions": ["US", "EU", "UK", "Canada", "Australia"], "category": "advertising", "data_categories": ["Contact details", "Device identifiers and location", "Browsing and inferred interests"], "note": "The notice covers advertising technology as well as website visitors and supplies separate regional rights instructions."},
+      "removal": {"method": "form", "destination": "https://privacyportal.onetrust.com/webform/3d2d5e0c-bd98-46b8-906c-ede68a6f6a80/f4d95cf7-f075-42c1-a3d9-8d886b985ac4", "alternatives": ["privacy.officer@adstradata.com"], "steps": ["Use the rights form linked from the policy's applicable regional section.", "Select deletion and separately request marketing opt-out where desired.", "Review identity-verification instructions; email is a clarification contact, not a substitute for every mandatory form."]},
+      "required_information": {"fields": [], "certainty": "not_fully_specified", "verification": "Two-step verification may include a notarized affidavit; policy says reasonable notarization costs are reimbursed. Form fields were not readable."},
+      "coverage": {"effect": "deletion_request", "includes": "Applicable Adstra personal-data deletion or erasure request.", "excludes": "Browser opt-out, customer first-party records, fraud uses and independent recipient records require separate scope review."},
+      "automation": {"mode": "manual", "reason": "Regional form and potentially notarized identity verification require personal review."},
+      "evidence": [{"url": "https://www.adstradata.com/privacy-policy/", "checked_on": "2026-09-29", "published": "2026-09-15", "excerpt": "we may request a notarized affidavit verifying a consumer’s identity.", "supports": ["identity", "relevance", "removal", "required_information", "coverage"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested",
+      "unknowns": ["Form fields and exact verification needed for an individual request.", "Daniel's Law requests expressly require the form; privacy-officer email is not accepted for that route.", "Parent ownership and comparable scale."]
+    },
+    {
+      "id": "anteriad",
+      "name": "Anteriad",
+      "match_domains": ["anteriad.com"],
+      "identity": {"legal_name": "Anteriad, LLC", "brands": ["OmniChannelBase", "OmniEngine", "BtoB Trends", "HR Trends", "TechTrends", "BtoBTech Insights", "Enterprise Insights"], "parent": null, "official_domains": ["anteriad.com"]},
+      "relevance": {"regions": ["US", "EEA", "UK", "Switzerland"], "category": "professional", "data_categories": ["Business contacts", "Demographics", "Intent signals", "Device and location identifiers"], "note": "European marketing-data rights are explicit; the separately named Spanish recruitment controller is not conflated with this product route."},
+      "removal": {"method": "email", "destination": "privacy@anteriad.com", "alternatives": ["https://anteriad.com/privacy-portal"], "steps": ["Request deletion and objection to marketing use, specifying the relevant record or identifier.", "Include the advertising ID when seeking removal of mobile-device data.", "Keep minimal suppression data unless you deliberately prefer deletion without protection against re-import."]},
+      "required_information": {"fields": [], "certainty": "not_fully_specified", "verification": "Contact-data requests can start with a matching email; the notice does not publish a fixed non-device checklist. Mobile-device removal separately requires an advertising or installation ID. Email or other verification may follow; portal fields remain uninspected."},
+      "coverage": {"effect": "deletion_request", "includes": "Active marketing records; normally retains suppression data and requests downstream deletion.", "excludes": "Legal retention, client-controlled records and independent advertising controllers are separate."},
+      "automation": {"mode": "manual", "reason": "The reviewed email workflow covers supplied contact identifiers only; device-only records require the device ID and a separate workflow."},
+      "evidence": [{"url": "https://anteriad.com/privacy-policy", "checked_on": "2026-09-29", "published": "2026-07", "excerpt": "we will customarily retain a copy of your data sufficient to suppress it from our active databases in the future", "supports": ["identity", "relevance", "removal", "required_information", "coverage"]}, {"url": "https://anteriad.com/privacy-portal", "checked_on": "2026-09-29", "excerpt": "The information provided on this form will be used only for the purpose of removing information about you from Anteriad’s data records.", "supports": ["removal"]}],
+      "scale": null, "review_status": "instructions_reviewed", "tested_outcome": "not_tested",
+      "unknowns": ["Minimum non-device matching fields and live form verification.", "Parent ownership and comparable scale."]
+    },
+    {
+      "id": "affinity-solutions",
+      "name": "Affinity Solutions",
+      "match_domains": ["affinity.solutions"],
+      "identity": {"legal_name": "Affinity Solutions, Inc.", "brands": ["Affinity Solutions"], "parent": null, "official_domains": ["affinity.solutions"]},
+      "relevance": {"regions": ["US", "UK business contacts and website visitors"], "category": "consumer_marketing", "data_categories": ["Purchase information", "Demographics and inferred propensities", "Business contacts"], "note": "UK consumer products are described as deidentified; financial-institution rewards records are processed for the bank rather than controlled by Affinity."},
+      "removal": {"method": "form", "destination": "https://affinitysolutions-privacy.my.onetrust.com/webform/a564cfa1-53bf-4c10-bf95-cd907432d7e8/7e4e6bf3-6562-454e-8c73-6a7bd1f4b336", "alternatives": [], "steps": ["Use the recommended rights form for Affinity-controlled personal data.", "Request deletion and opt-out as applicable.", "For bank reward-program information, direct the request to the relevant bank or credit union."]},
+      "required_information": {"fields": [], "certainty": "not_fully_specified", "verification": "May require confirmation of information already held. Rights-form fields were not readable; the website's sales form is unrelated."},
+      "coverage": {"effect": "deletion_request", "includes": "Eligible Affinity-controlled identifiable records.", "excludes": "Bank-controlled data, deidentified products, retention exceptions and independent recipients."},
+      "automation": {"mode": "manual", "reason": "Controller scope and unknown verification must be resolved per request."},
+      "evidence": [{"url": "https://www.affinity.solutions/data-privacy-notice/", "checked_on": "2026-09-29", "excerpt": "We will authenticate your identity by asking you to provide or confirm certain information that we already hold about you.", "supports": ["identity", "relevance", "removal", "required_information", "coverage"]}],
+      "scale": {"claim": "195M+ consumers", "unit": "Company-reported consumer transaction coverage", "scope": "US-focused purchase-insights coverage, not identifiable deletable records or proof of your exposure; cards and consumers are different units.", "source": {"url": "https://www.affinity.solutions/", "checked_on": "2026-09-29", "excerpt": "Affinity Solutions sees deterministic transaction data from 195M+ consumers", "supports": ["scale"]}},
+      "review_status": "instructions_reviewed", "tested_outcome": "not_tested",
+      "unknowns": ["Live rights-form fields and verification requirements.", "Parent ownership; actual identifiable subset of the advertised coverage."]
+    },
+    {
+      "id": "deep-sync",
+      "name": "Deep Sync / AccuData",
+      "match_domains": [
+        "deepsync.com",
+        "acculeads.com"
+      ],
+      "identity": {
+        "legal_name": "Compact Information Systems, LLC d/b/a Deep Sync",
+        "brands": [
+          "Deep Sync",
+          "AccuData Integrated Marketing",
+          "AlumniFinder",
+          "ASL Marketing",
+          "Student Research Group",
+          "College Bound Selection Service",
+          "DeepSync Labs",
+          "HomeData"
+        ],
+        "parent": null,
+        "official_domains": [
+          "deepsync.com",
+          "acculeads.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "US"
+        ],
+        "category": "consumer_marketing",
+        "data_categories": [
+          "Names and contact details",
+          "Demographics and interests",
+          "Purchase information",
+          "Student educational interests"
+        ],
+        "note": "Current Deep Sync notice provides consumer database opt-out and deletion; separate privacy page describes US-only coverage."
+      },
+      "removal": {
+        "method": "manual",
+        "destination": "privacy.compliance@deepsync.com",
+        "alternatives": [],
+        "steps": [
+          "Email the privacy contact with current address, email and requested deletion or opt-out.",
+          "List prior addresses separately when relevant.",
+          "Review verification and the resulting deletion, deidentification or suppression notice."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "current_address",
+          "email"
+        ],
+        "certainty": "documented",
+        "verification": "Current address and email requested; access requests use dynamic identity questions. Authorized agents need proof of authority. Further deletion verification may apply."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Direct, acquired and derived controller records may be deleted, deidentified or retained in a minimal suppression file; outcome notice distinguishes these effects.",
+        "excludes": "Client-controlled service-provider records need the client; downstream partners and browser-cookie opt-outs are separate."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Address matching, identity verification and US-specific legal wording require manual review."
+      },
+      "evidence": [
+        {
+          "url": "https://deepsync.com/privacy-policy",
+          "checked_on": "2026-09-28",
+          "excerpt": "please provide your current address and your email address",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "coverage",
+            "required_information"
+          ],
+          "published": "2026-02 (state addendum 2026-01)"
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Conflicting bulk-request thresholds in the notice (over 100 versus over five in seven days); ask before any authorized batching.",
+        "Current parent ownership.",
+        "Comparable scale."
+      ]
+    },
+    {
+      "id": "propensity",
+      "name": "Propensity / Addapptation",
+      "match_domains": [
+        "propensity.com"
+      ],
+      "identity": {
+        "legal_name": "Propensity, Inc.; Addapptation Inc. dba Propensity appears in legacy footer",
+        "brands": [],
+        "parent": null,
+        "official_domains": [
+          "propensity.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "US registry; other regional applicability unverified"
+        ],
+        "category": "professional",
+        "data_categories": [
+          "Business contacts",
+          "Website visitor signals"
+        ],
+        "note": "Current form and privacy notice distinguish own processing from customers' subscription data; current versus legacy entity names need confirmation."
+      },
+      "removal": {
+        "method": "form",
+        "destination": "https://www.propensity.com/your-privacy-choices",
+        "alternatives": [
+          "privacy@propensity.com"
+        ],
+        "steps": [
+          "Select the right and enter the matching email in the form.",
+          "For customer-controlled data, contact the relevant customer instead.",
+          "Review verification and retain the scope response."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "email",
+          "requested_right"
+        ],
+        "certainty": "documented",
+        "verification": "Visible form asks email and selected rights; notice permits identity verification by a method appropriate to the request."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Propensity-controlled personal data; customer-controlled subscription records must be requested from that customer.",
+        "excludes": "Form does not unsubscribe a person from every customer's communications."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Regional request language, matching identifiers and controller scope require manual review; no generic automatic email."
+      },
+      "evidence": [
+        {
+          "url": "https://www.propensity.com/your-privacy-choices",
+          "checked_on": "2026-09-28",
+          "excerpt": "Addapptation Inc. dba Propensity",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "coverage",
+            "required_information"
+          ]
+        },
+        {
+          "url": "https://www.propensity.com/propensity-privacy-policy",
+          "checked_on": "2026-09-28",
+          "excerpt": "Propensity acts as a processor for our customers",
+          "supports": [
+            "coverage",
+            "removal"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Current legal entity succession.",
+        "Authentication details.",
+        "Comparable product scale."
+      ]
+    },
+    {
+      "id": "affinity-answers",
+      "name": "Affinity Answers",
+      "match_domains": [
+        "affinityanswers.com"
+      ],
+      "identity": {
+        "legal_name": "Affinity Answers Corporation",
+        "brands": [],
+        "parent": null,
+        "official_domains": [
+          "affinityanswers.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "EEA",
+          "UK",
+          "US"
+        ],
+        "category": "advertising",
+        "data_categories": [
+          "Social-media interactions",
+          "Social handles",
+          "Email-linked audience records"
+        ],
+        "note": "EEA/UK choices are explicit; email-only matching leaves social-handle records outside a complete request."
+      },
+      "removal": {
+        "method": "form",
+        "destination": "https://www.affinityanswers.com/your-privacy-choices/",
+        "alternatives": [
+          "dataprivacy@affinityanswers.com"
+        ],
+        "steps": [
+          "Select residency and the requested right.",
+          "Provide email plus relevant social handles to match both systems.",
+          "Review authentication and any partial-completion response."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "residency",
+          "email",
+          "social_media_handles",
+          "requested_right"
+        ],
+        "certainty": "documented",
+        "verification": "Email and rights are required; social handles are needed for the second system. Authorized agents need signed authorization where permitted."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Email-linked and supplied social-handle records; select erasure rather than only website-cookie preferences.",
+        "excludes": "Without social handles, the provider says requests can only be partially processed. Separate client-controlled processing is not automatically covered."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Regional request language, matching identifiers and controller scope require manual review; no generic automatic email."
+      },
+      "evidence": [
+        {
+          "url": "https://www.affinityanswers.com/your-privacy-choices/",
+          "checked_on": "2026-09-28",
+          "excerpt": "we store information in two separate systems",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "coverage",
+            "required_information"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Post-submission verification.",
+        "Parent ownership.",
+        "Comparable scale."
+      ]
+    },
+    {
+      "id": "registry-aggknowledge-inc",
+      "name": "AggKnowledge",
+      "match_domains": [
+        "aggknowledge.ai"
+      ],
+      "identity": {
+        "legal_name": "AggKnowledge, Inc.",
+        "brands": [],
+        "parent": null,
+        "official_domains": [
+          "aggknowledge.ai"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "EEA",
+          "UK",
+          "Switzerland",
+          "US"
+        ],
+        "category": "professional",
+        "data_categories": [
+          "Professional contact information",
+          "Employment information",
+          "Inferences"
+        ],
+        "note": "Policy distinguishes sold Network Data from Client and Website Data and includes EEA/UK rights."
+      },
+      "removal": {
+        "method": "manual",
+        "destination": "privacy@aggknowledge.ai",
+        "alternatives": [],
+        "steps": [
+          "Identify whether the request concerns Network Data or client-controlled content.",
+          "Specify the relevant right and jurisdiction to the privacy contact.",
+          "Review additional identity checks and controller referrals."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "Provider may request specific information to confirm identity; no fixed identifier checklist for EEA/UK requests."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Requests concerning AggKnowledge-controlled data, including purpose-specific erasure or objection; Client Content may belong to a client controller.",
+        "excludes": "No assertion of affiliate-wide deletion, source-record deletion or completed downstream removal."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Regional request language, matching identifiers and controller scope require manual review; no generic automatic email."
+      },
+      "evidence": [
+        {
+          "url": "https://www.aggknowledge.ai/privacypolicy",
+          "checked_on": "2026-09-28",
+          "excerpt": "privacy@aggknowledge.ai",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "coverage",
+            "required_information"
+          ],
+          "published": "2026-06-18"
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Network Data controller allocation under the European section.",
+        "Minimum matching identifiers.",
+        "Parent and scale."
+      ]
+    },
+    {
+      "id": "adprime",
+      "name": "Adprime",
+      "match_domains": [
+        "adprime.com"
+      ],
+      "identity": {
+        "legal_name": "Adprime Media, LLC",
+        "brands": [],
+        "parent": null,
+        "official_domains": [
+          "adprime.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "EEA",
+          "UK",
+          "Switzerland",
+          "US"
+        ],
+        "category": "advertising",
+        "data_categories": [
+          "Cookie and mobile IDs",
+          "Geolocation",
+          "Healthcare-professional contacts and NPI",
+          "Audience inferences"
+        ],
+        "note": "Advertising audiences include consumers and healthcare professionals; EEA/UK/Swiss controller rights are explicit."
+      },
+      "removal": {
+        "method": "manual",
+        "destination": "privacy@adprime.com",
+        "alternatives": [
+          "https://www.adprime.com/europe-uk-privacy-rights-request"
+        ],
+        "steps": [
+          "Identify the service/audience and applicable region.",
+          "Ask the published privacy contact for suitable matching identifiers.",
+          "Review any verification request before supplying more data."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "May collect additional information to verify identity. No fixed GDPR matching checklist; Europe/UK form rendered only a shell."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Adprime-controlled service data; request erasure and direct-marketing objection as applicable.",
+        "excludes": "Independent advertising partners and their source records are not automatically removed."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Identifier matching is not documented sufficiently for automatic email."
+      },
+      "evidence": [
+        {
+          "url": "https://www.adprime.com/privacy-policy",
+          "checked_on": "2026-09-28",
+          "excerpt": "To exercise your rights under the GDPR, please contact us",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "coverage",
+            "required_information"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Minimum identifiers and verification.",
+        "Live Europe/UK form fields.",
+        "Parent and scale."
+      ]
+    },
+    {
+      "id": "azira",
+      "name": "Azira",
+      "match_domains": [
+        "azira.com"
+      ],
+      "identity": {
+        "legal_name": "Azira LLC",
+        "brands": [],
+        "parent": null,
+        "official_domains": [
+          "azira.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "EEA",
+          "UK",
+          "Switzerland",
+          "US"
+        ],
+        "category": "advertising",
+        "data_categories": [
+          "Mobile advertising IDs",
+          "Precise location",
+          "Device activity",
+          "Audience inferences"
+        ],
+        "note": "Mobile location/audience records require advertising-ID matching; a name/email-only request cannot identify these records."
+      },
+      "removal": {
+        "method": "manual",
+        "destination": "privacy@azira.com",
+        "alternatives": [
+          "https://submit-irm.trustarc.com/services/validation/0a80503b-1d56-4d50-a898-4377a0227dab"
+        ],
+        "steps": [
+          "Obtain the relevant device advertising identifier.",
+          "Specify deletion and relevant consent/advertising choices.",
+          "Review verification and retain the provider's scope response."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "mobile_advertising_id"
+        ],
+        "certainty": "not_fully_specified",
+        "verification": "MAID is documented for audience matching. Further verification may include prior-interaction questions; linked form could not be rendered."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Identifiable Azira-controlled MAID/location records; erasure, consent withdrawal and sale/share opt-out are distinct choices.",
+        "excludes": "Customer-processor records and independently controlled partners are separate."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Device identifier and authentication require manual handling."
+      },
+      "evidence": [
+        {
+          "url": "https://www.azira.com/privacy-policy",
+          "checked_on": "2026-09-28",
+          "excerpt": "Since no request received by Azira included a MAID",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "coverage",
+            "required_information"
+          ],
+          "published": "2025-08-06"
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "All live form fields.",
+        "Device-reset and historical-ID matching.",
+        "Parent and scale."
+      ]
+    },
+    {
+      "id": "contactout",
+      "name": "ContactOut",
+      "match_domains": [
+        "contactout.com"
+      ],
+      "identity": {
+        "legal_name": "ContactOut Limited",
+        "brands": [],
+        "parent": null,
+        "official_domains": [
+          "contactout.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "UK",
+          "US",
+          "Other regions not specified"
+        ],
+        "category": "professional",
+        "data_categories": [
+          "Business contacts",
+          "Employment and education",
+          "Social profile URLs"
+        ],
+        "note": "Business-contact service for sales, marketing and recruitment; UK complaint authority and California rights appear in the notice."
+      },
+      "removal": {
+        "method": "form",
+        "destination": "https://contactout.com/optout",
+        "alternatives": [],
+        "steps": [
+          "Enter a matching email in the public opt-out form.",
+          "Complete the verification from that mailbox.",
+          "Retain the response and verify profile scope."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "email"
+        ],
+        "certainty": "documented",
+        "verification": "Public form sends an email verification link; later steps were not submitted or tested."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Matching ContactOut data/business profile; the form states removal after email verification.",
+        "excludes": "Previously licensed customer or partner copies are not proven deleted."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Mailbox verification is required; no form is submitted automatically."
+      },
+      "evidence": [
+        {
+          "url": "https://contactout.com/privacy_data_subjects",
+          "checked_on": "2026-09-28",
+          "excerpt": "ContactOut Limited",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "coverage",
+            "required_information"
+          ],
+          "published": "2024-06-25"
+        },
+        {
+          "url": "https://contactout.com/optout",
+          "checked_on": "2026-09-28",
+          "excerpt": "Send verification link",
+          "supports": [
+            "removal",
+            "required_information",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Multiple-email or inaccessible-mailbox handling.",
+        "Downstream copies.",
+        "Parent and scale."
+      ]
+    },
+    {
+      "id": "bombora",
+      "name": "Bombora",
+      "match_domains": [
+        "bombora.com"
+      ],
+      "identity": {
+        "legal_name": "Bombora, Inc.",
+        "brands": [],
+        "parent": null,
+        "official_domains": [
+          "bombora.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "EEA",
+          "UK",
+          "Switzerland",
+          "US"
+        ],
+        "category": "professional",
+        "data_categories": [
+          "Business research signals",
+          "Cookie/mobile IDs",
+          "Email hashes",
+          "Professional inferences"
+        ],
+        "note": "Company-level intent aggregation retains underlying device and engagement data; browser and hashed-email choices are separate."
+      },
+      "removal": {
+        "method": "manual",
+        "destination": "dsars@bombora.com",
+        "alternatives": [
+          "https://preferences.bombora.com/privacy",
+          "https://preferences.bombora.com/optout"
+        ],
+        "steps": [
+          "Identify the relevant email/device context.",
+          "Request deletion or objection through the dedicated DSAR contact.",
+          "Use browser opt-out separately on each browser if desired."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "Additional identifiers may be requested. No account is needed; live form fields could not be retrieved."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Bombora-controlled personal service records; request deletion/objection separately from browser opt-out.",
+        "excludes": "Aggregate company profiles may not be individually linkable. Partner use and other devices/browsers require separate handling."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Identifier matching and separate tracking choices require manual handling."
+      },
+      "evidence": [
+        {
+          "url": "https://bombora.com/privacy-policy/",
+          "checked_on": "2026-09-28",
+          "excerpt": "dsars@bombora.com",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "coverage",
+            "required_information"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Exact DSAR matching checklist.",
+        "Historical device linkage.",
+        "Parent and scale."
+      ]
+    },
+    {
+      "id": "fifty-technology",
+      "name": "Fifty Technology",
+      "match_domains": [
+        "fifty.io"
+      ],
+      "identity": {
+        "legal_name": "Fifty Technology Limited",
+        "brands": [
+          "Fifty",
+          "Fifty Media"
+        ],
+        "parent": null,
+        "official_domains": [
+          "fifty.io"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "UK",
+          "EEA",
+          "US"
+        ],
+        "category": "advertising",
+        "data_categories": [
+          "Public social profiles",
+          "Social connections and posts",
+          "Aggregate audience insights"
+        ],
+        "note": "Current February 2026 notice distinguishes social-profile research from client-platform advertising identifiers it says it does not hold."
+      },
+      "removal": {
+        "method": "manual",
+        "destination": "privacy@fifty.io",
+        "alternatives": [
+          "dpo@fifty.io",
+          "https://fifty.io/privacy-policy"
+        ],
+        "steps": [
+          "Identify the social profile and requested right.",
+          "Contact the published privacy address; clarify matching needs.",
+          "Ask whether the result is deletion or irreversible anonymisation."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "No minimum checklist. Names/emails may not locate social-profile data; ask the DPO how the relevant profile can be matched."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "DPO enquiry about identifiable social-profile records; stated erasure can mean irreversible anonymisation.",
+        "excludes": "No promise of individual removal from anonymous insights or third-party ad platforms."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Social-profile matching and anonymisation scope need review; the UK-only request must not assert EEA residence."
+      },
+      "evidence": [
+        {
+          "url": "https://fifty.io/privacy-policy",
+          "checked_on": "2026-09-29",
+          "excerpt": "we do not process any email addresses (in any form)",
+          "supports": [
+            "identity",
+            "relevance"
+          ],
+          "published": "2026-02"
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Minimum social-profile matching details.",
+        "Whether a requested record is individually identifiable.",
+        "Comparable product scale."
+      ]
+    },
+    {
+      "id": "captify",
+      "name": "Captify",
+      "match_domains": [
+        "captifytechnologies.com",
+        "captify.co.uk"
+      ],
+      "identity": {
+        "legal_name": "Captify Technologies Limited",
+        "brands": [],
+        "parent": null,
+        "official_domains": [
+          "captifytechnologies.com",
+          "captify.co.uk"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "EEA",
+          "UK",
+          "Switzerland",
+          "US"
+        ],
+        "category": "advertising",
+        "data_categories": [
+          "Cookie IDs",
+          "Search interests",
+          "Advertising audiences"
+        ],
+        "note": "Search-intelligence audience requests use cookie matching, not names or email addresses."
+      },
+      "removal": {
+        "method": "manual",
+        "destination": "data.requests@captify.co.uk",
+        "alternatives": [],
+        "steps": [
+          "Find a listed cookie in the relevant browser before clearing cookies.",
+          "Email its value and COPY, DELETE or COPY AND DELETE.",
+          "Repeat the review for other browsers/devices."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "captify_cookie_id",
+          "requested_action"
+        ],
+        "certainty": "documented",
+        "verification": "Supply one .cpx.to cookie value: dsp_app_nexus, dsp_dbm, dsp_TTD, dsp_rubicon, dsp_pubmatic, dsp_pub_common or dsp_OPENX."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Matching controller records; erasure generally removes identifying elements rather than all anonymous data.",
+        "excludes": "Client-controller databases, local browser storage and other browsers/devices remain separate."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Cookie identification and browser-specific scope require manual handling."
+      },
+      "evidence": [
+        {
+          "url": "https://www.captifytechnologies.com/data-subject-rights-request/",
+          "checked_on": "2026-09-28",
+          "excerpt": "what your Captify Cookie ID number is",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "coverage",
+            "required_information"
+          ],
+          "published": "2025-08-01"
+        },
+        {
+          "url": "https://www.captifytechnologies.com/privacy-notice/",
+          "checked_on": "2026-09-28",
+          "published": "2025-01-29",
+          "excerpt": "Captify Technologies Limited",
+          "supports": [
+            "identity",
+            "relevance",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Additional authentication.",
+        "Parent ownership.",
+        "Whether historic identifiers remain matchable."
+      ]
+    },
+    {
+      "id": "demandbase",
+      "name": "Demandbase",
+      "match_domains": [
+        "demandbase.com"
+      ],
+      "identity": {
+        "legal_name": "Demandbase, Inc.",
+        "brands": [],
+        "parent": null,
+        "official_domains": [
+          "demandbase.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "EEA",
+          "UK",
+          "Switzerland",
+          "US"
+        ],
+        "category": "professional",
+        "data_categories": [
+          "Business and personal contact details",
+          "Employment information",
+          "Device identifiers",
+          "Business-intent inferences"
+        ],
+        "note": "Professional databases and advertising signals; EEA/UK/Swiss rights use the dedicated privacy-center form."
+      },
+      "removal": {
+        "method": "form",
+        "destination": "https://www.demandbase.com/privacy-center.html?ketch_preferences_tab=rightsTab",
+        "alternatives": [
+          "privacy@demandbase.com"
+        ],
+        "steps": [
+          "Open the rights tab and select the applicable request.",
+          "Review the matching and verification requirements.",
+          "Retain the response identifying which records were handled."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "Notice permits identity verification including government ID; form did not render, so minimum fields remain unknown."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Demandbase-controlled personal data; erasure and restriction subject to legal exceptions.",
+        "excludes": "Customer-controlled records, independent publishers and browser-ad preferences require separate handling."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Interactive form and possible identity documents require manual review."
+      },
+      "evidence": [
+        {
+          "url": "https://www.demandbase.com/privacy/",
+          "checked_on": "2026-09-28",
+          "excerpt": "which may include reviewing government identification",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "coverage",
+            "required_information"
+          ],
+          "published": "2026-04-21"
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Live form fields.",
+        "Specific verification requested.",
+        "Parent and comparable scale."
+      ]
+    },
+    {
+      "id": "atdata",
+      "name": "AtData",
+      "match_domains": [
+        "atdata.com"
+      ],
+      "identity": {
+        "legal_name": "AtData, LLC",
+        "brands": [],
+        "parent": null,
+        "official_domains": [
+          "atdata.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "EEA",
+          "UK",
+          "Switzerland",
+          "US"
+        ],
+        "category": "identity_risk",
+        "data_categories": [
+          "Email and contact details",
+          "Validation data",
+          "Fraud-risk signals"
+        ],
+        "note": "For EU/Swiss/UK end users, the notice limits services to SafeToSend and Fraud API; do not infer European marketing-enrichment coverage."
+      },
+      "removal": {
+        "method": "form",
+        "destination": "https://www.atdata.com/ccpa-form",
+        "alternatives": [
+          "https://instantdata.atdata.com/optout/"
+        ],
+        "steps": [
+          "Choose privacy-rights request for deletion, not only marketing opt-out.",
+          "Provide the documented minimum after reviewing the live form.",
+          "For mobile-service opt-out, identify the relevant device ID."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "full_name",
+          "email"
+        ],
+        "certainty": "not_fully_specified",
+        "verification": "Policy specifies name/email minimum; additional scope/authentication information may be requested. Mobile-service opt-out needs advertising ID."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Purpose-specific rights for controller records; erasure may have legal exceptions.",
+        "excludes": "Advertising opt-out is not proof of fraud-data deletion. Website email unsubscribe is separate."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Fraud-purpose distinctions and verification require manual review."
+      },
+      "evidence": [
+        {
+          "url": "https://atdata.com/privacy-policy/",
+          "checked_on": "2026-09-28",
+          "excerpt": "These are the only Services that we offer",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "coverage",
+            "required_information"
+          ],
+          "published": "2026-08-18"
+        },
+        {
+          "url": "https://instantdata.atdata.com/optout/",
+          "checked_on": "2026-09-28",
+          "excerpt": "Device Advertising ID:",
+          "supports": [
+            "required_information",
+            "coverage",
+            "removal"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Live rights-form fields.",
+        "Specific fraud-data retention.",
+        "Parent and scale."
+      ]
+    },
+    {
+      "id": "findem",
+      "name": "Findem",
+      "match_domains": [
+        "findem.ai"
+      ],
+      "identity": {
+        "legal_name": "Findem, Inc. (registry identity)",
+        "brands": [],
+        "parent": null,
+        "official_domains": [
+          "findem.ai"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "Global opt-out policy"
+        ],
+        "category": "recruitment",
+        "data_categories": [
+          "Talent profiles",
+          "Employment matching data"
+        ],
+        "note": "Published removal applies to all consumers; June 2026 clarification says email is sufficient, while the current page also displays name fields."
+      },
+      "removal": {
+        "method": "form",
+        "destination": "https://www.findem.ai/privacy-rights",
+        "alternatives": [
+          "trust@findem.ai"
+        ],
+        "steps": [
+          "Use the Privacy Rights form and request removal.",
+          "Review any additional name-field requirements.",
+          "Retain the authorization/matching outcome and scope summary."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "email"
+        ],
+        "certainty": "not_fully_specified",
+        "verification": "Company says it checks authorization and matches records. Page shows first/last name and comments; their mandatory status was not established."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Matching personal records removed from Findem's platform, followed by a summary response.",
+        "excludes": "No evidence that independent employers' copies or every downstream dataset are deleted."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Form and authorization verification require manual handling."
+      },
+      "evidence": [
+        {
+          "url": "https://www.findem.ai/privacy-rights",
+          "checked_on": "2026-09-28",
+          "excerpt": "removed from Findem’s data lake in the Talent Data Cloud",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "coverage",
+            "required_information"
+          ]
+        },
+        {
+          "url": "https://www.findem.ai/blog/privacy-practices-clarified",
+          "checked_on": "2026-09-28",
+          "published": "2026-06-01 update",
+          "excerpt": "require only an email address",
+          "supports": [
+            "relevance",
+            "required_information",
+            "coverage"
+          ]
+        },
+        {
+          "url": "https://cppa.ca.gov/data_broker_registry/registry.csv",
+          "checked_on": "2026-09-28",
+          "excerpt": "Findem, Inc.",
+          "supports": [
+            "identity"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Whether displayed name fields are currently mandatory.",
+        "Post-submission identity process.",
+        "Parent and comparable scale."
+      ]
+    },
+    {
+      "id": "foursquare",
+      "name": "Foursquare",
+      "match_domains": [
+        "foursquare.com"
+      ],
+      "identity": {
+        "legal_name": "Foursquare Labs, Inc.",
+        "brands": [],
+        "parent": null,
+        "official_domains": [
+          "foursquare.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "Global provider; rights vary by jurisdiction"
+        ],
+        "category": "advertising",
+        "data_categories": [
+          "Mobile advertising IDs",
+          "Location data",
+          "Audience information"
+        ],
+        "note": "Location-audience sale/share opt-out differs from deleting a Swarm, City Guide or developer account."
+      },
+      "removal": {
+        "method": "form",
+        "destination": "https://foursquare.com/data-requests",
+        "alternatives": [
+          "https://foursquare.com/legal/privacy-center/",
+          "privacy@foursquare.com"
+        ],
+        "steps": [
+          "Obtain the relevant mobile advertising identifier.",
+          "Choose sale/share opt-out and/or sensitive-data limitation.",
+          "Use the separate account workflow if account deletion is also intended."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "mobile_advertising_id",
+          "requested_choice"
+        ],
+        "certainty": "documented",
+        "verification": "Form requires Apple IDFA or Android advertising ID and at least one choice; no name/email field displayed."
+      },
+      "coverage": {
+        "effect": "suppression",
+        "includes": "Sale/share opt-out or sensitive-location-use limitation for the supplied advertising identifier.",
+        "excludes": "Not account deletion or erasure of independent customer records; account deletion uses authenticated settings or a separate portal."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Device identifiers and account-versus-audience scope require manual handling."
+      },
+      "evidence": [
+        {
+          "url": "https://foursquare.com/data-requests",
+          "checked_on": "2026-09-29",
+          "excerpt": "we will need your Mobile Advertising Identifier",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "coverage",
+            "required_information"
+          ]
+        },
+        {
+          "url": "https://foursquare.com/legal/privacy-center/",
+          "checked_on": "2026-09-28",
+          "excerpt": "Delete your personal data",
+          "supports": [
+            "coverage",
+            "removal"
+          ]
+        },
+        {
+          "url": "https://foursquare.com/legal/privacy-center/foursquare-privacy-policy-consumer-services/",
+          "checked_on": "2026-09-28",
+          "published": "2026-02-20",
+          "excerpt": "Foursquare Labs, Inc.",
+          "supports": [
+            "identity",
+            "relevance"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Historical device-ID coverage.",
+        "Further verification.",
+        "Parent and comparable scale."
+      ]
+    },
+    {
+      "id": "altrata-products",
+      "name": "Altrata product data",
+      "match_domains": [
+        "altrata.com"
+      ],
+      "identity": {
+        "legal_name": "Altrata; specific operating entity requires confirmation",
+        "brands": [
+          "BoardEx",
+          "RelSci",
+          "Wealth-X",
+          "WealthEngine",
+          "Altrata API"
+        ],
+        "parent": "Delinian",
+        "official_domains": [
+          "altrata.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "EEA",
+          "UK",
+          "US"
+        ],
+        "category": "professional",
+        "data_categories": [
+          "Career and affiliation information",
+          "Wealth estimates",
+          "Investment histories",
+          "Reputational research"
+        ],
+        "note": "People-intelligence products have a separate notice from website visitors. Product-specific requests should identify the relevant profile."
+      },
+      "removal": {
+        "method": "manual",
+        "destination": "piprivacy@altrata.com",
+        "alternatives": [],
+        "steps": [
+          "Identify the relevant product and profile.",
+          "Specify erasure and/or objection to the product DPO.",
+          "Review matching and authority checks before supplying more data."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "Identity confirmation may be requested; agents need written authority. No fixed minimum identifiers are published."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Access, objection or erasure requests concerning the listed Altrata products, subject to applicable law.",
+        "excludes": "Independent public sources, client copies and all Delinian datasets are not automatically covered."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Profile matching and product/controller allocation require manual review."
+      },
+      "evidence": [
+        {
+          "url": "https://altrata.com/product-privacy-notice",
+          "checked_on": "2026-09-28",
+          "excerpt": "Our Products include Altrata API, BoardEx, RelSci, Wealth-X, and WealthEngine.",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "coverage",
+            "required_information"
+          ],
+          "published": "2026-06"
+        },
+        {
+          "url": "https://altrata.com/privacy-policy",
+          "checked_on": "2026-09-29",
+          "published": "2026-06-22 update",
+          "excerpt": "piprivacy@altrata.com",
+          "supports": [
+            "identity",
+            "removal"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Specific operating controller for each product.",
+        "Minimum identifiers.",
+        "Comparable product scale."
+      ]
+    },
+    {
+      "id": "crunchbase",
+      "name": "Crunchbase",
+      "match_domains": [
+        "crunchbase.com"
+      ],
+      "identity": {
+        "legal_name": "Crunchbase, Inc.",
+        "brands": [],
+        "parent": null,
+        "official_domains": [
+          "crunchbase.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "EEA",
+          "UK"
+        ],
+        "category": "professional",
+        "data_categories": [
+          "Person profiles",
+          "Employment and education",
+          "Board roles",
+          "Investment information"
+        ],
+        "note": "EEA/UK notice covers third-party Person Profile Data, not only registered accounts."
+      },
+      "removal": {
+        "method": "manual",
+        "destination": "privacy@crunchbase.com",
+        "alternatives": [],
+        "steps": [
+          "Distinguish the person profile from a user account.",
+          "Identify the relevant record and specify erasure/objection.",
+          "Review matching requests and retain the scope response."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "May request further identity and scope information; no fixed identifier checklist is published."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Erasure and objection for Crunchbase-controlled personal data, subject to legal exceptions.",
+        "excludes": "Does not establish deletion at original public sources, resellers or independent customers."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Profile matching and identity verification need manual review."
+      },
+      "evidence": [
+        {
+          "url": "https://about.crunchbase.com/terms-of-service/gdpr-privacy-policy",
+          "checked_on": "2026-09-28",
+          "excerpt": "Erasure: You can request that we erase some or all of your Personal Data from our systems.",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "coverage",
+            "required_information"
+          ],
+          "published": "2024-11-26"
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Minimum matching identifiers.",
+        "Downstream copies.",
+        "Parent and comparable scale."
+      ]
+    },
+    {
+      "id": "alliant-data-products",
+      "name": "Alliant marketing data",
+      "match_domains": [
+        "alliantinsight.com"
+      ],
+      "identity": {
+        "legal_name": "Alliant Cooperative Data Solutions, LLC",
+        "brands": [],
+        "parent": null,
+        "official_domains": [
+          "alliantinsight.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "US; European applicability unverified"
+        ],
+        "category": "consumer_marketing",
+        "data_categories": [
+          "Contact and purchase information",
+          "Demographics",
+          "Audience inferences",
+          "Sensitive attributes"
+        ],
+        "note": "US state-rights workflow; AnalyticsIQ has a different form despite the shared notice."
+      },
+      "removal": {
+        "method": "form",
+        "destination": "https://privacyportal-cdn.onetrust.com/dsarwebform/591ac1c1-3a1e-496f-9e43-ff4afb5fef85/604f597f-4486-46cd-99d2-ffa1218c7d6b.html",
+        "alternatives": [
+          "Compliance@AlliantData.com"
+        ],
+        "steps": [
+          "Choose the Alliant deletion form linked by the product notice.",
+          "Review current matching fields and verification.",
+          "Handle credit-prescreen requests separately."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "Deletion may require identity verification; no account required. Minimum fields were not rendered."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Alliant Data Products deletion subject to exceptions; active campaigns may continue temporarily.",
+        "excludes": "Credit prescreening/FCRA files, website data and AnalyticsIQ's separate workflow are not automatically covered."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "US-specific rights and form verification require manual review."
+      },
+      "evidence": [
+        {
+          "url": "https://alliantinsight.com/data-services-and-website-privacy-policy/",
+          "checked_on": "2026-09-28",
+          "excerpt": "To make a request to Alliant",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "coverage",
+            "required_information"
+          ],
+          "published": "2026-07-29"
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Live form fields.",
+        "European data applicability.",
+        "Parent and comparable scale."
+      ]
+    },
+    {
+      "id": "analyticsiq",
+      "name": "AnalyticsIQ",
+      "match_domains": [
+        "analytics-iq.com"
+      ],
+      "identity": {
+        "legal_name": "AnalyticsIQ, Inc.; named in Alliant product policy",
+        "brands": [],
+        "parent": null,
+        "official_domains": [
+          "analytics-iq.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "US; European applicability unverified"
+        ],
+        "category": "consumer_marketing",
+        "data_categories": [
+          "Consumer profiles",
+          "Business attributes",
+          "Behavioural predictions"
+        ],
+        "note": "Shared Alliant product policy directs AnalyticsIQ consumers to a distinct rights form."
+      },
+      "removal": {
+        "method": "form",
+        "destination": "https://privacyportal.onetrust.com/webform/f6a59500-f900-4652-b030-0cd51afe15a5/87ca07e4-e06c-4ad8-9aa6-ccbbaa8750c1",
+        "alternatives": [],
+        "steps": [
+          "Use the AnalyticsIQ-specific form.",
+          "Select the intended right and review identity requirements.",
+          "Retain the response defining scope."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "Deletion requests can require identity checks. Interactive form fields could not be read."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "AnalyticsIQ Data Products; select deletion rather than only sale/share opt-out.",
+        "excludes": "No automatic extension to Alliant credit files, independent source data or anonymous outputs."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Separate interactive workflow and geographic eligibility require manual review."
+      },
+      "evidence": [
+        {
+          "url": "https://analytics-iq.com/privacy-policy-for-data-products/",
+          "checked_on": "2026-09-28",
+          "excerpt": "To make a request to AnalyticsIQ",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "coverage",
+            "required_information"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Live identifiers.",
+        "Current ownership detail.",
+        "European applicability and scale."
+      ]
+    },
+    {
+      "id": "censia",
+      "name": "Censia",
+      "match_domains": [
+        "censia.com"
+      ],
+      "identity": {
+        "legal_name": "Censia; full legal entity requires confirmation",
+        "brands": [],
+        "parent": null,
+        "official_domains": [
+          "censia.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "EEA",
+          "US"
+        ],
+        "category": "recruitment",
+        "data_categories": [
+          "Candidate profiles",
+          "Career and education",
+          "Demographics and background information"
+        ],
+        "note": "Independent candidate data comes from public sources and brokers; customer-supplied profiles can instead be processor records."
+      },
+      "removal": {
+        "method": "manual",
+        "destination": "support@censia.com",
+        "alternatives": [],
+        "steps": [
+          "Identify the candidate profile and controller context.",
+          "Request deletion and/or processing objection through the published rights contact.",
+          "Review authentication and any retained-data explanation."
+        ]
+      },
+      "required_information": {
+        "fields": [],
+        "certainty": "not_fully_specified",
+        "verification": "Sufficient identity and request details required; exact minimum fields unspecified. Agents require authorization."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Active database removal where applicable; archives and legal retention may remain.",
+        "excludes": "Employer-controlled candidate records and cookie-only opt-outs are separate."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Employment-data scope and controller allocation require manual handling."
+      },
+      "evidence": [
+        {
+          "url": "https://www.censia.com/privacy-policy/",
+          "checked_on": "2026-09-28",
+          "excerpt": "support@censia.com",
+          "supports": [
+            "identity",
+            "relevance",
+            "removal",
+            "coverage",
+            "required_information"
+          ],
+          "published": "2023-04-25"
+        },
+        {
+          "url": "https://www.censia.com/gdpr/",
+          "checked_on": "2026-09-29",
+          "excerpt": "Censia would honor all opt-out requests",
+          "supports": [
+            "relevance",
+            "coverage"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Full legal entity.",
+        "Minimum matching fields.",
+        "Archive deletion and scale."
+      ]
+    }
+  ]
+}

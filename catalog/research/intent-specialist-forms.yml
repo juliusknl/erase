@@ -1,0 +1,201 @@
+schema_version: 1
+brokers:
+  - id: blackpearl-intent-data
+    name: Blackpearl intent and visitor data
+    match_domains: [blackpearl.com, pearldiver.io]
+    identity:
+      legal_name: Black Pearl Group Limited
+      brands: [Blackpearl, Pearl Diver, Pearl Engine]
+      parent: null
+      official_domains: [blackpearl.com, pearldiver.io]
+    relevance:
+      regions: [New Zealand, Australia, EEA, United Kingdom, Canada, United States]
+      category: advertising
+      data_categories: [Business contacts, Visitor identity, Buyer intent, Marketing segmentation]
+      note: Request scope is intent/visitor marketing data, not cancellation of an email-service account.
+    removal:
+      method: form
+      destination: https://www.blackpearl.com/request-to-delete-my-personal-information
+      alternatives: [https://www.blackpearl.com/your-privacy-choices]
+      steps:
+        - Enter your name and matching email, then select deletion; correction and access are distinct options.
+        - Personally review the accuracy confirmation and permission to contact you for identity verification before submitting.
+        - Complete any verification and retain the result. Use the separate do-not-sell/share option if suppression is also desired.
+        - Do not infer all-product or independent-customer deletion from a shared form, or close Black Pearl Mail or Newoldstamp accounts unintentionally.
+    required_information:
+      fields: [full_name, matching_email, requested_right, personal_confirmation]
+      certainty: not_fully_specified
+      verification: Public embedded form inspected without submission; it permits later identity checks and contains a verification-code control.
+    coverage:
+      effect: deletion_request
+      includes: Matched Blackpearl-controlled intent/visitor marketing records within the confirmed scope.
+      excludes: Independent sources/customer copies, unrelated service accounts and guaranteed all-group fulfilment.
+    automation:
+      mode: manual
+      reason: Personal confirmation and verification must be completed by the user.
+    evidence:
+      - url: https://www.blackpearl.com/privacy-policy
+        checked_on: '2026-10-01'
+        published: June 2026
+        excerpt: Black Pearl Group Limited
+        supports: [controller, intent_data_scope, regional_rights, designated_forms]
+      - url: https://www.blackpearl.com/products
+        checked_on: '2026-10-01'
+        excerpt: Pearl Diver
+        supports: [visitor_identity_product]
+      - url: https://www.blackpearl.com/post/pearl-diver---deep-dive---part-1
+        checked_on: '2026-10-01'
+        published: '2023-03-29'
+        excerpt: pearldiver.io
+        supports: [official_product_domain_relationship_not_current_scale]
+      - url: https://forms.blackpearl.com/danblock/form/Requesttodeletecorrectorknowmypersonalinformation/formperma/A8V0jmGd_2YKUBB9Tsx8GG3M3QFDtLg-9_MlbsFcGtE
+        checked_on: '2026-10-01'
+        excerpt: granting Blackpearl Group the right to contact you to verify your identity
+        supports: [public_required_fields, personal_confirmation, verification]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Runtime verification and fulfilment untested., Entity-specific matching and comparable scale unreviewed.]
+  - id: modigie-professional-validation
+    name: Modigie professional contact validation
+    match_domains: [modigie.com]
+    identity:
+      legal_name: Modigie, Inc.
+      brands: [Modigie]
+      parent: null
+      official_domains: [modigie.com]
+    relevance:
+      regions: [Europe, Other locations subject to applicable rights]
+      category: professional
+      data_categories: [Professional contact details, Mobile numbers, Employer information]
+      note: Policy describes Modigie as a processor; clarify customer-controlled records rather than assuming an independent controller database.
+    removal:
+      method: form
+      destination: https://privacyportal.onetrust.com/webform/4a8e10dc-2293-42ea-ad06-886bc22167a6/20341940-11c2-4c43-9b64-194e952203fd
+      alternatives: [support@modigie.com]
+      steps:
+        - Choose Individual and your requested right; enter name, email, mobile phone number and request details.
+        - Employer and country/state are optional in the public configuration. Describe the relevant contact-validation record and customer context if known.
+        - Review the deletion account-loss warning personally; do not accept account closure merely to remove a matched contact record.
+        - Ask which controller must handle customer-directed records and complete any further verification yourself.
+    required_information:
+      fields: [full_name, email, mobile_phone, request_details, requested_right]
+      certainty: not_fully_specified
+      verification: Public form configuration inspected; runtime conditions and identity verification untested.
+    coverage:
+      effect: deletion_request
+      includes: Matched Modigie records to the extent it can fulfil the selected request or route it to the controller.
+      excludes: Guaranteed independent-controller erasure, unrelated account closure and source databases.
+    automation:
+      mode: manual
+      reason: Required mobile disclosure, customer context and account-loss warning prevent minimal-email automation.
+    evidence:
+      - url: https://modigie.com/privacy-policy/
+        checked_on: '2026-10-01'
+        excerpt: Modigie is a data processor
+        supports: [entity, processor_claim, rights_form_not_support_email_shortcut]
+      - url: https://privacyportal.onetrust.com/webform/4a8e10dc-2293-42ea-ad06-886bc22167a6/20341940-11c2-4c43-9b64-194e952203fd
+        checked_on: '2026-10-01'
+        excerpt: Mobile Phone Number
+        supports: [required_mobile_matching, optional_employer, account_loss_warning]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Actual controller and matching depend on record context., Form submission untested., Parent and comparable scale unreviewed.]
+  - id: redidata-marketing-lists
+    name: Redi-Data marketing lists
+    match_domains: [redidata.com]
+    identity:
+      legal_name: Redi-Data, Inc.
+      brands: [Redi-Data, Redi-Physician, Redi-Data Digital]
+      parent: null
+      official_domains: [redidata.com]
+    relevance:
+      regions: [United States, EEA and United Kingdom — product scope requires clarification]
+      category: consumer_marketing
+      data_categories: [Professional contacts, Household attributes, Marketing segments, Consumer contacts]
+      note: Website CRM rights must not be confused with deletion of every licensed marketing list.
+    removal:
+      method: form
+      destination: https://www.redidata.com/opt-out-form/
+      alternatives: [privacy@redidata.com]
+      steps:
+        - Choose deletion or do-not-sell/share in the official form; it marks name, email and state as required.
+        - Phone, street address, city and ZIP are also shown; review matching needs personally and do not invent a US state.
+        - For European product records, ask privacy@redidata.com to clarify coverage first. The European website section promises CRM deletion, while database rights and statistics are described separately.
+        - Complete identity verification yourself; do not disclose health conditions or assume a medical-provider record exists.
+    required_information:
+      fields: [full_name, email, applicable_state_or_scope_clarification, requested_right]
+      certainty: not_fully_specified
+      verification: Web retrieval exposes labelled form fields; direct retrieval requires JavaScript. Policy requires identity verification; runtime untested.
+    coverage:
+      effect: deletion_request
+      includes: Matched records within the applicable database request; European product coverage must be confirmed separately from CRM deletion.
+      excludes: Original source registers, all licensed lists by default and unestablished non-US form acceptance.
+    automation:
+      mode: manual
+      reason: State matching and European website-versus-product scope are not resolved by a generic email.
+    evidence:
+      - url: https://www.redidata.com/about-us/
+        checked_on: '2026-10-01'
+        excerpt: Redi-Data, Inc.
+        supports: [entity, consumer_and_professional_list_products]
+      - url: https://www.redidata.com/privacy-policy/
+        checked_on: '2026-10-01'
+        excerpt: Redi-Data CRM system
+        supports: [website_deletion_scope, separate_database_rights, email_alternative, identity_checks]
+      - url: https://www.redidata.com/opt-out-form/
+        checked_on: '2026-10-01'
+        excerpt: State*
+        supports: [labelled_matching_fields, deletion_and_suppression_choices]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [European product matching and form acceptance unestablished., Runtime verification untested., Parent and comparable scale unreviewed.]
+  - id: complete-mailing-lists
+    name: Complete Mailing Lists
+    match_domains: [completemailinglists.com, cml-llc.com]
+    identity:
+      legal_name: Complete Mailing Lists, LLC
+      brands: [Complete Mailing Lists]
+      parent: null
+      official_domains: [completemailinglists.com, cml-llc.com]
+    relevance:
+      regions: [United States — listed state rights]
+      category: consumer_marketing
+      data_categories: [Consumer contacts, Professional contacts, Demographics, Marketing attributes]
+      note: The company says it does not knowingly collect non-US residents; this is not proof of an individual's absence.
+    removal:
+      method: form
+      destination: https://www.completemailinglists.com/consumer-privacy-request
+      alternatives: [privacy-inquiries@completemailinglists.com]
+      steps:
+        - Check your actual state against the request page and select the applicable deletion or sale/advertising opt-out action.
+        - Review the form's matching fields and any further identity verification personally; only public introductory instructions were retrievable.
+        - Non-US users can ask the privacy contact about specific evidence of a record. Do not claim supported US residence.
+        - Keep necessary suppression records distinct from deletion. Complete Medical Lists is not automatically included.
+    required_information:
+      fields: [supported_us_residence, requested_right, matching_fields_shown_in_form]
+      certainty: not_fully_specified
+      verification: Identity checks may follow; complete interactive field checklist uninspected.
+    coverage:
+      effect: deletion_request
+      includes: Matched Complete Mailing Lists records within the applicable state request.
+      excludes: Guaranteed Medical Lists coverage, non-US eligibility and independent customer copies.
+    automation:
+      mode: manual
+      reason: State eligibility and uninspected matching require personal review.
+    evidence:
+      - url: https://www.completemailinglists.com/privacy-policy
+        checked_on: '2026-10-01'
+        published: '2025-09-01'
+        excerpt: Complete Mailing Lists, LLC
+        supports: [entity, two_official_domains, US_focus_claim, state_rights]
+      - url: https://www.completemailinglists.com/consumer-privacy-request
+        checked_on: '2026-10-01'
+        excerpt: locate your personal information in our database
+        supports: [state_request_route, matching_purpose, possible_identity_checks]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Form fields and fulfilment untested., Non-US applicability unestablished., Parent and comparable scale unreviewed.]

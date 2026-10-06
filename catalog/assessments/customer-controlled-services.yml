@@ -1,0 +1,44 @@
+schema_version: 1
+assessments:
+  - record: community:amplitude-com
+    disposition: out_of_scope
+    checked_on: '2026-09-30'
+    rationale: Excluded from the default independent-broker campaign, not from privacy rights. For app/site end-user analytics, the notice expressly requires the customer controller to handle deletion and Amplitude to act on that customer's instructions. Its separate account, event and marketing processing includes advertising sharing; that calls for a relationship-specific request, not a claim that a generic Amplitude email deletes every app's analytics.
+    evidence:
+      - url: https://www.amplitude.com/privacy
+        checked_on: '2026-09-30'
+        excerpt: you need to contact the Customer directly
+        supports: [processor_scope, controller_handoff, separate_marketing_processing]
+      - url: https://www.amplitude.com/dpa
+        checked_on: '2026-09-30'
+        excerpt: Amplitude is Customer’s “Processor”
+        supports: [contractual_role, customer_request_handling]
+    unresolved: []
+  - record: community:helpshift
+    disposition: out_of_scope
+    checked_on: '2026-09-30'
+    rationale: Customer-support technology, with player-support data handled on behalf of the game/app company. The current notice directs those individuals to that customer, while treating direct account/website data separately. Exclude from the default independent-broker campaign; do not imply that no personal data is held or automatically close the person's support/service relationships.
+    evidence:
+      - url: https://www.helpshift.com/legal/privacy/
+        checked_on: '2026-09-30'
+        excerpt: you should contact the company (our customer)
+        supports: [processor_scope, player_support_example, separate_controller_processing]
+      - url: https://www.helpshift.com/legal/dpa/
+        checked_on: '2026-09-30'
+        excerpt: Data Subject Request(s)
+        supports: [customer_controlled_rights_handling]
+    unresolved: []
+  - record: community:cleverreach
+    disposition: out_of_scope
+    checked_on: '2026-09-30'
+    rationale: Newsletter-delivery software whose subscriber-list customers are the controllers. Recipient removal should target the sender/list owner; the provider's own account and newsletter rights are separate. Exclude from the default independent-broker campaign, not from relationship-specific privacy rights. Do not treat deleting a CleverReach account as universal removal from customers' mailing lists.
+    evidence:
+      - url: https://support.cleverreach.com/hc/en-us/articles/360004025673-Create-a-GDPR-compliant-form-with-checkbox
+        checked_on: '2026-09-30'
+        excerpt: you are the data controller
+        supports: [customer_role, subscriber_list_scope]
+      - url: https://www.cleverreach.com/en/privacy-policy/
+        checked_on: '2026-09-30'
+        excerpt: delete your account
+        supports: [separate_first_party_rights]
+    unresolved: []

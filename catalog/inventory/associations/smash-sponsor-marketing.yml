@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: smash-sponsor-marketing
+    records: [community:agentur-smash]
+    rationale: Official sponsor-disclosure and rights notice names the exact Smash Online GmbH entity; guide does not assume deletion by downstream sponsors.

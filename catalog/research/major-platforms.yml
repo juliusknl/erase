@@ -1,0 +1,194 @@
+schema_version: 1
+brokers:
+  - id: nextroll-services
+    name: NextRoll / AdRoll
+    match_domains: [nextroll.com, adroll.com, rollworks.com]
+    identity:
+      legal_name: NextRoll Inc.; NextRoll Limited (European-territory controller)
+      brands: [NextRoll, AdRoll, AdRoll ABM, RollWorks]
+      parent: null
+      official_domains: [nextroll.com, adroll.com, rollworks.com]
+    relevance:
+      regions: [EEA, UK, CH, US]
+      category: advertising
+      data_categories: [Cookie and device identifiers, Email hashes, Advertising activity, Professional contacts]
+      note: Service notice distinguishes advertising processing from corporate website records.
+    removal:
+      method: form
+      destination: https://nextroll-privacy.relyance.ai/
+      alternatives: [support@nextroll.com, dpo@nextroll.com, https://www.nextroll.com/privacy]
+      steps:
+        - Use the privacy-request portal for deletion, selecting the truthful region and relevant service.
+        - Complete the subsequent verification request; submission alone is not completion.
+        - Use support for routing problems and the DPO for escalation. Advertising opt-out is a separate preference.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Policy requires a verifiable request. The Relyance landing page loads a JavaScript shell; tenant-specific fields were not recovered. Generic platform translation strings do not establish required fields.
+    coverage:
+      effect: deletion_request
+      includes: Matched service data under the relevant NextRoll controller, subject to exceptions.
+      excludes: Independent customer records and blanket erasure through browser opt-out.
+    automation: {mode: manual, reason: Official European deletion portal is documented. A person must review its fields and finish verification; no automatic submission or email recipe.}
+    evidence:
+      - url: https://www.nextroll.com/privacy
+        checked_on: '2026-09-30'
+        published: '2026-06-10 service notice; website notice separately dated'
+        excerpt: NextRoll Limited is the data controller of your information
+        supports: [identity, relevance, removal, coverage, required_information]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Complete live request fields and subsequent verification., Parent ownership and current database scale unreviewed., No request submitted.]
+
+  - id: pubmatic-platform
+    name: PubMatic advertising platform
+    match_domains: [pubmatic.com]
+    identity:
+      legal_name: PubMatic Inc. (express EU/UK controller clause); PubMatic US Inc. (platform operator); PubMatic GmbH (EEA representative)
+      brands: [PubMatic]
+      parent: null
+      official_domains: [pubmatic.com]
+    relevance:
+      regions: [EEA, UK, CH, US, Global]
+      category: advertising
+      data_categories: [Cookie and mobile advertising identifiers, IP addresses, Email hashes, Audience segments]
+      note: September 2026 policy includes PubMatic US Inc. in its operator definition but expressly names PubMatic Inc. as EU/UK controller; the European representative is not a separate inferred controller.
+    removal:
+      method: manual
+      destination: https://pubmatic.com/legal/data-subject-rights-notice/
+      alternatives: [pubmaticprivacy@pubmatic.com, dpo@pubmatic.com, https://pubmatic.com/legal/opt-out/]
+      steps:
+        - Follow Data Subject Request Form from the current rights notice and select deletion for the relevant identifiers.
+        - Supply the cookie or mobile advertising identifier and response email; review any proof-of-device-control request personally.
+        - If the linked form fails, ask the privacy team for a working submission route. Do not send government ID merely because identity verification is mentioned.
+        - Browser advertising opt-out is separate and must be repeated after cookie clearing or on other browsers/devices.
+    required_information:
+      fields: [cookie_or_mobile_advertising_id, email]
+      certainty: not_fully_specified
+      verification: Notice specifies technical identifiers plus email and possible residence/device-control verification. Actual request form and its complete fields could not be opened.
+    coverage:
+      effect: deletion_request
+      includes: Matched PubMatic platform records subject to stated retention exceptions.
+      excludes: Independent publishers and advertiser records; browser opt-out is not historical erasure. Current notice includes PubMatic US Inc. but does not establish blanket group-wide deletion.
+    automation: {mode: blocked, reason: Published matching requirements found but final form destination and controls remain unresolved.}
+    evidence:
+      - url: https://pubmatic.com/legal/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2026-09'
+        excerpt: PubMatic, Inc is the controller of your User Information
+        supports: [identity, relevance, removal, required_information, coverage]
+      - url: https://pubmatic.com/legal/data-subject-rights-notice/
+        checked_on: '2026-09-29'
+        published: '2026-09'
+        excerpt: along with your email address to communicate fulfillment of the request
+        supports: [identity, removal, required_information, coverage]
+    scale: null
+    review_status: needs_research
+    tested_outcome: not_tested
+    unknowns: [Linked form could not be fetched; direct public HTTP requests also returned 403., September policy mixes PubMatic US Inc. operator language with an express PubMatic Inc. EU/UK controller clause., No challenge bypass or request submitted., Current comparable scale unreviewed.]
+
+  - id: quantcast-services
+    name: Quantcast advertising and measurement
+    match_domains: [quantcast.com, quantserve.com]
+    identity:
+      legal_name: Quantcast Corporation (US); Quantcast International Limited (outside US)
+      brands: [Quantcast, Quantcast Advertise, Quantcast Measure]
+      parent: null
+      official_domains: [quantcast.com, legal.quantcast.com, quantserve.com, data-access.quantserve.com]
+    relevance:
+      regions: [EEA, UK, CH, US, Global]
+      category: advertising
+      data_categories: [Pseudonymous identifiers, Browsing events, Audience inferences, Imported advertising data]
+      note: August 2026 service policy distinguishes US and non-US controllers and excludes processor-only client data.
+    removal:
+      method: form
+      destination: https://data-access.quantserve.com/gdpr/
+      alternatives: [https://www.quantcast.com/privacy-choices, privacy.qil@quantcast.com, privacy@quantcast.com]
+      steps:
+        - Open the data-request form in the affected browser and choose DELETION rather than ACCESS.
+        - Confirm sole use of that browser only if true, complete CAPTCHA and review the final deletion confirmation.
+        - If no verifiable cookie/identifier is available, contact the regional privacy team. That limitation is not a no-record finding.
+        - Separately set cookie or cookieless advertising preferences in each browser; cookieless preferences can change with the network/IP. Email-matched advertising and apps have separate controls.
+    required_information:
+      fields: [browser_identifier, sole_browser_user_attestation, request_type]
+      certainty: documented
+      verification: Public form markup requires the ownership attestation; its linked script reads the mc cookie and presents CAPTCHA. No request endpoint was invoked or identifier collected from a personal browser.
+    coverage:
+      effect: deletion_request
+      includes: Quantcast-controlled service data matched to the verified identifier.
+      excludes: Other browsers, independently controlled client records, and corporate newsletter preferences; opt-out is distinct from deletion.
+    automation: {mode: manual, reason: Browser-bound verification and an ownership statement cannot be supplied through generic email automation.}
+    evidence:
+      - url: https://legal.quantcast.com/#products-and-services-privacy-policy
+        checked_on: '2026-09-29'
+        published: '2026-08-04 current version; archived versions not used'
+        excerpt: Quantcast International Limited is the controller
+        supports: [identity, relevance, removal, coverage]
+      - url: https://www.quantcast.com/privacy-choices
+        checked_on: '2026-09-29'
+        excerpt: specific to the browser you are using
+        supports: [removal, required_information, coverage]
+      - url: https://data-access.quantserve.com/gdpr/
+        checked_on: '2026-09-29'
+        excerpt: I confirm that I am the sole user of this browser
+        supports: [removal, required_information]
+      - url: https://data-access.quantserve.com/assets/script.js
+        checked_on: '2026-09-29'
+        excerpt: show_captcha_field
+        supports: [required_information]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Subsequent outcomes untested., Shared-browser verification requires support rather than a false ownership statement., Parent ownership and current database scale unreviewed.]
+
+  - id: rocketreach-professional
+    name: RocketReach
+    match_domains: [rocketreach.co]
+    identity:
+      legal_name: RocketReach LLC
+      brands: [RocketReach]
+      parent: null
+      official_domains: [rocketreach.co, static.rocketreach.co]
+    relevance:
+      regions: [EEA, UK, US, Global]
+      category: professional
+      data_categories: [Professional contacts, Work history, Education, Social profile links, Inferred email addresses]
+      note: Policy covers non-customer professionals; public-web sources, data providers and opted-in customer networks contribute records.
+    removal:
+      method: form
+      destination: https://rocketreach.co/remove-profile
+      alternatives: [privacy@rocketreach.co, https://verasafe.com/public-resources/contact-data-protection-representative]
+      steps:
+        - Start the removal form with the relevant email address; its current component says it sends a verification link.
+        - Complete verification and review any subsequent profile-matching step before recording a submitted request.
+        - Use the published privacy contact for other rights or matching problems; EU/UK representative contact is also published.
+        - Do not confuse Cookie Preferences or customer-account deletion with removal of a professional profile.
+    required_information:
+      fields: [email]
+      certainty: not_fully_specified
+      verification: The public RemoveProfileView component has one initial email input and promises a verification link; subsequent screens were not accessed. No email submitted.
+    coverage:
+      effect: deletion_request
+      includes: Professional profile records identified and accepted through the removal workflow, subject to exceptions.
+      excludes: Copies held independently by customers and source websites; account erasure may also close a customer account.
+    automation: {mode: manual, reason: Official profile-removal route is documented. The person must finish email verification and matching; no automatic submission or email recipe.}
+    evidence:
+      - url: https://rocketreach.co/privacy
+        checked_on: '2026-09-30'
+        published: '2025-01-10 source label; page also contains 2025 request metrics'
+        excerpt: To request deletion of your Personal Data, visit
+        supports: [identity, relevance, removal, coverage]
+      - url: https://static.rocketreach.co/bundles/js/output.034874ef58ad.js
+        checked_on: '2026-09-29'
+        excerpt: Email Address (We’ll send a verification link here)
+        supports: [removal, required_information]
+      - url: https://cppa.ca.gov/data_broker_registry/registry.csv
+        checked_on: '2026-09-30'
+        published: '2026 registry; landing page last updated 2026-07-29'
+        excerpt: RocketReach LLC
+        supports: [legal_identity, official_domain, privacy_contact]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Post-verification profile matching and request outcomes untested., Current scale and parent ownership unreviewed.]

@@ -1,0 +1,11 @@
+schema_version: 1
+associations:
+  - guide_id: melissa-consumer-databases
+    records: [live:melissa-data-corpoation]
+    rationale: The inventory's misspelled Corporation label points to melissa.com; its current official privacy policy identifies Melissa Data Corporation and its consumer database-removal process.
+  - guide_id: hireez-talent-database
+    records: [live:hireteammate-inc]
+    rationale: Official GDPR guidance explicitly identifies HireTeamMate Inc doing business as hireEZ and its independent Talent Database controller role.
+  - guide_id: pitchbook-professionals
+    records: [live:pitchbook-data-inc]
+    rationale: PitchBook's Article 14 notice expressly identifies PitchBook Data Inc as professional-profile controller and refers rights requests to its Morningstar parent portal.

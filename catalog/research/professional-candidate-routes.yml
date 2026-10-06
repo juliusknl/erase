@@ -1,0 +1,141 @@
+schema_version: 1
+brokers:
+  - id: listkit-professional
+    name: ListKit professional contacts
+    match_domains: [listkit.io]
+    identity:
+      legal_name: ListKit LLC
+      brands: [ListKit]
+      parent: null
+      official_domains: [listkit.io]
+    relevance:
+      regions: [EEA, United Kingdom, Switzerland, United States]
+      category: professional
+      data_categories: [Business contact details, Employment details, Professional profiles]
+      note: Database contacts, not subscriber account cancellation or unrelated similarly named apps.
+    removal:
+      method: email
+      destination: hello@listkit.io
+      alternatives: [https://www.listkit.io/privacy]
+      steps:
+        - Request removal of your matched contact profile and object to further marketing disclosure.
+        - Supply matching emails; review any further verification personally. Customer-directed records require the relevant customer's route.
+    required_information:
+      fields: [full_name, email, requested_right]
+      certainty: not_fully_specified
+      verification: No fixed minimum checklist is published; additional matching or verification may follow.
+    coverage:
+      effect: deletion_request
+      includes: Matched ListKit-controlled contact database records.
+      excludes: Independent customer copies, customer-directed processing and subscriber account closure.
+    automation:
+      mode: manual
+      reason: Initial email is supported; later verification is not specified.
+    evidence:
+      - url: https://www.listkit.io/privacy
+        checked_on: '2026-10-01'
+        published: '2025-10-08'
+        excerpt: hello@listkit.io
+        supports: [entity, contact_database_removal, European_rights, processor_boundary]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Matching and fulfilment untested., Parent and comparable scale unreviewed.]
+  - id: recruitbot-candidates
+    name: RecruitBot candidate database
+    match_domains: [recruitbot.com]
+    identity:
+      legal_name: RecruitBot Inc.
+      brands: [RecruitBot]
+      parent: null
+      official_domains: [recruitbot.com]
+    relevance:
+      regions: [EEA, United Kingdom, United States]
+      category: recruitment
+      data_categories: [Contact details, Employment history, Candidate profiles, Recruitment rankings]
+      note: Independently controlled candidate records, separate from employer-directed processing.
+    removal:
+      method: email
+      destination: privacy@recruitbot.com
+      alternatives: [https://recruitbot.com/privacy-policy/]
+      steps:
+        - Request deletion of your candidate profile and objection to future recruitment-database inclusion.
+        - Include matching contact identifiers; review additional identity checks yourself.
+        - Employer-controlled records require that employer's route, not cancellation of a recruiter account.
+    required_information:
+      fields: [full_name, email, requested_right]
+      certainty: not_fully_specified
+      verification: Policy permits specific information to verify identity; no fixed checklist.
+    coverage:
+      effect: deletion_request
+      includes: RecruitBot-controlled candidate records.
+      excludes: Independent employer records, original sources and business-account closure.
+    automation:
+      mode: manual
+      reason: Initial candidate email is accepted; further matching and verification remain manual.
+    evidence:
+      - url: https://recruitbot.com/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2025-06-28'
+        excerpt: privacy@recruitbot.com
+        supports: [entity, candidate_controller_scope, European_email_deletion, verification]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Matching and fulfilment untested., Parent and comparable scale unreviewed.]
+  - id: lightcast-professional
+    name: Lightcast professional profiles
+    match_domains: [lightcast.io]
+    identity:
+      legal_name: Lightcast, LLC
+      brands: [Lightcast, Economic Modeling, EMSI, SkillCollective]
+      parent: Obsidian BG Holdings LP
+      official_domains: [lightcast.io]
+    relevance:
+      regions: [EU, EEA, United Kingdom, Canada, United States]
+      category: professional
+      data_categories: [Business contact details, Career history, Education history, Professional profiles]
+      note: Shared portal names related brands; a brand count is not independent deletion coverage.
+    removal:
+      method: form
+      destination: https://lightcast.io/legal/privacy-request
+      alternatives: [privacy@lightcast.io, eurep@itgovernance.eu]
+      steps:
+        - Open the linked Privacy Request Center, use your actual residence and choose deletion or objection for your professional profile.
+        - Submit one form per matching email and complete verification for each. Enter your name and choose yourself as data subject; agent authorization is a separate conditional upload.
+        - State the profile/database scope in the details. Avoid unintended service-account closure; review any account-loss warning personally.
+        - Country-dependent options and conditional fields require review in the form. Do not invent a US state or claim protected-person status. Phone is optional in the public configuration.
+        - General privacy emails are not the normal submission route; the policy redirects requests to this form. EU representative correspondence must identify Lightcast.
+    required_information:
+      fields: [first_name, last_name, matching_email, residence, requested_right, requester_role]
+      certainty: not_fully_specified
+      verification: Public configuration enables email verification and CAPTCHA; conditional behavior and submission untested.
+    coverage:
+      effect: deletion_request
+      includes: Matched Lightcast professional records; portal explicitly names Economic Modeling, EMSI, Rhetorik and SkillCollective.
+      excludes: Guaranteed all-brand matches, independent customer exports, source websites or blanket account closure.
+    automation:
+      mode: manual
+      reason: Per-address verification, CAPTCHA and regional choices require personal interaction.
+    evidence:
+      - url: https://legal.lightcast.io/
+        checked_on: '2026-10-01'
+        published: '2026-09-08'
+        excerpt: we do not accept requests via email
+        supports: [current_controller_group, professional_profiles, form_route, European_rights]
+      - url: https://lightcast.io/legal/privacy-request
+        checked_on: '2026-10-01'
+        excerpt: Privacy Request Center
+        supports: [official_portal_link]
+      - url: https://privacyportal.onetrust.com/webform/0f61f895-d08d-410f-b96d-ecfd34fd42e3/4b91c2db-5fdc-4f47-8523-b9f01d9e92a3
+        checked_on: '2026-10-01'
+        excerpt: Please complete one form for each email address
+        supports: [public_configuration, named_brand_scope, matching, verification, conditional_fields]
+      - url: https://lightcast.io/about/launching-lightcast
+        checked_on: '2026-10-01'
+        excerpt: our legal name will remain the same
+        supports: [historical_Economic_Modeling_brand_relationship_not_current_rename_proof]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Conditional form behavior and fulfilment untested., Legal rename continuity not independently established; shared portal coverage is explicit.]

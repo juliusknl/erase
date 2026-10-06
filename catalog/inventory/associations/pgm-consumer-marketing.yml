@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: pgm-consumer-marketing
+    records: [live:datamentors-llc]
+    rationale: The current PGM notice explicitly names DataMentors LLC, matching the registered entity. Marketing suppression is separate from state-limited deletion and other Porch companies.

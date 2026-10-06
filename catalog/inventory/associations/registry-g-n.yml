@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "associations": [
+    {"guide_id": "registry-labels-lists-inc", "records": ["live:labels-lists-inc"], "rationale": "Official L2 notice explicitly names Labels & Lists Inc and documents name-plus-address removal; state addendum confirms the privacy mailbox."},
+    {"guide_id": "registry-kontext-data", "records": ["live:kontext-data"], "rationale": "Official Kontext brand/domain notice and current public application asset document exact deletion identifiers and controller/service-provider distinction."},
+    {"guide_id": "registry-komodo-health-notice-review", "records": ["live:komodo-health-inc"], "rationale": "Official Komodo pages identify the entity and product-specific notices, but their embedded policy resources return 404; this is a blocked route assessment."},
+    {"guide_id": "registry-kargo-global-llc", "records": ["live:kargo-global-llc"], "rationale": "Kargo's official services policy names Kargo Global LLC; its portal explicitly requires browser/mobile/CTV identifiers for deletion and distinguishes Commerce processor data."},
+    {"guide_id": "registry-koddi-inc", "records": ["live:koddi-inc"], "rationale": "Koddi's July2026 notice names Koddi Inc. and publishes direct data-rights email with international and controller/processor qualifications."},
+    {"guide_id": "registry-kloudend-inc", "records": ["live:kloudend-inc"], "rationale": "ipapi's official privacy notice names Kloudend Inc. and exposes the owner privacy mailbox; IP-geolocation, account and query-log scopes are kept separate."},
+    {"guide_id": "registry-leadcrunch-route-review", "records": ["live:leadcrunch"], "rationale": "Official historical registration links LeadCrunch dba Rev to getrev.ai, but current application-rendered instructions remain unresolved; this is a blocked assessment, not mailbox verification."},
+    {"guide_id": "registry-jun-group-productions-llc", "records": ["live:jun-group-productions-llc"], "rationale": "Official notice names Jun Group Productions LLC and HyprMX Mobile LLC and explicitly requires the linked advertising-ID privacy form rather than email."},
+    {"guide_id": "registry-juicebox-app-inc", "records": ["live:juicebox-app-inc"], "rationale": "September 2026 notice names Juicebox App Inc and distinguishes its candidate search database from independently customer-controlled imports."},
+    {"guide_id": "registry-keyword-connects-llc", "records": ["live:keyword-connects-llc"], "rationale": "Current policy explicitly names Keyword Connects LLC among Ignite Visibility affiliates and publishes a rights route without claiming groupwide deletion coverage."},
+    {"guide_id": "registry-kb-synergy-entity-review", "records": ["live:kb-synergy-inc"], "rationale": "Research resolves the current site to KB Synergy Holdings Inc but does not establish historical KB Synergy Inc continuity; association retains a blocked identity/scope assessment."},
+    {"guide_id": "registry-knower-tech-entity-review", "records": ["live:knower-tech-usa-llc"], "rationale": "Official site and product notices reveal conflicting controller names for the Knower Tech USA LLC registry row; this links a substantive blocker, not a validated delivery route."},
+    {"guide_id": "registry-live-data-technologies-inc", "records": ["live:live-data-technologies-inc"], "rationale": "Official terms identify Live Data Technologies Inc.; current deletion explanation specifically requires professional matching and distinguishes historical policy text."},
+    {"guide_id": "registry-loopme-limited", "records": ["live:loopme-limited"], "rationale": "Current ad-tech notice identifies LoopMe Ltd with its English registration number, documents European deletion and separates controller/device scope."},
+    {"guide_id": "registry-ispot-tv-inc", "records": ["live:ispot-tv-inc"], "rationale": "iSpot's official privacy notice and opt-out page explicitly publish the iSpot.tv Inc privacy mailbox and two-step online deletion process."},
+    {"guide_id": "registry-jdm-list-services-llc", "records": ["live:jdm-list-services-llc"], "rationale": "JDM's policy identifies the registry entity, explains vendor-direct campaign files and publishes its rights mailbox without claiming an owned consumer database."},
+    {"guide_id": "registry-key-marketing-advantage-llc", "records": ["live:key-marketing-advantage-llc"], "rationale": "Official KMA rights form names Key Marketing Advantage LLC and explicitly requires full postal identity rather than email-only matching."},
+    {"guide_id": "registry-iwave", "records": ["live:iwave"], "rationale": "Kindsight's current iWave-specific notice names iWave Information Systems Inc. and distinguishes VeriGift records from independently licensed donor datasets."},
+    {"guide_id": "registry-jigyasa-analytics-llc", "records": ["live:jigyasa-analytics-llc"], "rationale": "Official Jigyasa contact page names the registry entity, states broker operations ceased and retains a directly linked deletion form; no deletion outcome inferred."},
+    {"guide_id": "registry-leadfuze-com", "records": ["live:leadfuze-com"], "rationale": "The registry uses the LeadFuze brand and official domain; current policy and interactive form describe profile suppression and country-dependent verification, with legal suffix explicitly unresolved."},
+    {"guide_id": "registry-leadgenius-com", "records": ["live:leadgenius-com"], "rationale": "Official LeadGenius notice names MobileWorks Inc. dba LeadGenius and separately documents European privacy and California optout mailboxes."},
+    {"guide_id": "registry-leadpost-llc", "records": ["live:leadpost-llc"], "rationale": "Official consumer data-broker policy names LeadPost LLC and links the deletion/opt-out portal; verification and non-consumer scope boundaries remain explicit."},
+    {"guide_id": "registry-leadspace-inc", "records": ["live:leadspace-inc"], "rationale": "Current Leadspace notice names Leadspace Inc. and Ltd.; the official rights form separates default sale opt-out from an explicitly requested deletion."},
+    {"guide_id": "registry-institutional-shareholder-services-inc", "records": ["live:institutional-shareholder-services-inc"], "rationale": "The redirected current ISS STOXX privacy notice explicitly identifies Institutional Shareholder Services Inc. and covered subsidiaries and retains the issgovernance.com DPO routes."},
+    {"guide_id": "registry-intent-iq-llc", "records": ["live:intent-iq-llc"], "rationale": "Intent IQ's official technology notice and rights center describe identifier-specific deletion and opt-out for the registry's advertising identity business."},
+    {"guide_id": "registry-intentsify-llc", "records": ["live:intentsify-llc"], "rationale": "Current Consumer Data Privacy Policy names Intentsify LLC and Intentsify Limited and supplies a product-specific rights form, distinct from client-controller data."},
+    {"guide_id": "registry-interactive-data-llc", "records": ["live:interactive-data-llc"], "rationale": "The official IDI policy and state-limited deletion form explicitly name Interactive Data LLC and describe sensitive matching and exemptions."},
+    {"guide_id": "registry-kalibrate-intalytics", "records": ["live:intalytics-inc", "live:esite-analytics-inc"], "rationale": "Kalibrate's February 2026 group notice explicitly names Intalytics Inc. and eSite Analytics Inc. as controllers for their exact domains and publishes the shared privacy request address; dataset roles remain product-specific."},
+    {"guide_id": "registry-infinite-knot-inc", "records": ["live:infinite-knot-inc"], "rationale": "Indexed official Contacts411 policy names Infinite Knot Inc.; current endpoint availability is a substantive unresolved blocker, not a verified live contact."},
+    {"guide_id": "registry-inmar-oiq-llc", "records": ["live:inmar-oiq-llc"], "rationale": "The product-specific ownerIQ notice names Inmar-OIQ LLC; mapping is limited to ownerIQ rather than other Inmar healthcare or marketing products."},
+    {"guide_id": "registry-inmarket-media-llc", "records": ["live:inmarket-media-llc"], "rationale": "InMarket's official policy names the registry entity and distinguishes consumer deletion/preferences routes from business-contact requests."},
+    {"guide_id": "registry-innovation-brands-corp", "records": ["live:innovation-brands-corp"], "rationale": "Official Proxima privacy notice explicitly names Innovation Brands Corp. dba Proxima.ai and publishes verified-email suppression instructions."},
+    {"guide_id": "registry-innovative-database-solutions-inc", "records": ["live:innovative-database-solutions-inc"], "rationale": "The current IDS notice identifies Innovative Database Solutions Inc. and describes campaign suppression/provider coordination rather than an owned consumer database."},
+    {"guide_id": "registry-indiemark-llc", "records": ["live:indiemark-llc"], "rationale": "BlackBox's official privacy policy explicitly names Indiemark LLC dba Email Industries as owner/operator and provides deletion instructions."},
+    {"guide_id": "registry-infinite-media-concepts-inc", "records": ["live:infinite-media-concepts-inc"], "rationale": "The current MailingLists.com privacy notice explicitly identifies Infinite Media Concepts Inc. and its covered mailing-list brands."},
+    {"guide_id": "registry-information-data-resources-llc", "records": ["live:information-data-resources-llc"], "rationale": "Public Information Services' current privacy request page identifies Information Data Resources LLC in the footer and supplies its removal workflow."},
+    {"guide_id": "registry-information-com-llc", "records": ["live:information-com-llc"], "rationale": "The first-party Information.com suppression center identifies Information.com LLC and describes email-verified search-result suppression."},
+    {"guide_id": "registry-id5-technology-ltd", "records": ["live:id5-technology-ltd"], "rationale": "The June2026 official platform policy names ID5 Technology Limited and details browser and hashed-email suppression distinct from website data."},
+    {"guide_id": "registry-illumin-inc", "records": ["live:illumin-inc"], "rationale": "Official illumin Inc. platform privacy and rights instructions provide the identity, identifier screenshot verification and request form."},
+    {"guide_id": "registry-idmap-entity-review", "records": ["live:idmap-inc"], "rationale": "The registry domain's current official notice was assessed but names IDMAP.TECH LLC rather than IDMAP Inc.; this association records an unresolved identity conflict, not proven continuity."},
+    {"guide_id": "registry-index-exchange-inc", "records": ["live:index-exchange-inc"], "rationale": "Official Index Exchange privacy center names Index Exchange Inc. and its subsidiaries; rights instructions distinguish browser and device identifiers."},
+    {"guide_id": "registry-ileads-com-llc", "records": ["live:ileads-com-llc"], "rationale": "The official iLeads request form identifies iLeads.com LLC and publishes its California-only deletion and sale opt-out workflow."},
+    {"guide_id": "registry-inbound-insight-llc", "records": ["live:inbound-insight-llc"], "rationale": "Inbound Insight LLC is explicitly named in its current California notice; the assessed service-provider/controller conflict remains unresolved."},
+    {
+      "guide_id": "registry-getvector-inc",
+      "records": [
+        "live:getvector-inc"
+      ],
+      "rationale": "The Vector opt-out page identifies GetVector Inc. in its footer and publishes the name/email form and security@vector.co deletion route."
+    },
+    {
+      "guide_id": "registry-hunter-web-services-inc",
+      "records": [
+        "live:hunter-web-services-inc"
+      ],
+      "rationale": "The Hunter claim page identifies Hunter Web Services Inc.; the privacy policy covers its business-profile database and links email-scoped removal."
+    },
+    {
+      "guide_id": "registry-lead411-corporation",
+      "records": [
+        "live:lead411-corporation"
+      ],
+      "rationale": "Lead411 Corporation is the controller named by its policy; the same official website publishes the profile privacy-rights form."
+    },
+    {
+      "guide_id": "registry-leadiq-inc",
+      "records": [
+        "live:leadiq-inc"
+      ],
+      "rationale": "The LeadIQ privacy center identifies LeadIQ Inc. and links its professional-profile database directly to the request-removal page."
+    },
+    {
+      "guide_id": "registry-lotame-solutions-inc",
+      "records": [
+        "live:lotame-solutions-inc"
+      ],
+      "rationale": "Lotame Solutions Inc. publishes the marketplace-specific rights instructions and explicitly links its email requests to Epsilon's form."
+    },
+    {
+      "guide_id": "registry-lusha-systems-inc",
+      "records": [
+        "live:lusha-systems-inc"
+      ],
+      "rationale": "Lusha's September2026 notice names Lusha Systems Inc. and Lusha Systems Ltd. as joint Contact controllers and links its B2B removal form."
+    },
+    {
+      "guide_id": "registry-medpro-systems",
+      "records": [
+        "live:medpro-systems"
+      ],
+      "rationale": "The official May2026 rationale statement names MedPro Systems LLC and publishes jurisdiction-specific professional-data request instructions."
+    },
+    {
+      "guide_id": "registry-mobilewalla-inc",
+      "records": [
+        "live:mobilewalla-inc"
+      ],
+      "rationale": "Mobilewalla's official privacy center and global request form tie the named registry business to its MAID-based data rights process."
+    },
+    {
+      "guide_id": "registry-graze-social-pbc",
+      "records": [
+        "live:graze-social-pbc"
+      ],
+      "rationale": "The reviewed official notice on graze.social identifies Graze Social PBC and describes the other product and its privacy-request route."
+    },
+    {
+      "guide_id": "registry-getprospect-com",
+      "records": [
+        "live:getprospect-com"
+      ],
+      "rationale": "The reviewed official notice on getprospect.com identifies GetProspect LLC and describes the professional product and its privacy-request route."
+    },
+    {
+      "guide_id": "registry-giant-partners-inc",
+      "records": [
+        "live:giant-partners-inc"
+      ],
+      "rationale": "The reviewed official notice on giantpartners.com identifies Giant Partners Inc. and describes the consumer marketing product and its privacy-request route."
+    },
+    {
+      "guide_id": "registry-gigabite-inc",
+      "records": [
+        "live:gigabite-inc"
+      ],
+      "rationale": "The reviewed official notice on boam.ai identifies Gigabite Inc. dba Boam AI and describes the professional product and its privacy-request route."
+    },
+    {
+      "guide_id": "registry-global-source-data-solutions-inc",
+      "records": [
+        "live:global-source-data-solutions-inc"
+      ],
+      "rationale": "The reviewed official notice on gsdsi.com identifies Global Source Data Solutions Inc. and describes the consumer marketing product and its privacy-request route."
+    },
+    {
+      "guide_id": "registry-grayhair-software-llc",
+      "records": [
+        "live:grayhair-software-llc"
+      ],
+      "rationale": "The reviewed official notice on grayhairsoftware.com identifies GrayHair Software LLC and describes the postal marketing product and its privacy-request route."
+    },
+    {
+      "guide_id": "registry-grin-technologies-inc",
+      "records": [
+        "live:grin-technologies-inc"
+      ],
+      "rationale": "The reviewed official notice on grin.co identifies Grin Technologies Inc. and describes the professional product and its privacy-request route."
+    },
+    {
+      "guide_id": "registry-growing-libraries-llc",
+      "records": [
+        "live:growing-libraries-llc"
+      ],
+      "rationale": "The reviewed official notice on growinglibraries.com identifies Growing Libraries LLC and describes the consumer marketing product and its privacy-request route."
+    },
+    {
+      "guide_id": "registry-growthcode-llc",
+      "records": [
+        "live:growthcode-llc"
+      ],
+      "rationale": "The reviewed official notice on growthcode.io identifies GrowthCode LLC and describes the advertising product and its privacy-request route."
+    },
+    {
+      "guide_id": "registry-health-union-llc",
+      "records": [
+        "live:health-union-llc"
+      ],
+      "rationale": "The reviewed official notice on health-union.com identifies Health Union, LLC and describes the advertising product and its privacy-request route."
+    },
+    {
+      "guide_id": "registry-healthlink-dimensions-llc",
+      "records": [
+        "live:healthlink-dimensions-llc"
+      ],
+      "rationale": "The reviewed official notice on healthlinkdimensions.com identifies HealthLink Dimensions, LLC and describes the professional product and its privacy-request route."
+    },
+    {
+      "guide_id": "registry-healthwise-data",
+      "records": [
+        "live:healthwise-data"
+      ],
+      "rationale": "The reviewed official notice on healthwisedata.com identifies HealthWise Data, LLC and describes the consumer marketing product and its privacy-request route."
+    },
+    {
+      "guide_id": "registry-helix-campaigns-llc",
+      "records": [
+        "live:helix-campaigns-llc"
+      ],
+      "rationale": "The reviewed official notice on helixcampaigns.com identifies Helix Campaigns LLC and describes the consumer marketing product and its privacy-request route."
+    },
+    {
+      "guide_id": "registry-h1-insights-inc",
+      "records": [
+        "live:h1-insights-inc"
+      ],
+      "rationale": "The official H1 Insights notice identifies H1 Insights, Inc. and provides the reviewed product-specific rights route; current legal wording is retained in the guide."
+    },
+    {
+      "guide_id": "registry-hubspot-inc",
+      "records": [
+        "live:hubspot-inc"
+      ],
+      "rationale": "The official HubSpot commercial dataset notice identifies HubSpot, Inc. and affiliates identified in its privacy notice and provides the reviewed product-specific rights route; current legal wording is retained in the guide."
+    },
+    {
+      "guide_id": "registry-hunt-club-inc",
+      "records": [
+        "live:hunt-club-inc"
+      ],
+      "rationale": "Atlas's registry host redirects to Hunt Club, whose official Atlas terms name Hunt Club Inc. and whose privacy notice covers its recruitment platform."
+    },
+    {
+      "guide_id": "registry-huge-legal-technology-company-inc",
+      "records": [
+        "live:huge-legal-technology-company-inc"
+      ],
+      "rationale": "The official Trust & Will notice identifies Huge Legal Technology Company, A Public Benefit Corporation and provides the reviewed product-specific rights route; current legal wording is retained in the guide."
+    }
+  ]
+}

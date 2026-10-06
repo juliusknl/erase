@@ -1,0 +1,11 @@
+schema_version: 1
+associations:
+  - guide_id: jdpower-consumer-research
+    records: [live:j-d-power]
+    rationale: Current official J.D. Power policy names the controller and relationship-specific portal; the linked Europe supplement preserves client-directed research boundaries.
+  - guide_id: infutor-lead-intelligence
+    records: [live:lead-intelligence-inc, live:lead-intelligence-inc-2]
+    rationale: Current August 2026 Infutor notice explicitly names Lead Intelligence Inc dba InfutorData for Data and Platform Services. Both inventory rows name that entity; this does not match or cover every Verisk-domain product.
+  - guide_id: monocl-expert-profiles
+    records: [live:monocl-ab]
+    rationale: April 2026 expert notice explicitly names Monocl AB and separates its expert publication, regional request routes and source-dependent removal from other Definitive products.

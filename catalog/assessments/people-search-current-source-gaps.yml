@@ -1,0 +1,143 @@
+schema_version: 1
+assessments:
+  - record: live:free-data-services-llc
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: TruePeopleSearch's privacy and removal pages return a Cloudflare block and public web retrieval fails. The official app listing corroborates Free Data Services LLC and US people-search scope, but does not establish the current website removal fields, verification or European applicability. Do not inherit third-party instructions as a tested workflow.
+    evidence:
+      - url: https://www.truepeoplesearch.com/privacy
+        checked_on: '2026-10-01'
+        excerpt: Sorry, you have been blocked
+        supports: [current_notice_unavailable]
+      - url: https://www.truepeoplesearch.com/removal
+        checked_on: '2026-10-01'
+        excerpt: Sorry, you have been blocked
+        supports: [current_form_unavailable]
+      - url: https://play.google.com/store/apps/details?id=com.freedataservices.truepeoplesearch
+        checked_on: '2026-10-01'
+        excerpt: FREE DATA SERVICES, LLC
+        supports: [developer_published_identity_and_US_product]
+    unresolved: [Inspect current official removal requirements and regional matching., No delivery or removal tested.]
+  - record: live:mississippi-tornado-alley-llc
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: FastPeopleSearch's official privacy and removal pages return a Cloudflare block and public web retrieval fails. A search-indexed Clym notice names Mississippi Tornado Alley LLC, but the current site's delegation to that notice and runtime form cannot be corroborated here. The historical registry is a discovery source, not proof of an executable request or an all-brand removal.
+    evidence:
+      - url: https://www.fastpeoplesearch.com/privacy
+        checked_on: '2026-10-01'
+        excerpt: Sorry, you have been blocked
+        supports: [current_notice_unavailable]
+      - url: https://www.fastpeoplesearch.com/removal
+        checked_on: '2026-10-01'
+        excerpt: Sorry, you have been blocked
+        supports: [current_form_unavailable]
+      - url: https://us6.clym.io/document/9c4de6a610284ff48de26dccjyf4591k/0f7c461d2e1f459d8ddb9daawk82qiqh
+        checked_on: '2026-10-01'
+        excerpt: Mississippi Tornado Alley, LLC dba FastPeopleSearch.com
+        supports: [hosted_notice_identity_candidate_not_current_site_delegation]
+    unresolved: [Corroborate current notice delegation and inspect removal fields., Determine matching and per-brand coverage without bypassing access controls.]
+  - record: live:mississippi-tornado-alley-llc-2
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: The newer registry row includes ten people-search brands, unlike the older FastPeopleSearch-only row. Current FastPeopleSearch notice and removal retrieval is blocked. No shared removal acceptance or current brand-wide controller workflow has been established, so this cannot be closed as a duplicate of a resolved guide or treated as ten completed removals.
+    evidence:
+      - url: https://cppa.ca.gov/data_broker_registry/registry.csv
+        checked_on: '2026-10-01'
+        excerpt: Mississippi Tornado Alley, LLC
+        supports: [imported_registry_identity_and_multiple_brand_candidates]
+      - url: https://www.fastpeoplesearch.com/removal
+        checked_on: '2026-10-01'
+        excerpt: Sorry, you have been blocked
+        supports: [inspected_brand_workflow_unavailable]
+    unresolved: [Review other listed brands individually., Establish shared versus separate suppression and verification.]
+  - record: community:mylife
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: This community record names MyLife.com Inc and cites an archived 2019 notice. The newer registry names Insightbridge LLC for mylife.com. Current policy and privacy-request retrieval are blocked, leaving controller continuity and present matching requirements unresolved. Unrelated similarly named InsightBridge AI services are not evidence of ownership or a privacy recipient.
+    evidence:
+      - url: https://www.mylife.com/privacy-policy
+        checked_on: '2026-10-01'
+        excerpt: Sorry, you have been blocked
+        supports: [current_notice_unavailable]
+      - url: https://www.mylife.com/ccpa/index.pubview
+        checked_on: '2026-10-01'
+        excerpt: Sorry, you have been blocked
+        supports: [current_privacy_route_unavailable]
+    unresolved: [Resolve MyLife Inc and Insightbridge LLC continuity from current official sources., Inspect current removal and regional eligibility.]
+  - record: live:insightbridge-llc
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: The registry links Insightbridge LLC to mylife.com, while the community record uses MyLife.com Inc. Current MyLife policy retrieval is blocked and searches do not establish the relationship. Do not merge unrelated InsightBridge companies or transmit identity to their contact addresses. A specific current product controller and removal workflow are still needed.
+    evidence:
+      - url: https://www.mylife.com/
+        checked_on: '2026-10-01'
+        excerpt: Sorry, you have been blocked
+        supports: [current_product_site_unavailable]
+      - url: https://www.mylife.com/privacy-policy
+        checked_on: '2026-10-01'
+        excerpt: Sorry, you have been blocked
+        supports: [controller_and_rights_notice_unavailable]
+    unresolved: [Resolve exact controller continuity., Recover current matching and verification requirements.]
+  - record: live:infopay-inc
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: InfoPay's corporate-site notice expressly excludes linked websites. InfoTracer and RecordsFinder now have separately reviewed product guides and brand-specific TrustArc forms, but the registry names additional property, vehicle, court and identity products. The corporate privacy email is not a verified all-brand deletion route. Keep the aggregate record unresolved until remaining product scopes are accounted for.
+    evidence:
+      - url: https://www.infopay.com/privacy
+        checked_on: '2026-10-01'
+        published: '2026-01-23'
+        excerpt: This Privacy Policy does not apply to information collected or obtained by any website that may be linked
+        supports: [corporate_site_not_all_product_coverage]
+      - url: https://infotracer.com/optout/
+        checked_on: '2026-10-01'
+        excerpt: privacy@infotracer.com
+        supports: [separate_product_rights_route]
+      - url: https://recordsfinder.com/optout/
+        checked_on: '2026-10-01'
+        excerpt: privacy@recordsfinder.com
+        supports: [separate_product_rights_route]
+    unresolved: [Review remaining registered product brands and cross-brand request scope., Do not infer whole-group deletion from one form.]
+  - record: live:digital-safety-products-llc
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: SpyFly's official privacy and request routes return a location block and web retrieval fails. Public Record Reports names the same Digital Safety Products LLC operator in its January 2026 notice, but its accessible policy does not establish the blocked SpyFly workflow. Third-party how-to pages disagree and are not promoted to current official instructions.
+    evidence:
+      - url: https://www.spyfly.com/help-center/privacy
+        checked_on: '2026-10-01'
+        excerpt: this page is not accessible from your location
+        supports: [current_notice_location_block]
+      - url: https://www.publicrecordreports.com/help-center/privacy
+        checked_on: '2026-10-01'
+        published: '2026-01-29'
+        excerpt: Digital Safety Products, LLC.
+        supports: [other_brand_operator_not_shared_removal_proof]
+    unresolved: [Recover current SpyFly policy and matching requirements., Establish geographic applicability without bypassing location restrictions.]
+  - record: live:digital-safety-products-llc-2
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: This snapshot includes SpyFly and Public Record Reports under Digital Safety Products LLC. The latter's current notice corroborates its operator, but its form retrieval is inconsistent and SpyFly is location-blocked. Neither one brand's notice nor shared ownership proves a common removal workflow; exact current matching and separate-brand confirmation still need review.
+    evidence:
+      - url: https://www.publicrecordreports.com/help-center/privacy
+        checked_on: '2026-10-01'
+        published: '2026-01-29'
+        excerpt: Digital Safety Products, LLC.
+        supports: [exact_product_operator]
+      - url: https://www.publicrecordreports.com/help-center/privacy-requests
+        checked_on: '2026-10-01'
+        excerpt: Privacy Requests
+        supports: [indexed_form_followup_retrieval_failed]
+      - url: https://www.spyfly.com/help-center/privacy
+        checked_on: '2026-10-01'
+        excerpt: this page is not accessible from your location
+        supports: [other_brand_scope_unavailable]
+    unresolved: [Inspect both product workflows and establish their separate coverage., Do not label partially researched brands complete.]
+  - record: live:peoplewhiz
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: The attempted PeopleWhiz privacy page returns a Cloudflare block and public web retrieval fails. The registry discovery record does not establish a current full legal entity or verified removal and matching process. No guessed mailbox, protected-person declaration or third-party removal recipe is promoted.
+    evidence:
+      - url: https://www.peoplewhiz.com/privacy
+        checked_on: '2026-10-01'
+        excerpt: Sorry, you have been blocked
+        supports: [attempted_notice_unavailable]
+    unresolved: [Find and inspect the current official controller notice and removal form., Verify matching and geographic applicability.]

@@ -1,0 +1,11 @@
+schema_version: 1
+associations:
+  - guide_id: freewheel-platform
+    records: ["community:freewheel"]
+    rationale: Current official notice identifies FreeWheel Media Inc. and documents European controller and publisher-processor routes.
+  - guide_id: innovid-flashtalking
+    records: ["community:innovid", "community:flashtalking", "community:simplicity-marketing"]
+    rationale: Current shared Innovid policy explicitly covers Flashtalking ad serving; its help center identifies the Simplicity trademark entity and Mediaocean terms list that contracting entity. SEC-filed evidence connects legacy Innovid Inc. to Innovid LLC. This association covers the stated product preference, not groupwide erasure or identity equivalence among affiliates.
+  - guide_id: doubleverify-solutions
+    records: ["community:leiki"]
+    rationale: This discovery record is already named DoubleVerify Inc. and points to its official domain; the guide covers the current Solutions controller route, not assumed deletion of all historical Leiki data.

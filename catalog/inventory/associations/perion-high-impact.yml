@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: perion-high-impact
+    records: [community:undertone]
+    rationale: The community record already names Perion Network Ltd and the former Undertone brand. Current offering policy identifies Perion Inc for High Impact Advertising and links the shared request form; the official Perion One announcement documents Undertone's brand relationship. This mapping covers that advertising product only, not all affiliated legal entities or Canadian DOOH records.

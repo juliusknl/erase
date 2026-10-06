@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="settings-page {% block settings_class %}{% endblock %}">
+  <header class="settings-head"><h1>{% block settings_title %}{% endblock %}</h1></header>
+  {% include 'settings_tabs.html' %}
+  {% block settings_content %}{% endblock %}
+</div>
+{% endblock %}

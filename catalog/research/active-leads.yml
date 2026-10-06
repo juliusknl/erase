@@ -1,0 +1,47 @@
+schema_version: 1
+brokers:
+  - id: active-leads-nordic
+    name: Active Leads
+    match_domains: [activeleads.se]
+    identity:
+      legal_name: Active Leads AB
+      brands: [Active Leads]
+      parent: null
+      official_domains: [activeleads.se]
+    relevance:
+      regions: [Sweden, Norway, Finland, Other markets on request]
+      category: consumer_marketing
+      data_categories: [Consumer leads, Business decision-maker contacts, Telephone numbers, Email and postal contacts]
+      note: Supplies marketing lists and newly collected leads; Nordic markets are its stated specialty.
+    removal:
+      method: form
+      destination: https://www.activeleads.se/copy-of-om-oss?lang=en
+      alternatives: [privacy@activeleads.se]
+      steps:
+        - Use the Have you been called removal form for the contact details that received marketing.
+        - Review its First Name, Email, Company and Phone fields; do not invent a company if you are a consumer.
+        - Complete any verification and keep the response. The privacy inbox is published for questions, not as a confirmed substitute submission route.
+    required_information:
+      fields: [first_name, email, phone]
+      certainty: not_fully_specified
+      verification: Public labels include Company; mandatory flags, server-side validation and follow-up verification are untested.
+    coverage:
+      effect: suppression
+      includes: Provider states it removes matched data and retains email/phone on a blacklist against future use.
+      excludes: Does not establish removal from independent purchasers or original collection sites.
+    automation:
+      mode: manual
+      reason: Matching phone details and the form's conditional fields need personal review.
+    evidence:
+      - url: https://www.activeleads.se/
+        checked_on: '2026-09-30'
+        excerpt: Vi är specialister på leads i Sverige, Norge och Finland
+        supports: [identity, geography, business_type, data_categories]
+      - url: https://www.activeleads.se/copy-of-om-oss?lang=en
+        checked_on: '2026-09-30'
+        excerpt: your email and phone number will be placed on our blacklist
+        supports: [removal, matching_fields, suppression_scope, privacy_contact]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Company-field necessity and subsequent verification untested., Parent ownership unreviewed., Source-provider and purchaser follow-through unproven.]

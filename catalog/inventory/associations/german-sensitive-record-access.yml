@@ -1,0 +1,14 @@
+schema_version: 1
+associations:
+  - guide_id: demda-tenant-records
+    records: [community:demda]
+    rationale: Official tenancy/credit notice and corroborated website DPO establish DEMDA's access route; the advertised form's missing controls and legacy notice wording remain explicit.
+  - guide_id: ihd-business-credit
+    records: [community:ihd-kredit]
+    rationale: Current privacy page delegates separate business-information and collection PDFs naming the exact IHD GmbH and DPO; no generic credit-deletion workflow is inferred.
+  - guide_id: besurance-his-insurance
+    records: [community:informa-his]
+    rationale: The community record already names Besurance HIS GmbH; current official controller notice and person-access form corroborate that entity without making an unverified corporate succession claim.
+  - guide_id: intrum-information-services-de
+    records: [community:intrum-information-services-deutschland-gmbh]
+    rationale: Current official notice and rights-form company selector both expressly name the exact Information Services Deutschland company; other group entities remain separate.

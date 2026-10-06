@@ -1,0 +1,17 @@
+schema_version: 1
+associations:
+  - guide_id: repi-cz
+    records: [discovery:cz-repi]
+    rationale: REPI's own memorandum names company05775809; delegated request handling does not make CRIF Czech company26212242 the same controller.
+  - guide_id: crif-cz-kolikmam
+    records: [discovery:cz-crif-elixir]
+    rationale: ELIXIR's memorandum names CRIF Czech company26212242 as controller; the existing guide now excludes separately operated REPI.
+  - guide_id: bik-pl
+    records: [discovery:pl-bik]
+    rationale: BIK's official notice and registration identify the Polish credit bureau, not the separate BIG InfoMonitor company.
+  - guide_id: cbcb-brki-cz
+    records: [discovery:cz-cbcb-brki]
+    rationale: Official BRKI notice identifies CBCB as operator/processor and banks as joint controllers; shared CRIF handling does not merge registers.
+  - guide_id: cncb-nrki-cz
+    records: [discovery:cz-cncb-nrki]
+    rationale: Official NRKI notice explicitly names CNCB as controller with its distinct registration number.

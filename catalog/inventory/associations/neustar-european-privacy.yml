@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: neustar-european-privacy
+    records: [community:neustar]
+    rationale: The July 2026 TransUnion Neustar notice explicitly names NeuStar Inc and links the legacy home.neustar privacy portal for European choices; it replaces reliance on the community entry's older team.neustar inbox without merging every TransUnion business.

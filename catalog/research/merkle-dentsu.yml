@@ -1,0 +1,99 @@
+schema_version: 1
+brokers:
+  - id: merkle-us-data-products
+    name: Merkle US / Merkury data products
+    match_domains: [merkle.com, merkleinc.com]
+    identity:
+      legal_name: Merkle Inc.
+      brands: [Merkle, Merkury, DataSource]
+      parent: Dentsu International
+      official_domains: [merkle.com, merkleinc.com, dentsu.com]
+    relevance:
+      regions: [US]
+      category: advertising
+      data_categories: [Identity and household data, Contact identifiers, Marketing audiences, Online activity]
+      note: US product notice, not the corporate website policy or blanket worldwide Merkle coverage. European residence does not prove absence from US datasets, but US-state eligibility must not be invented.
+    removal:
+      method: form
+      destination: https://www.merkle.com/en/privacy-policy/data-product-privacy-notice/control-your-personal-information.html
+      alternatives: [Americas.dpo@dentsu.com, dpous@merkleinc.com, https://www.dentsu.com/our-policies/dentsu-identity-product-privacy-notice]
+      steps:
+        - Open the product-specific privacy choices form, select your actual location and request deletion plus sale/sharing opt-out where available; do not claim a US address or state right you do not have.
+        - Provide relevant matching names/addresses and finish verification. If your location or record context is unsupported, contact the published DPO instead of entering false details.
+        - Retain the response. Deletion alone may not prevent later lawful re-ingestion; review the separate suppression and browser preference choices.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Policy describes matching identity checks and relevant prior names/addresses. The official page embeds a OneTrust form; its JavaScript shell was fetched, not completed. Exact mandatory fields remain untested.
+    coverage:
+      effect: deletion_request
+      includes: Matched controller-held US identity/data/media product records; Data Use Terms require clients to follow Merkle removal notices when issued.
+      excludes: Separate UK products, client-owned processor records, legal retention and independently justified client data. Receipt is not proof that every downstream copy was erased.
+    automation:
+      mode: manual
+      reason: US product eligibility and matching need review; the EEA initial-email campaign must not assert US-state rights or automatically disclose historical addresses.
+    evidence:
+      - url: https://www.merkle.com/en/privacy-policy/data-product-privacy-notice/control-your-personal-information.html
+        checked_on: '2026-10-01'
+        excerpt: Control Your Personal Information
+        supports: [official_product_form, embedded_OneTrust_route]
+      - url: https://www.merkle.com/en/privacy-policy/data-product-privacy-notice.html
+        checked_on: '2026-10-01'
+        published: Header July 7, 2026; body also retains a November 18, 2025 effective-date statement
+        excerpt: separate data products in the U.K. and the U.S.
+        supports: [identity, parent, US_scope, matching, retention_and_reingestion, DPO_contacts]
+      - url: https://www.merkle.com/en/legal-terms/data-use-terms.html
+        checked_on: '2026-10-01'
+        published: October 8, 2024
+        excerpt: entered into between Merkle Inc.
+        supports: [legal_identity, DataSource_scope, downstream_removal_notice_obligations]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Live form fields and non-US acceptance, Exact records matched, Downstream fulfilment, Conflicting published policy date statements]
+
+  - id: dentsu-identity-product
+    name: Dentsu Identity Product and Lifestyle Survey
+    match_domains: [dentsu.com]
+    identity:
+      legal_name: Dentsu UK Limited or the survey-commissioning Dentsu affiliate identified when data was collected
+      brands: [Dentsu Identity Product, CCS Lifestyle Survey]
+      parent: Dentsu group
+      official_domains: [dentsu.com]
+    relevance:
+      regions: [EEA, UK, Other participating survey markets]
+      category: advertising
+      data_categories: [Survey responses, Consented contacts, Cookies, Partner identity data, Marketing inferences]
+      note: Confirm the survey/controller context; these notices do not cover every Dentsu identity product.
+    removal:
+      method: email
+      destination: dpo@dentsu.com
+      alternatives: [dpo@dentsuaegis.com]
+      steps:
+        - Identify your survey or data-source context where known; ask the DPO about erasure and withdrawal for the Identity Product and any separate Lifestyle Survey record.
+        - Review matching and verification requirements before further disclosure. Do not claim survey participation you cannot establish.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Case-specific identity checks; no exhaustive matching checklist is published.
+    coverage:
+      effect: deletion_request
+      includes: Applicable controller-held identity and survey records identified by the request.
+      excludes: US Merkury products and independent client processing; later source data may still arrive.
+    automation:
+      mode: manual
+      reason: Survey-specific controller and matching require personal review.
+    evidence:
+      - url: https://www.dentsu.com/our-policies/dentsu-identity-product-privacy-notice
+        checked_on: '2026-10-01'
+        published: October 30, 2023; still linked as the product notice
+        excerpt: Dentsu UK Limited
+        supports: [controller_scope, identity_product, rights_route, matching_uncertainty, reingestion]
+      - url: https://www.dentsu.com/lifestyle-survey
+        checked_on: '2026-10-01'
+        excerpt: dpo@dentsu.com
+        supports: [separate_survey_scope, DPO_contact, partner_enrichment]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Specific survey controller and matching identifiers, Personal dataset presence, End-to-end outcome]

@@ -1,0 +1,4 @@
+metadata,,,,,,,,,,,,,,
+Data broker name:,"Doing Business As (DBA), if applicable:",Data broker primary website:,Data broker primary contact email address:,phone,address,city,state,zip,country,extra,minors,geo,repro,Data Broker rights URL:
+Example Data LLC,,https://example-data.test,privacy@example-data.test,,,,,,,,,,,https://example-data.test/privacy
+No Email Broker,,https://no-email.test,,,,,,,,,,,,https://no-email.test/optout

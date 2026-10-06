@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: active-leads-nordic
+    records: [community:activeleads-se]
+    rationale: Official site and removal page identify the exact Active Leads AB entity and activeleads.se domain. This is an identifier-specific suppression workflow, not proof of Nordic population coverage.

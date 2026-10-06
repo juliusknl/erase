@@ -1,0 +1,6 @@
+<div class="quick-win-buttons">
+  <a class="button secondary compact" href="{{ item.url }}" target="_blank" rel="noreferrer noopener" aria-label="Open {{ item.name }}">{{ item.link_label | default('Open ↗') }}</a>
+  {% if item.completed and not item.checked %}<span class="status status-done">Done</span>{% else %}
+  <form method="post" action="/quick-wins/{{ item.id }}"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="return_to" value="{{ action_return | default('/quick-wins') }}"><input type="hidden" name="done" value="{{ 'false' if item.done else 'true' }}"><button class="compact quick-done" aria-pressed="{{ 'true' if item.done else 'false' }}" aria-label="{{ 'Undo' if item.done else 'Mark done' }}: {{ item.name }}">{{ 'Undo' if item.done else 'Done' }}</button></form>
+  {% endif %}
+</div>

@@ -1,0 +1,260 @@
+schema_version: 1
+brokers:
+  - id: epsilon-europe-digital
+    name: Epsilon — European digital advertising
+    match_domains: [emea.epsilon.com]
+    identity:
+      legal_name: Epsilon International UK Ltd, company 03610044
+      brands: [Epsilon DMS, Conversant, CORE ID, CitrusAd]
+      parent: Publicis Groupe
+      official_domains: [epsilon.com, emea.epsilon.com, legal.epsilon.com]
+    relevance:
+      regions: [EU, EEA, UK]
+      category: advertising
+      data_categories: [Cookie and device identifiers, Email hashes, Offline contact and transaction data, Audience segments]
+      note: European service policy names the UK controller; distinct from North American products and UK Abacus cooperative processing.
+    removal:
+      method: form
+      destination: https://legal.epsilon.com/dsr
+      alternatives: [https://legal.epsilon.com/dms/email-opt-out, https://legal.epsilon.com/optout, https://legal.epsilon.com/general-privacy-request, privacy@epsilon.com]
+      steps:
+        - Select the truthful country in the rights portal and request deletion of European digital-service data.
+        - For hashed-email audience suppression, use the email opt-out form and verify its email link within 30 days.
+        - Repeat browser/device opt-out separately in each affected browser; retaining its cookie preserves the preference.
+        - Route other rights or problems through the general privacy request; do not assume a UK Abacus postal opt-out covers digital identifiers.
+    required_information:
+      fields: [country, email]
+      certainty: not_fully_specified
+      verification: Country is visible on the deletion portal; later fields depend on selection. Separate hashed-email opt-out has email verification. Browser route requires its device context.
+    coverage:
+      effect: deletion_request
+      includes: European controller's covered digital-service data, with identifier-specific suppression alternatives.
+      excludes: Abacus processor records, Messaging/Loyalty client data, independent partners and other regional controllers.
+    automation: {mode: manual, reason: 'Country, product and identifier choices have different effects and require review.'}
+    evidence:
+      - url: https://legal.epsilon.com/eu/privacy-policy-services
+        checked_on: '2026-09-29'
+        published: '11/05/26 (source label; date format not normalized)'
+        excerpt: Epsilon International UK Ltd is the controller
+        supports: [identity, relevance, removal, coverage]
+      - url: https://legal.epsilon.com/dsr
+        checked_on: '2026-09-29'
+        excerpt: Country
+        supports: [removal, required_information]
+      - url: https://legal.epsilon.com/dms/email-opt-out
+        checked_on: '2026-09-29'
+        excerpt: within 30 days
+        supports: [removal, required_information, coverage]
+      - url: https://legal.epsilon.com/optout
+        checked_on: '2026-09-29'
+        excerpt: each one individually
+        supports: [removal, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [No form submitted or opt-out activated., Country-dependent deletion fields and subsequent verification untested., Current database scale unverified.]
+
+  - id: utiq-europe
+    name: Utiq — connection-level privacy controls
+    match_domains: [utiq.com, consenthub.utiq.com]
+    identity:
+      legal_name: Utiq SA/NV, Belgian company 0799.155.284
+      brands: [Utiq, consenthub, consentpass]
+      parent: null
+      official_domains: [utiq.com, consenthub.utiq.com, docs.utiq.com]
+    relevance:
+      regions: [Europe]
+      category: advertising
+      data_categories: [Pseudonymous network signals, Marketing identifiers, Consent records]
+      note: Telecom-connection advertising identifiers; not a named-person list. Availability depends on participating operators.
+    removal:
+      method: manual
+      destination: https://consenthub.utiq.com/
+      alternatives: [privacy@utiq.com, https://consenthub.utiq.com/pages/contact-us]
+      steps:
+        - On each supported mobile or household broadband connection, open Manage Utiq consents and remove all consents.
+        - Avoid new consent during the policy's 24-hour deletion window; record completion separately from verified deletion.
+        - Optionally apply the one-year freeze, which retains blocking identifiers; renew if wanted. A site's Manage Utiq link affects that site only.
+        - If access fails, consult support; do not automatically disable a VPN, Private Relay or security software.
+    required_information:
+      fields: [supported_internet_connection]
+      certainty: documented
+      verification: Connection-based portal with CAPTCHA. Name/email alone cannot match platform records. Shared broadband affects the household; email support handles broadband access-copy requests.
+    coverage:
+      effect: deletion_request
+      includes: Selected connection's Utiq platform identifiers and consents, subject to published retention exceptions.
+      excludes: Other connections, partners' independent processing, and identifiers retained for an active freeze.
+    automation: {mode: manual, reason: Requires the user's connection and consent choices; cannot be delegated through a generic email.}
+    evidence:
+      - url: https://consenthub.utiq.com/pages/privacy-statement
+        checked_on: '2026-09-29'
+        published: '2025-10-16 v3.6'
+        excerpt: Utiq Privacy Statement
+        supports: [identity, relevance, removal, required_information, coverage]
+      - url: https://consenthub.utiq.com/content/translations/en.json
+        checked_on: '2026-09-29'
+        published: '2025-10-16 v3.6 (privacy section)'
+        excerpt: Remove All Utiq Consents
+        supports: [identity, relevance, removal, required_information, coverage]
+      - url: https://docs.utiq.com/docs/user-queries-and-exercise-of-data-protection-right
+        checked_on: '2026-09-29'
+        excerpt: supported internet connection
+        supports: [removal, required_information, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Portal actions and outcomes untested., English policy recovered from public translations referenced by the application's JavaScript; not an authenticated session., Operator list changes; check eligibility for each connection., Current ownership and database size unreviewed.]
+
+  - id: virtual-minds-platform
+    name: Virtual Minds — Adition / The Adex / Active Agent / Yieldlab
+    match_domains: [virtualminds.com, adition.com, theadex.com, yieldlab.com]
+    identity:
+      legal_name: Virtual Minds GmbH
+      brands: [Adition, The Adex, Active Agent, Yieldlab]
+      parent: ProSiebenSat.1 Group (platform-policy attribution)
+      official_domains: [virtualminds.com]
+    relevance:
+      regions: [Europe, CH, Global]
+      category: advertising
+      data_categories: [Cookie IDs, Mobile advertising IDs, Usage profiles, Location and device signals]
+      note: One platform controller with four products; identifier and opt-out scope remain product-specific.
+    removal:
+      method: manual
+      destination: https://virtualminds.com/right-to-information/
+      alternatives: [data.privacy@virtualminds.com, https://virtualminds.com/opt-in-opt-out/]
+      steps:
+        - Open the rights page in the affected browser and identify each relevant product's cookie ID; use the device MAID for app records.
+        - Complete and personally sign the linked proof-of-identity document, specify the requested erasure and email it to data.privacy@virtualminds.com.
+        - Sign only if the sole-owner/user declaration is truthful; ask the DPO for an alternative for shared devices.
+        - Browser opt-outs are separate controls for Adition/Active Agent, Yieldlab and The Adex; completing one is not all-product deletion.
+    required_information:
+      fields: [product_identifier, full_name, date, signature]
+      certainty: documented
+      verification: Form requests cookie IDs and/or MAIDs plus name, date and signature; it declares sole device ownership/use, not an ID-document upload.
+    coverage:
+      effect: deletion_request
+      includes: Identifiable records in the selected Virtual Minds products.
+      excludes: Independent publishers/partners and unmatched devices. Cookie opt-out alone does not establish erasure.
+    automation: {mode: manual, reason: Product identifiers and a truthful signed device-ownership declaration require user involvement.}
+    evidence:
+      - url: https://virtualminds.com/platform-privacy-policy/
+        checked_on: '2026-09-29'
+        published: '2025-01-01'
+        excerpt: Virtual Minds GmbH
+        supports: [identity, relevance, coverage]
+      - url: https://virtualminds.com/right-to-information/
+        checked_on: '2026-09-29'
+        excerpt: proof of identity form
+        supports: [removal, required_information]
+      - url: https://virtualminds.com/wp-content/uploads/2025/08/Proof-of-Identity-Virtual_Minds2025-1.docx
+        checked_on: '2026-09-29'
+        excerpt: sole owner and user
+        supports: [required_information]
+      - url: https://virtualminds.com/opt-in-opt-out/
+        checked_on: '2026-09-29'
+        excerpt: Active Agent / Adition Yieldlab The Adex
+        supports: [removal, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [No identifiers collected or forms signed/submitted., Shared-device alternative not documented., Mobile OS instructions on the page may be outdated; no third-party identifier app recommended., Current database scale and outcomes unverified.]
+
+  - id: adform-dk
+    name: Adform
+    match_domains: [adform.com, site.adform.com]
+    identity:
+      legal_name: Adform A/S
+      brands: [Adform]
+      parent: null
+      official_domains: [adform.com, site.adform.com]
+    relevance:
+      regions: [DK, EEA, UK, Global]
+      category: advertising
+      data_categories: [Cookie IDs, Mobile advertising IDs, IP addresses, Ad interactions, Inferred interests, Approximate location]
+      note: Advertising-platform controller, sometimes jointly with customers; distinct from corporate-site processing.
+    removal:
+      method: form
+      destination: https://site.adform.com/privacy-center/platform-privacy/right-to-be-forgotten/
+      alternatives: [dpo@adform.com, https://site.adform.com/privacy-center/platform-privacy/opt-out/]
+      steps:
+        - Open the deletion page in the browser holding the Adform advertising cookie and choose Forget Me.
+        - If no cookie is detected, do not interpret that as no exposure on other devices; contact the DPO for matching assistance.
+        - Separately opt out on each relevant browser/device; the opt-out cookie must remain present and browser restrictions can prevent it working.
+    required_information:
+      fields: [adform_cookie_id]
+      certainty: not_fully_specified
+      verification: Browser deletion uses the current advertising cookie; alternate-ID and email verification are not fully specified. No request executed.
+    coverage:
+      effect: deletion_request
+      includes: Adform-controlled data for the matched cookie; separate future-targeting suppression.
+      excludes: Other devices, unrelated identifiers, all partner records and proof of deletion from merely opening the page.
+    automation: {mode: manual, reason: Requires the affected browser context; a generic name/email cannot substitute for the cookie.}
+    evidence:
+      - url: https://site.adform.com/privacy-center/platform-privacy/product-and-services-privacy-policy/
+        checked_on: '2026-09-29'
+        published: '2025-06-26'
+        excerpt: Adform A/S
+        supports: [identity, relevance, removal, coverage]
+      - url: https://site.adform.com/privacy-center/data-subject-rights/
+        checked_on: '2026-09-29'
+        excerpt: Right to be forgotten (right to delete)
+        supports: [removal, coverage]
+      - url: https://site.adform.com/privacy-center/platform-privacy/right-to-be-forgotten/
+        checked_on: '2026-09-29'
+        excerpt: Adform controlled personal data concerning your Adform’s advertising platform cookie identifier
+        supports: [removal, required_information, coverage]
+      - url: https://site.adform.com/privacy-center/platform-privacy/opt-out/
+        checked_on: '2026-09-29'
+        excerpt: Your opt-out will remain in effect only as long as this cookie is present
+        supports: [removal, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Browser action and server-side deletion untested., Current comparable person-count and ownership not reviewed., Embedded page data inspected; conditional UI success/error strings are not observed outcomes.]
+
+  - id: smartclip-europe
+    name: smartclip Europe
+    match_domains: [smartclip.tv, smartclip.net, smartclip.com]
+    identity:
+      legal_name: smartclip Europe GmbH
+      brands: [smartclip, SmartX, ATVx]
+      parent: null
+      official_domains: [smartclip.tv, smartclip.net]
+    relevance:
+      regions: [DE, Europe]
+      category: advertising
+      data_categories: [Device identifiers, IP-derived data, Ad interactions, TV viewing segments]
+      note: Web/mobile/TV advertising; controller or processor depending on service.
+    removal:
+      method: manual
+      destination: https://privacy-portal.smartclip.net/en/opt-out
+      alternatives: [privacy@smartclip.tv]
+      steps:
+        - Use the opt-out page on each relevant browser/device; TV opt-out is accessed through the broadcaster's privacy controls.
+        - For access or deletion, email the privacy team and clarify the technical identifier and responsible publisher where applicable.
+    required_information:
+      fields: [affected_device_or_cookie_identifier]
+      certainty: not_fully_specified
+      verification: Matching is technical rather than name-based; additional identity evidence may be requested. No universal checklist published.
+    coverage:
+      effect: suppression
+      includes: Device-specific smartclip advertising opt-out; separate rights enquiry.
+      excludes: Universal deletion across devices, publishers and other advertising partners.
+    automation: {mode: manual, reason: Requires affected device and service context.}
+    evidence:
+      - url: https://privacy-portal.smartclip.net/
+        checked_on: '2026-09-29'
+        excerpt: smartclip Europe GmbH
+        supports: [identity, relevance, removal, required_information, coverage]
+      - url: https://privacy-portal.smartclip.net/en/opt-out
+        checked_on: '2026-09-29'
+        excerpt: every browser and every device
+        supports: [removal, coverage]
+      - url: https://smartclip.tv/privacy/
+        checked_on: '2026-09-29'
+        excerpt: privacy@smartclip.tv
+        supports: [identity, removal]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [No opt-out executed or server-side result verified., Comparable scale and direct ownership unreviewed., Product-specific controller/processor matching needs review.]

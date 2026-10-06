@@ -1,0 +1,203 @@
+schema_version: 1
+brokers:
+  - id: repi-cz
+    name: REPI — Czech payment register
+    match_domains: [repi.cz]
+    identity:
+      legal_name: CRIF – Registr platebních informací s. r. o., IČO 05775809
+      brands: [REPI]
+      parent: CRIF Group (group affiliation; direct shareholding unreviewed)
+      official_domains: [repi.cz]
+    relevance:
+      regions: [CZ]
+      category: credit_reference
+      data_categories: [Identity, Payment history, Instalments, Credit applications, Scores]
+      note: Separate payment-register company covering lending and deferred-payment services; not CRIF Czech's own controller record.
+    removal:
+      method: manual
+      destination: https://kolikmam.cz/gdpr
+      alternatives: [klient@crif.com, poverenec@repi.cz, info@repi.cz]
+      steps:
+        - Request Article15 access through the delegated centre, selecting REPI.
+        - Review the reported obligation before requesting correction, objection, restriction or conditional erasure.
+        - Use current centre instructions for signed email, data-box or post; older REPI text still mentions in-person handling.
+    required_information:
+      fields: [full_name, birth_name, date_of_birth, national_id, gender, nationality, postal_address, signature, register_selection]
+      certainty: not_fully_specified
+      verification: Shared form has sensitive identity fields and conditional business identifiers. Verify the chosen channel; no automatic document transmission.
+    coverage:
+      effect: access_then_review
+      includes: REPI positive and negative payment records with purpose-specific rights.
+      excludes: Automatic erasure of valid obligations and other CRIF-group registers.
+    automation: {mode: manual, reason: Sensitive matching and record-specific grounds.}
+    evidence:
+      - url: https://www.repi.cz/download/8779/
+        checked_on: '2026-09-29'
+        published: '2019-01-10'
+        excerpt: poverenec@repi.cz
+        supports: [identity, relevance, removal, coverage]
+      - url: https://www.repi.cz/
+        checked_on: '2026-09-29'
+        excerpt: CRIF – Registr platebních informací s.r.o.
+        supports: [identity, relevance]
+      - url: https://kolikmam.cz/klientske-centrum
+        checked_on: '2026-09-29'
+        excerpt: klient@crif.com
+        supports: [removal, required_information]
+      - url: https://kolikmam.cz/upload/237-gdpr-17-18-21-10-6-2022.pdf
+        checked_on: '2026-09-29'
+        excerpt: REPI
+        supports: [required_information]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [The currently linked memorandum is dated2019; channel details may differ from current centre guidance., No request or outcome tested., Current unique-person scale and direct ownership unreviewed.]
+
+  - id: bik-pl
+    name: BIK — Polish credit information
+    match_domains: [bik.pl]
+    identity:
+      legal_name: Biuro Informacji Kredytowej S.A., KRS 0000110015
+      brands: [BIK]
+      parent: null
+      official_domains: [bik.pl, nowekonto.bik.pl]
+    relevance:
+      regions: [PL]
+      category: credit_reference
+      data_categories: [Credit applications, Repayment history, Identity, Credit scores, Public-register records]
+      note: Credit bureau; BIG InfoMonitor is a separate entity, despite a shared consumer portal.
+    removal:
+      method: manual
+      destination: https://www.bik.pl/rodo
+      alternatives: [https://nowekonto.bik.pl, kontakt@bik.pl, iod@bik.pl]
+      steps:
+        - Request a free data copy through the authenticated portal, qualified-signed email or the postal route in the notice.
+        - Address corrections or eligible deletion of lender-supplied records to that lender; BIK forwards such complaints.
+        - Treat portal marketing withdrawal separately from credit-history erasure. Do not buy a report merely to exercise access rights.
+    required_information:
+      fields: [full_name, postal_address, national_id, identity_document_number, business_tax_id_if_applicable]
+      certainty: documented
+      verification: Notice specifies PESEL and document series/number; business records additionally need NIP. Email applications require a qualified electronic signature. Never auto-send these identifiers.
+    coverage:
+      effect: access_then_review
+      includes: BIK records and purpose-specific review.
+      excludes: Blanket erasure of lawful credit history, source-register changes and BIG InfoMonitor records.
+    automation: {mode: manual, reason: 'Sensitive identifiers, authentication and lender-specific decisions.'}
+    evidence:
+      - url: https://www.bik.pl/rodo
+        checked_on: '2026-09-29'
+        excerpt: e-mailem uwierzytelnionym podpisem kwalifikowanym
+        supports: [identity, relevance, removal, required_information, coverage]
+      - url: https://www.bik.pl/pomoc
+        checked_on: '2026-09-29'
+        excerpt: BIK nie może samodzielnie modyfikować ani usuwać przechowywanych danych.
+        supports: [removal, coverage]
+      - url: https://media.bik.pl/informacje-prasowe/873227/komunikat-prasowy-bik
+        checked_on: '2026-09-29'
+        published: '2026-07-08'
+        excerpt: po 14 dniach
+        supports: [identity, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns:
+      - 'Inquiry-retention conflict: the general notice still states five years, but the July2026 announcement says unfunded bank inquiries are removed after 14 days from July 1; establish record type before advising.'
+      - No authenticated request tested; current unique-person scale and ownership not reviewed.
+
+  - id: cbcb-brki-cz
+    name: CBCB / BRKI — Czech banking register
+    match_domains: [cbcb.cz]
+    identity:
+      legal_name: CBCB – Czech Banking Credit Bureau, a.s., IČO 26199696 (operator/processor; participating banks are joint controllers)
+      brands: [CBCB, BRKI]
+      parent: null
+      official_domains: [cbcb.cz]
+    relevance:
+      regions: [CZ]
+      category: credit_reference
+      data_categories: [Identity, Loan applications, Repayment history, Guarantees]
+      note: Bank-reported credit register; CBCB's current notice expressly identifies banks as joint controllers.
+    removal:
+      method: manual
+      destination: https://kolikmam.cz/gdpr
+      alternatives: [klient@crif.com, poverenec@cbcb.cz]
+      steps:
+        - Request the free Article15 copy through the delegated CRIF centre, selecting BRKI.
+        - Review errors with the reporting bank through the centre; escalate unresolved rights issues to the CBCB DPO.
+        - The linked deletion form excludes ordinary BRKI deletion; discuss exceptional unlawful or over-retained records instead of promising removal.
+    required_information:
+      fields: [full_name, birth_name, date_of_birth, national_id, gender, nationality, postal_address, signature, register_selection]
+      certainty: not_fully_specified
+      verification: Published paper form marks these identity fields; business identifiers are conditional and phone/email optional. Accepted channel and foreign-applicant requirements need individual review.
+    coverage:
+      effect: access_then_review
+      includes: BRKI access, correction and applicable restriction; retention review.
+      excludes: NRKI, REPI, ELIXIR and routine erasure of valid credit history.
+    automation: {mode: manual, reason: Sensitive identity verification and bank-controlled records.}
+    evidence:
+      - url: https://cbcb.cz/gdpr/
+        checked_on: '2026-09-29'
+        excerpt: společnými správci údajů v BRKI jsou banky
+        supports: [identity, relevance, removal, coverage]
+      - url: https://kolikmam.cz/gdpr
+        checked_on: '2026-09-29'
+        excerpt: Klientského centra
+        supports: [removal, required_information]
+      - url: https://kolikmam.cz/upload/237-gdpr-17-18-21-10-6-2022.pdf
+        checked_on: '2026-09-29'
+        excerpt: výmaz osobních údajů neplatí pro BRKI a NRKI
+        supports: [required_information, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns:
+      - No submission tested. Choose secure data-box, authenticated portal or appropriate signed channel; do not auto-upload ID.
+      - No current unique-person scale or ownership assessment.
+
+  - id: cncb-nrki-cz
+    name: CNCB / NRKI — Czech non-banking register
+    match_domains: [cncb.cz]
+    identity:
+      legal_name: CNCB – Czech Non-Banking Credit Bureau, z.s.p.o., IČO 71236384
+      brands: [CNCB, NRKI]
+      parent: null
+      official_domains: [cncb.cz]
+    relevance:
+      regions: [CZ]
+      category: credit_reference
+      data_categories: [Identity, Credit applications, Repayment history, Guarantees, Risk profiles]
+      note: CNCB controls the non-banking register; CRIF provides delegated processing and request handling.
+    removal:
+      method: manual
+      destination: https://kolikmam.cz/gdpr
+      alternatives: [klient@crif.com, poverenec@cncb.cz]
+      steps:
+        - Request the free Article15 copy through the CRIF centre, selecting NRKI.
+        - Identify the disputed record and grounds for correction, restriction, objection or exceptional erasure; escalate unresolved issues to the CNCB DPO.
+        - The policy describes conditional erasure rights but the shared paper form excludes ordinary NRKI deletion; resolve this with the centre for the specific record.
+    required_information:
+      fields: [full_name, birth_name, date_of_birth, national_id, gender, nationality, postal_address, signature, register_selection]
+      certainty: not_fully_specified
+      verification: Same shared paper identity fields as BRKI; channel-dependent verification applies. Do not substitute a generic name/email request.
+    coverage:
+      effect: access_then_review
+      includes: NRKI credit and associated risk records, subject to purpose-specific retention.
+      excludes: Other registers, lenders' independent records and automatic erasure of valid credit history.
+    automation: {mode: manual, reason: Sensitive matching and record-specific rights assessment.}
+    evidence:
+      - url: https://www.cncb.cz/obecne-narizeni-o-ochrane-osobnich-udaju/
+        checked_on: '2026-09-29'
+        excerpt: Provozovatelem NRKI je CNCB
+        supports: [identity, relevance, removal, coverage]
+      - url: https://kolikmam.cz/gdpr
+        checked_on: '2026-09-29'
+        excerpt: nutný elektronický podpis
+        supports: [removal, required_information]
+      - url: https://kolikmam.cz/upload/237-gdpr-17-18-21-10-6-2022.pdf
+        checked_on: '2026-09-29'
+        excerpt: telefonní číslo a email jsou dobrovolné
+        supports: [required_information, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [No submitted request or outcome tested., Channel and foreign-applicant verification need review., Current unique-person scale and ownership not established.]

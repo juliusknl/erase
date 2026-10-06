@@ -1,0 +1,47 @@
+schema_version: 1
+assessments:
+  - record: community:mixpanel
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: Current Mixpanel notice distinguishes its direct business contacts from analytics data processed under customer instructions and directs end users to the service they actually use. MIXPANEL S.L. is identified as its EU representative. Exclude generic independent-broker outreach, not actual user rights; contact the relevant app/site controller for analytics deletion and compliance@mixpanel.com for direct Mixpanel processing.
+    evidence:
+      - url: https://mixpanel.com/legal/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2026-08-21'
+        excerpt: We do not have a direct relationship with our customers’ customers or end-users.
+        supports: [customer_directed_analytics, EU_representative, direct_rights_contact]
+    unresolved: []
+  - record: community:leanplum
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: Leanplum's old privacy URL redirects to CleverTap, whose completed-acquisition notice establishes the product relationship. Current service policy makes customer end-user processing subject to customer instructions and forwards identifiable end-user requests to that customer. Exclude from default independent-broker campaigns; actual app-specific requests and direct business-contact rights remain valid. Acquisition is not evidence that legacy data was erased.
+    evidence:
+      - url: https://www.leanplum.com/privacy/
+        checked_on: '2026-10-01'
+        excerpt: CleverTap
+        supports: [current_official_redirect]
+      - url: https://clevertap.com/news/press-release/clevertap-completes-acquisition-of-leanplum/
+        checked_on: '2026-10-01'
+        published: '2022-06-13'
+        excerpt: completed its acquisition of San Francisco based Leanplum
+        supports: [completed_acquisition, product_relationship]
+      - url: https://clevertap.com/privacy-policy/
+        checked_on: '2026-10-01'
+        excerpt: CleverTap processes personal data solely on documented instructions from the Customer
+        supports: [processor_scope, customer_routing, separate_direct_controller_rights]
+    unresolved: []
+  - record: community:mailchimp
+    disposition: out_of_scope
+    checked_on: '2026-10-01'
+    rationale: Mailchimp distinguishes paying Members from mailing-list Contacts, whose primary controller is the sender. Exclude generic independent-broker outreach, not all privacy rights. Its July 2026 instructions direct deletion to Intuit's privacy center, separately for each matching email, with identity verification; direct processing can also be queried at privacy@intuit.com. The remaining Mailchimp form is access/portability, not deletion. Do not automatically close an active account or imply that one provider request erases every sender's copy.
+    evidence:
+      - url: https://mailchimp.com/about/privacy-rights/
+        checked_on: '2026-10-01'
+        published: '2026-07-27'
+        excerpt: our Members are the primary controller, and we are simply acting as their processor
+        supports: [contact_controller_scope, current_request_center, matching_emails, verification, access_form_distinction]
+      - url: https://www.intuit.com/privacy/statement/
+        checked_on: '2026-10-01'
+        excerpt: The Rocket Science Group LLC d/b/a Mailchimp
+        supports: [entity_identity, independent_controller_and_processor_boundaries]
+    unresolved: []

@@ -1,0 +1,13 @@
+<section id="pipeline-status" class="notice" aria-label="Next requests">
+{% if pipeline.automatic.enabled %}
+<strong>{{ pipeline.automatic.label }}</strong><span>{{ pipeline.automatic.today }} / {{ pipeline.automatic.daily_limit }} automatic email attempts today. {{ pipeline.automatic.research.get('verified', 0) }} contacts verified automatically; {{ pipeline.automatic.research.get('needs_review', 0) }} research exceptions. Eligible requests send without batch approval. Daily limits reset at midnight UTC.</span><a class="button compact" href="/campaign">Campaign plan</a>
+{% if pipeline.automatic.new_workflows %}<span>{{ pipeline.automatic.new_workflows }} additional reviewed email workflows are available in Campaign plan.</span>{% endif %}
+{% else %}
+<strong>{{ pipeline.label }}</strong>
+{% if pipeline.error %}<span>{{ pipeline.error }}</span>{% endif %}
+<span>{{ pipeline.waiting }} requests queued or awaiting replies. {{ pipeline.research }} catalog contacts still need verification—not finished coverage.
+{% if pipeline.stale %}No successful draft check in over 15 minutes. Check that the local app and worker are running.{% endif %}
+{% if pipeline.paused %}Resume automation to check for more drafts.{% elif not pipeline.enabled %}Automatic preparation starts after you sign your profile and start the campaign.{% else %}{% if pipeline.last_check %}Last successful draft check: {{ pipeline.last_check | relative_time }}.{% endif %} Checks run every five minutes while the app is running. They prepare up to 10 new, verified email drafts—not new contact research. A check can finish without producing any drafts. Sending still needs your selection.{% endif %}
+{% if not pipeline.ready %}Use <a href="/quick-wins">privacy forms</a> or enable the automatic campaign to prepare reviewed workflows and send eligible requests without selecting batches.{% endif %}</span><a class="button compact" href="/campaign">Enable automatic campaign</a>
+{% endif %}
+</section>

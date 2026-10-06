@@ -1,0 +1,15 @@
+schema_version: 1
+regions: [PL]
+rationale: Official product privacy notices identify two Polish advertising-data operators beyond regulated credit registers; this is targeted discovery, not a national census.
+evidence:
+  - url: https://www.cloudtechnologies.pl/en/internet-advertising-privacy-policy
+    checked_on: '2026-09-29'
+    excerpt: Cloud Technologies SA
+    supports: [discovery]
+  - url: https://selectivv.com/polityka-prywatnosci/
+    checked_on: '2026-09-29'
+    excerpt: Profilowanie i reklama mobilna
+    supports: [discovery]
+candidates:
+  - {slug: pl-cloud-technologies, name: Cloud Technologies S.A.}
+  - {slug: pl-selectivv, name: Selectivv sp. z o.o.}

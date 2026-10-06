@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: careerbuilder-job-board
+    records: [live:careerbuilder-llc]
+    rationale: The historical CareerBuilder inventory product now serves a Monster-branded rights form linked to the MCB Puerto Rico provider notice. BOLD's official history confirms its 2025 acquisition of the job-board brands; this product handoff does not claim all old LLC records transferred or all BOLD brands are covered.

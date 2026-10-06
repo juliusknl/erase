@@ -1,0 +1,17 @@
+schema_version: 1
+associations:
+  - guide_id: appscience-platform
+    records: [live:appscience]
+    rationale: App Science's own June 2026 notice names App Science Inc and publishes a product-specific privacy inbox. Sabio's guide is not treated as automatic coverage of this separate controller.
+  - guide_id: babel-street-intelligence
+    records: [live:babel-street-inc]
+    rationale: The January 2026 official notice names Babel Street Inc and describes its rights contact and product-dependent customer/controller responsibilities; access-first scope is preserved.
+  - guide_id: aristotle-political-consumer
+    records: [live:aristotle-international-inc]
+    rationale: The current deletion form explicitly authorizes Aristotle International Inc and the policy heading matches this entity; abbreviated Inc wording and separate international scope remain disclosed.
+  - guide_id: bigdbm
+    records: [live:bigdbm]
+    rationale: The December 2025 official terms and privacy notice explicitly identify PublicNSA LLC doing business as BIGDBM; this is brand identity, not an inferred acquisition.
+  - guide_id: risika-dk
+    records: [discovery:imy-risika]
+    rationale: The discovery's exact legal name Risika A/S matches the official privacy notice and CVR 37677892; no Swedish subsidiary or extra nationwide deletion coverage is inferred.

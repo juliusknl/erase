@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en" data-theme="{{ current_appearance(request) }}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="{{ appearance_themes[current_appearance(request)].scheme }}"><title>erase login</title><link rel="stylesheet" href="/static/style.css?v={{ css_version }}"><link rel="stylesheet" href="/static/themes.css?v={{ css_version }}"></head>
+<body class="login-body"><main class="login-card">
+  <p class="eyebrow">LOCAL ONLY</p><h1>erase</h1>
+  <p>Your private data-removal control center.</p>
+  {% if demo_mode %}<p class="muted">Demo password: <code>try-erasure-demo</code></p>{% endif %}
+  {% if not configured %}<div class="notice danger">Setup is incomplete. Generate secrets and create <code>.env</code> before logging in.</div>{% endif %}
+  {% if error %}<div class="notice danger">{{ error }}</div>{% endif %}
+  <form method="post" action="/login"><label>Dashboard password<input type="password" name="password" required autofocus autocomplete="current-password"></label><button type="submit">Unlock</button></form>
+</main></body></html>

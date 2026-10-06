@@ -1,0 +1,86 @@
+schema_version: 1
+brokers:
+  - id: ach-address-clearing-house
+    name: ACH, Address Clearing House
+    match_domains: [achcoop.com]
+    identity:
+      legal_name: ACH, Address Clearing House (policy name)
+      brands: [ACH]
+      parent: null
+      official_domains: [achcoop.com]
+    relevance:
+      regions: [United States; listed state privacy rights]
+      category: postal_marketing
+      data_categories: [Name, Current and previous address, Contact identifiers]
+      note: Marketing data from processing centers and compilers; European applicability unestablished.
+    removal:
+      method: email
+      destination: privacy@achcoop.com
+      alternatives: [https://www.achcoop.com/do-not-sell-my-personal-info]
+      steps:
+        - Request deletion and/or sale-sharing suppression; specify the requested action.
+        - Supply name and complete matching postal address, including unit, city, state and ZIP.
+        - Use one name/address per form submission. Review any verification personally.
+    required_information:
+      fields: [full_name, postal_address]
+      certainty: documented
+      verification: Self-requests need name/address; agent authorization requirements are separate.
+    coverage:
+      effect: deletion_request
+      includes: Matched ACH records under applicable rights.
+      excludes: Independent source databases; suppression alone is not deletion.
+    automation:
+      mode: manual
+      reason: Published US-state route; European applicability is unestablished. Do not automatically disclose European postal identities.
+    evidence:
+      - url: https://www.achcoop.com/privacy-policy
+        checked_on: '2026-09-30'
+        published: '2026-06-16'
+        excerpt: 'Submitting request via email, to: privacy@achcoop.com'
+        supports: [identity, relevance, removal, required_information, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Corporate suffix and parent unestablished., European eligibility and individual outcomes untested.]
+  - id: airlines-reporting-corporation
+    name: Airlines Reporting Corporation
+    match_domains: [arccorp.com]
+    identity:
+      legal_name: Airlines Reporting Corporation
+      brands: [ARC]
+      parent: null
+      official_domains: [arccorp.com]
+    relevance:
+      regions: [EEA, United Kingdom, Switzerland, United States]
+      category: other
+      data_categories: [Passenger and ticket identifiers, Payment information, Travel transactions]
+      note: Settlement and travel data products; US-accredited travel agency transactions can concern European passengers.
+    removal:
+      method: form
+      destination: https://my.datasubject.com/Uw03R7mCGS/60313
+      alternatives: [privacy@arccorp.com]
+      steps:
+        - Describe the travel records and request eligible deletion or access.
+        - Supply name including middle initial, preferred contact method, and last four digits of the card used for air travel.
+        - Review additional verification personally; never provide a full payment-card number through this app.
+    required_information:
+      fields: [full_name, preferred_contact_method, travel_payment_card_last_four, requested_right]
+      certainty: documented
+      verification: Policy documents this checklist; interactive form not inspected. Additional matching may be requested.
+    coverage:
+      effect: deletion_request
+      includes: Eligible ARC-held personal travel records.
+      excludes: Mandatory transaction retention, airline source records and universal travel-history deletion.
+    automation:
+      mode: manual
+      reason: Financial matching information requires personal review; app does not collect it.
+    evidence:
+      - url: https://www2.arccorp.com/site-privacy-policy/
+        checked_on: '2026-09-30'
+        published: '2026-04-17'
+        excerpt: Last four digits of the credit card you used to purchase air travel
+        supports: [identity, relevance, removal, required_information, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Actual matching and retention outcome untested., Parent ownership unreviewed.]

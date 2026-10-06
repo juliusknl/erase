@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "associations": [
+    {
+      "guide_id": "catalina-consumer",
+      "records": [
+        "live:catalina-marketing-corporation",
+        "community:catalina"
+      ],
+      "rationale": "Both inventory records name Catalina Marketing Corporation. Its current embedded official notice provides separate GDPR and US portals; the guide preserves regional controller and retailer-processor distinctions."
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+schema_version: 1
+brokers:
+  - id: media-net-platform
+    name: Media.net advertising
+    match_domains: [media.net]
+    identity:
+      legal_name: Media.Net Advertising FZ-LLC
+      brands: [Media.net]
+      parent: null
+      official_domains: [media.net, privacyrequest.net]
+    relevance:
+      regions: [EU, EEA, UK, US, International]
+      category: advertising
+      data_categories: [Device and cookie identifiers, Hashed email identifiers, Browsing and ad activity, Inferred audiences]
+      note: The platform generally acts as controller, sometimes as a customer's processor; subscriber/contact data is separate from pseudonymous advertising records.
+    removal:
+      method: form
+      destination: https://www.media.net/preferences/
+      alternatives: [privacy@media.net, https://www.media.net/optout/]
+      steps:
+        - Open Privacy Rights Requests, choose your actual country and request deletion of your matched advertising data.
+        - Describe the relevant browser or device identifiers and provide only the matching information requested; name and contact email alone may not locate advertising records.
+        - Review country-specific fields and verification. Do not choose an employee or customer relationship that does not apply; contact privacy@media.net if no accurate option is available.
+        - Browser preferences and deletion are different. An unmatched deletion request may be handled as a do-not-sell request; record the actual response rather than assuming deletion.
+    required_information:
+      fields: [country, request_type, matching_identifier]
+      certainty: not_fully_specified
+      verification: Public embedded form has conditional name/email/relationship fields and CAPTCHA. Dynamic country selection and identity checks are untested.
+    coverage:
+      effect: deletion_request
+      includes: Personal advertising records Media.net can match and verify; request scope must be confirmed in its reply.
+      excludes: Every partner's independent records, guaranteed historic erasure or other browsers merely because a cookie preference was set.
+    automation:
+      mode: manual
+      reason: Device matching and conditional form declarations require review; a dedicated mailbox is not a universal advertising identifier.
+    evidence:
+      - url: https://www.media.net/preferences/
+        checked_on: '2026-10-01'
+        excerpt: Privacy Rights Requests
+        supports: [regional_form, official_embedded_route]
+      - url: https://www.media.net/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2026-06-22'
+        excerpt: Media.Net Advertising FZ-LLC
+        supports: [identity, EU_UK_rights, privacy_email, unmatched_deletion_limits]
+      - url: https://privacyrequest.net/privacy-request/?flavor=098ca9ee3e41231029aac9762ccd6a13
+        checked_on: '2026-10-01'
+        excerpt: Unable to Verify Identity
+        supports: [conditional_form_fields, verification]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Country-specific visible fields and live verification untested., Parent and comparable scale unreviewed.]
+
+  - id: datonics-advertising
+    name: Datonics advertising data
+    match_domains: [datonics.com]
+    identity:
+      legal_name: Datonics LLC
+      brands: [Datonics]
+      parent: null
+      official_domains: [datonics.com]
+    relevance:
+      regions: [EEA, UK, Switzerland, US, Other jurisdictions]
+      category: advertising
+      data_categories: [Hashed emails, Mobile advertising IDs, Cookies, Audience segments]
+      note: Technology data is separate from its corporate website and Shopify customer processing.
+    removal:
+      method: form
+      destination: https://www.datonics.com/privacy/privacy-choices
+      alternatives: [privacy@datonics.com]
+      steps:
+        - Open Your Privacy Choices and request deletion for each email you actually use. A reply to a new dedicated mailbox only promises deletion of that sender's hash, not every address listed in the email.
+        - This email request does not cover unidentified cookies or devices. Use Your Privacy Choices on each relevant browser and provide your own mobile advertising ID only when requesting device-data rights.
+        - The alternative form asks for email, residence, request type and a residency/accuracy declaration; select Other for an unlisted country. Mobile advertising ID is optional for non-device requests.
+        - Review verification personally. Never certify agent authority you do not have, enable tracking or install an unfamiliar app merely to obtain an advertising ID.
+        - Cookie and mobile-ID opt-outs must be renewed after the corresponding identifier changes. Repeat email choices for each relevant address and retain the response's scope.
+    required_information:
+      fields: [email]
+      certainty: not_fully_specified
+      verification: Initial email-hash request uses matching email identifiers and actual residence; the email verification checklist is unpublished. Alternative form includes a personal declaration and may collect browser context.
+    coverage:
+      effect: deletion_request
+      includes: Matched email-linked advertising records for an email request; device/browser records only when their own identifiers are supplied and verified.
+      excludes: Unidentified devices, other email addresses, independent data suppliers and all Shopify-client records.
+    automation:
+      mode: manual
+      reason: The observed email response processes the sending address only and routes further identifiers through Your Privacy Choices. Use the form for meaningful matching.
+    evidence:
+      - url: https://www.datonics.com/privacy/technology-privacy-policy
+        checked_on: '2026-10-01'
+        published: '2026-05-05'
+        excerpt: To exercise your rights under the GDPR, please contact us at
+        supports: [identity, European_email_rights, controller, matching_scope]
+      - url: https://www.datonics.com/privacy/privacy-choices
+        checked_on: '2026-10-01'
+        excerpt: Email Privacy Rights
+        supports: [email_hash_matching, per_identifier_scope, form_fields, certification]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Email matching and later verification untested., No interactive form submitted., Parent and comparable scale unreviewed.]
+
+  - id: cadent-household-platform
+    name: Cadent household advertising
+    match_domains: [cadent.tv, cadent.com]
+    identity:
+      legal_name: Cadent, LLC
+      brands: [Cadent]
+      parent: null
+      official_domains: [cadent.tv, cadent.com]
+    relevance:
+      regions: [US]
+      category: advertising
+      data_categories: [Household addresses, Device identifiers, Advertising and viewing activity]
+      note: The published platform portal is expressly for US residents and US household data; European residence must not be misrepresented.
+    removal:
+      method: form
+      destination: https://www.cadent.com/your-privacy-choices
+      alternatives: [https://privacy.cadent.tv/privacy, privacy@cadent.com]
+      steps:
+        - Use the platform Data Rights Request Form only if its US-residency and email-ownership declarations are true for you.
+        - Verify your email to receive the rights form. For deletion provide your own household address and associated device identifiers; do not use a server IP or somebody else's device.
+        - Deletion applies device by device. Opt-out can use a household address or owned device ID and is not equivalent to deleting historic records.
+        - If you live outside the US, ask the privacy contact about applicability without asserting US residence. Website cookie choices do not remove the household platform record.
+    required_information:
+      fields: [email, US_residency, household_address, owned_device_identifiers]
+      certainty: not_fully_specified
+      verification: Email control is verified before a subsequent form; additional identity/residency proof may be required. Later form fields uninspected.
+    coverage:
+      effect: deletion_request
+      includes: Verified device IDs associated with the supplied US household address, subject to the services notice and retention exceptions.
+      excludes: Unmatched devices, every affiliate dataset, non-US eligibility or platform erasure from website cookie controls alone.
+    automation:
+      mode: manual
+      reason: US residence declaration, household/device association and email verification prohibit a generic European email workflow.
+    evidence:
+      - url: https://www.cadent.com/your-privacy-choices
+        checked_on: '2026-10-01'
+        excerpt: We provide these rights to U.S. residents only
+        supports: [portal, residency_declaration, email_verification]
+      - url: https://www.cadent.com/services-privacy-policy
+        checked_on: '2026-10-01'
+        published: '2026-06-10'
+        excerpt: Cadent, LLC
+        supports: [identity, device_household_matching, state_email_limits]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Post-verification form untested., Some mailto links retain cadent.tv despite visible cadent.com; current direct-contact text records cadent.com., Parent and comparable scale unreviewed.]
+
+  - id: mobilefuse-platform
+    name: MobileFuse advertising
+    match_domains: [mobilefuse.com]
+    identity:
+      legal_name: MobileFuse, LLC
+      brands: [MobileFuse]
+      parent: null
+      official_domains: [mobilefuse.com]
+    relevance:
+      regions: [US, Canada, European transferred-data inquiries]
+      category: advertising
+      data_categories: [Device identifiers, Location, Advertising activity, Audience profiles]
+      note: Technical documentation limits monetized traffic to US/Canada; this does not prove that a European who travelled there has no record. Controller and client-processor roles differ.
+    removal:
+      method: form
+      destination: https://privacy.mobilefuse.com/
+      alternatives: [compliance@mobilefuse.com, https://privacy.mobilefuse.com/policies/privacy-policy]
+      steps:
+        - Choose the end-user deletion request in the privacy center and verify an email you control; provide your own mobile advertising ID if requesting device records.
+        - The public form configuration marks MAID optional, but a contact email alone may not identify ad-device data. Do not assume no matching device data from an email-only result.
+        - The policy's alternative device opt-out email asks for full name, actual state/country, device IDs and ownership screenshots. Review screenshots personally and send only relevant proof.
+        - Regional rights and customer-processor records can require clarification at compliance@mobilefuse.com; do not invent US residence.
+        - Retain the confirmation and any stated delay. The public erasure text mentions a 30-day cancellation window, but its delay setting is null; actual timing is untested.
+    required_information:
+      fields: [email]
+      certainty: not_fully_specified
+      verification: Public End User configuration requires email verification and allows optional MAID; email device opt-out instructions require ownership screenshots. No form submitted.
+    coverage:
+      effect: deletion_request
+      includes: Matched MobileFuse-controlled personal records, subject to verification and exceptions; minimal suppression records may remain.
+      excludes: Unknown device records, independent client data or a guarantee that all European-resident requests use the US legal process.
+    automation:
+      mode: manual
+      reason: Device matching, screenshots, regional scope and portal verification require personal review.
+    evidence:
+      - url: https://privacy.mobilefuse.com/
+        checked_on: '2026-10-01'
+        excerpt: Privacy Center
+        supports: [official_portal]
+      - url: https://privacy.mobilefuse.com/static/privacy.mobilefuse.com/privacyCenterPolicies-en.json
+        checked_on: '2026-10-01'
+        published: '2026-08-01'
+        excerpt: MobileFuse, LLC
+        supports: [identity, compliance_email, device_verification, regional_scope]
+      - url: https://privacy.mobilefuse.com/static/privacy.mobilefuse.com/privacyCenterSubjects.json
+        checked_on: '2026-10-01'
+        excerpt: MAID (Mobile Advertising ID)
+        supports: [public_fields, email_verification, timing_ambiguity]
+      - url: https://docs.mobilefuse.com/docs/privacy-compliance
+        checked_on: '2026-10-01'
+        excerpt: MobileFuse only monetizes US & Canada traffic
+        supports: [technical_geographic_scope]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Public metadata inspected without rendering or submitting the form., Cancellation text and configured delay differ; no promised live timeline., European applicability and precise matching depend on the record., Parent and comparable scale unreviewed.]

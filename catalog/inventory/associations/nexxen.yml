@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: nexxen-advertising
+    records: [live:nexxen-inc, community:amobee, community:rhythmone]
+    rationale: Official group policy identifies these exact former names and current Nexxen entities. Mapping records the transition, not three independent deletion workflows; the guide remains unresolved pending current form and dataset-scope checks.

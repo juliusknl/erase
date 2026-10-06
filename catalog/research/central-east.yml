@@ -1,0 +1,372 @@
+schema_version: 1
+brokers:
+  - id: bisz-hu
+    name: BISZ — Hungary KHR
+    match_domains: [bisz.hu]
+    identity:
+      legal_name: BISZ Központi Hitelinformációs Zártkörűen Működő Részvénytársaság
+      brands: [BISZ, KHR]
+      parent: GIRO Zrt. (ultimately Magyar Nemzeti Bank)
+      official_domains: [bisz.hu]
+    relevance:
+      regions: [HU]
+      category: credit_reference
+      data_categories: [Credit agreements, Defaults, Credit-report access history]
+      note: Hungarian financial reference register; not a marketing-list removal service.
+    removal:
+      method: manual
+      destination: https://bisz.hu/sajat-hiteljelentes-igenyles/
+      alternatives: [https://bisz.hu/kifogas-benyujtasa/, https://bisz.hu/atadhatosagi-es-tarolhatosagi-nyilatkozat/]
+      steps:
+        - Request the free Saját Hiteljelentés through a Hungarian financial institution or BISZ's linked government e-ID workflow.
+        - For the online route authenticate personally using ÜGYFÉLKAPU+ or DÁP; inspect the prefilled identity form before submitting.
+        - Dispute incorrect or unlawfully held records with the reporting institution; BISZ forwards complaints rather than independently resolving underlying contracts.
+        - Treat positive-history sharing and post-contract retention choices separately; they do not erase default or fraud records.
+    required_information:
+      fields: [national_eid]
+      certainty: documented
+      verification: Online natural-person route uses government authentication. Alternative branch access checks identity documents; direct postal access requires the prescribed original form and two witnesses.
+    coverage:
+      effect: access_then_review
+      includes: Personal KHR reference data and reporting/access history; record-specific correction or eligible deletion.
+      excludes: Automatic deletion of lawful credit records, creditors' source records, and company access through the personal e-ID route.
+    automation:
+      mode: manual
+      reason: Personal government authentication and record-specific disputes require the user's involvement.
+    evidence:
+      - url: https://bisz.hu/sajat-hiteljelentes-igenyles/
+        checked_on: '2026-09-29'
+        excerpt: IGÉNY BEADÁSA ÜGYFÉLKAPU+ vagy dáp mobilalkalmazással
+        supports: [removal, required_information]
+      - url: https://bisz.hu/kifogas-benyujtasa/
+        checked_on: '2026-09-29'
+        excerpt: kifogással élhet és kérheti adatai helyesbítését vagy törlését.
+        supports: [coverage, removal]
+      - url: https://bisz.hu/atadhatosagi-es-tarolhatosagi-nyilatkozat/
+        checked_on: '2026-09-29'
+        excerpt: A nyilatkozattételi lehetőség nem vonatkozik a hitelmulasztásokra
+        supports: [coverage]
+      - url: https://bisz.hu/cegunkrol/
+        checked_on: '2026-09-29'
+        excerpt: a GIRO Rt. vált a BISZ Rt. kizárólagos tulajdonosává.
+        supports: [identity, relevance]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Authenticated form not entered or submitted., Full alternative postal-form field checklist not reviewed., Current comparable personal-record count not established.]
+
+  - id: creditinfo-lt
+    name: Creditinfo Lietuva
+    match_domains: [creditinfo.lt, manocreditinfo.lt]
+    identity:
+      legal_name: UAB Creditinfo Lietuva
+      brands: [Mano Creditinfo]
+      parent: Creditinfo Group
+      official_domains: [creditinfo.lt, manocreditinfo.lt]
+    relevance:
+      regions: [LT]
+      category: credit_reference
+      data_categories: [Credit histories, Payment obligations, Identity and contact details, Scores]
+      note: Lithuanian credit bureau with controller and processor roles; separate from other national Creditinfo companies.
+    removal:
+      method: manual
+      destination: https://www.manocreditinfo.lt/privatumas
+      alternatives: [info@manocreditinfo.lt, duomenu.apsauga@creditinfo.lt, https://www.manocreditinfo.lt/]
+      steps:
+        - Request access through the published rights contact or personal portal; confirm the secure identity-verification method first.
+        - Identify incorrect records for correction, or explain grounds for objection or eligible deletion.
+        - Distinguish free rights access from paid reports, monitoring and identity-protection products.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Policy requires authenticated electronic communication or in-person ID. Exact remote verification method and minimum request fields are not specified; do not email an ID copy by default.
+    coverage:
+      effect: access_then_review
+      includes: Lithuanian bureau records, with record-specific rights review.
+      excludes: Deleting a portal account or stopping newsletters does not erase credit history. Creditors and source registers may control other records; objections do not guarantee deletion.
+    automation:
+      mode: manual
+      reason: Secure identity verification and credit-record eligibility need individual review.
+    evidence:
+      - url: https://www.manocreditinfo.lt/privatumas
+        checked_on: '2026-09-29'
+        excerpt: „Mano Creditinfo" sistemos valdytojas yra UAB „Creditinfo Lietuva".
+        supports: [identity, removal, required_information, relevance]
+      - url: https://www.manocreditinfo.lt/Klausimai
+        checked_on: '2026-09-29'
+        excerpt: Ar galiu nesutikti, kad mano asmens duomenys būtų tvarkomi arba reikalauti juos ištrinti?
+        supports: [coverage, removal]
+      - url: https://creditinfo.lt/lt/apie-mus/
+        checked_on: '2026-09-29'
+        excerpt: Priklausome tarptautinei kredito biurų grupei „Creditinfo Group“
+        supports: [identity, relevance]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Exact electronic identification procedure and minimum fields., Personal portal not entered., Current comparable record count not established.]
+
+  - id: creditinfo-ee
+    name: Creditinfo Eesti
+    match_domains: [creditinfo.ee, minucreditinfo.ee, e-krediidiinfo.ee]
+    identity:
+      legal_name: AS CREDITINFO EESTI
+      brands: [Minu Creditinfo, e-Krediidiinfo, Maksehäireregister]
+      parent: null
+      official_domains: [creditinfo.ee, minucreditinfo.ee, e-krediidiinfo.ee]
+    relevance:
+      regions: [EE]
+      category: credit_reference
+      data_categories: [Identity, Payment defaults, Business relationships, Credit assessments]
+      note: Estonian credit and background information; own registers and third-party processor services differ.
+    removal:
+      method: manual
+      destination: https://www.minucreditinfo.ee/et/logimine
+      alternatives: [andmekaitse@creditinfo.ee, tugi@creditinfo.ee]
+      steps:
+        - Use the authenticated personal portal for rights requests, or the policy's andmekaitse email with verifiable identity.
+        - For payment-default disputes identify the record, disputed part, reasons and requested remedy.
+        - The alternative tugi email accepts default complaints with a digital signature; this is not a generic deletion inbox.
+    required_information:
+      fields: [full_name, email_or_postal_address, disputed_record, reasons_and_remedy]
+      certainty: documented
+      verification: These are the published default-complaint fields. Use authenticated portal access or a digitally signed email; other rights-request verification is less fully specified.
+    coverage:
+      effect: access_then_review
+      includes: Record-specific rights review within Estonian services.
+      excludes: Closing the personal account does not erase independent credit records. Lawful retention and other national Creditinfo controllers are not removed automatically.
+    automation:
+      mode: manual
+      reason: Authenticated requests and justified disputes require personal review.
+    evidence:
+      - url: https://web.creditinfo.ee/doc/personal_data_processing_principles_020326.pdf
+        checked_on: '2026-09-29'
+        published: '2026-03-02'
+        excerpt: Creditinfo acts as either a controller or a processor
+        supports: [identity, relevance, removal, coverage]
+      - url: https://web.creditinfo.ee/doc/isikuandmete_tootlemise_pohimotted_020326.pdf
+        checked_on: '2026-09-29'
+        published: '2026-03-02; Estonian version prevails'
+        excerpt: päringu, taotluse või kaebuse e-posti aadressil andmekaitse@creditinfo.ee
+        supports: [removal]
+      - url: https://creditinfo.ee/volgade-ennetamine/maksehaireregister/v-lgnevustega-seotud-kaebuste-lahendamine/
+        checked_on: '2026-09-29'
+        excerpt: E-kirja teel kaebuste edastamisel on vaja eraisikute puhul avaldus digiallkirjastada.
+        supports: [required_information, removal, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Authenticated portal not entered; public page is a JavaScript shell., Minimum fields for non-dispute requests., Parent ownership and comparable record count.]
+
+  - id: sbcb-sk
+    name: Slovak Banking Credit Bureau
+    match_domains: [sbcb.sk]
+    identity:
+      legal_name: Slovak Banking Credit Bureau, s.r.o.
+      brands: [SBCB, SRBI]
+      parent: Owned by Slovenská sporiteľňa a.s., Všeobecná úverová banka a.s. and Tatra banka a.s.
+      official_domains: [sbcb.sk]
+    relevance:
+      regions: [SK]
+      category: credit_reference
+      data_categories: [Loan agreements, Payment history, Identity, Credit applications]
+      note: Slovak bank register; CRIF provides processing/client-centre services, not the same controller as NBCB.
+    removal:
+      method: manual
+      destination: https://www.sbcb.sk/sk/spracovanie-udajov
+      alternatives: [sbcbklient@crif.com, dpo@sbcb.sk, https://www.sbcb.sk/upload/source/pravo-na-vymaz-osobnych-udajov-sbcb.pdf]
+      steps:
+        - Request the free personal-data copy through the client centre, distinguishing it from priced commercial extracts and postage.
+        - For eligible deletion use the published erasure form, identifying the records and applicable grounds truthfully.
+        - Submit personally, by signed post, or to sbcbklient@crif.com. Qualified electronic signature supports full electronic handling; unsigned email may require further checks or a registered-post response.
+    required_information:
+      fields: [full_name, date_of_birth, national_id, permanent_address, country, affected_records, deletion_grounds, signature]
+      certainty: documented
+      verification: Erasure form lists these fields; phone and email are explicitly optional. Business identifiers apply only to entrepreneurs. In-person requests require identity evidence; do not send ID copies automatically.
+    coverage:
+      effect: access_then_review
+      includes: SBCB bank-register records, with correction or eligible erasure.
+      excludes: Lawful statutory credit retention, creditors' source records and the separate NBCB register; withdrawing consent does not override the stated statutory basis.
+    automation:
+      mode: manual
+      reason: Sensitive identifiers, signature and specific grounds require personal review.
+    evidence:
+      - url: https://www.sbcb.sk/sk/o-nas
+        checked_on: '2026-09-29'
+        excerpt: je vlastnená tromi bankami
+        supports: [identity, relevance]
+      - url: https://www.sbcb.sk/sk/spracovanie-udajov
+        checked_on: '2026-09-29'
+        excerpt: Kópia osobných údajov je žiadateľovi poskytnutá bezodplatne
+        supports: [removal]
+      - url: https://www.sbcb.sk/upload/source/pravo-na-vymaz-osobnych-udajov-sbcb.pdf
+        checked_on: '2026-09-29'
+        excerpt: Telefón je dobrovoľný
+        supports: [removal, required_information]
+      - url: https://www.sbcb.sk/upload/source/2025/informacia-o-spracuvani-osobnych-udajov-v-spolocnom-registri-bankovych-informacii.pdf
+        checked_on: '2026-09-29'
+        excerpt: iba žiadosti, ktoré sú podpísané kvalifikovaným elektronickým podpisom
+        supports: [identity, required_information, removal, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Some localized document links return404; validated direct erasure PDF retained., Current access-form link could not be retrieved., No operational submission tested; comparable personal-record count not established.]
+
+  - id: nbcb-sk
+    name: Non Banking Credit Bureau — Slovakia
+    match_domains: [nbcb.sk]
+    identity:
+      legal_name: Non Banking Credit Bureau, záujmové združenie právnických osôb
+      brands: [NBCB, NRKI]
+      parent: null
+      official_domains: [nbcb.sk]
+    relevance:
+      regions: [SK]
+      category: credit_reference
+      data_categories: [Credit applications, Leasing and loan agreements, Payment history, Identity]
+      note: Separate non-bank register with consent-based, statutory and legitimate-interest processing; not interchangeable with SBCB.
+    removal:
+      method: manual
+      destination: https://www.nbcb.sk/sk/spracovanie-udajov
+      alternatives: [nbcb@nbcb.sk, dpo@nbcb.sk, https://www.nbcb.sk/upload/source/pravo-na-vymaz-osobnych-udajov-nbcb.pdf]
+      steps:
+        - Request the free personal-data copy and establish which part of the register holds the relevant records.
+        - Use the erasure form for applicable grounds. Consent withdrawal applies only to consent-based processing; disputes about negative records need individual review.
+        - Send a signed postal request, attend the client centre, or use the policy's nbcb@nbcb.sk address with qualified electronic signature for full electronic handling.
+    required_information:
+      fields: [full_name, date_of_birth, national_id, permanent_address, country, affected_records, deletion_grounds, signature]
+      certainty: documented
+      verification: Erasure form lists these fields; phone/email optional, business identifiers only for entrepreneurs. Unsigned email can require extra verification or a registered-post reply; do not automatically attach ID documents.
+    coverage:
+      effect: access_then_review
+      includes: NBCB records and purpose-specific rights review.
+      excludes: Statutory records are not erased by withdrawing consent; negative-record legitimate-interest processing may continue. SBCB and lenders remain separate.
+    automation:
+      mode: manual
+      reason: Sensitive identification, signature and purpose-specific grounds require personal review.
+    evidence:
+      - url: https://www.nbcb.sk/sk/o-nas
+        checked_on: '2026-09-29'
+        excerpt: prevádzkovateľom Nebankového registra klientskych informácií
+        supports: [identity, relevance]
+      - url: https://www.nbcb.sk/sk/spracovanie-udajov
+        checked_on: '2026-09-29'
+        excerpt: Kópia osobných údajov je žiadateľovi poskytnutá bezodplatne
+        supports: [removal]
+      - url: https://www.nbcb.sk/upload/source/pravo-na-vymaz-osobnych-udajov-nbcb.pdf
+        checked_on: '2026-09-29'
+        excerpt: Email je dobrovoľný
+        supports: [removal, required_information]
+      - url: https://www.nbcb.sk/upload/source/2025/10/informacia-o-spracuvani-osobnych-udajov-v-nebankovom-registri-klientskych-informacii.pdf
+        checked_on: '2026-09-29'
+        excerpt: kvalifikovaným elektronickým podpisom
+        supports: [identity, relevance, removal, required_information, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Localized PDF links fail but direct public policy and erasure form work., Current membership ownership and comparable record count., No submission or signature verification tested.]
+
+  - id: crefo-lv
+    name: CREFO Birojs — Latvia
+    match_domains: [crefobirojs.lv]
+    identity:
+      legal_name: Akciju sabiedrība CREFO Birojs
+      brands: [CREFO Birojs]
+      parent: Creditreform group; regulator lists CREDITREFORM Rating SIA as qualifying shareholder
+      official_domains: [crefobirojs.lv]
+    relevance:
+      regions: [LV]
+      category: credit_reference
+      data_categories: [Identity and contact information, Payment obligations, Insolvency, Inquiry history]
+      note: Licensed Latvian credit bureau, distinct from other Creditreform companies.
+    removal:
+      method: manual
+      destination: https://crefobirojs.lv/buj/
+      alternatives: [info@crefobirojs.lv, datuaizsardziba@crefobirojs.lv, https://crefobirojs.lv/]
+      steps:
+        - Access your records free through the portal using bank authentication, or request them in person with ID.
+        - Alternatively submit the published application by post or securely electronically signed email to info@crefobirojs.lv; postal delivery costs extra.
+        - Challenge inaccurate or unlawfully included records in writing with reasons and supporting evidence. Use the DPO contact for rights questions.
+    required_information:
+      fields: [bank_authentication]
+      certainty: documented
+      verification: Portal route uses bank authentication. Paper form lists name, national ID, phone, address, email and signature without distinguishing optional contact fields; email submissions need secure electronic signature.
+    coverage:
+      effect: access_then_review
+      includes: Latvian CREFO records and individual correction or eligible deletion.
+      excludes: Blanket erasure of legally retained credit records, source creditors and other Creditreform companies. Request records themselves have a stated retention period.
+    automation:
+      mode: manual
+      reason: Personal bank authentication or secure signature and record-specific grounds cannot be replaced by generic email.
+    evidence:
+      - url: https://crefobirojs.lv/data-protection/
+        checked_on: '2026-09-29'
+        published: '2024-10-01; version2'
+        excerpt: kļūdainu vai nelikumīgi iekļauto ziņu dzēšanu
+        supports: [identity, relevance, coverage, removal]
+      - url: https://crefobirojs.lv/buj/
+        checked_on: '2026-09-29'
+        excerpt: parakstīta ar drošu elektronisko parakstu
+        supports: [removal, required_information]
+      - url: https://crefobirojs.lv/pub-docs/?name=pieteikuma-forma.pdf
+        checked_on: '2026-09-29'
+        excerpt: PIETEIKUMS CREFO BIROJĀ IEKĻAUTO ZIŅU SAŅEMŠANAI
+        supports: [required_information]
+      - url: https://www.dvi.gov.lv/lv/kreditinformacijas-biroju-saraksts
+        checked_on: '2026-09-29'
+        excerpt: CREDITREFORM Rating
+        supports: [identity]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Authenticated portal and signature acceptance not tested., Optionality of paper contact fields., Current comparable personal-record count.]
+
+  - id: kib-lv
+    name: Kredītinformācijas Birojs — Latvia
+    match_domains: [kib.lv, manakreditvesture.lv]
+    identity:
+      legal_name: AS Kredītinformācijas Birojs
+      brands: [ManaKreditvesture, My CreditInfo]
+      parent: null
+      official_domains: [kib.lv, manakreditvesture.lv]
+    relevance:
+      regions: [LV]
+      category: credit_reference
+      data_categories: [Identity, Debts and payment history, Credit scores, Business-register information]
+      note: Latvian licensed bureau number40103673493. Regulator names Compass UK Bidco Limited as a qualifying shareholder, not proof of sole ownership.
+    removal:
+      method: manual
+      destination: https://www.manakreditvesture.lv/privacy/
+      alternatives: [info@kib.lv, datuspecialists@kib.lv, https://www.manakreditvesture.lv/blog/registration-instructions/]
+      steps:
+        - Request access or other applicable rights through the portal, in person, by post, or by email to info@kib.lv.
+        - For email, the policy recommends a secure electronic signature and may require further identity checks.
+        - Portal registration uses bank authentication, email confirmation and CAPTCHA. Review the report before seeking correction or eligible deletion.
+    required_information:
+      fields: [bank_authentication, email]
+      certainty: not_fully_specified
+      verification: These apply to portal registration; exact email-request matching fields are not listed. Never send identity documents automatically or treat the portal password as a broker-matching identifier.
+    coverage:
+      effect: access_then_review
+      includes: Rights review for the Latvian bureau's matched records.
+      excludes: Lawful credit retention and third-party records; withdrawing consent only affects consent-based purposes. Account closure is not proof of bureau deletion.
+    automation:
+      mode: manual
+      reason: Identity verification and credit-record eligibility require personal review.
+    evidence:
+      - url: https://www.manakreditvesture.lv/privacy/
+        checked_on: '2026-09-29'
+        published: Rendered public policy; cookie section separately dated2026-01-21
+        excerpt: ieteicams parakstīt to ar drošu elektronisko parakstu.
+        supports: [identity, relevance, removal, required_information, coverage]
+      - url: https://www.manakreditvesture.lv/blog/registration-instructions/
+        checked_on: '2026-09-29'
+        excerpt: Select the bank you will use for authentication.
+        supports: [required_information, removal]
+      - url: https://www.dvi.gov.lv/lv/kreditinformacijas-biroju-saraksts
+        checked_on: '2026-09-29'
+        excerpt: Compass UK Bidco Limited
+        supports: [identity]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Exact identifiers for non-portal requests., Authenticated workflow and electronic signature not tested., Ultimate ownership and comparable personal-record count.]

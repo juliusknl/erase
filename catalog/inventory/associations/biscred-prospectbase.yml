@@ -1,0 +1,8 @@
+schema_version: 1
+associations:
+  - guide_id: biscred-professional
+    records: [live:biscred]
+    rationale: Current official Biscred policy identifies Bisnow LLC as controller of the commercial-real-estate professional database and publishes a European rights email and alternative form.
+  - guide_id: prospectbase-uk-professional
+    records: [live:prospectbase-uk-limited]
+    rationale: UK policy supplies company number 15492457, which the official Companies House register identifies as ProspectBase UK Limited. Shared Irish mailbox does not establish all-group coverage.

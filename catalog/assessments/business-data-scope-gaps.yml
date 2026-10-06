@@ -1,0 +1,33 @@
+schema_version: 1
+assessments:
+  - record: live:ocean-global-inc
+    disposition: unresolved
+    checked_on: '2026-09-30'
+    rationale: Current website identifies Ocean Global Inc., but the September policy names Ocean ApS and explicitly excludes its customer-facing database from the listed internal processing. Do not claim database deletion based solely on this website/account notice. The designated email is obscured in the accessible rendering and was not corroborated here.
+    evidence:
+      - url: https://www.ocean.io/privacy
+        checked_on: '2026-09-30'
+        published: '2026-09-02'
+        excerpt: under no circumstances included in the Ocean.io database
+        supports: [controller_scope, product_exclusion, verification]
+      - url: https://www.ocean.io/
+        checked_on: '2026-09-30'
+        excerpt: Ocean Global, Inc.
+        supports: [discovery_identity]
+    unresolved: [Establish the controller and current removal instructions for third-party professional records in the product., Corroborate the exact designated rights inbox without guessing.]
+  - record: live:privco-media-llc
+    disposition: unresolved
+    checked_on: '2026-09-30'
+    rationale: Current general notice names PrivCo Holding Inc. rather than the inventory's PrivCo Media LLC. California database removal has an explicit subject and name/title/contact checklist, but European product applicability is not established by that state-only page. The general rights notice may restrict requests to records linked to the actual sending address.
+    evidence:
+      - url: https://www.privco.com/privacy-policy
+        checked_on: '2026-09-30'
+        published: '2024-07-02'
+        excerpt: particular email address that you use to send us your request
+        supports: [controller, sender_matching, general_rights]
+      - url: https://www.privco.com/ccpa
+        checked_on: '2026-09-30'
+        published: '2024-06-30'
+        excerpt: Remove my contact information
+        supports: [California_route, subject, required_fields]
+    unresolved: [Resolve the entity relationship and European searchable-database removal scope., Confirm matching when the app sends from a dedicated request mailbox.]

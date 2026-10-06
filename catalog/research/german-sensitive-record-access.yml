@@ -1,0 +1,198 @@
+schema_version: 1
+brokers:
+  - id: demda-tenant-records
+    name: DEMDA tenancy and credit records
+    match_domains: [demda.de]
+    identity:
+      legal_name: Deutsche Mieter Datenbank GmbH & Co. KG
+      brands: [DEMDA]
+      parent: null
+      official_domains: [demda.de]
+    relevance:
+      regions: [Germany, EEA rental and credit contexts]
+      category: credit_reference
+      data_categories: [Tenant records, Payment defaults, Address history, Insolvency and debtor records]
+      note: DEMDA combines third-party credit/address information with landlord-submitted negative tenancy information.
+    removal:
+      method: manual
+      destination: koehler@demda.de
+      alternatives: [https://www.demda.de/eigenauskunft.php, https://www.demda.de/pdf/Informationsrecht_DSGVO.pdf]
+      steps:
+        - Request a free personal data copy first; the notice specifies name including birth name if applicable, date of birth and current address.
+        - Prior addresses from the last five years improve completeness. The notice says an ID copy is voluntary; never attach one automatically.
+        - The advertised online access page did not expose a request form during research. Ask the DPO for the current secure submission route before sending sensitive documents.
+        - Review source and accuracy, then request correction, restriction or justified deletion of specific records. Source bureaus and public registers require separate review.
+    required_information:
+      fields: [full_name, date_of_birth, postal_address]
+      certainty: not_fully_specified
+      verification: Published matching list inspected; online controls unavailable and later verification untested. Prior addresses and identity copy are not blanket mandatory fields.
+    coverage:
+      effect: access_then_review
+      includes: DEMDA-held personal tenancy and credit information and reported recipients.
+      excludes: Automatic removal of accurate credit history, separate sources and cancellation of debts or legal proceedings.
+    automation:
+      mode: manual
+      reason: Birth-date matching and sensitive record review need personal control; no generic erasure email or ID upload.
+    evidence:
+      - url: https://www.demda.de/pdf/Informationsrecht_DSGVO.pdf
+        checked_on: '2026-10-01'
+        excerpt: auf freiwilliger Basis
+        supports: [entity, product_scope, access_matching, optional_identity_copy]
+      - url: https://www.demda.de/datenschutzerklaerung.php
+        checked_on: '2026-10-01'
+        excerpt: koehler@demda.de
+        supports: [current_website_DPO_corroboration]
+      - url: https://www.demda.de/eigenauskunft.php
+        checked_on: '2026-10-01'
+        excerpt: Hier können Sie Auskünfte über die eigenen Daten erhalten.
+        supports: [advertised_route_without_exposed_form_controls]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Current secure submission and fulfilment untested., PDF contains legacy supplier names and stray ICD wording; these are not endorsed as current legal conclusions., Parent and scale unreviewed.]
+  - id: ihd-business-credit
+    name: IHD credit and collection records
+    match_domains: [ihd.de]
+    identity:
+      legal_name: IHD Gesellschaft für Kredit- und Forderungsmanagement mbH
+      brands: [IHD]
+      parent: null
+      official_domains: [ihd.de]
+    relevance:
+      regions: [Germany, EEA commercial-credit contexts]
+      category: credit_reference
+      data_categories: [Business credit information, Collection records, Identity and address data, Public insolvency information]
+      note: Business-information processing primarily concerns businesses and commercially active individuals; collection records have a separate notice.
+    removal:
+      method: manual
+      destination: datenschutz@ihd.de
+      alternatives: [https://ihd.de/datenschutz]
+      steps:
+        - Ask for access to your own records and identify whether the context is business information or a collection case.
+        - Review necessary matching details with the DPO. The business-information notice says an ID copy is voluntary; do not send documents automatically.
+        - Review specific records before requesting correction, restriction or justified deletion. A privacy request does not settle or cancel a debt.
+        - IHD names CRIF and Dun & Bradstreet in its sharing disclosures; their records and the original sources require separate handling.
+    required_information:
+      fields: [record_context, identity_information_as_requested]
+      certainty: not_fully_specified
+      verification: Published notices do not provide a fixed initial matching checklist; voluntary ID copy is not a requirement for automatic disclosure.
+    coverage:
+      effect: access_then_review
+      includes: Personal records within the identified IHD business-information or collection context.
+      excludes: All-credit-history erasure, independent bureaus, public registers and debt cancellation.
+    automation:
+      mode: manual
+      reason: Sensitive credit/collection context and record-specific rights must be reviewed first.
+    evidence:
+      - url: https://www.ihd.de/documents/ihd_informationen_art_14_dsgvo_wirtschaftsinformationen.pdf
+        checked_on: '2026-10-01'
+        excerpt: datenschutz@ihd.de
+        supports: [entity_and_DPO, business_context, access_and_voluntary_ID_copy]
+      - url: https://www.ihd.de/documents/ihd_informationen_art_14_dsgvo_inkasso.pdf
+        checked_on: '2026-10-01'
+        excerpt: Geschäftsbereich Inkasso
+        supports: [separate_collection_scope, named_bureau_recipients]
+      - url: https://ihd.de/datenschutz
+        checked_on: '2026-10-01'
+        excerpt: IHD_Informationen_Art_14_DSGVO_Wirtschaftsinformationen
+        supports: [current_official_PDF_delegation]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Matching and fulfilment untested., Published retention and legal assertions are not independently endorsed as current law., Parent and scale unreviewed.]
+  - id: besurance-his-insurance
+    name: Besurance HIS insurance records
+    match_domains: [besurance-his.de]
+    identity:
+      legal_name: Besurance HIS GmbH
+      brands: [Besurance HIS, Hinweis- und Informationssystem der Versicherungswirtschaft]
+      parent: null
+      official_domains: [besurance-his.de]
+    relevance:
+      regions: [Germany]
+      category: identity_risk
+      data_categories: [Insurance risk and claims signals, Identity and addresses, Vehicle and property references]
+      note: HIS supports insurers' risk/claims checks; an entry is not by itself evidence of misconduct by the person.
+    removal:
+      method: form
+      destination: https://besurance-his.de/selbstauskunft/online-formular/person
+      alternatives: [https://besurance-his.de/selbstauskunft, datenschutz@besurance-his.de]
+      steps:
+        - Request a personal data copy using salutation, name, birth date and current street address; email and phone are for follow-up questions.
+        - Birth name and prior addresses help matching where applicable. The general instructions describe an identity copy as optional; never upload one automatically.
+        - Vehicle and property access use separate forms and ownership evidence, not this person form.
+        - Review the reporting insurer, reason and recipients before seeking correction or justified deletion; do not assume access removes records or cancels insurance.
+    required_information:
+      fields: [salutation, full_name, date_of_birth, postal_address]
+      certainty: not_fully_specified
+      verification: Public required labels inspected; dynamic validation and follow-up checks untested. ID copy is optional in general instructions.
+    coverage:
+      effect: access_then_review
+      includes: Matched person records in HIS and information about reports and disclosures.
+      excludes: Automatic insurance-record deletion, separate insurer files and vehicle/property access without authorization evidence.
+    automation:
+      mode: manual
+      reason: Birth-date matching and sensitive insurance records require personal review and separate ownership proof where applicable.
+    evidence:
+      - url: https://besurance-his.de/dsgvo/artikel14
+        checked_on: '2026-10-01'
+        excerpt: Besurance HIS GmbH
+        supports: [controller, insurance_risk_scope, access_and_record_rights]
+      - url: https://besurance-his.de/selbstauskunft
+        checked_on: '2026-10-01'
+        excerpt: optional, aber empfohlen
+        supports: [optional_identity_copy, separate_asset_evidence, access_matching]
+      - url: https://besurance-his.de/selbstauskunft/online-formular/person
+        checked_on: '2026-10-01'
+        excerpt: E-Mail (bei Rückfragen)
+        supports: [public_required_labels, optional_reply_contact]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Form verification and fulfilment untested., Parent and comparable scale unreviewed.]
+  - id: intrum-information-services-de
+    name: Intrum Information Services Germany records
+    match_domains: [intrum.de]
+    identity:
+      legal_name: Intrum Information Services Deutschland GmbH
+      brands: [Intrum Information Services Deutschland]
+      parent: Intrum group — exact holding entity unreviewed
+      official_domains: [intrum.de]
+    relevance:
+      regions: [Germany]
+      category: credit_reference
+      data_categories: [Identity and contact data, Credit and collection context as applicable]
+      note: The shared website names several controllers; the selected company and actual record context determine scope.
+    removal:
+      method: form
+      destination: https://www.intrum.de/business-losungen/uber-intrum/rechte-der-betroffenen-person/
+      alternatives: [datenschutz.de@intrum.com]
+      steps:
+        - Select Intrum Information Services Deutschland GmbH, not the separately listed Intrum Deutschland GmbH, when that is the relevant company.
+        - Required labels cover name, full address, phone, email, company and requested right. Existing case reference is optional.
+        - Request access to establish records first; review the truthfulness confirmation and any identity check yourself.
+        - Then request record-specific correction, restriction or justified deletion. This is not debt cancellation or proof that all Intrum group records are covered.
+    required_information:
+      fields: [full_name, postal_address, phone, email, exact_company, requested_right]
+      certainty: not_fully_specified
+      verification: Public form labels inspected; additional identity and representation checks may apply.
+    coverage:
+      effect: access_then_review
+      includes: Matched records of the selected Intrum Information Services Deutschland controller.
+      excludes: Intrum Hanseatische Inkasso-Treuhand's separate route, all-group erasure and resolution of a debt dispute.
+    automation:
+      mode: manual
+      reason: Exact controller selection, personal confirmation and sensitive record context need review.
+    evidence:
+      - url: https://www.intrum.de/business-losungen/uber-intrum/datenschutz/
+        checked_on: '2026-10-01'
+        excerpt: Intrum Information Services Deutschland GmbH
+        supports: [exact_controller_contact, distinct_group_entities, rights_form_delegation]
+      - url: https://www.intrum.de/business-losungen/uber-intrum/rechte-der-betroffenen-person/
+        checked_on: '2026-10-01'
+        excerpt: Aktenzeichen, sofern bekannt
+        supports: [company_selection, required_labels, optional_case_reference, personal_confirmation]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Product-specific record scope and fulfilment untested., Website notice alone does not establish all collection-database processing., Parent and comparable scale unreviewed.]

@@ -1,0 +1,48 @@
+schema_version: 1
+brokers:
+  - id: b2b-datenbank-de
+    name: B2B-Datenbank.de
+    match_domains: [b2b-datenbank.de]
+    identity:
+      legal_name: Pascal Spaqi Einzelunternehmen
+      brands: [B2B-Datenbank.de]
+      parent: null
+      official_domains: [b2b-datenbank.de]
+    relevance:
+      regions: [Germany, EEA, Global public business sources]
+      category: professional
+      data_categories: [Names, Job titles, Work emails, Business contact details, Employer details]
+      note: A paid public-web business search index; not limited to website visitors.
+    removal:
+      method: email
+      destination: datenschutz@b2b-datenbank.de
+      alternatives: [email@iitr.de]
+      steps:
+        - Request deletion of your professional search-index record and object to direct-marketing processing.
+        - Identify the relevant work identity; the app offers name, work email and employer as initial matching information.
+        - Review any further verification personally and retain the substantive decision.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: No universal matching checklist is published; the recipe's professional identifiers are an initial matching proposal, not a guaranteed complete application.
+    coverage:
+      effect: deletion_request
+      includes: Matched personal data in the provider's business search index.
+      excludes: Independently controlled customer copies and the original public sources.
+    automation:
+      mode: manual
+      reason: Initial professional-identity email recipe is implemented; additional matching or verification remains personal.
+    evidence:
+      - url: https://b2b-datenbank.de/datenschutz/
+        checked_on: '2026-09-30'
+        excerpt: Pascal Spaqi Einzelunternehmen
+        supports: [identity, official_contact, product_notice_link]
+      - url: https://b2b-datenbank.de/assets/files/Datenschutzhinweise-betroffene.pdf
+        checked_on: '2026-09-30'
+        published: January 2024
+        excerpt: Um diese Rechte auszuüben, wenden Sie sich an
+        supports: [search_index_scope, identifiers_processed, deletion_route, customer_controller_limit]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Matching and follow-up verification untested., No downstream customer deletion demonstrated., Older notice remains linked by current official privacy page.]

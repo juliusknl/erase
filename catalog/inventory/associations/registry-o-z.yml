@@ -1,0 +1,462 @@
+schema_version: 1
+associations:
+  - guide_id: sp-global
+    records: ["live:s-p-global-inc"]
+    rationale: "Current official corporate notice expressly names professional-contact products and rights portal; separate Mobility transition not inferred covered."
+  - guide_id: infillion-paedae
+    records: ["live:paedae-inc"]
+    rationale: "Official Infillion terms identify PaeDae Inc dba Gimbal; current policy shell and draft-path rights portal require further assessment, so blocked."
+  - guide_id: fusable
+    records: ["live:randall-reilly-llc"]
+    rationale: "Current Fusable legal footer and official indexed policy identify Randall-Reilly LLC; broker-product deletion scope unresolved, so blocked."
+  - guide_id: transunion-us
+    records: ["live:trans-union-llc"]
+    rationale: "Current TransUnion LLC notice explicitly names combined US rights coverage; secure deletion verification distinguished from optional-ID one-time opt-out and UK marketing rights."
+  - guide_id: salutary-data
+    records: ["live:salutary-data-llc"]
+    rationale: "Current official US-only professional-data policy names Salutary Data LLC and documents separate business-identifier form and email matching requirements."
+  - guide_id: scanbuy-data
+    records: ["live:scanbuy-inc"]
+    rationale: "Legacy Scanbuy Data policy and MAID-verifying rights portal reviewed; Kezzler packaging acquisition not assumed to transfer all advertising data."
+  - guide_id: specialists-marketing-services
+    records: ["live:specialists-marketing-services-inc"]
+    rationale: "Current indexed official notice says consumer broker services ended; legacy custody and route left blocked, not promoted as active verified broker."
+  - guide_id: swordfish-ai
+    records: ["live:swordfish-ai-inc"]
+    rationale: "Official September2026 opt-out instructions and linked bot-protected form plus publisher identity reviewed; workflow remains manual and untested."
+  - guide_id: sharethrough-legacy
+    records: ["live:sharethrough-inc"]
+    rationale: "Official merger/rebrand assessed but legacy rights notice failed; exact-controller migration remains blocked rather than assuming Smart AdServer opt-out covers Sharethrough."
+  - guide_id: sports-innovation-lab
+    records: ["live:sports-innovation-lab-inc"]
+    rationale: "Current official data-service policy explicitly names Sports Innovation Lab Inc and accepts rights email; official choices page links Genius Sports form."
+  - guide_id: realeflow
+    records: ["live:realeflow-llc"]
+    rationale: "Official current policy identifies Realeflow LLC and self-request form exposes deletion fields and CAPTCHA."
+  - guide_id: semcasting
+    records: ["live:semcasting-inc"]
+    rationale: "Current official rights policy names Semcasting Inc and documents mandatory full-name/residential-address matching."
+  - guide_id: statara
+    records: ["live:statara-solutions-llc"]
+    rationale: "Official product policy names Statara Solutions LLC; current self-request form exposes all required fields."
+  - guide_id: samba-tv
+    records: ["live:samba-tv-inc"]
+    rationale: "Official terms name Samba TV Inc and current consumer handbook links device controls and rights form; no separate-controller coverage inferred."
+  - guide_id: skydeo
+    records: ["live:skydeo-inc"]
+    rationale: "Current official policy names Skydeo Inc; email rights route recorded while broken opt-out portal and client scope remain explicit."
+  - guide_id: vizio-viewing-data
+    records: ["live:vizio-services-llc"]
+    rationale: "Inscape official licensing terms name VIZIO Services LLC; guide distinguishes its viewing feed from VIZIO Inc consumer controls and does not infer downstream deletion."
+  - guide_id: west-public-records
+    records: ["live:west-publishing-corporation"]
+    rationale: "Federal vendor directory expressly identifies West Publishing Corporation dba Thomson West and its Public Records products; dedicated current product notice supplies restricted rights workflow."
+  - guide_id: fusion92
+    records: ["live:virtual-marketing-llc"]
+    rationale: "Michigan government contract explicitly names Virtual Marketing LLC dba Fusion92; current broker notice limits intended broker population to US residents."
+  - guide_id: stirista
+    records: ["live:stirista-llc", "live:andrews-wharton-inc"]
+    rationale: "Andrews Wharton official privacy page expressly delegates privacy preferences and DSARs to Stirista; this is explicit routing, not inferred blanket acquisition coverage."
+  - guide_id: speedeon
+    records: ["live:speedeon-data-llc"]
+    rationale: "Official January 2026 Data Products notice names Speedeon Data LLC separately from website notice."
+  - guide_id: sterling-data
+    records: ["live:sterling-data-company-llc"]
+    rationale: "Official April 2026 notice names Sterling Data Company LLC; no equivalence to similarly named employment-screening firms."
+  - guide_id: start-io
+    records: ["live:start-io-inc"]
+    rationale: "Official end-user policy identifies Start.io Inc formerly StartApp Inc; technical-ID route reviewed."
+  - guide_id: smarte
+    records: ["live:smarte-inc"]
+    rationale: "Current policy identifies SMARTe Inc and distinguishes master-database controller from customer app processing."
+  - guide_id: slashdot-media
+    records: ["live:slashdot-media-llc"]
+    rationale: "Official controller notice names Slashdot Media LLC and covered linked websites; no blanket claim for every registry-listed domain."
+  - guide_id: sojern
+    records: ["live:sojern-inc"]
+    rationale: "Current official policy expressly names Sojern Inc as service controller, separately from Irish EU representative."
+  - guide_id: stackadapt
+    records: ["live:stackadapt-inc"]
+    rationale: "August 2026 platform policy identifies StackAdapt Inc; platform rights distinguished from website demo contact."
+  - guide_id: sheerid
+    records: ["live:sheerid-inc"]
+    rationale: "Official global policy names SheerID Inc; scope is controller Audience/Remember Me products, not every client verification."
+  - guide_id: nielsen-marketing-cloud
+    records: ["live:the-nielsen-company"]
+    rationale: "The live Nielsen domain and official NMC opt-out copyright identify The Nielsen Company (US), LLC; association is product-limited and does not merge UK NMRL, NielsenIQ or panel controllers."
+  - guide_id: techtarget
+    records: ["live:techtarget-inc", "live:techtarget-inc-2"]
+    rationale: "Both registry entries identify TechTarget Inc; current redirected policy names that controller dba Informa TechTarget and limits joint Informa coverage to specified datasets."
+  - guide_id: t-mobile-us
+    records: ["live:t-mobile-usa-inc"]
+    rationale: "Advertising Solutions terms name T-Mobile USA Inc; no European Deutsche Telekom controller equivalence assumed."
+  - guide_id: alesco
+    records: ["live:the-alesco-group-llc"]
+    rationale: "Official MyDataPrivacy terms identify The Alesco Group LLC dba Alesco Data; current Alesco workflow reviewed separately from older platform route."
+  - guide_id: urban-science
+    records: ["live:urban-science-applications-inc"]
+    rationale: "April 2026 official privacy notice names Urban Science Applications Inc; European representative not separately matched."
+  - guide_id: sg360
+    records: ["live:the-segerdahl-llc"]
+    rationale: "2026 USPTO primary record identifies The Segerdahl LLC as SG360 applicant; official brand-policy contradictions keep workflow blocked."
+  - guide_id: tl1mkt
+    records: ["live:the-linea-1-mkt-sl"]
+    rationale: "Official product notice identifies The Linea1 MKT SL, its Spain address and tl1mkt.com device-level data services."
+  - guide_id: tauxbe
+    records: ["live:tauxbe-data-inc"]
+    rationale: "Tauxbe and NatCrim official policies both name Tauxbe Data Inc; missing designated request links keep automation blocked."
+  - guide_id: the-data-group
+    records: ["live:the-data-group"]
+    rationale: "Exact published The Data Group brand/domain match; no unstated legal suffix or broader entity coverage inferred."
+  - guide_id: zs-opinion-leader
+    records: ["live:zs-associates-inc"]
+    rationale: "ZS product and general policies explicitly name ZS Associates Inc; guide scopes expert profiles and conditional controller affiliation."
+  - guide_id: vrtcal
+    records: ["live:vrtcal-markets-inc"]
+    rationale: "Official advertising and subject-access PDFs identify VRTCAL Markets Inc and device-level advertising data."
+  - guide_id: venpath
+    records: ["live:venpath-inc"]
+    rationale: "FTC primary documents identify VenPath Inc and historical venpath.net policy; current workflow deliberately blocked, not treated as active verification."
+  - guide_id: truedata
+    records: ["live:truedata-solutions-inc"]
+    rationale: "Official product privacy notice names TrueData Solutions Inc and distinguishes own datasets from client processing."
+  - guide_id: visual-visitor
+    records: ["live:visual-visitor-l-l-c"]
+    rationale: "June 2026 official privacy policy identifies Visual Visitor LLC; website links this policy and subject-request form."
+  - guide_id: valassis
+    records: ["live:valassis-communications-inc"]
+    rationale: "Dedicated RRD-hosted policy explicitly names Valassis Communications Inc and Valassis Digital Corp; no other RRD entities matched."
+  - guide_id: targetsmart
+    records: ["live:targetsmart-communications-llc"]
+    rationale: "Official privacy-center contact names TargetSmart Communications LLC; blocked pending complete policy coverage."
+  - guide_id: wiland
+    records: ["live:wiland-inc"]
+    rationale: "Current official privacy choices identify Wiland Inc and its consumer marketing data, distinct from client and HR records."
+  - guide_id: webbula
+    records: ["live:webbula-llc"]
+    rationale: "August 2026 service privacy notice identifies Webbula LLC and its own marketing databases."
+  - guide_id: whitepages
+    records: ["live:whitepages-inc"]
+    rationale: "Official policy identifies Whitepages Inc; rights page separates directory suppression and non-public data deletion."
+  - guide_id: zerotoone-ai
+    records: ["live:zerotoone-ai-inc"]
+    rationale: "Official policy and current opt-out page identify ZeroToOne.AI Inc; GroundTruth coverage is not inferred."
+  - guide_id: true-blue-analytics
+    records: ["live:true-blue-analytics-llc"]
+    rationale: "Official privacy notice names True Blue Analytics LLC and describes political campaign data brokerage."
+  - guide_id: true-opulence
+    records: ["live:true-opulence-corporation"]
+    rationale: "Official terms identify True Opulence Corporation; unresolved database-versus-CRM scope remains blocked."
+  - guide_id: tunnl
+    records: ["live:tunnl-llc"]
+    rationale: "July 2026 service policy identifies Tunnl LLC, including data about non-users."
+  - guide_id: unearth-campaigns
+    records: ["live:unearth-campaigns-llc", "live:unearth-campaigns-llc-2"]
+    rationale: "Both unearthcampaigns.com and atlasinfluence.com policies explicitly name Unearth Campaigns LLC for their audience services."
+  - guide_id: us-data-corporation
+    records: ["live:us-data-corporation"]
+    rationale: "Official service privacy policy names U.S. Data Corporation and links the exact Forgetmenaut request form."
+  - guide_id: usadata
+    records: ["live:usadata-inc"]
+    rationale: "Current USADATA Inc opt-out and CCPA notices document supplier forwarding rather than assumed direct controller deletion."
+  - guide_id: viant
+    records: ["live:viant-us-llc"]
+    rationale: "September 23 2026 platform policy expressly names Viant US LLC in covered US entities; scoped controller platform guide, not all affiliate services."
+  - guide_id: vistar-media
+    records: ["live:vistar-media-inc"]
+    rationale: "Current services policy names Vistar Media Inc and explicitly separates European processor and US controller roles."
+  - guide_id: videoamp
+    records: ["live:videoamp-inc"]
+    rationale: "Offerings notice identifies VideoAmp Inc; June 2026 US rights notice provides the linked request route."
+  - guide_id: veraset
+    records: ["live:veraset"]
+    rationale: "General and European addendum explicitly name Veraset LLC and its location-data solutions."
+  - guide_id: versium
+    records: ["live:versar-data-solutions-inc", "live:versium-analytics-inc"]
+    rationale: "Current policy names Versar Data Solutions Inc doing business as Versium Analytics and DataFinder. Both registry entries point at this branded service; historical corporate liabilities are not inferred."
+  - guide_id: ventiveiq
+    records: ["live:ventiveiq-llc"]
+    rationale: "Service policy explicitly names VentiveIQ LLC and separates its data rights from website-only processing."
+  - guide_id: veeva
+    records: ["live:veeva-systems-inc"]
+    rationale: "Current controller notice names Veeva Systems Inc; professional and US-consumer branches retained separately."
+  - guide_id: yieldmo
+    records: ["live:yieldmo-inc"]
+    rationale: "September 2026 services policy identifies Yieldmo Inc and device-specific rights process."
+  - guide_id: wurl
+    records: ["live:wurl-llc"]
+    rationale: "Advertising/media policy explicitly covers WURL LLC and WURL NETWORK UK LTD; corporate-site notice not substituted."
+  - guide_id: groundtruth
+    records: ["live:xad-inc"]
+    rationale: "Current ad-platform policy explicitly identifies xAd Inc dba GroundTruth."
+  - guide_id: windfall
+    records: ["live:windfall-data-inc"]
+    rationale: "Current consumer-data policy explicitly identifies Windfall Data Inc."
+  - guide_id: wealthfeed
+    records: ["live:wealthfeed-inc"]
+    rationale: "Official June 2026 announcement names WealthFeed Inc, matching current wealthfeed.com consumer rights pages."
+  - guide_id: seekout
+    records: ["live:zipstorm-inc"]
+    rationale: "June 2026 Candidate Database policy explicitly identifies ZipStorm Inc as SeekOut provider/controller."
+  - guide_id: yobi
+    records: ["live:yobi-ventures-inc"]
+    rationale: "Current rights form footer names Yobi Ventures Inc; unresolved policy scope remains explicitly blocked."
+  - guide_id: wiza
+    records: ["live:wiza-inc"]
+    rationale: "Official opt-out footer identifies Wiza Inc; wiza.com redirects to wiza.co."
+  - guide_id: warmly
+    records: ["live:warmly-inc"]
+    rationale: "Current service policy names Warmly Inc and separately explains European controller and US rights form."
+  - guide_id: wunderkind
+    records: ["live:wunderkind-corporation"]
+    rationale: "Current policy and request instructions identify Wunderkind Corporation's service-data route."
+  - guide_id: enrichlayer
+    records: ["live:vertical-int-inc"]
+    rationale: "EnrichLayer policy explicitly names Vertical Int Inc; workflow deficiencies remain blocked rather than implied verified."
+  - guide_id: upcell
+    records: ["live:upcell-llc"]
+    rationale: "Current data-services policy names upcell LLC and explains permanent suppression of its own business-contact database separately from client CRM processing."
+  - guide_id: vendelux
+    records: ["live:vendelux"]
+    rationale: "The May 2026 policy explicitly identifies Vendelux Inc and distinguishes individual conference profiles from company and event records."
+  - guide_id: taboola
+    records: ["live:taboola-inc"]
+    rationale: "The shared current Taboola policy explicitly names US Taboola Inc while identifying Taboola.com Ltd as European controller; no blanket affiliate erasure inferred."
+  - guide_id: triplelift
+    records: ["live:triplelift-inc"]
+    rationale: "The current platform policy identifies Triple Lift Inc; separate instructions provide exact digital-identifier and ownership-proof requirements."
+  - guide_id: uplead
+    records: ["live:uplead-llc"]
+    rationale: "The official business-profile privacy policy expressly names UpLead LLC and links its profile-removal form."
+  - guide_id: unacast
+    records: ["live:unacast-inc"]
+    rationale: "January 2026 product policy names Unacast Inc and directs device-specific location removal; customer and subsidiary scopes remain separate."
+  - guide_id: venntel
+    records: ["live:venntel-inc"]
+    rationale: "The current product policy expressly identifies Venntel Inc and its distinct location-service rights mailbox and form."
+  - guide_id: teads
+    records: ["live:teads-inc"]
+    rationale: "The advertising-user policy identifies Teads Inc, with Teads UK Limited as European controller; legacy Outbrain is explicitly separate."
+  - guide_id: outbrain
+    records: ["live:teads-holding-co"]
+    rationale: "The current Outbrain policy explicitly names Teads Holding Co formerly Outbrain Inc, with a separate regional controller and legacy-technology workflow."
+  - guide_id: telesign
+    records: ["live:telesign-corporation"]
+    rationale: "The official global service privacy notice identifies Telesign Corporation and separates its controller risk data from customer-directed processing."
+  - guide_id: tapad
+    records: ["live:tapad-inc"]
+    rationale: "The current global Graph privacy notice explicitly identifies Tapad Inc and excludes current European operations."
+  - guide_id: traackr
+    records: ["live:traackr-inc"]
+    rationale: "The dedicated influencer privacy notice explicitly identifies Traackr Inc and its corporate affiliates."
+  - guide_id: throtle
+    records: ["live:throtle-inc"]
+    rationale: "The service-data privacy policy names Throtle Inc and links the dedicated DSAR portal, distinct from browser suppression."
+  - guide_id: trestle
+    records: ["live:trestle-solutions-inc"]
+    rationale: "Current Trestle API and identity-service privacy notice names Trestle Solutions Inc as the legal provider."
+  - guide_id: amplemarket
+    records: ["live:tagis-inc"]
+    rationale: "Current Amplemarket terms explicitly identify Tagis Inc; the dedicated data broker notice governs licensed prospect records."
+  - guide_id: datalane
+    records: ["live:task-genie-inc"]
+    rationale: "The official database privacy policy footer explicitly identifies Task Genie Inc doing business as DataLane; exact rights mailbox remains unresolved."
+  - guide_id: statsocial
+    records: ["live:statsocial-inc"]
+    rationale: "Official licensed-data policy identifies StatSocial, Inc and documents active audience-database removal separately from customer CRM processing."
+  - guide_id: swoop
+    records: ["live:swoop-com-inc"]
+    rationale: "Official Swoop site identifies Swoop.com, Inc.; current policy distinguishes identifiable provider records from de-identified consumer audiences."
+  - guide_id: subgraph
+    records: ["live:subgraph-inc"]
+    rationale: "Official Subgraph Inc policy expressly identifies independent candidate-data collection and the same recruiting service in this live record."
+  - guide_id: the-swarm
+    records: ["live:swarm-holdings-inc"]
+    rationale: "Official policy explicitly identifies Swarm Holdings, Inc. as The Swarm's controller; broker-product scope remains unresolved and automation is blocked."
+  - guide_id: spokeo
+    records: ["live:spokeo", "live:spokeo-inc"]
+    rationale: "Both live records identify Spokeo, Inc.; official policy establishes the public-listing service and explicitly excludes separate ThatsThem removals."
+  - guide_id: steppingblocks
+    records: ["live:steppingblocks-inc"]
+    rationale: "Official database privacy notice identifies Steppingblocks, Inc. and confirms sale/sharing of the professional and education profiles in this record."
+  - guide_id: snovio
+    records: ["live:snovio-inc"]
+    rationale: "Official Snov.io privacy notice explicitly names Snovio Inc. and covers its prospect-sourcing, database and enrichment services."
+  - guide_id: spycloud
+    records: ["live:spycloud-inc"]
+    rationale: "Official policy explicitly names SpyCloud Inc. and addresses the same breach-derived threat intelligence service listed in this record."
+  - guide_id: similarweb
+    records: ["live:similarweb-ltd"]
+    rationale: "Official policy names Similarweb Ltd.; official Sales Intelligence FAQ confirms the contact-data product and partner-specific removal boundary."
+  - guide_id: semasio
+    records: ["live:semasio-gmbh"]
+    rationale: "Official platform policy explicitly names Semasio GmbH as EU/UK controller; US Semasio Inc. is separately identified, not silently substituted."
+  - guide_id: semantiq
+    records: ["live:semantiq-inc"]
+    rationale: "Official healthcare-platform policy names SemantIQ, Inc. and distinguishes its provider databases from de-identified patient-derived datasets."
+  - guide_id: share-local-media
+    records: ["live:share-local-media-inc"]
+    rationale: "Official policy names Share Local Media, Inc. and explicitly covers the Share Local Media and Poplar service websites."
+  - guide_id: salesql
+    records: ["live:salesql"]
+    rationale: "Official SalesQL privacy notice identifies SALESQL LTD as controller of the same professional-profile service in this live record."
+  - guide_id: sbfe
+    records: ["live:sbfe-llc"]
+    rationale: "Official SBFE pages identify SBFE, LLC and explain the same lender-supplied commercial credit exchange listed in this live record."
+  - guide_id: sabio
+    records: ["live:sabio-inc", "live:sabio-inc-2"]
+    rationale: "Both live records point to the Sabio Inc. advertising platform; current official policy names Sabio Inc. and covers App Science opt-out instructions."
+  - guide_id: scileads
+    records: ["live:scileads-ltd"]
+    rationale: "The current processing notice identifies SciLeads Limited and expressly describes licensed researcher profiles and database deletion."
+  - guide_id: salesintel
+    records: ["live:salesintel-research-inc"]
+    rationale: "The dedicated data-gathering notice names SalesIntel Research Inc and publishes professional-database matching and suppression instructions."
+  - guide_id: seamless-ai
+    records: ["live:seamless-contacts-inc"]
+    rationale: "The current policy identifies Seamless Contacts Inc and links its DataGrail privacy request center for personal directory records."
+  - guide_id: tie-revenue-roll
+    records: ["live:revenue-roll-inc"]
+    rationale: "The current Tie notice expressly names Revenue Roll Inc doing business as Tie, supporting the brand transition without inference."
+  - guide_id: rich-media
+    records: ["live:rich-media-llc"]
+    rationale: "Official policy names Rich Media LLC and describes the limited intermediary role and consumer rights portal."
+  - guide_id: rushmore-censai
+    records: ["live:rushmore-labs-llc"]
+    rationale: "CENSAI's official consumer privacy notice expressly names Rushmore Labs LLC as controller and links the Rushmore rights system."
+  - guide_id: revoptimal
+    records: ["live:revoptimal-llc"]
+    rationale: "Current global and EEA notices explicitly name RevOptimal LLC and distinguish controller-owned audience datasets from processor-only services."
+  - guide_id: revcontent
+    records: ["live:revcontent"]
+    rationale: "Official services policy names RevContent LLC and links its browser-context dependent privacy request mechanism."
+  - guide_id: revelio-labs
+    records: ["live:revelio-labs-inc"]
+    rationale: "The official notices identify Revelio Labs Inc; conflicting regional product scopes remain specifically unresolved rather than being treated as validated removal coverage."
+  - guide_id: revenuebase
+    records: ["live:revenuebase-inc"]
+    rationale: "The current professional-data privacy notice expressly identifies RevenueBase Inc and publishes its broker-specific removal checklist."
+  - guide_id: reveal-mobile
+    records: ["live:reveal-mobile-inc"]
+    rationale: "The official product privacy notice names Reveal Mobile Inc and explains device-identifier based deletion from its mobile database."
+  - guide_id: rhetorik
+    records: ["live:rhetorik-limited"]
+    rationale: "The current official policy names Rhetorik Limited within Obsidian BG Holdings LP's group and provides its product privacy request form."
+  - {"guide_id":"relpro","records":["live:relpro-inc"],"rationale":"The current privacy policy explicitly names RelPro Inc and its owning company; the official opt-out form expressly erases the RelPro database."}
+  - {"guide_id":"realsource","records":["live:realsource-inc"],"rationale":"The official About Us page names RealSource Inc, linking the marketing-data brand and policy to this registry entity."}
+  - {"guide_id":"resonate","records":["live:resonate"],"rationale":"The official product notice names Resonate Networks Inc and expressly limits its consumer-data service to the United States."}
+  - {"guide_id":"reklaim","records":["live:reklaim-ltd"],"rationale":"The current broker-specific notice names Reklaim Ltd; the old official domain redirects to the same company's new site."}
+  - guide_id: "ogury"
+    records: ["live:ogury-ltd"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "onaudience"
+    records: ["live:onaudience-ltd"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "oan"
+    records: ["live:online-advertising-network-sp-z-o-o"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "adagio"
+    records: ["live:onfocus-sas"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "mixrank"
+    records: ["live:online-media-group-inc","live:online-media-group-inc-2"]
+    rationale: "The current MixRank product policy explicitly names Online Media Group, Inc. doing business as MixRank; both live records name the same corporation, while only the verified MixRank domain is mapped."
+  - guide_id: "the-org"
+    records: ["live:orgio-inc"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "outlogic"
+    records: ["live:outlogic-llc"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "outward-media"
+    records: ["live:outward-media-inc"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "openx"
+    records: ["live:openx-technologies-inc"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "opensend"
+    records: ["live:opensend-inc"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "optable-us"
+    records: ["live:optable-technologies-us-inc"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "onpoint-data-strategy"
+    records: ["live:onpoint-data-strategy"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "path2response"
+    records: ["live:path2response-llc"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "place-exchange"
+    records: ["live:place-exchange-inc"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "plunge-digital"
+    records: ["live:plunge-llc"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "pmg"
+    records: ["live:pmg-worldwide-llc"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "pipl"
+    records: ["live:pipl-inc"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "pacificeast"
+    records: ["live:pacific-east-research-inc"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "podscribe"
+    records: ["live:podible-inc"]
+    rationale: "Podscribe's published terms expressly name Podible, Inc. as the company operating the Podscribe service."
+  - guide_id: "possiblenow"
+    records: ["live:possiblenow-inc"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "postie"
+    records: ["live:postie-inc"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "postpilot"
+    records: ["live:postpilot-inc"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "audigent"
+    records: ["live:predictive-pop-inc"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "predactiv-sharethis"
+    records: ["live:predactiv"]
+    rationale: "The Predactiv notice explicitly directs Data Solutions users to ShareThis's product notice and controls, and ShareThis identifies itself as a division of Predactiv, Inc."
+  - guide_id: "preqin"
+    records: ["live:preqin-limited"]
+    rationale: "Preqin's official service terms name Preqin Ltd, registered number 04456744, and the site privacy notice specifically describes Preqin database sales."
+  - guide_id: "prodpro"
+    records: ["live:prodpro-inc"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "propertyreach-leadsherpa"
+    records: ["live:property-reach-l-p","live:property-reach-lp"]
+    rationale: "LeadSherpa's policy explicitly identifies PropertyReach, LP as operator and links the PropertyReach rights portal; both live rows name that same legal partnership."
+  - guide_id: "propertyradar"
+    records: ["live:propertyradar-inc"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "bigdbm"
+    records: ["live:publicnsa-llc"]
+    rationale: "The official BIGDBM notice explicitly names PublicNSA LLC dba BIGDBM as its operator."
+  - guide_id: "pulsepoint"
+    records: ["live:pulsepoint-inc"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "purecars"
+    records: ["live:purecars-technologies-llc"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "quadrant"
+    records: ["live:quadrant-global-pte-ltd"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "quad-graphics"
+    records: ["live:quad-graphics-inc"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "qualfon"
+    records: ["live:qualfon"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: "quorum"
+    records: ["live:quorum-data-inc"]
+    rationale: "The reviewed official product privacy notice names this legal controller and its product brand, supporting the association with the live registry record."
+  - guide_id: rampedup
+    records: ["live:rampedup-llc"]
+    rationale: "The current official business-contact policy names RampedUp LLC and its online privacy portal."
+  - guide_id: raycdp
+    records: ["live:ray-cdp-inc"]
+    rationale: "The product privacy notice on Ray Insights explicitly identifies RayCDP Inc as the marketing-data controller and links its country-specific rights portal."
+  - guide_id: rgr-marketing
+    records: ["live:reallygreatrate-inc"]
+    rationale: "The current official policy expressly identifies ReallyGreatRate Inc doing business as RGR Marketing; consumer-lead scope remains unresolved."

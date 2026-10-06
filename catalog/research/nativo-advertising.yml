@@ -1,0 +1,53 @@
+schema_version: 1
+brokers:
+  - id: nativo-advertising
+    name: Nativo / Life360 Ads
+    match_domains: [nativo.com]
+    identity:
+      legal_name: Life360, Inc. (current Nativo consumer advertising provider)
+      brands: [Nativo, Life360 Ads Featuring Nativo]
+      parent: Life360, Inc.
+      official_domains: [nativo.com, ads.life360.com]
+    relevance:
+      regions: [EEA, United Kingdom, Switzerland, United States]
+      category: advertising
+      data_categories: [Cookie IDs, Mobile advertising IDs, Advertising events, Inferred interests]
+      note: Current consumer advertising policy, not the separate website/customer-account notice.
+    removal:
+      method: form
+      destination: https://ads.life360.com/legal/adchoices
+      alternatives: [privacy-nativo@life360.com, https://submit-irm.trustarc.com/services/validation/e1b081d3-40df-4137-add0-7e34cf4d13b2]
+      steps:
+        - Open AdChoices in each browser you use and choose Opt out; check the displayed result personally.
+        - Repeat for other browsers/devices. Mobile and connected-TV choices use their device settings; older mobile-menu labels may differ.
+        - For deletion instead, contact the current privacy mailbox or linked rights form with the relevant cookie/mobile ID. Name alone may not match.
+    required_information:
+      fields: [matching_browser_or_device]
+      certainty: not_fully_specified
+      verification: Browser opt-out has no identity form; deletion requires separate identifier matching. TrustArc form fields and submission untested.
+    coverage:
+      effect: suppression
+      includes: Targeted-advertising preference for the browser/device used.
+      excludes: Full deletion, Life360/Tile/Jiobit app accounts, client-controlled records and other devices.
+    automation:
+      mode: manual
+      reason: Must use the person's actual browser; this research session must not set their privacy choice.
+    evidence:
+      - url: https://ads.life360.com/legal/interest-based-ads
+        checked_on: '2026-10-01'
+        published: '2026-04-16'
+        excerpt: privacy-nativo@life360.com
+        supports: [current_controller, consumer_scope, identifiers, deletion_alternative, exclusions]
+      - url: https://ads.life360.com/legal/adchoices
+        checked_on: '2026-10-01'
+        excerpt: Opt out
+        supports: [browser_optout_control, device_specific_choice]
+      - url: https://www.sec.gov/Archives/edgar/data/1581760/000119312526001632/d81240d8k.htm
+        checked_on: '2026-10-01'
+        published: '2026-01-05'
+        excerpt: completed its previously announced acquisition
+        supports: [Nativo_Inc_acquisition_closed_2026_01_02]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Actual device preference and deletion fulfilment untested., Legacy record migration and independent recipient effects not established.]

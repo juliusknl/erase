@@ -1,0 +1,13 @@
+schema_version: 1
+assessments:
+  - record: community:rakutenmarketing
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: The current Rakuten Advertising form and US LLC controller are documented in rakuten-advertising-identifiers. The community record names Rakuten Marketing Europe Ltd and an older mailbox; current brand instructions do not by themselves establish that entity's legal succession or historical-record coverage. Advertising customers remain controllers of their own records.
+    evidence:
+      - url: https://rakutenadvertising.com/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2025-08-15'
+        excerpt: Rakuten Marketing LLC
+        supports: [current_controller, unresolved_historical_entity]
+    unresolved: [Resolve the status of Rakuten Marketing Europe Ltd and current controller of its historical records.]

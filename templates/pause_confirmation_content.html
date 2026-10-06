@@ -1,0 +1,8 @@
+<h2 id="pause-title">Pause automatic emails?</h2>
+<p id="pause-explanation">Requests and follow-ups will pause until you resume; we’ll keep checking replies.</p>
+<form method="post" action="/campaign/pause">
+  <input type="hidden" name="csrf" value="{{ csrf }}">
+  <input type="hidden" name="confirmed" value="true">
+  <input type="hidden" name="return_to" value="{{ return_to | default('/dashboard') }}">
+  <div class="button-row"><a class="button secondary" data-cancel-pause href="/dashboard">Cancel</a><button>Pause</button></div>
+</form>

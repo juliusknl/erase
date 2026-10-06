@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: viant
+    records: [community:adelphic]
+    rationale: The September 23 2026 official Viant platform policy names Adelphic LLC among its covered US entities and expressly identifies the Adelphic-domain advertising cookie. This maps only Viant controller platform data; website accounts, independent clients and other products remain excluded.

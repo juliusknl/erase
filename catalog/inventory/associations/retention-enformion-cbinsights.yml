@@ -1,0 +1,11 @@
+schema_version: 1
+associations:
+  - guide_id: retention-rb2b-network
+    records: [live:getemails-llc, live:getemails-llc-2]
+    rationale: Both official brand policies name GetEmails LLC and point to the same Retention app opt-out, establishing controller and route continuity without multiplying broker count.
+  - guide_id: enformion-data-products
+    records: [live:enformion-llc, live:enformion-llc-2]
+    rationale: The official Enformion LLC notice and portal explicitly cover Enformion, Tracers and Endato. Duplicate registry-year rows are associated without assuming erasure of regulated source records.
+  - guide_id: cbinsights-professional
+    records: [live:cb-information-services-inc]
+    rationale: The current July 2026 privacy statement identifies CB Information Services Inc and documents external professional data plus an email rights channel.

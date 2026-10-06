@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: unacast
+    records: ["community:gravyanalytics"]
+    rationale: September 2026 Unacast policy names Gravy Analytics Inc. dba Unacast, and the legacy Gravy rights page links directly to Unacast's current policy and removal form. Venntel and independent customers remain separate.

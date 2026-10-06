@@ -1,0 +1,156 @@
+schema_version: 1
+brokers:
+  - id: jdpower-consumer-research
+    name: J.D. Power consumer research
+    match_domains: [jdpower.com]
+    identity:
+      legal_name: J.D. Power
+      brands: [J.D. Power]
+      parent: null
+      official_domains: [jdpower.com]
+    relevance:
+      regions: [Europe, United States, Other regions subject to the applicable notice]
+      category: consumer_marketing
+      data_categories: [Survey responses, Vehicle transactions, Consumer contacts, Advertising identifiers, Inferences]
+      note: Client-directed research has separate controller obligations; affiliation does not prove group-wide deletion.
+    removal:
+      method: form
+      destination: https://www.jdpower.com/privacy/dsar
+      alternatives: [https://www.jdpower.com/privacy/europe]
+      steps:
+        - Select the relationship that actually applies; separate links cover surveys, car shopping, both, neither, and business contacts.
+        - The neither branch asks for name, email, ZIP, requested right and self/agent status. Review its declaration under penalty of perjury personally; the app must not accept it for you.
+        - For Europe, the linked supplement also provides a DPO correspondence route. Identify the client if asking about client-directed research.
+        - Complete requested verification and retain the response. Survey do-not-contact, browser advertising preferences and deletion are separate actions.
+    required_information:
+      fields: [relationship, full_name, email, postal_code, requested_right, self_or_agent, personal_declaration]
+      certainty: not_fully_specified
+      verification: Public neither-relationship form configuration inspected; other branches, runtime verification and non-US ZIP acceptance untested.
+    coverage:
+      effect: deletion_request
+      includes: Matched J.D. Power controller records within the selected request scope.
+      excludes: Independent client records, every affiliate by default and inferred deletion from survey unsubscribe.
+    automation:
+      mode: manual
+      reason: Relationship selection, regional matching and personal declaration require review.
+    evidence:
+      - url: https://www.jdpower.com/privacy
+        checked_on: '2026-10-01'
+        published: '2024-12-18'
+        excerpt: J.D. Power
+        supports: [controller_identity, data_scope, rights_portal, controller_boundaries]
+      - url: https://www.jdpower.com/privacy/dsar
+        checked_on: '2026-10-01'
+        excerpt: None of the Above Apply
+        supports: [relationship_specific_routes, separate_survey_suppression]
+      - url: https://www.jdpower.com/privacy/europe
+        checked_on: '2026-10-01'
+        published: '2020-01-01'
+        excerpt: please provide the name of the J.D. Power client
+        supports: [Europe_supplement_still_linked, DPO_route, client_context]
+      - url: https://privacyportal.onetrust.com/webform/5e27ce89-3714-4976-8df7-1d1560e32aa1/89c45643-2c95-4bb4-9641-a7fc5ce51130
+        checked_on: '2026-10-01'
+        excerpt: Under penalty of perjury
+        supports: [public_matching_fields, personal_attestation_not_automatable]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Other form branches and runtime verification untested., Europe DPO email was obscured in retrieval and is not guessed., Parent and comparable scale unreviewed.]
+  - id: infutor-lead-intelligence
+    name: InfutorData consumer and lead intelligence
+    match_domains: [infutor.com]
+    identity:
+      legal_name: Lead Intelligence Inc dba InfutorData
+      brands: [InfutorData, Infutor, LeadiD]
+      parent: null
+      official_domains: [infutor.com]
+    relevance:
+      regions: [United States — nationwide opt-out and applicable state rights]
+      category: consumer_marketing
+      data_categories: [Consumer contacts, Demographics, Interests, Identity graphs, Lead events, Predictive insights]
+      note: Current notice names Lead Intelligence; do not route every Verisk product to this entity.
+    removal:
+      method: form
+      destination: https://infutor.com/privacy-center/
+      alternatives: [https://infutor.com/privacy-policy/]
+      steps:
+        - Open Your Privacy Choices from the official center to reach its linked Individual Privacy Rights Form.
+        - Choose nationwide opt-out or an applicable state right using your real residence. European applicability is not established by this US notice.
+        - Review matching fields and complete any deletion identity verification personally; the policy says opt-out does not require verification.
+        - Requests for customer-controlled TCPA Guardian records go to that customer. Cookie preferences do not replace a consumer-data request.
+    required_information:
+      fields: [applicable_residence, requested_right, matching_identifiers_requested_by_form]
+      certainty: not_fully_specified
+      verification: Current policy describes identity checks for certain rights; linked Securiti page returned only a JavaScript shell, so fields are uninspected.
+    coverage:
+      effect: deletion_request
+      includes: Matched Infutor controller Data Services or Platform Services records under applicable rights; nationwide US opt-out is also offered.
+      excludes: Customer-controlled records, cookie-only preferences and unestablished European deletion eligibility.
+    automation:
+      mode: manual
+      reason: Residence and form matching unconfirmed; no guessed email or generic Verisk workflow.
+    evidence:
+      - url: https://infutor.com/privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2026-08-05'
+        excerpt: Lead Intelligence Inc dba InfutorData
+        supports: [exact_identity, controller_products, customer_processor_boundary, state_rights, verification]
+      - url: https://infutor.com/privacy-center/
+        checked_on: '2026-10-01'
+        excerpt: on a nationwide basis the right to opt-out
+        supports: [US_nationwide_opt_out, official_form_link]
+      - url: https://privacy-central.securiti.ai/
+        checked_on: '2026-10-01'
+        excerpt: doesn't work properly without JavaScript enabled
+        supports: [retrieved_shell_not_matching_fields_or_submission]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Form fields and fulfilment untested., European rights route unestablished., Current parent and comparable scale unreviewed.]
+  - id: monocl-expert-profiles
+    name: Monocl medical and scientific expert profiles
+    match_domains: [monocl.com]
+    identity:
+      legal_name: Monocl AB
+      brands: [Monocl Expert]
+      parent: Definitive Healthcare LLC
+      official_domains: [monocl.com, privacy.monocl.com]
+    relevance:
+      regions: [Europe, United Kingdom, United States, China]
+      category: professional
+      data_categories: [Professional contacts, Publications, Affiliations, Research collaborations, Expertise inferences]
+      note: Scientific and medical expert profiles, not patient health records or all Definitive products.
+    removal:
+      method: manual
+      destination: https://privacy.monocl.com/expert-privacy-policy/
+      alternatives: [privacy@monocl.com, https://preferences.definitivehc.com/privacy, https://preferences.definitivehc.com/form/opt_out]
+      steps:
+        - Outside the US, contact privacy@monocl.com with the relevant expert-profile context to ask for source details and removal support.
+        - The FAQ directs people to the originating databases; review consequences before removing publications or professional records there.
+        - US residents with applicable rights can use the designated Definitive privacy or opt-out portal, specifying Monocl. Its matching fields remain uninspected.
+        - Monocl asserts a Swedish publishing-certificate exemption. This records the company's position, not an independent legal conclusion or proof that every European request must fail.
+    required_information:
+      fields: [expert_profile_context, residence, requested_action]
+      certainty: not_fully_specified
+      verification: Policy allows further identity checks; no complete initial matching checklist or tested outcome.
+    coverage:
+      effect: access_then_review
+      includes: Monocl source/removal support and separately applicable US portal rights.
+      excludes: Guaranteed direct European erasure, original research sources and customer-held copies.
+    automation:
+      mode: manual
+      reason: Source-dependent removal and regional policy require contextual review, not a generic deletion email.
+    evidence:
+      - url: https://privacy.monocl.com/expert-privacy-policy/
+        checked_on: '2026-10-01'
+        published: '2026-04-24'
+        excerpt: Monocl AB a subsidiary of Definitive Healthcare LLC
+        supports: [exact_entity, expert_scope, company_exemption_claim, regional_contacts, US_portals]
+      - url: https://privacy.monocl.com/privacy-faq/
+        checked_on: '2026-10-01'
+        excerpt: obtain a list of sources
+        supports: [source_dependent_removal_support_not_direct_erasure_guarantee]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Source-specific consequences and actual removal untested., Portal matching fields uninspected., Legal exemption claim not independently adjudicated., Comparable scale unreviewed.]

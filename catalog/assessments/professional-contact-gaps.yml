@@ -1,0 +1,44 @@
+schema_version: 1
+assessments:
+  - record: community:sales-rocks-bv
+    disposition: unresolved
+    checked_on: '2026-09-30'
+    rationale: Official homepage states Sales.Rocks stopped operating on 1 January 2026 and mentions email for outstanding matters but publishes no working contact link in the retrieved page. Do not keep it as an ordinary active sending target or interpret shutdown as deletion of old records.
+    evidence:
+      - url: https://sales.rocks/
+        checked_on: '2026-09-30'
+        excerpt: Sales.Rocks has ceased operations
+        supports: [closure_notice, current_contact_gap]
+    unresolved: [Identify the controller/contact for retained or transferred legacy data and its current rights process.]
+  - record: community:firmenhai
+    disposition: unresolved
+    checked_on: '2026-09-30'
+    rationale: Current imprint identifies Talenthai e.U. and office@firmenhai.at; product sells Austrian business addresses. The retrieved February 2020 privacy notice is framed around website visitors and does not establish the supplied directory's personal-record workflow. General website rights alone are not a verified database-removal recipe.
+    evidence:
+      - url: https://firmenhai.at/impressum/
+        checked_on: '2026-09-30'
+        excerpt: Adressverlage und Direktmarketingunternehmen
+        supports: [business_identity, public_contact]
+      - url: https://firmenhai.at/datenschutzerklaerung/
+        checked_on: '2026-09-30'
+        excerpt: als Besucher dieser Webseite
+        supports: [website_notice_scope]
+    unresolved: [Confirm directory-controller privacy instructions and personal-record matching requirements.]
+  - record: community:useartemis
+    disposition: unresolved
+    checked_on: '2026-09-30'
+    rationale: Current product enriches contacts from multiple vendors, while the notice describes prospect processing under client instructions and promises verified recipient deletion. Terms publish hello@useartemis.co but do not establish a complete legal entity or independent enrichment-database deletion scope. Do not infer source-vendor deletion from its client-list process.
+    evidence:
+      - url: https://useartemis.co/
+        checked_on: '2026-09-30'
+        excerpt: We combine contact info from 15+ premium vendors.
+        supports: [current_enrichment_product]
+      - url: https://useartemis.co/privacy
+        checked_on: '2026-09-30'
+        excerpt: useArtemis is acting only as a data processor
+        supports: [client_list_scope, recipient_verification]
+      - url: https://useartemis.co/terms
+        checked_on: '2026-09-30'
+        excerpt: hello@useartemis.co
+        supports: [general_contact_not_complete_controller_identity]
+    unresolved: [Establish legal controller and rights scope for vendor-derived enrichment data., Confirm identifier checklist and current designated removal route.]

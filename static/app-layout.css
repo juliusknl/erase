@@ -1,0 +1,66 @@
+/* Shared navigation and compact home layout. No changes to workflow controls. */
+.content-shell { margin-left: 0; min-height: auto; }
+main { padding-top: 24px; }
+.app-navigation { display: flex; align-items: center; justify-content: space-between; gap: 24px; max-width: 1320px; margin: auto; padding: 24px 46px 0; }
+.app-navigation form { margin: 0; }
+.app-navigation .text-button { font-size: 13px; color: var(--muted); }
+.navigation-pill { display: flex; align-items: center; gap: 5px; padding: 5px; border-radius: 999px; background: #203c32; }
+.navigation-pill .brand { padding: 0; }
+.navigation-pill .brand-mark { width: 44px; height: 44px; border-radius: 50%; transform: none; font-size: 19px; }
+.navigation-pill .primary-nav { display: flex; gap: 3px; margin: 0; }
+.navigation-pill .primary-nav a { border-radius: 999px; padding: 11px 23px; min-height: 44px; font-size: 14px; }
+.navigation-pill .primary-nav a.active { background: #d6eea5; color: #203c32; box-shadow: inset 0 0 0 2px #203c32, 0 0 0 1px #d6eea5; }
+.navigation-pill .nav-icon { display: none; }
+.navigation-pill a:focus-visible { outline: 2px solid #fffdf7; outline-offset: 2px; }
+.design-preview-link { font-size: 13px; color: var(--muted); }
+.campaign-card.automation-strip { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 18px; padding: 13px 18px; min-height: 0; margin-bottom: 22px; background: #e9efe4; border: 1px solid #cbd8c3; color: var(--ink); overflow: visible; }
+.campaign-card.automation-strip::after { display: none; }
+.automation-state { display: flex; align-items: center; gap: 10px; }
+.sending-activity { flex-basis: 100%; display: grid; gap: 5px; min-width: 0; font-size: 13px; line-height: 1.5; color: var(--muted); overflow-wrap: anywhere; }
+.sending-feed-label { font-size: 11px; font-weight: 600; }
+.sending-feed { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.sending-feed li { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 12px; align-items: baseline; }
+.sending-feed time { font-size: 12px; font-variant-numeric: tabular-nums; }
+.sending-feed strong { color: var(--ink); font-weight: 600; }
+.send-event-message { margin-left: 9px; }
+.sending-feed .new-send { animation: send-arrives 220ms ease-out; }
+#sending-next { font-size: 12px; }
+@keyframes send-arrives { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .sending-feed .new-send { animation: none; } }
+@media (max-width: 480px) { .sending-feed li { grid-template-columns: 75px minmax(0, 1fr); gap: 8px; } }
+.automation-state strong { font-size: 15px; }
+.automation-strip .signal-ring { flex: 0 0 8px; width: 8px; height: 8px; background: #218260; box-shadow: none; animation: none; }
+.automation-strip[data-state="stopped"] .signal-ring, .automation-strip[data-state="paused"] .signal-ring { background: #6c756e; }
+.automation-strip[data-state="blocked"] .signal-ring { background: #a8650c; }
+.automation-strip .automation-controls { margin: 0; gap: 8px; }
+.automation-strip .automation-controls button, .automation-strip .automation-controls .button { padding: 7px 12px; min-width: 0; min-height: 34px; font-size: 13px; background: transparent; border: 1px solid #9bac95; }
+.automation-strip .automation-controls button:hover, .automation-strip .automation-controls .button:hover { background: #dce7d5; }
+.attention-count { margin-left: auto; font-size: 14px; font-weight: 600; padding: 7px 0; }
+.attention-count[data-needed="false"] { color: var(--muted); font-weight: 400; }
+.automation-strip #automation-instruction { flex-basis: 100%; margin: 0; padding-top: 10px; border-top: 1px solid #cbd8c3; font-size: 14px; color: var(--ink); }
+.request-filters { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 18px; }
+.request-filters a { padding: 8px 15px; border-radius: 999px; color: var(--muted); font-size: 14px; font-weight: 600; }
+.request-filters a:hover { background: #e9efe4; text-decoration: none; }
+.request-filters a[aria-current="page"] { background: #203c32; color: #fffdf7; }
+.mail-matching-notice { padding: 12px 16px; border: 1px solid var(--line); border-radius: 6px; font-size: 14px; }
+@media (min-width: 761px) {
+  .mobile-header, .mobile-nav { display: none; }
+}
+@media (max-width: 760px) {
+  .app-navigation { display: none; }
+  .mobile-header { background: transparent; color: var(--ink); gap: 10px; }
+  .mobile-header .brand { color: var(--ink); margin-right: auto; }
+  .mobile-header form { margin: 0; }
+  .mobile-header .text-button { font-size: 13px; }
+  .mobile-nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); left: 50%; right: auto; bottom: max(12px, env(safe-area-inset-bottom)); width: min(360px, calc(100% - 24px)); transform: translateX(-50%); padding: 5px; border: 0; border-radius: 999px; background: #203c32; box-shadow: 0 4px 20px #15281e30; gap: 3px; }
+  .mobile-nav a { border-radius: 999px; min-height: 44px; font-size: 13px; color: #c9d5c6; }
+  .mobile-nav a span { display: none; }
+  .mobile-nav a.active { color: #203c32; background: #d6eea5; box-shadow: inset 0 0 0 2px #203c32, 0 0 0 1px #d6eea5; }
+  main { padding-bottom: 100px; }
+  .campaign-card.automation-strip { padding: 12px 14px; gap: 8px 12px; }
+}
+@media (max-width: 480px) {
+  .attention-count { flex-basis: 100%; margin-left: 18px; padding: 0; }
+  .request-filters { gap: 3px; }
+  .request-filters a { font-size: 13px; padding: 8px 11px; }
+}

@@ -1,0 +1,17 @@
+schema_version: 1
+assessments:
+  - record: live:complete-medical-lists-inc
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: Current policy names Complete Medical Lists LLC but the same page and request-form footer name Inc, matching the inventory. The policy also uses Complete Mailing Lists contact details. A genuine state request form exists with name, birth year, postal address and email matching, but exact entity continuity and shared-controller coverage are not established. Non-US collection is denied by the company, not independently proven absent.
+    evidence:
+      - url: https://www.completemedicallists.com/privacy.php
+        checked_on: '2026-10-01'
+        published: '2025-09-12'
+        excerpt: Complete Medical Lists, LLC
+        supports: [policy_identity_conflicts_with_Inc_footer, US_scope_claim]
+      - url: https://www.completemedicallists.com/ccpa.php
+        checked_on: '2026-10-01'
+        excerpt: Complete Medical Lists, Inc.
+        supports: [footer_identity, state_rights_form, birth_year_postal_matching, agent_authorization]
+    unresolved: [Resolve Inc versus LLC controller identity and any shared Mailing Lists relationship., Test regional matching and verification without inferring European eligibility.]

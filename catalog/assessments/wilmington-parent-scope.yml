@@ -1,0 +1,17 @@
+schema_version: 1
+assessments:
+  - record: community:wilmingtonplc
+    disposition: out_of_scope
+    checked_on: '2026-09-30'
+    rationale: Exclude this parent-company corporate-privacy route from the default independent-broker campaign. Its August notice concerns business relationships, accounts, marketing, employees and investors; product businesses have separate notices, and the parent records its European healthcare-information divestitures. This is not a finding that the group holds no personal data. Corporate rights remain available at dataprotection@wilmingtonplc.com; sold or separately controlled databases require their own current routes.
+    evidence:
+      - url: https://www.wilmingtonplc.com/privacy-policy/
+        checked_on: '2026-09-30'
+        published: '2026-08-27'
+        excerpt: Further information on this process is available on each businesses privacy policy
+        supports: [corporate_scope, separate_business_notices, corporate_rights_contact]
+      - url: https://www.wilmingtonplc.com/about-us/our-history/
+        checked_on: '2026-09-30'
+        excerpt: sale of Wilmington’s European healthcare information businesses
+        supports: [divestitures, no_blanket_historic_database_coverage]
+    unresolved: []

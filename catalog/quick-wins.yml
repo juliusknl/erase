@@ -1,0 +1,434 @@
+checked_at: '2026-09-28'
+items:
+  - id: caci-uk
+    guide_id: caci-uk
+    email_draft: |
+      Hello CACI Compliance Team,
+
+      Please stop processing my personal data for direct marketing and add my matching record to your suppression list so it is not reintroduced.
+
+      Name: [your full name]
+      Matching postal address: [the address associated with your record, if you choose to share it]
+
+      Please confirm the scope and tell me if any further matching information is necessary. Please do not remove the suppression record that prevents further marketing.
+  - id: numberly-personal-request
+    guide_id: numberly
+    email_draft: |
+      Hello Numberly Privacy Team,
+
+      I request deletion and objection to direct-marketing use of my matched Numberly-controlled personal data.
+
+      Relevant campaign or identifier: [describe the Numberly-related record you want checked]
+
+      Before I send identity documents, please explain the minimum verification necessary and a secure way to complete it. If another company controls the data, please identify the appropriate contact.
+  - id: weborama-identifiers
+    guide_id: weborama
+    email_draft: |
+      Hello Weborama Privacy Team,
+
+      Please delete the records associated with the following Weborama advertising identifiers and stop using them for advertising profiling.
+
+      Identifiers from your official cookie-info pages: [paste the relevant identifiers here]
+
+      Please confirm which identifiers were checked, what was removed and whether anything is retained. This request concerns my own browser data.
+  - id: zeotap-data-identifiers
+    guide_id: zeotap-data
+    email_draft: |
+      Hello Roqad Privacy Team,
+
+      I request deletion of my Zeotap Data records and withdraw consent to advertising processing associated with the following identifiers.
+
+      My relevant advertising or cookie identifiers: [paste identifiers you choose to provide]
+
+      Please confirm the scope of the result and explain any additional verification needed. This request concerns Zeotap Data, not the separate Zeotap software service.
+  - {id: acxiom-germany, guide_id: acxiom-de}
+  - {id: epsilon-europe, guide_id: epsilon-europe-digital}
+  - {id: epsilon-north-america, guide_id: epsilon-north-america}
+  - {id: experian-us-marketing, guide_id: experian-marketing-us}
+  - {id: claritas-us, guide_id: claritas-us}
+  - {id: transunion-us-privacy, guide_id: transunion-us}
+  - {id: eyeota, guide_id: eyeota}
+  - {id: quantcast, guide_id: quantcast-services}
+  - {id: liveramp-uk, guide_id: liveramp-uk}
+  - {id: whitepages, guide_id: whitepages}
+  - {id: spokeo, guide_id: spokeo}
+  - {id: peopleconnect, guide_id: peopleconnect-suppression}
+  - {id: directory-192-uk, guide_id: directory-192-uk}
+  - {id: truepeoplesearch, guide_id: truepeoplesearch-public}
+  - {id: fastpeoplesearch-family, guide_id: fastpeoplesearch-family}
+  - {id: familytreenow, guide_id: familytreenow-public}
+  - {id: peoplefinders, guide_id: peoplefinders-public}
+  - {id: thatsthem, guide_id: thatsthem-public}
+  - id: registry-intent-iq-llc
+    guide_id: registry-intent-iq-llc
+  - id: registry-lead411-corporation
+    guide_id: registry-lead411-corporation
+  - id: matchbook-device-data
+    guide_id: matchbook-device-data
+  - id: fraiser-consumer-data
+    guide_id: fraiser-consumer-data
+  - id: registry-grin-technologies-inc
+    guide_id: registry-grin-technologies-inc
+  - id: hireez-talent-database
+    guide_id: hireez-talent-database
+  - id: mediavine-reader-advertising
+    guide_id: mediavine-reader-advertising
+  - id: besurance-his-insurance
+    guide_id: besurance-his-insurance
+  - id: intrum-information-services-de
+    guide_id: intrum-information-services-de
+  - id: belardiwong-regional-request
+    guide_id: belardiwong-regional-request
+  - id: crosspixel-browser-preferences
+    guide_id: crosspixel-browser-preferences
+  - id: dataline-consumer-marketing
+    guide_id: dataline-consumer-marketing
+  - id: dataman-consumer-marketing
+    guide_id: dataman-consumer-marketing
+  - id: agr-consumer-marketing
+    guide_id: agr-consumer-marketing
+  - id: datasys-consumer-records
+    guide_id: datasys-consumer-records
+  - id: datafy-device-location
+    guide_id: datafy-device-location
+  - id: civis-analytics-consumer
+    guide_id: civis-analytics-consumer
+  - id: cybba-marketing-services
+    guide_id: cybba-marketing-services
+  - id: skimlinks-commerce-cookies
+    guide_id: skimlinks-commerce-cookies
+  - id: unity-player-advertising
+    guide_id: unity-player-advertising
+  - id: roku-europe-consumer
+    guide_id: roku-europe-consumer
+  - id: iqm-advertising-identifiers
+    guide_id: iqm-advertising-identifiers
+  - id: yoc-visx-browser
+    guide_id: yoc-visx-browser
+  - id: qdivision-browser-advertising
+    guide_id: qdivision-browser-advertising
+  - id: infotracer-records
+    guide_id: infotracer-records
+  - id: recordsfinder-records
+    guide_id: recordsfinder-records
+  - id: kids-live-safe-records
+    guide_id: kids-live-safe-records
+  - id: quick-public-records
+    guide_id: quick-public-records
+  - id: blackpearl-intent-data
+    guide_id: blackpearl-intent-data
+  - id: modigie-professional-validation
+    guide_id: modigie-professional-validation
+  - id: redidata-marketing-lists
+    guide_id: redidata-marketing-lists
+  - id: complete-mailing-lists
+    guide_id: complete-mailing-lists
+  - id: jdpower-consumer-research
+    guide_id: jdpower-consumer-research
+  - id: infutor-lead-intelligence
+    guide_id: infutor-lead-intelligence
+  - id: iqvia-digital-advertising
+    guide_id: iqvia-digital-advertising
+  - id: i360-consumer-political
+    guide_id: i360-consumer-political
+  - id: lightbox-property-professional
+    guide_id: lightbox-property-professional
+  - id: lightcast-professional
+    guide_id: lightcast-professional
+  - id: nativo-advertising
+    guide_id: nativo-advertising
+  - id: altair-consumer-marketing
+    guide_id: altair-consumer-marketing
+  - id: perion-high-impact
+    guide_id: perion-high-impact
+  - id: rakuten-advertising-identifiers
+    guide_id: rakuten-advertising-identifiers
+  - id: simplifi-advertising
+    guide_id: simplifi-advertising
+  - id: adagio
+    guide_id: adagio
+  - id: mintegral-mobile
+    guide_id: mintegral-mobile
+  - id: kupona-retargeting
+    guide_id: kupona-retargeting
+  - id: nexxen-advertising
+    guide_id: nexxen-advertising
+  - id: clickagy-browser
+    guide_id: clickagy-browser
+  - id: costar-professional-property
+    name: CoStar property-contact request
+    description: Request removal of matched CoStar professional/property-contact data.
+    url: https://privacy.costar.com/
+    source: https://www.costar.com/en-gb/gbr/about/privacy-notice
+    checked_at: '2026-10-01'
+    domains: [costar.com]
+    scope: CoStar product records only, not every group brand or independent recipient; avoid closing a service account unintentionally.
+    fields: [email, full_name, residence, brand, request_type, postal_address, phone]
+    requirements_complete: false
+    regions: [EEA, United Kingdom, United States, Canada, Australia, New Zealand]
+    steps:
+      - Verify your matching email first, then select your actual residence, the CoStar brand and one request type.
+      - Review the requested address and phone matching details personally. Public instructions describe these fields; conditional runtime behavior was not tested after a direct HTTP 403.
+      - Submit separate requests for other brands or request types where needed; this checklist covers only CoStar professional/property-contact records.
+      - Keep confirmation and complete further verification before marking your own task complete. No broker deletion is inferred from checking this off.
+    verification: Public portal instructions inspected through web retrieval; actual email verification, field conditions and submission untested.
+  - id: gumgum-advertising
+    guide_id: gumgum-advertising
+  - id: sovrn-advertising
+    name: Sovrn device privacy choices
+    description: Request deletion of matched reader data or set device-specific advertising preferences.
+    url: https://www.sovrn.com/privacy-policy/policy-center/
+    source: https://www.sovrn.com/privacy-policy/policy-center/
+    checked_at: '2026-10-01'
+    domains: [sovrn.com]
+    scope: Matched Sovrn controller data only; publisher-controlled records and Commerce browser preferences are separate.
+    fields: [matching_browser_or_device_identifier, requested_right]
+    requirements_complete: false
+    regions: [EEA, United Kingdom, Switzerland, United States]
+    steps:
+      - Open the Privacy Center and choose Submit a data rights request for deletion, or the separate Opt-Out Rights link for advertising suppression.
+      - Use the relevant browser and provide only the identifiers needed for your request. Complete any verification yourself.
+      - Commerce tracking has a separate opt-out cookie; clearing cookies or changing browser requires another opt-out.
+      - Keep the result and distinguish deletion from suppression or a referral to the publisher that controls the records.
+    verification: Portal fields and later identity verification untested after HTTP 403. Public policy documents the links and device-specific scope.
+  - id: nielsen-marketing-cloud
+    guide_id: nielsen-marketing-cloud
+  - id: neustar-european-privacy
+    guide_id: neustar-european-privacy
+  - id: saz-swiss-addresses
+    guide_id: saz-swiss-addresses
+  - id: dtm-private-directory
+    guide_id: dtm-private-directory
+  - id: retention-rb2b
+    guide_id: retention-rb2b-network
+  - id: enformion
+    guide_id: enformion-data-products
+  - id: media-net
+    guide_id: media-net-platform
+  - id: mobilefuse
+    guide_id: mobilefuse-platform
+  - id: cadent
+    guide_id: cadent-household-platform
+  - id: datonics
+    name: Datonics email and device choices
+    description: Request deletion or opt-out separately for the identifiers you use.
+    url: https://www.datonics.com/privacy/privacy-choices
+    source: https://www.datonics.com/privacy/privacy-choices
+    checked_at: '2026-10-01'
+    domains: [datonics.com]
+    scope: Covers only the supplied email, mobile advertising ID or browser. Other identifiers and independent suppliers are separate.
+    fields: [email, residence, request_type, personal_accuracy_declaration]
+    requirements_complete: false
+    regions: [EEA, UK, Switzerland, US, Other jurisdictions]
+    steps:
+      - Choose the relevant email, browser or mobile-data section; use each browser where you want its cookies covered.
+      - Provide email, actual residence and request type. Choose Other for an unlisted country; mobile ID is optional for non-device requests.
+      - Review the personal accuracy declaration yourself. Do not assert agent authority, enable tracking or install an unfamiliar identifier app.
+      - Complete any verification and record the actual outcome. Resetting an identifier can require a new opt-out.
+    verification: The form may collect browser context and the team follows up. Later verification has not been tested.
+  - id: pitchbook
+    guide_id: pitchbook-professionals
+  - id: alikeaudience
+    guide_id: alikeaudience-route-review
+  - id: liveramp-device-controls
+    guide_id: liveramp-global-controls
+  - id: maxmind
+    guide_id: maxmind-services
+  - id: merkle-us
+    guide_id: merkle-us-data-products
+  - id: magnite
+    guide_id: magnite-advertising
+  - id: comscore-tagging
+    guide_id: comscore-tagging
+  - id: criteo
+    guide_id: criteo
+  - id: 33across
+    guide_id: 33across
+  - id: lexisnexis-business-services
+    guide_id: lexisnexis-risk-uk
+  - id: quantyoo
+    guide_id: quantyoo-media
+  - id: work-number-freeze
+    guide_id: equifax-work-number
+  - id: experian-uk-marketing
+    guide_id: experian-uk-marketing
+  - id: innovid-flashtalking
+    guide_id: innovid-flashtalking
+  - id: doubleverify
+    guide_id: doubleverify-solutions
+  - id: advanced-store
+    guide_id: advanced-store-ad4mat
+  - id: jwx
+    guide_id: jwx-advertising
+  - id: niq-gfk
+    guide_id: niq-gfk-research
+  - id: connexity
+    guide_id: connexity-shopping
+  - id: cuebiq
+    guide_id: cuebiq-location
+  - id: dstillery
+    guide_id: dstillery-advertising
+  - id: signalhire
+    guide_id: signalhire-professional
+  - id: nordic-data-resources
+    guide_id: nordic-data-resources
+  - id: choreograph
+    guide_id: choreograph-global
+  - id: unacast
+    guide_id: unacast
+  - id: foursquare
+    guide_id: foursquare
+  - id: nextroll
+    guide_id: nextroll-services
+  - id: trade-desk
+    guide_id: trade-desk-platform
+  - id: liveintent
+    guide_id: liveintent-services
+  - id: catalina
+    guide_id: catalina-consumer
+  - id: acxiom-international
+    guide_id: acxiom-llc-international
+  - id: attribits
+    guide_id: attribits
+  - id: bdex
+    guide_id: bdex
+  - id: amazinghiring
+    guide_id: amazinghiring
+  - id: adjust-device
+    guide_id: adjust-device
+  - id: smart-profile
+    guide_id: smart-profile-benelux
+  - id: active-leads
+    guide_id: active-leads-nordic
+  - id: sojern
+    guide_id: sojern
+  - id: growbots
+    name: Growbots database opt-out
+    description: Enter your professional email in the embedded form, then finish the email confirmation. A dedicated Gmail address generally will not match.
+    url: https://www.growbots.com/do-not-sell-my-info/
+    source: https://www.growbots.com/privacy/
+    checked_at: '2026-09-30'
+    domains: [growbots.com]
+    scope: Removes the profile linked to the verified business email and retains that email for suppression. Other privacy rights use the privacy inbox; independent customer records are separate.
+  - id: contactout
+    name: ContactOut profile removal
+    description: Enter an email associated with your professional profile, then follow the verification link sent to that mailbox.
+    url: https://contactout.com/optout
+    source: https://contactout.com/optout
+    checked_at: '2026-09-30'
+    domains: [contactout.com]
+    scope: Removes the matching ContactOut profile. Complete verification before checking this off; exported customer copies are separate.
+  - id: zoominfo
+    name: ZoomInfo profile removal
+    description: Use an email from your professional profile to find it, then submit the removal request and finish verification.
+    url: https://privacyrequest.zoominfo.com/remove/verify
+    source: https://www.zoominfo.com/legal/privacy-policy
+    checked_at: '2026-09-30'
+    domains: [zoominfo.com, privacyrequest.zoominfo.com]
+    scope: Individual professional profiles. Already completed ZoomInfo requests stay done; company records and independent customer copies are separate.
+  - id: lusha
+    name: Lusha profile removal
+    description: Complete the privacy-center form for your professional email and finish any verification.
+    url: https://www.lusha.com/privacy-center/request-removal/
+    source: https://www.lusha.com/legal/privacy-notice/
+    checked_at: '2026-09-30'
+    domains: [lusha.com]
+    scope: Removal from Lusha's B2B database with retained suppression data. Previously completed Lusha requests stay done.
+  - id: ddv-robinson
+    name: DDV Robinsonliste
+    description: Register to reduce addressed advertising mail in Germany. Finish the email confirmation too.
+    url: https://www.ichhabediewahl.de/?cid=43&id=122
+    source: https://www.ichhabediewahl.de/?cid=39
+    domains: []
+    scope: Advertising suppression only; does not confirm deletion at Acxiom or any other broker.
+  - id: seamless
+    name: Seamless.AI privacy form
+    description: Submit your deletion request through their Privacy Request Center.
+    url: https://preferences.seamless.ai/
+    source: https://seamless.ai/policies/privacy-policy
+    domains: [seamless.ai]
+    scope: Seamless.AI only. Complete any identity or email verification requested by the form.
+  - id: hubspot
+    name: HubSpot privacy preferences
+    description: Enter an email from your professional profile and select Delete your data from HubSpot’s commercial dataset. Complete any verification.
+    url: https://www.hubspot.com/hubspot-privacy-preferences
+    source: https://legal.hubspot.com/privacy-policy
+    checked_at: '2026-09-30'
+    domains: [hubspot.com]
+    scope: HubSpot’s commercial dataset, not records independently controlled by its customers.
+  - id: kaspr
+    name: Kaspr removal form
+    description: Submit a deletion request directly to Kaspr.
+    url: https://kaspr.privacy.saymine.io/kaspr
+    source: https://www.kaspr.io/privacy-policy
+    domains: [kaspr.io]
+    scope: Kaspr only. Complete any confirmation steps before ticking this off.
+  - id: leadiq
+    name: LeadIQ removal form
+    description: Request removal from LeadIQ’s contact database.
+    url: https://leadiq.com/request-removal
+    source: https://leadiq.com/request-removal
+    domains: [leadiq.com]
+    scope: LeadIQ only. Complete any confirmation steps before ticking this off.
+  - id: people-data-labs
+    guide_id: people-data-labs
+  - id: hunter
+    name: Hunter email removal
+    description: Claim each professional email address you want removed.
+    url: https://hunter.io/claim
+    source: https://hunter.io/claim
+    domains: [hunter.io]
+    scope: Uses company-domain emails. A no-match result for your dedicated Gmail does not cover your work addresses.
+  - id: rocketreach
+    guide_id: rocketreach-professional
+  - id: apollo-io
+    name: Apollo.io profile removal
+    description: Remove your professional profile and complete the email confirmation.
+    url: https://www.apollo.io/privacy-policy/remove
+    source: https://www.apollo.io/privacy-policy
+    domains: [apollo.io]
+    scope: Apollo.io, not Apollo Interactive. Use identifiers from your professional profile.
+  - id: stackadapt
+    name: StackAdapt privacy center
+    description: Request deletion and, separately, opt out of targeted advertising.
+    url: https://privacy.stackadapt.com/
+    source: https://www.stackadapt.com/legal-document-centre/platform-and-services-privacy-policy
+    domains: [stackadapt.com]
+    scope: Broker-supplied privacy center. An advertising opt-out confirmation alone is not a deletion confirmation.
+  - id: azira
+    name: Azira device-data request
+    description: Submit a request with your device’s mobile advertising ID, if you have it.
+    url: https://submit-irm.trustarc.com/services/validation/0a80503b-1d56-4d50-a898-4377a0227dab
+    source: https://www.azira.com/privacy-policy
+    domains: [azira.com]
+    scope: Broker-supplied TrustArc form. Name and email cannot locate its device data. Do not install an unfamiliar app merely to obtain an ID.
+  # Reviewed European/global professional forms. Instructions and requirements
+  # come from the matching dossier, including explicitly incomplete form fields.
+  - id: bookyourdata
+    guide_id: bookyourdata
+    # Description checked against the linked official privacy policy, 2026-10-03.
+    about: Sells business contact lists, including email addresses and phone numbers, for sales outreach.
+  - id: forager
+    guide_id: forager-ai
+  - id: enlyft
+    guide_id: enlyft
+    # Description checked against the linked official privacy policy, 2026-10-03.
+    about: Collects professional contact details from public sources and data providers for sales teams.
+  - id: wiza
+    guide_id: wiza
+  - id: salesql
+    guide_id: salesql
+  - id: relpro
+    guide_id: relpro
+    # Description checked against the linked official privacy policy, 2026-10-03.
+    about: Shares professionals’ contact details and employment history with its business customers.
+  - id: uplead
+    guide_id: uplead
+  - id: instantly
+    guide_id: instantly-foomonk
+  - id: amplemarket
+    guide_id: amplemarket
+  - id: rampedup
+    guide_id: rampedup
+  - id: explorium
+    guide_id: explorium

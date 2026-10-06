@@ -1,0 +1,20 @@
+schema_version: 1
+associations:
+  - guide_id: valiuz-fr
+    records: [discovery:fr-valiuz]
+    rationale: Official consumer portal and notice identify VALIUZ SAS and its combined-profile service; retailers are not counted as erased or merged.
+  - guide_id: critere-direct-fr
+    records: [discovery:fr-critere-direct]
+    rationale: The official policy identifies Critère Direct SARL and its broker/processor role; underlying file owners remain independent controllers.
+  - guide_id: webrivage-fr
+    records: [discovery:fr-webrivage]
+    rationale: Official product and privacy pages identify Bonjour Data as WebRivage's product. The guide retains the unresolved product-notice blocker.
+  - guide_id: hospimedia-nominations-fr
+    records: [discovery:fr-hospimedia-nominations]
+    rationale: The product privacy notice explicitly identifies its controller through the HOSPIMEDIA legal notice; this is not the similarly named Nomination.fr company.
+  - guide_id: avanci-fr
+    records: [discovery:fr-avanci]
+    rationale: Legal notice and campaign portal identify the same AVANCI company; clients and sister companies are not merged.
+  - guide_id: dataondemand-fr
+    records: [discovery:fr-dataondemand]
+    rationale: Official product and legal pages identify DATAONDEMAND SAS; the guide retains the unresolved product-data scope blocker.

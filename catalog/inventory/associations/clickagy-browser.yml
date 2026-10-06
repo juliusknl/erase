@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: clickagy-browser
+    records: [community:clickagy, live:clickagy-llc]
+    rationale: Current official platform notice identifies the exact Clickagy LLC entity and links its browser-specific worldwide deletion form; no parent-wide coverage is inferred.

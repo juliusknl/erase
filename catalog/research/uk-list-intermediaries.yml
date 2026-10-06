@@ -1,0 +1,93 @@
+schema_version: 1
+brokers:
+  - id: databroker-uk
+    name: Databroker Ltd
+    match_domains: [data-broker.co.uk]
+    identity:
+      legal_name: Databroker Ltd
+      brands: [Databroker]
+      parent: null
+      official_domains: [data-broker.co.uk]
+    relevance:
+      regions: [UK, international]
+      category: professional
+      data_categories: [Professional contact details, Licensed marketing lists]
+      note: List intermediary, not the original database owner; a marketer saying 'a data broker' does not identify this company.
+    removal:
+      method: email
+      destination: compliance@data-broker.co.uk
+      alternatives: [https://www.data-broker.co.uk/frequently-asked-questions/]
+      steps:
+        - Contact compliance with the marketing incident and relevant business contact details, asking whether Databroker Ltd supplied the record.
+        - Request future-marketing suppression and ask for the actual source/controller. If it supplied the list, the FAQ says it can contact the purchaser about opting out.
+        - Address source-database deletion separately; the intermediary's response is not proof of erasure at the original owner.
+    required_information:
+      fields: [relevant_marketing_incident, affected_business_contact]
+      certainty: not_fully_specified
+      verification: FAQ asks for a few details but gives no exhaustive identifier checklist. Listed fields describe the matching context, not a verified mandatory form.
+    coverage:
+      effect: suppression
+      includes: Future marketing brokered through Databroker and assistance tracing a supplied list.
+      excludes: Automatic source-owner deletion, every purchaser and unrelated companies described generically as data brokers.
+    automation: {mode: manual, reason: Routing depends on the actual marketing incident and source; the app does not yet collect that context.}
+    evidence:
+      - url: https://www.data-broker.co.uk/frequently-asked-questions/
+        checked_on: '2026-09-30'
+        excerpt: we are an independent broker between the owner and the marketer
+        supports: [intermediary_scope, suppression, investigation, email]
+      - url: https://www.data-broker.co.uk/privacy-policy/
+        checked_on: '2026-09-30'
+        excerpt: 'Email (preferred method): compliance@data-broker.co.uk'
+        supports: [identity, general_rights, designated_contact]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Exact matching checklist and verification., Actual source and purchaser response for an individual request.]
+  - id: marketscan-uk
+    name: Marketscan
+    match_domains: [marketscan.co.uk]
+    identity:
+      legal_name: Marketscan Data Solutions Ltd (company 16517915)
+      brands: [Marketscan, Marketscan Megabase]
+      parent: null
+      official_domains: [marketscan.co.uk]
+    relevance:
+      regions: [UK]
+      category: professional
+      data_categories: [UK business decision-maker details, Business contact channels]
+      note: Megabase combines supplier lists; European residence alone does not establish inclusion in this UK business dataset.
+    removal:
+      method: email
+      destination: dataprotection@marketscan.co.uk
+      alternatives: [https://www.marketscan.co.uk/faqs/]
+      steps:
+        - Ask the data-protection team to suppress your business record from Marketscan Megabase and identify the original supplier.
+        - Request erasure where applicable and pursue supplier removal separately using the contact details returned.
+        - Review any identity-evidence request before disclosure. The notice mentions possible certified passport evidence, not a universal initial requirement; ask whether a less intrusive method is sufficient.
+    required_information:
+      fields: [affected_business_record]
+      certainty: not_fully_specified
+      verification: FAQ gives no fixed initial checklist. Privacy notice allows additional identity evidence; no identification document is automatically attached.
+    coverage:
+      effect: suppression
+      includes: Matching Megabase record suppression and source tracing; erasure is a separate rights request.
+      excludes: Original D&B/Corpdata/Companies House records and independent customer copies; not blanket Acquirz-group deletion.
+    automation: {mode: manual, reason: Business-record matching and potentially sensitive verification need review; the current sender has no broker-specific record context.}
+    evidence:
+      - url: https://www.marketscan.co.uk/faqs/
+        checked_on: '2026-09-30'
+        excerpt: We will blacklist it in our Marketscan Megabase
+        supports: [suppression, source_tracing, designated_email]
+      - url: https://www.marketscan.co.uk/privacy-policy/
+        checked_on: '2026-09-30'
+        excerpt: Marketscan Data Solutions Ltd, registered number 16517915
+        supports: [current_entity, UK_business_scope, erasure, verification]
+      - url: https://www.prnewswire.co.uk/news-releases/email-marketing-agency-expands-with-marketscan-acquisition-302500448.html
+        checked_on: '2026-09-30'
+        published: '2025-07-09'
+        excerpt: News provided by Acquirz Limited
+        supports: [issuer_announced_acquisition, current_operator_relationship]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Complete matching checklist and actual fulfilment., Acquisition announcement does not establish the scope of all retained legacy records.]

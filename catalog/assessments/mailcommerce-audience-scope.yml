@@ -1,0 +1,16 @@
+schema_version: 1
+assessments:
+  - record: community:mailcommerce
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: Current mailcommerce GmbH website publishes datenschutz@mailcommerce.de, but its notice is mostly website-specific and contains a list of potential advertisers without explaining audience ownership or matching. The corporate page describes acquisition campaigns and agency services. Determine whether this entity controls third-party consumer records or processes clients' lists before promoting a generic email as an executable audience-removal route.
+    evidence:
+      - url: https://www.mailcommerce.de/de/privacy.html
+        checked_on: '2026-10-01'
+        excerpt: Sie können mögliche E-Mails von der Liste der Werbetreibenden erhalten
+        supports: [ambiguous_advertiser_list, website_notice, rights_contact]
+      - url: https://www.mailcommerce.de/de/index.html
+        checked_on: '2026-10-01'
+        excerpt: Onlinemarketing-Agenturen mit dem Fokus auf Neukundengenerierung
+        supports: [agency_service_scope]
+    unresolved: [Obtain consumer-audience controller scope and minimum matching instructions; do not infer these from a website-only notice.]

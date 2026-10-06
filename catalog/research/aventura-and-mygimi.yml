@@ -1,0 +1,84 @@
+schema_version: 1
+brokers:
+  - id: aventura-post-marketing
+    name: Aventura Post marketing
+    match_domains: [aventurapost.com]
+    identity:
+      legal_name: Aventura Post GmbH (Frankfurt HRB 101533)
+      brands: [Aventura Post]
+      parent: null
+      official_domains: [aventurapost.com, de.aventurapost.com]
+    relevance:
+      regions: [Germany, EEA]
+      category: consumer_marketing
+      data_categories: [Name, Email, Postal address, Country, Marketing consent]
+      note: Receives partner-supplied contacts for advertising mail; not limited to website enquiries.
+    removal:
+      method: email
+      destination: info@de.aventurapost.com
+      alternatives: []
+      steps:
+        - Request marketing withdrawal and erasure using matching emails, without claiming a particular signup.
+        - Ask what is blocked or retained; the notice describes a blocking list and generally four-year legal retention after withdrawal.
+        - Review additional matching personally. The published care-of Talk2 address does not prove group-wide removal.
+    required_information:
+      fields: [full_name, email, other_emails]
+      certainty: not_fully_specified
+      verification: No complete initial-email checklist published; matching and later checks remain untested.
+    coverage:
+      effect: suppression
+      includes: Matched Aventura advertising records; erasure subject to explained retention.
+      excludes: Partner or Talk2-wide deletion and immediate erasure of legally retained records.
+    automation:
+      mode: manual
+      reason: Initial matching-email recipe available; additional disclosure requires review.
+    evidence:
+      - url: https://www.aventurapost.com/sc/todo=cp_aventurapost
+        checked_on: '2026-10-01'
+        excerpt: info@de.aventurapost.com
+        supports: [identity, partner_supplied_contacts, rights_email, blocking_and_retention]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Undated notice; actual matching and delivery untested., Parent ownership unreviewed.]
+  - id: mygimi-marketing
+    name: MyGimi marketing
+    match_domains: [mygimi.com]
+    identity:
+      legal_name: MyGimi GmbH (Frankfurt HRB 117445)
+      brands: [MyGimi]
+      parent: null
+      official_domains: [mygimi.com, hh.mygimi.com]
+    relevance:
+      regions: [Germany, EEA]
+      category: consumer_marketing
+      data_categories: [Name, Email, Postal address, Country, Marketing consent]
+      note: Partner-supplied advertising contacts; care-of Toleadoo does not establish all-group coverage.
+    removal:
+      method: email
+      destination: info@hh.mygimi.com
+      alternatives: []
+      steps:
+        - Request withdrawal and erasure for matching emails; do not assert a signup or cancel unrelated contracts.
+        - Ask for confirmation of suppression and retained data. The notice generally retains legal-purpose records for four years after withdrawal.
+        - Handle further verification personally. Do not use the notice's inconsistent supervisory-authority details without checking them.
+    required_information:
+      fields: [full_name, email, other_emails]
+      certainty: not_fully_specified
+      verification: Matching checklist remains unspecified; a live request bounced because hh.mygimi.com could not be resolved.
+    coverage:
+      effect: suppression
+      includes: Matched MyGimi advertising records, with retained legal-purpose data distinguished.
+      excludes: Immediate complete erasure, independent partners and other Toleadoo records.
+    automation:
+      mode: manual
+      reason: Automatic sending disabled after a domain-not-found bounce on 2026-10-03. Verify a replacement contact before retrying; do not resend to the published address.
+    evidence:
+      - url: https://www.mygimi.com/cgi-bin/sc.pl?todo=cp_mygimi
+        checked_on: '2026-10-01'
+        excerpt: info@hh.mygimi.com
+        supports: [identity, partner_supplied_contacts, rights_email, suppression_and_retention, notice_inconsistency]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Undated notice and untested matching., Supervisory-authority name/address inconsistent., Parent ownership unreviewed.]

@@ -1,0 +1,102 @@
+schema_version: 1
+brokers:
+  - id: costar-professional-property
+    name: CoStar professional property data
+    match_domains: [costar.com]
+    identity:
+      legal_name: CoStar Realty Information, Inc. and applicable affiliates
+      brands: [CoStar]
+      parent: CoStar Group
+      official_domains: [costar.com]
+    relevance:
+      regions: [EEA, United Kingdom, United States, Canada, Australia, New Zealand]
+      category: professional
+      data_categories: [Business contacts, Property relationships, Public records, Professional profiles, Service interactions]
+      note: Initial workflow concerns CoStar professional/property-contact data; the group's other brands and direct service accounts have separate scopes.
+    removal:
+      method: email
+      destination: support@costar.com
+      alternatives: [https://privacy.costar.com/]
+      steps:
+        - Send an initial request identifying your CoStar professional/property-contact records and actual residence; do not ask to close unrelated service accounts.
+        - Complete further matching and verification personally. Public policy accepts email; its portal starts with email verification and asks for matching name, address and phone information.
+        - In the portal choose one relevant brand and one request type per submission. Use the policy's separate contacts for other brands; one CoStar request is not group-wide erasure.
+        - Record retained-data explanations and follow-up requirements, not an assumed deletion outcome.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: Email checklist is not exhaustive. Portal publicly describes email verification, residence, brand and identity matching; direct fetch returned 403 and conditional runtime fields were not tested.
+    coverage:
+      effect: deletion_request
+      includes: Initial request for matched personal CoStar professional/property-contact records controlled by the relevant CoStar entity.
+      excludes: Automatic account closure, all group brands, independent customer copies and protected legal records.
+    automation:
+      mode: manual
+      reason: Initial minimal email recipe is implemented; brand-specific matching, phone/address requests and later verification remain personally reviewed.
+    evidence:
+      - url: https://www.costar.com/en-gb/gbr/about/privacy-notice
+        checked_on: '2026-10-01'
+        published: '2026-08-10'
+        excerpt: 'Email: Support@costar.com'
+        supports: [identity, professional_data, European_rights, email_route, brand_boundaries]
+      - url: https://privacy.costar.com/
+        checked_on: '2026-10-01'
+        excerpt: you may only submit one type of privacy request per submission
+        supports: [portal_instructions, email_verification, matching_fields, brand_selection]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Email fulfilment and matching not tested., Portal conditional fields untested., No comparable personal-record scale claim.]
+
+  - id: blackbaud-target-analytics
+    name: Blackbaud Target Analytics
+    match_domains: [blackbaud.com]
+    identity:
+      legal_name: Blackbaud, Inc.
+      brands: [Blackbaud, Target Analytics]
+      parent: null
+      official_domains: [blackbaud.com]
+    relevance:
+      regions: [United States]
+      category: consumer_marketing
+      data_categories: [Contact identifiers, Property and purchasing information, Interests, Donor prospect attributes]
+      note: Current Target Analytics notice describes US adults. This is not evidence that other Blackbaud products hold no European data.
+    removal:
+      method: form
+      destination: https://www.blackbaud.com/company/Data-Subject-Rights-Request
+      alternatives: [privacy@blackbaud.com]
+      steps:
+        - Open the official request page and follow its individual request form; choose your real residence and act for yourself unless actually authorized for someone else.
+        - Select a single deletion or opt-out request type. The public form configuration asks for name, postal address, country and email, with additional conditional questions.
+        - Date of birth and last four Social Security digits appear as conditional fields, not universally required fields. Never invent them or send them automatically; review whether the displayed branch applies.
+        - Complete CAPTCHA and email or other identity verification personally. The policy permits requests for identity documents; review necessity before providing any.
+        - For a charity's own constituent records, contact that charity. JustGiving and Blackbaud Verified Network have separate instructions and are not included in this Target Analytics workflow.
+    required_information:
+      fields: [full_name, postal_address, country, email, request_type]
+      certainty: not_fully_specified
+      verification: Public OneTrust configuration includes CAPTCHA, email verification, conditional state/requestor questions, and conditional DOB and last-four-SSN fields. Conditional behavior and fulfilment untested.
+    coverage:
+      effect: deletion_request
+      includes: Applicable deletion or sale opt-out requests concerning Blackbaud-controlled Target Analytics donor-prospect data.
+      excludes: Independently controlled charity records, JustGiving, all Blackbaud service accounts and assumed European Target Analytics collection.
+    automation:
+      mode: manual
+      reason: Residence and sensitive conditional matching require personal review; no generic European email campaign is inferred from website employee/marketing contacts.
+    evidence:
+      - url: https://www.blackbaud.com/company/privacy-policy/north-america
+        checked_on: '2026-10-01'
+        published: '2026-06-24'
+        excerpt: We only collect data on US individuals at least 18 years old.
+        supports: [Target_Analytics_scope, service_provider_boundary, matching, verification]
+      - url: https://www.blackbaud.com/company/Data-Subject-Rights-Request
+        checked_on: '2026-10-01'
+        excerpt: submit a separate request for each type
+        supports: [official_form_link, separate_product_instructions]
+      - url: https://blackbaud-privacy.my.onetrust.com/webform/170c909c-5ed2-49f1-a59c-2a44be2f6f27/de22df57-d96c-480a-afb0-ac090b928192
+        checked_on: '2026-10-01'
+        excerpt: Social Security Number (Last 4 digits)
+        supports: [public_conditional_field_configuration, CAPTCHA, email_verification]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Conditional form questions not exercised., Identity document necessity and outcome untested., Other products require separate scope review., No comparable scale claim.]

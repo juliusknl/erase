@@ -1,0 +1,12 @@
+schema_version: 1
+regions: [LV]
+rationale: Latvia's data-protection regulator lists two licensed credit-information bureaus and their legal identifiers. This establishes the licensed discovery scope, not blanket deletion eligibility or current operational form requirements.
+evidence:
+  - url: https://www.dvi.gov.lv/lv/kreditinformacijas-biroju-saraksts
+    checked_on: '2026-09-29'
+    published: Licence entries updated February2026
+    excerpt: Izsniegtās licences kredītinformācijas biroju darbībai
+    supports: [discovery, identity]
+candidates:
+  - {slug: lv-kib, name: AS Kredītinformācijas Birojs}
+  - {slug: lv-crefo, name: AS CREFO Birojs}

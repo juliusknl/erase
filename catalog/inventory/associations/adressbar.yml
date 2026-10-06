@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: adressbar-business
+    records: [community:adressbar]
+    rationale: The current official policy names Fabian Wolf on the exact adressbar.de domain. Product scope is business/leadership records, not a default private-consumer removal target.

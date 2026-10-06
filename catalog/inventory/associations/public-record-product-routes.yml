@@ -1,0 +1,11 @@
+schema_version: 1
+associations:
+  - guide_id: recordsfinder-records
+    records: [live:globicom-inc]
+    rationale: The current RecordsFinder product notice expressly names InfoPay and Globicom. This maps the RecordsFinder record without treating those entities as a merger or all InfoPay brands as erased.
+  - guide_id: kids-live-safe-records
+    records: [live:scalable-commerce-llc, live:scalable-commerce-llc-2]
+    rationale: Both snapshots name Scalable Commerce. Kids Live Safe and Quick Public Records each name that operator, but have separate reviewed guides and forms; completing either does not establish the other's removal.
+  - guide_id: radaris-domain-transfer
+    records: [live:radaris]
+    rationale: The exact imported privacy and removal URLs now return a domain-transfer notice. The guide remains blocked and unresolved rather than retaining a stale removal workflow or asserting deletion.

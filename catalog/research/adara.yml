@@ -1,0 +1,54 @@
+schema_version: 1
+brokers:
+  - id: adara-travel
+    name: Adara travel audiences
+    match_domains: [adara.com]
+    identity:
+      legal_name: RateGain Adara, Inc.
+      brands: [Adara]
+      parent: RateGain group (exact holding entity unreviewed)
+      official_domains: [adara.com]
+    relevance:
+      regions: [EU, EEA, United States, Brazil, Global travel audiences]
+      category: advertising
+      data_categories: [Travel searches and bookings, Cookie and mobile IDs, Hashed contact identifiers, Traveler profiles]
+      note: Travel partners supply pseudonymous activity; a request-only mailbox cannot identify the traveler profile.
+    removal:
+      method: form
+      destination: https://adara.com/subject-access-rights/
+      alternatives: [privacy@adara.com, https://adara.com/opt-out/]
+      steps:
+        - EU/EEA residents select deletion rather than access on the rights form; policy also accepts email.
+        - Supply relevant cookie/device identifiers; repeat for each browser/device. Follow the page's cookie-ID instructions yourself.
+        - Review verification personally. Do not install an unfamiliar ID-retrieval app merely because this older page suggests one.
+        - Advertising and analytics cookie opt-outs are separate preferences, not proof of historical deletion.
+    required_information:
+      fields: [matching_cookie_or_device_identifier, requested_right, first_name, last_name]
+      certainty: not_fully_specified
+      verification: Public form labels name and email; dynamic fields and subsequent identity checks untested. Name/email alone may not match.
+    coverage:
+      effect: deletion_request
+      includes: Matched Adara platform data, subject to verification and retention exceptions.
+      excludes: Independent travel providers, other devices and guaranteed future suppression.
+    automation:
+      mode: manual
+      reason: Browser/device-specific identifiers and verification require personal action.
+    evidence:
+      - url: https://adara.com/privacy-promise/
+        checked_on: '2026-09-30'
+        published: '2023-01-18'
+        excerpt: Alternatively, you can also email privacy@adara.com.
+        supports: [relevance, European_rights, email_alternative, coverage]
+      - url: https://adara.com/subject-access-rights/
+        checked_on: '2026-09-30'
+        excerpt: you will need to replicate this process for each one
+        supports: [removal, identifier_matching, browser_scope]
+      - url: https://adara.com/pdf/Adara_Japan_Media_Kit.pdf
+        checked_on: '2026-09-30'
+        published: 'October 2024 (cover)'
+        excerpt: RateGain Adara, Inc.
+        supports: [identity, parent, travel_data_scope]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Dynamic form requirements and actual deletion untested., Legacy ADARA Inc legal succession not independently established., Older OS instructions require current device-specific checking.]

@@ -1,0 +1,16 @@
+schema_version: 1
+assessments:
+  - record: community:adhese
+    disposition: out_of_scope
+    checked_on: '2026-09-30'
+    rationale: Exclude the default independent-broker campaign for Adhese's publisher implementations. Its current technical documentation identifies clients as controllers and Adhese as processor with separate per-client platforms. Request publisher-controlled advertising data from the relevant publisher, not a presumed universal Adhese identity database. Doggybites BV separately controls its own website, business-contact and recruitment data; those rights use privacy@adhese.eu. This does not assert that no personal data is processed.
+    evidence:
+      - url: https://documentation.adhese.eu/books/privacy-consent/page/user-privacy-and-gdpr
+        checked_on: '2026-09-30'
+        excerpt: Adhese acts as a processor of data under the GDPR in the EU.
+        supports: [client_controller, processor_scope, separate_implementations]
+      - url: https://www.adhese.com/privacy-policy/
+        checked_on: '2026-09-30'
+        excerpt: Doggybites BV
+        supports: [legal_entity, own_website_scope, direct_rights_contact]
+    unresolved: []

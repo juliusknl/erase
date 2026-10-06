@@ -1,0 +1,199 @@
+schema_version: 1
+brokers:
+  - id: adjust-device
+    name: Adjust device opt-out
+    match_domains: [adjust.com]
+    identity:
+      legal_name: Adjust GmbH
+      brands: [Adjust]
+      parent: null
+      official_domains: [adjust.com]
+    relevance:
+      regions: [Global]
+      category: advertising
+      data_categories: [Mobile device identifiers, App attribution]
+      note: Device-based attribution is not a name-and-email contact list.
+    removal:
+      method: form
+      destination: https://www.adjust.com/forget-device/
+      alternatives: [privacy@adjust.com]
+      steps:
+        - Open Forget Device and select your device platform.
+        - Enter that device's identifier personally; do not substitute an email address or invent an identifier.
+        - Submit, complete any challenge and retain the result. Repeat for other devices you want covered.
+        - The published email is for opt-out questions. Do not interpret this form as confirmed historical-data deletion.
+    required_information:
+      fields: [device_platform, device_identifier]
+      certainty: not_fully_specified
+      verification: Both visible fields are marked required; platform choices, identifier validation and subsequent challenges remain untested.
+    coverage:
+      effect: suppression
+      includes: Opt-out of Adjust mobile attribution for the submitted device identifier.
+      excludes: Other devices, independent app records and historical-data deletion are not established by this form.
+    automation:
+      mode: manual
+      reason: Requires a personally reviewed device identifier; the app neither collects nor sends device IDs automatically.
+    evidence:
+      - url: https://www.adjust.com/forget-device/
+        checked_on: '2026-09-30'
+        excerpt: select the device you wish to opt-out and provide us your device identifier
+        supports: [form_route, matching_fields, suppression_scope, questions_contact]
+      - url: https://www.adjust.com/terms/impressum/
+        checked_on: '2026-09-30'
+        excerpt: Adjust GmbH
+        supports: [legal_identity, official_domain]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Dynamic form validation and completion untested., Privacy-policy body was not accessible during this review., Parent ownership unreviewed.]
+
+  - id: branch-saas
+    name: Branch SaaS
+    match_domains: [branch.io]
+    identity:
+      legal_name: Branch Metrics, Inc.
+      brands: [Branch SaaS]
+      parent: null
+      official_domains: [branch.io]
+    relevance:
+      regions: [EEA, UK, Global]
+      category: advertising
+      data_categories: [Device identifiers, App and website engagement, Attribution links]
+      note: App analytics and linking service. SaaS processing and Branch Discovery are not interchangeable scopes.
+    removal:
+      method: manual
+      destination: https://legal.branch.io/saas/data-subject-rights-eu/
+      alternatives: [https://legal.branch.io/saas/privacy-opt-out/, privacy@branch.io, https://preferences.branch.io/]
+      steps:
+        - For European or UK app-service data, ask the app or website operator to delete your data and forward the request to Branch.
+        - Separately, device suppression can be requested at privacy@branch.io with subject Device-Based Opt-Out Request and your device ID. Review the disclosure personally.
+        - Browser cookie opt-out must be repeated in each browser; it is not historical-data deletion.
+        - The preferences portal also handles Branch's own website/business contacts. Do not mistake it for a universal app-data removal portal.
+    required_information:
+      fields: [relevant_app_or_website, app_specific_matching_information]
+      certainty: not_fully_specified
+      verification: Deletion matching depends on the app controller. Separate device opt-out requires the device ID; portal fields and verification remain untested.
+    coverage:
+      effect: deletion_request
+      includes: App-specific SaaS deletion via the relevant controller; separate opt-outs have device/browser scope.
+      excludes: No universal deletion across customers, devices or Branch Discovery; settings may reduce functionality.
+    automation:
+      mode: manual
+      reason: Identify the app controller first; the customer-only API is not an end-user sending route.
+    evidence:
+      - url: https://legal.branch.io/saas/data-subject-rights-eu/
+        checked_on: '2026-09-30'
+        published: '2024-12-13'
+        excerpt: must be provided to Branch by a Client
+        supports: [processor_role, european_deletion_route, website_contacts_distinction]
+      - url: https://legal.branch.io/saas/privacy-opt-out/
+        checked_on: '2026-09-30'
+        published: '2025-10-03'
+        excerpt: Device-Based Opt-Out Request
+        supports: [device_opt_out, required_identifier, email_subject, browser_scope]
+      - url: https://legal.branch.io/saas/privacy-policy/
+        checked_on: '2026-09-30'
+        published: '2025-09-15'
+        excerpt: Branch Metrics, Inc.
+        supports: [identity, services_scope, data_categories]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Specific app/controller and matching details depend on the user., No request or portal completion tested., Branch Discovery needs separate research.]
+
+  - id: appsflyer-services
+    name: AppsFlyer services
+    match_domains: [appsflyer.com]
+    identity:
+      legal_name: AppsFlyer Ltd.; EU representative AppsFlyer Germany GmbH
+      brands: [AppsFlyer]
+      parent: null
+      official_domains: [appsflyer.com]
+    relevance:
+      regions: [EEA, Global]
+      category: advertising
+      data_categories: [Device and app identifiers, Engagement events, Network information]
+      note: Customer-controlled attribution processor; does not describe itself as an independent resale database.
+    removal:
+      method: manual
+      destination: https://www.appsflyer.com/legal/processing-customer-data/
+      alternatives: [privacy@appsflyer.com]
+      steps:
+        - Identify the app whose privacy notice names AppsFlyer and request deletion through that app's privacy channel.
+        - Ask the app operator to include AppsFlyer and applicable processors in its response; match your app account without inventing a device identifier.
+        - The operator can forward an OpenDSR request. Do not create an advertiser account or supply API credentials for this.
+        - Use privacy@appsflyer.com for routing questions. AppsFlyer's own website and marketing records use a separate policy.
+    required_information:
+      fields: [relevant_app_or_website, app_specific_matching_information]
+      certainty: not_fully_specified
+      verification: Controller-specific matching applies. Its API needs an app/property ID and supported subject identity; these are not a universal consumer email checklist.
+    coverage:
+      effect: deletion_request
+      includes: Data processed for the identified app, on the controller's request.
+      excludes: Other apps, independent partners and AppsFlyer's own marketing contacts are separate scopes.
+    automation:
+      mode: manual
+      reason: No universal consumer route; the documented API requires the app owner's authorization.
+    evidence:
+      - url: https://www.appsflyer.com/legal/processing-customer-data/
+        checked_on: '2026-09-30'
+        excerpt: The data is owned and controlled by AppsFlyer's customer
+        supports: [processor_role, data_categories, customer_controls, scope]
+      - url: https://support.appsflyer.com/hc/en-us/articles/11332840660625-Send-OpenDSR-API-requests
+        checked_on: '2026-09-30'
+        published: '2026-08-14'
+        excerpt: AppsFlyer Germany GmbH
+        supports: [eu_representative_identity, privacy_contact, controller_workflow, api_requirements]
+      - url: https://www.appsflyer.com/legal/privacy-policy/
+        checked_on: '2026-09-30'
+        published: '2026-08-06'
+        excerpt: AppsFlyer Ltd.
+        supports: [legal_identity, website_scope_distinction]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Specific controller and app matching depend on the user., No request outcome tested., Older services notice still published; current processing page governs this guide's route interpretation.]
+
+  - id: adikteev-app-users
+    name: Adikteev app users
+    match_domains: [adikteev.com]
+    identity:
+      legal_name: Adikteev SA and Adikteev, Inc.
+      brands: [Adikteev]
+      parent: null
+      official_domains: [adikteev.com]
+    relevance:
+      regions: [EEA, US, Global]
+      category: advertising
+      data_categories: [Advertising identifiers, App purchases and activity, Coarse location]
+      note: Mobile advertising service provider; its notice routes end-user rights to the relevant advertiser or app.
+    removal:
+      method: manual
+      destination: https://www.adikteev.com/privacy-policy-app-users
+      alternatives: [dpo@adikteev.com]
+      steps:
+        - Identify the relevant app or advertiser and submit your deletion request to its privacy contact.
+        - Ask for Adikteev processing to be covered and retain the controller's response.
+        - Use the DPO address for routing questions; direct requests are redirected to the customer.
+        - Device advertising settings are a separate opt-out, not confirmed deletion.
+    required_information:
+      fields: [relevant_app_or_advertiser, app_specific_matching_information]
+      certainty: not_fully_specified
+      verification: The app determines matching; no universal consumer checklist is published.
+    coverage:
+      effect: deletion_request
+      includes: Customer-specific processing following the relevant controller's instructions.
+      excludes: Other apps, advertisers and independent records; device settings alone do not prove erasure.
+    automation:
+      mode: manual
+      reason: Requires a relevant controller, not a generic name-and-email request to Adikteev.
+    evidence:
+      - url: https://www.adikteev.com/privacy-policy-app-users
+        checked_on: '2026-09-30'
+        published: '2023-10-20'
+        excerpt: directly contact our Customer, meaning the relevant advertiser or the Application
+        supports: [identity, processor_role, data_categories, privacy_contact, rights_routing, scope]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Controller and matching depend on the app., No request outcome tested., Parent ownership unreviewed.]

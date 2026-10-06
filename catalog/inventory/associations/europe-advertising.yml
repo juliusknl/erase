@@ -1,0 +1,17 @@
+schema_version: 1
+associations:
+  - guide_id: epsilon-europe-digital
+    records: [community:epsilon-com]
+    rationale: Community Epsilon International UK Ltd points to the European digital-service policy, which explicitly names company 03610044. This is not the similarly branded North American or Abacus product route.
+  - guide_id: utiq-europe
+    records: [community:utiq]
+    rationale: The current service statement explicitly names Utiq SA/NV and explains why the community email suggestion cannot replace connection-based controls.
+  - guide_id: virtual-minds-platform
+    records: [community:adition, community:theadex]
+    rationale: Current product policy explicitly names Adition and The Adex under Virtual Minds GmbH, superseding old product-specific contacts; each product still requires its own identifier or control.
+  - guide_id: adform-dk
+    records: [community:adform]
+    rationale: The community entry and current product notice both identify Adform A/S; the newer cookie-deletion route supersedes relying on the old access-only link.
+  - guide_id: smartclip-europe
+    records: [community:smartclip]
+    rationale: The current platform portal explicitly identifies smartclip Europe GmbH. The community's old domain is a discovery alias, not proof that all regional or historical SpotX entities are covered.

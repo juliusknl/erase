@@ -1,0 +1,45 @@
+schema_version: 1
+regions: [IT]
+rationale: Named commercial-information directory members require individual scope, controller and removal-route assessment. Membership alone neither confirms personal exposure nor authorizes sending. Retain separate entities until proven aliases.
+evidence:
+  - url: https://www.informativaprivacyancic.it/imprese-iscritte.aspx
+    checked_on: '2026-09-29'
+    excerpt: Imprese iscritte
+    supports: [discovery]
+candidates:
+  - {slug: ancic-analisi-marketing, name: A&M Analisi e Marketing Srl}
+  - {slug: ancic-arc-real-estate, name: ARC Real Estate Spa}
+  - {slug: ancic-cerved-group, name: Cerved Group Spa}
+  - {slug: ancic-coface-italia, name: Coface Italia Srl}
+  - {slug: ancic-cribis, name: CRIBIS D&B Srl}
+  - {slug: ancic-datasinc, name: Datasinc Srl}
+  - {slug: ancic-euler-hermes, name: Euler Hermes Services Italia Srl}
+  - {slug: ancic-fox-patton, name: Fox & Patton Co.K. Srl}
+  - {slug: ancic-modefinance, name: Modefinance Srl}
+  - {slug: ancic-quinservizi, name: Quinservizi Spa}
+  - {slug: ancic-resquon, name: Resquon Srl}
+  - {slug: ancic-telematica, name: Telematica Italia Srl}
+  - {slug: ancic-aletheia, name: Aletheia Srl}
+  - {slug: ancic-a-zeta, name: A-Zeta Srl}
+  - {slug: ancic-cerved-rating, name: Cerved Rating Agency Spa}
+  - {slug: ancic-comas, name: Comas Srl}
+  - {slug: ancic-crif-services, name: CRIF Services Spa}
+  - {slug: ancic-differens, name: Differens Srl}
+  - {slug: ancic-eurocredit, name: Eurocredit Business Information Srl}
+  - {slug: ancic-iws, name: IWS Srl}
+  - {slug: ancic-openapi, name: Openapi Spa}
+  - {slug: ancic-regold, name: Regold Srl}
+  - {slug: ancic-sace, name: SACE SRV Srl}
+  - {slug: ancic-tinexta-visura, name: Tinexta Visura Spa}
+  - {slug: ancic-anticipay, name: Anticipay Srl}
+  - {slug: ancic-sintesi, name: C.B. Srl - Sintesi}
+  - {slug: ancic-cheope, name: Cheope Risk Management Srl}
+  - {slug: ancic-creditsafe, name: Creditsafe Italia Srl}
+  - {slug: ancic-crif, name: CRIF Spa}
+  - {slug: ancic-dodata, name: Dodata Srl}
+  - {slug: ancic-fashion-business, name: Fashion Business Solutions Srl}
+  - {slug: ancic-imprenditore, name: "L'Imprenditore Srl"}
+  - {slug: ancic-ponzi, name: Ponzi Spa}
+  - {slug: ancic-reporting-system, name: Reporting System Srl}
+  - {slug: ancic-sevendata, name: SevenData Spa}
+  - {slug: ancic-zucchetti, name: Zucchetti Spa}

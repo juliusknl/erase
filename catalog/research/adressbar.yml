@@ -1,0 +1,47 @@
+schema_version: 1
+brokers:
+  - id: adressbar-business
+    name: adressbar.de
+    match_domains: [adressbar.de]
+    identity:
+      legal_name: Fabian Wolf
+      brands: [adressbar.de, Fabian Wolf Data Services]
+      parent: null
+      official_domains: [adressbar.de]
+    relevance:
+      regions: [Germany]
+      category: aggregate_business
+      data_categories: [Company addresses and characteristics, Published leadership names, Location statistics]
+      note: Says it supplies company data and public first-level leadership contacts, not private-consumer lists. A company record is not itself your personal profile.
+    removal:
+      method: email
+      destination: datenschutz@adressbar.de
+      alternatives: [email@iitr.de]
+      steps:
+        - If you are named in a business record, identify that company and ask which personal information is included.
+        - Request correction or erasure of your personal details where applicable; distinguish this from removal of non-personal company data.
+        - Review any matching or verification request and retain the decision. Independent purchasers and public registers are separate.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: No database-specific mandatory checklist is published; identify the business record before disclosing additional details.
+    coverage:
+      effect: access_then_review
+      includes: Personal information, if any, associated with the identified business/leadership record.
+      excludes: Unconditional deletion of company facts, public registers and independently held purchaser copies.
+    automation:
+      mode: manual
+      reason: First establish a personally relevant business record; a generic consumer-erasure campaign is not an appropriate default.
+    evidence:
+      - url: https://adressbar.de/
+        checked_on: '2026-09-30'
+        excerpt: Ansprechpartner stammen stets aus der ersten Führungsebene
+        supports: [business_data_scope, leadership_contacts, access_offer]
+      - url: https://adressbar.de/datenschutzerklaerung/
+        checked_on: '2026-09-30'
+        excerpt: Verantwortlicher für die Datenverarbeitung ist
+        supports: [legal_identity, official_privacy_contact, general_rights]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [No personal listing or matching flow tested., No complete identifier checklist., Generic website notice does not establish unconditional database erasure.]

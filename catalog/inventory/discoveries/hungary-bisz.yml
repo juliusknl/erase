@@ -1,0 +1,10 @@
+schema_version: 1
+regions: [HU]
+rationale: Official national reference-register operator discovered during central/eastern European coverage review. This access-and-dispute workflow is not a marketing opt-out.
+evidence:
+  - url: https://bisz.hu/cegunkrol/
+    checked_on: '2026-09-29'
+    excerpt: A BISZ Zrt. története
+    supports: [discovery]
+candidates:
+  - {slug: hu-bisz, name: BISZ Zrt.}

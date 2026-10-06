@@ -1,0 +1,264 @@
+{
+  "schema_version": 1,
+  "brokers": [
+    {
+      "id": "trade-desk-platform",
+      "name": "The Trade Desk — platform data",
+      "match_domains": [
+        "thetradedesk.com"
+      ],
+      "identity": {
+        "legal_name": "The UK Trade Desk Ltd. (EEA/UK/Switzerland); The Trade Desk, Inc. (global)",
+        "brands": [
+          "The Trade Desk"
+        ],
+        "parent": null,
+        "official_domains": [
+          "thetradedesk.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "EEA",
+          "UK",
+          "CH",
+          "international"
+        ],
+        "category": "advertising",
+        "data_categories": [
+          "Cookie and advertising identifiers",
+          "Identity links and inferred interests",
+          "Location and ad activity"
+        ],
+        "note": "Platform policy explicitly names the European controller; corporate website and UID2/EUID notices are separate."
+      },
+      "removal": {
+        "method": "form",
+        "destination": "https://submit-irm.trustarc.com/services/validation/short/d9f1fb99/?brandId=9cbf55ca-6676-48dc-8e9f-ff1f056f80a5",
+        "alternatives": [
+          "https://www.thetradedesk.com/legal/privacy",
+          "https://adsrvr.org/"
+        ],
+        "steps": [
+          "Use the rights form and select deletion for platform records; enter your actual residence.",
+          "Complete matching and identity checks yourself. Device/cookie identifiers may be relevant; the policy does not publish the full form checklist.",
+          "Keep browser/device advertising opt-out separate from deletion. Client and partner copies require their own requests."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "country",
+          "matching_identifiers",
+          "identity_verification"
+        ],
+        "certainty": "not_fully_specified",
+        "verification": "Identity confirmation may be required; dynamic form fields were not inspected."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Matching platform records within the responding controller's scope.",
+        "excludes": "Not all client/partner records or separate UID2/EUID services; opt-out alone is not historical deletion."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "TrustArc form and identifier verification require a person; no generic email recipe."
+      },
+      "evidence": [
+        {
+          "url": "https://www.thetradedesk.com/legal/privacy",
+          "checked_on": "2026-09-30",
+          "published": "2026-03-13",
+          "excerpt": "please fill out this webform to exercise your rights",
+          "supports": [
+            "European_controller",
+            "platform_data",
+            "rights_form",
+            "separate_optout"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Dynamic requirements, matched identifiers and fulfilment.",
+        "Whether separate client or identity-service requests are necessary."
+      ]
+    },
+    {
+      "id": "beeswax-services",
+      "name": "Beeswax — advertising services",
+      "match_domains": [
+        "beeswax.com"
+      ],
+      "identity": {
+        "legal_name": "Beeswax Inc.",
+        "brands": [
+          "Beeswax"
+        ],
+        "parent": null,
+        "official_domains": [
+          "beeswax.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "EEA",
+          "UK",
+          "CH",
+          "US"
+        ],
+        "category": "advertising",
+        "data_categories": [
+          "Cookie and mobile advertising identifiers",
+          "Ad activity and location",
+          "Inferred interests"
+        ],
+        "note": "Advertising platform, not a directory reliably searchable by a person's name and email."
+      },
+      "removal": {
+        "method": "email",
+        "destination": "privacy@beeswax.com",
+        "alternatives": [
+          "representative@beeswax.com",
+          "dpo@beeswax.com",
+          "https://www.beeswax.com/privacy/"
+        ],
+        "steps": [
+          "Ask the published privacy inbox to delete matching advertising-service records and explain the required identifier verification.",
+          "Supply device/cookie matching information only after reviewing its necessity; ordinary sales/support contact fields are not a consumer matching checklist.",
+          "Browser opt-outs are per browser/device, not proof of historical deletion. Processor-held client data may require the client's request."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "device_or_cookie_identifier"
+        ],
+        "certainty": "not_fully_specified",
+        "verification": "Policy publishes email rights handling but no exhaustive matching checklist."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Identifiable Beeswax-controlled advertising records.",
+        "excludes": "Independent client copies and unrelated corporate contact records; device opt-out is narrower than deletion."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Device matching and verification are unresolved; do not automatically send name/email-only requests."
+      },
+      "evidence": [
+        {
+          "url": "https://www.beeswax.com/privacy/",
+          "checked_on": "2026-09-30",
+          "published": "2023-05-04",
+          "excerpt": "please contact us at Privacy@beeswax.com",
+          "supports": [
+            "identity",
+            "advertising_identifiers",
+            "European_rights",
+            "privacy_inbox",
+            "controller_processor"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Current identifier-matching procedure and fulfilment.",
+        "Policy contains inconsistent browser-signal language; no automatic signal-coverage claim."
+      ]
+    },
+    {
+      "id": "liveintent-services",
+      "name": "LiveIntent — identity and advertising data",
+      "match_domains": [
+        "liveintent.com"
+      ],
+      "identity": {
+        "legal_name": "LiveIntent, Inc.",
+        "brands": [
+          "LiveIntent"
+        ],
+        "parent": null,
+        "official_domains": [
+          "liveintent.com"
+        ]
+      },
+      "relevance": {
+        "regions": [
+          "EEA",
+          "UK",
+          "international"
+        ],
+        "category": "advertising",
+        "data_categories": [
+          "Email-linked identities",
+          "Device associations",
+          "Advertising audiences"
+        ],
+        "note": "General services policy covers IdentityGraph and audience uses, beyond its own website."
+      },
+      "removal": {
+        "method": "form",
+        "destination": "https://privacy.liveintent.com/",
+        "alternatives": [
+          "https://www.liveintent.com/privacy-policy/"
+        ],
+        "steps": [
+          "Enter an email associated with your records to receive the portal login link. A dedicated request-only address may not match.",
+          "Open that email, select deletion in the portal and complete its confirmation. Requesting a login link is not submitting deletion.",
+          "Repeat for relevant email identities as needed. Browser advertising opt-out remains distinct from deletion."
+        ]
+      },
+      "required_information": {
+        "fields": [
+          "matching_email",
+          "email_verification"
+        ],
+        "certainty": "not_fully_specified",
+        "verification": "Public landing page confirms email login; authenticated deletion screens remain untested."
+      },
+      "coverage": {
+        "effect": "deletion_request",
+        "includes": "Matching LiveIntent service records for the identities covered by the request.",
+        "excludes": "Not independently held client copies or guaranteed coverage of every device; suppression and deletion differ."
+      },
+      "automation": {
+        "mode": "manual",
+        "reason": "Email-verified personal portal; no automatic login-link submission or generic email recipe."
+      },
+      "evidence": [
+        {
+          "url": "https://www.liveintent.com/privacy-policy/",
+          "checked_on": "2026-09-30",
+          "published": "2026-07-01",
+          "excerpt": "please visit our privacy center",
+          "supports": [
+            "identity",
+            "service_data",
+            "global_rights",
+            "deletion",
+            "separate_optout"
+          ]
+        },
+        {
+          "url": "https://privacy.liveintent.com/",
+          "checked_on": "2026-09-30",
+          "excerpt": "email you a personalized link",
+          "supports": [
+            "email_login",
+            "personal_handoff"
+          ]
+        }
+      ],
+      "scale": null,
+      "review_status": "instructions_reviewed",
+      "tested_outcome": "not_tested",
+      "unknowns": [
+        "Authenticated portal fields and actual matching/fulfilment.",
+        "Coverage of additional emails and devices."
+      ]
+    }
+  ]
+}

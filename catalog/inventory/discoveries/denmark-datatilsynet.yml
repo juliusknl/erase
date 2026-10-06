@@ -1,0 +1,23 @@
+schema_version: 1
+regions: [DK]
+rationale: Regulator list of approved credit-information agencies is a discovery source, not guaranteed deletion coverage. Historic names and country controllers require individual verification; a lawful credit record is not an ordinary marketing profile.
+evidence:
+  - url: https://www.datatilsynet.dk/regler-og-vejledning/medier-kreditoplysninger-og-registre
+    checked_on: '2026-09-29'
+    excerpt: "Tilladelse fra Datatilsynet: Godkendte kreditoplysningsbureauer"
+    supports: [discovery]
+candidates:
+  - {slug: dk-aktieselskabet-2018, name: Aktieselskabet af 18. maj 2018 A/S}
+  - {slug: dk-atradius, name: Atradius filial af Atradius Crédito y Caución S.A. de Seguros y Reaseguros}
+  - {slug: dk-dnb, name: Dun og Bradstreet Denmark A/S}
+  - {slug: dk-bisnode, name: Bisnode D&B Danmark A/S}
+  - {slug: dk-collectia, name: Collectia A/S}
+  - {slug: dk-creditro, name: Creditro A/S}
+  - {slug: dk-creditsafe, name: Creditsafe Denmark ApS}
+  - {slug: dk-experian, name: Experian A/S}
+  - {slug: dk-kreditregisteret, name: Kreditregisteret A/S}
+  - {slug: dk-risika, name: Risika A/S}
+  - {slug: dk-svea, name: Svea Inkasso A/S}
+  - {slug: dk-coface, name: Coface Norden Services A/S}
+  - {slug: dk-visma-rating, name: Visma Rating ApS}
+  - {slug: dk-goloan, name: GOLoan A/S}

@@ -1,0 +1,20 @@
+schema_version: 1
+assessments:
+  - record: live:j2-martech-corp
+    disposition: unresolved
+    checked_on: '2026-10-01'
+    rationale: Inventory associates J2 Martech Corp with FullContact. Current official privacy and privacy-policy pages return HTTP 403 to public retrieval; the old privacy-center path redirects to the same inaccessible policy. Historical official registry instructions name FullContact and email/claim routes, but do not establish the current exact entity, European applicability or current verification. Do not promote an old contact or infer a legal merger from the domain alone.
+    evidence:
+      - url: https://www.fullcontact.com/privacy/
+        checked_on: '2026-10-01'
+        excerpt: HTTP 403
+        supports: [current_notice_unavailable_not_route_verified]
+      - url: https://www.fullcontact.com/privacy-center/
+        checked_on: '2026-10-01'
+        excerpt: HTTP 403
+        supports: [redirects_to_privacy_policy_unavailable]
+      - url: https://oag.ca.gov/data-brokers/common?combine=&order=field_dbr_email&page=13&sort=asc
+        checked_on: '2026-10-01'
+        excerpt: FullContact
+        supports: [historical_registered_identity_not_current_workflow]
+    unresolved: [Establish current FullContact and J2 Martech entity relationship., Retrieve current official notice and matching/verification requirements before adding a workflow.]

@@ -1,0 +1,17 @@
+# personal data and correspondence never go into git
+identity.json
+state.json
+outbox/
+*.eml
+.env
+data/
+backups/
+.pytest_cache/
+.ruff_cache/
+.venv/
+__pycache__/
+*.pyc
+.claude/goals/
+.research-cache/
+.demo-data/
+dist/

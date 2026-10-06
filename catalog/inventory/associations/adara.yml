@@ -1,0 +1,5 @@
+schema_version: 1
+associations:
+  - guide_id: adara-travel
+    records: [live:rategain-adara-inc]
+    rationale: Official Adara media kit expressly identifies RateGain Adara Inc on the registry domain. The older ADARA Inc community entity is not silently merged with the current corporation.

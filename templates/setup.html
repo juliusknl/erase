@@ -1,0 +1,81 @@
+{% extends 'setup_base.html' %}
+{% block content %}
+{% macro field_error(key) %}{% if errors.get(key) %}<p class="field-error" id="error-{{ key }}" role="alert">{{ errors[key] }}</p>{% endif %}{% endmacro %}
+<div class="setup-progress" aria-label="Setup progress"><span>Step {{ step + 1 }} of 5</span><ol>{% for label in ['Appearance', 'Country', 'Your info', 'Mailbox', 'Start'] %}<li class="{{ 'current' if loop.index0 == step else ('complete' if loop.index0 < step else '') }}" {% if loop.index0 == step %}aria-current="step"{% endif %}><span>{{ label }}</span></li>{% endfor %}</ol></div>
+<section class="setup-panel">
+{% if step == 0 %}
+  <h1>Make it yours.</h1><p class="intro">Choose a look. You can change it anytime in Settings.</p>
+  <form method="post" action="/setup/appearance"><input type="hidden" name="csrf" value="{{ csrf }}">
+    {% with appearance_preview=true %}{% include 'appearance_choices.html' %}{% endwith %}
+    {{ field_error('appearance') }}
+    <div class="setup-actions"><button>Continue</button></div>
+  </form>
+{% elif step == 1 %}
+  <h1>Let’s get started.</h1>
+  <p class="intro intro-strong">The app sends removal requests and tracks replies automatically. You only step in when needed.</p>
+  <form method="post" action="/setup/country" id="setup-form"><input type="hidden" name="csrf" value="{{ csrf }}">
+    <label for="country">Where do you live?</label><p class="field-help" id="country-help">The app uses your country to choose relevant requests.</p>
+    <select id="country" name="country" required aria-describedby="country-help{% if errors.country %} error-country{% endif %}" {% if errors.country %}aria-invalid="true"{% endif %}><option value="">Choose your country</option>{% for code, name in countries.items() | sort(attribute='1') %}<option value="{{ code }}" {% if draft.country == code %}selected{% endif %}>{{ name }}</option>{% endfor %}</select>{{ field_error('country') }}
+    {% if draft.country and not email_supported %}<aside class="setup-note"><strong>Removal forms are available.</strong><p>Automatic emails aren’t available for {{ countries[draft.country] }} yet. You can use the supported forms without connecting Gmail or entering a profile.</p></aside>{% endif %}
+    {% if not live %}<p class="setup-note">This installation is in preview mode. You can save your setup; sending must be enabled in the launcher before you start. Nothing is sent during setup.</p>{% endif %}
+    <div class="setup-actions"><a href="/setup?step=0" class="back-link">Back</a><button>Continue</button><button class="text-button" name="intent" value="exit" formnovalidate>Save and exit</button></div>
+  </form>
+  {% if draft.country and not email_supported %}<form method="post" action="/setup/manual" class="manual-choice"><input type="hidden" name="csrf" value="{{ csrf }}"><button>Explore removal forms</button></form>{% endif %}
+{% elif step == 2 %}
+  <h1>Your info</h1><p class="intro">Brokers need your name and emails to find and delete your records. Your details are stored encrypted on your computer and shared only as needed for requests you authorize.</p>
+  {% if demo_mode %}<p class="setup-note">Try <strong>Alex Example</strong> and <strong>alex@example.test</strong>.</p>{% endif %}
+  <form method="post" action="/setup/details" id="setup-form"><input type="hidden" name="csrf" value="{{ csrf }}">
+    <label for="full-name">Full name</label><input id="full-name" name="full_name" autocomplete="name" value="{{ draft.full_name or '' }}" maxlength="150" required {% if errors.full_name %}aria-invalid="true" aria-describedby="error-full_name"{% endif %}>{{ field_error('full_name') }}
+    <fieldset class="email-fields"><legend id="emails-help">Enter emails you use most</legend>
+    <div id="matching-emails">{% for address in draft.emails or [''] %}<div class="email-entry"><label class="sr-only" for="matching-{{ loop.index }}">Email address {{ loop.index }}</label><input type="email" id="matching-{{ loop.index }}" name="emails" autocomplete="email" value="{{ address }}" maxlength="254" aria-describedby="emails-help{% if errors.emails %} error-emails{% endif %}" {% if errors.emails %}aria-invalid="true"{% endif %}></div>{% endfor %}</div>
+    {{ field_error('emails') }}<button class="text-button add-email" name="intent" value="add" formnovalidate id="add-email">+ Add another email</button>
+    <label class="check-label"><input type="checkbox" name="no_matching_email" value="true" {% if draft.no_matching_email %}checked{% endif %}><span>Continue without matching emails<small>Fewer requests may work. You can add addresses later.</small></span></label></fieldset>
+    <p class="privacy-note">Your saved details are encrypted on this computer. Nothing is sent before you give permission.</p>
+    <div class="setup-actions"><a href="/setup?step=1" class="back-link">Back</a><button>Continue</button><button class="text-button" name="intent" value="exit" formnovalidate>Save and exit</button></div>
+  </form>
+{% elif step == 3 %}
+  <h1>Choose your request mailbox.</h1><p class="intro">Requests go out from here. Broker replies arrive here.</p>
+  <p>I recommend a dedicated inbox to keep broker replies separate from your everyday email (I created <span class="mailbox-example">stopstealingmydatafuckers@gmail.com</span> for mine:)</p>
+  {{ field_error('mailbox') }}
+  {% if not google_ready %}
+    <aside class="setup-note"><strong>One-time Google setup</strong><p>This self-hosted edition needs a connection file from your own Google project. The app will walk you through it. You only need to do this once.</p></aside>
+    <section class="google-helper" aria-label="Google connection setup">
+    <p class="kicker">Connection setup · {{ helper }} of 4</p>
+    {% if helper == 1 %}<h2>Create your Google project</h2><p>Open Google Cloud, choose <strong>New project</strong> and name it <strong>erase</strong>. Select that project before continuing.</p><a class="button secondary" href="https://console.cloud.google.com/projectcreate" target="_blank" rel="noopener noreferrer">Open Google Cloud ↗</a>
+    {% elif helper == 2 %}<h2>Enable Gmail access</h2><p>In your project, open the Gmail API page and click <strong>Enable</strong>.</p><a class="button secondary" href="https://console.cloud.google.com/apis/library/gmail.googleapis.com" target="_blank" rel="noopener noreferrer">Open Gmail API ↗</a>
+    {% elif helper == 3 %}<h2>Set up your consent screen</h2><p>In Google Auth Platform, select <strong>Get started</strong>. Use erase as the app name, your email as the support/contact address, and <strong>External</strong> as the audience.</p><p>Under Audience, add your request mailbox as a test user. Under Data Access, add these Gmail permissions:</p><code class="copy-value">https://www.googleapis.com/auth/gmail.modify<br>https://www.googleapis.com/auth/gmail.send</code><p class="field-help">Google grants mailbox-wide permissions; access is not restricted to broker messages. This app sends requests and checks replies without changing read status. Testing access may expire and require reconnection.</p><a class="button secondary" href="https://console.cloud.google.com/auth/overview" target="_blank" rel="noopener noreferrer">Open Google Auth Platform ↗</a>
+    {% else %}<h2>Import your connection file</h2><p>Under Clients, create a <strong>Web application</strong>. Add this exact Authorized redirect URI, save, then download the client JSON file.</p><code class="copy-value">{{ callback_uri }}</code><a class="text-button" href="https://console.cloud.google.com/auth/clients" target="_blank" rel="noopener noreferrer">Open Google Clients ↗</a><form method="post" action="/setup/google-client" enctype="multipart/form-data"><input type="hidden" name="csrf" value="{{ csrf }}"><label for="client-file">Google client JSON file</label><input id="client-file" name="client_file" type="file" accept=".json,application/json" required><p class="field-help">Stored encrypted on your computer. Never posted to a project maintainer.</p><button>Import connection file</button></form>{% endif %}
+    <nav class="helper-nav" aria-label="Google setup steps">{% if helper > 1 %}<a href="/setup?step=3&amp;helper={{ helper - 1 }}">Previous</a>{% endif %}{% if helper < 4 %}<a class="button" href="/setup?step=3&amp;helper={{ helper + 1 }}">I’ve done this</a>{% endif %}</nav>
+    </section>
+  {% else %}
+    {% if mailbox %}<p class="connected"><span aria-hidden="true">✓</span> Connected: <strong>{{ mailbox }}</strong></p>{% endif %}
+    <p class="field-help">Google will ask permission to read and manage your mailbox and send mail. The app uses it for removal requests and replies without changing read status. The permission itself covers the whole mailbox.</p>
+  {% endif %}
+  <div class="mailbox-actions">
+    {% if google_ready %}<a class="button" href="/gmail/connect?return_to=setup">{{ 'Change Gmail account' if mailbox else ('Connect demo mailbox' if demo_mode else 'Connect Gmail') }}</a>{% endif %}
+    <a class="button secondary" href="https://accounts.google.com/signup" target="_blank" rel="noopener noreferrer">Create a separate Gmail account ↗</a>
+  </div>
+  <div class="setup-actions"><a href="/setup?step=2" class="back-link">Back</a>{% if mailbox %}<a class="button" href="/setup?step=4">Continue</a>{% endif %}<a class="text-button" href="/dashboard">Save and exit</a></div>
+{% elif step == 4 %}
+  <h1>Ready when you are.</h1><p class="intro">Review your details once. The app takes it from here.</p>
+  <dl class="setup-review"><div><dt>Name</dt><dd>{{ draft.full_name }}<a href="/setup?step=2">Edit<span class="sr-only"> name</span></a></dd></div><div><dt>Matching addresses</dt><dd><span>{% for address in draft.emails %}<span class="email-line">{{ address }}</span>{% else %}None added{% endfor %}</span><a href="/setup?step=2">Edit<span class="sr-only"> matching addresses</span></a></dd></div><div><dt>Request mailbox</dt><dd>{{ mailbox }}<a href="/setup?step=3">Change<span class="sr-only"> mailbox</span></a></dd></div><div><dt>Country</dt><dd>{{ countries[draft.country] }}<a href="/setup?step=1">Edit<span class="sr-only"> country</span></a></dd></div></dl>
+  <div class="setup-promise"><p>The app sends removal emails, checks replies and follows up while it’s running.</p><p>You handle forms and identity checks when brokers need to hear directly from you.</p></div>
+  {% with background_return='setup' %}{% include 'background_settings.html' %}{% endwith %}
+  <p class="field-help"><a href="/setup?step=4&amp;reply_assistance=1" data-assistance-open>{{ 'Reply assistance: ' ~ reply_assistance.label if reply_assistance.enabled else 'Optional: let AI handle more replies' }}</a></p>
+  {% with assistance_return='setup' %}{% include 'reply_assistance.html' %}{% endwith %}
+  <a class="text-button" href="/setup?step=4&amp;preview=1#request-previews">View {{ ready_rows | length }} available email requests</a>
+  {% if request.query_params.get('preview') == '1' %}<section id="request-previews" class="google-helper"><h2>Your request previews</h2><form action="/setup" method="get"><input type="hidden" name="step" value="4"><input type="hidden" name="preview" value="1"><label for="preview-broker">Broker</label><select id="preview-broker" name="broker">{% for row in ready_rows %}<option value="{{ row.broker.id }}" {% if request.query_params.get('broker') == row.broker.id | string %}selected{% endif %}>{{ row.guide.name }}</option>{% endfor %}</select><button class="secondary">Show email</button></form>{% for row in ready_rows %}{% if request.query_params.get('broker') == row.broker.id | string or (not request.query_params.get('broker') and loop.first) %}<p>To: {{ row.plan.destination }}</p><pre>{{ row.plan.body }}</pre>{% endif %}{% endfor %}<a href="/setup?step=4">Close previews</a></section>{% endif %}
+  {% if not live %}<aside class="setup-note"><strong>Enable sending in the launcher</strong><p>Your setup is saved. In this project’s terminal, run the command below, then refresh this page. It enables sending capability; requests still wait for your permission here.</p><code class="copy-value">uv run erasure-keychain up --enable-sending</code></aside>{% endif %}
+  {% if not worker_ready %}<p class="setup-note">The background worker is not running. Restart the local app and refresh before starting.</p>{% endif %}
+  {% if not ready_rows %}<p class="setup-note">No automatic requests are available for these details. <a href="/setup?step=2">Add matching details</a> or explore removal forms below.</p>{% endif %}
+  {{ field_error('start') }}{{ field_error('mailbox') }}{% if errors.mailbox %}<p><a href="/setup?step=3">Reconnect Gmail</a></p>{% endif %}
+  <form method="post" action="/setup/start" id="setup-form"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="preview_hash" value="{{ preview_hash }}">
+    <label class="check-label"><input type="checkbox" name="authorize" value="true" required {% if errors.authorize %}aria-describedby="error-authorize" aria-invalid="true"{% endif %}><span>I authorize ongoing requests, including newly reviewed brokers, using the details shown above.</span></label>{{ field_error('authorize') }}
+    <label for="signature">Type your full name to sign</label><input id="signature" name="signature" autocomplete="off" required maxlength="150" aria-describedby="signature-help{% if errors.signature %} error-signature{% endif %}" {% if errors.signature %}aria-invalid="true"{% endif %}><p id="signature-help" class="field-help">{{ draft.full_name }} · You instruct this local app to send requests on your behalf.</p>{{ field_error('signature') }}
+    <div class="setup-actions"><a href="/setup?step=3" class="back-link">Back</a><button {% if not live or not worker_ready or not ready_rows %}disabled{% endif %}>Start automatic requests</button><a href="/dashboard" class="text-button">Save and exit</a></div>
+  </form>
+  {% if not ready_rows %}<form method="post" action="/setup/manual"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="text-button">Explore removal forms</button></form>{% endif %}
+{% endif %}
+</section>
+<p class="setup-footnote">Your progress stays on this computer. Nothing sends until you choose Start.</p>
+{% endblock %}

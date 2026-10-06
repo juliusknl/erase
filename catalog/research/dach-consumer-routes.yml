@@ -1,0 +1,172 @@
+schema_version: 1
+brokers:
+  - id: akv-europa-at
+    name: AKV EUROPA
+    match_domains: [akv.at]
+    identity:
+      legal_name: AKV EUROPA – Alpenländischer Kreditorenverband
+      brands: [AKV EUROPA, AKV BUSINESS INFORMATION SERVICES]
+      parent: null
+      official_domains: [akv.at]
+    relevance:
+      regions: [AT]
+      category: credit_reference
+      data_categories: [Creditworthiness, Debt claims, Insolvency records, Identity and contact information]
+      note: Austrian creditor-protection association and credit-information service, not a marketing-only database.
+    removal:
+      method: manual
+      destination: https://www.akv.at/formulare
+      alternatives: [datenschutz@akveuropa.at]
+      steps:
+        - Download the private-person self-access form, not a membership application.
+        - Review its identity/contact fields and send to AKV BUSINESS INFORMATION SERVICES, Schleifmühlgasse 2, 1040 Wien; the form also lists fax +43 5 04 100-1522.
+        - Review the records before requesting correction, objection or erasure through the DPO. Accurate debt/insolvency records may be retained; access is not deletion.
+    required_information:
+      fields: [full_name, date_of_birth, postal_address]
+      certainty: not_fully_specified
+      verification: Form also provides gender, previous names/addresses, phone and email fields, without mandatory/optional markings. No ID-copy or signature requirement is printed. Further verification is unknown; do not infer all fields mandatory.
+    coverage:
+      effect: access_then_review
+      includes: AKV records concerning the requesting individual.
+      excludes: Independent CRIF/D&B records; statutory retention. Policy describes a necessity review after seven years, not guaranteed deletion at seven years.
+    automation: {mode: manual, reason: Credit-record review and incomplete verification checklist.}
+    evidence:
+      - url: https://www.akv.at/datenschutz
+        checked_on: 2026-09-29
+        excerpt: datenschutz@akveuropa.at
+        supports: [identity, relevance, removal, coverage]
+      - url: https://www.akv.at/wp-content/uploads/bsk-pdf-manager/2018/06/Antragsformular_Selbstauskunft-f%C3%BCr-Privatpersonen.pdf
+        checked_on: 2026-09-29
+        published: Undated one-page form linked from current forms page
+        excerpt: "Antragsformular: Selbstauskunft für Privatpersonen"
+        supports: [removal, required_information]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Exact minimum fields and follow-up verification, Current scale and ownership, No submission tested]
+
+  - id: toleadoo-consumer
+    name: toleadoo
+    match_domains: [toleadoo.com]
+    identity:
+      legal_name: toleadoo GmbH, HRB 99522
+      brands: [toleadoo]
+      parent: null
+      official_domains: [toleadoo.com]
+    relevance:
+      regions: [Europe]
+      category: consumer_marketing
+      data_categories: [Contact information, Partner-supplied advertising email registrations]
+      note: Notice covers partner-supplied marketing contacts as well as website inquiries.
+    removal:
+      method: email
+      destination: info@de.toleadoo.com
+      alternatives: [https://www.toleadoo.com/sc/todo=cp_toleadoo]
+      steps:
+        - Request withdrawal of advertising consent and objection to marketing at the published email; identify the affected contact rather than only a dedicated request mailbox.
+        - Alternatively use the contact form with country, first/last name, email and message; complete CAPTCHA and privacy acknowledgement yourself.
+        - Retain confirmation and check whether it reports suppression or erasure.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: No fixed email matching checklist or ID requirement published. Form fields do not establish mandatory email-request fields.
+    coverage:
+      effect: suppression
+      includes: Marketing use stops through a blocking list; erasure can also be requested.
+      excludes: Notice describes legal-purpose retention for four years with exceptions, not immediate total deletion or partner-wide removal.
+    automation: {mode: manual, reason: Matching checklist unspecified; suppression and retained records must remain distinct.}
+    evidence:
+      - url: https://www.toleadoo.com/sc/todo=cp_toleadoo
+        checked_on: 2026-09-29
+        excerpt: info@de.toleadoo.com
+        supports: [identity, relevance, removal, required_information, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [No email verification checklist, Parent and current scale unverified, English notice contains inconsistent legal labels; do not use as legal guidance, No submission tested]
+
+  - id: planet49-consumer
+    name: Planet49
+    match_domains: [planet49.com]
+    identity:
+      legal_name: Planet49 GmbH, HRB 91579 B (as printed in current imprint)
+      brands: [Planet49]
+      parent: null
+      official_domains: [planet49.com]
+    relevance:
+      regions: [Europe]
+      category: consumer_marketing
+      data_categories: [Contact information, Partner-supplied advertising email registrations]
+      note: Current entity is not silently merged with eGENTIC's historical PLANET49 name.
+    removal:
+      method: email
+      destination: info@de.planet49.com
+      alternatives: [https://www.planet49.com/sc/todo=cp_planet49]
+      steps:
+        - Email the published rights contact with the affected marketing identifier, consent withdrawal/objection and any erasure request.
+        - The alternative contact form asks country, first/last name, email and message, with CAPTCHA and privacy acknowledgement.
+        - Review the reply for suppression versus deletion and any remaining legal-purpose retention.
+    required_information:
+      fields: []
+      certainty: not_fully_specified
+      verification: No fixed email identification checklist published; do not send ID by default.
+    coverage:
+      effect: suppression
+      includes: Planet49 marketing blocking list following withdrawal/objection.
+      excludes: Four-year legal-purpose retention with exceptions; not all eGENTIC/toleadoo or third-party records.
+    automation: {mode: manual, reason: Exact email matching unverified; no cross-company deletion inference.}
+    evidence:
+      - url: https://www.planet49.com/sc/todo=cp_planet49
+        checked_on: 2026-09-29
+        excerpt: info@de.planet49.com
+        supports: [identity, relevance, removal, required_information, coverage]
+    scale: null
+    review_status: instructions_reviewed
+    tested_outcome: not_tested
+    unknowns: [Rights section has inconsistent postal codes; confirm before posting, No verified legacy-entity succession, Parent and current scale unverified, No submission tested]
+
+  - id: egentic-lead-generation
+    name: eGENTIC
+    match_domains: [egentic.com]
+    identity:
+      legal_name: eGENTIC GmbH, HRB 80853
+      brands: [eGENTIC]
+      parent: null
+      official_domains: [egentic.com]
+    relevance:
+      regions: [Europe, Global]
+      category: consumer_marketing
+      data_categories: [Consumer sales leads, Telephone and email contacts]
+      note: Current product site markets B2C leads across European markets; website privacy notice does not establish the consumer-lead workflow.
+    removal:
+      method: investigate
+      destination: https://www.egentic.com/privacy-policy/
+      alternatives: [info@egentic.com]
+      steps:
+        - Establish the originating campaign's lead-specific notice and controller before sending personal information.
+        - The website notice publishes info@egentic.com for rights/contact but covers visitors, inquiries and recruitment; do not assume it specifies lead-database requirements.
+        - Resolve minimum identifiers, consent withdrawal and downstream recipient scope before enabling automatic requests.
+    required_information: {fields: [], certainty: not_fully_specified, verification: Consumer-lead matching and verification checklist unresolved.}
+    coverage:
+      effect: needs_review
+      includes: Research target for eGENTIC consumer lead generation.
+      excludes: No established all-campaign deletion coverage; do not merge the current Planet49 entity on a historical brand hint.
+    automation: {mode: blocked, reason: Lead-specific workflow and exact identifier requirements not established.}
+    evidence:
+      - url: https://www.egentic.com/
+        checked_on: 2026-09-29
+        excerpt: hochwertigen B2C-Leads
+        supports: [relevance]
+      - url: https://www.egentic.com/imprint/
+        checked_on: 2026-09-29
+        excerpt: HRB 80853
+        supports: [identity]
+      - url: https://www.egentic.com/privacy-policy/
+        checked_on: 2026-09-29
+        published: '2026-08-07'
+        excerpt: info@egentic.com
+        supports: [removal, coverage]
+    scale: null
+    review_status: needs_research
+    tested_outcome: not_tested
+    unknowns: [Current consumer-lead notice and controller scope, Minimum request fields and verification, Recipient follow-through, Parent and database size, No request tested]

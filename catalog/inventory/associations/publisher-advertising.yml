@@ -1,0 +1,8 @@
+schema_version: 1
+associations:
+  - guide_id: mediavine-reader-advertising
+    records: [community:mediavine]
+    rationale: Current legal-center GDPR notice identifies Mediavine Inc and publishes separate reader advertising/Grow instructions. Association does not treat all publisher records as independently controlled or close a Grow account.
+  - guide_id: ezoic-publisher-context
+    records: [community:ezoic]
+    rationale: Current Ezoic Inc notice and partner page match the community entity but replace its old legal mailbox with context-specific publisher routing and the direct privacy address. No generic cross-site deletion claim is made.
