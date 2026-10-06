@@ -18,7 +18,8 @@ def test_source_export_excludes_private_state_and_parent_history(tmp_path):
     assert (destination / 'src/erasure/app.py').is_file()
     assert (destination / 'catalog/major-brokers.yml').is_file()
     assert (destination / 'scripts/desktop_entry.py').is_file()
-    for name in ('.github/workflows/ci.yml', '.github/dependabot.yml', 'docs/assistant-setup.md'):
+    for name in ('.github/workflows/ci.yml', '.github/dependabot.yml', 'docs/assistant-setup.md',
+                 'docs/assets/erase-banner.svg', 'docs/assets/erase-dashboard.png'):
         assert (destination / name).read_bytes() == (ROOT / name).read_bytes()
     assert (destination / 'src/erasure/chatgpt.py').read_bytes() == (ROOT / 'src/erasure/chatgpt.py').read_bytes()
     assert (destination / 'LICENSE').read_text() == (ROOT / 'LICENSE').read_text()
@@ -37,6 +38,7 @@ def test_source_export_excludes_private_state_and_parent_history(tmp_path):
         assert z.read('erase/LICENSE') == (ROOT / 'LICENSE').read_bytes()
         assert z.read('erase/.github/workflows/ci.yml') == (ROOT / '.github/workflows/ci.yml').read_bytes()
         assert z.read('erase/src/erasure/chatgpt.py') == (ROOT / 'src/erasure/chatgpt.py').read_bytes()
+        assert z.read('erase/docs/assets/erase-dashboard.png') == (ROOT / 'docs/assets/erase-dashboard.png').read_bytes()
         assert all(n.startswith('erase/') and '..' not in n.split('/') for n in z.namelist())
     with pytest.raises(FileExistsError):
         source_archive(ROOT, archive, require_license=False)
@@ -66,6 +68,16 @@ def test_export_refuses_github_symlinks(tmp_path):
     (tmp_path / '.github').symlink_to(ROOT / '.github', target_is_directory=True)
     with pytest.raises(ValueError, match='symlink'):
         inspect_source(tmp_path)
+
+
+def test_readme_media_allowlist_does_not_include_arbitrary_screenshots(tmp_path):
+    assets = tmp_path / 'docs/assets'
+    assets.mkdir(parents=True)
+    (assets / 'erase-dashboard.png').write_bytes(b'fictional approved demo image')
+    (assets / 'personal-mailbox.png').write_bytes(b'not approved for export')
+    files, _ = inspect_source(tmp_path, require_license=False)
+    assert assets / 'erase-dashboard.png' in files
+    assert assets / 'personal-mailbox.png' not in files
 
 
 def test_ci_installs_both_browsers_and_prepares_nonsecret_compose_environment():

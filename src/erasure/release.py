@@ -12,6 +12,7 @@ TOP_FILES = {
     'README.md', 'SECURITY.md', 'CONTRIBUTING.md', 'LICENSE', 'THIRD_PARTY_NOTICES.md',
     'pyproject.toml', 'uv.lock', 'requirements.lock', '.env.example', '.gitignore',
     '.dockerignore', 'Dockerfile', 'docker-compose.yml', 'docker-compose.demo.yml',
+    'docs/assets/erase-banner.svg', 'docs/assets/erase-dashboard.png',
 }
 TREE_EXTENSIONS = {
     '.github': {'.yml', '.yaml'},
@@ -57,7 +58,8 @@ def inspect_source(root: Path, *, require_license=True):
     issues = []
     for required in ['src/erasure/app.py', 'templates/setup.html', 'requirements.lock',
                      'pyproject.toml', 'uv.lock', 'README.md', 'docs/assistant-setup.md',
-                     'scripts/desktop_entry.py', '.github/workflows/ci.yml']:
+                     'scripts/desktop_entry.py', '.github/workflows/ci.yml',
+                     'docs/assets/erase-banner.svg', 'docs/assets/erase-dashboard.png']:
         if root / required not in files:
             issues.append(f'Missing required source: {required}')
     if require_license and root / 'LICENSE' not in files:

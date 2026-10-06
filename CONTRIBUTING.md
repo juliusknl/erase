@@ -1,17 +1,20 @@
 # Contributing
 
-Personal Erasure is intentionally conservative: a failed request is inconvenient, but disclosing a person's identity to the wrong destination can cause lasting harm.
+erase is intentionally conservative: a failed request is inconvenient, but disclosing a person's identity to the wrong destination can cause lasting harm.
 
 ## Development setup
 
 ```sh
-uv sync
-uv run pytest -q
-uv run ruff check src tests
-docker compose config --quiet
+uv sync --locked --dev
+uv run --locked pytest -q
+uv run --locked ruff check src tests scripts
+uv run --locked python scripts/release_check.py
 ```
 
 Tests must use synthetic identities, fake mailbox responses, and mocked broker endpoints. Automated tests must never contact Gmail, a broker, or any other live service.
+
+Docker is only needed when working on the container build, not the normal Mac
+launcher. CI validates Compose with the non-secret example and synthetic keys.
 
 ## Broker changes
 

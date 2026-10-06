@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="360" viewBox="0 0 1440 360" role="img" aria-labelledby="title description">
+  <title id="title">erase</title>
+  <desc id="description">Data-broker removal. On your terms. A warm-paper masthead with a deep-green wordmark and fading dots.</desc>
+  <rect width="1440" height="360" rx="24" fill="#f6f3e9"/>
+  <rect x="1" y="1" width="1438" height="358" rx="23" fill="none" stroke="#d8ddcf"/>
+  <text x="70" y="64" fill="#58735f" font-family="ui-monospace, monospace" font-size="14" letter-spacing="3">YOUR DETAILS. FEWER PLACES.</text>
+  <text x="62" y="233" fill="#164b3c" font-family="Georgia, 'Times New Roman', serif" font-size="192" letter-spacing="-10">erase</text>
+  <text x="73" y="301" fill="#385c4c" font-family="Arial, sans-serif" font-size="23">Data-broker removal. On your terms.</text>
+  <g transform="translate(980 94)" fill="#164b3c">
+    <circle cx="0" cy="0" r="8"/>
+    <circle cx="66" cy="0" r="8"/>
+    <circle cx="132" cy="0" r="8"/>
+    <circle cx="198" cy="0" r="8" opacity=".65"/>
+    <circle cx="264" cy="0" r="8" opacity=".3"/>
+    <circle cx="330" cy="0" r="8" opacity=".12"/>
+    <circle cx="0" cy="64" r="8"/>
+    <circle cx="66" cy="64" r="8"/>
+    <circle cx="132" cy="64" r="8" opacity=".65"/>
+    <circle cx="198" cy="64" r="8" opacity=".3"/>
+    <circle cx="264" cy="64" r="8" opacity=".12"/>
+    <circle cx="0" cy="128" r="8"/>
+    <circle cx="66" cy="128" r="8" opacity=".65"/>
+    <circle cx="132" cy="128" r="8" opacity=".3"/>
+    <circle cx="198" cy="128" r="8" opacity=".12"/>
+    <circle cx="0" cy="192" r="8" opacity=".65"/>
+    <circle cx="66" cy="192" r="8" opacity=".3"/>
+    <circle cx="132" cy="192" r="8" opacity=".12"/>
+  </g>
+  <g transform="translate(1168 286)">
+    <rect width="203" height="35" rx="17.5" fill="#e3e9dc"/>
+    <text x="101.5" y="23" text-anchor="middle" fill="#385c4c" font-family="Arial, sans-serif" font-size="12" letter-spacing="1.5">LOCAL · OPEN SOURCE</text>
+  </g>
+</svg>
